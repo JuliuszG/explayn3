@@ -10,7 +10,6 @@ const Burger = styled.div`
     cursor: pointer;
     border: none;
     padding: 0;
-    border: 1px solid black;
     div {
         width: 100%;
         height: 2.3px;
