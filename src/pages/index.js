@@ -1,7 +1,6 @@
 import React from "react"
-import Landing from "../components/landingPage/landing"
-
 import Layout from "../components/layout"
+import Landing from "../components/landingPage/landing"
 import Desktop from "../components/navigation/desktop"
 import Mobile from "../components/navigation/mobile"
 import SEO from "../components/seo"
