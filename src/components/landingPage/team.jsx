@@ -86,9 +86,9 @@ const Team = () => {
     return (
         <Style>
             <div className="images">
-            <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="team-picture" />
+            <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="team-picture" />
                 <Arrow>
-                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="arrow" />
+                    <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="arrow" />
                 </Arrow>
             </div>
             <div className="text">
