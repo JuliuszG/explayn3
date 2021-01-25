@@ -21,7 +21,7 @@ const ContentStyle = styled.div`
         font-size: 22px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px;
+        line-height: 145%;
         letter-spacing: 0em;
         text-align: left;
         color: ${ colors.neutral60 };

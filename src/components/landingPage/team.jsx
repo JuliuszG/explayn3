@@ -20,7 +20,7 @@ font-size: 16px;
     .text {
         font-family: 'Poppins';
         font-style: normal;
-        padding: 18%;
+        padding: 18% 18% 10%;
         @media (max-width: 650px) {
             padding: 18% 12%;
         }

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Burger = styled.button`
+const Burger = styled.div`
     width: ${ ({ customWidth }) => customWidth };
     height: ${ ({ customHeight }) => customHeight };
     display: flex;
@@ -10,9 +10,8 @@ const Burger = styled.button`
     cursor: pointer;
     border: none;
     padding: 0;
-    outline: none;
-    background: transparent;
-    span {
+    border: 1px solid black;
+    div {
         width: 100%;
         height: 2.3px;
         background: #282828;
@@ -26,9 +25,9 @@ const Burger = styled.button`
 const MenuIcon = ({ toggle, customWidth, customHeight }) => {
     return (
         <Burger customWidth={ customWidth } customHeight={ customHeight } onClick={ toggle }>
-            <span></span>
-            <span></span>
-            <span></span>
+            <div></div>
+            <div></div>
+            <div></div>
         </Burger>
     )
 }
