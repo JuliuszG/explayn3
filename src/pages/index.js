@@ -1,22 +1,33 @@
 import React from "react"
-import { Link } from "gatsby"
+import Landing from "../components/landingPage/landing"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
+import Desktop from "../components/navigation/desktop"
+import Mobile from "../components/navigation/mobile"
 import SEO from "../components/seo"
+import { useMediaQuery } from 'react-responsive'
+import AboutUs from "../components/landingPage/aboutUs"
+import CaseStudy from "../components/landingPage/caseStudy"
+import Team from "../components/landingPage/team"
+import Partners from "../components/landingPage/partners"
+import Footer from "../components/footer"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
+const IndexPage = () => {
+  const isMobile = useMediaQuery({
+    query: '(max-device-width: 950px)'
+  })
+  return(
+    <Layout>
+      <SEO title="Home" />
+      { isMobile ? <Mobile /> : <Desktop /> }
+      <Landing />
+      <AboutUs />
+      <CaseStudy />
+      <Team />
+      <Partners />
+      <Footer />
+    </Layout>
+  )
+}
 
 export default IndexPage
