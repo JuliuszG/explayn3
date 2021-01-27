@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import { colors } from '../../styles/colors'
 
 const Style = styled.div`
     display: flex;
@@ -28,6 +29,11 @@ const Style = styled.div`
                 color: #fff;
             }
         }
+        .line {
+            width: 40px;
+            height: 1px;
+            background: ${ colors.neutral40 };
+        }
 `
 
 const MenuLanguage = () => {
@@ -36,7 +42,7 @@ const MenuLanguage = () => {
     return (
         <Style>
             <button onClick={ () => handleChange("en") } className={ lang === "en" ? "lang active" : "lang" }>en</button>
-            &#8212;&#8212;&#8212;
+            <span className="line"></span>
             <button onClick={ () => handleChange("pl") } className={ lang === "pl" ? "lang active" : "lang" }>pl</button>
         </Style>
     )
