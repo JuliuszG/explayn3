@@ -79,7 +79,7 @@ const HeaderStyle = styled.div`
         width: 160px;
         height: 160px;
         display: inline-block;
-        @media (max-width: 780px) {
+        @media (max-width: 1080px) {
             display: none;
         }
     }
@@ -98,12 +98,10 @@ const SlideStyle = styled(Link)`
     @media (max-width: 1200px) {
         font-size: 14px;
     }
-    @media (max-width: 1000px) {
-        font-size: 12px;
-    }
-    @media (max-width: 968px) {
+    @media (max-width: 1080px) {
         margin: 5vh 0;
         padding: 0 10%;
+        font-size: 12px;
     }
     @media (max-width: 650px) {
         font-size: 16px;
@@ -239,7 +237,7 @@ const CaseStudy = () => {
         },
     ]
     const isMobile = useMediaQuery({
-        query: '(max-device-width: 780px)'
+        query: '(max-device-width: 1080px)'
       })
     const renderSlider = (
         <Slider style={ { outline: 'none' } }>
