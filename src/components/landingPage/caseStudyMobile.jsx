@@ -4,32 +4,32 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { SliderContent } from './caseStudy'
 import { colors } from '../../styles/colors'
 
-const Style = styled.section`
+const StyleMobileStudy = styled.section`
     position: relative;
     margin-bottom: 10%;
     .header__study__mobile {
         font-family: 'Poppins';
-    font-style: normal;
-    padding: 15% 10%;
-    color: ${ colors.neutral100 };
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @media (max-width: 650px) {
-        font-size: 10px;
-    }
-    h2 {
-        font-weight: 600;
-        font-size: 5em;
-        line-height: 95%;
-        margin-bottom: 3%;
-    }
-    p {
-        width: 100%;
-        font-weight: 300;
-        font-size: 19px;
-        line-height: 32px;
-    }
+        font-style: normal;
+        padding: 15% 10%;
+        color: ${ colors.neutral100 };
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: 650px) {
+            font-size: 10px;
+        }
+        h2 {
+            font-weight: 600;
+            font-size: 5em;
+            line-height: 95%;
+            margin-bottom: 3%;
+        }
+        p {
+            width: 100%;
+            font-weight: 300;
+            font-size: 19px;
+            line-height: 32px;
+        }
     }
 `
 
@@ -77,7 +77,7 @@ const CaseStudyMobile = () => {
         }
     ]
     return (
-        <Style>
+        <StyleMobileStudy>
             <div className="header__study__mobile">
                 <h2>Case studies</h2>
                 <p>
@@ -88,7 +88,7 @@ const CaseStudyMobile = () => {
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
-        </Style>
+        </StyleMobileStudy>
     )
 }
 export default CaseStudyMobile
