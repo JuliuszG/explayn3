@@ -8,18 +8,17 @@ const Style = styled.section`
     position: relative;
     margin-bottom: 10%;
 `
-const HeaderStyleMobile = styled.div`
+const MobileHead = styled.div`
     font-family: 'Poppins';
     font-style: normal;
-    padding: 5% 22% 5% 10%;
+    padding: 15% 10%;
     color: ${ colors.neutral100 };
     display: flex;
     flex-direction: column;
     justify-content: center;
-        @media (max-width: 650px) {
-            padding: 25% 10%;
-            font-size: 10px;
-        }
+    @media (max-width: 650px) {
+        font-size: 10px;
+    }
     h2 {
         font-weight: 600;
         font-size: 5em;
@@ -27,27 +26,12 @@ const HeaderStyleMobile = styled.div`
         margin-bottom: 3%;
     }
     p {
-        width: 60%;
+        width: 100%;
         font-weight: 300;
         font-size: 19px;
         line-height: 32px;
-        @media (max-width: 650px) {
-            width: 100%;
-        }
     }
 `
-
-const HeaderMobile = () => {
-    return(
-        <HeaderStyleMobile>
-                <h2>Case studies</h2>
-                <p>
-                    Zobacz nasze ostatnie realizacjie dla klientów lorem 
-                    ipsum dolor sit amen proin victus senor.
-                </p>
-        </HeaderStyleMobile>
-    )
-}
 
 const CaseStudyMobile = () => {
     const data = useStaticQuery(graphql`
@@ -94,7 +78,13 @@ const CaseStudyMobile = () => {
     ]
     return (
         <Style>
-            <HeaderMobile />
+            <MobileHead>
+                <h2>Case studies</h2>
+                <p>
+                    Zobacz nasze ostatnie realizacjie dla klientów lorem 
+                    ipsum dolor sit amen proin victus senor.
+                </p>
+            </MobileHead>
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
