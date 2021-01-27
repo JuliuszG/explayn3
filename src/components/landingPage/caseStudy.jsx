@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { useMediaQuery } from 'react-responsive'
 
 const Style = styled.section`
     position: relative;
@@ -237,6 +238,23 @@ const CaseStudy = () => {
             slug: 'case6'
         },
     ]
+    const isMobile = useMediaQuery({
+        query: '(max-device-width: 950px)'
+      })
+    const renderSlider = (
+        <Slider style={ { outline: 'none' } }>
+            { slideData.map((item, index) => (
+                <Slide className="slide" key={ index } index={ index }>
+                    <SliderContent item={ item } />
+                </Slide>
+            )) }
+        </Slider>
+    )
+    const mobile = (
+        <>
+            { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
+        </>
+    )
     return (
         <Style>
             <Triangle>
@@ -251,14 +269,9 @@ const CaseStudy = () => {
                     infinite={ true }
                 >
             <Header src={ data.allFile.nodes[0].childImageSharp.fluid }/>
-                    <Slider style={ { outline: 'none' } }>
-                        { slideData.map((item, index) => (
-                        <Slide className="slide" key={ index } index={ index }>
-                           <SliderContent item={ item } />
-                        </Slide>
-                        )) }
-                    </Slider>
+                    { !isMobile && renderSlider }
                 </CarouselProvider>
+                { isMobile && mobile }
         </Style>
     )
 }

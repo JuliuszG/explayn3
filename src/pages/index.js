@@ -10,7 +10,6 @@ import CaseStudy from "../components/landingPage/caseStudy"
 import Team from "../components/landingPage/team"
 import Partners from "../components/landingPage/partners"
 import Footer from "../components/footer"
-import CaseStudyMobile from "../components/landingPage/caseStudyMobile"
 
 const IndexPage = () => {
   const isMobile = useMediaQuery({
@@ -22,7 +21,7 @@ const IndexPage = () => {
       { isMobile ? <Mobile /> : <Desktop /> }
       <Landing />
       <AboutUs />
-      { isMobile  ? <CaseStudyMobile /> : <CaseStudy /> }
+      <CaseStudy />
       <Team />
       <Partners />
       <Footer />
