@@ -4,15 +4,18 @@ import MenuLanguage from './menuLanguage'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import { colors } from '../../styles/colors'
 import Img from 'gatsby-image'
+import { Exit } from './menu'
 
 const Style = styled.div`
     background: ${ colors.neutral90 };
     width: 100%;
+    height: 100vh;
     padding: 5%;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 900;
+    overflow-y: auto;
     .cnt {
         width: 100%;
         height: 100%;
@@ -178,10 +181,9 @@ const MenuLinks = () => {
 const MobileHeader = ({ toggle }) => {
     return(
         <HeadStyle>
-            <button onClick={ toggle } className="exit">
-                <span></span>
-                <span></span>
-            </button>
+            <Exit>
+                <span className="sr" role="button">exit button</span>
+            </Exit>
             <MenuLanguage />
         </HeadStyle>
     )

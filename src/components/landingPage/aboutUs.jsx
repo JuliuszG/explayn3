@@ -248,7 +248,7 @@ const renderSecond = () => {
     }
 }
     return (
-        <Style>
+        <Style id="aboutUs">
             <Header src={ data.allFile.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
                 { items.map((item, index) => index < 3 && <Box content={ item } key={ index } />) }

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
+import {Link as ScLink} from "react-scroll";
 
 const Style = styled.section`
     width: 100%;
@@ -91,7 +92,7 @@ const Circle = ({ src }) => {
     )
 }
 
-const ScrollStyle = styled.div`
+const ScrollStyle = styled(ScLink)`
     width: 10em;
     height: 10em;
     position: absolute;
@@ -112,7 +113,7 @@ const ScrollStyle = styled.div`
 
 const ScrollDown = ({ src }) => {
     return (
-        <ScrollStyle>
+        <ScrollStyle  to={"aboutUs"} smooth duration={500}>
             <Img fluid={src} 
                 alt="scrolldown" 
              />

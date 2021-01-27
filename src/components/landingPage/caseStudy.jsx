@@ -101,6 +101,9 @@ const SlideStyle = styled(Link)`
     @media (max-width: 1000px) {
         font-size: 12px;
     }
+    @media (max-width: 950px) {
+        margin: 5vh 0;
+    }
     @media (max-width: 650px) {
         font-size: 16px;
     }
@@ -132,7 +135,7 @@ const SlideImg = styled(Img)`
     flex-grow: 1;
 `
 
-const SliderContent = ({ item }) => {
+export const SliderContent = ({ item }) => {
     return (
         <SlideStyle to={ item.slug }>
                 <SlideImg fluid={ item.image.src } alt={ item.image.alt }/> 
@@ -144,7 +147,7 @@ const SliderContent = ({ item }) => {
     )
 }
 
-const Header = ({ src }) => {
+export const Header = ({ src, mobile=false }) => {
     return (
         <HeaderStyle>
             <div className="text">
@@ -154,9 +157,11 @@ const Header = ({ src }) => {
                     ipsum dolor sit amen proin victus senor.
                 </p>
             </div>
+           {!mobile &&  (
             <ButtonNext className="next">
-                <Img fluid={ src } alt="scroll left" />
-            </ButtonNext>
+                    <Img fluid={ src } alt="scroll left" />
+                </ButtonNext>
+            )}
         </HeaderStyle>
     )
 }

@@ -28,47 +28,48 @@ const HeaderStyle = styled.div`
         justify-content: space-between;
     }
 `
-const Exit = styled.button`
-    border: none;
+export const Exit = styled.div`
     background: transparent;
     outline: none;
     cursor: pointer;
     width: 22px;
     height: 22px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 0;
-    .bar {
-        display: block;
-        width: 100%;
-        height: 2.3px;
-        background: ${ ({ color }) => color };
-        &:first-of-type {
-            transform: rotate(45deg) translateY(-1px) translateX(-1px);
-        }
-        &:last-of-type {
-            transform: rotate(-45deg) translateX(2.2px) translateY(-2px);
-        }
+    position: relative;
+    &:after {
+        content: '';
+        height: 100%;
+        border-left: 2px solid #fff;
+        position: absolute;
+        transform: rotate(45deg);
+        left: 10px;
+    }
+    :before {
+        content: '';
+        height: 100%;
+        border-left: 2px solid #fff;
+        position: absolute;
+        transform: rotate(-45deg);
+        left: 10px;
+    }
+    .sr {
+        display: none;
     }
 `
 const Image = styled(Img)`
     width: 30%;
 `
 const LinksStyle = styled.ul`
-    padding: 5% 10%;
+    padding: 5%;
     font-size: 16px;
     @media (max-height: 1720px) {
-            font-size: 16px;
-        }
-    @media (max-width: 1520px) {
-            font-size: 15px;
-        }
-    @media (max-width: 1350px) {
             font-size: 14px;
         }
-    @media (max-width: 1120px) {
-            font-size: 13px;
+    @media (max-width: 1520px) {
+            font-size: 12px;
+        }
+    @media (max-width: 1350px) {
+            font-size: 8px;
         }
     .dropdown.active {
         display: block;
@@ -87,36 +88,34 @@ const LinksStyle = styled.ul`
         }
         a {
             text-decoration: none;
-            color: #fff;
+            color: ${ colors.neutral00 };
             font-family: 'Poppins';
             font-style: normal;
             font-weight: 600;
             font-size: 2.75em;
-            line-height: 110px;
+            line-height: 272.72%;
             span {
-                color: #9498B2;
-                font-size: 20px;
+                color: ${ colors.neutral40 };
+                font-size: calc(1em / 2.3);
                 font-style: normal;
                 font-weight: 600;
-            }
-            @media (max-height: 800px) {
-                line-height: 90px;
-            }
-            @media (max-height: 680px) {
-                line-height: 60px;
             }
         }
         .dropdown {
             position: absolute;
             display: none;
             top: 3vh;
-            right: 40%;
+            right: 50%;
             z-index: 1000;
-            @media (max-width: 1720px) {
-                right: 35%;
+            @media (max-width: 1350px) {
+                top: 0;
             }
-            @media (max-width: 1520px) {
-                right: 25%;
+            @media (max-width: 1366px) and (min-height: 1024px) {
+                right: 40%;
+            }
+            @media (max-width: 1024px) {
+                right: 45%;
+                top: 0;
             }
             a {
                 font-size: 1.5625em;
@@ -124,9 +123,10 @@ const LinksStyle = styled.ul`
             }
         }
         .longdash {
-            margin-left: 8%;
-            color: #fff;
-            display: none;
+            width: 100px;
+            height: 1px;
+            background: ${ colors.neutral00 };
+            margin-left: 10%;
         }
     }
 `
@@ -234,12 +234,11 @@ const MenuFooter = () => {
 const Header = ({ toggle }) => {
     return (
         <HeaderStyle>
-            <Exit onClick={ toggle } color={colors.neutral00}>
-                <span className="bar"></span>
-                <span className="bar"></span>
+            <Exit onClick={ toggle } color={ colors.neutral00 }>
+                <span className="sr" role="button">exit button</span>
             </Exit>
             <div className="cnt">
-                <ContactUs color={colors.neutral00} />
+                <ContactUs color={ colors.neutral00 } />
                 <MenuLanguage />
             </div>
         </HeaderStyle>
@@ -255,7 +254,7 @@ const LinksMenu = () => {
                 <li><Link to="/placeholder"><span>01.</span>Strona główna</Link></li>
                 <li onClick={ handleDrop } className="dropLink">
                     <Link><span>02.</span>Co robimy</Link>
-                    <span className={dropOn ? "longdash active" : "longdash"}>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</span>
+                    <span className={dropOn ? "longdash active" : "longdash"}></span>
                     <ul className={dropOn ? "dropdown active" : "dropdown"}>
                         <li><Link to="/drop">Branding</Link></li>
                         <li><Link to="/drop">eCommerce</Link></li>
