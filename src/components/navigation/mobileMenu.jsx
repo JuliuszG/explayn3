@@ -181,7 +181,7 @@ const MenuLinks = () => {
 const MobileHeader = ({ toggle }) => {
     return(
         <HeadStyle>
-            <Exit>
+            <Exit onClick={ toggle }>
                 <span className="sr" role="button">exit button</span>
             </Exit>
             <MenuLanguage />

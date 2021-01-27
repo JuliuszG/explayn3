@@ -43,7 +43,7 @@ const Triangle = styled.div`
     }
 `
 
-const HeaderStyle = styled.div`
+export const HeaderStyle = styled.div`
     font-family: 'Poppins';
     font-style: normal;
     padding: 5% 22% 5% 10%;
@@ -103,9 +103,13 @@ const SlideStyle = styled(Link)`
     }
     @media (max-width: 950px) {
         margin: 5vh 0;
+        padding: 0 10%;
     }
     @media (max-width: 650px) {
         font-size: 16px;
+    }
+    @media (max-width: 400px) {
+        padding: 0;
     }
     .slide__img {
         flex-grow: 1;
@@ -147,7 +151,7 @@ export const SliderContent = ({ item }) => {
     )
 }
 
-export const Header = ({ src, mobile=false }) => {
+const Header = ({ src }) => {
     return (
         <HeaderStyle>
             <div className="text">
@@ -157,11 +161,9 @@ export const Header = ({ src, mobile=false }) => {
                     ipsum dolor sit amen proin victus senor.
                 </p>
             </div>
-           {!mobile &&  (
             <ButtonNext className="next">
                     <Img fluid={ src } alt="scroll left" />
-                </ButtonNext>
-            )}
+            </ButtonNext>
         </HeaderStyle>
     )
 }

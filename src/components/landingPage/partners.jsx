@@ -14,6 +14,7 @@ const ContentStyle = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    border: 1px solid ${ colors.neutral30 };
     a {
         margin-top: 12%;
         text-decoration: none;

@@ -1,14 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery, Link } from 'gatsby'
-import Img from 'gatsby-image'
-import { colors } from '../../styles/colors'
-import { Header, SliderContent } from './caseStudy'
+import { HeaderStyle, SliderContent } from './caseStudy'
 
 const Style = styled.section`
     position: relative;
     margin-bottom: 10%;
 `
+const Header = () => {
+    return(
+        <HeaderStyle>
+            <div className="text">
+                <h2>Case studies</h2>
+                <p>
+                    Zobacz nasze ostatnie realizacjie dla klientów lorem 
+                    ipsum dolor sit amen proin victus senor.
+                </p>
+            </div>
+        </HeaderStyle>
+    )
+}
 
 const CaseStudyMobile = () => {
     const data = useStaticQuery(graphql`
@@ -55,7 +66,7 @@ const CaseStudyMobile = () => {
     ]
     return (
         <Style>
-            <Header src={ data.allFile.nodes[0].childImageSharp.fluid } mobile={ true } />
+            <Header />
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
