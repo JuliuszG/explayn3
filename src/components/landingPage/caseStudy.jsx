@@ -43,7 +43,7 @@ const Triangle = styled.div`
     }
 `
 
-export const HeaderStyle = styled.div`
+const HeaderStyle = styled.div`
     font-family: 'Poppins';
     font-style: normal;
     padding: 5% 22% 5% 10%;
@@ -100,6 +100,7 @@ const SlideStyle = styled(Link)`
     }
     @media (max-width: 1000px) {
         font-size: 12px;
+        padding: 0 10%;
     }
     @media (max-width: 950px) {
         margin: 5vh 0;

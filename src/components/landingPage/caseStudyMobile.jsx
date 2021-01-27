@@ -1,21 +1,51 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import { HeaderStyle, SliderContent } from './caseStudy'
+import { graphql, useStaticQuery } from 'gatsby'
+import { SliderContent } from './caseStudy'
+import { colors } from '../../styles/colors'
 
 const Style = styled.section`
     position: relative;
     margin-bottom: 10%;
 `
-const Header = () => {
+const HeaderStyleMobile = styled.div`
+    font-family: 'Poppins';
+    font-style: normal;
+    padding: 5% 22% 5% 10%;
+    color: ${ colors.neutral100 };
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        @media (max-width: 650px) {
+            padding: 25% 10%;
+            font-size: 10px;
+        }
+    h2 {
+        font-weight: 600;
+        font-size: 5em;
+        line-height: 95%;
+        margin-bottom: 3%;
+    }
+    p {
+        width: 60%;
+        font-weight: 300;
+        font-size: 19px;
+        line-height: 32px;
+        @media (max-width: 650px) {
+            width: 100%;
+        }
+    }
+`
+
+const HeaderMobile = () => {
     return(
-        <HeaderStyle>
+        <HeaderStyleMobile>
                 <h2>Case studies</h2>
                 <p>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
                     ipsum dolor sit amen proin victus senor.
                 </p>
-        </HeaderStyle>
+        </HeaderStyleMobile>
     )
 }
 
@@ -64,7 +94,7 @@ const CaseStudyMobile = () => {
     ]
     return (
         <Style>
-            <Header />
+            <HeaderMobile />
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
