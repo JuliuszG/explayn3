@@ -7,18 +7,19 @@ import { colors } from '../../styles/colors'
 const StyleMobileStudy = styled.section`
     position: relative;
     margin-bottom: 10%;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: ${ colors.neutral100 };
     #header__study__mobile {
-        font-family: 'Poppins';
-        font-style: normal;
         padding: 15% 10%;
-        color: ${ colors.neutral100 };
         display: flex;
         flex-direction: column;
         justify-content: center;
         @media (max-width: 650px) {
             font-size: 10px;
         }
-        h2 {
+    }
+    h2 {
             font-weight: 600;
             font-size: 5em;
             line-height: 95%;
@@ -30,7 +31,6 @@ const StyleMobileStudy = styled.section`
             font-size: 19px;
             line-height: 32px;
         }
-    }
 `
 
 const CaseStudyMobile = () => {
@@ -78,13 +78,11 @@ const CaseStudyMobile = () => {
     ]
     return (
         <StyleMobileStudy>
-            <div id="header__study__mobile">
                 <h2>Case studies</h2>
                 <p>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
                     ipsum dolor sit amen proin victus senor.
                 </p>
-            </div>
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
