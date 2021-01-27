@@ -99,7 +99,6 @@ const SlideStyle = styled(Link)`
     }
     @media (max-width: 1000px) {
         font-size: 12px;
-        padding: 0 10%;
     }
     @media (max-width: 950px) {
         margin: 5vh 0;

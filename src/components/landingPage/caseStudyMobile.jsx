@@ -7,9 +7,8 @@ import { colors } from '../../styles/colors'
 const Style = styled.section`
     position: relative;
     margin-bottom: 10%;
-`
-const MobileHead = styled.div`
-    font-family: 'Poppins';
+    .header__study__mobile {
+        font-family: 'Poppins';
     font-style: normal;
     padding: 15% 10%;
     color: ${ colors.neutral100 };
@@ -30,6 +29,7 @@ const MobileHead = styled.div`
         font-weight: 300;
         font-size: 19px;
         line-height: 32px;
+    }
     }
 `
 
@@ -78,13 +78,13 @@ const CaseStudyMobile = () => {
     ]
     return (
         <Style>
-            <MobileHead>
+            <div className="header__study__mobile">
                 <h2>Case studies</h2>
                 <p>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
                     ipsum dolor sit amen proin victus senor.
                 </p>
-            </MobileHead>
+            </div>
             <div className="boxes">
                 { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
             </div>
