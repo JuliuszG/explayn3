@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
-import { useMediaQuery } from 'react-responsive'
 import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 
@@ -183,9 +182,6 @@ const CaseStudy = () => {
     }
     }
 `)
-    const isMobile = useMediaQuery({
-        query: '(max-device-width: 650px)'
-    })
     const slideData = [
         {
             image: {
@@ -254,7 +250,6 @@ const CaseStudy = () => {
                     className="carousel__cnt"
                     visibleSlides={ slideData.length >= 3 ? 3 : slideData.length }
                     infinite={ true }
-                    orientation={ isMobile ? 'vertical' : 'horizontal'}
                 >
             <Header src={ data.allFile.nodes[0].childImageSharp.fluid }/>
                     <Slider style={ { outline: 'none' } }>
