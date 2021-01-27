@@ -36,6 +36,7 @@ export const Exit = styled.div`
     height: 22px;
     padding: 0;
     position: relative;
+    z-index: 100;
     &:after {
         content: '';
         height: 100%;
