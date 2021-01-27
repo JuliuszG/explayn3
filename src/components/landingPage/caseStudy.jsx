@@ -79,7 +79,7 @@ const HeaderStyle = styled.div`
         width: 160px;
         height: 160px;
         display: inline-block;
-        @media (max-width: 956px) {
+        @media (max-width: 780px) {
             display: none;
         }
     }
@@ -239,7 +239,7 @@ const CaseStudy = () => {
         },
     ]
     const isMobile = useMediaQuery({
-        query: '(max-device-width: 968px)'
+        query: '(max-device-width: 780px)'
       })
     const renderSlider = (
         <Slider style={ { outline: 'none' } }>
