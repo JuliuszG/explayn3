@@ -101,7 +101,7 @@ const SlideStyle = styled(Link)`
     @media (max-width: 1000px) {
         font-size: 12px;
     }
-    @media (max-width: 950px) {
+    @media (max-width: 968px) {
         margin: 5vh 0;
         padding: 0 10%;
     }
@@ -239,7 +239,7 @@ const CaseStudy = () => {
         },
     ]
     const isMobile = useMediaQuery({
-        query: '(max-device-width: 950px)'
+        query: '(max-device-width: 968px)'
       })
     const renderSlider = (
         <Slider style={ { outline: 'none' } }>
