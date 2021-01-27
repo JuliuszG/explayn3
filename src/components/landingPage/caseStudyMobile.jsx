@@ -10,13 +10,11 @@ const Style = styled.section`
 const Header = () => {
     return(
         <HeaderStyle>
-            <div className="text">
                 <h2>Case studies</h2>
                 <p>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
                     ipsum dolor sit amen proin victus senor.
                 </p>
-            </div>
         </HeaderStyle>
     )
 }
