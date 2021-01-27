@@ -252,7 +252,7 @@ const CaseStudy = () => {
     )
     const mobile = (
         <>
-            { slideData.map((item, index) => <SliderContent item={ item } key={ index } />) }
+            { slideData.map((item, index) => index < 3 && <SliderContent item={ item } key={ index } />) }
         </>
     )
     return (
