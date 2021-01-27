@@ -7,7 +7,7 @@ import { colors } from '../../styles/colors'
 const StyleMobileStudy = styled.section`
     position: relative;
     margin-bottom: 10%;
-    .header__study__mobile {
+    #header__study__mobile {
         font-family: 'Poppins';
         font-style: normal;
         padding: 15% 10%;
@@ -78,7 +78,7 @@ const CaseStudyMobile = () => {
     ]
     return (
         <StyleMobileStudy>
-            <div className="header__study__mobile">
+            <div id="header__study__mobile">
                 <h2>Case studies</h2>
                 <p>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
