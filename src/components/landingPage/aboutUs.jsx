@@ -138,7 +138,7 @@ const BoxImage = styled(Img)`
 const Box = ({ content }) => {
     return (
         <BoxStyle>
-            {/* <BoxImage fluid={ content.image.src } alt={ content.img.alt } /> */}
+            <BoxImage fluid={ content.image.src } imgStyle={{width: "100%", height: "100%", objectFit: "contain"}} alt={ content.image.alt } />
             <h3>{ content.name }</h3>
             <ul>
                 { content.list.map((item, index) => <li key={ index }>{ item }</li>) }
@@ -170,7 +170,25 @@ const AboutUs = () => {
     const [isCollapsed, setIsCollapsed] = useState(true)
     const data = useStaticQuery(graphql`
     {
-    allFile(filter: {relativeDirectory: {eq: "landing/about"}}) {
+    main: allFile(filter: {relativeDirectory: {eq: "landing/about"}}) {
+        nodes {
+        childImageSharp {
+            fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+            }
+        }
+        }
+    }
+    aboutImages: allFile(filter: {relativeDirectory: {eq: "about"}}) {
+        nodes {
+        childImageSharp {
+            fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+            }
+        }
+        }
+    }
+    aboutImagesHover: allFile(filter: {relativeDirectory: {eq: "about/hover"}}) {
         nodes {
         childImageSharp {
             fluid {
@@ -184,7 +202,7 @@ const AboutUs = () => {
 const items = [
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[0].childImageSharp.fluid : data.aboutImagesHover.nodes[0].childImageSharp.fluid,
             alt: 'Development'
         },
         name: 'Development',
@@ -193,7 +211,7 @@ const items = [
     },
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[1].childImageSharp.fluid : data.aboutImagesHover.nodes[1].childImageSharp.fluid,
             alt: 'Visual'
         },
         name: 'Visual',
@@ -202,7 +220,7 @@ const items = [
     },
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[2].childImageSharp.fluid : data.aboutImagesHover.nodes[2].childImageSharp.fluid,
             alt: 'Branding'
         },
         name: 'Branding',
@@ -211,7 +229,7 @@ const items = [
     },
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[3].childImageSharp.fluid : data.aboutImagesHover.nodes[3].childImageSharp.fluid,
             alt: 'eCommerce'
         },
         name: 'eCommerce',
@@ -220,7 +238,7 @@ const items = [
     },
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[4].childImageSharp.fluid : data.aboutImagesHover.nodes[4].childImageSharp.fluid,
             alt: 'Events'
         },
         name: 'Events',
@@ -229,7 +247,7 @@ const items = [
     },
     {
         image: {
-            src: '',
+            src: isCollapsed ? data.aboutImages.nodes[5].childImageSharp.fluid : data.aboutImagesHover.nodes[5].childImageSharp.fluid,
             alt: 'Marketing'
         },
         name: 'Marketing',
@@ -249,7 +267,7 @@ const renderSecond = () => {
 }
     return (
         <Style id="aboutUs">
-            <Header src={ data.allFile.nodes[0].childImageSharp.fluid } />
+            <Header src={ data.main.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
                 { items.map((item, index) => index < 3 && <Box content={ item } key={ index } />) }
             </div>

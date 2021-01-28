@@ -121,7 +121,7 @@ const Partners = () => {
     ]
     return (
         <Style>
-            { cardData.map((item, index) => <Card item={ item } index={ index } />) }
+            { cardData.map((item, index) => <Card item={ item } key={ index } />) }
         </Style>
     )
 }
