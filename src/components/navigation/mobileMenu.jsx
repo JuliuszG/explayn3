@@ -9,7 +9,7 @@ import { Exit } from './menu'
 const Style = styled.div`
     background: ${ colors.neutral90 };
     width: 100%;
-    height: 100vh;
+    height: 100%;
     padding: 5%;
     position: fixed;
     top: 0;
@@ -96,9 +96,11 @@ const LinksStyle = styled.ul`
     }
 `
 const FootStyle = styled.div`
-    padding: 10% 0 5%;
+    padding: 10% 0 0;
     padding-left: 5%;
     color: #fff;
+    z-index: 500;
+    margin: 30% 0 10%;
     .contact {
         margin-bottom: 15%;
         .header {

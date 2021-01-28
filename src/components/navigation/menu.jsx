@@ -73,6 +73,11 @@ const LinksStyle = styled.ul`
     @media (max-width: 1350px) {
             font-size: 8px;
         }
+    @media (max-width: 1120px) and (min-height: 768px) {
+    }
+    @media (max-width: 1120px) and (min-height: 1300px) {
+        font-size: 16px;
+    }
     .dropdown.active {
         display: block;
     }
@@ -137,6 +142,7 @@ const FooterStyle = styled.div`
     padding: 0 10%;
     color: #fff;
     font-size: 16px;
+    margin-top: auto;
     @media (max-height: 1720px) {
             font-size: 16px;
         }
@@ -149,6 +155,14 @@ const FooterStyle = styled.div`
     @media (max-width: 1120px) {
             font-size: 13px;
         }
+    @media (max-width: 1120px) and (min-height: 768px) {
+        margin: 15% 0 5%;
+        font-size: 14px;
+    }
+    @media (max-width: 1120px) and (min-height: 1300px) {
+        margin: 40% 0 10%;
+        font-size: 16px;
+    }
     a {
         color: #fff;
         text-decoration: none;
