@@ -2,56 +2,76 @@ import React from 'react'
 import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
-import { CarouselProvider, Slider, Slide } from 'pure-react-carousel';
-import { useMediaQuery } from 'react-responsive'
 import { colors } from '../../styles/colors';
 
-const Style = styled(CarouselProvider)`
+const Style = styled.div`
     margin: 0 auto;
     width: 100%;
-`
-const ContentStyle = styled.div`
     display: flex;
-    align-items: center;
-    flex-direction: column;
-    border: 1px solid ${ colors.neutral30 };
-    a {
-        margin-top: 12%;
-        text-decoration: none;
-        font-family: 'Poppins';
-        font-size: 22px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 145%;
-        letter-spacing: 0em;
-        text-align: left;
-        color: ${ colors.neutral60 };
-        @media (max-width: 950px) {
-            font-size: 20px;
-        }
-        @media (max-width: 750px) {
-            font-size: 17.5px;
-        }
+    justify-content: center;
+    margin-bottom: 15vh;
+    @media (max-width: 850px) {
+        flex-direction: column;
+        align-items: center;
     }
 `
-
-const LogoImg = styled.div`
-    width: 70%;
-    height: 150px;
+const CardStyle = styled.div`
+    width: 25%;
+    height: 443px;
+    border: 1px solid ${ colors.neutral30 };
+    @media (max-width: 1500px) {
+        height: 350px;
+    }
+    @media (max-width: 1100px) {
+        height: 280px;
+    }
+    @media (max-width: 850px) {
+        width: 80%;
+        height: 280px;
+        &:nth-of-type(2), :nth-of-type(3), :nth-of-type(4) {
+            display: none;
+        }
+    }
+    .logo {
+        height: 80%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    a {
+        text-decoration: none;
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 32px;
+        color: ${ colors.neutral60 };
+    }
+    .link__cnt {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20%;
+    }
 `
-const SliderContent = ({ item }) => {
-    return(
-        <ContentStyle>
-            <LogoImg>
-                <Img 
-                    style={{ height: "100%", width: "100%" }} 
-                    imgStyle={{ objectFit: "contain" }} 
-                    fluid={ item.image.src } 
-                    alt={ item.image.alt } 
-                />
-            </LogoImg>
+const imgstyle = {
+    width: "60%",
+    height: "40%",
+}
+const Card = ({ item }) => {
+    return (
+        <CardStyle>
+            <div className="logo">
+                <Img fluid={ item.image.src } imgStyle={ { objectFit: 'contain' } } style={ imgstyle } alt={ item.image.alt } />
+            </div>
+            <div className="link__cnt">
                 <a href={ `http://www.${ item.name }` }>{ item.name } &#8599;</a>
-        </ContentStyle>
+            </div>
+        </CardStyle>
     )
 }
 
@@ -69,85 +89,39 @@ const Partners = () => {
     }
     }
 `)
-    const isMobile = useMediaQuery({
-        query: '(max-device-width: 650px)'
-    })
-    const slideData = [
+    const cardData = [
         {
             image: {
                 src: data.allFile.nodes[0].childImageSharp.fluid,
-                alt: 'logo'
+                alt: "Systemeg.net logo"
             },
             name: "Systemeg.net"
         },
         {
             image: {
                 src: data.allFile.nodes[1].childImageSharp.fluid,
-                alt: 'logo'
+                alt: "Chillnchips.com logo"
             },
-            name: "Chillnchips.com "
+            name: "Chillnchips.com"
         },
         {
             image: {
                 src: data.allFile.nodes[2].childImageSharp.fluid,
-                alt: 'logo'
+                alt: "Avalon.com logo"
             },
             name: "Avalon.com"
         },
         {
             image: {
                 src: data.allFile.nodes[3].childImageSharp.fluid,
-                alt: 'logo'
-            },
-            name: "Tajm.com"
-        },
-        {
-            image: {
-                src: data.allFile.nodes[0].childImageSharp.fluid,
-                alt: 'logo'
-            },
-            name: "Systemeg.net"
-        },
-        {
-            image: {
-                src: data.allFile.nodes[1].childImageSharp.fluid,
-                alt: 'logo'
-            },
-            name: "Chillnchips.com "
-        },
-        {
-            image: {
-                src: data.allFile.nodes[2].childImageSharp.fluid,
-                alt: 'logo'
-            },
-            name: "Avalon.com"
-        },
-        {
-            image: {
-                src: data.allFile.nodes[3].childImageSharp.fluid,
-                alt: 'logo'
+                alt: "Tajm.com logo"
             },
             name: "Tajm.com"
         }
     ]
-    const slideNum = slideData.length >= 4 ? 4 : slideData.length
     return (
-        <Style
-            naturalSlideWidth={ 100 }
-            naturalSlideHeight={ 120 }
-            totalSlides={ slideData.length }
-            className="carousel__cnt"
-            visibleSlides={ isMobile ? 1 : slideNum }
-            infinite={ false }
-            isPlaying={ true }
-        >
-            <Slider style={ { outline: 'none', height: "100%" } }>
-                    { slideData.map((item, index) => (
-                        <Slide className="slide" key={ index } index={ index }>
-                           <SliderContent item={ item } />
-                        </Slide>
-                        )) }
-            </Slider>
+        <Style>
+            { cardData.map((item, index) => <Card item={ item } index={ index } />) }
         </Style>
     )
 }
