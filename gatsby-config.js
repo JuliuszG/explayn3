@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Explayn`,
-    description: `opis strony`,
+    description: `Kompleksowa obsługa w świecie digitalu i nie tylko.
+    Spersonalizowane strony, sklepy, aplikacje. Branding, foto, wideo, SM. Podeślij brief lub zadzwoń.`,
     author: `explayn`,
   },
   plugins: [

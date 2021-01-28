@@ -15,6 +15,7 @@ const Style = styled.div`
     right: 0;
     background: ${ colors.neutral90 };
     z-index: 999;
+    overflow-y: auto;
 `
 
 const HeaderStyle = styled.div`
