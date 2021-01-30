@@ -163,19 +163,19 @@ const MenuLinks = () => {
     const handleDrop = () => setDropOn(prevState => !prevState)
     return (
         <LinksStyle>
-            <li><Link to="/placeholder"><span>01.</span>Strona główna</Link></li>
+            <li><Link to="/"><span>01.</span>Strona główna</Link></li>
                 <li onClick={ handleDrop } className="dropLink">
                     <Link><span>02.</span>Co robimy</Link>
                     <ul className={dropOn ? "dropdown active" : "dropdown"}>
-                        <li><Link to="/drop">Branding</Link></li>
-                        <li><Link to="/drop">eCommerce</Link></li>
-                        <li><Link to="/drop">Events</Link></li>
-                        <li><Link to="/drop">Marketing</Link></li>
-                        <li><Link to="/drop">Development</Link></li>
+                        <li><Link to="/branding">Branding</Link></li>
+                        <li><Link to="/ecommerce">eCommerce</Link></li>
+                        <li><Link to="/events">Events</Link></li>
+                        <li><Link to="/marketing">Marketing</Link></li>
+                        <li><Link to="/development">Development</Link></li>
                     </ul>
                 </li>
-            <li><Link to="/placeholder"><span>03.</span>Nasze prace</Link></li>
-            <li><Link to="/placeholder"><span>04.</span>Kontakt</Link></li>
+            <li><Link to="/"><span>03.</span>Nasze prace</Link></li>
+            <li><Link to="/"><span>04.</span>Kontakt</Link></li>
         </LinksStyle>
     )
 }
