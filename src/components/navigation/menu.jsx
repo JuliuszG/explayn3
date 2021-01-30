@@ -65,15 +65,13 @@ const LinksStyle = styled.ul`
     padding: 5%;
     font-size: 16px;
     @media (max-height: 1720px) {
-            font-size: 14px;
-        }
+        font-size: 14px;
+    }
     @media (max-width: 1520px) {
-            font-size: 12px;
-        }
+        font-size: 12px;
+    }
     @media (max-width: 1350px) {
-            font-size: 8px;
-        }
-    @media (max-width: 1120px) and (min-height: 768px) {
+        font-size: 8px;
     }
     @media (max-width: 1120px) and (min-height: 1300px) {
         font-size: 16px;

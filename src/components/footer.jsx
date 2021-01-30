@@ -102,9 +102,21 @@ const Arrow = styled.div`
     width: 131px;
     height: 132px;
     position: absolute;
-    right: 38%;
-    bottom: 20%;
-    display: none;
+    right: 39%;
+    bottom: 15%;
+    @media (max-width: 1400px) {
+        width: 90px;
+        height: 90px;
+    }
+    @media (max-width: 950px) {
+        right: calc(50% - 55px);
+        bottom: 35%;
+    }
+    @media (max-width: 400px) {
+        width: 40px;
+        height: 40px;
+        right: calc(50% - 22px);
+    }
 `
 const Footer = () => {
     const data = useStaticQuery(graphql`

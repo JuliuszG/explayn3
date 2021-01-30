@@ -30,8 +30,11 @@ const Triangle = styled.div`
         height: 175px;
         top: -12%;
     }
-    @media (max-width: 950px) {
-       top: -14%;
+    @media (max-width: 1080px) {
+       top: -3%;
+    }
+    @media (max-width: 900px) {
+       top: -3.5%;
     }
     @media (max-width: 650px) {
         width: 100px;
@@ -39,7 +42,12 @@ const Triangle = styled.div`
         top: -3%;
     }
     @media (max-width: 450px) {
-       display: none;
+        width: 80px;
+        height: 125px;
+    }
+    @media (max-width: 360px) {
+        top: -2%;
+        left: 2%;
     }
 `
 
@@ -139,7 +147,7 @@ const SlideImg = styled(Img)`
 
 export const SliderContent = ({ item }) => {
     return (
-        <SlideStyle to={ item.slug }>
+        <SlideStyle to={ `/${item.slug}` }>
                 <SlideImg fluid={ item.image.src } alt={ item.image.alt }/> 
             <div className="text__cnt">
                 <h3>{ item.title }</h3>
