@@ -22,6 +22,12 @@ module.exports = {
         disableLiveReload: false,
       },
     },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        // Add any options here
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
