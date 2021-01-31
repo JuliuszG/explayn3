@@ -174,7 +174,7 @@ const Header = ({ src }) => {
     )
 }
 
-const CaseStudy = () => {
+const CaseStudy = ({ triangle=true }) => {
     const data = useStaticQuery(graphql`
     {
     allFile(filter: {relativeDirectory: {eq: "caseStudy"}}) {
@@ -263,9 +263,11 @@ const CaseStudy = () => {
     )
     return (
         <Style>
-            <Triangle>
-                <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="triangle" /> 
-            </Triangle>
+            { triangle && (
+                <Triangle>
+                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="triangle" /> 
+                </Triangle>
+            ) }
             <CarouselProvider
                     naturalSlideWidth={ 100 }
                     naturalSlideHeight={ 100 }

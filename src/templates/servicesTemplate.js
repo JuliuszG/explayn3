@@ -9,6 +9,7 @@ import Layout from '../components/layout'
 import Footer from '../components/footer'
 import SEO from "../components/seo"
 import { colors } from '../styles/colors'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Landing = styled.section`
     width: 100%;
@@ -114,8 +115,33 @@ const ServicesSection = styled.section`
     color: ${ colors.neutral00 };
     font-family: 'Poppins';
     font-style: normal;
+    font-size: 16px;
+    position: relative;
+    @media (max-width: 1500px) {
+        font-size: 14px;
+    }
+    @media (max-width: 1250px) {
+        font-size: 12px;
+    }
+    @media (max-width: 1100px) {
+        font-size: 10px;
+    }
+    @media (max-width: 950px) {
+        font-size: 14px;
+        flex-direction: column;
+    }
+    @media (max-width: 650px) {
+        font-size: 12px;
+    }
+    @media (max-width: 450px) {
+        font-size: 10px;
+        padding: 15% 5%;
+    }
     .left {
         width: 40%;
+        @media (max-width: 950px) {
+            width: 100%;
+        }
         h2 {
             font-weight: 600;
             font-size: 3.4375em;
@@ -132,6 +158,10 @@ const ServicesSection = styled.section`
     ul {
         width: 40%;
         list-style: none;
+        @media (max-width: 950px) {
+            width: 100%;
+            margin-top: 20%;
+        }
         li {
             font-weight: 600;
             font-size: 1.6875em;
@@ -144,23 +174,103 @@ const ServicesSection = styled.section`
             }
         }
     }
+    .triangle {
+        width: 159px;
+        height: 205px;
+        position: absolute;
+        left: 3%;
+        bottom: -11%;
+        z-index: 5;
+        @media (max-width: 1450px) {
+            bottom: -13%;
+        }
+        @media (max-width: 1250px) {
+            bottom: -16%;
+        }
+        @media (max-width: 950px) {
+            bottom: -11%;
+        }
+        @media (max-width: 700px) {
+            bottom: -15%;
+            width: 119px;
+            height: 165px;
+        }
+        @media (max-width: 450px) {
+            bottom: -15%;
+            width: 89px;
+            height: 135px;
+        }
+    }
 `
 
 const QuoteSection = styled.div`
     padding: 15% 22%;
     color: ${ colors.neutral80 };
+    position: relative;
+    background: ${ colors.neutral10 };
+    @media (max-width: 1600px) {
+        font-size: 14px;
+    }
+    @media (max-width: 1180px) {
+        font-size: 12px;
+    }
+    @media (max-width: 850px) {
+        font-size: 10px;
+    }
+    @media (max-width: 650px) {
+        font-size: 8px;
+        padding: 15%;
+    }
+    @media (max-width: 450px) {
+        font-size: 6px;
+        padding: 15% 10%;
+    }
     p{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 600;
-        font-size: 55px;
-        line-height: 76px;
+        font-size: 3.4375em;
+        line-height: 138.18%;
+    }
+    .quote {
+        width: 3.875em;
+        height: 3.875em;
+        position: relative;
+        right: 5%;
+    }
+    .square {
+        width: 14.6875em;
+        height: 14.5625em;
+        position: absolute;
+        top: 20%;
+        right: 23%;
+    }
+    .half-circle {
+        width: 11.25em;
+        height: 10.5625em;
+        position: absolute;
+        bottom: -6%;
+        right: 15%;
     }
 `
 const ServiceTemplate = ({ pageContext }) => {
     const isMobile = useMediaQuery({
         query: '(max-device-width: 950px)'
     })
+    const data = useStaticQuery(graphql`
+    {
+    allFile(filter: {relativeDirectory: {eq: "servicesPage"}}) {
+        nodes {
+        childImageSharp {
+            fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+            }
+        }
+        }
+    }
+    }
+`)
+    
     return(
         <Layout>
              <SEO title="Home" />
@@ -184,11 +294,25 @@ const ServiceTemplate = ({ pageContext }) => {
                         <li key={ index }><span>0{ index + 1 }.</span>{ item }</li>
                     )) }
                 </ul>
+                <div className="triangle">
+                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="triangle" />
+                </div>
             </ServicesSection>
             <QuoteSection>
-                <p>{ pageContext.third.Quote }</p>
+                <div className="quote">
+                    <Img fluid={ data.allFile.nodes[2].childImageSharp.fluid } alt="quotemark" />
+                </div>
+                <p>
+                    { pageContext.third.Quote }
+                </p>
+                <div className="square">
+                    <Img fluid={ data.allFile.nodes[3].childImageSharp.fluid } alt="square" />
+                </div>
+                <div className="half-circle">
+                        <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="half-circle" />
+                    </div>
             </QuoteSection>
-            <CaseStudy />
+            <CaseStudy triangle={ false } />
             <Footer />
         </Layout>
     )
