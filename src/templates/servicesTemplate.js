@@ -295,21 +295,21 @@ const ServiceTemplate = ({ pageContext }) => {
                     )) }
                 </ul>
                 <div className="triangle">
-                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="triangle" />
+                    <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="triangle" />
                 </div>
             </ServicesSection>
             <QuoteSection>
                 <div className="quote">
-                    <Img fluid={ data.allFile.nodes[2].childImageSharp.fluid } alt="quotemark" />
+                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="quotemark" />
                 </div>
                 <p>
                     { pageContext.third.Quote }
                 </p>
                 <div className="square">
-                    <Img fluid={ data.allFile.nodes[3].childImageSharp.fluid } alt="square" />
+                    <Img fluid={ data.allFile.nodes[2].childImageSharp.fluid } alt="square" />
                 </div>
                 <div className="half-circle">
-                        <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="half-circle" />
+                        <Img fluid={ data.allFile.nodes[3].childImageSharp.fluid } alt="half-circle" />
                     </div>
             </QuoteSection>
             <CaseStudy triangle={ false } />
