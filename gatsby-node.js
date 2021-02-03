@@ -3,6 +3,7 @@ const path = require(`path`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const serviceTemplate = path.resolve(`src/templates/servicesTemplate.js`)
+  const caseTemplate = path.resolve(`src/templates/caseTemplate.js`)
   const result = await graphql(`
   query MyQuery {
     allDatoCmsServicepage {
@@ -22,6 +23,12 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
+    allDatoCmsRealizacja {
+      nodes {
+        id,
+        slug
+      }
+    }
   }
 `)
     result.data.allDatoCmsServicepage.nodes.forEach(project => {
@@ -36,28 +43,13 @@ exports.createPages = async ({ graphql, actions }) => {
         },
       })
     })
-  }
-
-  exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
-    const caseTemplate = path.resolve(`src/templates/caseTemplate.js`)
-    const result = await graphql(`
-    query MyQuery {
-      allDatoCmsRealizacja {
-        nodes {
-          id,
-          slug
-        }
-      }
-    }
-  `)
-      result.data.allDatoCmsRealizacja.nodes.forEach(project => {
-        createPage({
-          path: `case/${ project.slug }`,
-          component: caseTemplate,
-          context: {
-              id: project.id
-          },
-        })
+    result.data.allDatoCmsRealizacja.nodes.forEach(project => {
+      createPage({
+        path: `case/${ project.slug }`,
+        component: caseTemplate,
+        context: {
+            id: project.id
+        },
       })
-    }
+    })
+  }
