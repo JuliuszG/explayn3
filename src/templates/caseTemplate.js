@@ -86,12 +86,12 @@ const CaseTemplate = ({ data }) => {
             <SEO title="Home" />
             { isMobile ? <Mobile color="#fff"/> : <Desktop color="#fff"/> }
             <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/>
-            <CaseData 
+            {/* <CaseData 
                 title={ data.datoCmsRealizacja.component2Title }
                 paragraph={ data.datoCmsRealizacja.component2Paragraph }
                 link={ data.datoCmsRealizacja.link }
                 data={ JSON.parse(data.datoCmsRealizacja.component2Data) }
-            />
+            /> */}
             <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
             <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } />
             <CaseDescription title={ data.datoCmsRealizacja.component4Title } paragraphs={ data.datoCmsRealizacja.article4Paragraphs } />
