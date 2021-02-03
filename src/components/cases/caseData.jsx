@@ -89,11 +89,7 @@ const Style = styled.section`
     }
 `
 
-const CaseData = ({ title, paragraph, link, data }) => {
-    const country = data.Country
-    const client = data.Client
-    const field = data.ClientField
-    const services = data.ServicesProvided
+const CaseData = ({ title, paragraph, link, country, client, field, services }) => {
     return (
         <Style>
             <div className="left">

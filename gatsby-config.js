@@ -26,6 +26,9 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
+        "minify": true,
+        "transpileTemplateLiterals": true,
+        "pure": true
       },
     },
     `gatsby-transformer-sharp`,

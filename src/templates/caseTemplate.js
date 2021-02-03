@@ -29,7 +29,10 @@ query MyQuery($id: String!) {
         }
         component2Title
         component2Paragraph
-        component2Data
+        component2Country
+        component2Client
+        component2Field
+        component2Services
         link
         screens {
           fluid {
@@ -84,19 +87,22 @@ const CaseTemplate = ({ data }) => {
         <Layout>
             <SEO title="Home" />
             { isMobile ? <Mobile color="#fff"/> : <Desktop color="#fff"/> }
-            <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/>
+            {/* <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/> */}
             <CaseData 
                 title={ data.datoCmsRealizacja.component2Title }
                 paragraph={ data.datoCmsRealizacja.component2Paragraph }
                 link={ data.datoCmsRealizacja.link }
-                data={ JSON.parse(data.datoCmsRealizacja.component2Data) }
+                country={ data.datoCmsRealizacja.component2Country }
+                client={ data.datoCmsRealizacja.component2Client }
+                field={ data.datoCmsRealizacja.component2Field }
+                services={ data.datoCmsRealizacja.component2Services }
             />
-            <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
-            <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } />
+            {/* <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
+            <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } /> */}
             <CaseDescription title={ data.datoCmsRealizacja.component4Title } paragraphs={ data.datoCmsRealizacja.article4Paragraphs } />
-            <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } />
+            {/* <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } /> */}
             <CaseList title={ data.datoCmsRealizacja.component7Title } paragraph={ data.datoCmsRealizacja.component7Paragraph } arrObj={ JSON.parse(data.datoCmsRealizacja.component7List) } />
-            <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } />
+            {/* <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } /> */}
             <CaseStudy triangle={ false } />
             <Footer />
         </Layout>
