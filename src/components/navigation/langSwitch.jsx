@@ -14,9 +14,10 @@ const Btn = styled.button`
     border: none;
     cursor: pointer;
     text-transform: uppercase;
+    color: ${ ({ color }) => color ? color : '#000'};
 `
 
-const LangSwitch = () => {
+const LangSwitch = ({ color }) => {
     const [lang, setLang] = useState("en")
     const handleSwitch = () => {
         if(lang === 'pl') {
@@ -27,7 +28,7 @@ const LangSwitch = () => {
     }
 
     return (
-        <Btn onClick={ handleSwitch }>{ lang }</Btn>
+        <Btn color={ color } onClick={ handleSwitch }>{ lang }</Btn>
     )
 }
 

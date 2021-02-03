@@ -14,22 +14,31 @@ const Burger = styled.div`
     padding: 0;
 `
 
-const MenuIcon = ({ toggle, customWidth, customHeight }) => {
+const MenuIcon = ({ toggle, customWidth, customHeight, color=false }) => {
     const data = useStaticQuery(graphql`
         query {
-            file(relativePath: { eq: "burger.png" }) {
+            dark: file(relativePath: { eq: "burger.png" }) {
             childImageSharp {
                 fluid {
                 ...GatsbyImageSharpFluid
                 }
             }
             }
+            light: file(relativePath: { eq: "lightBurger.png" }) {
+                childImageSharp {
+                    fluid {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+                }
         }
     `
     )
     return (
         <Burger customWidth={ customWidth } customHeight={ customHeight } onClick={ toggle }>
-            <Img fluid={ data.file.childImageSharp.fluid } alt="menu icon" />
+            { color ? 
+            <Img fluid={ data.light.childImageSharp.fluid } alt="menu icon" /> : 
+            <Img fluid={ data.dark.childImageSharp.fluid } alt="menu icon" /> }
         </Burger>
     )
 }

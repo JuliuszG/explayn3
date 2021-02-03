@@ -12,22 +12,31 @@ const ImageCnt = styled.div`
     width: ${ ({ customWidth }) => customWidth };
     height: ${ ({ customHeight }) => customHeight };
 `
-const LogoImg = ({ customWidth, customHeight }) => {
+const LogoImg = ({ customWidth, customHeight, color=false }) => {
     const data = useStaticQuery(graphql`
         query {
-            file(relativePath: { eq: "explaynLogo.png" }) {
+            dark: file(relativePath: { eq: "explaynLogo.png" }) {
             childImageSharp {
                 fluid {
                 ...GatsbyImageSharpFluid
                 }
             }
             }
+            light: file(relativePath: { eq: "explaynLogoLight.png" }) {
+                childImageSharp {
+                    fluid {
+                    ...GatsbyImageSharpFluid
+                    }
+                }
+                }
         }
     `
     )
     return(
          <ImageCnt customWidth={ customWidth } customHeight={ customHeight }>
-             <Image fluid={ data.file.childImageSharp.fluid } alt="logo" />
+             { color ? 
+             <Image fluid={ data.light.childImageSharp.fluid } alt="logo" /> : 
+             <Image fluid={ data.dark.childImageSharp.fluid } alt="logo" />}
          </ImageCnt>
          )
 }

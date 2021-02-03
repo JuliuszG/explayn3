@@ -10,6 +10,7 @@ import Footer from '../components/footer'
 import SEO from "../components/seo"
 import { colors } from '../styles/colors'
 import { graphql, useStaticQuery } from 'gatsby'
+import CaseData from '../components/cases/caseData'
 
 const Landing = styled.section`
     width: 100%;
@@ -284,6 +285,7 @@ const ServiceTemplate = ({ pageContext }) => {
                     <Img fluid={ pageContext.logo } alt="subpage logo" />
                 </Logo>
             </Landing>
+            <CaseData />
             <ServicesSection>
                 <div className="left">
                     <h2>{ pageContext.second.Title }</h2>
