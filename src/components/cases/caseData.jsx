@@ -90,7 +90,10 @@ const Style = styled.section`
 `
 
 const CaseData = ({ title, paragraph, link, data }) => {
-    console.log(data);
+    const country = data.Country
+    const client = data.Client
+    const field = data.ClientField
+    const services = data.ServicesProvided
     return (
         <Style>
             <div className="left">
@@ -102,32 +105,32 @@ const CaseData = ({ title, paragraph, link, data }) => {
                 </p>
                 <a href={ link }>Zobacz stronę online</a>
             </div>
-            {/* <ul className="right">
+            <ul className="right">
                 <li>
                     <span className="field-name">
                         Kraj
                     </span>
-                    { data.Country } 
+                    { country } 
                 </li>
                 <li>
                     <span className="field-name">
                         Klient
                     </span>
-                    { data.Client }
+                    { client }
                 </li>
                 <li>
                     <span className="field-name">
                         Branża
                     </span>
-                    { data.ClientField }
+                    { field }
                 </li>
                 <li>
                     <span className="field-name">
                         Zakres Prac
                     </span>
-                    { data.ServicesProvided }
+                    { services }
                 </li>
-            </ul> */}
+            </ul>
         </Style>
     )
 }
