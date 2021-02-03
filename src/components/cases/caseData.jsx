@@ -101,32 +101,7 @@ const CaseData = ({ title, paragraph, link, data }) => {
                 </p>
                 <a href={ link }>Zobacz stronę online</a>
             </div>
-            <ul className="right">
-                <li>
-                    <span className="field-name">
-                        Kraj
-                    </span>
-                    { data.Country } 
-                </li>
-                <li>
-                    <span className="field-name">
-                        Klient
-                    </span>
-                    { data.Client }
-                </li>
-                <li>
-                    <span className="field-name">
-                        Branża
-                    </span>
-                    { data.ClientField }
-                </li>
-                <li>
-                    <span className="field-name">
-                        Zakres Prac
-                    </span>
-                    { data.ServicesProvided }
-                </li>
-            </ul>
+ 
         </Style>
     )
 }
