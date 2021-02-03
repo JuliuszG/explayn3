@@ -14,6 +14,7 @@ const Style = styled.section`
     }
     @media (max-width: 650px) {
         font-size: 12px;
+        padding: 10% 5%;
     }
     h2 {
         font-weight: 600;
