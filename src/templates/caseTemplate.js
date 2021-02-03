@@ -20,11 +20,7 @@ query MyQuery($id: String!) {
     datoCmsRealizacja(id: {eq: $id}) {
         landingimage {
           fluid {
-            src
-            srcSet
-            base64
-            aspectRatio
-            sizes
+            ...GatsbyDatoCmsFluid
           }
         }
         component2Title
@@ -36,40 +32,24 @@ query MyQuery($id: String!) {
         link
         screens {
           fluid {
-            base64
-            aspectRatio
-            sizes
-            src
-            srcSet
+            ...GatsbyDatoCmsFluid
           }
         }
         bigScreen {
           fluid {
-            aspectRatio
-            base64
-            srcSet
-            src
-            sizes
+            ...GatsbyDatoCmsFluid
           }
         }
         component4Title
         article4Paragraphs
         doubleImageComponent {
           fluid {
-            aspectRatio
-            base64
-            sizes
-            src
-            srcSet
+            ...GatsbyDatoCmsFluid
           }
         }
         screen2 {
           fluid {
-            aspectRatio
-            base64
-            src
-            sizes
-            srcSet
+            ...GatsbyDatoCmsFluid
           }
         }
         component7Title
@@ -87,7 +67,7 @@ const CaseTemplate = ({ data }) => {
         <Layout>
             <SEO title="Home" />
             { isMobile ? <Mobile color="#fff"/> : <Desktop color="#fff"/> }
-            {/* <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/> */}
+            <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/>
             <CaseData 
                 title={ data.datoCmsRealizacja.component2Title }
                 paragraph={ data.datoCmsRealizacja.component2Paragraph }
@@ -97,12 +77,12 @@ const CaseTemplate = ({ data }) => {
                 field={ data.datoCmsRealizacja.component2Field }
                 services={ data.datoCmsRealizacja.component2Services }
             />
-            {/* <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
-            <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } /> */}
+            <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
+            <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } />
             <CaseDescription title={ data.datoCmsRealizacja.component4Title } paragraphs={ data.datoCmsRealizacja.article4Paragraphs } />
-            {/* <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } /> */}
+            <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } />
             <CaseList title={ data.datoCmsRealizacja.component7Title } paragraph={ data.datoCmsRealizacja.component7Paragraph } arrObj={ JSON.parse(data.datoCmsRealizacja.component7List) } />
-            {/* <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } /> */}
+            <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } />
             <CaseStudy triangle={ false } />
             <Footer />
         </Layout>
