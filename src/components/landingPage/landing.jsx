@@ -7,7 +7,7 @@ import {Link as ScLink} from "react-scroll";
 
 const Style = styled.section`
     width: 100%;
-    min-height: 84.5vh;
+    min-height: 100vh;
     background: ${ colors.neutral00 };
     padding-left: 17%;
     display: flex;

@@ -14,7 +14,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 const Landing = styled.section`
     width: 100%;
     min-height: 50.5vh;
-    max-height: 84.5vh;
+    max-height: 100vh;
     padding: 20% 0;
     background: ${ colors.neutral00 };
     padding-left: 17%;
