@@ -259,15 +259,34 @@ const ServiceTemplate = ({ pageContext }) => {
     })
     const data = useStaticQuery(graphql`
     {
-    allFile(filter: {relativeDirectory: {eq: "servicesPage"}}) {
-        nodes {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+        triangle1: file (relativePath: { eq: "services/1.png}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
             }
         }
+        quote: file (relativePath: { eq: "services/2.png}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
         }
-    }
+        dots: file (relativePath: { eq: "services/3.png}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        triangle2: file (relativePath: { eq: "services/4.png}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
 `)
     
@@ -295,21 +314,21 @@ const ServiceTemplate = ({ pageContext }) => {
                     )) }
                 </ul>
                 <div className="triangle">
-                    <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="triangle" />
+                    <Img fluid={ data.triangle1.childImageSharp.fluid } alt="decoration" />
                 </div>
             </ServicesSection>
             <QuoteSection>
                 <div className="quote">
-                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="quotemark" />
+                    <Img fluid={ data.quote.childImageSharp.fluid } alt="quote" />
                 </div>
                 <p>
                     { pageContext.third.Quote }
                 </p>
                 <div className="square">
-                    <Img fluid={ data.allFile.nodes[2].childImageSharp.fluid } alt="square" />
+                    <Img fluid={ data.dots.childImageSharp.fluid } alt="decoration" />
                 </div>
                 <div className="half-circle">
-                        <Img fluid={ data.allFile.nodes[3].childImageSharp.fluid } alt="half-circle" />
+                        <Img fluid={ data.triangle2.childImageSharp.fluid } alt="decoration" />
                     </div>
             </QuoteSection>
             <CaseStudy triangle={ false } />

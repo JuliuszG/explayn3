@@ -67,7 +67,7 @@ const CaseTemplate = ({ data }) => {
         <Layout>
             <SEO title="Home" />
             { isMobile ? <Mobile color="#fff"/> : <Desktop color="#fff"/> }
-            {/* <CaseLanding src={ data.datoCmsRealizacja.landingimage.fluid }/> */}
+            <CaseLanding background={ data.datoCmsRealizacja.landingimage.fluid }/>
             <CaseData 
                 title={ data.datoCmsRealizacja.component2Title }
                 paragraph={ data.datoCmsRealizacja.component2Paragraph }

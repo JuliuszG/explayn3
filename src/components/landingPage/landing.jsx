@@ -146,15 +146,27 @@ const ZigZag = ({ src }) => {
 const Landing = () => {
     const data = useStaticQuery(graphql`
     {
-    allFile(filter: {relativeDirectory: {eq: "landing"}}) {
-        nodes {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+        circle: file (relativePath: { eq: "landing/landingCircle.png" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
             }
         }
+        scroll: file (relativePath: { eq: "landing/scrollDown.png" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
         }
-    }
+        zigzag: file (relativePath: { eq: "landing/ZigZag.png" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
 `)
     return (
@@ -168,9 +180,9 @@ const Landing = () => {
                     każdy z nas ma różne doświadczenia oraz styl pracy.
                 </p>
             </div>
-            <Circle src={ data.allFile.nodes[1].childImageSharp.fluid } />
-            <ZigZag src={ data.allFile.nodes[0].childImageSharp.fluid } />
-            <ScrollDown src={ data.allFile.nodes[2].childImageSharp.fluid } />
+            <Circle src={ data.circle.childImageSharp.fluid } />
+            <ZigZag src={ data.zigzag.childImageSharp.fluid } />
+            <ScrollDown src={ data.scroll.childImageSharp.fluid } />
         </Style>
     )
 }
