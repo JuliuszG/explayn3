@@ -1,6 +1,7 @@
 import React from "react"
-import "@fontsource/poppins"
 import { GlobalStyle } from '../styles/reset'
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import "@fontsource/poppins"
 
 const Layout = ({ children }) => {
 

@@ -4,7 +4,6 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useMediaQuery } from 'react-responsive'
 
 const Style = styled.section`
@@ -118,7 +117,7 @@ const SlideStyle = styled(Link)`
         padding: 0;
     }
     .slide__img {
-        flex-grow: 1;
+        height: 50%;
     }
     .text__cnt {
         margin-top: 2%;
@@ -141,17 +140,13 @@ const SlideStyle = styled(Link)`
     }
 `
 
-const SlideImg = styled(Img)`
-    flex-grow: 1;
-`
-
 export const SliderContent = ({ item }) => {
     return (
-        <SlideStyle to={ `/${item.slug}` }>
-                <SlideImg fluid={ item.image.src } alt={ item.image.alt }/> 
+        <SlideStyle to={ `/case/${item.slug}` }>
+                <Img style={ { height: "70%", width: "100%", objectPosition: "center" } } fluid={ item.landingimage.fluid } alt="logo"/> 
             <div className="text__cnt">
-                <h3>{ item.title }</h3>
-                <p>{ item.desc }</p>
+                <h3>{ item.component2Client }</h3>
+                <p>{ item.component2Services }</p>
             </div>
         </SlideStyle>
     )
@@ -177,79 +172,40 @@ const Header = ({ src }) => {
 const CaseStudy = ({ triangle=true }) => {
     const data = useStaticQuery(graphql`
     {
-    allFile(filter: {relativeDirectory: {eq: "caseStudy"}}) {
-        nodes {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+        cases: allDatoCmsRealizacja (limit: 6, sort: {fields: meta___createdAt, order: DESC}) {
+            nodes {
+              component2Client
+              component2Services
+              slug
+              landingimage {
+                fluid {
+                  ...GatsbyDatoCmsFluid
+                }
+              }
+            }
+          }
+        triangle: file (relativePath: { eq: "caseStudy/triangle.png" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
             }
         }
+        scroll: file (relativePath: { eq: "caseStudy/scroll.png" }) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                }
+            }
         }
-    }
-    }
+      }      
 `)
-    const slideData = [
-        {
-            image: {
-                src: data.allFile.nodes[2].childImageSharp.fluid,
-                alt: 'grabbit-logo'
-            },
-            title: 'Grabbit, chwyć króliczka!',
-            desc: 'Projekt portalu internetowego',
-            slug: 'case1'
-        },
-        {
-            image: {
-                src: data.allFile.nodes[3].childImageSharp.fluid,
-                alt: 'deventon-logo'
-            },
-            title: 'Deventon, IT i engineering',
-            desc: 'Projekt strony internetowej',
-            slug: 'case2'
-        },
-        {
-            image: {
-                src: data.allFile.nodes[4].childImageSharp.fluid,
-                alt: 'twochicks-logo'
-            },
-            title: 'Twochicks, dwa pisklęta',
-            desc: 'Film reklamowy',
-            slug: 'case3'
-        },
-        {
-            image: {
-                src: data.allFile.nodes[2].childImageSharp.fluid,
-                alt: 'grabbit-logo'
-            },
-            title: 'Grabbit, chwyć króliczka!',
-            desc: 'Projekt portalu internetowego',
-            slug: 'case4'
-        },
-        {
-            image: {
-                src: data.allFile.nodes[3].childImageSharp.fluid,
-                alt: 'deventon-logo'
-            },
-            title: 'Deventon, IT i engineering',
-            desc: 'Projekt strony internetowej',
-            slug: 'case5'
-        },
-        {
-            image: {
-                src: data.allFile.nodes[4].childImageSharp.fluid,
-                alt: 'twochicks-logo'
-            },
-            title: 'Twochicks, dwa pisklęta',
-            desc: 'Film reklamowy',
-            slug: 'case6'
-        },
-    ]
     const isMobile = useMediaQuery({
         query: '(max-device-width: 1080px)'
       })
     const renderSlider = (
         <Slider style={ { outline: 'none' } }>
-            { slideData.map((item, index) => (
+            { data.cases.nodes.map((item, index) => (
                 <Slide className="slide" key={ index } index={ index }>
                     <SliderContent item={ item } />
                 </Slide>
@@ -258,30 +214,31 @@ const CaseStudy = ({ triangle=true }) => {
     )
     const mobile = (
         <>
-            { slideData.map((item, index) => index < 3 && <SliderContent item={ item } key={ index } />) }
+            { data.cases.nodes.map((item, index) => index < 3 && <SliderContent item={ item } key={ index } />) }
         </>
     )
-    return (
+    const content = (
         <Style>
             { triangle && (
                 <Triangle>
-                    <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="triangle" /> 
+                    <Img fluid={ data.triangle.childImageSharp.fluid } alt="triangle" /> 
                 </Triangle>
             ) }
             <CarouselProvider
                     naturalSlideWidth={ 100 }
                     naturalSlideHeight={ 100 }
-                    totalSlides={ slideData.length + 1 }
+                    totalSlides={ data.cases.nodes.length + 1 }
                     className="carousel__cnt"
-                    visibleSlides={ slideData.length >= 3 ? 3 : slideData.length }
+                    visibleSlides={ data.cases.nodes.length >= 3 ? 3 : data.cases.nodes.length }
                     infinite={ true }
                 >
-            <Header src={ data.allFile.nodes[0].childImageSharp.fluid }/>
+            <Header src={ data.scroll.childImageSharp.fluid }/>
                     { !isMobile && renderSlider }
                 </CarouselProvider>
                 { isMobile && mobile }
         </Style>
     )
+    return data && content
 }
 
 export default CaseStudy
