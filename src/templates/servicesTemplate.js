@@ -259,28 +259,28 @@ const ServiceTemplate = ({ pageContext }) => {
     })
     const data = useStaticQuery(graphql`
     {
-        triangle1: file (relativePath: { eq: "services/1.png}) {
+        triangle1: file (relativePath: { eq: "servicesPage/1.png" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
-        quote: file (relativePath: { eq: "services/2.png}) {
+        quote: file (relativePath: { eq: "servicesPage/2.png" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
-        dots: file (relativePath: { eq: "services/3.png}) {
+        dots: file (relativePath: { eq: "servicesPage/3.png" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
                 }
             }
         }
-        triangle2: file (relativePath: { eq: "services/4.png}) {
+        triangle2: file (relativePath: { eq: "servicesPage/4.png" }) {
             childImageSharp {
                 fluid {
                     ...GatsbyImageSharpFluid
