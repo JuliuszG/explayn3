@@ -132,7 +132,7 @@ const Footer = () => {
     `
     )
     return(
-        <Style>
+        <Style id="footer">
             <div className="left">
                 <h4>Podejmij z nami współpracę</h4>
                 <h2><a href="mailto:we@explayn.it">we@explayn.it</a></h2>

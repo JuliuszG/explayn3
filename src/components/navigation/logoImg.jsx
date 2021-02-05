@@ -2,8 +2,15 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import styled from 'styled-components'
+import Logo from '../../images/explaynLogo.svg'
 
 const Image = styled(Img)`
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+`
+
+const ImageSvg = styled.img`
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -36,7 +43,7 @@ const LogoImg = ({ customWidth, customHeight, color=false }) => {
          <ImageCnt customWidth={ customWidth } customHeight={ customHeight }>
              { color ? 
              <Image fluid={ data.light.childImageSharp.fluid } alt="logo" /> : 
-             <Image fluid={ data.dark.childImageSharp.fluid } alt="logo" />}
+             <ImageSvg src={ Logo } alt="logo" />}
          </ImageCnt>
          )
 }

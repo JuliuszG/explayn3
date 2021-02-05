@@ -218,7 +218,7 @@ const CaseStudy = ({ triangle=true }) => {
         </>
     )
     const content = (
-        <Style>
+        <Style id="caseStudy">
             { triangle && (
                 <Triangle>
                     <Img fluid={ data.triangle.childImageSharp.fluid } alt="triangle" /> 
@@ -231,6 +231,7 @@ const CaseStudy = ({ triangle=true }) => {
                     className="carousel__cnt"
                     visibleSlides={ data.cases.nodes.length >= 3 ? 3 : data.cases.nodes.length }
                     infinite={ true }
+                    step={ 3 }
                 >
             <Header src={ data.scroll.childImageSharp.fluid }/>
                     { !isMobile && renderSlider }

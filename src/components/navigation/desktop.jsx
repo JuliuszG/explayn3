@@ -5,6 +5,8 @@ import LogoImg from './logoImg'
 import ContactUs from './contactUs'
 import LangSwitch from './langSwitch'
 import Menu from './menu'
+import MenuDesktop from './nav2/menuDesktop'
+import { AnimatePresence } from 'framer-motion'
 
 const Nav = styled.nav`
     position: absolute;
@@ -18,9 +20,13 @@ const Nav = styled.nav`
     z-index: 100;
     width: 100%;
     .desktop__cnt {
+        width: 15%;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media (max-width: 1300px) {
+            width: 25%;
+        }
         &:first-of-type {
             width: 336px;
         }
@@ -35,7 +41,8 @@ const Desktop = ({ color }) => {
     const handleToggle = () => setMenuIsOn(prevState => !prevState)
     const renderMenu = () => {
         if(menuIsOn) {
-            return <Menu toggle={ handleToggle } />
+            // return <Menu toggle={ handleToggle } />
+            return <MenuDesktop toggle={ handleToggle }/>
         } else {
             return null
         }
@@ -50,7 +57,11 @@ const Desktop = ({ color }) => {
                 <ContactUs color={ color }/>
                 <LangSwitch color={ color }/>
             </div>
-            { renderMenu() }
+            <div style={{ position: "absolute" }}> 
+                <AnimatePresence>
+                    { renderMenu() }
+                </AnimatePresence>
+            </div>
         </Nav>
     )
 }
