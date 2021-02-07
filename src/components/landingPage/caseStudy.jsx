@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
 import { useMediaQuery } from 'react-responsive'
+import { motion } from 'framer-motion'
 
 const Style = styled.section`
     position: relative;
@@ -163,7 +164,12 @@ const Header = ({ src }) => {
                 </p>
             </div>
             <ButtonNext className="next">
+                <motion.div 
+                    whileHover={ { rotate: 360, transition: { duration: 0.3 } } } 
+                    style={ { width: "100%", height: "100%" } }
+                >
                     <Img fluid={ src } alt="scroll left" />
+                </motion.div>
             </ButtonNext>
         </HeaderStyle>
     )

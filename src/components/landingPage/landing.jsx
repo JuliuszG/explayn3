@@ -4,6 +4,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import {Link as ScLink} from "react-scroll";
+import { motion } from 'framer-motion'
 
 const Style = styled.section`
     width: 100%;
@@ -110,13 +111,60 @@ const ScrollStyle = styled(ScLink)`
         height: 122px;
     }
 `
+const ScrollWrapper = styled(motion.div)`
+    width: 100%;
+    height: 100%;
+`
+export const H2Variant = {
+    visible : {
+        opacity: 1,
+        y: 0, 
+        transition: {
+            duration: 0.3,
+            delay: 0.2,
+            ease: "easeIn", 
+        }
+    },
+    hidden: {
+        opacity: 0,
+        y: 100,
+        transition: {
+            duration: 0.2,
+            delay: 0.2,
+            ease: "easeInOut", 
+        }
+    }
+}
+
+export const PVariant = {
+    visible : {
+        opacity: 1,
+        y: 0, 
+        transition: {
+            duration: 0.3,
+            delay: 0.4,
+            ease: "easeInOut", 
+        }
+    },
+    hidden: {
+        opacity: 0,
+        y: 100,
+        transition: {
+            duration: 0.3,
+            delay: 0.4,
+            ease: "easeIn", 
+        }
+    }
+}
 
 const ScrollDown = ({ src }) => {
     return (
-        <ScrollStyle  to={"aboutUs"} smooth duration={500}>
-            <Img fluid={src} 
-                alt="scrolldown" 
-             />
+        <ScrollStyle to={"aboutUs"} smooth duration={500}>
+            <ScrollWrapper whileHover={ { rotate: 360, transition: { duration: 0.3 } } }>
+                <Img fluid={src} 
+                    alt="scrolldown" 
+                />
+            </ScrollWrapper>
         </ScrollStyle>
     )
 }
@@ -172,13 +220,13 @@ const Landing = () => {
     return (
         <Style>
             <div className="text">
-                <h1>
+                <motion.h1 variants={ H2Variant } initial="hidden" animate="visible">
                     Innowacyjne spojrzenie na marketing marki
-                </h1>
-                <p>
+                </motion.h1>
+                <motion.p variants={ PVariant } initial="hidden" animate="visible">
                     Jesteśmy zespołem który łączy różne spojrzenia na marketing, 
                     każdy z nas ma różne doświadczenia oraz styl pracy.
-                </p>
+                </motion.p>
             </div>
             <Circle src={ data.circle.childImageSharp.fluid } />
             <ZigZag src={ data.zigzag.childImageSharp.fluid } />

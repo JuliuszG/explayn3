@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
+import { useInView } from 'react-intersection-observer';
+import { motion } from 'framer-motion';
+import { H2Variant, PVariant } from './landing'
 
 const Style = styled.section`
     background: ${ colors.neutral90 };
@@ -149,17 +152,20 @@ const Box = ({ content }) => {
 }
 
 const Header = ({ src }) => {
-
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 1
+      });
     return (
-        <HeaderStyle>
+        <HeaderStyle ref={ ref }>
             <div className="text">
-                <h2>
+                <motion.h2 variants={ H2Variant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
                     Zbudujemy Twoją markę, zaczynając 
                     od solidnych fundamentów 
-                </h2>
-                <p>
+                </motion.h2>
+                <motion.p variants={ PVariant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
                     Wierzymy w moc porywającej narracji, estetyki marki oraz wykorzystanie silnej stron brandu.
-                </p>
+                </motion.p>
             </div>
             <ImageHeader fluid={ src } alt="half-circle" />
         </HeaderStyle>
