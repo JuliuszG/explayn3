@@ -230,7 +230,7 @@ const CaseStudy = ({ triangle=true }) => {
                     totalSlides={ data.cases.nodes.length + 1 }
                     className="carousel__cnt"
                     visibleSlides={ data.cases.nodes.length >= 3 ? 3 : data.cases.nodes.length }
-                    infinite={ true }
+                    infinite={ false }
                     step={ 3 }
                 >
             <Header src={ data.scroll.childImageSharp.fluid }/>

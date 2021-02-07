@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import LogoImg from './logoImg'
 import ContactUs from './contactUs'
 import LangSwitch from './langSwitch'
-import Menu from './menu'
 import MenuDesktop from './nav2/menuDesktop'
 import { AnimatePresence } from 'framer-motion'
 
@@ -41,7 +40,6 @@ const Desktop = ({ color }) => {
     const handleToggle = () => setMenuIsOn(prevState => !prevState)
     const renderMenu = () => {
         if(menuIsOn) {
-            // return <Menu toggle={ handleToggle } />
             return <MenuDesktop toggle={ handleToggle }/>
         } else {
             return null

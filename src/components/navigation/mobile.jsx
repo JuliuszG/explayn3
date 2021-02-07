@@ -5,7 +5,9 @@ import LogoImg from './logoImg'
 import { colors } from '../../styles/colors'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
-import MobileMenu from './mobileMenu'
+import MenuMobile from './nav2/menuMobile'
+import { AnimatePresence } from 'framer-motion'
+
 
 const Style = styled.div`
     display: flex;
@@ -38,7 +40,11 @@ const Mobile = () => {
             <MenuIcon customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
             <LogoImg customWidth="128px" customHeight="27px" />
             <a href="tel:+123456789"><Image fluid={data.file.childImageSharp.fluid} alt="phone" /></a>
-            { menuOn && <MobileMenu toggle={ handleToggle } /> }
+            <div style={ { position: "absolute" } }>
+                <AnimatePresence>
+                    { menuOn && <MenuMobile toggle={ handleToggle } /> }
+                </AnimatePresence>
+            </div>
         </Style>
     )
 }

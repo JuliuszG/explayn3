@@ -277,6 +277,17 @@ const MenuDesktop = ({ toggle }) => {
         toggle()
         setSubMenuIsOn(false)
     }
+    const data = useStaticQuery(graphql`
+        {
+            file (relativePath: { eq: "menuLogo.png" }) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
     return (
             <Style
                 variants={ menuAnimation }
