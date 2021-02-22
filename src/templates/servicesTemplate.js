@@ -10,6 +10,8 @@ import Footer from '../components/footer'
 import SEO from "../components/seo"
 import { colors } from '../styles/colors'
 import { graphql, useStaticQuery } from 'gatsby'
+import { useInView } from 'react-intersection-observer';
+import { AnimatedHeader, AnimatedParagraph } from '../components/util/animations'
 
 const Landing = styled.section`
     width: 100%;
@@ -64,7 +66,7 @@ const Landing = styled.section`
         max-width: 100%;
         margin-bottom: 0;
         }
-        h1 {
+        h2 {
             font-weight: 600;
             font-size: 5.125em;
             line-height: 119.5%;
@@ -254,6 +256,14 @@ const QuoteSection = styled.div`
     }
 `
 const ServiceTemplate = ({ pageContext }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+      });
+      const [ref2, inView2] = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+      });
     const isMobile = useMediaQuery({
         query: '(max-device-width: 950px)'
     })
@@ -295,18 +305,18 @@ const ServiceTemplate = ({ pageContext }) => {
              <SEO title="Home" />
             { isMobile ? <Mobile /> : <Desktop /> }
             <Landing>
-                <div className="text">
-                    <h1>{ pageContext.first.Title }</h1>
-                    <p>{ pageContext.first.Desc }</p>
+                <div className="text"  ref={ ref }>
+                    <AnimatedHeader inView={ inView }>{ pageContext.first.Title }</AnimatedHeader>
+                    <AnimatedParagraph inView={ inView }>{ pageContext.first.Desc }</AnimatedParagraph>
                 </div>
                 <Logo>
                     <Img fluid={ pageContext.logo } alt="subpage logo" />
                 </Logo>
             </Landing>
             <ServicesSection>
-                <div className="left">
-                    <h2>{ pageContext.second.Title }</h2>
-                    <p>{ pageContext.second.Desc }</p>
+                <div className="left" ref={ ref2 }>
+                    <AnimatedHeader inView={ inView2 }>{ pageContext.second.Title }</AnimatedHeader>
+                    <AnimatedParagraph inView={ inView2 }>{ pageContext.second.Desc }</AnimatedParagraph>
                 </div>
                 <ul className="right">
                     { pageContext.second.List.map((item, index) => (

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { colors } from '../../styles/colors'
+import { useInView } from 'react-intersection-observer';
+import { AnimatedHeader, AnimatedParagraph, AnimatedLink } from '../util/animations'
 
 const Style = styled.section`
     display: flex;
@@ -90,16 +92,20 @@ const Style = styled.section`
 `
 
 const CaseData = ({ title, paragraph, link, country, client, field, services }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+      });
     return (
         <Style>
-            <div className="left">
-                <h2>
+            <div className="left" ref={ ref }>
+                <AnimatedHeader inView={ inView }>
                     { title }
-                </h2>
-                <p>
+                </AnimatedHeader>
+                <AnimatedParagraph inView={ inView }>
                    { paragraph }
-                </p>
-                <a href={ link }>Zobacz stronę online</a>
+                </AnimatedParagraph>
+                <AnimatedLink inView={ inView } url={ link }>Zobacz stronę online</AnimatedLink>
             </div>
             <ul className="right">
                 <li>

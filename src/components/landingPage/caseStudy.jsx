@@ -6,6 +6,8 @@ import { colors } from '../../styles/colors'
 import { CarouselProvider, Slider, Slide, ButtonNext } from 'pure-react-carousel';
 import { useMediaQuery } from 'react-responsive'
 import { motion } from 'framer-motion'
+import { AnimatedHeader, AnimatedParagraph } from '../util/animations'
+import { useInView } from 'react-intersection-observer';
 
 const Style = styled.section`
     position: relative;
@@ -154,14 +156,20 @@ export const SliderContent = ({ item }) => {
 }
 
 const Header = ({ src }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+      });
     return (
-        <HeaderStyle>
+        <HeaderStyle ref={ ref }>
             <div className="text">
-                <h2>Case studies</h2>
-                <p>
+                <AnimatedHeader inView={ inView }>
+                    Case studies
+                </AnimatedHeader>
+                <AnimatedParagraph inView={ inView }>
                     Zobacz nasze ostatnie realizacjie dla klientów lorem 
                     ipsum dolor sit amen proin victus senor.
-                </p>
+                </AnimatedParagraph>
             </div>
             <ButtonNext className="next">
                 <motion.div 

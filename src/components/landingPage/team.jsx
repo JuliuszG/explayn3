@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from 'styled-components'
+import { AnimatedHeader, AnimatedParagraph } from '../util/animations'
+import { useInView } from 'react-intersection-observer';
 
 const Style = styled.section`
 font-size: 16px;
@@ -70,6 +72,10 @@ const Arrow = styled.div`
 `
 
 const Team = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5
+      });
     const data = useStaticQuery(graphql`
     {
     allFile(filter: {relativeDirectory: {eq: "team"}}) {
@@ -91,16 +97,16 @@ const Team = () => {
                     <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="arrow" />
                 </Arrow>
             </div>
-            <div className="text">
-                <h2>
+            <div className="text" ref={ ref }>
+                <AnimatedHeader inView={ inView }> 
                     Jesteśmy zespołem który łączy różne spojrzenia <span role="img" aria-label="Eyes emoji">👀</span> na marketing, każdy z nas ma 
                     różne doświadczenia oraz styl pracy. 
-                </h2>
-                <p>
+                </AnimatedHeader>
+                <AnimatedParagraph inView={ inView }>
                     Explayn to doświadczenie współpracy z różnymi klientami, innowacyjne spojrzenie 
                     na marketing i kreacje marki a przede wszystkim mieszanka różnych charakterów. 
                     Zobacz dla kogo pracowaliśmy:
-                </p>
+                </AnimatedParagraph>
             </div>
         </Style>
     )
