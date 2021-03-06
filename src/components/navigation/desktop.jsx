@@ -20,12 +20,12 @@ const Nav = styled.nav`
     z-index: 100;
     width: 100%;
     .desktop__cnt {
-        width: 15%;
+        width: 20%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         @media (max-width: 1300px) {
-            width: 25%;
+            width: 30%;
         }
         &:first-of-type {
             width: 336px;

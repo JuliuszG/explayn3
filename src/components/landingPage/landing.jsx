@@ -29,13 +29,16 @@ const Style = styled.section`
         }
     @media (max-width: 950px) {
         flex-direction: column;
-        font-size: 12px;
+        font-size: 14px;
         padding-left: 0;
         padding: 10% 15% 0;
     }
     @media (max-width: 650px) {
-        font-size: 8px;
+        font-size: 10px;
         padding: 15% 8%;
+    }
+    @media (max-width: 374px) {
+        font-size: 8px;
     }
     .text {
         max-width: 65%;
@@ -50,6 +53,9 @@ const Style = styled.section`
             font-size: 5.125em;
             line-height: 119.5%;
             margin-bottom: 4%;
+            @media (max-width: 650px) {
+                line-height: 125%;
+            }
         }
         p {
             max-width: 55%;

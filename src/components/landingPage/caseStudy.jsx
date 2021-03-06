@@ -119,9 +119,6 @@ const SlideStyle = styled(Link)`
     @media (max-width: 400px) {
         padding: 0;
     }
-    .slide__img {
-        height: 50%;
-    }
     .text__cnt {
         margin-top: 2%;
         margin-left: 3%;
@@ -143,10 +140,19 @@ const SlideStyle = styled(Link)`
     }
 `
 
+const SlideImageWrapper = styled.div`
+    height: 70%;
+    @media (max-width: 968px) {
+        height: 400px;
+    }
+`
+
 export const SliderContent = ({ item }) => {
     return (
         <SlideStyle to={ `/case/${item.slug}` }>
-                <Img style={ { height: "70%", width: "100%", objectPosition: "center" } } fluid={ item.landingimage.fluid } alt="logo"/> 
+                <SlideImageWrapper>
+                    <Img style={{ height: "100%" }} fluid={ item.landingimage.fluid } alt="logo"/> 
+                </SlideImageWrapper>
             <div className="text__cnt">
                 <h3>{ item.component2Client }</h3>
                 <p>{ item.component2Services }</p>

@@ -81,7 +81,7 @@ const Team = () => {
     allFile(filter: {relativeDirectory: {eq: "team"}}) {
         nodes {
         childImageSharp {
-            fluid {
+            fluid(quality: 100, maxWidth: 1700) {
             ...GatsbyImageSharpFluid_tracedSVG
             }
         }

@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import styled from 'styled-components'
 import Logo from '../../images/explaynLogo.svg'
+import { colors } from '../../styles/colors'
 
 const Image = styled(Img)`
     width: 100%;
@@ -24,15 +25,15 @@ const LogoImg = ({ customWidth, customHeight, color=false }) => {
         query {
             dark: file(relativePath: { eq: "explaynLogo.png" }) {
             childImageSharp {
-                fluid {
-                ...GatsbyImageSharpFluid
+                fluid(quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
                 }
             }
             }
             light: file(relativePath: { eq: "explaynLogoLight.png" }) {
                 childImageSharp {
-                    fluid {
-                    ...GatsbyImageSharpFluid
+                    fluid(quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
                     }
                 }
                 }

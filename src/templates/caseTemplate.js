@@ -19,7 +19,7 @@ export const query = graphql`
 query MyQuery($id: String!) {
     datoCmsRealizacja(id: {eq: $id}) {
         landingimage {
-          fluid {
+          fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid
           }
         }
@@ -31,24 +31,24 @@ query MyQuery($id: String!) {
         component2Services
         link
         screens {
-          fluid {
+          fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid
           }
         }
         bigScreen {
-          fluid {
+          fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid
           }
         }
         component4Title
         article4Paragraphs
         doubleImageComponent {
-          fluid {
+          fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid
           }
         }
         screen2 {
-          fluid {
+          fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid
           }
         }

@@ -19,14 +19,14 @@ const MenuIcon = ({ toggle, customWidth, customHeight, color=false }) => {
         query {
             dark: file(relativePath: { eq: "burger.png" }) {
             childImageSharp {
-                fluid {
+                fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
                 }
             }
             }
             light: file(relativePath: { eq: "lightBurger.png" }) {
                 childImageSharp {
-                    fluid {
+                    fluid(quality: 100) {
                     ...GatsbyImageSharpFluid
                     }
                 }

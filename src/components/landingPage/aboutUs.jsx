@@ -270,8 +270,8 @@ const AboutUs = () => {
     aboutImages: allFile(filter: {relativeDirectory: {eq: "about"}}) {
         nodes {
         childImageSharp {
-            fixed(width: 65, height: 65) {
-            ...GatsbyImageSharpFixed
+            fixed(width: 65, height: 65, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
             }
         }
         }
@@ -279,8 +279,8 @@ const AboutUs = () => {
     aboutImagesHover: allFile(filter: {relativeDirectory: {eq: "about/hover"}}) {
         nodes {
         childImageSharp {
-            fixed(width: 65, height: 65) {
-            ...GatsbyImageSharpFixed
+            fixed(width: 57, height: 57, quality: 100) {
+            ...GatsbyImageSharpFixed_withWebp
             }
         }
         }

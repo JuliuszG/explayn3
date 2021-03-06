@@ -13,8 +13,14 @@ const Style = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6%;
-    background: ${ colors.neutral30 };
+    padding: 0 6%;
+    height: 75px;
+    background: ${ colors.neutral10 };
+    .dec {
+        width: 1px;
+        height: 70px;
+        background: ${ colors.neutral30 };
+    }
 `
 const Image = styled(Img)`
     width: 22px;
@@ -28,7 +34,7 @@ const Mobile = () => {
         query {
             file(relativePath: { eq: "phone.png" }) {
             childImageSharp {
-                fluid {
+                fluid(quality: 100) {
                 ...GatsbyImageSharpFluid
                 }
             }
@@ -38,7 +44,9 @@ const Mobile = () => {
     return (
         <Style>
             <MenuIcon customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
+            <div className="dec"></div>
             <LogoImg customWidth="128px" customHeight="27px" />
+            <div className="dec"></div>
             <a href="tel:+123456789"><Image fluid={data.file.childImageSharp.fluid} alt="phone" /></a>
             <div style={ { position: "absolute" } }>
                 <AnimatePresence>

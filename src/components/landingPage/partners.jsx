@@ -28,9 +28,6 @@ const CardStyle = styled.div`
     @media (max-width: 850px) {
         width: 80%;
         height: 280px;
-        &:nth-of-type(2), :nth-of-type(3), :nth-of-type(4) {
-            display: none;
-        }
     }
     .logo {
         height: 80%;
