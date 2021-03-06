@@ -5,7 +5,7 @@ import { colors } from '../../styles/colors'
 const Style = styled.div`
     display: flex;
     align-items: center;
-    color: #9498B2;
+    color: ${({color}) => color ? color : '#9498B2'};
         .lang {
             font-family: 'Poppins';
             font-style: normal;
@@ -26,21 +26,21 @@ const Style = styled.div`
                 margin-left: 10px;
             }
             &.active {
-                color: #fff;
+                color: ${({active}) => active ? active : "#fff"};
             }
         }
         .line {
             width: 40px;
             height: 1px;
-            background: ${ colors.neutral40 };
+            background: ${({color}) => color ? color : colors.neutral40}
         }
 `
 
-const MenuLanguage = () => {
+const MenuLanguage = ({ color, active }) => {
     const [lang, setLang] = useState("pl")
     const handleChange = (lang) => setLang(lang)
     return (
-        <Style>
+        <Style color={color} active={active}>
             <button onClick={ () => handleChange("en") } className={ lang === "en" ? "lang active" : "lang" }>en</button>
             <span className="line"></span>
             <button onClick={ () => handleChange("pl") } className={ lang === "pl" ? "lang active" : "lang" }>pl</button>

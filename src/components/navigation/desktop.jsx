@@ -6,6 +6,7 @@ import ContactUs from './contactUs'
 import LangSwitch from './langSwitch'
 import MenuDesktop from './nav2/menuDesktop'
 import { AnimatePresence } from 'framer-motion'
+import MenuLanguage from './menuLanguage'
 
 const Nav = styled.nav`
     position: absolute;
@@ -53,7 +54,7 @@ const Desktop = ({ color }) => {
             </div>
             <div className="desktop__cnt">
                 <ContactUs color={ color }/>
-                <LangSwitch color={ color }/>
+                <MenuLanguage color='#949DB2' active='#000'/>
             </div>
             <div style={{ position: "absolute" }}> 
                 <AnimatePresence>
