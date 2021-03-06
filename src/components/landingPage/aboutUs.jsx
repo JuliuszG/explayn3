@@ -172,13 +172,37 @@ const Box = ({ content }) => {
             }
         }
     }
+    const imageColorVariant = {
+        visible : {
+            opacity: 1,
+            scale: 1.3,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        },
+        initial: {
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        }
+    }
     const [hovered, setHovered] = useState(false)
     const renderImage = () => {
         return (
             <BoxImageWrapper>
                 <AnimatePresence initial={ false }>
                 {hovered ? (
-                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="fwefefewf2ee" variants={ imageVariant } initial="initial" exit="exit" animate="visible">
+                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="fwefefewf2ee" variants={ imageColorVariant } initial="initial" exit="exit" animate="visible">
                         <BoxImage fixed={ content.image[1].src } 
                             alt={ content.image[1].alt } 
                         />
