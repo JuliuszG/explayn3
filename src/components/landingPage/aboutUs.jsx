@@ -271,7 +271,7 @@ const AboutUs = () => {
         nodes {
         childImageSharp {
             fixed(width: 65, height: 65) {
-            ...GatsbyImageSharpFixed_tracedSVG
+            ...GatsbyImageSharpFixed
             }
         }
         }
@@ -280,7 +280,7 @@ const AboutUs = () => {
         nodes {
         childImageSharp {
             fixed(width: 65, height: 65) {
-            ...GatsbyImageSharpFixed_tracedSVG
+            ...GatsbyImageSharpFixed
             }
         }
         }

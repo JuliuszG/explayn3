@@ -37,7 +37,7 @@ const Style = styled.div`
 `
 
 const MenuLanguage = () => {
-    const [lang, setLang] = useState("en")
+    const [lang, setLang] = useState("pl")
     const handleChange = (lang) => setLang(lang)
     return (
         <Style>

@@ -173,7 +173,7 @@ const ZigZagStyle = styled.div`
     width: 17.5em;
     height: 3.5em;
     position: absolute;
-    top: 20%;
+    top: 30%;
     right: 10%;
     @media (max-width: 950px) {
         display: none;
@@ -228,7 +228,6 @@ const Landing = () => {
                     każdy z nas ma różne doświadczenia oraz styl pracy.
                 </motion.p>
             </div>
-            <Circle src={ data.circle.childImageSharp.fluid } />
             <ZigZag src={ data.zigzag.childImageSharp.fluid } />
             <ScrollDown src={ data.scroll.childImageSharp.fluid } />
         </Style>

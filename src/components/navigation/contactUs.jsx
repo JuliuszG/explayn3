@@ -16,7 +16,6 @@ const Cnt = styled.div`
             text-align: left;
             color:  ${({ color }) => color ? color : '#4C65FF'};
             text-decoration: none;
-            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
         }
 `
 

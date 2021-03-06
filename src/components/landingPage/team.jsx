@@ -49,12 +49,12 @@ font-size: 16px;
     }
 `
 const Arrow = styled.div`
-    width: 187px;
-    height: 178px;
+    width: 11%;
+    height: 10%;
     position: absolute;
-    bottom: -12%;
-    right: 10%;
-    @media (max-width: 1200px) {
+    bottom: -2.6%;
+    right: 5%;
+    /* @media (max-width: 1200px) {
         width: 147px;
         height: 137px;
         bottom: -15%;
@@ -68,7 +68,7 @@ const Arrow = styled.div`
         width: 67px;
         height: 47px;
         bottom: -12.5%;
-    }
+    } */
 `
 
 const Team = () => {

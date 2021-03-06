@@ -56,7 +56,7 @@ const Triangle = styled.div`
 const HeaderStyle = styled.div`
     font-family: 'Poppins';
     font-style: normal;
-    padding: 5% 22% 5% 10%;
+    padding: 10% 22% 10% 10%;
     color: ${ colors.neutral100 };
     display: flex;
     justify-content: space-between;
@@ -244,7 +244,7 @@ const CaseStudy = ({ triangle=true }) => {
                     totalSlides={ data.cases.nodes.length + 1 }
                     className="carousel__cnt"
                     visibleSlides={ data.cases.nodes.length >= 3 ? 3 : data.cases.nodes.length }
-                    infinite={ false }
+                    infinite={ true }
                     step={ 3 }
                 >
             <Header src={ data.scroll.childImageSharp.fluid }/>

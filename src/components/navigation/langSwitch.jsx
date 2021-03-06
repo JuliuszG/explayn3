@@ -18,7 +18,7 @@ const Btn = styled.button`
 `
 
 const LangSwitch = ({ color }) => {
-    const [lang, setLang] = useState("en")
+    const [lang, setLang] = useState("pl")
     const handleSwitch = () => {
         if(lang === 'pl') {
             setLang("en")
