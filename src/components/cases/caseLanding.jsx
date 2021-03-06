@@ -8,12 +8,8 @@ const Style = styled(BackgroundImage)`
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   height: 100vh;
   position: relative;
-  @media (max-width: 968px) {
-      background-attachment: initial;
-  }
   .circle-wrapper {
       width: 217px;
       height: 199px;
