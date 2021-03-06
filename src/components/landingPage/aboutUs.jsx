@@ -4,7 +4,7 @@ import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import { useInView } from 'react-intersection-observer';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { H2Variant, PVariant } from './landing'
 
 const Style = styled.section`
@@ -133,15 +133,73 @@ const BoxStyle = styled.div`
     }
 `
 
-const BoxImage = styled(Img)`
+const BoxImageWrapper = styled.div`
     width: 65px;
     height: 65px;
+    padding: 0;
+    position: relative;
+    .hidden {
+        opacity: 0;
+    }
+`
+
+const BoxImage = styled(Img)`
+    width: 100%;
+    height: 100%;
 `
 
 const Box = ({ content }) => {
+    const imageVariant = {
+        visible : {
+            opacity: 1,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        },
+        exit: {
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        },
+        initial: {
+            opacity: 0,
+            transition: {
+                duration: 0.5,
+                ease: "easeInOut", 
+            }
+        }
+    }
+    const [hovered, setHovered] = useState(false)
+    const renderImage = () => {
+        return (
+            <BoxImageWrapper>
+                <AnimatePresence initial={ false }>
+                {hovered ? (
+                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="fwefefewf2ee" variants={ imageVariant } initial="initial" exit="exit" animate="visible">
+                        <BoxImage fixed={ content.image[1].src } 
+                            alt={ content.image[1].alt } 
+                        />
+                    </motion.div>
+                  
+                ) : (
+                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="hdw7hwd" variants={ imageVariant } initial="initial" exit="exit" animate="visible">
+                        <BoxImage fixed={ content.image[0].src } 
+                            alt={ content.image[0].alt } 
+                        />
+                    </motion.div>
+                   
+                )}    
+                </AnimatePresence>         
+            </BoxImageWrapper>
+        )
+    }
+    const handleHover = () => setHovered(prevState => !prevState)
     return (
-        <BoxStyle>
-            <BoxImage fluid={ content.image.src } imgStyle={{width: "100%", height: "100%", objectFit: "contain"}} alt={ content.image.alt } />
+        <BoxStyle onMouseOver={ handleHover } onMouseOut={ handleHover }>
+                { renderImage() }
             <h3>{ content.name }</h3>
             <ul>
                 { content.list.map((item, index) => <li key={ index }>{ item }</li>) }
@@ -188,8 +246,8 @@ const AboutUs = () => {
     aboutImages: allFile(filter: {relativeDirectory: {eq: "about"}}) {
         nodes {
         childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            fixed(width: 65, height: 65) {
+            ...GatsbyImageSharpFixed_tracedSVG
             }
         }
         }
@@ -197,8 +255,8 @@ const AboutUs = () => {
     aboutImagesHover: allFile(filter: {relativeDirectory: {eq: "about/hover"}}) {
         nodes {
         childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
+            fixed(width: 65, height: 65) {
+            ...GatsbyImageSharpFixed_tracedSVG
             }
         }
         }
@@ -207,55 +265,103 @@ const AboutUs = () => {
 `)
 const items = [
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[0].childImageSharp.fluid : data.aboutImagesHover.nodes[0].childImageSharp.fluid,
-            alt: 'Development'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[0].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[0].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'Development',
         list: ['Strony internetowe', 'Sklepy internetowe', 'Aplikacje iOS & Android', 'Systemy dedykowane'],
         url: '/development'
     },
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[1].childImageSharp.fluid : data.aboutImagesHover.nodes[1].childImageSharp.fluid,
-            alt: 'Visual'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[1].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[1].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'Visual',
         list: ['Fotografia', 'Spoty reklamowe', 'Filmy animowane', 'Wideo produktowe'],
         url: '/visual'
     },
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[2].childImageSharp.fluid : data.aboutImagesHover.nodes[2].childImageSharp.fluid,
-            alt: 'Branding'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[2].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[2].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'Branding',
         list: ['Identyfikacja wizualna', 'Materiały marketingowe', 'Tworzenie nazw marek', 'UI/UX Design'],
         url: '/branding'
     },
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[3].childImageSharp.fluid : data.aboutImagesHover.nodes[3].childImageSharp.fluid,
-            alt: 'eCommerce'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[3].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[3].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'eCommerce',
         list: ['Strategia sprzedaży online', 'Zwiększenie konwersji', 'Optymalizacja sprzedaży', 'Audyty i analityka'],
         url: '/ecommerce'
     },
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[4].childImageSharp.fluid : data.aboutImagesHover.nodes[4].childImageSharp.fluid,
-            alt: 'Events'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[4].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[4].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'Events',
         list: ['Imprezy masowe', 'Otwarcia obiektów', 'Bankiety', 'Eventy marketingowe'],
         url: '/events'
     },
     {
-        image: {
-            src: isCollapsed ? data.aboutImages.nodes[5].childImageSharp.fluid : data.aboutImagesHover.nodes[5].childImageSharp.fluid,
-            alt: 'Marketing'
-        },
+        image: [
+            {
+                src:  data.aboutImages.nodes[5].childImageSharp.fixed,
+                alt: 'Development',
+                hover: false
+            },
+            {
+                src:  data.aboutImagesHover.nodes[5].childImageSharp.fixed,
+                alt: 'Development',
+                hover: true
+            }
+        ],
         name: 'Marketing',
         list: ['Strategia marketingowa', ' Social media', 'Content Marketing', 'Kampanie marketingowe'],
         url: '/marketing'
@@ -266,7 +372,7 @@ const renderSecond = () => {
     if(!isCollapsed) {
         return (
             <div className="cnt second">
-                { items.map((item, index) => index > 2 && <Box content={ item } key={ index } />) }
+                { items.map((item, index) => index > 2 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }
             </div>
         )
     }
@@ -275,7 +381,7 @@ const renderSecond = () => {
         <Style id="aboutUs">
             <Header src={ data.main.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
-                { items.map((item, index) => index < 3 && <Box content={ item } key={ index } />) }
+                { items.map((item, index) => index < 3 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }
             </div>
             { renderSecond() }
             <div className="btn__cnt">
