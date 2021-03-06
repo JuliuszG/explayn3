@@ -20,7 +20,7 @@ query MyQuery($id: String!) {
     datoCmsRealizacja(id: {eq: $id}) {
         landingimage {
           fluid(maxWidth: 1750) {
-            GatsbyDatoCmsFluid_noBase64
+            ...GatsbyDatoCmsFixed_tracedSVG
           }
         }
         component2Title
@@ -32,24 +32,24 @@ query MyQuery($id: String!) {
         link
         screens {
           fluid(maxWidth: 1750) {
-            GatsbyDatoCmsFluid_noBase64
+            ...GatsbyDatoCmsFixed_tracedSVG
           }
         }
         bigScreen {
           fluid(maxWidth: 1750) {
-            GatsbyDatoCmsFluid_noBase64
+            ...GatsbyDatoCmsFixed_tracedSVG
           }
         }
         component4Title
         article4Paragraphs
         doubleImageComponent {
           fluid(maxWidth: 1750) {
-            GatsbyDatoCmsFluid_noBase64
+            ...GatsbyDatoCmsFixed_tracedSVG
           }
         }
         screen2 {
           fluid(maxWidth: 1750) {
-            GatsbyDatoCmsFluid_noBase64
+            ...GatsbyDatoCmsFixed_tracedSVG
           }
         }
         component7Title
