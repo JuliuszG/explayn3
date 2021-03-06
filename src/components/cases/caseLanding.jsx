@@ -11,6 +11,9 @@ const Style = styled(BackgroundImage)`
   background-attachment: fixed;
   height: 100vh;
   position: relative;
+  @media (max-width: 968px) {
+      background-attachment: none;
+  }
   .circle-wrapper {
       width: 217px;
       height: 199px;

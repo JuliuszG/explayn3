@@ -37,7 +37,7 @@ const Style = styled.section`
         font-size: 10px;
         padding: 15% 8%;
     }
-    @media (max-width: 374px) {
+    @media (max-width: 390px) {
         font-size: 8px;
     }
     .text {

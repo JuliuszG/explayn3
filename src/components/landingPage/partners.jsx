@@ -47,6 +47,11 @@ const CardStyle = styled.div`
         font-size: 22px;
         line-height: 32px;
         color: ${ colors.neutral60 };
+        .arrow {
+            @media (max-width: 968px) {
+                display: none;
+            }
+        }
     }
     .link__cnt {
         display: flex;
@@ -66,7 +71,7 @@ const Card = ({ item }) => {
                 <Img fluid={ item.image.src } imgStyle={ { objectFit: 'contain' } } style={ imgstyle } alt={ item.image.alt } />
             </div>
             <div className="link__cnt">
-                <a href={ `http://www.${ item.name }` }>{ item.name } &#8599;</a>
+                <a href={ `http://www.${ item.name }` }>{ item.name } <span className="arrow">&#8599;</span></a>
             </div>
         </CardStyle>
     )
