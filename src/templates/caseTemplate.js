@@ -14,6 +14,7 @@ import CaseBigScreen from '../components/cases/caseBigScreen'
 import CaseDescription from '../components/cases/caseDescription'
 import CaseDoubleImage from '../components/cases/caseDoubleImage'
 import CaseList from '../components/cases/caseList'
+import CaseVideo from '../components/cases/caseVideo'
 
 export const query = graphql`
 query MyQuery($id: String!) {
@@ -30,6 +31,7 @@ query MyQuery($id: String!) {
         component2Field
         component2Services
         link
+        video
         screens {
           fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid_tracedSVG
@@ -77,12 +79,13 @@ const CaseTemplate = ({ data }) => {
                 field={ data.datoCmsRealizacja.component2Field }
                 services={ data.datoCmsRealizacja.component2Services }
             />
-            <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } />
-            <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } />
+            { data.datoCmsRealizacja.video && <CaseVideo link={ data.datoCmsRealizacja.video } /> }
+            { data.datoCmsRealizacja.screens?.fluid && <CaseScreen src={ data.datoCmsRealizacja.screens.fluid } /> }
+            { data.datoCmsRealizacja.bigScreen?.fluid && <CaseBigScreen src={ data.datoCmsRealizacja.bigScreen.fluid } decorations={ true } /> }
             <CaseDescription title={ data.datoCmsRealizacja.component4Title } paragraphs={ data.datoCmsRealizacja.article4Paragraphs } />
-            <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } />
+            { data.datoCmsRealizacja.doubleImageComponent.length > 1 && <CaseDoubleImage arr={ data.datoCmsRealizacja.doubleImageComponent } /> }
             <CaseList title={ data.datoCmsRealizacja.component7Title } paragraph={ data.datoCmsRealizacja.component7Paragraph } arrObj={ JSON.parse(data.datoCmsRealizacja.component7List) } />
-            <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } />
+            { data.datoCmsRealizacja.screen2?.fluid && <CaseScreen src={ data.datoCmsRealizacja.screen2.fluid } /> }
             <CaseStudy triangle={ false } />
             <Footer />
         </Layout>
