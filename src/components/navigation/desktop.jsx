@@ -7,6 +7,7 @@ import LangSwitch from './langSwitch'
 import MenuDesktop from './nav2/menuDesktop'
 import { AnimatePresence } from 'framer-motion'
 import MenuLanguage from './menuLanguage'
+import { Link } from 'gatsby'
 
 const Nav = styled.nav`
     position: absolute;
@@ -36,7 +37,7 @@ const Nav = styled.nav`
     }
 `
 
-const Desktop = ({ color }) => {
+const Desktop = ({ darkMode, mainPage }) => {
     const [menuIsOn, setMenuIsOn] = useState(false)
     const handleToggle = () => setMenuIsOn(prevState => !prevState)
     const renderMenu = () => {
@@ -49,11 +50,11 @@ const Desktop = ({ color }) => {
     return (
         <Nav>
             <div className="desktop__cnt">
-                <MenuIcon customWidth="35px" customHeight="18px" toggle={ handleToggle } color={ color }/>
-                <LogoImg customWidth="194px" customHeight="41px" color={ color } />
+                <MenuIcon mainPage={mainPage} darkMode={darkMode} customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
+                <Link to="/"><LogoImg mainPage={mainPage} darkMode={darkMode} customWidth="194px" customHeight="41px"/></Link>
             </div>
             <div className="desktop__cnt">
-                <ContactUs color={ color }/>
+                <ContactUs mainPage={mainPage} darkMode={darkMode} />
                 <MenuLanguage color='#949DB2' active='#000'/>
             </div>
             <div style={{ position: "absolute" }}> 

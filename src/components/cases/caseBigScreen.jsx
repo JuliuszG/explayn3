@@ -18,13 +18,13 @@ const Triangle = styled.div`
     @media (max-width: 850px) {
         width: 147px;
         height: 109px;
-        top: -4%;
+        top: -6%;
     }
-    @media (max-width: 850px) {
+    @media (max-width: 450px) {
         width: 107px;
         height: 69px;
-        top: -8%;
-    }    
+        top: -4%;
+    }
 `
 
 const Triangle2 = styled.div`
@@ -33,15 +33,15 @@ const Triangle2 = styled.div`
     bottom: -8%;
     width: 187px;
     height: 178px;
-    @media (max-width: 850px) {
+    @media (max-width: 1250px) {
         width: 147px;
         height: 138px;
-        bottom: -4%;
+        bottom: -7%;
     }
-    @media (max-width: 850px) {
-        width: 107px;
-        height: 99px;
-        bottom: -8%;
+    @media (max-width: 968px) {
+        width: 87px;
+        height: 79px;
+        bottom: -4%;
     }   
 `
 

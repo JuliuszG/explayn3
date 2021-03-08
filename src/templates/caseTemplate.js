@@ -32,6 +32,7 @@ query MyQuery($id: String!) {
         component2Services
         link
         video
+        darkMode
         screens {
           fluid(maxWidth: 1750) {
             ...GatsbyDatoCmsFluid_tracedSVG
@@ -68,7 +69,7 @@ const CaseTemplate = ({ data }) => {
     return (
         <Layout>
             <SEO title="Home" />
-            { isMobile ? <Mobile color="#fff"/> : <Desktop color="#fff"/> }
+            { isMobile ? <Mobile/> : <Desktop darkMode={data.datoCmsRealizacja.darkMode} mainPage={false}/> }
             <CaseLanding background={ data.datoCmsRealizacja.landingimage.fluid }/>
             <CaseData 
                 title={ data.datoCmsRealizacja.component2Title }

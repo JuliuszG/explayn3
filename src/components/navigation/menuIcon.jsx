@@ -14,7 +14,7 @@ const Burger = styled.div`
     padding: 0;
 `
 
-const MenuIcon = ({ toggle, customWidth, customHeight, color=false }) => {
+const MenuIcon = ({ mainPage=true, darkMode, toggle, customWidth, customHeight, color=false }) => {
     const data = useStaticQuery(graphql`
         query {
             dark: file(relativePath: { eq: "burger.png" }) {
@@ -36,7 +36,9 @@ const MenuIcon = ({ toggle, customWidth, customHeight, color=false }) => {
     )
     return (
         <Burger customWidth={ customWidth } customHeight={ customHeight } onClick={ toggle }>
-            { color ? 
+            { mainPage ? 
+            <Img fluid={ data.dark.childImageSharp.fluid } alt="menu icon" /> 
+            : !darkMode ? 
             <Img fluid={ data.light.childImageSharp.fluid } alt="menu icon" /> : 
             <Img fluid={ data.dark.childImageSharp.fluid } alt="menu icon" /> }
         </Burger>

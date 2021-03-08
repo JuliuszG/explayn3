@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import YouTube from 'react-youtube';
 
 const Style = styled.div`
     padding: 10%;
@@ -19,15 +20,15 @@ const Style = styled.div`
 const CaseVideo = ({ link }) => {
     return (
          <Style>
-             <div className="videoWrapper">
-             <iframe
-                width="560" 
-                height="315" 
-                src={ link } 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen></iframe>
-             </div>
+             <YouTube
+                videoId={ 'RqzGzwTY-6w' }
+                containerClassName="videoWrapper"
+                opts={{
+                    playerVars: { 
+                        controls: 0,
+                    } 
+                }}
+             />
          </Style>
     )
 }

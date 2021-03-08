@@ -351,41 +351,49 @@ const MenuDesktop = ({ toggle }) => {
                     ></motion.div>
                     { subMenuIsOn && (
                     <div className="sub-menu">
-                        <motion.div 
+                          <motion.div 
                             className="sub-item"
                             variants={ subItemAnimation }
                             custom={ 1 }
                         >
-                            <Link to="/branding">Branding</Link>
+                            <Link to="/development">Development </Link>
                         </motion.div>
                         <motion.div 
                             className="sub-item"
                             variants={ subItemAnimation }
                             custom={ 2 }
                         >
-                            <Link to="/ecommerce">eCommerce</Link>
+                            <Link to="/visual">Visual </Link>
                         </motion.div>
                         <motion.div 
                             className="sub-item"
                             variants={ subItemAnimation }
                             custom={ 3 }
                         >
-                            <Link to="/events">Events</Link>
+                            <Link to="/branding">Branding</Link>
                         </motion.div>
                         <motion.div 
                             className="sub-item"
                             variants={ subItemAnimation }
                             custom={ 4 }
                         >
-                            <Link to="/marketing">Marketing </Link>
+                            <Link to="/ecommerce">eCommerce</Link>
                         </motion.div>
                         <motion.div 
                             className="sub-item"
                             variants={ subItemAnimation }
                             custom={ 5 }
                         >
-                            <Link to="/development">Development </Link>
+                            <Link to="/events">Events</Link>
                         </motion.div>
+                        <motion.div 
+                            className="sub-item"
+                            variants={ subItemAnimation }
+                            custom={ 6 }
+                        >
+                            <Link to="/marketing">Marketing </Link>
+                        </motion.div>
+                      
                     </div>
     )  }
                 </Links>

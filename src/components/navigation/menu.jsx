@@ -270,11 +270,12 @@ const LinksMenu = () => {
                     <Link><span>02.</span>Co robimy</Link>
                     <span className={dropOn ? "longdash active" : "longdash"}></span>
                     <ul className={dropOn ? "dropdown active" : "dropdown"}>
+                        <li><Link to="/development">Development</Link></li>
+                        <li><Link to="/visual">Visual</Link></li>
                         <li><Link to="/branding">Branding</Link></li>
                         <li><Link to="/ecommerce">eCommerce</Link></li>
                         <li><Link to="/events">Events</Link></li>
                         <li><Link to="/marketing">Marketing</Link></li>
-                        <li><Link to="/development">Development</Link></li>
                     </ul>
                 </li>
                 <li><Link to="/"><span>03.</span>Nasze prace</Link></li>

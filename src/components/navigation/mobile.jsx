@@ -7,6 +7,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import MenuMobile from './nav2/menuMobile'
 import { AnimatePresence } from 'framer-motion'
+import { Link } from 'gatsby'
 
 
 const Style = styled.div`
@@ -45,7 +46,7 @@ const Mobile = () => {
         <Style>
             <MenuIcon customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
             <div className="dec"></div>
-            <LogoImg customWidth="128px" customHeight="27px" />
+            <Link to="/"><LogoImg customWidth="128px" customHeight="27px" /></Link>
             <div className="dec"></div>
             <a href="tel:+123456789"><Image fluid={data.file.childImageSharp.fluid} alt="phone" /></a>
             <div style={ { position: "absolute" } }>
