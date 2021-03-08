@@ -301,7 +301,7 @@ const MenuDesktop = ({ toggle }) => {
                         <span className="sr" role="button">exit button</span>
                     </Exit>
                     <div className="cnt">
-                        <ContactUs color={ colors.neutral00 } />
+                        <ContactUs mainPage={false} color={ colors.neutral00 } />
                         <MenuLanguage />
                     </div>
                 </HeaderStyle>
