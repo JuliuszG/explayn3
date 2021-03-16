@@ -50,13 +50,10 @@ const Desktop = ({ darkMode, mainPage }) => {
     return (
         <Nav>
             <div className="desktop__cnt">
-                <MenuIcon mainPage={mainPage} darkMode={darkMode} customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
+                <MenuIcon mainPage={mainPage} darkMode={darkMode} customWidth="40px" customHeight="23px" toggle={ handleToggle }/>
                 <Link to="/"><LogoImg mainPage={mainPage} darkMode={darkMode} customWidth="194px" customHeight="41px"/></Link>
             </div>
-            <div className="desktop__cnt">
                 <ContactUs mainPage={mainPage} darkMode={darkMode} />
-                <MenuLanguage color='#949DB2' active='#000'/>
-            </div>
             <div style={{ position: "absolute" }}> 
                 <AnimatePresence>
                     { renderMenu() }

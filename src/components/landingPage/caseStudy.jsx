@@ -142,6 +142,13 @@ const SlideStyle = styled(Link)`
 
 const SlideImageWrapper = styled.div`
     height: 70%;
+    overflow: hidden;
+    > div {
+        transition: all 0.5s ease-in-out;
+    }
+    &:hover > div {
+        transform: scale(1.1);
+    }
     @media (max-width: 968px) {
         height: 400px;
     }
@@ -189,7 +196,7 @@ const Header = ({ src }) => {
     )
 }
 
-const CaseStudy = ({ triangle=true }) => {
+const CaseStudy = ({ triangle=false }) => {
     const data = useStaticQuery(graphql`
     {
         cases: allDatoCmsRealizacja (limit: 6, sort: {fields: meta___createdAt, order: DESC}) {

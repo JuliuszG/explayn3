@@ -66,9 +66,11 @@ const CaseTemplate = ({ data }) => {
     const isMobile = useMediaQuery({
         query: '(max-device-width: 950px)'
     })
+    
     return (
         <Layout>
             <SEO title="Home" />
+            {  console.log(data.datoCmsRealizacja.darkMode) }
             { isMobile ? <Mobile/> : <Desktop darkMode={data.datoCmsRealizacja.darkMode} mainPage={false}/> }
             <CaseLanding background={ data.datoCmsRealizacja.landingimage.fluid }/>
             <CaseData 

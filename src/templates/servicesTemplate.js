@@ -310,7 +310,7 @@ const ServiceTemplate = ({ pageContext }) => {
                     <AnimatedParagraph inView={ inView }>{ pageContext.first.Desc }</AnimatedParagraph>
                 </div>
                 <Logo>
-                    <Img fluid={ pageContext.logo } alt="subpage logo" />
+                    <Img fluid={ pageContext.logo } placeholderStyle={{ visibility: "hidden" }} alt="subpage logo" />
                 </Logo>
             </Landing>
             <ServicesSection>
@@ -328,9 +328,6 @@ const ServiceTemplate = ({ pageContext }) => {
                 </div>
             </ServicesSection>
             <QuoteSection>
-                <div className="quote">
-                    <Img fluid={ data.quote.childImageSharp.fluid } alt="quote" />
-                </div>
                 <p>
                     { pageContext.third.Quote }
                 </p>

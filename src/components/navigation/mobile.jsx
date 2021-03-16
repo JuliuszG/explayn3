@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import MenuIcon from './menuIcon'
 import LogoImg from './logoImg'
 import { colors } from '../../styles/colors'
-import { graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 import MenuMobile from './nav2/menuMobile'
 import { AnimatePresence } from 'framer-motion'
 import { Link } from 'gatsby'
+import Phone from '../../images/call-phone.svg'
 
 
 const Style = styled.div`
@@ -31,24 +31,13 @@ const Mobile = () => {
     const [menuOn, setMenuOn] = useState(false)
     const handleToggle = () => setMenuOn(prevState => !prevState)
 
-    const data = useStaticQuery(graphql`
-        query {
-            file(relativePath: { eq: "phone.png" }) {
-            childImageSharp {
-                fluid(quality: 100) {
-                ...GatsbyImageSharpFluid
-                }
-            }
-            }
-        }
-    `)
     return (
         <Style>
             <MenuIcon customWidth="35px" customHeight="18px" toggle={ handleToggle }/>
             <div className="dec"></div>
             <Link to="/"><LogoImg customWidth="128px" customHeight="27px" /></Link>
             <div className="dec"></div>
-            <a href="tel:+123456789"><Image fluid={data.file.childImageSharp.fluid} alt="phone" /></a>
+            <a href="tel:+123456789"><img src={ Phone } alt="phone"/></a>
             <div style={ { position: "absolute" } }>
                 <AnimatePresence>
                     { menuOn && <MenuMobile toggle={ handleToggle } /> }

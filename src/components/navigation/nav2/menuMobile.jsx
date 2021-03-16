@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 import { colors } from '../../../styles/colors'
-import { Link, graphql, useStaticQuery } from 'gatsby'
-import MenuLanguage from '../menuLanguage'
+import { Link } from 'gatsby'
 import { Link as ScLink } from "react-scroll";
 import { Exit } from './menuDesktop'
 
@@ -174,17 +173,6 @@ const MenuMobile = ({ toggle }) => {
         toggle()
         setSubMenuIsOn(false)
     }
-    const data = useStaticQuery(graphql`
-        {
-            logo: file (relativePath: { eq: "menuLogo.png" }) {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `)
     const renderSubMenu = () => (
         <SubMenu>
             <motion.a variants={ subItemAnimation } custom={ 1 } href="/development">Development</motion.a>
@@ -208,7 +196,6 @@ const MenuMobile = ({ toggle }) => {
                     <Exit onClick={ toggle }>
                         <span className="sr" role="button">exit button</span>
                     </Exit>
-                    <MenuLanguage />
                 </Header>
                 <Links>
                     <motion.div variants={ itemAnimation } className="item">

@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { motion } from "framer-motion"
 import { colors } from '../../../styles/colors'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link } from 'gatsby'
 import ContactUs from '../contactUs'
-import MenuLanguage from '../menuLanguage'
 import { Link as ScLink } from "react-scroll";
 
 const Style = styled(motion.div)`
@@ -277,17 +276,6 @@ const MenuDesktop = ({ toggle }) => {
         toggle()
         setSubMenuIsOn(false)
     }
-    const data = useStaticQuery(graphql`
-        {
-            file (relativePath: { eq: "menuLogo.png" }) {
-                childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-    `)
     return (
             <Style
                 variants={ menuAnimation }
@@ -302,7 +290,6 @@ const MenuDesktop = ({ toggle }) => {
                     </Exit>
                     <div className="cnt">
                         <ContactUs mainPage={false} color={ colors.neutral00 } />
-                        <MenuLanguage />
                     </div>
                 </HeaderStyle>
                 <Links>
