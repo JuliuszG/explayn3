@@ -6,8 +6,20 @@ import { colors } from '../../styles/colors'
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { H2Variant, PVariant } from './landing'
+import DevelopmentImage from '../../images/about/1.svg'
+import VisualImage from '../../images/about/2.svg'
+import BrandingImage from '../../images/about/3.svg'
+import EcommerceImage from '../../images/about/4.svg'
+import EventsImage from '../../images/about/5.svg'
+import MarketingImage from '../../images/about/6.svg'
+import DevelopmentHover from '../../images/about/hover/1.svg'
+import VisualHover from '../../images/about/hover/2.svg'
+import BrandingHover from '../../images/about/hover/3.svg'
+import EcommerceHover from '../../images/about/hover/4.svg'
+import EventsHover from '../../images/about/hover/5.svg'
+import MarketingHover from '../../images/about/hover/6.svg'
 
-const Style = styled.section`
+const Style = styled(motion.section)`
     background: ${ colors.neutral90 };
     padding: 10% 0 10%;
     .cnt {
@@ -143,9 +155,11 @@ const BoxImageWrapper = styled.div`
     }
 `
 
-const BoxImage = styled(Img)`
+const BoxImage = styled.img`
     width: 100%;
     height: 100%;
+    object-fit: contain;
+    object-position: top;
 `
 
 const Box = ({ content }) => {
@@ -175,7 +189,7 @@ const Box = ({ content }) => {
     const imageColorVariant = {
         visible : {
             opacity: 1,
-            scale: 1.3,
+            scale: 1.5,
             transition: {
                 duration: 0.5,
                 ease: "easeInOut", 
@@ -202,15 +216,15 @@ const Box = ({ content }) => {
             <BoxImageWrapper>
                 <AnimatePresence initial={ false }>
                 {hovered ? (
-                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="fwefefewf2ee" variants={ imageColorVariant } initial="initial" exit="exit" animate="visible">
-                        <BoxImage fixed={ content.image[1].src } 
+                    <motion.div style={{position: 'absolute', top: 0, left: 0, width: "100%", height: '100%'}} key="fwefefewf2ee" variants={ imageColorVariant } initial="initial" exit="exit" animate="visible">
+                        <BoxImage src={ content.image[1].src } 
                             alt={ content.image[1].alt } 
                         />
                     </motion.div>
                   
                 ) : (
-                    <motion.div style={{position: 'absolute', top: 0, left: 0}} key="hdw7hwd" variants={ imageVariant } initial="initial" exit="exit" animate="visible">
-                        <BoxImage fixed={ content.image[0].src } 
+                    <motion.div style={{position: 'absolute', top: 0, left: 0, width: "100%", height: '100%'}} key="hdw7hwd" variants={ imageVariant } initial="initial" exit="exit" animate="visible">
+                        <BoxImage src={ content.image[0].src } 
                             alt={ content.image[0].alt } 
                         />
                     </motion.div>
@@ -267,38 +281,18 @@ const AboutUs = () => {
         }
         }
     }
-    aboutImages: allFile(filter: {relativeDirectory: {eq: "about"}}) {
-        nodes {
-        childImageSharp {
-            fixed(width: 65, height: 65, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
-            }
-        }
-        }
-    }
-    aboutImagesHover: allFile(filter: {relativeDirectory: {eq: "about/hover"}}) {
-        nodes {
-        childImageSharp {
-            fixed(width: 57, height: 57, quality: 100) {
-            ...GatsbyImageSharpFixed_withWebp
-            }
-        }
-        }
-    }
     }
 `)
 const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[0].childImageSharp.fixed,
+                src:  DevelopmentImage,
                 alt: 'Development',
-                hover: false
             },
             {
-                src:  data.aboutImagesHover.nodes[0].childImageSharp.fixed,
+                src:  DevelopmentHover,
                 alt: 'Development',
-                hover: true
             }
         ],
         name: 'Development',
@@ -308,14 +302,12 @@ const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[1].childImageSharp.fixed,
-                alt: 'Development',
-                hover: false
+                src:  VisualImage,
+                alt: 'Visual',
             },
             {
-                src:  data.aboutImagesHover.nodes[1].childImageSharp.fixed,
-                alt: 'Development',
-                hover: true
+                src:  VisualHover,
+                alt: 'Visual',
             }
         ],
         name: 'Visual',
@@ -325,14 +317,12 @@ const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[2].childImageSharp.fixed,
-                alt: 'Development',
-                hover: false
+                src:  BrandingImage,
+                alt: 'Branding',
             },
             {
-                src:  data.aboutImagesHover.nodes[2].childImageSharp.fixed,
-                alt: 'Development',
-                hover: true
+                src:  BrandingHover,
+                alt: 'Branding',
             }
         ],
         name: 'Branding',
@@ -342,14 +332,12 @@ const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[3].childImageSharp.fixed,
-                alt: 'Development',
-                hover: false
+                src:  EcommerceImage,
+                alt: 'eCommerce',
             },
             {
-                src:  data.aboutImagesHover.nodes[3].childImageSharp.fixed,
-                alt: 'Development',
-                hover: true
+                src:  EcommerceHover,
+                alt: 'eCommerce',
             }
         ],
         name: 'eCommerce',
@@ -359,14 +347,12 @@ const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[4].childImageSharp.fixed,
-                alt: 'Development',
-                hover: false
+                src:  EventsImage,
+                alt: 'Events',
             },
             {
-                src:  data.aboutImagesHover.nodes[4].childImageSharp.fixed,
-                alt: 'Development',
-                hover: true
+                src:  EventsHover,
+                alt: 'Events',
             }
         ],
         name: 'Events',
@@ -376,14 +362,12 @@ const items = [
     {
         image: [
             {
-                src:  data.aboutImages.nodes[5].childImageSharp.fixed,
-                alt: 'Development',
-                hover: false
+                src:  MarketingImage,
+                alt: 'Marketing',
             },
             {
-                src:  data.aboutImagesHover.nodes[5].childImageSharp.fixed,
-                alt: 'Development',
-                hover: true
+                src:  MarketingHover,
+                alt: 'Marketing',
             }
         ],
         name: 'Marketing',
@@ -402,7 +386,7 @@ const renderSecond = () => {
     }
 }
     return (
-        <Style id="aboutUs">
+        <Style id="aboutUs" layout>
             <Header src={ data.main.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
                 { items.map((item, index) => index < 3 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }

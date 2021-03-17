@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const Cnt = styled.div`
     a {
-        width: 219px;
-        height: 58px;
+        width: 195px;
+        height: 45px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -13,7 +13,7 @@ const Cnt = styled.div`
         color: ${ ({ text }) => text ? text : "#fff" };
         text-decoration: none;
         font-family: 'Poppins';
-        font-size: 22px;
+        font-size: 20px;
         font-style: normal;
         font-weight: 600;
         transition: all 0.1s ease-in;
