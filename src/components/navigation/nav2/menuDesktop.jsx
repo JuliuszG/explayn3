@@ -140,7 +140,7 @@ const Links = styled.div`
         font-size: 16px;
     }
     .main:hover .item:not(:hover) a {
-        color: grey;
+        color: ${({subMenuIsOn}) => !subMenuIsOn && 'grey'}
     }
     .main {
         width: 40em;
@@ -155,10 +155,13 @@ const Links = styled.div`
             font-size: 2.75em;
             line-height: 272.72%;
             display: flex;
+            &:nth-of-type(2) a{
+                color: ${ ({subMenuIsOn}) => subMenuIsOn && colors.neutral00 };
+            }
             a {
                 display: block;
                 text-decoration: none;
-                color: ${ colors.neutral00 };
+                color: ${ ({subMenuIsOn}) => subMenuIsOn ? "grey" : colors.neutral00 };
                 transition: all .3s ease-in-out;
             }
             .number {
@@ -178,6 +181,9 @@ const Links = styled.div`
         background: ${ colors.neutral00 };
         margin-left: -12em;
         margin-top: 12em;
+    }
+    .sub-menu:hover .sub-item:not(:hover) a {
+        color: grey;
     }
     .sub-menu {
         width: 30%;
@@ -291,7 +297,7 @@ const MenuDesktop = ({ toggle }) => {
                         <ContactUs mainPage={false} color={ colors.neutral00 } />
                     </div>
                 </HeaderStyle>
-                <Links>
+                <Links subMenuIsOn={subMenuIsOn}>
                     <div className="main">
                         <motion.div variants={ itemAnimation } className="item">
                             <div className="number">

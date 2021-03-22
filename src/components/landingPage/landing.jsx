@@ -42,7 +42,7 @@ const Style = styled.section`
         font-size: 8px;
     }
     .text {
-        max-width: 65%;
+        max-width: 50%;
         font-family: 'Poppins';
         font-style: normal;
         color: ${ colors.neutral100 };
