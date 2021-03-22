@@ -180,8 +180,7 @@ const Header = ({ src }) => {
                     Case studies
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
-                    Zobacz nasze ostatnie realizacjie dla klientów lorem 
-                    ipsum dolor sit amen proin victus senor.
+                Take a look at our productions for partners who believe in our vision of brand creation.
                 </AnimatedParagraph>
             </div>
             <ButtonNext className="next">

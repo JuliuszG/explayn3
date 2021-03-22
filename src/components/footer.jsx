@@ -80,7 +80,10 @@ const Style = styled.footer`
         flex-grow: 1;
         display: flex;
         flex-direction: column;
-        padding: 0 10%;
+        margin: 0 10%;
+        &:hover a:not(:hover) {
+            color: grey;
+        }
         @media (max-width: 950px) {
             flex-direction: row;
             padding: 15% 10%;
@@ -95,6 +98,7 @@ const Style = styled.footer`
             font-weight: 300;
             line-height: 310.52%;
             text-align: left;
+            transition: all 0.5s ease-in-out;
         }
     }
 `

@@ -5,6 +5,7 @@ import Img from 'gatsby-image'
 import { colors } from '../../styles/colors'
 import {Link as ScLink} from "react-scroll";
 import { motion } from 'framer-motion'
+import ScrollDownIcon from '../../images/scrolldown.svg'
 
 const Style = styled.section`
     width: 100%;
@@ -167,9 +168,7 @@ const ScrollDown = ({ src }) => {
     return (
         <ScrollStyle to={"aboutUs"} smooth duration={500}>
             <ScrollWrapper whileHover={ { rotate: 360, transition: { duration: 0.3 } } }>
-                <Img fluid={src} 
-                    alt="scrolldown" 
-                />
+                <img src={ ScrollDownIcon } alt="scroll down button"/>
             </ScrollWrapper>
         </ScrollStyle>
     )
@@ -227,11 +226,10 @@ const Landing = () => {
         <Style>
             <div className="text">
                 <motion.h1 variants={ H2Variant } initial="hidden" animate="visible">
-                    Innowacyjne spojrzenie na marketing marki
+                    Innovative view on brand marketing.
                 </motion.h1>
                 <motion.p variants={ PVariant } initial="hidden" animate="visible">
-                    Jesteśmy zespołem który łączy różne spojrzenia na marketing, 
-                    każdy z nas ma różne doświadczenia oraz styl pracy.
+                We are a team that connects various views on marketing. Each of us has a set of unique experiences and working styles.
                 </motion.p>
             </div>
             <ZigZag src={ data.zigzag.childImageSharp.fluid } />

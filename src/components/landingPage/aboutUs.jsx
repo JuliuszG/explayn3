@@ -48,6 +48,11 @@ const Style = styled(motion.section)`
         font-weight: 600;
         font-size: 15px;
         line-height: 29px;
+        transition: all 0.1s ease-in;
+        &:hover {
+            transform: scale(1.1);
+            filter: brightness(120%);
+        }
     }
     .btn__cnt {
         margin-top: 2%;
@@ -242,7 +247,7 @@ const Box = ({ content }) => {
             <ul>
                 { content.list.map((item, index) => <li key={ index }>{ item }</li>) }
             </ul>
-            <Link to={ content.url }>Zobacz więcej</Link>
+            <Link to={ content.url }>Show more.</Link>
         </BoxStyle>
     )
 }
@@ -256,11 +261,10 @@ const Header = ({ src }) => {
         <HeaderStyle ref={ ref }>
             <div className="text">
                 <motion.h2 variants={ H2Variant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
-                    Zbudujemy Twoją markę, zaczynając 
-                    od solidnych fundamentów 
+                Let's build your brand starting from strong foundations.
                 </motion.h2>
                 <motion.p variants={ PVariant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
-                    Wierzymy w moc porywającej narracji, estetyki marki oraz wykorzystanie silnej stron brandu.
+                We believe in the power of exhilarating narration, brand aesthetics and the use of brand's strengths.
                 </motion.p>
             </div>
             <ImageHeader fluid={ src } alt="half-circle" />
@@ -296,7 +300,7 @@ const items = [
             }
         ],
         name: 'Development',
-        list: ['Strony internetowe', 'Sklepy internetowe', 'Aplikacje iOS & Android', 'Systemy dedykowane'],
+        list: ['Websites', 'Online stores', 'iOS & Android Apps', 'Dedicated systems'],
         url: '/development'
     },
     {
@@ -311,7 +315,7 @@ const items = [
             }
         ],
         name: 'Visual',
-        list: ['Fotografia', 'Spoty reklamowe', 'Filmy animowane', 'Wideo produktowe'],
+        list: ['Photography', 'Advertising spots', 'Animated cartoons', 'Product videos'],
         url: '/visual'
     },
     {
@@ -326,7 +330,7 @@ const items = [
             }
         ],
         name: 'Branding',
-        list: ['Identyfikacja wizualna', 'Materiały marketingowe', 'Tworzenie nazw marek', 'UI/UX Design'],
+        list: ['Visual identification', 'Marketing materials', "Creating brand's names", 'UI/UX Design'],
         url: '/branding'
     },
     {
@@ -341,7 +345,7 @@ const items = [
             }
         ],
         name: 'eCommerce',
-        list: ['Strategia sprzedaży online', 'Zwiększenie konwersji', 'Optymalizacja sprzedaży', 'Audyty i analityka'],
+        list: ['Online sales strategies', 'Conversion enhancements', 'Sales optimization', 'Reports and analytics'],
         url: '/ecommerce'
     },
     {
@@ -356,7 +360,7 @@ const items = [
             }
         ],
         name: 'Events',
-        list: ['Imprezy masowe', 'Otwarcia obiektów', 'Bankiety', 'Eventy marketingowe'],
+        list: ['Mass events', "Facilities' openings", 'Banquets', 'Marketing events'],
         url: '/events'
     },
     {
@@ -371,7 +375,7 @@ const items = [
             }
         ],
         name: 'Marketing',
-        list: ['Strategia marketingowa', ' Social media', 'Content Marketing', 'Kampanie marketingowe'],
+        list: ['Marketing strategies', ' Social media', 'Content Marketing', 'Marketing campaigns'],
         url: '/marketing'
     }
 ]
@@ -394,7 +398,7 @@ const renderSecond = () => {
             { renderSecond() }
             <div className="btn__cnt">
                 <button onClick={ () => setIsCollapsed(prevState => !prevState) }>
-                    { isCollapsed ? "Zobacz wszystkie" : "Zwiń" }
+                    { isCollapsed ? "Show more." : "Collapse" }
                 </button>
             </div>
         </Style>

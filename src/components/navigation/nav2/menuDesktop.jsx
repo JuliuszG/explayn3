@@ -96,11 +96,6 @@ const HeaderStyle = styled.div`
     align-items: center;
     width: 100%;
     padding: 3%;
-    .cnt {
-        width: 367px;
-        display: flex;
-        justify-content: space-between;
-    }
 `
 export const Exit = styled.div`
     background: transparent;
@@ -144,6 +139,9 @@ const Links = styled.div`
     @media (width: 1024px) and (height: 1366px) {
         font-size: 16px;
     }
+    .main:hover .item:not(:hover) a {
+        color: grey;
+    }
     .main {
         width: 40em;
         font-family: 'Poppins';
@@ -161,6 +159,7 @@ const Links = styled.div`
                 display: block;
                 text-decoration: none;
                 color: ${ colors.neutral00 };
+                transition: all .3s ease-in-out;
             }
             .number {
                     color: ${ colors.neutral40 };
@@ -310,9 +309,11 @@ const MenuDesktop = ({ toggle }) => {
                             <div className="number">
                                 02.
                             </div>
+                            <a href="#">
                             <div>
                                 Co robimy
                             </div>
+                            </a>
                         </motion.div>
                         <motion.div variants={ itemAnimation } className="item">
                             <div className="number">
