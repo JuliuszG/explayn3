@@ -16,8 +16,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalStyle />
-      <Loader
-        loaded={DOMLoaded}
+      {/* <Loader
+        loaded={true}
         lines={13}
         length={20}
         width={10}
@@ -36,9 +36,9 @@ const Layout = ({ children }) => {
         left="50%"
         scale={1.0}
         loadedClassName="loadedContent"
-      >
+      > */}
         { children }
-      </Loader>
+      {/* </Loader> */}
     </>
   )
 }
