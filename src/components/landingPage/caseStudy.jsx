@@ -8,6 +8,7 @@ import { useMediaQuery } from 'react-responsive'
 import { motion } from 'framer-motion'
 import { AnimatedHeader, AnimatedParagraph } from '../util/animations'
 import { useInView } from 'react-intersection-observer';
+import ScrollRight from '../../images/scrollright.svg'
 
 const Style = styled.section`
     position: relative;
@@ -168,7 +169,7 @@ export const SliderContent = ({ item }) => {
     )
 }
 
-const Header = ({ src }) => {
+const Header = () => {
     const [ref, inView] = useInView({
         triggerOnce: true,
         threshold: 0.5
@@ -188,14 +189,14 @@ const Header = ({ src }) => {
                     whileHover={ { rotate: 360, transition: { duration: 0.3 } } } 
                     style={ { width: "100%", height: "100%" } }
                 >
-                    <Img fluid={ src } alt="scroll left" />
+                    <img src={ ScrollRight } alt="scroll right button"/>
                 </motion.div>
             </ButtonNext>
         </HeaderStyle>
     )
 }
 
-const CaseStudy = ({ triangle=false }) => {
+const CaseStudy = ({ triangle=true }) => {
     const data = useStaticQuery(graphql`
     {
         cases: allDatoCmsRealizacja (limit: 6, sort: {fields: meta___createdAt, order: DESC}) {
@@ -217,18 +218,12 @@ const CaseStudy = ({ triangle=false }) => {
                 }
             }
         }
-        scroll: file (relativePath: { eq: "caseStudy/scroll.png" }) {
-            childImageSharp {
-                fluid {
-                    ...GatsbyImageSharpFluid_tracedSVG
-                }
-            }
-        }
       }      
 `)
     const isMobile = useMediaQuery({
         query: '(max-device-width: 1080px)'
       })
+    if(isMobile) triangle = false
     const renderSlider = (
         <Slider style={ { outline: 'none' } }>
             { data.cases.nodes.map((item, index) => (
@@ -259,7 +254,7 @@ const CaseStudy = ({ triangle=false }) => {
                     infinite={ true }
                     step={ 3 }
                 >
-            <Header src={ data.scroll.childImageSharp.fluid }/>
+            <Header/>
                     { !isMobile && renderSlider }
                 </CarouselProvider>
                 { isMobile && mobile }

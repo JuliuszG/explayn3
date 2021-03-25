@@ -1,8 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { colors } from '../../styles/colors';
+import Avallon from '../../images/partners/avallon.svg'
+import PG from '../../images/partners/pg.svg'
+import Redbull from '../../images/partners/redbull.svg'
+import Tajm from '../../images/partners/tajm.svg'
 
 const Style = styled.div`
     margin: 0 auto;
@@ -68,7 +71,7 @@ const Card = ({ item }) => {
     return (
         <CardStyle>
             <div className="logo">
-                <Img fluid={ item.image.src } imgStyle={ { objectFit: 'contain' } } style={ imgstyle } alt={ item.image.alt } />
+                <img src={ item.image.src } alt={ item.image.alt }/>
             </div>
             <div className="link__cnt">
                 <a href={ `http://www.${ item.name }` }>{ item.name } <span className="arrow">&#8599;</span></a>
@@ -78,44 +81,31 @@ const Card = ({ item }) => {
 }
 
 const Partners = () => {
-    const data = useStaticQuery(graphql`
-    {
-    allFile(filter: {relativeDirectory: {eq: "partners"}}) {
-        nodes {
-        childImageSharp {
-            fluid {
-            ...GatsbyImageSharpFluid_tracedSVG
-            }
-        }
-        }
-    }
-    }
-`)
     const cardData = [
         {
             image: {
-                src: data.allFile.nodes[0].childImageSharp.fluid,
-                alt: "Systemeg.net logo"
+                src: PG,
+                alt: "P&G"
             },
-            name: "Systemeg.net"
+            name: "pg.com"
         },
         {
             image: {
-                src: data.allFile.nodes[1].childImageSharp.fluid,
-                alt: "Chillnchips.com logo"
+                src: Redbull,
+                alt: "redbull.com logo"
             },
-            name: "Chillnchips.com"
+            name: "redbull.com"
         },
         {
             image: {
-                src: data.allFile.nodes[2].childImageSharp.fluid,
+                src: Avallon,
                 alt: "Avalon.com logo"
             },
             name: "Avalon.com"
         },
         {
             image: {
-                src: data.allFile.nodes[3].childImageSharp.fluid,
+                src: Tajm,
                 alt: "Tajm.com logo"
             },
             name: "Tajm.com"

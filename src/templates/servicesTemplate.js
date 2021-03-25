@@ -15,15 +15,12 @@ import { AnimatedHeader, AnimatedParagraph } from '../components/util/animations
 
 const Landing = styled.section`
     width: 100%;
-    min-height: 50.5vh;
-    max-height: 100vh;
-    padding: 20% 0;
+    height: 100vh;
     background: ${ colors.neutral00 };
-    padding-left: 17%;
     display: flex;
     align-items: center;
+    padding-left: 17%;
     font-size: 16px;
-    display: flex;
     position: relative;
     @media (max-height: 1720px) {
             font-size: 13px;
@@ -38,23 +35,10 @@ const Landing = styled.section`
             font-size: 10px;
         }
     @media (max-width: 950px){
-        max-height: 100vh;
-    }
-    @media (max-width: 950px) and (orientation: portrait){
+        padding: 0 5%;
         font-size: 12px;
-        padding-left: 0;
-        padding: 45% 15%;
-        min-height: 50vh;
-    }
-    @media (max-width: 650px) and (orientation: landscape){
-        font-size: 12px;
-        padding-left: 0;
-        padding: 60% 15%;
-        min-height: 50vh;
-    }
-    @media (max-width: 650px) and (orientation: portrait){
-        font-size: 8px;
-        padding: 40% 8%;
+        flex-direction: column-reverse;
+        justify-content: center;
     }
     .text {
         max-width: 50%;
@@ -63,8 +47,11 @@ const Landing = styled.section`
         color: ${ colors.neutral100 };
         margin-bottom: 10%;
         @media (max-width: 950px) {
-        max-width: 100%;
-        margin-bottom: 0;
+        max-width: 80%;
+        margin-bottom: 30%;
+        }
+        @media (orientation: landscape) {
+            margin-bottom: 0;
         }
         h2 {
             font-weight: 600;
@@ -92,20 +79,9 @@ const Logo = styled.div`
     margin-left: 20%;
     margin-bottom: 16%;
     @media (max-width: 950px) {
-        position: absolute;
-        left: 5%;
-        top: 5%;
-        margin: 0;
         width: 161px;
-        height: 150px;
-    }
-    @media (max-width: 950px) and (orientation: landscape){
-        width: 88px;
-        height: 92px;
-    }
-    @media (max-width: 450px) and (orientation: portrait){
-        width: 88px;
-        height: 92px;
+        height: 141px;
+        margin: 0;
     }
 `
 
