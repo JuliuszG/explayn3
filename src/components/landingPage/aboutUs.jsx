@@ -390,7 +390,7 @@ const renderSecond = () => {
     }
 }
     return (
-        <Style id="aboutUs" layout>
+        <Style id="aboutUs">
             <Header src={ data.main.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
                 { items.map((item, index) => index < 3 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }
@@ -398,7 +398,7 @@ const renderSecond = () => {
             { renderSecond() }
             <div className="btn__cnt">
                 <button onClick={ () => setIsCollapsed(prevState => !prevState) }>
-                    { isCollapsed ? "Show more." : "Collapse" }
+                    { isCollapsed ? "Show more" : "Collapse" }
                 </button>
             </div>
         </Style>
