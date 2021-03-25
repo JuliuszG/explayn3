@@ -41,6 +41,10 @@ const CardStyle = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
+        img {
+            width: 60%;
+            height: 40%;
+        }
     }
     a {
         text-decoration: none;
