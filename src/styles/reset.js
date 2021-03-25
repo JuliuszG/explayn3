@@ -49,5 +49,7 @@ table {
 }
 html {
   overflow-x: hidden;
+  overflow-y: scroll; /* has to be scroll, not auto */
+  -webkit-overflow-scrolling: touch;
 }
 `
