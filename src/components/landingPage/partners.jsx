@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
 import { colors } from '../../styles/colors';
 import Avallon from '../../images/partners/avallon.svg'
 import PG from '../../images/partners/pg.svg'
@@ -105,14 +104,14 @@ const Partners = () => {
                 src: Avallon,
                 alt: "Avalon.com logo"
             },
-            name: "Avalon.com"
+            name: "avalon.com"
         },
         {
             image: {
                 src: Tajm,
                 alt: "Tajm.com logo"
             },
-            name: "Tajm.com"
+            name: "tajm.com"
         }
     ]
     return (
