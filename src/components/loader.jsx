@@ -6,7 +6,7 @@ import { colors } from '../styles/colors'
 import { motion } from 'framer-motion'
 
 const Style = styled(motion.div)`
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     position: fixed;
     top: 0;
