@@ -8,7 +8,7 @@ import { AnimatePresence } from 'framer-motion'
 const Layout = ({ children }) => {
   const [DOMLoaded, setDOMLoaded] = useState(false)
   useEffect(() => {
-    setTimeout(() => setDOMLoaded(true), 1800)
+    setTimeout(() => setDOMLoaded(true), 1000)
   }, [])
   const content = (
     <>

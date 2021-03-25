@@ -32,11 +32,10 @@ const Loader = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
         >
-            <LoaderIcon type="Circles"
+            <LoaderIcon type="Grid"
         color="#000"
-        height={200}
-        width={200} />
-        <h1>Loading...</h1>
+        height={100}
+        width={100} />
         </Style>
     ) 
 }
