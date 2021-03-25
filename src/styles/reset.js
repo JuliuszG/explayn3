@@ -47,7 +47,7 @@ table {
 * {
   box-sizing: border-box;
 }
-body {
-	overflow: hidden;
+html {
+  overflow-x: hidden;
 }
 `
