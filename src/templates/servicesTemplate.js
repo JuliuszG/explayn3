@@ -58,8 +58,8 @@ const Landing = styled.section`
             font-size: 5.125em;
             line-height: 119.5%;
             margin-bottom: 4%;
-            @media (max-width: 450px) {
-                font-size: 4.125em;
+            @media (max-width: 600px) {
+                font-size: 3em;
             }
         }
         p {
@@ -81,7 +81,15 @@ const Logo = styled.div`
     @media (max-width: 950px) {
         width: 161px;
         height: 141px;
-        margin: 0;
+        margin-left: 10%;
+        align-self: flex-start;
+        margin-bottom: 1%;
+    }
+    @media (max-width: 600px) {
+        margin-bottom: 10%;
+    }
+    @media (orientation: landscape) {
+        margin-bottom: 0;
     }
 `
 
