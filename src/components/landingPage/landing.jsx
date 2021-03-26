@@ -9,7 +9,7 @@ import ScrollDownIcon from '../../images/scrolldown.svg'
 
 const Style = styled.section`
     width: 100%;
-    min-height: 100vh;
+    min-height: 95vh;
     background: ${ colors.neutral00 };
     padding-left: 17%;
     display: flex;
@@ -42,12 +42,13 @@ const Style = styled.section`
         font-size: 8px;
     }
     .text {
-        max-width: 50%;
+        max-width: 60%;
         font-family: 'Poppins';
         font-style: normal;
         color: ${ colors.neutral100 };
         @media (max-width: 950px) {
         max-width: 100%;
+        margin-top: 10%;
         }
         h1 {
             font-weight: 600;
@@ -108,10 +109,13 @@ const ScrollStyle = styled(ScLink)`
     right: 17.5%;
     cursor: pointer;
     @media (max-width: 950px) {
-        margin-top: 10%;
+        margin-top: 25%;
         position: static;
         width: 166px;
         height: 166px;
+    }
+    @media (orientation: landscape) {
+        margin-top: 5%;
     }
     @media (max-width: 650px) {
         width: 122px;

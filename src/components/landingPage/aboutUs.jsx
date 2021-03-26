@@ -261,7 +261,7 @@ const Header = ({ src }) => {
         <HeaderStyle ref={ ref }>
             <div className="text">
                 <motion.h2 variants={ H2Variant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
-                Every day we take on significant challenges to build results driven brands.(
+                Every day we take on significant challenges to build results driven brands.
                 </motion.h2>
                 <motion.p variants={ PVariant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
                 We craft the best digital experience from a brand strategy to web development to digital marketing.
