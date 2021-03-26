@@ -99,13 +99,11 @@ const Team = () => {
             </div>
             <div className="text" ref={ ref }>
                 <AnimatedHeader inView={ inView }> 
-                    Jesteśmy zespołem który łączy różne spojrzenia <span role="img" aria-label="Eyes emoji">👀</span> na marketing, każdy z nas ma 
-                    różne doświadczenia oraz styl pracy. 
+                Understanding the individual needs of the clients is the key to our work. We research, we explain, we implement.
+Our strategies are highly curated to the challenges.
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
-                    Explayn to doświadczenie współpracy z różnymi klientami, innowacyjne spojrzenie 
-                    na marketing i kreacje marki a przede wszystkim mieszanka różnych charakterów. 
-                    Zobacz dla kogo pracowaliśmy:
+                We go beyond the standard agency model and offer comprehensive consulting to maximize your profit.
                 </AnimatedParagraph>
             </div>
         </Style>

@@ -247,7 +247,7 @@ const Box = ({ content }) => {
             <ul>
                 { content.list.map((item, index) => <li key={ index }>{ item }</li>) }
             </ul>
-            <Link to={ content.url }>Show more.</Link>
+            <Link to={ content.url }>Show more</Link>
         </BoxStyle>
     )
 }
@@ -261,10 +261,10 @@ const Header = ({ src }) => {
         <HeaderStyle ref={ ref }>
             <div className="text">
                 <motion.h2 variants={ H2Variant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
-                Let's build your brand starting from strong foundations.
+                Every day we take on significant challenges to build results driven brands.(
                 </motion.h2>
                 <motion.p variants={ PVariant } initial="hidden" animate={ inView ? "visible" : "hidden" }>
-                We believe in the power of exhilarating narration, brand aesthetics and the use of brand's strengths.
+                We craft the best digital experience from a brand strategy to web development to digital marketing.
                 </motion.p>
             </div>
             <ImageHeader fluid={ src } alt="half-circle" />
@@ -315,7 +315,7 @@ const items = [
             }
         ],
         name: 'Visual',
-        list: ['Photography', 'Advertising spots', 'Animated cartoons', 'Product videos'],
+        list: ['Photography', 'Video', 'Animated cartoons', 'Animations/3D'],
         url: '/visual'
     },
     {

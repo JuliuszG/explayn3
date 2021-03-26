@@ -181,7 +181,7 @@ const Header = () => {
                     Case studies
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
-                Take a look at our productions for partners who believe in our vision of brand creation.
+                Let our work do the talking.
                 </AnimatedParagraph>
             </div>
             <ButtonNext className="next">

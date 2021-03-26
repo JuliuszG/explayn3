@@ -226,10 +226,10 @@ const Landing = () => {
         <Style>
             <div className="text">
                 <motion.h1 variants={ H2Variant } initial="hidden" animate="visible">
-                    Innovative view on brand marketing.
+                 New ways to develop your brand.
                 </motion.h1>
                 <motion.p variants={ PVariant } initial="hidden" animate="visible">
-                We are a team that connects various views on marketing. Each of us has a set of unique experiences and working styles.
+                A full service web design and digital marketing agency powered by growth solutions.
                 </motion.p>
             </div>
             <ZigZag src={ data.zigzag.childImageSharp.fluid } />
