@@ -204,7 +204,7 @@ const MenuMobile = ({ toggle }) => {
                                 01.
                             </div>
                             <Link to="/">
-                                Strona głowna
+                                Home
                             </Link>
                         </div>
                     </motion.div>
@@ -218,7 +218,7 @@ const MenuMobile = ({ toggle }) => {
                                 02.
                             </div>
                             <div>
-                                Co robimy
+                                What we do
                             </div>
                        </div>
                         { subMenuIsOn && renderSubMenu() }
@@ -229,7 +229,7 @@ const MenuMobile = ({ toggle }) => {
                                 03.
                             </div>
                             <ScLink to={ "caseStudy" } smooth duration={1000} onClick={ menuSwitch }>
-                                Nasze prace 
+                                Case studies
                             </ScLink>
                         </div>
                     </motion.div>
@@ -239,14 +239,14 @@ const MenuMobile = ({ toggle }) => {
                                 04.
                             </div>
                             <ScLink to={ "footer" } smooth duration={1000} onClick={ menuSwitch }>
-                                Kontakt
+                                Contact
                             </ScLink>
                       </div>
                     </motion.div>
                 </Links>
                 <Footer>
                     <h3>
-                        Skontaktuj się z nami
+                        Contact us
                     </h3>
                     <a href="tel:+48881772030">+48 881 772 030</a>
                     <a href="mailto:we@explayn.it">we@explayn.it</a>

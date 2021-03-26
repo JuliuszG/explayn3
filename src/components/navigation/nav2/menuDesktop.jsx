@@ -304,7 +304,7 @@ const MenuDesktop = ({ toggle }) => {
                                 01.
                             </div>
                             <Link to="/">
-                                Strona głowna
+                                Home
                             </Link>
                         </motion.div>
                         <motion.div 
@@ -317,7 +317,7 @@ const MenuDesktop = ({ toggle }) => {
                             </div>
                             <a href="#">
                             <div>
-                                Co robimy
+                                What we do
                             </div>
                             </a>
                         </motion.div>
@@ -326,7 +326,7 @@ const MenuDesktop = ({ toggle }) => {
                                 03.
                             </div>
                             <ScLink to={ "caseStudy" } smooth duration={1000} onClick={ menuSwitch }>
-                                Nasze prace 
+                                Case studies
                             </ScLink>
                         </motion.div>
                         <motion.div variants={ itemAnimation } className="item">
@@ -334,7 +334,7 @@ const MenuDesktop = ({ toggle }) => {
                                 04.
                             </div>
                             <ScLink to={ "footer" } smooth duration={1000} onClick={ menuSwitch }>
-                                Kontakt
+                                Contact
                             </ScLink>
                         </motion.div>
                     </div>
@@ -405,7 +405,7 @@ const MenuDesktop = ({ toggle }) => {
                         </div>
                         <div className="contact">
                             <h3>
-                                Skontaktuj się z nami
+                                Contact us
                             </h3>
                             <a href="tel:+48881772030">+48 881 772 030</a>
                             <a href="mailto:we@explayn.it">we@explayn.it</a>

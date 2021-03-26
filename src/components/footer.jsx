@@ -138,7 +138,7 @@ const Footer = () => {
     return(
         <Style id="footer">
             <div className="left">
-                <h4>Podejmij z nami współpracę</h4>
+                <h4>Do business with us</h4>
                 <h2><a href="mailto:we@explayn.it">we@explayn.it</a></h2>
                 <span className="copy">© explayn.it All rights reserved</span>
             </div>
