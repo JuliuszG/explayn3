@@ -8,13 +8,33 @@ const Style = styled(motion.div)`
     position: fixed;
     top: 0;
     left: 0;
-    padding: 5% 16%;
+    padding: 2% 16%;
     z-index: 999;
+    font-size: 15px;
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
     @media (max-width: 1600px) {
-        font-size: 10px;
+        font-size: 9.5px;
         padding: 2% 14%;
+    }
+    @media (max-width: 1024px) {
+        font-size: 14px;
+        padding: 2% 14%;
+        position: absolute;
+        height: auto;
+        padding: 5% 10%;
+        box-shadow: 2px 0 6px;
+    }
+    @media (max-width: 450px) {
+        font-size: 12px;
+        padding: 2% 14%;
+        position: absolute;
+        height: auto;
+        padding: 5% 10%;
+        box-shadow: 2px 0 6px;
+    }
+    @media (max-width: 450px) and (orientation: landscape) {
+        font-size: 14.5px;
     }
     h1 {
         font-style: normal;
@@ -32,10 +52,13 @@ const Style = styled(motion.div)`
         line-height: 145%;
     }
     p {
-        margin-bottom: 4.96vh;
+        margin-bottom: 3vh;
         width: 50%;
         @media (max-width: 1600px) {
-            width: 65%;
+            width: 50%;
+        }
+        @media (max-width: 1024px) {
+            width: 100%;
         }
     }
     h4 {
@@ -47,14 +70,17 @@ const Style = styled(motion.div)`
         width: 50%;
         margin-bottom: 0.99vh;
         @media (max-width: 1600px) {
-            width: 65%;
+            width: 60%;
+        }
+        @media (max-width: 1024px) {
+            width: 100%;
         }
     }
     .error-msg {
         color: red;
         display: block;
         &.cat {
-            margin-bottom: 4.96vh;
+            margin-bottom: 3vh;
         }
     }
     .box {
@@ -68,7 +94,7 @@ const Style = styled(motion.div)`
         cursor: pointer;
         outline: none;
         transition: all 0.3s ease-in;
-        font-size: 1em;
+        font-size: 1.2em;
         span {
             font-weight: 700;
         }
@@ -86,11 +112,14 @@ const Style = styled(motion.div)`
         @media (max-width: 1600px) {
             width: 65%;
         }
+        @media (max-width: 1024px) {
+            width: 100%;
+        }
     }
     .form-group {
         display: flex;
         flex-direction: column;
-        margin-bottom: 4.96vh;
+        margin-bottom: 3vh;
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -108,8 +137,37 @@ const Style = styled(motion.div)`
             resize: none;
             outline: none;
             height: 11.7vh;
+            border: none;
+            border-bottom: 1px solid #D3D3D3;
         }
     }
+    .btn-cnt {
+        @media (max-width: 1024px) {
+                display: flex;
+                justify-content: center;
+                margin:  2vh 0 0 0;
+            }
+    }
+    .form-submit {
+            border-radius: 37px;
+            width: 260px;
+            height: 60px;
+            background: #4C64FF;
+            color: #fff;
+            outline: none;
+            border: none;
+            font-family: "Poppins", sans-serif;
+            font-size: 29px;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            &:hover {
+                background: transparent;
+                color: #4C64FF;
+                border: 1px solid #4C64FF;
+                transform: scale(0.95)
+            }
+            
+        }
 `
 export const ContactForm = () => {
     const [list, setList] = useState([])
@@ -260,9 +318,11 @@ export const ContactForm = () => {
                     <textarea onChange={event => handleChange(event.target)} type="text" onBlur={event => handleBlur(event.target.name, event.target.value)} name="message"></textarea>
                     <small className="error-msg">{ errorData.message && errorData.message}</small>
                 </div>
+                <div className="btn-cnt">
                 <button type="submit" className="form-submit">
                     Submit
                 </button>
+                </div>
             </form>
         </Style>
     )

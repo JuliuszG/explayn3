@@ -60,12 +60,10 @@ const Desktop = ({ darkMode, mainPage }) => {
                 <AnimatePresence>
                     { renderMenu() }
                 </AnimatePresence>
-            </div>
-            <div style={{ position: "absolute" }}> 
+            </div>           
                 <AnimatePresence>
                     { contactFormIsOn && <ContactForm /> }
                 </AnimatePresence>
-            </div>
         </Nav>
     )
 }

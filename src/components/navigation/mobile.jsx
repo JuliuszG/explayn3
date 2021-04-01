@@ -8,6 +8,7 @@ import MenuMobile from './nav2/menuMobile'
 import { AnimatePresence } from 'framer-motion'
 import { Link } from 'gatsby'
 import Phone from '../../images/call-phone.svg'
+import { ContactForm } from '../contactForm'
 
 
 const Style = styled.div`
@@ -29,6 +30,7 @@ const Image = styled(Img)`
 `
 const Mobile = () => {
     const [menuOn, setMenuOn] = useState(false)
+    const [contactFormIsOn, setcontactFormIsOn] = useState(true)
     const handleToggle = () => setMenuOn(prevState => !prevState)
 
     return (
@@ -43,6 +45,9 @@ const Mobile = () => {
                     { menuOn && <MenuMobile toggle={ handleToggle } /> }
                 </AnimatePresence>
             </div>
+            <AnimatePresence>
+                    { contactFormIsOn && <ContactForm /> }
+            </AnimatePresence>
         </Style>
     )
 }
