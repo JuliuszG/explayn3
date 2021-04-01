@@ -8,6 +8,7 @@ import MenuDesktop from './nav2/menuDesktop'
 import { AnimatePresence } from 'framer-motion'
 import MenuLanguage from './menuLanguage'
 import { Link } from 'gatsby'
+import { ContactForm } from '../contactForm'
 
 const Nav = styled.nav`
     position: absolute;
@@ -39,6 +40,7 @@ const Nav = styled.nav`
 
 const Desktop = ({ darkMode, mainPage }) => {
     const [menuIsOn, setMenuIsOn] = useState(false)
+    const [contactFormIsOn, setcontactFormIsOn] = useState(true)
     const handleToggle = () => setMenuIsOn(prevState => !prevState)
     const renderMenu = () => {
         if(menuIsOn) {
@@ -57,6 +59,11 @@ const Desktop = ({ darkMode, mainPage }) => {
             <div style={{ position: "absolute" }}> 
                 <AnimatePresence>
                     { renderMenu() }
+                </AnimatePresence>
+            </div>
+            <div style={{ position: "absolute" }}> 
+                <AnimatePresence>
+                    { contactFormIsOn && <ContactForm /> }
                 </AnimatePresence>
             </div>
         </Nav>
