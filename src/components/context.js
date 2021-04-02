@@ -1,6 +1,6 @@
 import React, { useState, createContext } from 'react'
 
-export const appContext = createContext();
+export const appContext = createContext(0);
 const AppContextProvider = ({ children }) => {
   const [contactFormOpen, setContactFormOpen] = useState(0)
   const handleContactForm = status => {
