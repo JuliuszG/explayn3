@@ -1,41 +1,16 @@
-import React, {useState} from 'react'
+import React, {useState, useContext} from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
+import { appContext } from './context'
 
 const Style = styled(motion.div)`
-    width: 100vw;
     min-height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     padding: 2% 16%;
     z-index: 999;
     font-size: 15px;
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
-    @media (max-width: 1600px) {
-        font-size: 9.5px;
-        padding: 2% 14%;
-    }
-    @media (max-width: 1024px) {
-        font-size: 14px;
-        padding: 2% 14%;
-        position: absolute;
-        height: auto;
-        padding: 5% 10%;
-        box-shadow: 2px 0 6px;
-    }
-    @media (max-width: 450px) {
-        font-size: 12px;
-        padding: 2% 14%;
-        position: absolute;
-        height: auto;
-        padding: 5% 10%;
-        box-shadow: 2px 0 6px;
-    }
-    @media (max-width: 450px) and (orientation: landscape) {
-        font-size: 14.5px;
-    }
+    position: relative;
     h1 {
         font-style: normal;
         font-weight: 400;
@@ -54,9 +29,6 @@ const Style = styled(motion.div)`
     p {
         margin-bottom: 3vh;
         width: 50%;
-        @media (max-width: 1600px) {
-            width: 50%;
-        }
         @media (max-width: 1024px) {
             width: 100%;
         }
@@ -67,11 +39,8 @@ const Style = styled(motion.div)`
     .boxes-cnt {
         display: flex;
         flex-wrap: wrap;
-        width: 50%;
+        width: 55%;
         margin-bottom: 0.99vh;
-        @media (max-width: 1600px) {
-            width: 60%;
-        }
         @media (max-width: 1024px) {
             width: 100%;
         }
@@ -166,11 +135,40 @@ const Style = styled(motion.div)`
                 border: 1px solid #4C64FF;
                 transform: scale(0.95)
             }
-            
+        }
+        .exit-btn {
+            position: absolute;
+            top: 5%;
+            right: 5%;
+            border: none;
+            width: 38px;
+            height: 38px;
+            background: transparent;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s ease-in;
+            &:hover {
+                transform: rotate(-90deg)
+            }
+            .bar {
+                width: 100%;
+                height: 2px;
+                background: #000;
+                &:first-of-type {
+                    transform: translateY(0.8px) rotate(135deg);
+                }
+                &:last-of-type {
+                    transform: translateY(-0.8px) rotate(-135deg);
+                }
+            }
+            .sr-only {
+                display: none;
+            }
         }
 `
 export const ContactForm = () => {
     const [list, setList] = useState([])
+    const { changeContactFormStatus } = useContext(appContext)
     const [formData, setFormData] = useState({
         email: null,
         phone: null,
@@ -324,6 +322,11 @@ export const ContactForm = () => {
                 </button>
                 </div>
             </form>
+            <button onClick={ () => changeContactFormStatus(0) } className="exit-btn">
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <span class="sr-only">Close</span>
+            </button>
         </Style>
     )
 }

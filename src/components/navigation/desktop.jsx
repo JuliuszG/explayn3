@@ -3,12 +3,9 @@ import MenuIcon from './menuIcon'
 import styled from 'styled-components'
 import LogoImg from './logoImg'
 import ContactUs from './contactUs'
-import LangSwitch from './langSwitch'
 import MenuDesktop from './nav2/menuDesktop'
 import { AnimatePresence } from 'framer-motion'
-import MenuLanguage from './menuLanguage'
 import { Link } from 'gatsby'
-import { ContactForm } from '../contactForm'
 
 const Nav = styled.nav`
     position: absolute;
@@ -61,9 +58,6 @@ const Desktop = ({ darkMode, mainPage }) => {
                     { renderMenu() }
                 </AnimatePresence>
             </div>           
-                <AnimatePresence>
-                    { contactFormIsOn && <ContactForm /> }
-                </AnimatePresence>
         </Nav>
     )
 }

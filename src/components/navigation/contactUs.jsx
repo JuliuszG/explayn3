@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
+import { appContext } from '../context'
 
 const Cnt = styled.div`
-    a {
         width: 195px;
         height: 45px;
         display: flex;
@@ -17,15 +17,16 @@ const Cnt = styled.div`
         font-style: normal;
         font-weight: 600;
         transition: all 0.1s ease-in;
+        cursor: pointer;
         &:hover {
             transform: scale(1.1);
             filter: brightness(120%);
         }
-    }
 `
 
 const ContactUs = ({ darkMode, mainPage }) => {
-    return <Cnt mainPage={mainPage} darkMode={ darkMode }><a href="tel:123-456-7890">Let's talk</a></Cnt>
+    const { changeContactFormStatus } = useContext(appContext)
+    return <Cnt onClick={ () => changeContactFormStatus(1) } mainPage={mainPage} darkMode={ darkMode }>Let's talk</Cnt>
 }
 
 export default ContactUs
