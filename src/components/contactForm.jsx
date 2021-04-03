@@ -2,15 +2,19 @@ import React, {useState, useContext} from 'react'
 import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import { appContext } from './context'
+import ContactFormImage from '../images/contactFormImage.svg'
 
 const Style = styled(motion.div)`
     min-height: 100%;
-    padding: 2% 16%;
+    padding: 5% 16%;
     z-index: 999;
     font-size: 15px;
     background-color: #fff;
     font-family: 'Poppins', sans-serif;
     position: relative;
+    @media (max-width: 500px) {
+        font-size: 12px;
+    }
     h1 {
         font-style: normal;
         font-weight: 400;
@@ -19,6 +23,9 @@ const Style = styled(motion.div)`
         color: #000000;
         line-height: 148%;
         margin-bottom: 2.38vh;
+        @media (max-width: 500px) {
+            font-size: 4em;
+        }
     }
     p, h4 {
         font-size: 1.5em;
@@ -63,7 +70,7 @@ const Style = styled(motion.div)`
         cursor: pointer;
         outline: none;
         transition: all 0.3s ease-in;
-        font-size: 1.2em;
+        font-size: 20px;
         span {
             font-weight: 700;
         }
@@ -147,6 +154,9 @@ const Style = styled(motion.div)`
             outline: none;
             cursor: pointer;
             transition: all 0.3s ease-in;
+            @media (max-width: 500px) {
+                top: 3%;
+            }
             &:hover {
                 transform: rotate(-90deg)
             }
@@ -162,6 +172,14 @@ const Style = styled(motion.div)`
                 }
             }
             .sr-only {
+                display: none;
+            }
+        }
+        .decoration {
+            position: absolute;
+            top: 30%;
+            right: 20%;
+            @media (max-width: 1024px) {
                 display: none;
             }
         }
@@ -194,7 +212,7 @@ export const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(checkAll()) {
-            console.log('wysylam formularz');
+            changeContactFormStatus(2)
         }
     }
     const handleBlur = (name, value) => {
@@ -283,8 +301,30 @@ export const ContactForm = () => {
         'SOFTWARE',
         'OTHER'
     ]
+    const ContactVariant = {
+        in: {
+            y: 0,
+            transition: {
+                duration: 0.3
+            }
+        },
+        out: {
+            y: '-100vh'
+        },
+        exit: {
+            x: '-100vw',
+            transition: {
+                duration: 0.3
+            }
+        }
+    }
     return (
-        <Style>
+        <Style
+            variants={ContactVariant}
+            animate="in"
+            initial="out"
+            exit="exit"
+        >
             <h1>Let’s talk</h1>
             <p>We find inspiration to create in your challenges. Let us know what your brand needs.</p>
             <h4>How can we help you?</h4>
@@ -325,8 +365,11 @@ export const ContactForm = () => {
             <button onClick={ () => changeContactFormStatus(0) } className="exit-btn">
                 <div className="bar"></div>
                 <div className="bar"></div>
-                <span class="sr-only">Close</span>
+                <span className="sr-only">Close</span>
             </button>
+            <img src={ContactFormImage} alt="decoration" className="decoration"/>
         </Style>
     )
 }
+
+// Thank You Card
