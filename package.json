@@ -9,6 +9,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "babel-plugin-styled-components": "^1.12.0",
+    "cors": "^2.8.5",
     "framer-motion": "^3.3.0",
     "gatsby": "^2.26.1",
     "gatsby-background-image": "^1.4.0",
@@ -37,7 +38,8 @@
     "react-scroll": "^1.8.1",
     "react-spinners-css": "^1.2.2",
     "react-youtube": "^7.13.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "woodpecker-api": "^1.1.0"
   },
   "devDependencies": {
     "prettier": "2.2.1"

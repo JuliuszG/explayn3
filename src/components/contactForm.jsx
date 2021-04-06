@@ -77,8 +77,10 @@ const Style = styled(motion.div)`
         &.active {
             background: #5163F6;
             color: #fff;
+            border: none;
         }
         &:hover {
+            border: none;
             background: #5163F6;
             color: #fff;
         }
@@ -212,7 +214,29 @@ export const ContactForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if(checkAll()) {
-            changeContactFormStatus(2)
+            fetch('https://api.woodpecker.co/rest/v1/add_prospects_list', {
+                method: 'post',
+                body: JSON.stringify({
+                    "prospects": [ 
+                        {
+                            email: formData.email,
+                            phone: formData.phone,
+                            tags: "#Test"
+                        }
+                    ]
+                }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    "Authentication" : "117318.e1020334e74333d4f86b10538720c396f09593202a161b5f70b399b28fd5716c"
+                }
+            })
+            .then(response => {
+                if(response.ok) {
+                    changeContactFormStatus(2)
+                } else {
+                    console.log(response.statusText);
+                }
+            })
         }
     }
     const handleBlur = (name, value) => {
