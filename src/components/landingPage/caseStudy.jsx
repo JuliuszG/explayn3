@@ -72,6 +72,19 @@ const HeaderStyle = styled.div`
         font-size: 5em;
         line-height: 95%;
         margin-bottom: 3%;
+        width:55%;
+        @media (max-width: 1670px) {
+            width: 65%;
+        }
+        @media (max-width: 1450px) {
+            width: 75%;
+        }
+        @media (max-width: 1250px) {
+            width: 85%;
+        }
+        @media (max-width: 1025px) {
+            width: 100%;
+        }
     }
     p {
         width: 60%;

@@ -72,7 +72,7 @@ const Style = styled.footer`
             color: ${ colors.neutral30 };
             @media (max-width: 950px) {
                 bottom: -58%;
-                left: 32%;
+                left: 38%;
             }
         }
     }
