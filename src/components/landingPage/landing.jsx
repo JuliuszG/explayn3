@@ -62,7 +62,7 @@ const Style = styled.section`
         p {
             max-width: 55%;
             font-weight: 300;
-            font-size: 1.4675em;
+            font-size: 19px;
             line-height: 163.63%;
             @media (max-width: 950px) {
                 max-width: 100%;
