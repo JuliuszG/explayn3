@@ -264,20 +264,20 @@ export const ContactForm = () => {
             }
         }
 
-        if(name === 'phone') {
-            const regex = /^(?:\(?\?)?(?:[-\.\(\)\s]*(\d)){9}\)?$/
-            if(!regex.test(value)) {
-                setErrorData(prevState => ({
-                    ...prevState,
-                    phone: "Incorrect Phone Number"
-                }))
-            } else {
-                setErrorData(prevState => ({
-                    ...prevState,
-                    phone: null
-                }))
-            }
-        }
+        // if(name === 'phone') {
+        //     const regex = /^(?:\(?\?)?(?:[-\.\(\)\s]*(\d)){9}\)?$/
+        //     if(!regex.test(value)) {
+        //         setErrorData(prevState => ({
+        //             ...prevState,
+        //             phone: "Incorrect Phone Number"
+        //         }))
+        //     } else {
+        //         setErrorData(prevState => ({
+        //             ...prevState,
+        //             phone: null
+        //         }))
+        //     }
+        // }
 
         if(name === 'message') {
             if(!value || value?.length < 10) {
