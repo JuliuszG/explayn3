@@ -178,11 +178,8 @@ const Header = () => {
         <HeaderStyle ref={ ref }>
             <div className="text">
                 <AnimatedHeader inView={ inView }>
-                    Case studies
+                Let our work do the talking
                 </AnimatedHeader>
-                <AnimatedParagraph inView={ inView }>
-                Let our work do the talking.
-                </AnimatedParagraph>
             </div>
             <ButtonNext className="next">
                 <motion.div 

@@ -99,11 +99,11 @@ const Team = () => {
             </div>
             <div className="text" ref={ ref }>
                 <AnimatedHeader inView={ inView }> 
-                Understanding the individual needs of the clients is the key to our work. We research, we explain, we implement.
-Our strategies are highly curated to the challenges.
+                Understanding the individual needs of the clients is the key to our work.
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
-                We go beyond the standard agency model and offer comprehensive consulting to maximize your profit.
+                We research, we explain, we implement. Our strategies are highly curated to the challenges.
+                We go beyond the standard agency model and offer comprehensive consulting to maximize your profit
                 </AnimatedParagraph>
             </div>
         </Style>

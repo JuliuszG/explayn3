@@ -115,9 +115,6 @@ const BoxStyle = styled.div`
     @media (max-width: 956px) {
         width: 100%;
     }
-    &:hover a {
-        opacity: 1;
-    }
     h3 {
         max-width: 240px;
         font-weight: 600;
@@ -146,7 +143,14 @@ const BoxStyle = styled.div`
         border-bottom: 1.3px solid ${ colors.neutral00 };
         color: ${ colors.neutral00 };
         text-decoration: none;
-        opacity: 0;
+    }
+    @media (hover: hover) {
+        a {
+            opacity: 0;
+        }
+        &:hover a {
+            opacity: 1;
+        }
     }
 `
 
@@ -239,7 +243,7 @@ const Box = ({ content }) => {
             </BoxImageWrapper>
         )
     }
-    const handleHover = () => setHovered(prevState => !prevState)
+    const handleHover = () => window?.matchMedia("(hover: hover)").matches && setHovered(prevState => !prevState)
     return (
         <BoxStyle onMouseOver={ handleHover } onMouseOut={ handleHover }>
                 { renderImage() }
@@ -330,7 +334,7 @@ const items = [
             }
         ],
         name: 'Branding',
-        list: ['Visual identification', 'Marketing materials', "Creating brand's names", 'UI/UX Design'],
+        list: ['Visual identification', 'Product branding', "Brand strategy", 'UI/UX Design'],
         url: '/branding'
     },
     {
@@ -360,7 +364,7 @@ const items = [
             }
         ],
         name: 'Events',
-        list: ['Mass events', "Facilities' openings", 'Banquets', 'Marketing events'],
+        list: ['Streaming Platform', "Event Management", 'Marketing & Communication', 'Audient'],
         url: '/events'
     },
     {

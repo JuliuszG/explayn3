@@ -110,25 +110,25 @@ const CaseData = ({ title, paragraph, link, country, client, field, services }) 
             <ul className="right">
                 <li>
                     <span className="field-name">
-                        Kraj
+                        Country
                     </span>
                     { country } 
                 </li>
                 <li>
                     <span className="field-name">
-                        Klient
+                        Client
                     </span>
                     { client }
                 </li>
                 <li>
                     <span className="field-name">
-                        Branża
+                        Field
                     </span>
                     { field }
                 </li>
                 <li>
                     <span className="field-name">
-                        Zakres Prac
+                        Scope of work
                     </span>
                     { services }
                 </li>
