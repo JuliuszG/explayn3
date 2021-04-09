@@ -16,7 +16,7 @@ const Style = styled.section`
     align-items: center;
     font-size: 16px;
     position: relative;
-    @media (max-height: 1720px) {
+    /* @media (max-height: 1720px) {
             font-size: 13px;
         }
     @media (max-width: 1520px) {
@@ -27,7 +27,7 @@ const Style = styled.section`
         }
     @media (max-width: 1120px) {
             font-size: 10px;
-        }
+        } */
     @media (max-width: 950px) {
         flex-direction: column;
         font-size: 14px;

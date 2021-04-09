@@ -34,8 +34,14 @@ h1 {
     font-size: 5.25em;
     letter-spacing: -1.34px;
     color: #000000;
-    line-height: 148%;
+    line-height: 110%;
     margin-bottom: 2.38vh;
+    @media (max-width: 1680px) {
+        width: 75%;
+    }
+    @media (max-width: 1250px) {
+        width: 100%;
+    }
     @media (max-width: 500px) {
         font-size: 4em;
     }

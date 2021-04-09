@@ -103,7 +103,7 @@ const Team = () => {
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
                 We research, we explain, we implement. Our strategies are highly curated to the challenges.
-                We go beyond the standard agency model and offer comprehensive consulting to maximize your profit
+                We go beyond the standard agency model and offer comprehensive consulting to maximize your profit.
                 </AnimatedParagraph>
             </div>
         </Style>

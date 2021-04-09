@@ -381,7 +381,7 @@ export const ContactForm = () => {
                 </div>
                 <div className="form-group">
                     <label htmlFor="phone">Phone number</label>
-                    <input onChange={event => handleChange(event.target)} onBlur={event => handleBlur(event.target.name, event.target.value)} type="tel" name="phone" />
+                    <input onChange={event => handleChange(event.target)} onBlur={event => handleBlur(event.target.name, event.target.value)} type="number" name="phone" />
                     <small className="error-msg">{ errorData.phone && errorData.phone}</small>
                 </div>
                 <div className="form-group">
@@ -390,7 +390,7 @@ export const ContactForm = () => {
                     <small className="error-msg">{ errorData.message && errorData.message}</small>
                 </div>
                 <div className="btn-cnt">
-                <input type="submit" value="Submit" className="form-submit"/>
+                <button type="submit" className="form-submit">Submit</button>
                 </div>
             </form>
             <button onClick={ () => changeContactFormStatus(0) } className="exit-btn">

@@ -104,14 +104,14 @@ const Partners = () => {
                 src: Avallon,
                 alt: "Avalon.com logo"
             },
-            name: "avalon.com"
+            name: "avallon.pl"
         },
         {
             image: {
                 src: Tajm,
                 alt: "Tajm.com logo"
             },
-            name: "tajm.com"
+            name: "tajm.pl"
         }
     ]
     return (
