@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import {motion} from 'framer-motion'
 import { appContext } from './context'
 import ContactFormImage from '../images/contactFormImage.svg'
+import emailjs from 'emailjs-com';
 
 const Style = styled(motion.div)`
     min-height: 100%;
@@ -71,18 +72,31 @@ const Style = styled(motion.div)`
         outline: none;
         transition: all 0.3s ease-in;
         font-size: 20px;
+        position: relative;
+        user-select: none;
+        input {
+            position: absolute;
+            top:0;
+            left: 0;
+            height: 0;
+            width: 0;
+            cursor: pointer;
+            opacity: 0;
+        }
         span {
             font-weight: 700;
         }
         &.active {
+            border-color: #5163F6;
             background: #5163F6;
             color: #fff;
-            border: none;
         }
-        &:hover {
-            border: none;
+        @media(hover: hover) {
+            &:hover {
+            border-color: #5163F6;
             background: #5163F6;
             color: #fff;
+        }
         }
     }
     form {
@@ -211,32 +225,26 @@ export const ContactForm = () => {
             setList(prevState => prevState.filter(el => el !== category))
         }
     }
+    const hashtagify = () => {
+        const newList = list.map(el => '#' + el)
+        return newList.join(' ')
+    }
+    const sendEmail = (e) => {
+        e.preventDefault()
+        const tags = hashtagify()
+        const body = {
+            ...formData,
+            tags: tags
+        }
+        emailjs.send('default_service', 'template_fyltbjj', body, 'user_VfGpMuhECXdgJOEm13gzv')
+            .then(response => {
+                changeContactFormStatus(2)
+            })
+    }
     const handleSubmit = (e) => {
         e.preventDefault()
         if(checkAll()) {
-            fetch('https://api.woodpecker.co/rest/v1/add_prospects_list', {
-                method: 'post',
-                body: JSON.stringify({
-                    "prospects": [ 
-                        {
-                            email: formData.email,
-                            phone: formData.phone,
-                            tags: "#Test"
-                        }
-                    ]
-                }),
-                headers: {
-                    'Content-Type': 'application/json',
-                    "Authentication" : "117318.e1020334e74333d4f86b10538720c396f09593202a161b5f70b399b28fd5716c"
-                }
-            })
-            .then(response => {
-                if(response.ok) {
-                    changeContactFormStatus(2)
-                } else {
-                    console.log(response.statusText);
-                }
-            })
+            sendEmail(e)
         }
     }
     const handleBlur = (name, value) => {
@@ -354,13 +362,14 @@ export const ContactForm = () => {
             <h4>How can we help you?</h4>
                 <div className="boxes-cnt">
                 { categories.map((category, index) => (
-                    <button 
-                        onClick={() => handleAddingCategories(category)} 
-                        className={list.includes(category) ? "box active" : "box"}
-                        key={ index }
-                    >
-                        <span>+</span> { category }
-                    </button>
+                   <label htmlFor={`checkbox${index}`} key={ index } className={document.getElementById(`checkbox${index}`)?.checked ? "box active" : "box"}>
+                        <input type="checkbox" value={category} 
+                        name={`checkbox${index}`}
+                        id={`checkbox${index}`}
+                        onChange={() => handleAddingCategories(category)} 
+                    />
+                    { category }
+                   </label>
                 )) }
             </div>
             <small className="error-msg cat">{ errorData.cat && errorData.cat}</small>
@@ -381,9 +390,7 @@ export const ContactForm = () => {
                     <small className="error-msg">{ errorData.message && errorData.message}</small>
                 </div>
                 <div className="btn-cnt">
-                <button type="submit" className="form-submit">
-                    Submit
-                </button>
+                <input type="submit" value="Submit" className="form-submit"/>
                 </div>
             </form>
             <button onClick={ () => changeContactFormStatus(0) } className="exit-btn">

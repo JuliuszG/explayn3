@@ -44,6 +44,15 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+/* disable auto-zoom on iphone input field focus */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+	select:focus,
+	textarea:focus,
+	input:focus {
+		font-size: 16px;
+	}
+}
 * {
   box-sizing: border-box;
 }
