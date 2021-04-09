@@ -6,7 +6,7 @@ import Play from '../../images/play.svg'
 const Style = styled.div`
     padding: 0 10%;
     @media (max-width: 960px) {
-        padding: 10%;
+        padding: 10% 0;
     }
 `
 const VideoWrapper = styled.div`
@@ -19,12 +19,15 @@ const VideoWrapper = styled.div`
         top: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.5);
+        background-image: url(${ ({ bg }) => bg });
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         left: 0;
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 45px solid black;
+        border: 0px solid black;
         img {
             cursor: pointer;
         }
@@ -39,7 +42,7 @@ const CaseVideo = ({ link }) => {
     const [overlayOn, setOverlayOn] = useState(true)
     return (
          <Style>
-           <VideoWrapper>
+           <VideoWrapper bg={ `https://img.youtube.com/vi/${ link }/0.jpg` }>
                <AnimatePresence initial={false}>
                     {overlayOn && (
                     <motion.div 
@@ -53,7 +56,7 @@ const CaseVideo = ({ link }) => {
                         <motion.img whileHover={{scale: 1.3, transition: { duration: 0.5 }}} src={ Play } alt="play button"/>
                     </motion.div>            
                     )} 
-                    <iframe width="560" height="315" src={ `https://www.youtube.com/embed/${ link }?autoplay=${overlayOn ? 0 : 1}` } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>               
+                    <iframe width="560" height="315" src={ `https://www.youtube-nocookie.com/embed/${ link }?autoplay=${overlayOn ? 0 : 1}&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1` } title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>               
                </AnimatePresence>
            </VideoWrapper>
          </Style>
