@@ -122,7 +122,7 @@ const CaseData = ({ title, paragraph, link, country, client, field, services }) 
                 </li>
                 <li>
                     <span className="field-name">
-                        Field
+                        Industry
                     </span>
                     { field }
                 </li>

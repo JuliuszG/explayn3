@@ -72,19 +72,6 @@ const HeaderStyle = styled.div`
         font-size: 5em;
         line-height: 95%;
         margin-bottom: 3%;
-        width:55%;
-        @media (max-width: 1670px) {
-            width: 65%;
-        }
-        @media (max-width: 1450px) {
-            width: 75%;
-        }
-        @media (max-width: 1250px) {
-            width: 85%;
-        }
-        @media (max-width: 1025px) {
-            width: 100%;
-        }
     }
     p {
         width: 60%;
@@ -100,9 +87,14 @@ const HeaderStyle = styled.div`
         border: none;
         cursor: pointer;
         background: transparent;
-        width: 160px;
-        height: 160px;
+        width: 155px;
+        height: 155px;
         display: inline-block;
+        transition: 0.3s;
+        padding: 0;
+        &:hover {
+            transform: rotate(360deg);
+        }
         @media (max-width: 1080px) {
             display: none;
         }
@@ -193,10 +185,12 @@ const Header = () => {
                 <AnimatedHeader inView={ inView }>
                 Let our work do the talking
                 </AnimatedHeader>
+                <AnimatedParagraph inView={ inView }>
+                    Let our work to the talking. So here’s a taster of what we’ve been up to recently.
+                </AnimatedParagraph>
             </div>
             <ButtonNext className="next">
                 <motion.div 
-                    whileHover={ { rotate: 360, transition: { duration: 0.3 } } } 
                     style={ { width: "100%", height: "100%" } }
                 >
                     <img src={ ScrollRight } alt="scroll right button"/>
