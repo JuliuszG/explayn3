@@ -183,7 +183,7 @@ const Header = () => {
         <HeaderStyle ref={ ref }>
             <div className="text">
                 <AnimatedHeader inView={ inView }>
-                Let our work do the talking
+                Case studies
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
                     Let our work to the talking. So here’s a taster of what we’ve been up to recently.

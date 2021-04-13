@@ -143,10 +143,10 @@ const Footer = () => {
                 <span className="copy">© explayn.it All rights reserved</span>
             </div>
             <div className="right">
-                <a href="http://www.facebook.com">Facebook</a>
-                <a href="http://www.dribble.com">Dribble</a>
-                <a href="http://www.instagram.com">Instagram</a>
-                <a href="http://www.linkedin.com">Linkedin</a>
+                <a href="https://www.facebook.com/explayn.it">Facebook</a>
+                <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">Youtube</a>
+                <a href="https://www.instagram.com/explayn.it/">Instagram</a>
+                <a href="https://www.linkedin.com/company/explayn-digital-agency">Linkedin</a>
             </div>
             <Arrow>
                 <Img 

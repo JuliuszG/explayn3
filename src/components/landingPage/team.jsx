@@ -7,22 +7,16 @@ import { useInView } from 'react-intersection-observer';
 
 const Style = styled.section`
 font-size: 16px;
-    @media (max-width: 1200px) {
-        font-size: 14px;
-    }
-    @media (max-width: 950px) {
-        font-size: 12px;
-    }
-    @media (max-width: 650px) {
-        font-size: 10px;
-    }
+@media (max-width: 400px) {
+    font-size: 14px;
+}
     .images {
         position: relative;
     }
     .text {
         font-family: 'Poppins';
         font-style: normal;
-        padding: 18% 18% 10%;
+        padding: 0% 18% 10%;
         @media (max-width: 650px) {
             padding: 18% 12%;
         }
@@ -76,27 +70,8 @@ const Team = () => {
         triggerOnce: true,
         threshold: 0.5
       });
-    const data = useStaticQuery(graphql`
-    {
-    allFile(filter: {relativeDirectory: {eq: "team"}}) {
-        nodes {
-        childImageSharp {
-            fluid(quality: 100, maxWidth: 1700) {
-            ...GatsbyImageSharpFluid_tracedSVG
-            }
-        }
-        }
-    }
-    }
-`)
     return (
         <Style>
-            <div className="images">
-            <Img fluid={ data.allFile.nodes[1].childImageSharp.fluid } alt="team-picture" />
-                <Arrow>
-                    <Img fluid={ data.allFile.nodes[0].childImageSharp.fluid } alt="arrow" />
-                </Arrow>
-            </div>
             <div className="text" ref={ ref }>
                 <AnimatedHeader inView={ inView }> 
                 Understanding the individual needs of the clients is the key to our work.

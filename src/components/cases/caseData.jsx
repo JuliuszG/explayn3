@@ -105,7 +105,7 @@ const CaseData = ({ title, paragraph, link, country, client, field, services }) 
                 <AnimatedParagraph inView={ inView }>
                    { paragraph }
                 </AnimatedParagraph>
-                <AnimatedLink inView={ inView } url={ link }>Zobacz stronę online</AnimatedLink>
+                {link && <AnimatedLink inView={ inView } url={ link }>Zobacz stronę online</AnimatedLink>}
             </div>
             <ul className="right">
                 <li>
