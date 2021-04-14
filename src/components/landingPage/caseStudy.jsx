@@ -90,10 +90,11 @@ const HeaderStyle = styled.div`
         width: 155px;
         height: 155px;
         display: inline-block;
-        transition: 0.3s;
+        transition: 0.6s;
         padding: 0;
+        perspective: 1000px;
         &:hover {
-            transform: rotate(360deg);
+            transform: rotateZ(360deg);
         }
         @media (max-width: 1080px) {
             display: none;
@@ -186,7 +187,7 @@ const Header = () => {
                 Case studies
                 </AnimatedHeader>
                 <AnimatedParagraph inView={ inView }>
-                    Let our work to the talking. So here’s a taster of what we’ve been up to recently.
+                Let our work to the talking. Projects we've been working on recently.
                 </AnimatedParagraph>
             </div>
             <ButtonNext className="next">

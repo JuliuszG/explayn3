@@ -395,12 +395,12 @@ const MenuDesktop = ({ toggle }) => {
                     <MenuFooter>
                         <div className="social">
                             <div className="row">
-                                <a href="http://www.facebook.pl">Facebook</a>
-                                <a href="http://www.dribble.com">Dribble</a>
+                                <a href="https://www.facebook.com/explayn.it">Facebook</a>
+                                <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">Youtube</a>
                             </div>
                             <div className="row">
-                                <a href="http://www.instagram.com">Instagram</a>
-                                <a href="http://www.linkedin.com">Linkedin</a>
+                                <a href="https://www.instagram.com/explayn.it/">Instagram</a>
+                                <a href="https://www.linkedin.com/company/explayn-digital-agency">Linkedin</a>
                             </div>
                         </div>
                         <div className="contact">

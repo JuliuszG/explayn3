@@ -1,10 +1,18 @@
 import React from 'react'
-import styled from 'styled-components'
-import LoaderIcon from "react-loader-spinner"
+import styled, { keyframes } from 'styled-components'
+// import LoaderIcon from "react-loader-spinner"
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { colors } from '../styles/colors'
 import { motion } from 'framer-motion'
 
+const spin = keyframes`
+    0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+`
 const Style = styled(motion.div)`
     min-height: 100vh;
     width: 100%;
@@ -23,6 +31,17 @@ const Style = styled(motion.div)`
         color: ${ colors.neutral100 };
         font-size: 40px;
     }
+    .loader {
+        margin-top: 16px;
+        border-top: 10px solid rgb(76, 101, 255);
+        border-right: 10px solid rgba(136, 136, 136, 0.2);
+        border-bottom: 10px solid rgba(136, 136, 136, 0.2);
+        border-left: 10px solid rgba(136, 136, 136, 0.2);
+        animation: ${spin} 0.9s linear infinite;
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+    }
 `
 
 const Loader = () => {
@@ -32,10 +51,11 @@ const Loader = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1 } }}
         >
-            <LoaderIcon type="Grid"
+            {/* <LoaderIcon type="Grid"
         color="#000"
         height={100}
-        width={100} />
+        width={100} /> */}
+        <div className="loader" />
         </Style>
     ) 
 }

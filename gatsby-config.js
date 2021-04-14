@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Explayn`,
-    description: `Kompleksowa obsługa w świecie digitalu i nie tylko.
-    Spersonalizowane strony, sklepy, aplikacje. Branding, foto, wideo, SM. Podeślij brief lub zadzwoń.`,
-    author: `explayn`,
+    description: `A Full Service Web Design And Digital Marketing Agency Powered By Growth Solutions. If there's anything you need to know, We'll be happy to explayn.`,
+    author: `Explayn`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
