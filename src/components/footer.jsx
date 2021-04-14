@@ -63,7 +63,7 @@ const Style = styled.footer`
         .copy {
             position: absolute;
             bottom: 1%;
-            left: 40%;
+            left: 35%;
             font-size: 1.0625em;
             font-style: normal;
             font-weight: 300;
@@ -72,7 +72,7 @@ const Style = styled.footer`
             color: ${ colors.neutral30 };
             @media (max-width: 950px) {
                 bottom: -58%;
-                left: 38%;
+                left: 40%;
             }
         }
     }

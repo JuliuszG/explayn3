@@ -87,8 +87,8 @@ const HeaderStyle = styled.div`
         border: none;
         cursor: pointer;
         background: transparent;
-        width: 155px;
-        height: 155px;
+        width: 130px;
+        height: 130px;
         display: inline-block;
         transition: 0.6s;
         padding: 0;
