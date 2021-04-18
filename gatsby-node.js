@@ -4,6 +4,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const serviceTemplate = path.resolve(`src/templates/servicesTemplate.js`)
   const caseTemplate = path.resolve(`src/templates/caseTemplate.js`)
+  const postTemplate = path.resolve(`src/templates/postTemplate.js`) 
   const result = await graphql(`
   query MyQuery {
     allDatoCmsServicepage {
@@ -29,6 +30,12 @@ exports.createPages = async ({ graphql, actions }) => {
         slug
       }
     }
+    allDatoCmsBlog {
+      nodes {
+        id,
+        slug
+      }
+    }
   }
 `)
     result.data.allDatoCmsServicepage.nodes.forEach(project => {
@@ -49,6 +56,16 @@ exports.createPages = async ({ graphql, actions }) => {
         component: caseTemplate,
         context: {
             id: project.id
+        },
+      })
+    })
+
+    result.data.allDatoCmsBlog.nodes.forEach(post => {
+      createPage({
+        path: `blog/${ post.slug }`,
+        component: postTemplate,
+        context: {
+            id: post.id
         },
       })
     })

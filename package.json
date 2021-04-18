@@ -13,7 +13,7 @@
     "emailjs-com": "^2.6.4",
     "framer-motion": "^3.3.0",
     "gatsby": "^2.26.1",
-    "gatsby-background-image": "^1.4.0",
+    "gatsby-background-image": "^1.5.1",
     "gatsby-image": "^2.5.0",
     "gatsby-plugin-manifest": "^2.6.1",
     "gatsby-plugin-mdx": "^1.9.0",
@@ -39,6 +39,7 @@
     "react-scroll": "^1.8.1",
     "react-spinners-css": "^1.2.2",
     "react-youtube": "^7.13.1",
+    "slugify": "^1.5.0",
     "styled-components": "^5.2.1",
     "woodpecker-api": "^1.1.0"
   },
