@@ -5,7 +5,9 @@ import emailjs from 'emailjs-com';
 const Style = styled.aside`
     font-family: "Poppins";
     width: 412px;
-    border: 1px solid black;
+    @media (max-width: 450px) {
+        width: 100%;
+    }
     h3 {
             font-size: 12px;
             line-height: 18px;
@@ -42,7 +44,6 @@ const Style = styled.aside`
             letter-spacing: 0.05px;
             color: #000;
             margin-bottom: 30px;
-            wid
         }
         form {
             input {
