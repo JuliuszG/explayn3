@@ -3,12 +3,9 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com';
 const Style = styled.aside`
-    /* position: sticky;
-    bottom: 0;
-    right: 0; */
-    height: 60vh;
     font-family: "Poppins";
-    width: clamp(250px, 416px, 416px);
+    width: 412px;
+    border: 1px solid black;
     h3 {
             font-size: 12px;
             line-height: 18px;
@@ -45,6 +42,7 @@ const Style = styled.aside`
             letter-spacing: 0.05px;
             color: #000;
             margin-bottom: 30px;
+            wid
         }
         form {
             input {

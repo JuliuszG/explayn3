@@ -96,10 +96,13 @@ const Style = styled.section`
             display: flex;
             margin-top: 60px;
             width: 100%;
-            position: relative;
+            height: auto;
+            @media (max-width: 985px) {
+                display: flex;
+                flex-direction: column;
+            }
             article {
                 width: 900px;
-                height: 200vh;
                 margin-right: 184px;
                 @media (max-width: 980px) {
                     width: 100%;
