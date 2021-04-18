@@ -81,10 +81,12 @@ const Style = styled.section`
                     letter-spacing: 1.36px;
                     font-weight: 600;
                     font-family: "Poppins";
+                    text-transform: uppercase;
                     &.categories {
                         color: #4C65FF;
                     }
                     &.read-time {
+                        text-transform: uppercase;
                         color: #868686;
                     }
                 }

@@ -41,7 +41,7 @@ font-family: "Poppins";
             line-height: 29px;
             letter-spacing: 0.05px;
             color: #000;
-            width: 75%;
+            width: 100%;
             @media (max-width: 550px) {
             width: 100%;
             }
