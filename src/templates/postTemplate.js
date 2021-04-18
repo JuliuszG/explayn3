@@ -31,6 +31,7 @@ query BlogQuery($id: String!) {
         leadText
         content
         slug
+        id
     }
 }
 `
@@ -151,7 +152,7 @@ const PostTemplate = ({ data }) => {
     const isMobile = useMediaQuery({
         query: '(max-device-width: 950px)'
     })
-    const { bigScreen, bigScreenFraming, blogTitle, content, timeToRead, authorName, aboutTheAuthor, personalPhoto, leadText, slug } = data.datoCmsBlog
+    const { bigScreen, bigScreenFraming, blogTitle, content, timeToRead, authorName, aboutTheAuthor, personalPhoto, leadText, slug, id } = data.datoCmsBlog
     const { categories } = JSON.parse(data.datoCmsBlog.categories)
     return (
         <Layout>
@@ -193,7 +194,7 @@ const PostTemplate = ({ data }) => {
                             >
                             </div>
                         </article>
-                        <SideBar title={ blogTitle } slug={ slug } />
+                        <SideBar title={ blogTitle } slug={ slug } id={ id }/>
                     </main>
                 </div>
             </Style>

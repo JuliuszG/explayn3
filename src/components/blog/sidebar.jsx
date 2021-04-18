@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import styled from 'styled-components'
-import e from 'cors'
+import emailjs from 'emailjs-com';
 const Style = styled.aside`
     /* position: sticky;
     bottom: 0;
@@ -52,7 +52,7 @@ const Style = styled.aside`
                 outline: none;
                 border: none;
                 border-bottom: 1px solid #707070;
-                width: 70%;
+                width: 80%;
                 font-family: "Poppins";
                 font-weight: 600px;
                 color: #000;
@@ -91,11 +91,71 @@ const Style = styled.aside`
             }
         }
     }
+    .trending {
+        a {
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: block;
+            h2 {
+                font-size: 30px;
+                line-height: 50px;
+                color: #000;
+            }
+            .categories {
+                span {
+                    color: #4C65FF;
+                    margin-right: 20px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 1.36px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            .filter {
+                margin-bottom: 10px;
+                margin-right: 10px;
+                padding: 0 25px;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 27px;
+                letter-spacing: -0.22px;
+                color: #000;
+                border: 1px solid #333333;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in;
+                @media (hover: hover) {
+                    &:hover {
+                        border-color: #5163F6;
+                        background: #5163F6;
+                        color: #fff;
+                    }
+                }
+                &.active {
+                    border-color: #5163F6;
+                    background: #5163F6;
+                    color: #fff;
+                }
+            }
+        }
+    }
 `
-const SideBar = ({ title, slug }) => {
+const SideBar = ({ title, slug, id }) => {
     const [email, setEmail] = useState('')
     const [filters, setFilters] = useState([])
     const [trending, setTrending] = useState([])
+    const [mailSend, setMailSend] = useState(false)
     const data = useStaticQuery(
     graphql`
         {
@@ -103,33 +163,54 @@ const SideBar = ({ title, slug }) => {
                 nodes {
                     slug
                     blogTitle
+                    id
+                    categories
                 }
         }
     }
 `)
-  
     useEffect(() => {
         if(filters.length === 0) {
-            const filteredPosts = data.allDatoCmsBlog.nodes.filter((item, key) => key <= 3)
+            const filteredPosts = data.allDatoCmsBlog.nodes.filter((item, key) => item.id !== id && key <= 3)
             setTrending(filteredPosts)
         } else {
             const categoryFilter = data.allDatoCmsBlog.nodes.filter((post) => {
-                const categories = JSON.parse(post.categories)
+                const { categories } = JSON.parse(post.categories)
                 let isIn = false
                 categories.forEach(cat => {
-                    if(filters.includes(cat)) {
+                    if(filters.includes(cat.toUpperCase())) {
                         isIn = true
                     }
                 })
                 return isIn
             })
-            const filteredPosts = categoryFilter.filter((item, key) => key <= 3)
+            const filteredPosts = categoryFilter.filter((item, key) => item.id !== id && key <= 3)
             setTrending(filteredPosts)
         }
     }, [filters])
     const handleSubmit = e => {
         e.preventDefault()
+        emailjs.send('default_service', 'template_qhdmgng', {email}, 'user_VfGpMuhECXdgJOEm13gzv')
+            .then(response => {
+                setMailSend(true)
+            })
     }
+    const handleAddingCategories = (category) => {
+        if(filters.indexOf(category) === -1) {
+            setFilters(prevState => [...prevState, category])
+        } else {
+            setFilters(prevState => prevState.filter(el => el !== category))
+        }
+    }
+    const filterList = [
+        "BRANDING",
+        "ANIMATIONS/3D",
+        "VIDEO",
+        "MARKETING STRATEGY",
+        "SOCIAL MEDIA",
+        "SOFTWARE",
+        "OTHER"
+    ]
     return (
         <Style>
             <div className="social">
@@ -153,35 +234,60 @@ const SideBar = ({ title, slug }) => {
                 </a>
             </div>
             <div className="newsletter">
-                <h3>
-                    SUBSCRIBE TO OUR NEWSLETTER
-                </h3>
-                <p>
-                    Join our community and get our best insights, tips and strategies delivered straight to your inbox.
-                </p>
-                <form onSubmit={ e => handleSubmit(e) }>
-                    <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="enter your email address" />
-                    <button type="submit">
-                       {"Get updated >"}
-                    </button>
-                </form>
+                {mailSend ? (
+                    <h3>Thank You for subscribing !</h3>
+                ) : (
+                    <>
+                        <h3>
+                            SUBSCRIBE TO OUR NEWSLETTER
+                        </h3>
+                        <p>
+                            Join our community and get our best insights, tips and strategies delivered straight to your inbox.
+                        </p>
+                        <form onSubmit={ e => handleSubmit(e) }>
+                            <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="enter your email address" />
+                            <button type="submit">
+                            {"Get updated >"}
+                            </button>
+                        </form>
+                    </>
+                )}
             </div>
             <div className="trending">
                 <h3>
                     TRENDING ARTICLES
                 </h3>
-                {trending.map((post, index) => (
+                {trending.map((post, index) => {
+                    const {categories} = JSON.parse(post.categories)
+                    return(
                     <div key={ index } className="trending-post">
                         <div className="categories">
 
                         </div>
                         <Link to={`/blog/${post.slug}`}>
+                            <div className="categories">
+                                {categories.map((category, index) => <span key={index} className="category">{ category }</span>)}
+                            </div>
                             <h2>
                                 {post.blogTitle}
                             </h2>
                         </Link>
                     </div>
-                ))}
+                )})}
+                    <h3>
+                        POPULAR TAGS
+                    </h3>
+                <div className="filters">
+                            { filterList.map((filter, index) => (
+                                <div 
+                                    className={filters.includes(filter) ? "filter active" : "filter"}
+                                    key={ index }
+                                    onClick={() => handleAddingCategories(filter)}
+                                >
+                                    { filter }
+                                </div>
+                            )) }
+                        </div>
             </div>
         </Style>
     )
