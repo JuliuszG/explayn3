@@ -205,7 +205,7 @@ const PostTemplate = ({ data }) => {
                         <SideBar title={ blogTitle } slug={ slug } id={ id }/>
                     </main>
                 </div>
-                <PostSlider filters={{ currentPost: id}} />
+                {/* <PostSlider filters={{ currentPost: id}} /> */}
             </Style>
             <Footer />
         </Layout>

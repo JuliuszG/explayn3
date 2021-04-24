@@ -95,8 +95,7 @@ const PostSlider = ({ filters }) => {
     `)
     const [posts, setPosts] = useState([])
     const [filter, setFilter] = useState({
-        currentPost: false,
-        category: false
+        currentPost: false
     })
     useEffect(() => {
         setFilter(prevState => ({ ...prevState, ...filters }))
@@ -106,12 +105,6 @@ const PostSlider = ({ filters }) => {
         let newPosts = nodes
         if(filter.currentPost) {
             newPosts = newPosts.filter(post => post.id !== filter.currentPost)
-        }
-        if(filter.category) {
-            newPosts = newPosts.filter(post => {
-                const { categories } = JSON.parse(post.categories)
-                return categories.includes(filter.category)
-            })
         }
         newPosts = newPosts.filter((post, index) => index <= 6)
         setPosts(newPosts)
