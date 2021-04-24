@@ -17,16 +17,43 @@ transform: translateY(-20%);
         .keen-slider__slide {
             box-shadow: 0 0 40px #00000014;
             font-family: "Poppins";
-            img {
+            .img {
                 width: 100%;
                 height: 50%;
-                object-fit: cover;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
             .content {
+                height: 50%;
+                width: 100%;
                 padding: 60px;
+                @media (max-width: 1400px) {
+                    padding: 20px;
+                }
+                @media (max-width: 1024px) {
+                    padding: 60px;
+                }
+                @media (max-width: 600px) {
+                    padding: 20px;
+                }
                 h3 {
-                font-size: 30px;
-                line-height: 50px;
+                    font-size: 30px;
+                    line-height: 50px;
+                    @media (max-width: 1400px) {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
+                    @media (max-width: 1024px) {
+                        font-size: 30px;
+                        line-height: 50px;
+                    }
+                    @media (max-width: 600px) {
+                        font-size: 20px;
+                        line-height: 30px;
+                    }
                 }
             }
         }
@@ -39,8 +66,11 @@ const PostSlider = ({ filters }) => {
         spacing: 100,
         controls: true,
         breakpoints: {
+            '(max-width: 1400px)': {
+                spacing: 50
+            },
             '(max-width: 1024px)': {
-                slidesPerView: 1,
+                slidesPerView: 1
             },
           },
     })
@@ -90,7 +120,9 @@ const PostSlider = ({ filters }) => {
         <div className="keen-slider" ref={sliderRef}>
             {posts.map((post, index) => (
                 <div key={index} className="keen-slider__slide">
-                    <Image fluid={post.bigScreen.fluid} alt="post" />
+                    <div className="img">
+                        <Image style={{objectFit: "cover", width: "100%", height: "100%"}} fluid={post.bigScreen.fluid} alt="post" />
+                    </div>
                         <div className="content">
                             <h3>
                                 {post.blogTitle}
