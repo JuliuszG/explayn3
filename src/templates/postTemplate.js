@@ -8,6 +8,8 @@ import { useMediaQuery } from 'react-responsive'
 import Layout from '../components/layout'
 import Author from '../components/blog/author'
 import SideBar from '../components/blog/sidebar'
+import PostSlider from '../components/blog/postSlider'
+import Footer from '../components/footer'
 
 export const query = graphql`
 query BlogQuery($id: String!) {
@@ -54,6 +56,7 @@ const Style = styled.section`
         }
         @media (max-width: 1300px) {
             transform: translateY(0%);
+            padding-right: 5%;
         }
         .post-header {
             padding-right: 20%;
@@ -202,7 +205,9 @@ const PostTemplate = ({ data }) => {
                         <SideBar title={ blogTitle } slug={ slug } id={ id }/>
                     </main>
                 </div>
+                <PostSlider filters={{ currentPost: id}} />
             </Style>
+            <Footer />
         </Layout>
     )
 }

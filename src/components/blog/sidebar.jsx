@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 import emailjs from 'emailjs-com';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
+import Item from './item';
 const Style = styled.aside`
     font-family: "Poppins";
     width: 412px;
@@ -91,6 +93,22 @@ const Style = styled.aside`
         }
     }
     .trending {
+        .categories {
+                a {
+                    color: #4C65FF;
+                    margin-right: 20px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 1.36px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    display: inline;
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
         a {
             text-decoration: none;
             margin-bottom: 20px;
@@ -99,20 +117,6 @@ const Style = styled.aside`
                 font-size: 30px;
                 line-height: 50px;
                 color: #000;
-            }
-            .categories {
-                span {
-                    color: #4C65FF;
-                    margin-right: 20px;
-                    font-size: 12px;
-                    line-height: 18px;
-                    letter-spacing: 1.36px;
-                    font-weight: 600;
-                    text-transform: uppercase;
-                    &:last-of-type {
-                        margin-right: 0;
-                    }
-                }
             }
         }
         .filters {
@@ -255,24 +259,14 @@ const SideBar = ({ title, slug, id }) => {
             <div className="trending">
                 <h3>
                     TRENDING ARTICLES
-                </h3>
-                {trending.map((post, index) => {
-                    const {categories} = JSON.parse(post.categories)
-                    return(
-                    <div key={ index } className="trending-post">
-                        <div className="categories">
-
-                        </div>
-                        <Link to={`/blog/${post.slug}`}>
-                            <div className="categories">
-                                {categories.map((category, index) => <span key={index} className="category">{ category }</span>)}
-                            </div>
-                            <h2>
-                                {post.blogTitle}
-                            </h2>
-                        </Link>
-                    </div>
-                )})}
+                </h3>      
+                <AnimateSharedLayout>
+                    <motion.div layout>
+                        <AnimatePresence layout>
+                        {trending.map((post, index) => <Item key={index} post={post} />)}   
+                        </AnimatePresence>
+                    </motion.div>   
+                </AnimateSharedLayout>   
                     <h3>
                         POPULAR TAGS
                     </h3>
