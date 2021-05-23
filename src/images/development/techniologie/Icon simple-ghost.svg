@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="59.271" height="59.271" viewBox="0 0 59.271 59.271">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.211" cy="0.077" r="0.82" gradientTransform="translate(0 0) scale(1 1.22)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#864bf6"/>
+      <stop offset="1" stop-color="#501eaf"/>
+    </radialGradient>
+  </defs>
+  <path id="Icon_simple-ghost" data-name="Icon simple-ghost" d="M23.718,47.414H.02V59.271h23.7V47.414Zm35.538,0H35.57V59.271H59.256Zm.007-23.706H0V35.562H59.263ZM59.271,0H47.414V11.857H59.271Zm-23.7,0H.02V11.857H35.572Z" fill="url(#radial-gradient)"/>
+</svg>

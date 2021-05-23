@@ -17,7 +17,7 @@ const IndexPage = () => {
   })
   return(
     <Layout>
-      <SEO title="Home" />
+      <SEO title="" />
       { isMobile ? <Mobile /> : <Desktop /> }
       <Landing />
       <AboutUs />

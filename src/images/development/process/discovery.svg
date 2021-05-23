@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.211" cy="0.077" r="0.82" gradientTransform="translate(0 0) scale(1 1.22)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#864bf6"/>
+      <stop offset="1" stop-color="#501eaf"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_15" data-name="Group 15" transform="translate(-253 -3468)">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="43.5" cy="43.5" r="43.5" transform="translate(253 3468)" fill="url(#radial-gradient)"/>
+    <path id="Icon_open-lightbulb" data-name="Icon open-lightbulb" d="M21.25.013a3.1,3.1,0,0,0-.8.372L1.869,9.672a3.1,3.1,0,1,0,2.724,5.449L23.169,5.834A3.1,3.1,0,0,0,21.25.013ZM27.442,9.3a3.1,3.1,0,0,0-.8.372L1.869,22.056a3.1,3.1,0,1,0,2.724,5.449L29.361,15.121A3.1,3.1,0,0,0,27.442,9.3Zm0,12.384a3.1,3.1,0,0,0-.8.372L8.061,31.344a3.1,3.1,0,0,0,1.362,5.82H21.807a3.135,3.135,0,1,0,.991-6.192l6.563-3.467a3.1,3.1,0,0,0-1.919-5.82ZM11.59,43.357a3.135,3.135,0,0,0,.991,6.192h6.192a3.1,3.1,0,0,0,0-6.192H12.581a3.1,3.1,0,0,0-.557,0,3.1,3.1,0,0,0-.372,0Z" transform="translate(281.141 3486.723)" fill="#fff"/>
+  </g>
+</svg>

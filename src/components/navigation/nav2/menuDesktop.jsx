@@ -333,9 +333,9 @@ const MenuDesktop = ({ toggle }) => {
                             <div className="number">
                                 04.
                             </div>
-                            <ScLink to={ "footer" } smooth duration={1000} onClick={ menuSwitch }>
-                                Contact
-                            </ScLink>
+                            <Link to="/blog">
+                                Blog
+                            </Link>
                         </motion.div>
                     </div>
                     <motion.div 

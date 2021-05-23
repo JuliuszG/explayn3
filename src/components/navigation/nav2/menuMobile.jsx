@@ -238,9 +238,9 @@ const MenuMobile = ({ toggle }) => {
                         <div className="number">
                                 04.
                             </div>
-                            <ScLink to={ "footer" } smooth duration={1000} onClick={ menuSwitch }>
-                                Contact
-                            </ScLink>
+                            <Link to="/blog">
+                                Blog
+                            </Link>
                       </div>
                     </motion.div>
                 </Links>

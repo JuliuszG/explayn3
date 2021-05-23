@@ -34,7 +34,6 @@ font-family: "Poppins";
             font-size: 30px;
             line-height: 50px;
             color: #000;
-            margin-bottom: 10px;
         }
         .about {
             font-size: 18px;

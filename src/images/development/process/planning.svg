@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.211" cy="0.077" r="0.82" gradientTransform="translate(0 0) scale(1 1.22)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#864bf6"/>
+      <stop offset="1" stop-color="#501eaf"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_16" data-name="Group 16" transform="translate(-471 -3633)">
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="43.5" cy="43.5" r="43.5" transform="translate(471 3633)" fill="url(#radial-gradient)"/>
+    <path id="Icon_material-timelapse" data-name="Icon material-timelapse" d="M33.172,15.2a12.659,12.659,0,0,0-8.984-3.729V24.188L15.2,33.172A12.705,12.705,0,1,0,33.172,15.2ZM24.188,3A21.188,21.188,0,1,0,45.377,24.188,21.2,21.2,0,0,0,24.188,3Zm0,38.139A16.951,16.951,0,1,1,41.139,24.188,16.946,16.946,0,0,1,24.188,41.139Z" transform="translate(490.312 3652.312)" fill="#fff"/>
+  </g>
+</svg>

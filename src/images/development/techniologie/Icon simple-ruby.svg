@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74.025" height="73.572" viewBox="0 0 74.025 73.572">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.211" cy="0.077" r="0.82" gradientTransform="translate(0 0) scale(1 1.22)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#864bf6"/>
+      <stop offset="1" stop-color="#501eaf"/>
+    </radialGradient>
+  </defs>
+  <path id="Icon_simple-ruby" data-name="Icon simple-ruby" d="M62.169.14c9.355,1.619,12.008,8.013,11.81,14.713l.046-.1-4.21,55.174L15.083,73.682h.049C10.589,73.491.463,73.074,0,58.917l5.074-9.253,8.695,20.314,1.551,3.615,8.652-28.2-.093.022.049-.093,28.546,9.117L48.169,37.684,45.115,25.655,72.32,23.9l-1.9-1.573L50.892,6.4,62.178.109,62.169.14ZM0,58.762v0ZM15.823,15.532c10.984-10.9,25.159-17.337,30.6-11.844S46.1,22.518,35.1,33.409C24.108,44.3,10.1,51.095,4.673,45.614c-5.447-5.481.139-19.176,11.141-30.073l.009-.009Z" transform="translate(0 -0.109)" fill="url(#radial-gradient)"/>
+</svg>

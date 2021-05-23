@@ -22,6 +22,9 @@ import MarketingHover from '../../images/about/hover/6.svg'
 const Style = styled(motion.section)`
     background: ${ colors.neutral90 };
     padding: 10% 0 10%;
+    a {
+        text-decoration: none;
+    }
     .cnt {
         display: flex;
         padding: 0 10%;
@@ -388,7 +391,7 @@ const renderSecond = () => {
     if(!isCollapsed) {
         return (
             <div className="cnt second">
-                { items.map((item, index) => index > 2 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }
+                { items.map((item, index) => index > 2 &&  <a key={index} href={ item.url }><Box isCollapsed={ isCollapsed } content={ item } /></a>) }
             </div>
         )
     }
@@ -397,7 +400,7 @@ const renderSecond = () => {
         <Style id="aboutUs">
             <Header src={ data.main.nodes[0].childImageSharp.fluid } />
             <div className="cnt first">
-                { items.map((item, index) => index < 3 && <Box isCollapsed={ isCollapsed } content={ item } key={ index } />) }
+                { items.map((item, index) => index < 3 &&  <a key={index} href={ item.url }><Box isCollapsed={ isCollapsed } content={ item } /></a>) }
             </div>
             { renderSecond() }
             <div className="btn__cnt">

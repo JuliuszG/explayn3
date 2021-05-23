@@ -1,0 +1,12 @@
+<svg id="Group_31" data-name="Group 31" xmlns="http://www.w3.org/2000/svg" width="45" height="62" viewBox="0 0 45 62">
+  <g id="Union_1" data-name="Union 1" transform="translate(8)" fill="none">
+    <path d="M0,53V13.25H.022A14.3,14.3,0,0,1,14.5,0,14.3,14.3,0,0,1,28.978,13.25H29V53Z" stroke="none"/>
+    <path d="M 25 49 L 25 13.74929618835449 L 24.98453521728516 13.47605514526367 C 24.68376731872559 8.16237735748291 20.07854461669922 4 14.50031185150146 4 C 8.921823501586914 4 4.316390037536621 8.16237735748291 4.015623092651367 13.47605514526367 L 4.000000953674316 13.75204467773438 L 4.000000953674316 14.02933311462402 L 4.000000953674316 49 L 25 49 M 29 53 L 9.5367431640625e-07 53 L 9.5367431640625e-07 14.02933311462402 L 9.5367431640625e-07 13.25 L 0.02201206423342228 13.25 C 0.4400453865528107 5.864733219146729 6.762245178222656 0 14.50031185150146 0 C 22.23791122436523 0 28.56011199951172 5.864733219146729 28.97814559936523 13.25 L 29 13.25 L 29 53 Z" stroke="none" fill="#501eaf"/>
+  </g>
+  <rect id="Rectangle_31" data-name="Rectangle 31" width="15" height="13" transform="translate(27 16)" fill="#fff"/>
+  <g id="Rectangle_28" data-name="Rectangle 28" transform="translate(0 22)" fill="#fff" stroke="#501eaf" stroke-width="4">
+    <rect width="45" height="40" rx="4" stroke="none"/>
+    <rect x="2" y="2" width="41" height="36" rx="2" fill="none"/>
+  </g>
+  <rect id="Rectangle_29" data-name="Rectangle 29" width="9" height="14" rx="4" transform="translate(18 35)" fill="#501eb0"/>
+</svg>

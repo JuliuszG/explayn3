@@ -93,7 +93,7 @@ const Logo = styled.div`
     }
 `
 
-const ServicesSection = styled.section`
+export const ServicesSection = styled.section`
     background: ${ colors.neutral90 };
     padding: 15%;
     display: flex;
