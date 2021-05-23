@@ -40,7 +40,7 @@ const Style = styled.div`
     width: 100%;
     margin: 28vh 0;
     @media (max-width: 900px) {
-        margin: 10vh 0;
+        margin: 5vh 0;
     }
     .cnt {
         display: grid;
@@ -55,18 +55,24 @@ const Style = styled.div`
             max-width: 1050px;
         }
         @media (max-width: 1024px) {
+            padding: 0 5%;
             width: 100%;
             grid-template-columns: repeat(2, 1fr);
         }
         @media (max-width: 680px) {
-            padding: 0 5%;
             width: 100%;
             grid-template-columns: 1fr;
         }
         .post {
             box-shadow: 0px 0px 40px #00000014;
-            min-height: 637px;
             text-decoration: none;
+            min-height: 637px;
+            display: flex;
+            flex-direction: column;
+            align-content: space-between;
+            @media (max-width: 680px) {
+                min-height: 500px;
+            }
             @media (hover: hover) {
                 &:hover .img .overlay {
                     opacity: 0.19;
@@ -93,7 +99,6 @@ const Style = styled.div`
             }
             .content {
                width: 100%;
-               height: 40%;      
                padding: 10%;
                h2 {
                 font-size: 1.875rem;
@@ -118,6 +123,7 @@ const Style = styled.div`
                     line-height: 150%;
                     display: flex;
                     justify-content: space-between;
+                    flex-wrap: wrap;
                     margin-top: 30px;
                     @media (max-width: 1700px) {
                         flex-direction: column;
@@ -143,7 +149,7 @@ const Style = styled.div`
                 opacity: 0;
                 transition: all 0.3s ease-in;
                 @media (max-width: 1024px) {
-                    opacity: 1;
+                    display: none;
                 }
             }
         }
