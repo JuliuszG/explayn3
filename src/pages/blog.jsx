@@ -38,7 +38,7 @@ export const query = graphql`
 const Style = styled.div`
     font-family: 'Poppins';
     width: 100%;
-    margin: 40vh 0;
+    margin: 28vh 0;
     @media (max-width: 900px) {
         margin: 10vh 0;
     }
@@ -52,7 +52,7 @@ const Style = styled.div`
             max-width: 1200px;
         }
         @media (max-width: 1300px) {
-            max-width: 900px;
+            max-width: 1050px;
         }
         @media (max-width: 1024px) {
             width: 100%;
