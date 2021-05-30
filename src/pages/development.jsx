@@ -174,20 +174,43 @@ font-family: "Poppins";
         height: 763px;
         background-color: #F5F6FA;
         display:flex;
+        @media(max-width: 1650px){
+            height: 600px;
+        }
+        @media(max-width: 1200px){
+            min-height: 39.7395833vh;
+        }
         .cnt {
             width: 100%;
-            min-height: 763px;
+            min-height: 39.7395833vw;
             display: flex;
+            @media(max-width: 1200px){
+            flex-direction: column;
+            align-items: center;
+            }
             .section-4__size{
                 height: 364px;
-                max-width: 516px;
+                max-width: 26.875vw;
                 width: 100%;
-                margin: 200px 256px 0 296px;
+                margin: 200px 13.3333vw 199px 15.41666vw;
+                @media(max-width: 1650px){
+                    margin: 100px 10vw 100px 10vw;
+                }
+                @media(max-width: 1220px){
+                    margin: 20vh 10vw;
+                }
+                @media(max-width: 1200px){
+                width: 100%;
+                text-align: center;
+                }
                     h2 {
                         font-size: 55px;
                         line-height: 138.18%;
                         font-weight: 600;
                         color: #000;
+                        @media(max-width: 1650px){
+                            font-size: 40px
+                        }
                     }
                     p {
                         font-size: 1.375em;
@@ -195,6 +218,9 @@ font-family: "Poppins";
                         color: #000;
                         font-weight: 300;
                         margin-top:  60px;
+                        @media(max-width: 1650px){
+                            font-size: 1em
+                        }
                     }
                 }
             .section-4__image{
@@ -203,7 +229,13 @@ font-family: "Poppins";
                 height: 563px;
                 display: flex;
                 flex-direction: column;
-                margin: 101px 0 101px 0;
+                margin: 101px 16.9270vw 101px 0;
+                @media(max-width: 1650px){
+                     margin: 50px 13vw 50px 0;
+                 }
+                @media(max-width: 1220px){
+                    margin: 10vh 0;
+                }
                 .section-4__icon-position{
                     width: 100% !important;
                     height: 100% !important;
