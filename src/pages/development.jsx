@@ -224,17 +224,13 @@ font-family: "Poppins";
                         }
                         p{
                             text-align: center;
-                            }
+                            
                         }
                     }
                 }
             }
         }
-    }
-    
-    
-
-    
+    }  
 `
 const Development = () => {
     const isMobile = useMediaQuery({
