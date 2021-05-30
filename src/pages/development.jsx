@@ -1,16 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import motion from 'framer-motion'
-import Layout from './layout'
-import Desktop from "./navigation/desktop"
-import Mobile from "./navigation/mobile"
-import Footer from './footer'
-import SEO from "./seo"
+import Layout from '../components/layout'
+import Desktop from "../components/navigation/desktop"
+import Mobile from "../components/navigation/mobile"
+import Footer from '../components/footer'
+import SEO from "../components/seo"
 import { useMediaQuery } from 'react-responsive'
 import HeaderImg from '../images/development/header/landing.svg'
 import { ServicesSection } from '../templates/servicesTemplate'
 import Section3Bg from '../images/development/header/section3bg.jpg'
-import Steps from './services/steps'
+import Steps from '../components/services/steps'
 import Discovery from '../images/development/process/discovery.svg'
 import Planning from '../images/development/process/planning.svg'
 import Design from '../images/development/process/design.svg'
