@@ -16,6 +16,19 @@ import Planning from '../images/development/process/planning.svg'
 import Design from '../images/development/process/design.svg'
 import DevelopmentStepIcon from '../images/development/process/development_icon.svg'
 import Launch from '../images/development/process/lauch.svg'
+import Next from '../images/development/techniologie/next.svg'
+import ReactJS from '../images/development/techniologie/react.svg'
+import Graph from '../images/development/techniologie/graph.svg'
+import Node from '../images/development/techniologie/node.svg'
+import TypeScript from '../images/development/techniologie/ts.svg'
+import Ruby from '../images/development/techniologie/ruby.svg'
+import JS from '../images/development/techniologie/js.svg'
+import Three from '../images/development/techniologie/three.svg'
+import Drupal from '../images/development/techniologie/drupal.svg'
+import Ghost from '../images/development/techniologie/ghost.svg'
+import Dato from '../images/development/techniologie/dato.svg'
+import WP from '../images/development/techniologie/wp.svg'
+
 const Styles = styled.div`
 font-family: "Poppins";
     .landing {
@@ -24,15 +37,40 @@ font-family: "Poppins";
         display: flex;
         justify-content: center;
         align-items: center;
+        @media(max-width: 1450px){
+            flex-direction: column-reverse;
+        }
+        @media(max-width: 550px){
+                    padding: 0 5%;
+                    min-height: 85vh;
+                } 
         .content {
             max-width: 761px;
             padding-right: 5%;
+            @media(max-width: 1450px){
+                padding-right: 0;
+                padding-bottom: 5%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1{
+                    text-align: center;
+                }
+            }
+            
             h1 {
                 color: #000;
                 font-weight: 600;
                 font-size: 5.9375em;
                 line-height: 120%;
-                margin-bottom: 32px;          
+                margin-bottom: 32px;
+                @media(max-width: 750px){
+                    font-size: 4em;
+                }
+                @media(max-width: 550px){
+                    font-size: 3em;
+                }           
             }
             p {
                 width: 70%;
@@ -40,15 +78,32 @@ font-family: "Poppins";
                 line-height: 136.36%;
                 color: #000;
                 font-weight: 300;
+                @media(max-width: 750px){
+                    font-size: 1em;
+                }
+                @media(max-width: 550px){
+                    font-size: 0.8em;
+                } 
             }
         }
         .landing-image {
-            margin-bottom: 7%;
+            margin-bottom: 2%;
             img {
                 width: 33.375em;
                 height: 100%;
                 object-fit: cover;
             }
+            @media(max-width: 1450px){
+                padding:7% 0 0 0;
+                margin-bottom: 0;
+                img{
+                    width: 25em;
+                    height: 100%;
+                }
+            }
+            @media(max-width: 550px){
+                    padding: 0;
+                } 
         }
     }
     .section-3 {
@@ -114,6 +169,72 @@ font-family: "Poppins";
             }
         }
     }
+    .section-4 {
+        width: 100%;
+        height: 763px;
+        background-color: #F5F6FA;
+        display:flex;
+        .cnt {
+            width: 100%;
+            min-height: 763px;
+            display: flex;
+            .section-4__size{
+                height: 364px;
+                max-width: 516px;
+                width: 100%;
+                margin: 200px 256px 0 296px;
+                    h2 {
+                        font-size: 55px;
+                        line-height: 138.18%;
+                        font-weight: 600;
+                        color: #000;
+                    }
+                    p {
+                        font-size: 1.375em;
+                        line-height: 136.36%;
+                        color: #000;
+                        font-weight: 300;
+                        margin-top:  60px;
+                    }
+                }
+            .section-4__image{
+                max-width: 526px;
+                width: 100%;
+                height: 563px;
+                display: flex;
+                flex-direction: column;
+                margin: 101px 0 101px 0;
+                .section-4__icon-position{
+                    width: 100% !important;
+                    height: 100% !important;
+                    display: flex;
+                    justify-content: space-between;
+                    div{
+                        width: 103px;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        img{
+                            height: 73px;
+                            margin-bottom: 30px;
+                            transition: 1.2s;
+                            &:hover{
+                                transform: scale(1.2)
+                            }
+                        }
+                        p{
+                            text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    
+
+    
 `
 const Development = () => {
     const isMobile = useMediaQuery({
@@ -188,6 +309,72 @@ const Development = () => {
                 DevelopmentStepIcon,
                 Launch
             ]}/>
+            <div className="section-4">
+                <div className="cnt">
+                    <div className="section-4__size">
+                        <h2>Best technology for your product</h2>
+                        <p>Having released over 40 products we have a set of technologies that we love to work with. Tell us about your product vision and goals and we will choose technologies that will help you achieve them. ZMIENIĆ COPY</p>
+                    </div>
+                    <div className="section-4__image">
+                        <div className="section-4__icon-position">
+                            <div>
+                                <img src={Next} alt="Next"/>
+                                <p>next.js</p>  
+                            </div>
+                            <div>
+                                <img src={ReactJS} alt="React"/>
+                                <p>react<br/>react native</p>
+                            </div>                     
+                            <div>
+                                <img src={Graph} alt="graph.ql"/>
+                                <p>graph.ql</p>
+                            </div>
+                            <div>
+                                <img src={Node} alt="node.js"/>
+                                <p>node.js</p>
+                            </div>
+                        </div>
+
+                        <div className="section-4__icon-position">
+                            <div>
+                                <img src={TypeScript} alt="typescript"/>
+                                <p>typescript</p>
+                            </div>
+                            <div>
+                                <img src={Ruby} alt="ruby"/>
+                                <p>ruby</p>
+                            </div>
+                            <div>
+                                <img src={JS} alt="javascript"/>
+                                <p>javascript</p>
+                            </div>
+                            <div>
+                                <img src={Three} alt="three.js"/>
+                                <p>three.js</p>
+                            </div>
+                        </div>
+
+                        <div className="section-4__icon-position">
+                            <div>
+                                <img src={Drupal} alt="drupal"/>
+                                <p>drupal</p>
+                            </div>
+                            <div>
+                                <img src={Ghost} alt="ghost"/>
+                                <p>ghost</p>
+                            </div>
+                            <div>
+                                <img src={Dato} alt="datoCMS"/>
+                                <p>DatoCMS</p>
+                            </div>
+                            <div>
+                                <img src={WP} alt="Wordpress"/>
+                                <p>wordpress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             </Styles>
             <Footer />
         </Layout>

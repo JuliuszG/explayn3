@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useState} from 'react';
+import {usePopper} from 'react-popper';
 import BG from '../../images/development/header/bgSteps.jpg'
 import styled from 'styled-components'
 const Style = styled.div`
@@ -56,6 +57,13 @@ const Style = styled.div`
     .icons {
             max-width: 1400px;
             display: flex;
+            div:nth-child(1) > img:after{
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-color: red;
+                display: block;
+            }
             .line {
                 width: 100px;
                 height: 5px;
@@ -66,9 +74,62 @@ const Style = styled.div`
                 display: flex;
                 align-items: center;
                 margin-right: 20px;
+                &:hover ~ .dymek{
+                    display: block;
+                }
             }
         }
+        .dymek{
+            display: none;
+            position: relative;
+            background: grey;
+            width: 100px;
+            height: 100px;
+            z-index: 99999;
+            font-size: 22px;
+        }
+        .dymek_arrow{
+            position: absolute;
+            top: -5px;
+            left: 15px !important;
+            width: 20px;
+            height: 20px;
+            background: grey;
+            transform: rotate(65deg) skew(45deg) !important ;
+            z-index: -1;
+        }
 `
+const Icon = ({icon, index, length}) => {
+    const [referenceElement, setReferenceElement] = useState(null);
+    const [popperElement, setPopperElement] = useState(null);
+    const [arrowElement, setArrowElement] = useState(null);
+    const { styles, attributes } = usePopper(referenceElement, popperElement, {
+    modifiers: [{ name: 'arrow', options: { element: arrowElement } }],
+  });
+  const textArray = [
+            'The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.', 
+            '', 
+            'This is where great ideas come to life. The visual design of the website starts to shape. We create an impactful User Interface that is a customer-focused experience. To wrap up the design phase, will look to the client for final approval before advancing to the development stage.', 
+            '', 
+            'By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.'];
+    return (
+        <>
+         <div className="icon" ref={setReferenceElement}>
+            <img key={ index } src={ icon } alt="icon" />
+                     { index !== length -1 && (
+                        <div className="line"></div>
+                ) }
+         </div>
+         {index %2 === 0  && (
+            <div className="dymek" ref={setPopperElement} style={styles.popper} {...attributes.popper}>
+                    {textArray[index]}
+            <div className="dymek_arrow" ref={setArrowElement} style={styles.arrow} />
+         </div>
+         )}
+        </>
+    )
+}
+
 const Steps = ({ icons }) => {
     return (
         <Style>
@@ -83,12 +144,7 @@ const Steps = ({ icons }) => {
             <div className="icons">
                 { icons.map((icon, index) => {
                     return (
-                        <div className="icon">
-                            <img key={ index } src={ icon } alt="icon" />
-                            { index !== icons.length -1 && (
-                                <div className="line"></div>
-                            ) }
-                        </div>     
+                          <Icon icon = {icon} index = {index} length = {icons.length}/>   
                     )
                 }) }
             </div>
@@ -97,3 +153,4 @@ const Steps = ({ icons }) => {
 }
 
 export default Steps
+
