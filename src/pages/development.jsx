@@ -28,6 +28,10 @@ import Drupal from '../images/development/techniologie/drupal.svg'
 import Ghost from '../images/development/techniologie/ghost.svg'
 import Dato from '../images/development/techniologie/dato.svg'
 import WP from '../images/development/techniologie/wp.svg'
+import Responsiv from '../images/development/korzysci/responsive.svg'
+import Functional from '../images/development/korzysci/setings.svg'
+import Scalable from '../images/development/korzysci/scalable.svg'
+import Secure from '../images/development/korzysci/secure.svg'
 
 const Styles = styled.div`
 font-family: "Poppins";
@@ -314,16 +318,101 @@ font-family: "Poppins";
                         }
                         p{
                             text-align: center;
-                            /* @media(max-width: 410px){
-                                margin-bottom: 50%;
-                            }    */
-                            
                         }
                     }
                 }
             }
         }
-    }  
+    }
+    .section-5{
+        width: 100%;
+        height: 1195px;
+        display: flex;
+        justify-content: center;
+        .cnt{
+            max-width: 1290px;
+            width: 100%;
+            margin-top: 174px;
+        }
+        .section-5__title{
+            max-width: 449px;
+            width: 100%;
+            height: 153px;
+            margin-bottom: 151px;
+            h2 {
+                font-size: 55px;
+                line-height: 138.18%;
+                font-weight: 600;
+                color: #000;
+            }
+        }
+        .section-5__line1{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 90px;
+            .section-5__block{
+                max-width: 556px;
+                width: 100%;
+                height: 175px;
+                display: flex;
+                justify-content: space-between;
+                .section-5__block-img{
+                    height: 50px; 
+                }
+                .section-5__block-tex{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h3{
+                        height: 52px; 
+                        font-size: 27px;
+                        font-weight: 600;
+                        display: table-cell !important;
+                        vertical-align: middle !important;
+                    }
+                    p{
+                        max-width: 440px;
+                        width: 100%;
+                        font-size: 22px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+        .section-5__line2{
+            display: flex;
+            justify-content: space-between;
+            .section-5__block{
+                max-width: 556px;
+                width: 100%;
+                height: 175px;
+                display: flex;
+                justify-content: space-between;
+                .section-5__block-img{
+                    height: 50px; 
+                    img{}
+                }
+                .section-5__block-tex{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    h3{
+                        height: 52px; 
+                        font-size: 27px;
+                        font-weight: 600;
+                    }
+                    p{
+                        max-width: 440px;
+                        width: 100%;
+                        font-size: 22px ;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }   
 `
 const Development = () => {
     const isMobile = useMediaQuery({
@@ -459,6 +548,59 @@ const Development = () => {
                             <div>
                                 <img src={WP} alt="Wordpress"/>
                                 <p>wordpress</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="section-5">
+                <div className="cnt">
+                    <div className="section-5__title">
+                        <h2>Key values <br/> for our products</h2>
+                    </div>
+                    <div className="section-5__line1">
+                        <div className="section-5__block">
+                            <div className="section-5__block-img">
+                                <img src={Responsiv} alt="Responsiv"/>
+                            </div>
+                            <div className="section-5__block-tex">
+                                <h3>Responsive</h3>
+                                <p>
+                                Responsive web design is a modern need. We follow standards creating a mobile optimized website that converts.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="section-5__block">
+                            <div className="section-5__block-img">
+                                <img src={Functional} alt="Functional"/>  
+                            </div>
+                            <div className="section-5__block-tex">
+                                <h3>Functional</h3>
+                                <p>Your site reflects your company and your brand. That’s why we deliver visually appealing, polished and professional  user experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="section-5__line2">
+                        <div className="section-5__block">
+                            <div className="section-5__block-img">
+                                <img src={Scalable} alt="Scalable"/>
+                            </div>
+                            <div className="section-5__block-tex">
+                                <h3>Scalable</h3>
+                                <p>
+                                We create efficient infrastructure to deliver scalable web applications and solutions to meet your business demands.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="section-5__block">
+                            <div className="section-5__block-img">
+                                <img src={Secure} alt="Secure"/>  
+                            </div>
+                            <div className="section-5__block-tex">
+                                <h3>Secure</h3>
+                                <p>To us, it is important that your website follows industry standards and security guidelines.
+                                </p>
                             </div>
                         </div>
                     </div>
