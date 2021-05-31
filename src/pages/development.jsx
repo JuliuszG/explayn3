@@ -178,7 +178,7 @@ font-family: "Poppins";
             height: 600px;
         }
         @media(max-width: 1200px){
-            min-height: 180vh;
+            min-height: 130vh;
         }
         .cnt {
             width: 100%;
@@ -259,11 +259,19 @@ font-family: "Poppins";
                 @media(max-width: 1200px){
                     margin: 15vh;
                 }
-                @media(max-width: 1090px){
-                     padding-top: 13%;
+                @media(max-width: 872px){
+                     padding-top: 5%;
+                }
+                @media(max-width: 767px){
+                     padding-top: 10%;
                 }
                 @media(max-width: 430px){
                      padding-top: 33%;
+                }
+                @media(max-width: 413px){
+                    max-width: 413px;
+                    width: 100%;
+                    height: 514px;
                 }
                 @media(max-width: 386px){
                     padding: 53% 0 0 0;
@@ -275,7 +283,11 @@ font-family: "Poppins";
                     justify-content: space-between;
                     @media(max-width: 460px){
                     flex-wrap: wrap;
-                }
+                    }
+                    @media(max-width: 413px){
+                        flex-wrap: nowrap;
+                        
+                    }
                     div{
                         width: 103px;
                         display: flex;
@@ -284,6 +296,10 @@ font-family: "Poppins";
                         @media(max-width: 410px){
                             width: 50%;
                         }
+                        @media(max-width: 413px){
+                        max-width: 103px;
+                        width: 100%;
+                        }
                         img{
                             height: 73px;
                             margin-bottom: 30px;
@@ -291,12 +307,16 @@ font-family: "Poppins";
                             &:hover{
                                 transform: scale(1.2)
                             }
+                            @media(max-width: 413px){
+                                height: 7.71670vh;
+                                margin: 0;
+                            }
                         }
                         p{
                             text-align: center;
-                            @media(max-width: 410px){
+                            /* @media(max-width: 410px){
                                 margin-bottom: 50%;
-                            }   
+                            }    */
                             
                         }
                     }
