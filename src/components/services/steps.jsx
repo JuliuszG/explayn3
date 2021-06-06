@@ -11,7 +11,7 @@ const Style = styled.div`
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 10% 0;
     align-items: center;
     font-family: "Poppins";
     .header {
@@ -56,26 +56,73 @@ const Style = styled.div`
     }
     .icons {
             max-width: 1400px;
-            display: flex;
-            div:nth-child(1) > img:after{
-                content: '';
-                width: 20px;
-                height: 20px;
-                background-color: red;
-                display: block;
+            .cnt {
+                width: 100%;
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @media (max-width: 1150px) {
+                    padding: 0 5vw;
+                }
+                @media (max-width: 950px) {
+                    flex-direction: column;
+                    height: 100%;
+                    padding-bottom: 5vh;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
             }
             .line {
                 width: 100px;
                 height: 5px;
                 border-bottom: 5px dotted grey;
-                margin-left: 20px ;
+                margin: 0 20px ;
+                @media (max-width: 950px) {
+                    height: 50px;
+                    width: 5px;
+                    border-bottom: none;
+                    border-left: 5px dotted grey;
+                    margin: 20px 0;
+                }
             }
             .icon {
                 display: flex;
-                align-items: center;
-                margin-right: 20px;
-                &:hover ~ .dymek{
-                    display: block;
+                max-width: 87px;
+                max-height: 87px;
+                position: relative;
+                cursor: pointer;
+                @media (min-width: 950px) and (hover: hover) {
+                    &:hover:nth-of-type(1)::after {
+                        display: block;
+                    }
+                    &:nth-of-type(1)::after {
+                        content: "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.";
+                        display: none;
+                        position: absolute;
+                        top: 100px;
+                        width: 400px;
+                        height: 150px;
+                        background-color: grey;
+                    }
+                }
+                @media (max-width: 1300px) {
+                    width: 80%;
+                    height: 80%;
+                }
+                @media (max-width: 1150px) {
+                    width: 50%;
+                    height: 50%;
+                }
+                @media (max-width: 950px) {
+                    max-width: 100px;
+                    max-height: 100px;
+                    width: 100px;
+                    height: 100px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
@@ -88,44 +135,20 @@ const Style = styled.div`
             z-index: 99999;
             font-size: 22px;
         }
-        .dymek_arrow{
-            position: absolute;
-            top: -5px;
-            left: 15px !important;
-            width: 20px;
-            height: 20px;
-            background: grey;
-            transform: rotate(65deg) skew(45deg) !important ;
-            z-index: -1;
-        }
 `
 const Icon = ({icon, index, length}) => {
-    const [referenceElement, setReferenceElement] = useState(null);
-    const [popperElement, setPopperElement] = useState(null);
-    const [arrowElement, setArrowElement] = useState(null);
-    const { styles, attributes } = usePopper(referenceElement, popperElement, {
-    modifiers: [{ name: 'arrow', options: { element: arrowElement } }],
-  });
   const textArray = [
-            'The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.', 
+            '', 
             '', 
             'This is where great ideas come to life. The visual design of the website starts to shape. We create an impactful User Interface that is a customer-focused experience. To wrap up the design phase, will look to the client for final approval before advancing to the development stage.', 
             '', 
             'By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.'];
     return (
         <>
-         <div className="icon" ref={setReferenceElement}>
-            <img key={ index } src={ icon } alt="icon" />
-                     { index !== length -1 && (
-                        <div className="line"></div>
-                ) }
+         <div className="icon">
+            <img src={ icon } alt="icon" />
+                    
          </div>
-         {index %2 === 0  && (
-            <div className="dymek" ref={setPopperElement} style={styles.popper} {...attributes.popper}>
-                    {textArray[index]}
-            <div className="dymek_arrow" ref={setArrowElement} style={styles.arrow} />
-         </div>
-         )}
         </>
     )
 }
@@ -142,11 +165,18 @@ const Steps = ({ icons }) => {
                 </p>
             </div>
             <div className="icons">
+                <div className="cnt">
                 { icons.map((icon, index) => {
-                    return (
-                          <Icon icon = {icon} index = {index} length = {icons.length}/>   
+                    return (  
+                        <>                     
+                              <Icon icon = {icon} index = {index} length = {icons.length} key={ index }/>   
+                              { index !== icons.length -1 && (
+                        <div className="line"></div>
+                ) }
+                        </>
                     )
                 }) }
+                </div>
             </div>
         </Style>
     )

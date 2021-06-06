@@ -505,7 +505,7 @@ const Development = () => {
                             </div>                     
                             <div>
                                 <img src={Graph} alt="graph.ql"/>
-                                <p>graph.ql</p>
+                                <p>graphql</p>
                             </div>
                             <div>
                                 <img src={Node} alt="node.js"/>
