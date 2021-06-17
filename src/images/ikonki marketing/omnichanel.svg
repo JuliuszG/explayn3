@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="81.196" height="81.196" viewBox="0 0 81.196 81.196">
+  <g id="Group_59" data-name="Group 59" transform="translate(-305.766 -4336.12)">
+    <path id="Icon_awesome-user-alt" data-name="Icon awesome-user-alt" d="M9.858,11.091A5.545,5.545,0,1,0,4.313,5.545,5.547,5.547,0,0,0,9.858,11.091Zm4.929,1.232H12.666a6.7,6.7,0,0,1-5.615,0H4.929A4.929,4.929,0,0,0,0,17.252v.616a1.849,1.849,0,0,0,1.848,1.848h16.02a1.849,1.849,0,0,0,1.848-1.848v-.616A4.929,4.929,0,0,0,14.787,12.323Z" transform="translate(337.506 4366.859)"/>
+    <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(386.962 4373.229) rotate(90)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(314.742 4373.229) rotate(90)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_16" data-name="Ellipse 16" transform="translate(342.876 4336.12)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(342.876 4408.339)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(314.482 4351.184) rotate(-45)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_19" data-name="Ellipse 19" transform="translate(365.549 4402.251) rotate(-45)" fill="#3782cc" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_20" data-name="Ellipse 20" transform="translate(371.896 4344.837) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <g id="Ellipse_21" data-name="Ellipse 21" transform="translate(320.829 4395.904) rotate(45)" fill="#fff" stroke="#000" stroke-width="1">
+      <circle cx="4.488" cy="4.488" r="4.488" stroke="none"/>
+      <circle cx="4.488" cy="4.488" r="3.988" fill="none"/>
+    </g>
+    <path id="Union_7" data-name="Union 7" d="M28.75,47.377a19.386,19.386,0,0,1-13.771-5.762L8.785,47.808l6.193-6.193A19.385,19.385,0,0,1,9.354,28.352h0q-.006-.212-.006-.426A19.389,19.389,0,0,1,15.434,13.8L9.064,7.429,15.434,13.8A19.382,19.382,0,0,1,28.75,8.48v0h.045A19.4,19.4,0,0,1,42.482,14.11l5.439-5.44-5.439,5.44a19.376,19.376,0,0,1,5.764,13.816q0,.213-.006.426h0a19.365,19.365,0,0,1-5.312,12.939L48.2,46.566l-5.273-5.275a19.394,19.394,0,0,1-14.133,6.087H28.75v0Z" transform="translate(318.519 4349.211)" fill="none" stroke="#000" stroke-width="1"/>
+  </g>
+</svg>

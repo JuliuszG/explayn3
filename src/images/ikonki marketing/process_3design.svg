@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.394" cy="0" r="2.133" gradientTransform="translate(0 -0.048) scale(1 0.565)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#45a3ff"/>
+      <stop offset="1" stop-color="#3782cc"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_17" data-name="Group 17" transform="translate(-769 -3590)">
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="43.5" cy="43.5" r="43.5" transform="translate(769 3590)" fill="url(#radial-gradient)"/>
+    <path id="Icon_awesome-pencil-alt" data-name="Icon awesome-pencil-alt" d="M35.061,10.006l-3.246,3.246a.846.846,0,0,1-1.2,0L22.8,5.436a.846.846,0,0,1,0-1.2L26.048.993a3.387,3.387,0,0,1,4.781,0l4.232,4.232A3.375,3.375,0,0,1,35.061,10.006ZM20.013,7.028,1.521,25.519.028,34.075a1.692,1.692,0,0,0,1.958,1.958l8.556-1.5L29.033,16.041a.846.846,0,0,0,0-1.2L21.217,7.028a.854.854,0,0,0-1.2,0ZM8.739,23.935a.982.982,0,0,1,0-1.394L19.583,11.7a.986.986,0,0,1,1.394,1.394L10.133,23.935A.982.982,0,0,1,8.739,23.935ZM6.2,29.857h3.38v2.556l-4.542.8-2.19-2.19.8-4.542H6.2Z" transform="translate(797.635 3615.468)" fill="#fff"/>
+  </g>
+</svg>

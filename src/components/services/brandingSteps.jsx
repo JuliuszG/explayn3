@@ -228,16 +228,13 @@ const Icon = ({img, text}) => {
     )
 }
 
-const Steps = ({ arr }) => {
+const BrandingSteps = ({ arr }) => {
     return (
         <Style>
             <div className="header">
                 <h2>
                     Simple and effective process
                 </h2>
-                <p>
-                    A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
-                </p>
             </div>
             <div className="icons">
                 <div className="cnt">
@@ -257,5 +254,5 @@ const Steps = ({ arr }) => {
     )
 }
 
-export default Steps
+export default BrandingSteps
 
