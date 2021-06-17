@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import 'keen-slider/keen-slider.min.css'
-import { useKeenSlider } from 'keen-slider/react'
+import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
 const Style = styled.div`
@@ -13,13 +13,49 @@ transform: translateY(-20%);
 @media (max-width: 1300px) {
     transform: translateY(0%);
 }
-    .keen-slider {
-        .keen-slider__slide {
+    .trending {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        @media (max-width: 1400px) {
+            padding: 5%;
+            justify-content: flex-start;
+        }
+        @media (max-width: 1400px) {
+            padding: 5%;
+            justify-content: center;
+        }
+        .slide {
+            width: 450px;
+            height: 650px;
             box-shadow: 0 0 40px #00000014;
             font-family: "Poppins";
+            cursor: pointer;
+            @media (max-width: 1400px) {
+                margin: 20px;
+            }
+            &:hover .img .overlay {
+                opacity: 0.2;
+                z-index: 10;
+            }
+            &:hover .content .link {
+                opacity: 1;
+            }
             .img {
                 width: 100%;
                 height: 50%;
+                position: relative;
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #4C65FF;
+                    opacity: 0;
+                    transition: all 0.5s ease-in;
+                }
                 img {
                     width: 100%;
                     height: 100%;
@@ -55,25 +91,28 @@ transform: translateY(-20%);
                         line-height: 30px;
                     }
                 }
+                .link {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-top: 20px;
+                    @media (hover: hover) {
+                        opacity: 0;
+                    }
+                    a {
+                        color: #4C65FF;
+                        text-decoration: none;
+                        font-size: 12px;
+                        letter-spacing: 1.36px;
+                        font-weight: 600;
+                    }
+                }
             }
         }
     }
 `
 const PostSlider = ({ filters }) => {
-    const [sliderRef, slider] = useKeenSlider({
-        loop: true,
-        slidesPerView: 3,
-        spacing: 100,
-        controls: true,
-        breakpoints: {
-            '(max-width: 1400px)': {
-                spacing: 50
-            },
-            '(max-width: 1024px)': {
-                slidesPerView: 1
-            },
-          },
-    })
+
     const data = useStaticQuery(
         graphql`
             {
@@ -106,28 +145,32 @@ const PostSlider = ({ filters }) => {
         if(filter.currentPost) {
             newPosts = newPosts.filter(post => post.id !== filter.currentPost)
         }
-        newPosts = newPosts.filter((post, index) => index <= 6)
+        newPosts = newPosts.filter((post, index) => index <= 2)
         setPosts(newPosts)
     }, [filter])
     const sliderCnt = (
-        <div className="keen-slider" ref={sliderRef}>
-            {posts.map((post, index) => (
-                <div key={index} className="keen-slider__slide">
-                    <div className="img">
-                        <Image style={{objectFit: "cover", width: "100%", height: "100%"}} fluid={post.bigScreen.fluid} alt="post" />
-                    </div>
-                        <div className="content">
-                            <h3>
-                                {post.blogTitle}
-                            </h3>
+            <div className="trending">
+                {posts.map((post, index) => (
+                    <div index={index} key={index} className="slide">
+                        <div className="img">
+                            <div className="overlay"></div>
+                            <Image style={{objectFit: "cover", width: "100%", height: "100%"}} fluid={post.bigScreen.fluid} alt="post" />
                         </div>
-                </div>
-            ))}
+                            <div className="content">
+                                <h3>
+                                    {post.blogTitle}
+                                </h3>
+                                <div className="link">
+                                     <a href={`/blog/${post.slug}`}>read more {'>'}</a>
+                                </div>
+                            </div>
+                    </div>
+                ))}
         </div>
     )
     return (
         <Style>
-            {posts.length > 3 && sliderCnt}
+            {posts.length > 2 && sliderCnt}
         </Style>
     )
 }
