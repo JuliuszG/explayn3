@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57.751" height="43.563" viewBox="0 0 57.751 43.563">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.682" cy="0.148" r="0.949" gradientTransform="matrix(-1, 0.028, 0.023, 0.851, 1.359, 0.015)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#e36860"/>
+      <stop offset="1" stop-color="#c7564e"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.394" cy="0" r="2.133" gradientTransform="translate(0 -0.048) scale(1 0.565)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#45a3ff"/>
+      <stop offset="1" stop-color="#3782cc"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_61" data-name="Group 61" transform="translate(-314.48 -4679.643)">
+    <path id="Path_183" data-name="Path 183" d="M7430.984,1880.683v15.38s.006,10.4-.115,20.63c-.069-6.49-.117-10.159-.118-18.662,0-1.718,0-3.644,0-5.842,0-4.031,0-8.5,0-11.5.1-5.958.111-6.5.111-6.5Z" transform="translate(-7108.75 2805.956)" opacity="0" fill="url(#radial-gradient)"/>
+    <path id="Icon_awesome-chart-bar" data-name="Icon awesome-chart-bar" d="M36.888,43.517h4.256c.709,0,1.419-1.135,1.419-2.27V17.411c0-1.135-.709-2.27-1.419-2.27H36.888c-.709,0-1.419,1.135-1.419,2.27V41.246c0,1.135.709,2.27,1.419,2.27Zm-21.282,0h4.256c.709,0,1.419-1.135,1.419-2.27V28.761c0-1.135-.709-2.27-1.419-2.27H15.607c-.709,0-1.419,1.135-1.419,2.27V41.247c0,1.135.709,2.27,1.419,2.27Z" transform="translate(314.98 4664.859)" fill="url(#radial-gradient-2)"/>
+    <path id="Icon_awesome-chart-bar-2" data-name="Icon awesome-chart-bar" d="M47.529,22.661h4.256c.709,0,1.419-.454,1.419-.908V5.408c0-.454-.709-.908-1.419-.908H47.529c-.709,0-1.419.454-1.419.908V21.753c0,.454.709.908,1.419.908Zm-21.282,0H30.5c.709,0,1.419-.454,1.419-.908V7.678c0-.454-.709-.908-1.419-.908H26.247c-.709,0-1.419.454-1.419.908V21.753C24.829,22.207,25.538,22.661,26.247,22.661Z" transform="translate(314.98 4685.715)"/>
+    <path id="Icon_awesome-chart-bar-3" data-name="Icon awesome-chart-bar" d="M54.978,39.97H7.094V6.273A1.773,1.773,0,0,0,5.32,4.5H1.773A1.773,1.773,0,0,0,0,6.273V43.517a3.547,3.547,0,0,0,3.547,3.547H54.978a1.773,1.773,0,0,0,1.773-1.773V41.743A1.773,1.773,0,0,0,54.978,39.97Z" transform="translate(314.98 4675.643)" fill="none" stroke="#000" stroke-width="1"/>
+  </g>
+</svg>

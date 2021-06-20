@@ -1,5 +1,5 @@
 import React from 'react'
-import BG from '../../images/development/header/bgSteps.jpg'
+import BG from '../../images/ikonki marketing/duzy glosnik.svg'
 import styled from 'styled-components'
 const Style = styled.div`
     background-image: url(${BG});
@@ -284,7 +284,7 @@ const Icon = ({img, text}) => {
     )
 }
 
-const Steps = ({ arr }) => {
+const MarketingSteps = ({ arr }) => {
     return (
         <Style>
             <div className="header">
@@ -313,5 +313,5 @@ const Steps = ({ arr }) => {
     )
 }
 
-export default Steps
+export default MarketingSteps
 

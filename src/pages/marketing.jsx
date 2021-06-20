@@ -1,41 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
-import motion from 'framer-motion'
 import Layout from '../components/layout'
 import Desktop from "../components/navigation/desktop"
 import Mobile from "../components/navigation/mobile"
 import Footer from '../components/footer'
 import SEO from "../components/seo"
 import { useMediaQuery } from 'react-responsive'
-import HeaderImg from '../images/development/header/landing.svg'
+import HeaderImg from '../images/ikonki marketing/Main.svg'
 import { ServicesSection } from '../templates/servicesTemplate'
 import Section3Bg from '../images/development/header/section3bg.jpg'
-import Steps from '../components/services/steps'
-import Discovery from '../images/development/process/discovery.svg'
-import Planning from '../images/development/process/planning.svg'
-import Design from '../images/development/process/design.svg'
-import DevelopmentStepIcon from '../images/development/process/development_icon.svg'
-import Launch from '../images/development/process/lauch.svg'
-import Next from '../images/development/techniologie/next.svg'
-import ReactJS from '../images/development/techniologie/react.svg'
-import Graph from '../images/development/techniologie/graph.svg'
-import Node from '../images/development/techniologie/node.svg'
-import TypeScript from '../images/development/techniologie/ts.svg'
-import Ruby from '../images/development/techniologie/ruby.svg'
-import JS from '../images/development/techniologie/js.svg'
-import Three from '../images/development/techniologie/three.svg'
-import Drupal from '../images/development/techniologie/drupal.svg'
-import Ghost from '../images/development/techniologie/ghost.svg'
-import Dato from '../images/development/techniologie/dato.svg'
-import WP from '../images/development/techniologie/wp.svg'
-import Responsive from '../images/development/korzysci/responsive.svg'
-import Functional from '../images/development/korzysci/setings.svg'
-import Scalable from '../images/development/korzysci/scalable.svg'
-import Secure from '../images/development/korzysci/secure.svg'
+import MarketingSteps from '../components/services/marketingSteps'
+import Discovery from '../images/ikonki marketing/process_1discovery.svg'
+import Planning from '../images/ikonki marketing/process_2planning.svg'
+import Design from '../images/ikonki marketing/process_3design.svg'
+import DevelopmentStepIcon from '../images/ikonki marketing/launch.svg'
+import Launch from '../images/ikonki marketing/linijki.svg'
+import Responsive from '../images/ikonki marketing/omnichanel.svg'
+import Functional from '../images/ikonki marketing/relevant.svg'
+import Scalable from '../images/ikonki marketing/insightful.svg'
 
 const Styles = styled.div`
 font-family: "Poppins";
-    .landing {
+.landing {
         width: 100%;
         min-height: 100vh;
         display: flex;
@@ -113,8 +99,8 @@ font-family: "Poppins";
         min-height: 100vh;
         background-image: url(${Section3Bg});
         background-size: cover;
-        background-position: center;
-        padding: 10% 0;
+        display: flex;
+        align-items: center;
         .cnt {
             max-width: 1250px;
             margin: 0 auto;
@@ -137,11 +123,11 @@ font-family: "Poppins";
                     font-size: 35px;
                 }
                 span {
-                    color: #571AB6;
+                    color: #4096EA;
                 }
             }
             .decoration {
-                background-color: #501EAF;
+                background-color: #4096EA;
                 height: 6px;
                 width: 98.5px;
                 margin: 90px 0;
@@ -156,7 +142,7 @@ font-family: "Poppins";
                     flex-direction: column;
                 }
                 p {
-                    width: 512px;
+                    max-width: 512px;
                     &:first-of-type {
                         margin-right: 15%;
                         @media (max-width: 1024px) {
@@ -255,15 +241,23 @@ font-family: "Poppins";
        width: 100%;
        min-height: 100vh;
        padding: 10%;
+       background: #F5F6FA;
        h2 {
             width: 449px;
             font-size: 3.4375rem;
             line-height: 138%;
-            margin-bottom: 100px;
+            margin-bottom: 15px;
             font-weight: 600;
             @media (max-width: 600px) {
                 width: 100%
            }
+       }
+       p {
+           max-width: 532px;
+           font-size: 1.375rem;
+           line-height: 136%;
+           margin-bottom: 90px;
+           font-weight: 300;
        }
        &-cnt {
            display: grid;
@@ -299,20 +293,20 @@ font-family: "Poppins";
                 margin: 0 0 20px 0;
                 }
                &.res img {
-                width: 63px;
-                height: 40px;
+                width: 55px;
+                height: 60px;
                }
                &.sca img{
-                   width: 52px;
-                   height: 52px;
+                   width: 60px;
+                   height: 60px;
                }
                &.fun img{
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
                }
                &.sec img{
-                width: 45px;
-                height: 40px;
+                width: 57px;
+                height: 42px;
                }
            }
            &-content {
@@ -330,7 +324,7 @@ font-family: "Poppins";
        }
     }   
 `
-const Development = () => {
+const Marketing = () => {
     const isMobile = useMediaQuery({
         query: '(max-device-width: 950px)'
     })
@@ -342,10 +336,11 @@ const Development = () => {
                 <div className="landing">
                     <div className="content">
                         <h1>
-                            Web & Mobile Development
+                            Marketing
                         </h1>
                         <p>
-                            Full-stack web development team capable of facing modern technical and business challenges.
+                            At a time when no company can afford not to have a digital marketing strategy, we are committed to offering 360˚ 
+                            digital marketing services focused on delivering results.
                         </p>
                     </div>
                     <div className="landing-image">
@@ -355,28 +350,30 @@ const Development = () => {
                 <ServicesSection>
                     <div className="left">
                         <h2>
-                            Development on demand
+                            Marketing on demand.
                         </h2>
                         <p>
-                            Build modern applications that help you stay on top of the game. We create an alluring user experience that keeps them coming back.
+                            Everything begins with the recognition of the customer’s needs, 
+                            a thorough market analysis and defining a marketing strategy, 
+                            which will be the foundation of a consistent and multidimensional communication with your clients.
                         </p>
                     </div>
                     <ul className="right">
                         <li>
                             <span>01.</span>
-                            Websites
+                            Marketing strategies
                         </li>
                         <li>
                             <span>02.</span>
-                            Online stores
+                            Social media
                         </li>
                         <li>
                             <span>03.</span>
-                            iOS & Android Apps
+                            Content marketing
                         </li>
                         <li>
                             <span>04.</span>
-                            Dedicated systems
+                            Marketing campains
                         </li>
                     </ul>
             </ServicesSection>
@@ -396,105 +393,22 @@ const Development = () => {
                     </div>
                 </div>
             </div>
-            <Steps arr={[
+            <MarketingSteps arr={[
                 { img: Discovery, text: 'Discovery' },
                 { img: Planning, text: 'Planning' },
                 { img: Design, text: 'Design' },
-                { img: DevelopmentStepIcon, text: 'Development' },
-                { img: Launch, text: 'Launch' },
+                { img: DevelopmentStepIcon, text: 'Launch' },
+                { img: Launch, text: 'Measure' },
             ]}/>
-            <div className="section-4">
-                <div className="section-4-info">
-                    <h2>
-                        Best technology for your product
-                    </h2>
-                    <p>
-                        Having released over 40 products we have a set of technologies that we love to work with. 
-                        Tell us about your product vision and goals and we will choose technologies that will help you achieve them.
-                    </p>
-                </div>
-                <div className="section-4-icons">
-                    <div className="cnt">
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Next} alt="next js icon" /></div>
-                        <h4>
-                            next.js
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={ReactJS} alt="react icon" /></div>
-                        <h4>
-                            <div>react</div>
-                            <div>react native</div>
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Graph} alt="graphql icon" /></div>
-                        <h4>
-                            graphql
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Node} alt="node.js icon" /></div>
-                        <h4>
-                            node.js
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={TypeScript} alt="typescript icon" /></div>
-                        <h4>
-                            typescript
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Ruby} alt="ruby icon" /></div>
-                        <h4>
-                            ruby
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={JS} alt="javascript icon" /></div>
-                        <h4>
-                            javascript
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Three} alt="three js icon" /></div>
-                        <h4>
-                            three.js
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Drupal} alt="drupal icon" /></div>
-                        <h4>
-                            drupal
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Ghost} alt="ghost icon" /></div>
-                        <h4>
-                            ghost
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={Dato} alt="dato cmsicon" /></div>
-                        <h4>
-                            datoCMS
-                        </h4>
-                    </div>
-                    <div className="icon-cnt">
-                        <div className="icon"><img src={WP} alt="wordpress icon" /></div>
-                        <h4>
-                            wordpress
-                        </h4>
-                    </div>
-                    </div>
-                </div>
-            </div>
+            
             <div className="section-5">
                 <h2>
-                    Key values for our products
+                    How we work
                 </h2>
+                <p>
+                    We use best practices to deliver comprehensive digital marketing services 
+                    and provide a compelling message that sticks in the minds of those yYou’re trying to reach.
+                </p>
                 <div className="section-5-cnt">
                     <div className="section-5-item">
                         <div className="section-5-item-icon res">
@@ -502,11 +416,11 @@ const Development = () => {
                         </div>
                         <div className="section-5-item-content">
                             <h4>
-                                Responsive
+                                Omnichannel
                             </h4>
                             <p>
-                                Responsive web design is a modern need. 
-                                We follow standards creating a mobile optimized website that converts.
+                                From social media to email campaigns to digital ads, 
+                                we create a path that leads your future customers to profitable actions.
                             </p>
                         </div>
                     </div>
@@ -516,11 +430,11 @@ const Development = () => {
                         </div>
                         <div className="section-5-item-content">
                             <h4>
-                                Functional
+                                Relevant
                             </h4>
                             <p>
-                                Your site reflects your company and your brand. 
-                                That’s why we deliver visually appealing, polished and professional user experience.
+                                We make sure the content is perfectly tailored to the target audience, 
+                                compelling, easy to read, as well as credible and accurate.
                             </p>
                         </div>
                     </div>
@@ -530,23 +444,11 @@ const Development = () => {
                         </div>
                         <div className="section-5-item-content">
                             <h4>
-                                Scalable
+                                Insightful
                             </h4>
                             <p>
-                                We create efficient infrastructure to deliver scalable web applications and solutions to meet your business demands.
-                            </p>
-                        </div>
-                    </div>
-                    <div className="section-5-item">
-                        <div className="section-5-item-icon sec">
-                            <img src={Secure} alt="Scalable icon" />
-                        </div>
-                        <div className="section-5-item-content">
-                            <h4>
-                                Secure
-                            </h4>
-                            <p>
-                                To us, it is important that your website follows industry standards and security guidelines.
+                                Defining the audience is a big part of a successful campaign. 
+                                Through accurate segmentation and target group analysis, we achieve the best possible results.
                             </p>
                         </div>
                     </div>
@@ -558,4 +460,4 @@ const Development = () => {
     )
 }
 
-export default Development
+export default Marketing

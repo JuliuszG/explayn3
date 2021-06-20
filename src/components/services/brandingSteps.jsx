@@ -1,5 +1,5 @@
 import React from 'react'
-import BG from '../../images/development/header/bgSteps.jpg'
+import BG from '../../images/branding_ikonki/duza kredka.svg'
 import styled from 'styled-components'
 const Style = styled.div`
     background-image: url(${BG});
@@ -208,7 +208,7 @@ const Style = styled.div`
                         display: none;
                         position: absolute;
                         top: 11.5vw;
-                        left: 10px;
+                        left: 30px;
                         width: 30px;
                         height: 30px;
                         background-color: #F5F6FA;
@@ -224,7 +224,7 @@ const Style = styled.div`
                         width: 40vw;
                         max-height: 200px;
                         background-color: #F5F6FA;
-                        padding: 30px;
+                        padding: 10px;
                         font-family: "Poppins";
                         font-size: 1.375rem;
                         line-height: 136%;
@@ -284,7 +284,7 @@ const Icon = ({img, text}) => {
     )
 }
 
-const Steps = ({ arr }) => {
+const BrandingSteps = ({ arr }) => {
     return (
         <Style>
             <div className="header">
@@ -292,7 +292,7 @@ const Steps = ({ arr }) => {
                     Simple and effective process
                 </h2>
                 <p>
-                    A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
                 </p>
             </div>
             <div className="icons">
@@ -313,5 +313,5 @@ const Steps = ({ arr }) => {
     )
 }
 
-export default Steps
+export default BrandingSteps
 

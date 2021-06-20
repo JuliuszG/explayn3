@@ -137,7 +137,7 @@ const Footer = () => {
     )
     return(
         <Style id="footer">
-            <div className="left">
+            {/* <div className="left">
                 <h4>Do business with us</h4>
                 <h2><a href="mailto:we@explayn.it">we@explayn.it</a></h2>
                 <span className="copy">© explayn.it All rights reserved</span>
@@ -153,7 +153,7 @@ const Footer = () => {
                     fluid={ data.file.childImageSharp.fluid } 
                     alt="arrow" 
                 />
-            </Arrow>
+            </Arrow> */}
         </Style>
     )
 }
