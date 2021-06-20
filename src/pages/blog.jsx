@@ -154,6 +154,13 @@ const Style = styled.div`
             }
         }
     }
+    .main-title {
+        font-weight: 600;
+        font-size: 55px;
+        color: #000000;
+        margin-left: 6.5%;
+        margin-bottom: 62px;
+    }
 `
 
 const Card = ({post}) => {
@@ -188,6 +195,7 @@ const Blog = ({data: { allDatoCmsBlog }}) => {
             <SEO title=""/>
             { isMobile ? <Mobile /> : <Desktop /> }
             <Style>
+                <h1 className="main-title">Articles</h1>
                 <div className="cnt">
                     {allDatoCmsBlog.nodes.map(post => <Card key={ post.id } post={ post } />)}
                 </div>
