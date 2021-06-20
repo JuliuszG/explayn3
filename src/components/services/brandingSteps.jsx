@@ -1,5 +1,5 @@
 import React from 'react'
-import BG from '../../images/development/header/bgSteps.jpg'
+import BG from '../../images/branding_ikonki/duza kredka.svg'
 import styled from 'styled-components'
 const Style = styled.div`
     background-image: url(${BG});
@@ -7,7 +7,7 @@ const Style = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     flex-direction: column;
     padding: 10% 0;
@@ -89,8 +89,8 @@ const Style = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                max-width: 87px;
-                max-height: 87px;
+                max-width: 70px;
+                max-height: 70px;
                 position: relative;
                 cursor: pointer;
                 h5 {
@@ -102,10 +102,14 @@ const Style = styled.div`
                     }  
                 }
                 @media (min-width: 1200px) and (hover: hover) {
-                    &:hover:nth-of-type(odd)::after {
+                    &:hover img{
+                        transition: 0.2s ease-in;
+                        transform: scale(1.1);
+                    }
+                    &:hover:nth-of-type(1)::after, &:hover:nth-of-type(3)::after, &:hover:nth-of-type(5)::after, &:hover:nth-of-type(7)::after, &:hover:nth-of-type(9)::after {
                         display: block;
                     }
-                    :hover:nth-of-type(odd)::before {
+                    &:hover:nth-of-type(1)::before, &:hover:nth-of-type(3)::before, &:hover:nth-of-type(5)::before, &:hover:nth-of-type(7)::before, &:hover:nth-of-type(9)::before {
                         display: block;
                     }
                     &:nth-of-type(1)::after {
@@ -123,6 +127,32 @@ const Style = styled.div`
                         line-height: 136%;
                     }
                     &:nth-child(1)::before {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        top: 11.5vw;
+                        left: 30px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #F5F6FA;
+                        transform: rotate(-120deg) skew(25deg);
+                        z-index: 565;
+                    }
+                    &:nth-of-type(3)::after {
+                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        display: none;
+                        position: absolute;
+                        top: 12vw;
+                        left: 1vw;
+                        width: 40vw;
+                        max-height: 200px;
+                        background-color: #F5F6FA;
+                        padding: 30px;
+                        font-family: "Poppins";
+                        font-size: 1.375rem;
+                        line-height: 136%;
+                    }
+                    &:nth-child(3)::before {
                         content: "";
                         display: none;
                         position: absolute;
@@ -159,6 +189,32 @@ const Style = styled.div`
                         transform: rotate(-120deg) skew(25deg);
                         z-index: 565;
                     }
+                    &:nth-of-type(7)::after {
+                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        display: none;
+                        position: absolute;
+                        top: 12vw;
+                        right: 1vw;
+                        width: 40vw;
+                        max-height: 200px;
+                        background-color: #F5F6FA;
+                        padding: 30px;
+                        font-family: "Poppins";
+                        font-size: 1.375rem;
+                        line-height: 136%;
+                    }
+                    &:nth-child(7)::before {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        top: 11.5vw;
+                        left: 30px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #F5F6FA;
+                        transform: rotate(-120deg) skew(25deg);
+                        z-index: 565;
+                    }
                     &:nth-child(9)::after {
                         content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.";
                         display: none;
@@ -168,7 +224,7 @@ const Style = styled.div`
                         width: 40vw;
                         max-height: 200px;
                         background-color: #F5F6FA;
-                        padding: 30px;
+                        padding: 10px;
                         font-family: "Poppins";
                         font-size: 1.375rem;
                         line-height: 136%;
@@ -235,6 +291,9 @@ const BrandingSteps = ({ arr }) => {
                 <h2>
                     Simple and effective process
                 </h2>
+                <p>
+                A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                </p>
             </div>
             <div className="icons">
                 <div className="cnt">

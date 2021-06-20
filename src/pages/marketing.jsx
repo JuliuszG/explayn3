@@ -13,15 +13,15 @@ import MarketingSteps from '../components/services/marketingSteps'
 import Discovery from '../images/ikonki marketing/process_1discovery.svg'
 import Planning from '../images/ikonki marketing/process_2planning.svg'
 import Design from '../images/ikonki marketing/process_3design.svg'
-import DevelopmentStepIcon from '../images/ikonki marketing/process_4launch.svg'
-import Launch from '../images/ikonki marketing/process_5measure.svg'
+import DevelopmentStepIcon from '../images/ikonki marketing/launch.svg'
+import Launch from '../images/ikonki marketing/linijki.svg'
 import Responsive from '../images/ikonki marketing/omnichanel.svg'
 import Functional from '../images/ikonki marketing/relevant.svg'
 import Scalable from '../images/ikonki marketing/insightful.svg'
 
 const Styles = styled.div`
 font-family: "Poppins";
-    .landing {
+.landing {
         width: 100%;
         min-height: 100vh;
         display: flex;
@@ -58,19 +58,28 @@ font-family: "Poppins";
             h1 {
                 color: #000;
                 font-weight: 600;
-                font-size: 5.9375em;
+                font-size: 5.9375rem;
                 line-height: 120%;
                 margin-bottom: 32px;  
+                @media (max-width: 1550px) {
+                    font-size: 4.5rem;
+                }
+                @media (max-width: 1400px) {
+                    font-size: 3.5rem;
+                }
                 @media (max-width: 500px) {
-                    font-size: 5em;
+                    font-size: 2.5rem;
                 }      
             }
             p {
                 width: 70%;
-                font-size: 1.375em;
+                font-size: 1.375rem;
                 line-height: 136.36%;
                 color: #000;
-                font-weight: 300; 
+                font-weight: 300;
+                @media (max-width: 1550px) {
+                    font-size: 1rem;
+                }
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
@@ -102,7 +111,7 @@ font-family: "Poppins";
                 padding: 5% 10%;
             }
             h2 {
-                max-width: 1200px;
+                max-width: 1100px;
                 font-size: 55px;
                 line-height: 138.18%;
                 font-weight: 600;
@@ -118,7 +127,7 @@ font-family: "Poppins";
                 }
             }
             .decoration {
-                background-color: #501EAF;
+                background-color: #4096EA;
                 height: 6px;
                 width: 98.5px;
                 margin: 90px 0;
@@ -232,6 +241,7 @@ font-family: "Poppins";
        width: 100%;
        min-height: 100vh;
        padding: 10%;
+       background: #F5F6FA;
        h2 {
             width: 449px;
             font-size: 3.4375rem;
@@ -369,9 +379,18 @@ const Marketing = () => {
             </ServicesSection>
             <div className="section-3">
                 <div className="cnt">
-                   <h2>
-                   Focusing on the process of understanding methods for influencing <span>profitable customer action</span> is the key of our work.
-                   </h2>
+                    <h2>
+                        In today’s <span>dynamically changing</span> world, a company needs a <span>fresh look</span> at its online presence.
+                    </h2>
+                    <div className="decoration"></div>
+                    <div className="text-cnt">
+                        <p>
+                        A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                        </p>
+                        <p>
+                        With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly.
+                        </p>
+                    </div>
                 </div>
             </div>
             <MarketingSteps arr={[

@@ -7,7 +7,7 @@ const Style = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 100vh;
+    min-height: 110vh;
     display: flex;
     flex-direction: column;
     padding: 10% 0;
@@ -89,8 +89,8 @@ const Style = styled.div`
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                max-width: 87px;
-                max-height: 87px;
+                max-width: 70px;
+                max-height: 70px;
                 position: relative;
                 cursor: pointer;
                 h5 {
@@ -102,10 +102,14 @@ const Style = styled.div`
                     }  
                 }
                 @media (min-width: 1200px) and (hover: hover) {
-                    &:hover:nth-of-type(odd)::after {
+                    &:hover img{
+                        transition: 0.2s ease-in;
+                        transform: scale(1.1);
+                    }
+                    &:hover:nth-of-type(1)::after, &:hover:nth-of-type(3)::after, &:hover:nth-of-type(5)::after, &:hover:nth-of-type(7)::after, &:hover:nth-of-type(9)::after {
                         display: block;
                     }
-                    :hover:nth-of-type(odd)::before {
+                    &:hover:nth-of-type(1)::before, &:hover:nth-of-type(3)::before, &:hover:nth-of-type(5)::before, &:hover:nth-of-type(7)::before, &:hover:nth-of-type(9)::before {
                         display: block;
                     }
                     &:nth-of-type(1)::after {
@@ -123,6 +127,32 @@ const Style = styled.div`
                         line-height: 136%;
                     }
                     &:nth-child(1)::before {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        top: 11.5vw;
+                        left: 30px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #F5F6FA;
+                        transform: rotate(-120deg) skew(25deg);
+                        z-index: 565;
+                    }
+                    &:nth-of-type(3)::after {
+                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        display: none;
+                        position: absolute;
+                        top: 12vw;
+                        left: 1vw;
+                        width: 40vw;
+                        max-height: 200px;
+                        background-color: #F5F6FA;
+                        padding: 30px;
+                        font-family: "Poppins";
+                        font-size: 1.375rem;
+                        line-height: 136%;
+                    }
+                    &:nth-child(3)::before {
                         content: "";
                         display: none;
                         position: absolute;
@@ -153,6 +183,32 @@ const Style = styled.div`
                         position: absolute;
                         top: 11.5vw;
                         left: 15px;
+                        width: 30px;
+                        height: 30px;
+                        background-color: #F5F6FA;
+                        transform: rotate(-120deg) skew(25deg);
+                        z-index: 565;
+                    }
+                    &:nth-of-type(7)::after {
+                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        display: none;
+                        position: absolute;
+                        top: 12vw;
+                        right: 1vw;
+                        width: 40vw;
+                        max-height: 200px;
+                        background-color: #F5F6FA;
+                        padding: 30px;
+                        font-family: "Poppins";
+                        font-size: 1.375rem;
+                        line-height: 136%;
+                    }
+                    &:nth-child(7)::before {
+                        content: "";
+                        display: none;
+                        position: absolute;
+                        top: 11.5vw;
+                        left: 10px;
                         width: 30px;
                         height: 30px;
                         background-color: #F5F6FA;

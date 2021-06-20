@@ -72,19 +72,28 @@ font-family: "Poppins";
             h1 {
                 color: #000;
                 font-weight: 600;
-                font-size: 5.9375em;
+                font-size: 5.9375rem;
                 line-height: 120%;
                 margin-bottom: 32px;  
+                @media (max-width: 1550px) {
+                    font-size: 4.5rem;
+                }
+                @media (max-width: 1400px) {
+                    font-size: 3.5rem;
+                }
                 @media (max-width: 500px) {
-                    font-size: 5em;
+                    font-size: 2.5rem;
                 }      
             }
             p {
                 width: 70%;
-                font-size: 1.375em;
+                font-size: 1.375rem;
                 line-height: 136.36%;
                 color: #000;
-                font-weight: 300; 
+                font-weight: 300;
+                @media (max-width: 1550px) {
+                    font-size: 1rem;
+                }
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
@@ -147,7 +156,7 @@ font-family: "Poppins";
                     flex-direction: column;
                 }
                 p {
-                    max-width: 512px;
+                    width: 512px;
                     &:first-of-type {
                         margin-right: 15%;
                         @media (max-width: 1024px) {

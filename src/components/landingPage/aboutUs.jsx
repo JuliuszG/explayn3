@@ -21,7 +21,7 @@ import MarketingHover from '../../images/about/hover/6.svg'
 
 const Style = styled(motion.section)`
     background: ${ colors.neutral90 };
-    padding: 10% 0 10%;
+    padding: 10% 0;
     a {
         text-decoration: none;
     }
@@ -29,6 +29,7 @@ const Style = styled(motion.section)`
         display: flex;
         padding: 0 10%;
         justify-content: center;
+        margin-left: 10%;
         @media (max-width: 956px) {
             flex-direction: column;
         }

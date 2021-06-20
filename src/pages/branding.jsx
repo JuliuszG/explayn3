@@ -12,8 +12,8 @@ import Section3Bg from '../images/development/header/section3bg.jpg'
 import BrandingSteps from '../components/services/brandingSteps'
 import Discovery from '../images/branding_ikonki/discovery1.svg'
 import Planning from '../images/branding_ikonki/planing.svg'
-import Design from '../images/branding_ikonki/design.svg'
-import DevelopmentStepIcon from '../images/branding_ikonki/implementation.svg'
+import Design from '../images/branding_ikonki/kredka.svg'
+import DevelopmentStepIcon from '../images/branding_ikonki/śruba .svg'
 import Launch from '../images/branding_ikonki/launch.svg'
 import Responsive from '../images/branding_ikonki/1.benefits.svg'
 import Functional from '../images/branding_ikonki/2.benefits.svg'
@@ -21,7 +21,7 @@ import Scalable from '../images/branding_ikonki/3.benefits.svg'
 
 const Styles = styled.div`
 font-family: "Poppins";
-    .landing {
+.landing {
         width: 100%;
         min-height: 100vh;
         display: flex;
@@ -58,19 +58,28 @@ font-family: "Poppins";
             h1 {
                 color: #000;
                 font-weight: 600;
-                font-size: 5.9375em;
+                font-size: 5.9375rem;
                 line-height: 120%;
                 margin-bottom: 32px;  
+                @media (max-width: 1550px) {
+                    font-size: 4.5rem;
+                }
+                @media (max-width: 1400px) {
+                    font-size: 3.5rem;
+                }
                 @media (max-width: 500px) {
-                    font-size: 5em;
+                    font-size: 2.5rem;
                 }      
             }
             p {
                 width: 70%;
-                font-size: 1.375em;
+                font-size: 1.375rem;
                 line-height: 136.36%;
                 color: #000;
-                font-weight: 300; 
+                font-weight: 300;
+                @media (max-width: 1550px) {
+                    font-size: 1rem;
+                }
                 @media (max-width: 1024px) {
                     width: 100%;
                 }
@@ -118,7 +127,7 @@ font-family: "Poppins";
                 }
             }
             .decoration {
-                background-color: #501EAF;
+                background-color: #E36860;
                 height: 6px;
                 width: 98.5px;
                 margin: 90px 0;
@@ -232,6 +241,7 @@ font-family: "Poppins";
        width: 100%;
        min-height: 100vh;
        padding: 10%;
+       background: #F5F6FA;
        h2 {
             width: 449px;
             font-size: 3.4375rem;
@@ -368,9 +378,18 @@ const Branding = () => {
             </ServicesSection>
             <div className="section-3">
                 <div className="cnt">
-                   <h2>
-                    In today’s <span>dynamically changing</span> world, a company needs a <span>fresh look</span> at its online presence.
-                   </h2>
+                    <h2>
+                        In today’s <span>dynamically changing</span> world, a company needs a <span>fresh look</span> at its online presence.
+                    </h2>
+                    <div className="decoration"></div>
+                    <div className="text-cnt">
+                        <p>
+                        A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                        </p>
+                        <p>
+                        With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly.
+                        </p>
+                    </div>
                 </div>
             </div>
             <BrandingSteps arr={[
