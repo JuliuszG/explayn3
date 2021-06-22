@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ContactForm } from "./contactForm";
 import  ThankYouCard  from "./thankyoucard";
 import { appContext } from './context'
+import Footer from "./footer";
 
 const Layout = ({ children }) => {
   const { contactFormStatus } = useContext(appContext)
