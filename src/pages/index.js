@@ -20,8 +20,8 @@ const IndexPage = () => {
     <Layout>
       <SEO title="" />
       { isMobile ? <Mobile /> : <Desktop /> }
-      {/* <Landing2 /> */}
-      <Landing />
+      <Landing2 />
+      {/* <Landing /> */}
       <AboutUs />
       <CaseStudy />
       <Team />
