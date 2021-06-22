@@ -1,159 +1,311 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
-import { colors } from '../styles/colors'
+import { Link } from 'gatsby'
+import Dots from '../images/footer-dots.svg'
+import emailjs from 'emailjs-com';
 
 const Style = styled.footer`
-    background: ${ colors.neutral90 };
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    font-family: 'Poppins';
-    font-style: normal;
-    color: ${ colors.neutral00 };
-    @media (max-width: 1400px) {
-        font-size: 14px;
-    }
-    @media (max-width: 1200px) {
-        font-size: 11px;
-    }
-    @media (max-width: 950px) {
-        flex-direction: column;
-    }
-    @media (max-width: 650px) {
-        font-size: 10px;
-    }
-    @media (max-width: 350px) {
-        font-size: 8px;
-    }
-    .left {
-        padding: 20% 10% 18%;
-        width: 60%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        border-right: 1px solid ${ colors.neutral80 };
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        @media (max-width: 950px) {
-            border-right: none;
-            border-bottom: 1px solid ${ colors.neutral80 };
-            width: 100%;
-        }
-        h4 {
-            font-size: 1.375em;
-            font-weight: 400;
-            line-height: 345.45%;
-            text-align: left;
-        }
-        a {
-            text-decoration: none;
-            color: ${ colors.neutral00 };
-            font-size: 6.25em;
-            font-weight: 600;
-            line-height: 96%;
-            text-align: left;
-            @media (max-width: 650px) {
-                font-size: 4.25em;
-            }
-        }
-        .copy {
-            position: absolute;
-            bottom: 1%;
-            left: 35%;
-            font-size: 1.0625em;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 347.05%;
-            text-align: left;
-            color: ${ colors.neutral30 };
-            @media (max-width: 950px) {
-                bottom: -58%;
-                left: 40%;
-            }
-        }
-    }
-    .right {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        margin: 0 10%;
-        &:hover a:not(:hover) {
-            color: grey;
-        }
-        @media (max-width: 950px) {
-            flex-direction: row;
-            padding: 15% 10%;
-            width: 100%;
-            justify-content: space-between;
-            align-items: center;
-        }
-        a {
-            text-decoration: none;
-            color: ${ colors.neutral00 };
-            font-size: 1.1875em;
-            font-weight: 300;
-            line-height: 310.52%;
-            text-align: left;
-            transition: all 0.5s ease-in-out;
-        }
-    }
-`
-const Arrow = styled.div`
-    width: 131px;
-    height: 132px;
+width: 100%;
+min-height: 100vh;
+background: #272727;
+font-family: "Poppins";
+padding: 5% 0;
+position: relative;
+.decoration {
     position: absolute;
-    right: 39%;
+    right: 0;
     bottom: 15%;
-    @media (max-width: 1400px) {
+    width: 258px;
+    @media (max-width: 1024px) {
+        position: static;
+        margin-left: auto;
+    }
+    @media (max-width: 600px) {
         width: 90px;
-        height: 90px;
+        height: 155px;
     }
-    @media (max-width: 950px) {
-        right: calc(50% - 55px);
-        bottom: 35%;
+}
+@media (max-width: 1024px) {
+    padding: 10%;
+}
+    h3 {
+        color: #FFFFFF;
+        font-size: 1.875rem;
+        font-weight: 600;
+        line-height: 153%;
+        @media (max-width: 600px) {
+            font-size: 1.3rem;
+        }
     }
-    @media (max-width: 400px) {
-        width: 40px;
-        height: 40px;
-        right: calc(50% - 22px);
+    a {
+        color: #AAAAAA;
+        font-size: 1.5rem;
+        line-height: 145%;
+        text-decoration: none;
+        transition: 0.3s ease-in;
+        @media (hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+        @media (max-width: 600px) {
+            font-size: 1rem;
+        }
+    }
+    .cnt {
+        max-width: 1450px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: auto;
+        row-gap: 60px;
+        grid-template-areas:
+        "contact contact . . sl1 . sl2 . sl3"
+        "newsletter newsletter newsletter . sl1 . sl2 . sl3"
+        "social social social . . . . . ."
+        ;
+        @media (max-width: 1500px) {
+            max-width: 1000px;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-areas:
+            "contact contact . . . sl1 . sl2"
+            "newsletter newsletter newsletter newsletter . sl1 . sl2"
+            "social social social social . . . ."
+            "sl3 sl3 . . . . . ."
+            ;
+        }
+        @media (max-width: 1200px) {
+            max-width: 800px;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+            "contact contact . . . sl1"
+            "newsletter newsletter newsletter newsletter . sl1"
+            "social social social social . ."
+            "sl3 sl3 . . . ."
+            "sl2 sl2 . . . ."
+            ;
+        }
+        @media (max-width: 1024px) {
+            max-width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "newsletter newsletter"
+            "sl1 sl2"
+            "sl3 sl3"
+            "social social"
+            "contact contact"
+            ;
+        }
+        @media (max-width: 600px) {
+            column-gap: 20px;
+        }
+    }
+    .contact-us {
+        grid-area: contact;
+        .tel {
+            margin: 24px 0;
+        }
+    }
+    .newsletter {
+        grid-area: newsletter;
+        p {
+            color: #AAAAAA;
+            font-size: 1.5rem;
+            line-height: 145%;
+            margin-bottom: 40px;
+            @media (max-width: 600px) {
+                font-size: 1rem;
+            }
+        }
+        .form-grp {
+            display: flex;
+            align-items: center;
+            form {
+                width: 100%;
+            }
+            input {
+                width: 50%;
+                height: 40px;
+                outline: none;
+                border: none;
+                border-bottom: 3px solid white;
+                background: transparent;
+                color: #AAAAAA;
+                font-size: 1.5rem;
+                line-height: 145%;
+                font-weight: 300;
+                @media (max-width: 600px) {
+                    width: 100%;
+                }
+                &::placeholder {
+                    color: #AAAAAA;
+                    font-size: 1.5rem;
+                    line-height: 145%;
+                    font-weight: 300;
+                }
+            }
+            button {
+                background: transparent;
+                outline: none;
+                border: none;
+                color: #fff;
+                font-size: 2.5rem;
+                cursor: pointer;
+                margin-left: 20px;
+            }
+        }
+    }
+    .social-media {
+        grid-area: social;
+        width: 100%;
+        .mini-cnt {
+            margin-top: 23px;
+            width: 75%;
+            display: flex;
+            flex-wrap: wrap;
+            a {
+                width: 50%;
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .site-links-column {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            margin-bottom: 33px;
+        }
+        a {
+            margin-bottom: 33px;
+        }
+    }
+    .sl1 {
+        grid-area: sl1;
+    }
+    .sl2 {
+        grid-area: sl2;
+    }
+    .sl3 {
+        grid-area: sl3;
     }
 `
 const Footer = () => {
-    const data = useStaticQuery(graphql`
-        query {
-            file(relativePath: { eq: "footerArrow.png" }) {
-            childImageSharp {
-                fluid {
-                ...GatsbyImageSharpFluid
-                }
-            }
-            }
-        }
-    `
-    )
+    const [value, setValue] = useState("")
+    const [mailSend, setMailSend] = useState(false)
+    const handleSubmit = e => {
+        e.preventDefault()
+        emailjs.send('default_service', 'template_qhdmgng', {email: value}, 'user_VfGpMuhECXdgJOEm13gzv')
+            .then(response => {
+                setMailSend(true)
+            })
+    }
     return(
         <Style id="footer">
-            {/* <div className="left">
-                <h4>Do business with us</h4>
-                <h2><a href="mailto:we@explayn.it">we@explayn.it</a></h2>
-                <span className="copy">© explayn.it All rights reserved</span>
+
+            <div className="cnt">
+
+                <div className="contact-us">
+                    <h3>
+                        Contact us
+                    </h3>
+                    <div className="tel">
+                        <a href="tel:+48 881 772 030">+48 881 772 030</a>
+                    </div>
+                    <div className="mail">
+                        <a href="mailto:we@explayn.it">we@explayn.it</a>
+                    </div>
+                </div>
+
+                <div className="newsletter">
+                    <h3>
+                        NEWSLETTER
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.
+                    </p>
+                    <div className="form-grp">
+                        <form onSubmit={e => handleSubmit(e)}>
+                            <input 
+                                type="email" 
+                                placeholder="Email adress"
+                                value={value}
+                                onChange={e => setValue(e.target.value)}
+                            />
+                            <button type="submit">
+                                {">"}
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div className="social-media">
+                    <h3>
+                        Follow us on social media
+                    </h3>
+                   <div className="mini-cnt">
+                        <a href="https://www.facebook.com/explayn.it">Facebook</a>
+                        <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">Youtube</a>
+                        <a href="https://www.instagram.com/explayn.it/">Instagram</a>
+                        <a href="https://www.linkedin.com/company/explayn-digital-agency/about/?viewAsMember=true">LinkedIn</a>
+                   </div>
+                </div>
+
+                <div className="site-links-column sl1">
+                    <h3>
+                        Service
+                    </h3>
+                    <Link to="/development">
+                        Development
+                    </Link>
+                    <Link to="/visual">
+                        Visual
+                    </Link>
+                    <Link to="/branding">
+                        Branding
+                    </Link>
+                    <Link to="/ecommerce">
+                        eCommerce
+                    </Link>
+                    <Link to="/events">
+                        Events
+                    </Link>
+                    <Link to="/marketing">
+                        Marketing
+                    </Link>
+                </div>
+
+                <div className="site-links-column sl2">
+                    <h3>
+                        About
+                    </h3>
+                    <Link to="/">
+                        Home
+                    </Link>
+                    <Link to="/#caseStudy">
+                        Case studies
+                    </Link>
+                    <Link to="/blog">
+                        Blog
+                    </Link>
+                </div>
+
+                
+                <div className="site-links-column sl3">
+                    <h3>
+                        Support
+                    </h3>
+                    <Link to="/privacy">
+                        Privacy policy
+                    </Link>
+                    <Link to="/cookies">
+                        Cookie policy
+                    </Link>
+                </div>
+
             </div>
-            <div className="right">
-                <a href="https://www.facebook.com/explayn.it">Facebook</a>
-                <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">Youtube</a>
-                <a href="https://www.instagram.com/explayn.it/">Instagram</a>
-                <a href="https://www.linkedin.com/company/explayn-digital-agency">Linkedin</a>
+            <div className="decoration">
+                <img src={ Dots } alt="decoration" />
             </div>
-            <Arrow>
-                <Img 
-                    fluid={ data.file.childImageSharp.fluid } 
-                    alt="arrow" 
-                />
-            </Arrow> */}
         </Style>
     )
 }
