@@ -53,7 +53,7 @@ position: relative;
         }
     }
     .cnt {
-        max-width: 1450px;
+        max-width: 1500px;
         margin: 0 auto;
         display: grid;
         grid-template-columns: repeat(9, 1fr);
@@ -65,24 +65,24 @@ position: relative;
         "social social social . . . . . ."
         ;
         @media (max-width: 1500px) {
-            max-width: 1000px;
-            grid-template-columns: repeat(8, 1fr);
+            max-width: 1100px;
+            grid-template-columns: repeat(10, 1fr);
             grid-template-areas:
-            "contact contact . . . sl1 . sl2"
-            "newsletter newsletter newsletter newsletter . sl1 . sl2"
+            "contact contact . . . sl1 . sl2 . sl3"
+            "newsletter newsletter newsletter newsletter . sl1 . sl2 .sl3"
             "social social social social . . . ."
-            "sl3 sl3 . . . . . ."
             ;
         }
         @media (max-width: 1200px) {
             max-width: 800px;
-            grid-template-columns: repeat(6, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             grid-template-areas:
-            "contact contact . . . sl1"
-            "newsletter newsletter newsletter newsletter . sl1"
-            "social social social social . ."
-            "sl3 sl3 . . . ."
-            "sl2 sl2 . . . ."
+            "contact contact . ."
+            "newsletter newsletter newsletter newsletter"
+            "social social social social"
+            "sl1 sl1 . ."
+            "sl2 sl2 . ."
+            "sl3 sl3 . ."
             ;
         }
         @media (max-width: 1024px) {
@@ -135,7 +135,7 @@ position: relative;
                 line-height: 145%;
                 font-weight: 300;
                 @media (max-width: 600px) {
-                    width: 100%;
+                    width: 70%;
                 }
                 &::placeholder {
                     color: #AAAAAA;
