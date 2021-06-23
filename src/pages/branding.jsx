@@ -18,6 +18,8 @@ import Launch from '../images/branding_ikonki/launch.svg'
 import Responsive from '../images/branding_ikonki/1.benefits.svg'
 import Functional from '../images/branding_ikonki/2.benefits.svg'
 import Scalable from '../images/branding_ikonki/3.benefits.svg'
+import More from '../images/landing/more.svg'
+import {Link as ScLink} from "react-scroll";
 
 const Styles = styled.div`
 font-family: "Poppins";
@@ -27,6 +29,13 @@ font-family: "Poppins";
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        .scroll {
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 50px);
+            cursor: pointer;
+        }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -101,6 +110,7 @@ font-family: "Poppins";
         background-size: cover;
         display: flex;
         align-items: center;
+        padding: 15% 0;
         .cnt {
             max-width: 1250px;
             margin: 0 auto;
@@ -347,8 +357,11 @@ const Branding = () => {
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
+                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
+                        <img src={More} alt="scroll down" />
+                    </ScLink>
                 </div>
-                <ServicesSection>
+                <ServicesSection id="services-section">
                     <div className="left">
                         <h2>
                             Branding that sells
@@ -384,10 +397,16 @@ const Branding = () => {
                     <div className="decoration"></div>
                     <div className="text-cnt">
                         <p>
-                        A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                            Visual identity, communication, voice, slogan - all these elements are essential to brand image. 
+                            For them to emerge, we take our time to research and try out the different variants. 
+                            Our branding strategy never comes out of nowhere. 
+                            It's a result of thoughtful planning and hours of brainstorming sessions.
                         </p>
                         <p>
-                        With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly.
+                            The saturated online market doesn't like repetition. 
+                            Branding should depend not on trends but a deep understanding of the company's audience, 
+                            mission, and goals. We'll make sure that the logo, symbols, 
+                            and iconography resonate with your existing and potential customers, creating bonds that stay.
                         </p>
                     </div>
                 </div>

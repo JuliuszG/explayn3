@@ -18,6 +18,8 @@ import Launch from '../images/ikonki marketing/linijki.svg'
 import Responsive from '../images/ikonki marketing/omnichanel.svg'
 import Functional from '../images/ikonki marketing/relevant.svg'
 import Scalable from '../images/ikonki marketing/insightful.svg'
+import More from '../images/landing/more.svg'
+import {Link as ScLink} from "react-scroll";
 
 const Styles = styled.div`
 font-family: "Poppins";
@@ -27,6 +29,13 @@ font-family: "Poppins";
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        .scroll {
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 50px);
+            cursor: pointer;
+        }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -101,6 +110,7 @@ font-family: "Poppins";
         background-size: cover;
         display: flex;
         align-items: center;
+        padding: 15% 0;
         .cnt {
             max-width: 1250px;
             margin: 0 auto;
@@ -346,8 +356,11 @@ const Marketing = () => {
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
+                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
+                        <img src={More} alt="scroll down" />
+                    </ScLink>
                 </div>
-                <ServicesSection>
+                <ServicesSection id="services-section">
                     <div className="left">
                         <h2>
                             Marketing on demand.
@@ -380,15 +393,20 @@ const Marketing = () => {
             <div className="section-3">
                 <div className="cnt">
                     <h2>
-                        In today’s <span>dynamically changing</span> world, a company needs a <span>fresh look</span> at its online presence.
+                        Focusing on the methods for driving profitable customer action is the key to our work.
                     </h2>
                     <div className="decoration"></div>
                     <div className="text-cnt">
                         <p>
-                        A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                            Attracting customers is just the first step. 
+                            We make sure you retain them by putting together all the methods that allow understanding your audience better. 
+                            All our decisions are based on thorough research that guarantees measurable results. 
+                            We test different solutions to choose the most beneficial ones for your business.
                         </p>
                         <p>
-                        With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly.
+                            To provide you with the highest level of consistency, we offer a one-stop service. 
+                            From visual identity to complex marketing strategy and its implementation - with us, you can count on a coherent result. 
+                            It's a perfect solution for emerging companies but also those with an established position on the market.
                         </p>
                     </div>
                 </div>
