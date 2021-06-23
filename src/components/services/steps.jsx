@@ -7,7 +7,7 @@ const Style = styled.div`
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    min-height: 110vh;
+    min-height: 120vh;
     display: flex;
     flex-direction: column;
     padding: 10% 0;
@@ -123,7 +123,7 @@ const Style = styled.div`
                         background-color: #F5F6FA;
                         padding: 30px;
                         font-family: "Poppins";
-                        font-size: 1.375rem;
+                        font-size: 0.9rem;
                         line-height: 136%;
                     }
                     &:nth-child(1)::before {
@@ -149,7 +149,7 @@ const Style = styled.div`
                         background-color: #F5F6FA;
                         padding: 30px;
                         font-family: "Poppins";
-                        font-size: 1.375rem;
+                        font-size: 0.9rem;
                         line-height: 136%;
                     }
                     &:nth-child(3)::before {
@@ -174,7 +174,7 @@ const Style = styled.div`
                         background-color: #F5F6FA;
                         padding: 30px;
                         font-family: "Poppins";
-                        font-size: 1.375rem;
+                        font-size: 0.9rem;
                         line-height: 136%;
                     }
                     &:nth-of-type(5)::before {
@@ -200,7 +200,7 @@ const Style = styled.div`
                         background-color: #F5F6FA;
                         padding: 30px;
                         font-family: "Poppins";
-                        font-size: 1.375rem;
+                        font-size: 0.9rem;
                         line-height: 136%;
                     }
                     &:nth-child(7)::before {
@@ -226,7 +226,7 @@ const Style = styled.div`
                         background-color: #F5F6FA;
                         padding: 30px;
                         font-family: "Poppins";
-                        font-size: 1.375rem;
+                        font-size: 0.9rem;
                         line-height: 136%;
                     }
                     &:nth-of-type(9)::before {

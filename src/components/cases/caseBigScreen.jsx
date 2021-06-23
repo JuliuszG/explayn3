@@ -71,12 +71,6 @@ const CaseBigScreen = ({ src, decorations=false }) => {
     return (
         <Style>
             <Image fluid={ src } alt="case Screen" />
-            <Triangle>
-                <Img fluid={ data.triangle1.childImageSharp.fluid } alt="decoration" />
-            </Triangle>
-            <Triangle2>
-                <Img fluid={ data.triangle2.childImageSharp.fluid } alt="decoration" />
-            </Triangle2>
         </Style>
     )
 }

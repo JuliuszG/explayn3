@@ -14,6 +14,9 @@ const Style = styled.div`
     font-family: "Poppins";
     overflow: hidden;
     position: relative;
+    @media (max-width: 450px) {
+        min-height: 90vh;
+    }
     .scroll {
         position: absolute;
         bottom: 20px;
@@ -34,6 +37,9 @@ const Style = styled.div`
         @media (max-width: 850px) {
             padding: 20% 5%;
         }
+        @media (max-width: 450px) {
+            font-size: 8px;
+        }
     }
     .content {
         position: relative;
@@ -50,8 +56,12 @@ const Style = styled.div`
             left: 0;
             z-index: -1;
             @media (max-width: 1100px) {
-                position: static;
-                transform: rotate(180deg);
+                top: -95px;
+                left: -60px;
+            }
+            @media (max-width: 450px) {
+                top: -75px;
+                left: -55px;
             }
             img {
                 width: 25em;
@@ -71,6 +81,7 @@ const Style = styled.div`
             @media (max-width: 1100px) {
                 margin-left: 0;
                 margin-top: 20px;
+                max-width: 400px;
             }
         }
         p {
@@ -80,10 +91,15 @@ const Style = styled.div`
             line-height: 136%;
             width: 40%;
             padding-left: 20px;
+            @media (max-width: 1600px) {
+                margin-left: 50px;
+            }
             @media (max-width: 1100px) {
-                margin-top: 20px;
                 width: 70%;
-                padding-left: 0;
+                margin: 0;
+                padding: 0;
+                font-size: 1.5em;
+                margin-top: 20px;
             }
             @media (max-width: 450px) {
                 width: 90%;
@@ -95,7 +111,9 @@ const Style = styled.div`
         span.white {
             color: #fff;
             @media (max-width: 1100px) {
-                color: #000;
+                &.second {
+                    color: #000;
+                }
             }
         }
     }
@@ -113,7 +131,7 @@ const Landing2 = () => {
                 </div>
                         <h1>
                             <span className="white">New</span> ways to <span className="blue">develop </span>
-                            <span className="white">your</span> <span className="blue">brand.</span>
+                            <span className="white second">your</span> <span className="blue">brand.</span>
                         </h1>
                         <p>
                             A full service web design and digital marketing agency powered by growth solutions.
