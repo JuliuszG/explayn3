@@ -30,7 +30,7 @@ position: relative;
 }
     h3 {
         color: #FFFFFF;
-        font-size: 1.875rem;
+        font-size: 1.575rem;
         font-weight: 600;
         line-height: 153%;
         @media (max-width: 600px) {
@@ -39,7 +39,7 @@ position: relative;
     }
     a {
         color: #AAAAAA;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         line-height: 145%;
         text-decoration: none;
         transition: 0.3s ease-in;
@@ -62,7 +62,7 @@ position: relative;
         grid-template-areas:
         "contact contact . . sl1 . sl2 . sl3"
         "newsletter newsletter newsletter . sl1 . sl2 . sl3"
-        "social social social . . . . . ."
+        "social social social social . . . . ."
         ;
         @media (max-width: 1500px) {
             max-width: 1100px;
@@ -79,7 +79,7 @@ position: relative;
             grid-template-areas:
             "contact contact . ."
             "newsletter newsletter newsletter newsletter"
-            "social social social social"
+            "social social . ."
             "sl1 sl1 . ."
             "sl2 sl2 . ."
             "sl3 sl3 . ."
@@ -88,6 +88,15 @@ position: relative;
         @media (max-width: 1024px) {
             max-width: 100%;
             grid-template-columns: repeat(2, 1fr);
+            grid-template-areas:
+            "newsletter newsletter"
+            "sl1 sl2"
+            "sl3 sl3"
+            "social ."
+            "contact contact"
+            ;
+        }
+        @media (max-width: 650px) {
             grid-template-areas:
             "newsletter newsletter"
             "sl1 sl2"
@@ -110,7 +119,7 @@ position: relative;
         grid-area: newsletter;
         p {
             color: #AAAAAA;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             line-height: 145%;
             margin-bottom: 40px;
             @media (max-width: 600px) {
@@ -121,17 +130,19 @@ position: relative;
             display: flex;
             align-items: center;
             form {
-                width: 100%;
+                max-width: 600px;
+                display: flex;
+                align-items: center;
             }
             input {
-                width: 50%;
+                width: 100%;
                 height: 40px;
                 outline: none;
                 border: none;
                 border-bottom: 3px solid white;
                 background: transparent;
                 color: #AAAAAA;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 line-height: 145%;
                 font-weight: 300;
                 @media (max-width: 600px) {
@@ -139,7 +150,7 @@ position: relative;
                 }
                 &::placeholder {
                     color: #AAAAAA;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     line-height: 145%;
                     font-weight: 300;
                 }
@@ -149,9 +160,9 @@ position: relative;
                 outline: none;
                 border: none;
                 color: #fff;
-                font-size: 2.5rem;
+                font-size: 2.2rem;
                 cursor: pointer;
-                margin-left: 20px;
+                margin-left: 4%;
             }
         }
     }
@@ -160,12 +171,18 @@ position: relative;
         width: 100%;
         .mini-cnt {
             margin-top: 23px;
-            width: 75%;
+            max-width: 300px;
             display: flex;
             flex-wrap: wrap;
+            @media (max-width: 650px) {
+                max-width: 250px;
+            }
             a {
                 width: 50%;
                 margin-bottom: 32px;
+                &:nth-child(even) {
+                    text-align: end;
+                }
             }
         }
     }

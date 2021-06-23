@@ -245,11 +245,7 @@ const CaseStudy = ({ triangle=true }) => {
     )
     const content = (
         <Style id="caseStudy">
-            { triangle && (
-                <Triangle>
-                    <Img fluid={ data.triangle.childImageSharp.fluid } alt="triangle" /> 
-                </Triangle>
-            ) }
+
             <CarouselProvider
                     naturalSlideWidth={ 100 }
                     naturalSlideHeight={ 100 }
