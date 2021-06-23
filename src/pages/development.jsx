@@ -32,6 +32,8 @@ import Responsive from '../images/development/korzysci/responsive.svg'
 import Functional from '../images/development/korzysci/setings.svg'
 import Scalable from '../images/development/korzysci/scalable.svg'
 import Secure from '../images/development/korzysci/secure.svg'
+import More from '../images/landing/more.svg'
+import {Link as ScLink} from "react-scroll";
 
 const Styles = styled.div`
 font-family: "Poppins";
@@ -41,6 +43,13 @@ font-family: "Poppins";
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        .scroll {
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 50px);
+            cursor: pointer;
+        }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -114,7 +123,7 @@ font-family: "Poppins";
         background-image: url(${Section3Bg});
         background-size: cover;
         background-position: center;
-        padding: 10% 0;
+        padding: 15% 0;
         .cnt {
             max-width: 1250px;
             margin: 0 auto;
@@ -351,8 +360,11 @@ const Development = () => {
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
+                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
+                        <img src={More} alt="scroll down" />
+                    </ScLink>
                 </div>
-                <ServicesSection>
+                <ServicesSection id="services-section">
                     <div className="left">
                         <h2>
                             Development on demand

@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { useMediaQuery } from 'react-responsive'
 import Layout from "../components/layout"
 import Image from 'gatsby-image'
+import Footer from '../components/footer'
 export const query = graphql`
 {
     allDatoCmsBlog(limit: 6) {
@@ -48,6 +49,8 @@ const Style = styled.div`
         gap: 48.44px;
         margin: 0 auto;
         max-width: 1500px;
+        position: relative;
+        padding-top: 10vh;
         @media (max-width: 1700px) {
             max-width: 1200px;
         }
@@ -55,7 +58,7 @@ const Style = styled.div`
             max-width: 1050px;
         }
         @media (max-width: 1024px) {
-            padding: 0 5%;
+            padding: 10vh 5% 0;
             width: 100%;
             grid-template-columns: repeat(2, 1fr);
         }
@@ -158,8 +161,11 @@ const Style = styled.div`
         font-weight: 600;
         font-size: 55px;
         color: #000000;
-        margin-left: 6.5%;
-        margin-bottom: 62px;
+        @media (max-width: 1100px) {
+            margin-left: 5%;
+        }
+        position: absolute;
+        left: 0;
     }
 `
 
@@ -195,11 +201,13 @@ const Blog = ({data: { allDatoCmsBlog }}) => {
             <SEO title=""/>
             { isMobile ? <Mobile /> : <Desktop /> }
             <Style>
-                <h1 className="main-title">Articles</h1>
+                
                 <div className="cnt">
+                    <h1 className="main-title">Articles</h1>
                     {allDatoCmsBlog.nodes.map(post => <Card key={ post.id } post={ post } />)}
                 </div>
             </Style>
+            <Footer />
         </Layout>
     )
 }

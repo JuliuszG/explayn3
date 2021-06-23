@@ -115,7 +115,6 @@ const Style = styled.section`
                     font-family: "Poppins";
                     margin: 128px 0;
                     color: #4C65FF;
-                    margin-left: 126px; 
                     font-size: 18px;
                     line-height: 29px;
                     letter-spacing: 0.05px;
