@@ -2,6 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 import Play from '../../images/landing/play.svg'
 import More from '../../images/landing/more.svg'
+import DLeft from '../../images/landing/landingDotsLeft.svg'
+import DRT from '../../images/landing/ldot-right-top.svg'
+import DRB from '../../images/landing/ldot-right-bot.svg'
+import DTL from '../../images/landing/ldot-top-left.svg'
+import DTR from '../../images/landing/ldot-top-right.svg'
 import {Link as ScLink} from "react-scroll";
 
 const Style = styled.div`
@@ -16,6 +21,57 @@ const Style = styled.div`
     position: relative;
     @media (max-width: 450px) {
         min-height: 90vh;
+    }
+    .decoration {
+        position: absolute;
+        @media (max-width: 1100px) {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+        &-left {
+            @media (max-width: 1400px) {
+                width: 200px;
+            }
+            bottom: 10%;
+            left: -7%;
+        }
+        &-right-top {
+            bottom: 230px;
+            right: 0;
+            @media (max-width: 1400px) {
+                width: 200px;
+                bottom: 130px;
+            }
+        }
+        &-right-bot {
+            bottom: -52px;
+            right: 216px;
+            @media (max-width: 1400px) {
+                width: 80px;
+                bottom: -30px;
+                right: 121px;
+            }
+        }
+        &-top-left {
+            top: -160px;
+            right: 470px;
+            @media (max-width: 1500px) {
+                width: 100px;
+                top: -122px;
+                right: 370px;
+            }
+        }
+        &-top-right {
+            top: -35px;
+            right: 630px;
+            @media (max-width: 1500px) {
+                width: 200px;
+                top: -25px;
+                right: 490px;
+            }
+        }
     }
     .scroll {
         position: absolute;
@@ -122,7 +178,21 @@ const Style = styled.div`
 const Landing2 = () => {
     return (
         <Style>
-            
+            <div className="decoration decoration-left">
+                <img src={DLeft} alt="decoration" />
+            </div>
+            <div className="decoration decoration-right-top">
+                <img src={DRT} alt="decoration" />
+            </div>
+            <div className="decoration decoration-right-bot">
+                <img src={DRB} alt="decoration" />
+            </div>
+            <div className="decoration decoration-top-left">
+                <img src={DTL} alt="decoration" />
+            </div>
+            <div className="decoration decoration-top-right">
+                <img src={DTR} alt="decoration" />
+            </div>
             <div className="cnt">
                 <div className="content">
                 <div className="play">

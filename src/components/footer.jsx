@@ -39,7 +39,7 @@ position: relative;
     }
     a {
         color: #AAAAAA;
-        font-size: 1.2rem;
+        font-size: 1rem;
         line-height: 145%;
         text-decoration: none;
         transition: 0.3s ease-in;
@@ -119,7 +119,7 @@ position: relative;
         grid-area: newsletter;
         p {
             color: #AAAAAA;
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 145%;
             margin-bottom: 40px;
             @media (max-width: 600px) {

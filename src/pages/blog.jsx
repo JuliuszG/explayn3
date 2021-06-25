@@ -103,6 +103,10 @@ const Style = styled.div`
             .content {
                width: 100%;
                padding: 10%;
+               height: 45%;
+               display: flex;
+               flex-direction: column;
+               justify-content: space-between;
                h2 {
                 font-size: 1.875rem;
                 line-height: 166.66%;
