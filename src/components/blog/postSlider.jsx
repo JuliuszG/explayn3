@@ -4,6 +4,7 @@ import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-re
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Image from 'gatsby-image'
+import e from 'cors';
 const Style = styled.div`
 display: flex;
 justify-content: center;
@@ -18,22 +19,31 @@ transform: translateY(-20%);
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        position: relative;
         @media (max-width: 1400px) {
-            padding: 5%;
-            justify-content: flex-start;
-        }
-        @media (max-width: 1400px) {
-            padding: 5%;
+            padding: 2%;
             justify-content: center;
         }
         .slide {
-            width: 450px;
-            height: 650px;
+            width: 400px;
+            height: 600px;
             box-shadow: 0 0 40px #00000014;
             font-family: "Poppins";
             cursor: pointer;
             @media (max-width: 1400px) {
                 margin: 20px;
+                width: 300px;
+                height: 450px;
+            }
+            @media (max-width: 1100px) {
+                margin: 20px;
+                width: 60%;
+                height: 650px;
+            }
+            @media (max-width: 750px) {
+                margin: 20px;
+                width: 100%;
+                height: 450px;
             }
             &:hover .img .overlay {
                 opacity: 0.2;
@@ -65,7 +75,10 @@ transform: translateY(-20%);
             .content {
                 height: 50%;
                 width: 100%;
-                padding: 60px;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
                 @media (max-width: 1400px) {
                     padding: 20px;
                 }
@@ -90,6 +103,13 @@ transform: translateY(-20%);
                         font-size: 20px;
                         line-height: 30px;
                     }
+                }
+                .details {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+                    font-size: 12px;
+                    color: #4C65FF;
                 }
                 .link {
                     width: 100%;
@@ -150,7 +170,9 @@ const PostSlider = ({ filters }) => {
     }, [filter])
     const sliderCnt = (
             <div className="trending">
-                {posts.map((post, index) => (
+                {posts.map((post, index) => {
+                    const { categories } = JSON.parse(post.categories)
+                    return(
                     <div index={index} key={index} className="slide">
                         <div className="img">
                             <div className="overlay"></div>
@@ -160,12 +182,16 @@ const PostSlider = ({ filters }) => {
                                 <h3>
                                     {post.blogTitle}
                                 </h3>
+                                <div className="details">
+                                        {categories.map(el => <span>{el.toUpperCase()}</span>)}
+                                        <span>{post.timeToRead}</span>
+                                </div>
                                 <div className="link">
                                      <a href={`/blog/${post.slug}`}>read more {'>'}</a>
                                 </div>
                             </div>
                     </div>
-                ))}
+                )})}
         </div>
     )
     return (

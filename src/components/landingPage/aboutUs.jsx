@@ -26,12 +26,14 @@ const Style = styled(motion.section)`
         text-decoration: none;
     }
     .cnt {
+        padding-left: 5%;
         display: flex;
-        padding: 0 10%;
         justify-content: center;
-        margin-left: 10%;
+        width: 100%;
         @media (max-width: 956px) {
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         &.first {
             margin-top: 10%;
@@ -116,6 +118,12 @@ const BoxStyle = styled.div`
     height: 310px;
     cursor: pointer;
     margin: 2% 0;
+    @media (max-width: 1600px) {
+        width: 400px;
+    }
+    @media (max-width: 1250px) {
+        width: 300px;
+    }
     @media (max-width: 956px) {
         width: 100%;
     }

@@ -46,7 +46,7 @@ const Style = styled.section`
         z-index: 40;
         transform: translateY(-10%);
         margin: 0 auto;
-        padding: 5%;
+        padding: 5% 5% 0;
         padding-right: 0;
         @media (max-width: 1800px) {
             max-width: 1420px;
@@ -57,6 +57,11 @@ const Style = styled.section`
         @media (max-width: 1300px) {
             transform: translateY(0%);
             padding-right: 5%;
+        }
+        .related-title {
+            font-family: "Poppins";
+            font-size: 3rem;
+            font-weight: 600;
         }
         .post-header {
             padding-right: 20%;
@@ -203,6 +208,7 @@ const PostTemplate = ({ data }) => {
                         </article>
                         <SideBar title={ blogTitle } slug={ slug } id={ id }/>
                     </main>
+                    
                 </div>
                 <PostSlider filters={{ currentPost: id}} />
             </Style>
