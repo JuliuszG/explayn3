@@ -9,6 +9,7 @@ import DTL from '../../images/landing/ldot-top-left.svg'
 import DTR from '../../images/landing/ldot-top-right.svg'
 import {Link as ScLink} from "react-scroll";
 
+
 const Style = styled.div`
     width: 100%;
     min-height: 100vh;

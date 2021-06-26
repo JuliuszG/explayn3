@@ -4,12 +4,11 @@ import styled from 'styled-components'
 import emailjs from 'emailjs-com';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion'
 import Item from './item';
+import Mail from '../../images/blog/mail.svg'
 const Style = styled.aside`
     font-family: "Poppins";
     width: 412px;
-    position: sticky;
-    top: 0;
-    right: 0;
+    padding-right: 20px;
     @media (max-width: 450px) {
         width: 100%;
     }
@@ -43,11 +42,38 @@ const Style = styled.aside`
     }
     .newsletter {
         margin-bottom: 59px;
+        background-color: #4A62F7;
+        border: 1px solid #707070;
+        border-radius: 16px;
+        padding: 50px;
+        .thanks {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            img {
+                width: 40px;
+                margin-bottom: 40px;
+            }
+        }
+        h3 {
+            color: #FFFFFF;
+        }
+        .para-cnt {
+            display: flex;
+            align-items: flex-start;
+            img {
+                margin-top: 10px;
+                margin-right: 20px;
+            }
+        }
         p {
             font-size: 18px;
             line-height: 29px;
             letter-spacing: 0.05px;
-            color: #000;
+            color: #fff;
             margin-bottom: 30px;
         }
         form {
@@ -55,8 +81,9 @@ const Style = styled.aside`
                 display: block;
                 outline: none;
                 border: none;
-                border-bottom: 1px solid #707070;
+                border-bottom: 1px solid #FFFFFF;
                 width: 80%;
+                color: #FFFFFF;
                 font-family: "Poppins";
                 font-weight: 600px;
                 color: #000;
@@ -64,11 +91,12 @@ const Style = styled.aside`
                 line-height: 18px;
                 letter-spacing: 1.36px;
                 margin-bottom: 32px;
+                background: transparent;
                 &::placeholder {
                     font-family: "Poppins";
                     padding-left: 22px;
                     font-weight: 600px;
-                    color: #D3D3D3;
+                    color: #FFFFFF;
                     font-size: 12px;
                     line-height: 18px;
                     letter-spacing: 1.36px;
@@ -83,11 +111,11 @@ const Style = styled.aside`
                 outline: none;
                 border: none;
                 cursor: pointer;
-                background: #4A62F7;
+                background: #E8EBFB;
                 width: 147px;
                 height: 31px;
                 border-radius: 16px;
-                color: #fff;
+                color: #4A62F7;
                 transition: 0.1s;
                 &:hover {
                     transform: scale(1.05);
@@ -241,15 +269,21 @@ const SideBar = ({ title, slug, id }) => {
             </div>
             <div className="newsletter">
                 {mailSend ? (
-                    <h3>Thank You for subscribing !</h3>
+                    <div className="thanks">
+                        <img src={Mail} alt="mail icon" />
+                        <h3>Thank You for subscribing to our newsletter.</h3>
+                    </div>
                 ) : (
                     <>
                         <h3>
                             SUBSCRIBE TO OUR NEWSLETTER
                         </h3>
-                        <p>
-                            Join our community and get our best insights, tips and strategies delivered straight to your inbox.
-                        </p>
+                        <div className="para-cnt">
+                            <img src={Mail} alt="mail icon" />
+                            <p>
+                                Join our community and get our best insights, tips and strategies delivered straight to your inbox.
+                            </p>
+                        </div>
                         <form onSubmit={ e => handleSubmit(e) }>
                             <input type="email" value={email} onChange={e => setEmail(e.target.value)} placeholder="enter your email address" />
                             <button type="submit">
