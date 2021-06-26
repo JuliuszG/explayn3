@@ -46,6 +46,9 @@ const Style = styled.aside`
         border: 1px solid #707070;
         border-radius: 16px;
         padding: 50px;
+        @media (max-width: 1480px) {
+            padding: 25px;
+        }
         .thanks {
             display: flex;
             flex-direction: column;
@@ -75,6 +78,9 @@ const Style = styled.aside`
             letter-spacing: 0.05px;
             color: #fff;
             margin-bottom: 30px;
+            @media (max-width: 1480px) {
+                font-size: 12px;
+            }
         }
         form {
             input {
@@ -82,7 +88,7 @@ const Style = styled.aside`
                 outline: none;
                 border: none;
                 border-bottom: 1px solid #FFFFFF;
-                width: 80%;
+                width: 100%;
                 color: #FFFFFF;
                 font-family: "Poppins";
                 font-weight: 600px;
@@ -92,6 +98,9 @@ const Style = styled.aside`
                 letter-spacing: 1.36px;
                 margin-bottom: 32px;
                 background: transparent;
+                @media (max-width: 1480px) {
+                    font-size: 10px;
+                }
                 &::placeholder {
                     font-family: "Poppins";
                     padding-left: 22px;
@@ -99,6 +108,9 @@ const Style = styled.aside`
                     color: #FFFFFF;
                     font-size: 12px;
                     line-height: 18px;
+                    @media (max-width: 1480px) {
+                        font-size: 10px;
+                    }
                     letter-spacing: 1.36px;
                 }
             }
