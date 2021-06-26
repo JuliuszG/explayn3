@@ -10,9 +10,11 @@ display: flex;
 justify-content: center;
 align-content: center;
 margin-bottom: 10%;
-transform: translateY(-20%);
+transform: translateY(-40%);
 @media (max-width: 1300px) {
     transform: translateY(0%);
+    margin-bottom: 5%;
+    margin-top: 5%;
 }
     .trending {
         width: 100%;
@@ -130,6 +132,31 @@ transform: translateY(-20%);
             }
         }
     }
+    .title {
+        position: absolute;
+        top: -10rem;
+        left: 7.5rem;
+        font-family: "Poppins";
+        font-size: 3rem;
+        font-weight: 600;
+        @media (max-width: 1480px) {
+            left: 3rem;
+        }
+        @media (max-width: 1390px) {
+            left: 12rem;
+        }
+        @media (max-width: 1300px) {
+            top: -2rem;
+            left: 5rem;
+        }
+        @media (max-width: 1100px) {
+            position: static;
+        }
+        @media (max-width: 600px) {
+            padding: 0 5%;
+            font-size: 2rem;
+        }
+    }
 `
 const PostSlider = ({ filters }) => {
 
@@ -170,6 +197,9 @@ const PostSlider = ({ filters }) => {
     }, [filter])
     const sliderCnt = (
             <div className="trending">
+                <h2 className="title">
+                    Related Articles
+                </h2>
                 {posts.map((post, index) => {
                     const { categories } = JSON.parse(post.categories)
                     return(

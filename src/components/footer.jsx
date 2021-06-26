@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Dots from '../images/footer-dots.svg'
+import Arrow from '../images/footer-arrow.svg'
 import emailjs from 'emailjs-com';
 
 const Style = styled.footer`
@@ -249,7 +250,7 @@ const Footer = () => {
                                 onChange={e => setValue(e.target.value)}
                             />
                             <button type="submit">
-                                {">"}
+                                <img src={Arrow} alt="submit button" />
                             </button>
                         </form>
                     </div>

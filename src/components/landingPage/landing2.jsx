@@ -31,8 +31,8 @@ const Style = styled.div`
             width: 100%;
         }
         &-left {
-            @media (max-width: 1400px) {
-                width: 200px;
+            @media (max-width: 1600px) {
+                width: 180px;
             }
             bottom: 10%;
             left: -7%;
@@ -40,7 +40,7 @@ const Style = styled.div`
         &-right-top {
             bottom: 230px;
             right: 0;
-            @media (max-width: 1400px) {
+            @media (max-width: 1600px) {
                 width: 200px;
                 bottom: 130px;
             }
@@ -48,7 +48,7 @@ const Style = styled.div`
         &-right-bot {
             bottom: -52px;
             right: 216px;
-            @media (max-width: 1400px) {
+            @media (max-width: 1600px) {
                 width: 80px;
                 bottom: -30px;
                 right: 121px;
@@ -57,7 +57,7 @@ const Style = styled.div`
         &-top-left {
             top: -160px;
             right: 470px;
-            @media (max-width: 1500px) {
+            @media (max-width: 1600px) {
                 width: 100px;
                 top: -122px;
                 right: 370px;
@@ -66,7 +66,7 @@ const Style = styled.div`
         &-top-right {
             top: -35px;
             right: 630px;
-            @media (max-width: 1500px) {
+            @media (max-width: 1600px) {
                 width: 200px;
                 top: -25px;
                 right: 490px;
@@ -145,8 +145,8 @@ const Style = styled.div`
             font-weight: 300;
             font-size: 1.375em;
             line-height: 136%;
-            width: 40%;
-            padding-left: 20px;
+            width: 60%;
+            padding-left: 140px;
             @media (max-width: 1600px) {
                 margin-left: 50px;
             }
