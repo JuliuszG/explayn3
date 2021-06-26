@@ -40,6 +40,7 @@ query BlogQuery($id: String!) {
 const Style = styled.section`
     position: relative;
     width: 100%;
+    overflow: visible !important;
     .container {
         max-width: 1720px;
         background: #fff;
@@ -47,6 +48,7 @@ const Style = styled.section`
         transform: translateY(-10%);
         margin: 0 auto;
         padding: 5% 5% 0;
+        overflow: visible !important;
         padding-right: 0;
         @media (max-width: 1800px) {
             max-width: 1420px;
@@ -104,7 +106,7 @@ const Style = styled.section`
             display: flex;
             margin-top: 60px;
             width: 100%;
-            height: auto;
+            overflow: visible !important;
             @media (max-width: 985px) {
                 display: flex;
                 flex-direction: column;
@@ -206,7 +208,7 @@ const PostTemplate = ({ data }) => {
                             >
                             </div>
                         </article>
-                        <SideBar title={ blogTitle } slug={ slug } id={ id }/>
+                            <SideBar title={ blogTitle } slug={ slug } id={ id }/>
                     </main>
                     
                 </div>

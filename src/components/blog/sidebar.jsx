@@ -7,6 +7,9 @@ import Item from './item';
 const Style = styled.aside`
     font-family: "Poppins";
     width: 412px;
+    position: sticky;
+    top: 0;
+    right: 0;
     @media (max-width: 450px) {
         width: 100%;
     }
