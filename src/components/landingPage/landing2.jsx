@@ -20,6 +20,7 @@ const Style = styled.div`
     font-family: "Poppins";
     overflow: hidden;
     position: relative;
+    overflow: none;
     @media (max-width: 450px) {
         min-height: 90vh;
     }
@@ -34,6 +35,11 @@ const Style = styled.div`
         &-left {
             @media (max-width: 1600px) {
                 width: 180px;
+            }
+            @media (max-width: 1440px) {
+                width: 140px;
+                left: -70px;
+                bottom: 5%;
             }
             bottom: 10%;
             left: -7%;
@@ -63,6 +69,11 @@ const Style = styled.div`
                 top: -122px;
                 right: 370px;
             }
+            @media (max-width: 1440px) {
+                width: 80px;
+                top: -95px;
+                right: 370px;
+            }
         }
         &-top-right {
             top: -35px;
@@ -71,6 +82,11 @@ const Style = styled.div`
                 width: 200px;
                 top: -25px;
                 right: 490px;
+            }
+            @media (max-width: 1440px) {
+                width: 170px;
+                top: -23px;
+                right: 465px;
             }
         }
     }

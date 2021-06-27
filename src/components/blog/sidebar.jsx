@@ -92,7 +92,7 @@ const Style = styled.aside`
                 color: #FFFFFF;
                 font-family: "Poppins";
                 font-weight: 600px;
-                color: #000;
+                color: #fff;
                 font-size: 12px;
                 line-height: 18px;
                 letter-spacing: 1.36px;

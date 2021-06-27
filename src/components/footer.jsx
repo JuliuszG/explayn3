@@ -12,6 +12,7 @@ background: #272727;
 font-family: "Poppins";
 padding: 5% 0;
 position: relative;
+overflow: hidden;
 .decoration {
     position: absolute;
     right: 0;
