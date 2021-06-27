@@ -60,11 +60,6 @@ const Style = styled.section`
             transform: translateY(0%);
             padding-right: 5%;
         }
-        .related-title {
-            font-family: "Poppins";
-            font-size: 3rem;
-            font-weight: 600;
-        }
         .post-header {
             padding-right: 20%;
             @media (max-width: 800px) {
@@ -154,6 +149,14 @@ const Style = styled.section`
             }
         }
     }
+    .related-cnt {
+        .title {
+            display: inline-block;
+            font-family: "Poppins";
+            font-size: 3rem;
+            font-weight: 600;
+        }
+    }
 `
 const LandingScreen = styled(BackgroundImage)`
     background-position: ${({ framing }) => framing ? framing : 'center'};
@@ -212,7 +215,12 @@ const PostTemplate = ({ data }) => {
                     </main>
                     
                 </div>
-                <PostSlider filters={{ currentPost: id}} />
+                <div className="related-cnt">
+                    {/* <div className="title">
+                        Related Articles
+                    </div> */}
+                    <PostSlider filters={{ currentPost: id}} />
+                </div>
             </Style>
             <Footer />
         </Layout>

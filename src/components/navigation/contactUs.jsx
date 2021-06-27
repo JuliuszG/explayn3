@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { appContext } from '../context'
 
 const Cnt = styled.div`
-        width: 195px;
-        height: 45px;
+        width: 219px;
+        height: 58px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: ${ ({ color }) => color ? color : '#4C65FF' };
+        background: radial-gradient(#4c65ff 0%, #263380 100%);
         border-radius: 32px;
         color: ${ ({ text }) => text ? text : "#fff" };
         text-decoration: none;

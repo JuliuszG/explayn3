@@ -11,6 +11,10 @@ justify-content: center;
 align-content: center;
 margin-bottom: 10%;
 transform: translateY(-40%);
+.ttr {
+    color: #868686;
+    text-transform: uppercase;
+}
 @media (max-width: 1300px) {
     transform: translateY(0%);
     margin-bottom: 5%;
@@ -20,7 +24,7 @@ transform: translateY(-40%);
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
         position: relative;
         @media (max-width: 1400px) {
             padding: 2%;
@@ -32,6 +36,7 @@ transform: translateY(-40%);
             box-shadow: 0 0 40px #00000014;
             font-family: "Poppins";
             cursor: pointer;
+            margin: 0 50px;
             @media (max-width: 1400px) {
                 margin: 20px;
                 width: 300px;
@@ -133,29 +138,10 @@ transform: translateY(-40%);
         }
     }
     .title {
-        position: absolute;
-        top: -10rem;
-        left: 7.5rem;
-        font-family: "Poppins";
-        font-size: 3rem;
-        font-weight: 600;
-        @media (max-width: 1480px) {
-            left: 3rem;
-        }
-        @media (max-width: 1390px) {
-            left: 12rem;
-        }
-        @media (max-width: 1300px) {
-            top: -2rem;
-            left: 5rem;
-        }
-        @media (max-width: 1100px) {
-            position: static;
-        }
-        @media (max-width: 600px) {
-            padding: 0 5%;
-            font-size: 2rem;
-        }
+       display: block;
+       font-family: "Poppins";
+       font-size: 3rem;
+       transform: translateY(-10px);
     }
 `
 const PostSlider = ({ filters }) => {
@@ -197,9 +183,6 @@ const PostSlider = ({ filters }) => {
     }, [filter])
     const sliderCnt = (
             <div className="trending">
-                <h2 className="title">
-                    Related Articles
-                </h2>
                 {posts.map((post, index) => {
                     const { categories } = JSON.parse(post.categories)
                     return(
@@ -214,10 +197,10 @@ const PostSlider = ({ filters }) => {
                                 </h3>
                                 <div className="details">
                                         {categories.map(el => <span>{el.toUpperCase()}</span>)}
-                                        <span>{post.timeToRead}</span>
+                                        <span className="ttr">{post.timeToRead}</span>
                                 </div>
                                 <div className="link">
-                                     <a href={`/blog/${post.slug}`}>read more {'>'}</a>
+                                     <a href={`/blog/${post.slug}`}>READ THIS ARTICLE {'>'}</a>
                                 </div>
                             </div>
                     </div>
