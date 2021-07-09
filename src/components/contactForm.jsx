@@ -141,23 +141,30 @@ const Style = styled(motion.div)`
             }
     }
     .form-submit {
-            border-radius: 37px;
-            width: 260px;
-            height: 60px;
-            background: #4C64FF;
-            color: #fff;
-            outline: none;
-            border: none;
-            font-family: "Poppins", sans-serif;
-            font-size: 29px;
-            cursor: pointer;
-            transition: all 0.3s ease-in;
+        padding: 13px 70px;
+        font-family: "Poppins";
+        font-weight: 600;
+        border: none;
+        background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+        color: #ffffff !important;
+        font-size: 20px;
+        text-transform: uppercase;
+        border-radius: 32px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        letter-spacing: 0.65px;
+        cursor: pointer;
+           @media (hover: hover) {
             &:hover {
-                background: transparent;
-                color: #4C64FF;
-                border: 1px solid #4C64FF;
-                transform: scale(0.95)
+                color: #404040 !important;
+                font-weight: 600 !important;
+                letter-spacing: 3px;
+                background: none;
+                -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                transition: all 0.3s ease 0s;
             }
+           }
         }
         .exit-btn {
             position: absolute;

@@ -10,7 +10,6 @@ display: flex;
 justify-content: center;
 align-content: center;
 margin-bottom: 10%;
-transform: translateY(-40%);
 .ttr {
     color: #868686;
     text-transform: uppercase;
@@ -21,23 +20,36 @@ transform: translateY(-40%);
     margin-top: 5%;
 }
     .trending {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        width: 1500px;
         position: relative;
+        margin: 0 auto;
+        h3{
+            font-family: "Poppins";
+            font-size: 3rem;
+            margin-bottom: 80px;
+            text-align: center;
+        }
         @media (max-width: 1400px) {
             padding: 2%;
             justify-content: center;
         }
+        .post-cnt {
+            width: 100%;
+            flex-wrap: wrap;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+        }
         .slide {
             width: 400px;
-            height: 600px;
             box-shadow: 0 0 40px #00000014;
             font-family: "Poppins";
             cursor: pointer;
-            margin: 0 50px;
-            @media (max-width: 1400px) {
+            margin-right: 50px;
+            &:last-of-type {
+                margin-right: 0;
+            }
+            @media (max-width: 1480px) {
                 margin: 20px;
                 width: 300px;
                 height: 450px;
@@ -82,11 +94,12 @@ transform: translateY(-40%);
             .content {
                 height: 50%;
                 width: 100%;
-                padding: 30px;
+                padding: 20px 20px 40px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                @media (max-width: 1400px) {
+                align-items: flex-start;
+                @media (max-width: 1480px) {
                     padding: 20px;
                 }
                 @media (max-width: 1024px) {
@@ -96,9 +109,10 @@ transform: translateY(-40%);
                     padding: 20px;
                 }
                 h3 {
-                    font-size: 30px;
-                    line-height: 50px;
-                    @media (max-width: 1400px) {
+                    font-size: 25px;
+                    line-height: 40px;
+                    text-align: left;
+                    @media (max-width: 1480px) {
                         font-size: 20px;
                         line-height: 30px;
                     }
@@ -114,9 +128,20 @@ transform: translateY(-40%);
                 .details {
                     width: 100%;
                     display: flex;
-                    justify-content: space-around;
                     font-size: 12px;
                     color: #4C65FF;
+                    @media (max-width: 1500px) {
+                        font-size: 10px;
+                    }
+                    span {
+                        margin-right: 50px;
+                        @media (max-width: 1500px) {
+                            margin-right: 20px;
+                        }
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
                 }
                 .link {
                     width: 100%;
@@ -183,6 +208,8 @@ const PostSlider = ({ filters }) => {
     }, [filter])
     const sliderCnt = (
             <div className="trending">
+                <h3>Related articles</h3>
+                <div className="post-cnt">
                 {posts.map((post, index) => {
                     const { categories } = JSON.parse(post.categories)
                     return(
@@ -205,6 +232,7 @@ const PostSlider = ({ filters }) => {
                             </div>
                     </div>
                 )})}
+                </div>
         </div>
     )
     return (

@@ -91,10 +91,22 @@ const Style = styled.div`
         }
     }
     .scroll {
+        width: 100px;
         position: absolute;
         bottom: 20px;
         left: calc(50% - 50px);
         cursor: pointer;
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title {
+                transform: translate(0, 25px);
+                color: #cccccc;
+            }
+        }
     }
     .cnt {
         max-width: 1400px;
@@ -226,7 +238,12 @@ const Landing2 = () => {
                 </div>
             </div>
             <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
-                <img src={More} alt="scroll down" />
+                <div className="content">
+                    <div className="title">
+                    learn more
+                    </div>
+                    <img src={More} alt="scroll down" />
+                </div>
             </ScLink>
         </Style>
     )

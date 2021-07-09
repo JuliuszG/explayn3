@@ -125,7 +125,7 @@ const BoxStyle = styled.div`
         width: 300px;
     }
     @media (max-width: 956px) {
-        width: 100%;
+        max-width: 300px;
     }
     h3 {
         max-width: 240px;
@@ -283,7 +283,6 @@ const Header = ({ src }) => {
                 We craft the best digital experience from a brand strategy to web development to digital marketing.
                 </motion.p>
             </div>
-            <ImageHeader fluid={ src } alt="half-circle" />
         </HeaderStyle>
     )
 }

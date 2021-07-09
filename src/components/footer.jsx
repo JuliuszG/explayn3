@@ -240,7 +240,7 @@ const Footer = () => {
                         NEWSLETTER
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.
+                        Join our community and get our best insights, tips and strategies delivered straight to your inbox.
                     </p>
                     <div className="form-grp">
                         <form onSubmit={e => handleSubmit(e)}>

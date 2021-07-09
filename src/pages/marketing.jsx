@@ -31,11 +31,23 @@ font-family: "Poppins";
         align-items: center;
         position: relative;
         .scroll {
-            position: absolute;
-            bottom: 20px;
-            left: calc(50% - 50px);
-            cursor: pointer;
+        width: 100px;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 50px);
+        cursor: pointer;
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title {
+                transform: translate(0, 25px);
+                color: #cccccc;
+            }
         }
+    }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -356,8 +368,13 @@ const Marketing = () => {
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
-                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
-                        <img src={More} alt="scroll down" />
+                    <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
+                        <div className="content">
+                            <div className="title">
+                            learn more
+                            </div>
+                            <img src={More} alt="scroll down" />
+                        </div>
                     </ScLink>
                 </div>
                 <ServicesSection id="services-section">

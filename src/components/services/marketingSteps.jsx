@@ -113,7 +113,7 @@ const Style = styled.div`
                         display: block;
                     }
                     &:nth-of-type(1)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "Great things are built on research. The first phase oscillate around meetings to learn about your business goals and challenges. Once we have a better understanding of your needs we begin multi-platform research including target audience analysis, user journey analysis, keyword data & market condition.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -139,7 +139,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(3)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "Once we’redone with research and identifying tasks, it's time to develop your digital marketing strategy. This is where we will develop a thorough action plan that aligns with your goals. A detailed strategy will include all the components and tools needed to reach your audience.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -165,7 +165,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(5)::after {
-                        content: "This is our favorite part of the process. It’s where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
+                        content: 'This is our favorite stage, where we use all our grey cells to deliver creative and engaging content for your future customer. We use knowledge and techniques to create creations geared towards conversions that are ultimately meant to "close the deal".';
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -190,7 +190,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(7)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "It's showtime.  At this moment, we introduce you and your value proposition to clients. We focus on meeting specific objectives and tailoring activities to maximize the effect. We make sure the campaign runs smoothly, we test the content, and analyze the results.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -216,7 +216,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(9)::after {
-                        content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.";
+                        content: "At this stage, we monitor campaigns and study customer behavior. We also evaluate the effectiveness of the campaign and the resources created. We create reports and discussing future steps.";
                         display: none;
                         position: absolute;
                         top: 12vw;
