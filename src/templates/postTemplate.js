@@ -113,6 +113,14 @@ const Style = styled.section`
                     width: 100%;
                     margin-right: 0;
                 }
+                ul li {
+                    line-height: 140%;
+                }
+                ol li {
+                    line-height: 140%;
+                    list-style: circle;
+                    margin-left: 6%;
+                }
                 .lead {
                     font-family: "Poppins";
                     margin: 128px 0;

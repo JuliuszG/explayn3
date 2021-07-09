@@ -115,23 +115,30 @@ const Style = styled.aside`
                 }
             }
             button {
-                font-family: "Poppins";
-                font-size: 12px;
-                line-height: 18px;
-                letter-spacing: 1.36px;
-                font-weight: 600;
-                outline: none;
-                border: none;
-                cursor: pointer;
-                background: #E8EBFB;
-                width: 147px;
-                height: 31px;
-                border-radius: 16px;
-                color: #4A62F7;
-                transition: 0.1s;
-                &:hover {
-                    transform: scale(1.05);
-                }
+        padding: 7px 20px;
+        font-family: "Poppins";
+        font-weight: 600;
+        border: none;
+        background: #e8ebfb;
+        color: #4a62f7 !important;
+        font-size: 13px;
+        border-radius: 32px;
+        display: inline-block;
+        transition: all 0.3s ease 0s;
+        letter-spacing: 0.65px;
+        cursor: pointer;
+           @media (hover: hover) {
+            &:hover {
+                color: #fff !important;
+                font-weight: 600 !important;
+                letter-spacing: 3px;
+                background: none;
+                background: #484d5b;
+                -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                transition: all 0.3s ease 0s;
+            }
+           }
             }
         }
     }

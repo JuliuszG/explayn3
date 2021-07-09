@@ -45,11 +45,23 @@ font-family: "Poppins";
         align-items: center;
         position: relative;
         .scroll {
-            position: absolute;
-            bottom: 20px;
-            left: calc(50% - 50px);
-            cursor: pointer;
+        width: 100px;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 50px);
+        cursor: pointer;
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title {
+                transform: translate(0, 25px);
+                color: #cccccc;
+            }
         }
+    }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -265,13 +277,17 @@ font-family: "Poppins";
        min-height: 100vh;
        padding: 10%;
        h2 {
-            width: 449px;
+            width: 85%;
             font-size: 3.4375rem;
             line-height: 138%;
             margin-bottom: 100px;
             font-weight: 600;
+            @media (max-width: 900px) {
+                font-size: 3rem;
+           }
             @media (max-width: 600px) {
-                width: 100%
+                width: 100%;
+                font-size: 2.5rem;
            }
        }
        &-cnt {
@@ -360,8 +376,13 @@ const Development = () => {
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
-                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
-                        <img src={More} alt="scroll down" />
+                    <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
+                        <div className="content">
+                            <div className="title">
+                            learn more
+                            </div>
+                            <img src={More} alt="scroll down" />
+                        </div>
                     </ScLink>
                 </div>
                 <ServicesSection id="services-section">
@@ -400,7 +421,7 @@ const Development = () => {
                     <div className="decoration"></div>
                     <div className="text-cnt">
                         <p>
-                        A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.
+                            A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, but a key aspect of your business and marketing strategy.
                         </p>
                         <p>
                         With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly.
@@ -470,7 +491,7 @@ const Development = () => {
                             javascript
                         </h4>
                     </div>
-                    <div className="icon-cnt">
+                    {/* <div className="icon-cnt">
                         <div className="icon"><img src={Three} alt="three js icon" /></div>
                         <h4>
                             three.js
@@ -499,13 +520,13 @@ const Development = () => {
                         <h4>
                             wordpress
                         </h4>
-                    </div>
+                    </div> */}
                     </div>
                 </div>
             </div>
             <div className="section-5">
                 <h2>
-                    Key values for our products
+                We create enterprise web services and small business web solutions that set you apart from the competitors.
                 </h2>
                 <div className="section-5-cnt">
                     <div className="section-5-item">

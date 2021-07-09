@@ -113,7 +113,7 @@ const Style = styled.div`
                         display: block;
                     }
                     &:nth-of-type(1)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -139,7 +139,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(3)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -165,7 +165,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(5)::after {
-                        content: "This is our favorite part of the process. It’s where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
+                        content: "This is our favorite part of the process. It's where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -190,7 +190,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(7)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -216,7 +216,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(9)::after {
-                        content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.";
+                        content: "This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization.";
                         display: none;
                         position: absolute;
                         top: 12vw;

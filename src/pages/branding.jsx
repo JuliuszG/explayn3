@@ -31,11 +31,23 @@ font-family: "Poppins";
         align-items: center;
         position: relative;
         .scroll {
-            position: absolute;
-            bottom: 20px;
-            left: calc(50% - 50px);
-            cursor: pointer;
+        width: 100px;
+        position: absolute;
+        bottom: 20px;
+        left: calc(50% - 50px);
+        cursor: pointer;
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .title {
+                transform: translate(0, 25px);
+                color: #cccccc;
+            }
         }
+    }
         @media (max-width: 1550px) {
             font-size: 12px;
         }
@@ -349,16 +361,19 @@ const Branding = () => {
                             Branding
                         </h1>
                         <p>
-                            We make every experience people have with your business worth remembering. 
-                            We build brands that can’t be ignored. Brands that matter. 
-                            Brands that make a lasting connection with your customers.
+                        We make every experience people have with your business worth remembering. We build brands that can't be ignored. Brands that matter. Brands that make a lasting connection with your customers. Branding that sells
                         </p>
                     </div>
                     <div className="landing-image">
                         <img src={HeaderImg} alt="dev icon"/>
                     </div>
-                    <ScLink className="scroll" to={"services-section"} smooth duration={500}>
-                        <img src={More} alt="scroll down" />
+                    <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
+                        <div className="content">
+                            <div className="title">
+                            learn more
+                            </div>
+                            <img src={More} alt="scroll down" />
+                        </div>
                     </ScLink>
                 </div>
                 <ServicesSection id="services-section">
@@ -438,8 +453,8 @@ const Branding = () => {
                                 Recognition
                             </h4>
                             <p>
-                                The most important reason why branding is crucial to a company’s success 
-                                is that it is how a company gets recognized and written permanently in the minds of consumers.
+                                The most important reason why branding is crucial to a company's success is 
+                                that it is how a company gets recognized and written permanently in the minds of consumers.
                             </p>
                         </div>
                     </div>
@@ -451,9 +466,8 @@ const Branding = () => {
                             <h4>
                                 Business Value
                             </h4>
-                            <p>
-                                A strongly established brand increases the value of a company, 
-                                giving it more momentum. 
+                            <p>                   
+                                A strongly established brand increases the value of a company, giving it more momentum. 
                                 This makes it a more attractive investment opportunity because of its firmly established place in the market.
                             </p>
                         </div>
@@ -467,7 +481,7 @@ const Branding = () => {
                                 Trust
                             </h4>
                             <p>
-                                A professional appearance and well-designed branding will help a company build trust among with consumers and partners. 
+                                A professional appearance and well-designed branding will help a company build trust among consumers and partners. 
                                 People are more likely to do business with a company that has a great-looking and professional image.
                             </p>
                         </div>

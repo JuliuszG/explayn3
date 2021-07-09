@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { appContext } from '../context'
 
 const Cnt = styled.div`
-        width: 219px;
-        height: 58px;
+        width: 194px;
+        height: 50px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: radial-gradient(#4c65ff 0%, #263380 100%);
+        background-image: linear-gradient(#4c65ff 0%, #263380 180%);
         border-radius: 32px;
         color: ${ ({ text }) => text ? text : "#fff" };
         text-decoration: none;
@@ -18,9 +18,16 @@ const Cnt = styled.div`
         font-weight: 600;
         transition: all 0.1s ease-in;
         cursor: pointer;
-        &:hover {
-            transform: scale(1.1);
-            filter: brightness(120%);
+        @media (hover: hover) {
+            &:hover {
+                color: #404040 !important;
+                font-weight: 600 !important;
+                letter-spacing: 3px;
+                background: none;
+                -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+                transition: all 0.3s ease 0s;
+        }
         }
 `
 

@@ -113,7 +113,7 @@ const Style = styled.div`
                         display: block;
                     }
                     &:nth-of-type(1)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -139,7 +139,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(3)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -165,7 +165,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(5)::after {
-                        content: "This is our favorite part of the process. It’s where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
+                        content: "At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -190,7 +190,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-of-type(7)::after {
-                        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges, to a thoroughly understand ing of your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+                        content: "Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.";
                         display: none;
                         position: absolute;
                         top: 12vw;
@@ -216,7 +216,7 @@ const Style = styled.div`
                         z-index: 565;
                     }
                     &:nth-child(9)::after {
-                        content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We make final touches and the website is ready to upload online.";
+                        content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.";
                         display: none;
                         position: absolute;
                         top: 12vw;
