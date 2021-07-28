@@ -1,5 +1,4 @@
 import React from "react"
-
 import { SocialMediaWrapper } from "../styled"
 
 const SocialMedia = ({ title, slug }) => {

@@ -1,25 +1,28 @@
 import React from "react"
 import { Link } from "gatsby"
 import { motion } from "framer-motion"
+
+const animations = {
+  initial: {
+    scale: 0,
+    opacity: 0,
+  },
+  animate: {
+    scale: 1,
+    opacity: 1,
+  },
+  exit: {
+    opacity: 0,
+  },
+  transition: {
+    stiffness: 500,
+    damping: 50,
+  },
+}
+
 const Item = ({ post }) => {
   const { categories } = JSON.parse(post.categories)
-  const animations = {
-    initial: {
-      scale: 0,
-      opacity: 0,
-    },
-    animate: {
-      scale: 1,
-      opacity: 1,
-    },
-    exit: {
-      opacity: 0,
-    },
-    transition: {
-      stiffness: 500,
-      damping: 50,
-    },
-  }
+
   return (
     <motion.div {...animations} layout className="trending-post">
       <div className="categories">

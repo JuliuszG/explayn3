@@ -1,8 +1,5 @@
 import React from "react"
-import Avallon from "../../images/partners/avallon.svg"
-import PG from "../../images/partners/pg.svg"
-import Redbull from "../../images/partners/redbull.svg"
-import Tajm from "../../images/partners/tajm.svg"
+import { cardData } from "../../lib/partners"
 import { PartnersWrapper, CardWrapper, CardLogo, CardLink } from "../styled"
 
 const Card = ({ item }) => {
@@ -21,36 +18,6 @@ const Card = ({ item }) => {
 }
 
 const Partners = () => {
-  const cardData = [
-    {
-      image: {
-        src: PG,
-        alt: "P&G",
-      },
-      name: "pg.com",
-    },
-    {
-      image: {
-        src: Redbull,
-        alt: "redbull.com logo",
-      },
-      name: "redbull.com",
-    },
-    {
-      image: {
-        src: Avallon,
-        alt: "Avalon.com logo",
-      },
-      name: "avallon.pl",
-    },
-    {
-      image: {
-        src: Tajm,
-        alt: "Tajm.com logo",
-      },
-      name: "tajm.pl",
-    },
-  ]
   return (
     <PartnersWrapper>
       {cardData.map((item, index) => (

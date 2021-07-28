@@ -29,7 +29,7 @@ const categories = [
   "OTHER",
 ]
 
-const ContactVariant = {
+const contactVariant = {
   in: {
     y: 0,
     transition: {
@@ -190,7 +190,7 @@ export const ContactForm = () => {
 
   return (
     <ContactFormWrapper
-      variants={ContactVariant}
+      variants={contactVariant}
       animate="in"
       initial="out"
       exit="exit"
