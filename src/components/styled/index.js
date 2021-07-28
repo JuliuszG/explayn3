@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
 
+//blog/author.jsx
+
 export const AuthorWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -54,7 +56,7 @@ export const AuthorPic = styled(Image)`
   height: 100%;
   border-radius: 50%;
 `
-
+//blog/postSLider.js
 export const PostSliderWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -235,4 +237,196 @@ export const SlideImage = styled(Image)`
   object-fit: cover;
   width: 100%;
   height: 100%;
+`
+
+//blog/sidebar.jsx
+export const SideBarWrapper = styled.aside`
+  font-family: "Poppins";
+  width: 412px;
+  padding-right: 20px;
+  @media (max-width: 450px) {
+    width: 100%;
+  }
+  h3 {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 1.36px;
+    color: #868686;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  .trending {
+  }
+`
+
+export const SideBarTrending = styled.div`
+  a {
+    text-decoration: none;
+    margin-bottom: 20px;
+    display: block;
+    h2 {
+      font-size: 30px;
+      line-height: 50px;
+      color: #000;
+    }
+  }
+`
+export const SideBarTrendingFilters = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`
+
+export const SideBarTrendingFilter = styled.div`
+  margin-bottom: 10px;
+  margin-right: 10px;
+  padding: 0 25px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 27px;
+  letter-spacing: -0.22px;
+  color: #000;
+  border: 1px solid #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  @media (hover: hover) {
+    &:hover {
+      border-color: #5163f6;
+      background: #5163f6;
+      color: #fff;
+    }
+  }
+  ${({ isActive }) =>
+    isActive && "border-color: #5163f6; background: #5163f6; color: #fff;"}
+`
+
+//blog/sideSocialMedia.jsx
+export const SocialMediaWrapper = styled.div`
+  margin-bottom: 59px;
+  a {
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    margin-right: 40px;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    @media (hover: hover) {
+      &:hover svg path {
+        fill: #636363;
+      }
+    }
+    svg path {
+      transition: 0.3s ease-in;
+    }
+  }
+`
+
+//blog/sideNewsletter.jsx
+
+export const NewsletterWrapper = styled.div`
+  margin-bottom: 59px;
+  background-color: #4a62f7;
+  border: 1px solid #707070;
+  border-radius: 16px;
+  padding: 50px;
+  @media (max-width: 1480px) {
+    padding: 25px;
+  }
+
+  h3 {
+    color: #ffffff;
+  }
+  p {
+    font-size: 18px;
+    line-height: 29px;
+    letter-spacing: 0.05px;
+    color: #fff;
+    margin-bottom: 30px;
+    @media (max-width: 1480px) {
+      font-size: 12px;
+    }
+  }
+  form {
+    input {
+      display: block;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #ffffff;
+      width: 100%;
+      color: #ffffff;
+      font-family: "Poppins";
+      font-weight: 600px;
+      color: #fff;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 1.36px;
+      margin-bottom: 32px;
+      background: transparent;
+      @media (max-width: 1480px) {
+        font-size: 10px;
+      }
+      &::placeholder {
+        font-family: "Poppins";
+        padding-left: 22px;
+        font-weight: 600px;
+        color: #ffffff;
+        font-size: 12px;
+        line-height: 18px;
+        @media (max-width: 1480px) {
+          font-size: 10px;
+        }
+        letter-spacing: 1.36px;
+      }
+    }
+    button {
+      padding: 7px 20px;
+      font-family: "Poppins";
+      font-weight: 600;
+      border: none;
+      background: #e8ebfb;
+      color: #4a62f7 !important;
+      font-size: 13px;
+      border-radius: 32px;
+      display: inline-block;
+      transition: all 0.3s ease 0s;
+      letter-spacing: 0.65px;
+      cursor: pointer;
+      @media (hover: hover) {
+        &:hover {
+          color: #fff !important;
+          font-weight: 600 !important;
+          letter-spacing: 3px;
+          background: none;
+          background: #484d5b;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          transition: all 0.3s ease 0s;
+        }
+      }
+    }
+  }
+`
+export const NewsletterThanks = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  img {
+    width: 40px;
+    margin-bottom: 40px;
+  }
+`
+export const NewsletterDescription = styled.div`
+  display: flex;
+  align-items: flex-start;
+  img {
+    margin-top: 10px;
+    margin-right: 20px;
+  }
 `
