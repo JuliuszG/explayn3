@@ -1149,3 +1149,205 @@ export const FooterDecoration = styled.div`
     height: 155px;
   }
 `
+//contactForm.jsx
+
+export const ContactFormWrapper = styled(motion.div)`
+  min-height: 100%;
+  padding: 5% 16%;
+  z-index: 999;
+  font-size: 15px;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5.25em;
+    letter-spacing: -1.34px;
+    color: #000000;
+    line-height: 148%;
+    margin-bottom: 2.38vh;
+    @media (max-width: 500px) {
+      font-size: 4em;
+    }
+  }
+  p,
+  h4 {
+    font-size: 1.5em;
+    letter-spacing: -1.08px;
+    color: #000000;
+    line-height: 145%;
+  }
+  p {
+    margin-bottom: 3vh;
+    width: 50%;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+  h4 {
+    margin-bottom: 15px;
+  }
+  form {
+    width: 50%;
+    @media (max-width: 1600px) {
+      width: 65%;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+`
+
+export const ContactCategories = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+  margin-bottom: 0.99vh;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+`
+export const ContactCategory = styled.label`
+  margin-right: 5px;
+  margin-bottom: 10px;
+  font-weight: 300;
+  padding: 3px;
+  color: #1a1a1a;
+  background-color: #fff;
+  border: 1px solid #333;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in;
+  font-size: 20px;
+  position: relative;
+  user-select: none;
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    cursor: pointer;
+    opacity: 0;
+  }
+  span {
+    font-weight: 700;
+  }
+  ${({ isActive }) =>
+    isActive && " border-color: #5163f6; background: #5163f6; color: #fff;"}
+  @media (hover: hover) {
+    &:hover {
+      border-color: #5163f6;
+      background: #5163f6;
+      color: #fff;
+    }
+  }
+`
+
+export const FormErrorMessage = styled.small`
+  color: red;
+  display: block;
+  ${({ space }) => space && "margin-bottom: 3vh;"}
+`
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3vh;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  label {
+    font-size: 1.5em;
+    line-height: 148%;
+  }
+  input {
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    outline: none;
+    font-size: 1.2em;
+  }
+  textarea {
+    resize: none;
+    outline: none;
+    height: 11.7vh;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+  }
+`
+export const FormButtonContainer = styled.div`
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    margin: 2vh 0 0 0;
+  }
+`
+export const FormSubmitButton = styled.button`
+  padding: 13px 70px;
+  font-family: "Poppins";
+  font-weight: 600;
+  border: none;
+  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+  color: #ffffff !important;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-radius: 32px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+  letter-spacing: 0.65px;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      color: #404040 !important;
+      font-weight: 600 !important;
+      letter-spacing: 3px;
+      background: none;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.3s ease 0s;
+    }
+  }
+`
+export const ExitButton = styled.button`
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  border: none;
+  width: 38px;
+  height: 38px;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  @media (max-width: 500px) {
+    top: 3%;
+  }
+  &:hover {
+    transform: rotate(-90deg);
+  }
+  .bar {
+    width: 100%;
+    height: 2px;
+    background: #000;
+    &:first-of-type {
+      transform: translateY(0.8px) rotate(135deg);
+    }
+    &:last-of-type {
+      transform: translateY(-0.8px) rotate(-135deg);
+    }
+  }
+  .sr-only {
+    display: none;
+  }
+`
+export const ContactDecoration = styled.img`
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  @media (max-width: 1024px) {
+    display: none;
+  }
+`
