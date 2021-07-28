@@ -430,3 +430,14 @@ export const NewsletterDescription = styled.div`
     margin-right: 20px;
   }
 `
+//cases/caseBigScreen.jsx
+
+export const BigScreenWrapper = styled.div`
+  position: relative;
+  height: 100vh;
+  margin-top: 25%;
+`
+export const BigScreenImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`
