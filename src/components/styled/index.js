@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
+import { colors } from "../../styles/colors"
 
 //blog/author.jsx
 
@@ -430,14 +431,206 @@ export const NewsletterDescription = styled.div`
     margin-right: 20px;
   }
 `
-//cases/caseBigScreen.jsx
 
+//cases/caseBigScreen.jsx
 export const BigScreenWrapper = styled.div`
   position: relative;
   height: 100vh;
   margin-top: 25%;
 `
+
 export const BigScreenImage = styled(Image)`
   width: 100%;
   height: 100%;
+`
+
+//cases/caseData.jsx
+export const CaseDataWrapper = styled.section`
+  display: flex;
+  padding: 15%;
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral100};
+  @media (max-width: 1400px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1250px) {
+    font-size: 10px;
+  }
+  @media (max-width: 968px) {
+    font-size: 16px;
+    flex-direction: column;
+  }
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    padding: 10% 5%;
+  }
+`
+
+export const CaseDataLeft = styled.div`
+  width: 70%;
+  margin-right: 15%;
+  @media (max-width: 968px) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 3.3125em;
+    line-height: 143.39%;
+    margin-bottom: 8%;
+  }
+  p {
+    padding-right: 10%;
+    font-weight: 300;
+    font-size: 1.1875em;
+    line-height: 168.42%;
+    margin-bottom: 8%;
+  }
+  a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 29px;
+    color: ${colors.neutral100};
+    border-bottom: 1.3px solid ${colors.neutral100};
+    padding-bottom: 1%;
+  }
+`
+
+export const CaseDataRight = styled.ul`
+  width: 440px;
+  border: 1.3px solid ${colors.neutral30};
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (max-width: 968px) {
+    width: 100%;
+    padding-left: 5%;
+  }
+  li {
+    span {
+      display: block;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: ${colors.neutral60};
+    }
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 29px;
+    border-bottom: 1px solid ${colors.neutral30};
+    padding: 10% 0;
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+`
+//cases/caseDescription.jsx
+
+export const CaseDescriptionWrapper = styled.section`
+  position: relative;
+  padding: 15% 15% 5%;
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral100};
+  @media (max-width: 1250px) {
+    font-size: 14px;
+  }
+  @media (max-width: 950px) {
+    font-size: 12px;
+  }
+  @media (max-width: 650px) {
+    font-size: 10px;
+    padding: 25% 5% 5%;
+  }
+  @media (max-width: 450px) {
+    padding: 30% 5% 15%;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 3.3125em;
+    line-height: 143.39%;
+    width: 80%;
+    margin-bottom: 8%;
+    @media (max-width: 950px) {
+      width: 100%;
+    }
+    @media (max-width: 650px) {
+      font-size: 2.3125em;
+    }
+  }
+`
+
+export const CaseDescriptionDescription = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 650px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  p {
+    width: 40%;
+    font-weight: 300;
+    font-size: 1.1875em;
+    line-height: 168.42%;
+    margin-bottom: 5%;
+    @media (max-width: 650px) {
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+`
+
+export const ZigZag = styled.div`
+  width: 227px;
+  height: 113px;
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  @media (max-width: 950px) {
+    width: 147px;
+    height: 33px;
+    top: 5%;
+    right: 5%;
+  }
+  @media (max-width: 650px) {
+    width: 127px;
+    height: 13px;
+    top: 3%;
+    left: 3%;
+  }
+`
+//cases/caseDoubleImage.jsx
+
+export const CaseDoubleImageWrapper = styled.div`
+  display: flex;
+  margin: 5% 0;
+  @media (max-width: 950px) {
+    flex-direction: column;
+  }
+`
+
+export const DoubleImageWrapper = styled.div`
+  width: 50%;
+  height: 80vh;
+  @media (max-width: 950px) {
+    width: 100%;
+  }
+`
+
+export const CaseDoubleImageImage = styled(Image)`
+  height: 100%;
+  object-fit: contain;
 `
