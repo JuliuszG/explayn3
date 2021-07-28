@@ -940,3 +940,212 @@ export const LoaderWrapper = styled(motion.div)`
     height: 64px;
   }
 `
+
+//footer.jsx
+export const FooterWrapper = styled.footer`
+  width: 100%;
+  min-height: 100vh;
+  background: #272727;
+  font-family: "Poppins";
+  padding: 5% 0;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 1024px) {
+    padding: 10%;
+  }
+  h3 {
+    color: #ffffff;
+    font-size: 1.575rem;
+    font-weight: 600;
+    line-height: 153%;
+    @media (max-width: 600px) {
+      font-size: 1.3rem;
+    }
+  }
+  a {
+    color: #aaaaaa;
+    font-size: 1rem;
+    line-height: 145%;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+    @media (hover: hover) {
+      &:hover {
+        color: #fff;
+      }
+    }
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+  .cnt {
+  }
+  .site-links-column {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      margin-bottom: 33px;
+    }
+    a {
+      margin-bottom: 33px;
+    }
+  }
+  .sl1 {
+    grid-area: sl1;
+  }
+  .sl2 {
+    grid-area: sl2;
+  }
+  .sl3 {
+    grid-area: sl3;
+  }
+`
+
+export const FooterContent = styled.div`
+  max-width: 1500px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: auto;
+  row-gap: 60px;
+  grid-template-areas:
+    "contact contact . . sl1 . sl2 . sl3"
+    "newsletter newsletter newsletter . sl1 . sl2 . sl3"
+    "social social social social . . . . .";
+  @media (max-width: 1500px) {
+    max-width: 1100px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-areas:
+      "contact contact . . . sl1 . sl2 . sl3"
+      "newsletter newsletter newsletter newsletter . sl1 . sl2 .sl3"
+      "social social social social . . . .";
+  }
+  @media (max-width: 1200px) {
+    max-width: 800px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "contact contact . ."
+      "newsletter newsletter newsletter newsletter"
+      "social social . ."
+      "sl1 sl1 . ."
+      "sl2 sl2 . ."
+      "sl3 sl3 . .";
+  }
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "newsletter newsletter"
+      "sl1 sl2"
+      "sl3 sl3"
+      "social ."
+      "contact contact";
+  }
+  @media (max-width: 650px) {
+    grid-template-areas:
+      "newsletter newsletter"
+      "sl1 sl2"
+      "sl3 sl3"
+      "social social"
+      "contact contact";
+  }
+  @media (max-width: 600px) {
+    column-gap: 20px;
+  }
+`
+
+export const FooterContactUs = styled.div`
+  grid-area: contact;
+  & div {
+    margin: 12px 0;
+  }
+`
+
+export const FooterNewsletter = styled.div`
+  grid-area: newsletter;
+  p {
+    color: #aaaaaa;
+    font-size: 1rem;
+    line-height: 145%;
+    margin-bottom: 40px;
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+`
+
+export const FooterFormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  form {
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    color: #aaaaaa;
+    font-size: 1.2rem;
+    line-height: 145%;
+    font-weight: 300;
+    @media (max-width: 600px) {
+      width: 70%;
+    }
+    &::placeholder {
+      color: #aaaaaa;
+      font-size: 1.2rem;
+      line-height: 145%;
+      font-weight: 300;
+    }
+  }
+  button {
+    background: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    margin-left: 4%;
+  }
+`
+
+export const FotterSocialMedia = styled.div`
+  grid-area: social;
+  width: 100%;
+`
+
+export const FooterSocialMediaContent = styled.div`
+  margin-top: 23px;
+  max-width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: 650px) {
+    max-width: 250px;
+  }
+  a {
+    width: 50%;
+    margin-bottom: 32px;
+    &:nth-child(even) {
+      text-align: end;
+    }
+  }
+`
+
+export const FooterDecoration = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 15%;
+  width: 258px;
+  @media (max-width: 1024px) {
+    position: static;
+    margin-left: auto;
+  }
+  @media (max-width: 600px) {
+    width: 90px;
+    height: 155px;
+  }
+`
