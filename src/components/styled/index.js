@@ -4,7 +4,6 @@ import { colors } from "../../styles/colors"
 import BackgroundImage from "gatsby-background-image"
 
 //blog/author.jsx
-
 export const AuthorWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -58,6 +57,7 @@ export const AuthorPic = styled(Image)`
   height: 100%;
   border-radius: 50%;
 `
+
 //blog/postSLider.js
 export const PostSliderWrapper = styled.div`
   display: flex;
@@ -83,6 +83,7 @@ export const PostSliderWrapper = styled.div`
     transform: translateY(-10px);
   }
 `
+
 export const Trending = styled.div`
   width: 1500px;
   position: relative;
@@ -98,6 +99,7 @@ export const Trending = styled.div`
     justify-content: center;
   }
 `
+
 export const PostSliderItems = styled.div`
   width: 100%;
   flex-wrap: wrap;
@@ -166,6 +168,7 @@ export const Slide = styled.div`
     opacity: 1;
   }
 `
+
 export const SlideImageContainer = styled.div`
   width: 100%;
   height: 50%;
@@ -213,6 +216,7 @@ export const SlideContent = styled.div`
     }
   }
 `
+
 export const SlideContentDetails = styled.div`
   width: 100%;
   display: flex;
@@ -235,6 +239,7 @@ export const SlideContentDetails = styled.div`
     text-transform: uppercase;
   }
 `
+
 export const SlideImage = styled(Image)`
   object-fit: cover;
   width: 100%;
@@ -273,6 +278,7 @@ export const SideBarTrending = styled.div`
     }
   }
 `
+
 export const SideBarTrendingFilters = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -328,7 +334,6 @@ export const SocialMediaWrapper = styled.div`
 `
 
 //blog/sideNewsletter.jsx
-
 export const NewsletterWrapper = styled.div`
   margin-bottom: 59px;
   background-color: #4a62f7;
@@ -412,6 +417,7 @@ export const NewsletterWrapper = styled.div`
     }
   }
 `
+
 export const NewsletterThanks = styled.div`
   display: flex;
   flex-direction: column;
@@ -424,6 +430,7 @@ export const NewsletterThanks = styled.div`
     margin-bottom: 40px;
   }
 `
+
 export const NewsletterDescription = styled.div`
   display: flex;
   align-items: flex-start;
@@ -534,8 +541,8 @@ export const CaseDataRight = styled.ul`
     }
   }
 `
-//cases/caseDescription.jsx
 
+//cases/caseDescription.jsx
 export const CaseDescriptionWrapper = styled.section`
   position: relative;
   padding: 15% 15% 5%;
@@ -613,8 +620,8 @@ export const ZigZag = styled.div`
     left: 3%;
   }
 `
-//cases/caseDoubleImage.jsx
 
+//cases/caseDoubleImage.jsx
 export const CaseDoubleImageWrapper = styled.div`
   display: flex;
   margin: 5% 0;
@@ -658,6 +665,7 @@ export const CaseLandingCircle = styled.div`
     bottom: -2%;
   }
 `
+
 //case/caseLanding.jsx
 export const CaseListWrapper = styled.section`
   padding: 15%;
@@ -681,6 +689,7 @@ export const CaseListWrapper = styled.section`
     }
   }
 `
+
 export const CaseListContentWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -734,5 +743,57 @@ export const CaseListContentWrapper = styled.div`
         height: 1.5em;
       }
     }
+  }
+`
+
+//case/caseScreen.jsx
+export const CaseScreenWrapper = styled.div`
+  padding: 0 15% 5%;
+  width: 100%;
+  @media (max-width: 450px) {
+    padding: 0 5%;
+  }
+`
+
+export const CaseScreenImage = styled(Image)`
+  width: 100%;
+  height: 100%;
+`
+
+//case/caseScreen.jsx
+export const CaseVideoWrapper = styled.div`
+  padding: 0 10%;
+  @media (max-width: 960px) {
+    padding: 10% 0;
+  }
+`
+
+export const VideoWrapper = styled.div`
+  height: calc(100vh - 100px);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(${({ bg }) => bg});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px solid black;
+    img {
+      cursor: pointer;
+    }
+  }
+  iframe {
+    z-index: 40;
+    width: 100%;
+    height: 100%;
   }
 `
