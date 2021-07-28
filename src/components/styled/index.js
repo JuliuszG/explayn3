@@ -637,7 +637,6 @@ export const CaseDoubleImageImage = styled(Image)`
 `
 
 //case/caseLanding.jsx
-
 export const CaseLandingWrapper = styled(BackgroundImage)`
   width: 100%;
   background-color: #040e18;
@@ -657,5 +656,83 @@ export const CaseLandingCircle = styled.div`
     width: 87px;
     height: 69.5px;
     bottom: -2%;
+  }
+`
+//case/caseLanding.jsx
+export const CaseListWrapper = styled.section`
+  padding: 15%;
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral100};
+  @media (max-width: 1400px) {
+    font-size: 14px;
+  }
+  @media (max-width: 650px) {
+    font-size: 12px;
+    padding: 10% 5%;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 3.3125em;
+    line-height: 143.39%;
+    margin-bottom: 8%;
+    @media (max-width: 650px) {
+      font-size: 2em;
+    }
+  }
+`
+export const CaseListContentWrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 950px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    width: 40%;
+    font-weight: 600;
+    font-size: 1.5625em;
+    line-height: 156%;
+    @media (max-width: 950px) {
+      margin-bottom: 10%;
+      width: 100%;
+    }
+    @media (max-width: 650px) {
+      font-size: 1.3em;
+    }
+  }
+  ul {
+    width: 40%;
+    @media (max-width: 950px) {
+      width: 100%;
+    }
+    li {
+      display: flex;
+      margin-bottom: 4%;
+      @media (max-width: 1400px) {
+        margin-bottom: 6%;
+      }
+      @media (max-width: 950px) {
+        margin-bottom: 4%;
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      p {
+        width: 100%;
+        font-weight: 300;
+        font-size: 1.1875em;
+        line-height: 168.42%;
+      }
+      span {
+        margin-right: 4%;
+        margin-top: 1.5%;
+        display: block;
+        width: 1.5em;
+        height: 1.5em;
+      }
+    }
   }
 `
