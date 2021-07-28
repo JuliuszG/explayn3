@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import Image from "gatsby-image"
 import { colors } from "../../styles/colors"
+import BackgroundImage from "gatsby-background-image"
 
 //blog/author.jsx
 
@@ -633,4 +634,28 @@ export const DoubleImageWrapper = styled.div`
 export const CaseDoubleImageImage = styled(Image)`
   height: 100%;
   object-fit: contain;
+`
+
+//case/caseLanding.jsx
+
+export const CaseLandingWrapper = styled(BackgroundImage)`
+  width: 100%;
+  background-color: #040e18;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+`
+
+export const CaseLandingCircle = styled.div`
+  width: 217px;
+  height: 199px;
+  position: absolute;
+  bottom: -8%;
+  right: 5%;
+  @media (max-width: 650px) {
+    width: 87px;
+    height: 69.5px;
+    bottom: -2%;
+  }
 `
