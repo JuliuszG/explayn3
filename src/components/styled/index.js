@@ -1351,3 +1351,104 @@ export const ContactDecoration = styled.img`
     display: none;
   }
 `
+//landingPage/team.jsx
+
+export const TeamWrapper = styled.section`
+  font-size: 16px;
+  @media (max-width: 400px) {
+    font-size: 14px;
+  }
+`
+
+export const TeamDescription = styled.div`
+  font-family: "Poppins";
+  font-style: normal;
+  padding: 0% 18% 10%;
+  @media (max-width: 650px) {
+    padding: 18% 12%;
+  }
+  h2 {
+    font-size: 3.4375em;
+    font-weight: 600;
+    line-height: 138.18%;
+    text-align: left;
+    margin-bottom: 4%;
+    @media (max-width: 650px) {
+      font-size: 2.5em;
+    }
+  }
+  p {
+    width: 65%;
+    font-size: 1.1875em;
+    font-weight: 300;
+    line-height: 168.42%;
+    text-align: left;
+    @media (max-width: 950px) {
+      width: 100%;
+    }
+  }
+`
+//landingPage/partners.jsx
+
+export const PartnersWrapper = styled.div`
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15vh;
+  @media (max-width: 850px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`
+export const CardWrapper = styled.div`
+  width: 25%;
+  height: 443px;
+  border: 1px solid ${colors.neutral30};
+  @media (max-width: 1500px) {
+    height: 350px;
+  }
+  @media (max-width: 1100px) {
+    height: 280px;
+  }
+  @media (max-width: 850px) {
+    width: 80%;
+    height: 280px;
+  }
+  .logo {
+  }
+  a {
+    text-decoration: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 32px;
+    color: ${colors.neutral60};
+    .arrow {
+      @media (max-width: 968px) {
+        display: none;
+      }
+    }
+  }
+`
+export const CardLogo = styled.div`
+  height: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 60%;
+    height: 40%;
+  }
+`
+export const CardLink = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+`
