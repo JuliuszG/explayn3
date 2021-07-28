@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components"
+import { Link as ScLink } from "react-scroll"
 import Image from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
@@ -1451,4 +1452,300 @@ export const CardLink = styled.div`
   justify-content: center;
   align-items: center;
   height: 20%;
+`
+//landingPage/landing2.jsx
+
+export const Landing2Wrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Poppins";
+  overflow: hidden;
+  position: relative;
+  overflow: none;
+  @media (max-width: 450px) {
+    min-height: 90vh;
+  }
+  .decoration {
+    position: absolute;
+    @media (max-width: 1100px) {
+      display: none;
+    }
+    img {
+      width: 100%;
+    }
+    &-left {
+      @media (max-width: 1600px) {
+        width: 180px;
+      }
+      @media (max-width: 1440px) {
+        width: 140px;
+        left: -70px;
+        bottom: 5%;
+      }
+      bottom: 10%;
+      left: -7%;
+    }
+    &-right-top {
+      bottom: 230px;
+      right: 0;
+      @media (max-width: 1600px) {
+        width: 200px;
+        bottom: 130px;
+      }
+    }
+    &-right-bot {
+      bottom: -52px;
+      right: 216px;
+      @media (max-width: 1600px) {
+        width: 80px;
+        bottom: -30px;
+        right: 121px;
+      }
+    }
+    &-top-left {
+      top: -160px;
+      right: 470px;
+      @media (max-width: 1600px) {
+        width: 100px;
+        top: -122px;
+        right: 370px;
+      }
+      @media (max-width: 1440px) {
+        width: 80px;
+        top: -95px;
+        right: 370px;
+      }
+    }
+    &-top-right {
+      top: -35px;
+      right: 630px;
+      @media (max-width: 1600px) {
+        width: 200px;
+        top: -25px;
+        right: 490px;
+      }
+      @media (max-width: 1440px) {
+        width: 170px;
+        top: -23px;
+        right: 465px;
+      }
+    }
+  }
+  .scroll {
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    left: calc(50% - 50px);
+    cursor: pointer;
+    .content {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      .title {
+        transform: translate(0, 25px);
+        color: #cccccc;
+      }
+    }
+  }
+  .cnt {
+    max-width: 1400px;
+    margin: 10% auto;
+    @media (max-width: 1600px) {
+      max-width: 1000px;
+      font-size: 13px;
+    }
+    @media (max-width: 1100px) {
+      max-width: 750px;
+      font-size: 10px;
+    }
+    @media (max-width: 850px) {
+      padding: 20% 5%;
+    }
+    @media (max-width: 450px) {
+      font-size: 8px;
+    }
+  }
+  .content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0%;
+    @media (max-width: 1100px) {
+      align-items: flex-start;
+    }
+    .play {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+      @media (max-width: 1100px) {
+        top: -95px;
+        left: -60px;
+      }
+      @media (max-width: 450px) {
+        top: -75px;
+        left: -55px;
+      }
+      img {
+        width: 25em;
+        @media (max-width: 1100px) {
+          width: 20em;
+        }
+      }
+    }
+    h1 {
+      font-size: 5.9375em;
+      line-height: 126%;
+      font-weight: 600;
+      margin-left: 12%;
+      @media (max-width: 1600px) {
+        margin-left: 14%;
+      }
+      @media (max-width: 1100px) {
+        margin-left: 0;
+        margin-top: 20px;
+        max-width: 400px;
+      }
+    }
+    p {
+      color: #000;
+      font-weight: 300;
+      font-size: 1.375em;
+      line-height: 136%;
+      width: 60%;
+      padding-left: 140px;
+      @media (max-width: 1600px) {
+        margin-left: 50px;
+      }
+      @media (max-width: 1100px) {
+        width: 70%;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        margin-top: 20px;
+      }
+      @media (max-width: 450px) {
+        width: 90%;
+      }
+    }
+    span.blue {
+      color: #3f54d3;
+    }
+    span.white {
+      color: #fff;
+      @media (max-width: 1100px) {
+        &.second {
+          color: #000;
+        }
+      }
+    }
+  }
+`
+//landingPages/landing.jsx
+
+export const LandingWrapper = styled.section`
+  width: 100%;
+  min-height: 95vh;
+  background: ${colors.neutral00};
+  padding-left: 17%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  position: relative;
+  @media (max-height: 1720px) {
+    font-size: 13px;
+  }
+  @media (max-width: 1520px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 11px;
+  }
+  @media (max-width: 1120px) {
+    font-size: 10px;
+  }
+  @media (max-width: 950px) {
+    flex-direction: column;
+    font-size: 14px;
+    padding-left: 0;
+    padding: 10% 15% 0;
+  }
+  @media (max-width: 650px) {
+    font-size: 10px;
+    padding: 15% 8%;
+  }
+  @media (max-width: 390px) {
+    font-size: 8px;
+  }
+  .text {
+    max-width: 60%;
+    font-family: "Poppins";
+    font-style: normal;
+    color: ${colors.neutral100};
+    @media (max-width: 950px) {
+      max-width: 100%;
+      margin-top: 10%;
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 5.125em;
+      line-height: 119.5%;
+      margin-bottom: 4%;
+      @media (max-width: 650px) {
+        line-height: 125%;
+      }
+    }
+    p {
+      max-width: 55%;
+      font-weight: 300;
+      font-size: 19px;
+      line-height: 163.63%;
+      @media (max-width: 950px) {
+        max-width: 100%;
+      }
+    }
+  }
+`
+
+export const LandingScroll = styled(ScLink)`
+  width: 10em;
+  height: 10em;
+  position: absolute;
+  bottom: 20%;
+  right: 17.5%;
+  cursor: pointer;
+  @media (max-width: 950px) {
+    margin-top: 25%;
+    position: static;
+    width: 166px;
+    height: 166px;
+  }
+  @media (orientation: landscape) {
+    margin-top: 5%;
+  }
+  @media (max-width: 650px) {
+    width: 122px;
+    height: 122px;
+  }
+`
+export const LandingScrollWrapper = styled(motion.div)`
+  width: 100%;
+  height: 100%;
+`
+export const LandingZigZag = styled.div`
+  width: 17.5em;
+  height: 3.5em;
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  @media (max-width: 950px) {
+    display: none;
+  }
 `
