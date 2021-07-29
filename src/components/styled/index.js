@@ -3177,11 +3177,15 @@ export const DesktopMenuFooter = styled.div`
       }
       a {
         display: block;
-        color: ${colors.neutral00};
+        color: #aaa;
         text-decoration: none;
         font-weight: 300;
-        font-size: 1.0625em;
+        font-size: 1rem;
         line-height: 264.7%;
+        transition: 0.3s ease-in;
+        &:hover {
+          color: #fff;
+        }
       }
     }
   }
