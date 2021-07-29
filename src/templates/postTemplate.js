@@ -1,17 +1,17 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import { useMediaQuery } from "react-responsive"
-import Layout from "../components/layout"
-import Author from "../components/blog/author"
-import SideBar from "../components/blog/sidebar"
-import PostSlider from "../components/blog/postSlider"
-import Footer from "../components/footer"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import { useMediaQuery } from 'react-responsive';
+import Layout from '../components/layout';
+import Author from '../components/blog/author';
+import SideBar from '../components/blog/sidebar';
+import PostSlider from '../components/blog/postSlider';
+import Footer from '../components/footer';
 import {
   PostTemplateLandingScreen,
   PostTemplateWrapper,
-} from "../components/styled"
+} from '../components/styled';
 
 export const query = graphql`
   query BlogQuery($id: String!) {
@@ -38,11 +38,11 @@ export const query = graphql`
       id
     }
   }
-`
+`;
 const PostTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   const {
     bigScreen,
     bigScreenFraming,
@@ -55,8 +55,8 @@ const PostTemplate = ({ data }) => {
     leadText,
     slug,
     id,
-  } = data.datoCmsBlog
-  const { categories } = JSON.parse(data.datoCmsBlog.categories)
+  } = data.datoCmsBlog;
+  const { categories } = JSON.parse(data.datoCmsBlog.categories);
   return (
     <Layout>
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
@@ -103,7 +103,7 @@ const PostTemplate = ({ data }) => {
       </PostTemplateWrapper>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default PostTemplate
+export default PostTemplate;

@@ -1,6 +1,6 @@
-import React from "react"
-import Icon from "./stepIcon"
-import { StepsWrapper } from "../styled"
+import React from 'react';
+import Icon from './stepIcon';
+import { StepsWrapper } from '../styled';
 
 const Steps = ({ arr }) => {
   return (
@@ -23,12 +23,12 @@ const Steps = ({ arr }) => {
                   <div key={index} className="line"></div>
                 )}
               </>
-            )
+            );
           })}
         </div>
       </div>
     </StepsWrapper>
-  )
-}
+  );
+};
 
-export default Steps
+export default Steps;

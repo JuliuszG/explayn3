@@ -1,21 +1,21 @@
-import React, { useState } from "react"
-import { SwitchLangButton } from "../styled"
+import React, { useState } from 'react';
+import { SwitchLangButton } from '../styled';
 
 const LangSwitch = ({ color }) => {
-  const [lang, setLang] = useState("pl")
+  const [lang, setLang] = useState('pl');
   const handleSwitch = () => {
-    if (lang === "pl") {
-      setLang("en")
+    if (lang === 'pl') {
+      setLang('en');
     } else {
-      setLang("pl")
+      setLang('pl');
     }
-  }
+  };
 
   return (
     <SwitchLangButton color={color} onClick={handleSwitch}>
       {lang}
     </SwitchLangButton>
-  )
-}
+  );
+};
 
-export default LangSwitch
+export default LangSwitch;

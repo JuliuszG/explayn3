@@ -1,20 +1,20 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import CaseStudy from "../components/landingPage/caseStudy"
-import { useMediaQuery } from "react-responsive"
-import Layout from "../components/layout"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import CaseLanding from "../components/cases/caseLanding"
-import CaseData from "../components/cases/caseData"
-import CaseScreen from "../components/cases/caseScreen"
-import CaseBigScreen from "../components/cases/caseBigScreen"
-import CaseDescription from "../components/cases/caseDescription"
-import CaseDoubleImage from "../components/cases/caseDoubleImage"
-import CaseList from "../components/cases/caseList"
-import CaseVideo from "../components/cases/caseVideo"
+import React from 'react';
+import { graphql } from 'gatsby';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import CaseStudy from '../components/landingPage/caseStudy';
+import { useMediaQuery } from 'react-responsive';
+import Layout from '../components/layout';
+import Footer from '../components/footer';
+import SEO from '../components/seo';
+import CaseLanding from '../components/cases/caseLanding';
+import CaseData from '../components/cases/caseData';
+import CaseScreen from '../components/cases/caseScreen';
+import CaseBigScreen from '../components/cases/caseBigScreen';
+import CaseDescription from '../components/cases/caseDescription';
+import CaseDoubleImage from '../components/cases/caseDoubleImage';
+import CaseList from '../components/cases/caseList';
+import CaseVideo from '../components/cases/caseVideo';
 
 export const query = graphql`
   query MyQuery($id: String!) {
@@ -60,12 +60,12 @@ export const query = graphql`
       component7List
     }
   }
-`
+`;
 
 const CaseTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
 
   return (
     <Layout>
@@ -115,7 +115,7 @@ const CaseTemplate = ({ data }) => {
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default CaseTemplate
+export default CaseTemplate;

@@ -1,14 +1,14 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import styled from "styled-components"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import SEO from "../components/seo"
-import { useMediaQuery } from "react-responsive"
-import Layout from "../components/layout"
-import Image from "gatsby-image"
-import Footer from "../components/footer"
-import { BlogWrapper, BlogContent, BlogPost } from "../components/styled"
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import styled from 'styled-components';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import SEO from '../components/seo';
+import { useMediaQuery } from 'react-responsive';
+import Layout from '../components/layout';
+import Image from 'gatsby-image';
+import Footer from '../components/footer';
+import { BlogWrapper, BlogContent, BlogPost } from '../components/styled';
 export const query = graphql`
   {
     allDatoCmsBlog(limit: 6) {
@@ -36,16 +36,16 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 const Card = ({ post }) => {
-  const { categories } = JSON.parse(post.categories)
+  const { categories } = JSON.parse(post.categories);
   return (
     <BlogPost to={post.slug}>
       <div className="img">
         <div className="overlay"></div>
         <Image
-          style={{ height: "100%", width: "100%", objectFit: "cover" }}
+          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
           fluid={post.bigScreen.fluid}
           alt="post picture"
         />
@@ -62,15 +62,15 @@ const Card = ({ post }) => {
         </div>
       </div>
       <div className="btn-cnt">
-        <div className="read-more">READ THIS ARTICLE {">"}</div>
+        <div className="read-more">READ THIS ARTICLE {'>'}</div>
       </div>
     </BlogPost>
-  )
-}
+  );
+};
 const Blog = ({ data: { allDatoCmsBlog } }) => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   return (
     <Layout>
       <SEO title="" />
@@ -85,7 +85,7 @@ const Blog = ({ data: { allDatoCmsBlog } }) => {
       </BlogWrapper>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;

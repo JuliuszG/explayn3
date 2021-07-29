@@ -1,5 +1,5 @@
-import React from "react"
-import { Burger } from "../styled"
+import React from 'react';
+import { Burger } from '../styled';
 
 const MenuIcon = ({
   mainPage = true,
@@ -17,7 +17,7 @@ const MenuIcon = ({
       <svg
         viewBox="0 0 100 80"
         width={customWidth}
-        fill={mainPage ? "#000000" : darkMode ? "#0000000" : "#ffffff"}
+        fill={mainPage ? '#000000' : darkMode ? '#0000000' : '#ffffff'}
         height={customHeight}
       >
         <rect width="100" height="8"></rect>
@@ -25,7 +25,7 @@ const MenuIcon = ({
         <rect y="60" width="50" height="8"></rect>
       </svg>
     </Burger>
-  )
-}
+  );
+};
 
-export default MenuIcon
+export default MenuIcon;

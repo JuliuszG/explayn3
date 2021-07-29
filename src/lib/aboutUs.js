@@ -1,157 +1,157 @@
-import DevelopmentImage from "../images/about/1.svg"
-import VisualImage from "../images/about/2.svg"
-import BrandingImage from "../images/about/3.svg"
-import EcommerceImage from "../images/about/4.svg"
-import EventsImage from "../images/about/5.svg"
-import MarketingImage from "../images/about/6.svg"
-import DevelopmentHover from "../images/about/hover/1.svg"
-import VisualHover from "../images/about/hover/2.svg"
-import BrandingHover from "../images/about/hover/3.svg"
-import EcommerceHover from "../images/about/hover/4.svg"
-import EventsHover from "../images/about/hover/5.svg"
-import MarketingHover from "../images/about/hover/6.svg"
+import DevelopmentImage from '../images/about/1.svg';
+import VisualImage from '../images/about/2.svg';
+import BrandingImage from '../images/about/3.svg';
+import EcommerceImage from '../images/about/4.svg';
+import EventsImage from '../images/about/5.svg';
+import MarketingImage from '../images/about/6.svg';
+import DevelopmentHover from '../images/about/hover/1.svg';
+import VisualHover from '../images/about/hover/2.svg';
+import BrandingHover from '../images/about/hover/3.svg';
+import EcommerceHover from '../images/about/hover/4.svg';
+import EventsHover from '../images/about/hover/5.svg';
+import MarketingHover from '../images/about/hover/6.svg';
 
 export const items = [
   {
     image: [
       {
         src: DevelopmentImage,
-        alt: "Development",
+        alt: 'Development',
       },
       {
         src: DevelopmentHover,
-        alt: "Development",
+        alt: 'Development',
       },
     ],
-    name: "Development",
+    name: 'Development',
     list: [
-      "Websites",
-      "Online stores",
-      "iOS & Android Apps",
-      "Dedicated systems",
+      'Websites',
+      'Online stores',
+      'iOS & Android Apps',
+      'Dedicated systems',
     ],
-    url: "/development",
+    url: '/development',
   },
   {
     image: [
       {
         src: VisualImage,
-        alt: "Visual",
+        alt: 'Visual',
       },
       {
         src: VisualHover,
-        alt: "Visual",
+        alt: 'Visual',
       },
     ],
-    name: "Visual",
-    list: ["Photography", "Video", "Animated cartoons", "Animations/3D"],
-    url: "/visual",
+    name: 'Visual',
+    list: ['Photography', 'Video', 'Animated cartoons', 'Animations/3D'],
+    url: '/visual',
   },
   {
     image: [
       {
         src: BrandingImage,
-        alt: "Branding",
+        alt: 'Branding',
       },
       {
         src: BrandingHover,
-        alt: "Branding",
+        alt: 'Branding',
       },
     ],
-    name: "Branding",
+    name: 'Branding',
     list: [
-      "Visual identification",
-      "Product branding",
-      "Brand strategy",
-      "UI/UX Design",
+      'Visual identification',
+      'Product branding',
+      'Brand strategy',
+      'UI/UX Design',
     ],
-    url: "/branding",
+    url: '/branding',
   },
   {
     image: [
       {
         src: EcommerceImage,
-        alt: "eCommerce",
+        alt: 'eCommerce',
       },
       {
         src: EcommerceHover,
-        alt: "eCommerce",
+        alt: 'eCommerce',
       },
     ],
-    name: "eCommerce",
+    name: 'eCommerce',
     list: [
-      "Online sales strategies",
-      "Conversion enhancements",
-      "Sales optimization",
-      "Reports and analytics",
+      'Online sales strategies',
+      'Conversion enhancements',
+      'Sales optimization',
+      'Reports and analytics',
     ],
-    url: "/ecommerce",
+    url: '/ecommerce',
   },
   {
     image: [
       {
         src: EventsImage,
-        alt: "Events",
+        alt: 'Events',
       },
       {
         src: EventsHover,
-        alt: "Events",
+        alt: 'Events',
       },
     ],
-    name: "Events",
+    name: 'Events',
     list: [
-      "Streaming Platform",
-      "Event Management",
-      "Marketing & Communication",
-      "Audient",
+      'Streaming Platform',
+      'Event Management',
+      'Marketing & Communication',
+      'Audient',
     ],
-    url: "/events",
+    url: '/events',
   },
   {
     image: [
       {
         src: MarketingImage,
-        alt: "Marketing",
+        alt: 'Marketing',
       },
       {
         src: MarketingHover,
-        alt: "Marketing",
+        alt: 'Marketing',
       },
     ],
-    name: "Marketing",
+    name: 'Marketing',
     list: [
-      "Marketing strategies",
-      " Social media",
-      "Content Marketing",
-      "Marketing campaigns",
+      'Marketing strategies',
+      ' Social media',
+      'Content Marketing',
+      'Marketing campaigns',
     ],
-    url: "/marketing",
+    url: '/marketing',
   },
-]
+];
 
 export const imageVariant = {
   visible: {
     opacity: 1,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   exit: {
     opacity: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   initial: {
     opacity: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
-}
+};
 
 export const imageColorVariant = {
   visible: {
@@ -159,21 +159,21 @@ export const imageColorVariant = {
     scale: 1.5,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   exit: {
     opacity: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   initial: {
     opacity: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
-}
+};

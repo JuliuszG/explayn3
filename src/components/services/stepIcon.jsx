@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 const Icon = ({ img, text }) => {
   return (
@@ -8,7 +8,7 @@ const Icon = ({ img, text }) => {
         <h5>{text}</h5>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Icon
+export default Icon;

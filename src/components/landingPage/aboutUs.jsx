@@ -1,19 +1,19 @@
-import React, { useState } from "react"
-import { graphql, useStaticQuery, Link } from "gatsby"
-import { useInView } from "react-intersection-observer"
-import { motion, AnimatePresence } from "framer-motion"
-import { H2Variant, PVariant } from "./landing"
-import { items, imageVariant, imageColorVariant } from "../../lib/aboutUs"
+import React, { useState } from 'react';
+import { graphql, useStaticQuery, Link } from 'gatsby';
+import { useInView } from 'react-intersection-observer';
+import { motion, AnimatePresence } from 'framer-motion';
+import { H2Variant, PVariant } from './landing';
+import { items, imageVariant, imageColorVariant } from '../../lib/aboutUs';
 import {
   AboutUsWrapper,
   AboutUsHeaderWrapper,
   BoxWrapper,
   BoxImageWrapper,
   BoxImage,
-} from "../styled"
+} from '../styled';
 
 const Box = ({ content }) => {
-  const [hovered, setHovered] = useState(false)
+  const [hovered, setHovered] = useState(false);
   const renderImage = () => {
     return (
       <BoxImageWrapper>
@@ -21,11 +21,11 @@ const Box = ({ content }) => {
           {hovered ? (
             <motion.div
               style={{
-                position: "absolute",
+                position: 'absolute',
                 top: 0,
                 left: 0,
-                width: "100%",
-                height: "100%",
+                width: '100%',
+                height: '100%',
               }}
               key="fwefefewf2ee"
               variants={imageColorVariant}
@@ -38,11 +38,11 @@ const Box = ({ content }) => {
           ) : (
             <motion.div
               style={{
-                position: "absolute",
+                position: 'absolute',
                 top: 0,
                 left: 0,
-                width: "100%",
-                height: "100%",
+                width: '100%',
+                height: '100%',
               }}
               key="hdw7hwd"
               variants={imageVariant}
@@ -55,11 +55,11 @@ const Box = ({ content }) => {
           )}
         </AnimatePresence>
       </BoxImageWrapper>
-    )
-  }
+    );
+  };
   const handleHover = () =>
-    window?.matchMedia("(hover: hover)").matches &&
-    setHovered(prevState => !prevState)
+    window?.matchMedia('(hover: hover)').matches &&
+    setHovered(prevState => !prevState);
   return (
     <BoxWrapper onMouseOver={handleHover} onMouseOut={handleHover}>
       {renderImage()}
@@ -71,21 +71,21 @@ const Box = ({ content }) => {
       </ul>
       <Link to={content.url}>Show more</Link>
     </BoxWrapper>
-  )
-}
+  );
+};
 
 const Header = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 1,
-  })
+  });
   return (
     <AboutUsHeaderWrapper ref={ref}>
       <div className="text">
         <motion.h2
           variants={H2Variant}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={inView ? 'visible' : 'hidden'}
         >
           Every day we take on significant challenges to build results driven
           brands.
@@ -93,18 +93,18 @@ const Header = () => {
         <motion.p
           variants={PVariant}
           initial="hidden"
-          animate={inView ? "visible" : "hidden"}
+          animate={inView ? 'visible' : 'hidden'}
         >
           We craft the best digital experience from a brand strategy to web
           development to digital marketing.
         </motion.p>
       </div>
     </AboutUsHeaderWrapper>
-  )
-}
+  );
+};
 
 const AboutUs = () => {
-  const [isCollapsed, setIsCollapsed] = useState(true)
+  const [isCollapsed, setIsCollapsed] = useState(true);
   const data = useStaticQuery(graphql`
     {
       main: allFile(filter: { relativeDirectory: { eq: "landing/about" } }) {
@@ -117,7 +117,7 @@ const AboutUs = () => {
         }
       }
     }
-  `)
+  `);
 
   const renderSecond = () => {
     if (!isCollapsed) {
@@ -132,9 +132,9 @@ const AboutUs = () => {
               )
           )}
         </div>
-      )
+      );
     }
-  }
+  };
   return (
     <AboutUsWrapper id="aboutUs">
       <Header src={data.main.nodes[0].childImageSharp.fluid} />
@@ -151,11 +151,11 @@ const AboutUs = () => {
       {renderSecond()}
       <div className="btn__cnt">
         <button onClick={() => setIsCollapsed(prevState => !prevState)}>
-          {isCollapsed ? "Show more" : "Show less"}
+          {isCollapsed ? 'Show more' : 'Show less'}
         </button>
       </div>
     </AboutUsWrapper>
-  )
-}
+  );
+};
 
-export default AboutUs
+export default AboutUs;

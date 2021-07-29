@@ -1,15 +1,15 @@
-import React from "react"
-import styled from "styled-components"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { motion } from "framer-motion"
-import ScrollDownIcon from "../../images/scrolldown.svg"
+import React from 'react';
+import styled from 'styled-components';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import { motion } from 'framer-motion';
+import ScrollDownIcon from '../../images/scrolldown.svg';
 import {
   LandingWrapper,
   LandingScroll,
   LandingScrollWrapper,
   LandingZigZag,
-} from "../styled"
+} from '../styled';
 
 export const H2Variant = {
   visible: {
@@ -18,7 +18,7 @@ export const H2Variant = {
     transition: {
       duration: 0.3,
       delay: 0.2,
-      ease: "easeIn",
+      ease: 'easeIn',
     },
   },
   hidden: {
@@ -27,10 +27,10 @@ export const H2Variant = {
     transition: {
       duration: 0.2,
       delay: 0.2,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
-}
+};
 
 export const PVariant = {
   visible: {
@@ -39,7 +39,7 @@ export const PVariant = {
     transition: {
       duration: 0.3,
       delay: 0.4,
-      ease: "easeInOut",
+      ease: 'easeInOut',
     },
   },
   hidden: {
@@ -48,30 +48,30 @@ export const PVariant = {
     transition: {
       duration: 0.3,
       delay: 0.4,
-      ease: "easeIn",
+      ease: 'easeIn',
     },
   },
-}
+};
 
 const ScrollDown = () => {
   return (
-    <LandingScroll to={"aboutUs"} smooth duration={500}>
+    <LandingScroll to={'aboutUs'} smooth duration={500}>
       <LandingScrollWrapper
         whileHover={{ rotate: 360, transition: { duration: 0.3 } }}
       >
         <img src={ScrollDownIcon} alt="scroll down button" />
       </LandingScrollWrapper>
     </LandingScroll>
-  )
-}
+  );
+};
 
 const ZigZag = ({ src }) => {
   return (
     <LandingZigZag>
       <Img fluid={src} alt="zigzag" />
     </LandingZigZag>
-  )
-}
+  );
+};
 
 const Landing = () => {
   const data = useStaticQuery(graphql`
@@ -98,7 +98,7 @@ const Landing = () => {
         }
       }
     }
-  `)
+  `);
   return (
     <LandingWrapper>
       <div className="text">
@@ -113,7 +113,7 @@ const Landing = () => {
       <ZigZag src={data.zigzag.childImageSharp.fluid} />
       <ScrollDown src={data.scroll.childImageSharp.fluid} />
     </LandingWrapper>
-  )
-}
+  );
+};
 
-export default Landing
+export default Landing;

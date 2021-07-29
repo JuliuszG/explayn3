@@ -1,9 +1,9 @@
-import React, { useContext } from "react"
-import { appContext } from "../context"
-import { ContactUsButton } from "../styled"
+import React, { useContext } from 'react';
+import { appContext } from '../context';
+import { ContactUsButton } from '../styled';
 
 const ContactUs = ({ darkMode, mainPage }) => {
-  const { changeContactFormStatus } = useContext(appContext)
+  const { changeContactFormStatus } = useContext(appContext);
   return (
     <ContactUsButton
       onClick={() => changeContactFormStatus(1)}
@@ -12,7 +12,7 @@ const ContactUs = ({ darkMode, mainPage }) => {
     >
       Let's talk
     </ContactUsButton>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

@@ -1,28 +1,28 @@
-import React from "react"
-import Layout from "../components/layout"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import { useMediaQuery } from "react-responsive"
-import HeaderImg from "../images/branding_ikonki/glowna branding.svg"
-import BrandingSteps from "../components/services/brandingSteps"
-import Discovery from "../images/branding_ikonki/discovery1.svg"
-import Planning from "../images/branding_ikonki/planing.svg"
-import Design from "../images/branding_ikonki/kredka.svg"
-import DevelopmentStepIcon from "../images/branding_ikonki/śruba .svg"
-import Launch from "../images/branding_ikonki/launch.svg"
-import Responsive from "../images/branding_ikonki/1.benefits.svg"
-import Functional from "../images/branding_ikonki/2.benefits.svg"
-import Scalable from "../images/branding_ikonki/3.benefits.svg"
-import More from "../images/landing/more.svg"
-import { Link as ScLink } from "react-scroll"
-import { BrandingWrapper, ServicesSection } from "../components/styled"
+import React from 'react';
+import Layout from '../components/layout';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import Footer from '../components/footer';
+import SEO from '../components/seo';
+import { useMediaQuery } from 'react-responsive';
+import HeaderImg from '../images/branding_ikonki/glowna branding.svg';
+import BrandingSteps from '../components/services/brandingSteps';
+import Discovery from '../images/branding_ikonki/discovery1.svg';
+import Planning from '../images/branding_ikonki/planing.svg';
+import Design from '../images/branding_ikonki/kredka.svg';
+import DevelopmentStepIcon from '../images/branding_ikonki/śruba .svg';
+import Launch from '../images/branding_ikonki/launch.svg';
+import Responsive from '../images/branding_ikonki/1.benefits.svg';
+import Functional from '../images/branding_ikonki/2.benefits.svg';
+import Scalable from '../images/branding_ikonki/3.benefits.svg';
+import More from '../images/landing/more.svg';
+import { Link as ScLink } from 'react-scroll';
+import { BrandingWrapper, ServicesSection } from '../components/styled';
 
 const Branding = () => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   return (
     <Layout>
       <SEO title="Home" />
@@ -41,7 +41,7 @@ const Branding = () => {
           <div className="landing-image">
             <img src={HeaderImg} alt="dev icon" />
           </div>
-          <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
+          <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
@@ -104,11 +104,11 @@ const Branding = () => {
         </div>
         <BrandingSteps
           arr={[
-            { img: Discovery, text: "Discovery" },
-            { img: Planning, text: "Planning" },
-            { img: Design, text: "Design" },
-            { img: DevelopmentStepIcon, text: "Implementation" },
-            { img: Launch, text: "Launch" },
+            { img: Discovery, text: 'Discovery' },
+            { img: Planning, text: 'Planning' },
+            { img: Design, text: 'Design' },
+            { img: DevelopmentStepIcon, text: 'Implementation' },
+            { img: Launch, text: 'Launch' },
           ]}
         />
 
@@ -166,7 +166,7 @@ const Branding = () => {
       </BrandingWrapper>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Branding
+export default Branding;

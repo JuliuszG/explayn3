@@ -1,33 +1,33 @@
-import React from "react"
-import Layout from "../components/layout"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import { useMediaQuery } from "react-responsive"
-import HeaderImg from "../images/ikonki marketing/Main.svg"
-import MarketingSteps from "../components/services/marketingSteps"
-import Discovery from "../images/ikonki marketing/process_1discovery.svg"
-import Planning from "../images/ikonki marketing/process_2planning.svg"
-import Design from "../images/ikonki marketing/process_3design.svg"
-import DevelopmentStepIcon from "../images/ikonki marketing/launch.svg"
-import Launch from "../images/ikonki marketing/linijki.svg"
-import Responsive from "../images/ikonki marketing/omnichanel.svg"
-import Functional from "../images/ikonki marketing/relevant.svg"
-import Scalable from "../images/ikonki marketing/insightful.svg"
-import More from "../images/landing/more.svg"
+import React from 'react';
+import Layout from '../components/layout';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import Footer from '../components/footer';
+import SEO from '../components/seo';
+import { useMediaQuery } from 'react-responsive';
+import HeaderImg from '../images/ikonki marketing/Main.svg';
+import MarketingSteps from '../components/services/marketingSteps';
+import Discovery from '../images/ikonki marketing/process_1discovery.svg';
+import Planning from '../images/ikonki marketing/process_2planning.svg';
+import Design from '../images/ikonki marketing/process_3design.svg';
+import DevelopmentStepIcon from '../images/ikonki marketing/launch.svg';
+import Launch from '../images/ikonki marketing/linijki.svg';
+import Responsive from '../images/ikonki marketing/omnichanel.svg';
+import Functional from '../images/ikonki marketing/relevant.svg';
+import Scalable from '../images/ikonki marketing/insightful.svg';
+import More from '../images/landing/more.svg';
 import {
   MarketingWrapper,
   MarketingTopSection,
   MarketingScrollLink,
   MarketingContent,
   ServicesSection,
-} from "../components/styled"
+} from '../components/styled';
 
 const Marketing = () => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   return (
     <Layout>
       <SEO title="Home" />
@@ -45,7 +45,7 @@ const Marketing = () => {
           <div className="landing-image">
             <img src={HeaderImg} alt="dev icon" />
           </div>
-          <MarketingScrollLink to={"aboutUs"} smooth duration={500}>
+          <MarketingScrollLink to={'aboutUs'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
@@ -109,11 +109,11 @@ const Marketing = () => {
         </div>
         <MarketingSteps
           arr={[
-            { img: Discovery, text: "Discovery" },
-            { img: Planning, text: "Planning" },
-            { img: Design, text: "Design" },
-            { img: DevelopmentStepIcon, text: "Launch" },
-            { img: Launch, text: "Measure" },
+            { img: Discovery, text: 'Discovery' },
+            { img: Planning, text: 'Planning' },
+            { img: Design, text: 'Design' },
+            { img: DevelopmentStepIcon, text: 'Launch' },
+            { img: Launch, text: 'Measure' },
           ]}
         />
         <div className="section-5">
@@ -167,7 +167,7 @@ const Marketing = () => {
       </MarketingWrapper>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Marketing
+export default Marketing;

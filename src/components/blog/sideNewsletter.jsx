@@ -1,30 +1,30 @@
-import React, { useState } from "react"
-import emailjs from "emailjs-com"
-import Mail from "../../images/blog/mail.svg"
+import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import Mail from '../../images/blog/mail.svg';
 
 import {
   NewsletterWrapper,
   NewsletterThanks,
   NewsletterDescription,
-} from "../styled"
+} from '../styled';
 
 const Newsletter = ({}) => {
-  const [email, setEmail] = useState("")
-  const [mailSend, setMailSend] = useState(false)
+  const [email, setEmail] = useState('');
+  const [mailSend, setMailSend] = useState(false);
 
   const handleSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
     emailjs
       .send(
-        "default_service",
-        "template_qhdmgng",
+        'default_service',
+        'template_qhdmgng',
         { email },
-        "user_VfGpMuhECXdgJOEm13gzv"
+        'user_VfGpMuhECXdgJOEm13gzv'
       )
       .then(response => {
-        setMailSend(true)
-      })
-  }
+        setMailSend(true);
+      });
+  };
 
   return (
     <NewsletterWrapper>
@@ -50,12 +50,12 @@ const Newsletter = ({}) => {
               onChange={e => setEmail(e.target.value)}
               placeholder="enter your email address"
             />
-            <button type="submit">{"Get updated >"}</button>
+            <button type="submit">{'Get updated >'}</button>
           </form>
         </>
       )}
     </NewsletterWrapper>
-  )
-}
+  );
+};
 
-export default Newsletter
+export default Newsletter;

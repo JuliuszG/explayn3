@@ -1,11 +1,11 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import {
   CaseDescriptionWrapper,
   ZigZag,
   CaseDescriptionDescription,
-} from "../styled"
+} from '../styled';
 
 const CaseDescription = ({ title, paragraphs }) => {
   const data = useStaticQuery(graphql`
@@ -18,7 +18,7 @@ const CaseDescription = ({ title, paragraphs }) => {
         }
       }
     }
-  `)
+  `);
   return (
     <CaseDescriptionWrapper>
       <ZigZag>
@@ -29,7 +29,7 @@ const CaseDescription = ({ title, paragraphs }) => {
         dangerouslySetInnerHTML={{ __html: paragraphs }}
       ></CaseDescriptionDescription>
     </CaseDescriptionWrapper>
-  )
-}
+  );
+};
 
-export default CaseDescription
+export default CaseDescription;

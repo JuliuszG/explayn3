@@ -1,42 +1,42 @@
-import React from "react"
+import React from 'react';
 // import motion from "framer-motion"
-import Layout from "../components/layout"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import { useMediaQuery } from "react-responsive"
-import HeaderImg from "../images/development/header/landing.svg"
-import Steps from "../components/services/steps"
-import Discovery from "../images/development/process/discovery.svg"
-import Planning from "../images/development/process/planning.svg"
-import Design from "../images/development/process/design.svg"
-import DevelopmentStepIcon from "../images/development/process/development_icon.svg"
-import Launch from "../images/development/process/lauch.svg"
-import Next from "../images/development/techniologie/next.svg"
-import ReactJS from "../images/development/techniologie/react.svg"
-import Graph from "../images/development/techniologie/graph.svg"
-import Node from "../images/development/techniologie/node.svg"
-import TypeScript from "../images/development/techniologie/ts.svg"
-import Ruby from "../images/development/techniologie/ruby.svg"
-import JS from "../images/development/techniologie/js.svg"
+import Layout from '../components/layout';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import Footer from '../components/footer';
+import SEO from '../components/seo';
+import { useMediaQuery } from 'react-responsive';
+import HeaderImg from '../images/development/header/landing.svg';
+import Steps from '../components/services/steps';
+import Discovery from '../images/development/process/discovery.svg';
+import Planning from '../images/development/process/planning.svg';
+import Design from '../images/development/process/design.svg';
+import DevelopmentStepIcon from '../images/development/process/development_icon.svg';
+import Launch from '../images/development/process/lauch.svg';
+import Next from '../images/development/techniologie/next.svg';
+import ReactJS from '../images/development/techniologie/react.svg';
+import Graph from '../images/development/techniologie/graph.svg';
+import Node from '../images/development/techniologie/node.svg';
+import TypeScript from '../images/development/techniologie/ts.svg';
+import Ruby from '../images/development/techniologie/ruby.svg';
+import JS from '../images/development/techniologie/js.svg';
 // import Three from "../images/development/techniologie/three.svg"
 // import Drupal from "../images/development/techniologie/drupal.svg"
 // import Ghost from "../images/development/techniologie/ghost.svg"
 // import Dato from "../images/development/techniologie/dato.svg"
 // import WP from "../images/development/techniologie/wp.svg"
-import Responsive from "../images/development/korzysci/responsive.svg"
-import Functional from "../images/development/korzysci/setings.svg"
-import Scalable from "../images/development/korzysci/scalable.svg"
-import Secure from "../images/development/korzysci/secure.svg"
-import More from "../images/landing/more.svg"
-import { Link as ScLink } from "react-scroll"
-import { DevelopmentWrapper, ServicesSection } from "../components/styled"
+import Responsive from '../images/development/korzysci/responsive.svg';
+import Functional from '../images/development/korzysci/setings.svg';
+import Scalable from '../images/development/korzysci/scalable.svg';
+import Secure from '../images/development/korzysci/secure.svg';
+import More from '../images/landing/more.svg';
+import { Link as ScLink } from 'react-scroll';
+import { DevelopmentWrapper, ServicesSection } from '../components/styled';
 
 const Development = () => {
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   return (
     <Layout>
       <SEO title="Home" />
@@ -53,7 +53,7 @@ const Development = () => {
           <div className="landing-image">
             <img src={HeaderImg} alt="dev icon" />
           </div>
-          <ScLink className="scroll" to={"aboutUs"} smooth duration={500}>
+          <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
@@ -111,11 +111,11 @@ const Development = () => {
         </div>
         <Steps
           arr={[
-            { img: Discovery, text: "Discovery" },
-            { img: Planning, text: "Planning" },
-            { img: Design, text: "Design" },
-            { img: DevelopmentStepIcon, text: "Development" },
-            { img: Launch, text: "Launch" },
+            { img: Discovery, text: 'Discovery' },
+            { img: Planning, text: 'Planning' },
+            { img: Design, text: 'Design' },
+            { img: DevelopmentStepIcon, text: 'Development' },
+            { img: Launch, text: 'Launch' },
           ]}
         />
         <div className="section-4">
@@ -268,7 +268,7 @@ const Development = () => {
       </DevelopmentWrapper>
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default Development
+export default Development;

@@ -1,29 +1,29 @@
-import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion"
-import Item from "./item"
-import SocialMedia from "./sideBarSocialMedia"
-import Newsletter from "./sideNewsletter"
+import React, { useState, useEffect } from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
+import Item from './item';
+import SocialMedia from './sideBarSocialMedia';
+import Newsletter from './sideNewsletter';
 import {
   SideBarWrapper,
   SideBarTrending,
   SideBarTrendingFilters,
   SideBarTrendingFilter,
-} from "../styled"
+} from '../styled';
 
 const filterList = [
-  "BRANDING",
-  "ANIMATIONS/3D",
-  "VIDEO",
-  "MARKETING STRATEGY",
-  "SOCIAL MEDIA",
-  "SOFTWARE",
-  "OTHER",
-]
+  'BRANDING',
+  'ANIMATIONS/3D',
+  'VIDEO',
+  'MARKETING STRATEGY',
+  'SOCIAL MEDIA',
+  'SOFTWARE',
+  'OTHER',
+];
 
 const SideBar = ({ title, slug, id }) => {
-  const [filters, setFilters] = useState([])
-  const [trending, setTrending] = useState([])
+  const [filters, setFilters] = useState([]);
+  const [trending, setTrending] = useState([]);
 
   const data = useStaticQuery(
     graphql`
@@ -38,39 +38,39 @@ const SideBar = ({ title, slug, id }) => {
         }
       }
     `
-  )
+  );
 
   useEffect(() => {
     if (filters.length === 0) {
       const filteredPosts = data.allDatoCmsBlog.nodes.filter(
         (item, key) => item.id !== id && key <= 3
-      )
-      setTrending(filteredPosts)
+      );
+      setTrending(filteredPosts);
     } else {
       const categoryFilter = data.allDatoCmsBlog.nodes.filter(post => {
-        const { categories } = JSON.parse(post.categories)
-        let isIn = false
+        const { categories } = JSON.parse(post.categories);
+        let isIn = false;
         categories.forEach(cat => {
           if (filters.includes(cat.toUpperCase())) {
-            isIn = true
+            isIn = true;
           }
-        })
-        return isIn
-      })
+        });
+        return isIn;
+      });
       const filteredPosts = categoryFilter.filter(
         (item, key) => item.id !== id && key <= 3
-      )
-      setTrending(filteredPosts)
+      );
+      setTrending(filteredPosts);
     }
-  }, [filters])
+  }, [filters]);
 
   const handleAddingCategories = category => {
     if (filters.indexOf(category) === -1) {
-      setFilters(prevState => [...prevState, category])
+      setFilters(prevState => [...prevState, category]);
     } else {
-      setFilters(prevState => prevState.filter(el => el !== category))
+      setFilters(prevState => prevState.filter(el => el !== category));
     }
-  }
+  };
 
   return (
     <SideBarWrapper>
@@ -101,7 +101,7 @@ const SideBar = ({ title, slug, id }) => {
         </SideBarTrendingFilters>
       </SideBarTrending>
     </SideBarWrapper>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;

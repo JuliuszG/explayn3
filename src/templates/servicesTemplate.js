@@ -1,39 +1,39 @@
-import React from "react"
-import Img from "gatsby-image"
-import styled from "styled-components"
-import Desktop from "../components/navigation/desktop"
-import Mobile from "../components/navigation/mobile"
-import CaseStudy from "../components/landingPage/caseStudy"
-import { useMediaQuery } from "react-responsive"
-import Layout from "../components/layout"
-import Footer from "../components/footer"
-import SEO from "../components/seo"
-import { colors } from "../styles/colors"
-import { graphql, useStaticQuery } from "gatsby"
-import { useInView } from "react-intersection-observer"
+import React from 'react';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+import Desktop from '../components/navigation/desktop';
+import Mobile from '../components/navigation/mobile';
+import CaseStudy from '../components/landingPage/caseStudy';
+import { useMediaQuery } from 'react-responsive';
+import Layout from '../components/layout';
+import Footer from '../components/footer';
+import SEO from '../components/seo';
+import { colors } from '../styles/colors';
+import { graphql, useStaticQuery } from 'gatsby';
+import { useInView } from 'react-intersection-observer';
 import {
   AnimatedHeader,
   AnimatedParagraph,
-} from "../components/util/animations"
+} from '../components/util/animations';
 import {
   ServicesWrapper,
   ServicesLogo,
   ServicesSection,
   QuoteSection,
-} from "../components/styled"
+} from '../components/styled';
 
 const ServiceTemplate = ({ pageContext }) => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  })
+  });
   const [ref2, inView2] = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  })
+  });
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 950px)",
-  })
+    query: '(max-device-width: 950px)',
+  });
   const data = useStaticQuery(graphql`
     {
       triangle1: file(relativePath: { eq: "servicesPage/1.png" }) {
@@ -65,7 +65,7 @@ const ServiceTemplate = ({ pageContext }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <Layout>
@@ -83,7 +83,7 @@ const ServiceTemplate = ({ pageContext }) => {
         <ServicesLogo>
           <Img
             fluid={pageContext.logo}
-            placeholderStyle={{ visibility: "hidden" }}
+            placeholderStyle={{ visibility: 'hidden' }}
             alt="subpage logo"
           />
         </ServicesLogo>
@@ -121,7 +121,7 @@ const ServiceTemplate = ({ pageContext }) => {
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>
-  )
-}
+  );
+};
 
-export default ServiceTemplate
+export default ServiceTemplate;

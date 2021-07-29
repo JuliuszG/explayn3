@@ -1,6 +1,6 @@
-import React, { useState } from "react"
-import MenuLanguage from "./menuLanguage"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import React, { useState } from 'react';
+import MenuLanguage from './menuLanguage';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import {
   MenuExit,
   MobileMenuWrapper,
@@ -8,7 +8,7 @@ import {
   MobileMenuLinks,
   MobileFooterMenu,
   MobileMenuImage,
-} from "../styled"
+} from '../styled';
 
 const MenuFooter = () => {
   return (
@@ -25,12 +25,12 @@ const MenuFooter = () => {
         <a href="http://www.linkedin.com">LinkedIn</a>
       </div>
     </MobileFooterMenu>
-  )
-}
+  );
+};
 
 const MenuLinks = () => {
-  const [dropOn, setDropOn] = useState(false)
-  const handleDrop = () => setDropOn(prevState => !prevState)
+  const [dropOn, setDropOn] = useState(false);
+  const handleDrop = () => setDropOn(prevState => !prevState);
   return (
     <MobileMenuLinks>
       <li>
@@ -42,7 +42,7 @@ const MenuLinks = () => {
         <Link>
           <span>02.</span>Co robimy
         </Link>
-        <ul className={dropOn ? "dropdown active" : "dropdown"}>
+        <ul className={dropOn ? 'dropdown active' : 'dropdown'}>
           <li>
             <Link to="/branding">Branding</Link>
           </li>
@@ -71,8 +71,8 @@ const MenuLinks = () => {
         </Link>
       </li>
     </MobileMenuLinks>
-  )
-}
+  );
+};
 
 const MobileHeader = ({ toggle }) => {
   return (
@@ -84,8 +84,8 @@ const MobileHeader = ({ toggle }) => {
       </MenuExit>
       <MenuLanguage />
     </MobileHeaderMenuWrapper>
-  )
-}
+  );
+};
 
 const MobileMenu = ({ toggle }) => {
   const data = useStaticQuery(graphql`
@@ -98,7 +98,7 @@ const MobileMenu = ({ toggle }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <MobileMenuWrapper>
@@ -109,7 +109,7 @@ const MobileMenu = ({ toggle }) => {
         <MobileMenuImage fluid={data.file.childImageSharp.fluid} alt="logo" />
       </div>
     </MobileMenuWrapper>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;

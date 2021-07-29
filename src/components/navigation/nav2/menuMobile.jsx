@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { Link } from "gatsby"
-import { Link as ScLink } from "react-scroll"
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'gatsby';
+import { Link as ScLink } from 'react-scroll';
 import {
   Exit,
   MenuLinksMobile,
@@ -9,29 +9,29 @@ import {
   MobileMenuHeader,
   MobileMenuContainer,
   MobileMenuFooter,
-} from "../../styled"
-import { useLocation } from "@reach/router"
+} from '../../styled';
+import { useLocation } from '@reach/router';
 
 const menuAnimation = {
   visible: {
     top: 0,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.1,
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.5,
     },
   },
   hidden: {
-    top: "-100vh",
+    top: '-100vh',
     transition: {
-      when: "afterChildren",
+      when: 'afterChildren',
       staggerChildren: 0.2,
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.3,
     },
   },
-}
+};
 
 const itemAnimation = {
   visible: {
@@ -39,7 +39,7 @@ const itemAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 1,
       staggerChildren: 0.1,
     },
@@ -48,7 +48,7 @@ const itemAnimation = {
     x: -500,
     opacity: 0,
   },
-}
+};
 
 const subItemAnimation = {
   visible: i => ({
@@ -56,7 +56,7 @@ const subItemAnimation = {
     opacity: 1,
     transition: {
       delay: i * 0.1,
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 0.2,
     },
   }),
@@ -64,15 +64,15 @@ const subItemAnimation = {
     x: -300,
     opacity: 0,
   },
-}
+};
 
 const MenuMobile = ({ toggle }) => {
-  const location = useLocation()
-  const [subMenuIsOn, setSubMenuIsOn] = useState(false)
+  const location = useLocation();
+  const [subMenuIsOn, setSubMenuIsOn] = useState(false);
   const menuSwitch = () => {
-    toggle()
-    setSubMenuIsOn(false)
-  }
+    toggle();
+    setSubMenuIsOn(false);
+  };
   const renderSubMenu = () => (
     <MobileSubMenu>
       <motion.a variants={subItemAnimation} custom={1} href="/development">
@@ -94,7 +94,7 @@ const MenuMobile = ({ toggle }) => {
         Marketing
       </motion.a>
     </MobileSubMenu>
-  )
+  );
   return (
     <MobileMenuContainer
       variants={menuAnimation}
@@ -132,9 +132,9 @@ const MenuMobile = ({ toggle }) => {
           <motion.div variants={itemAnimation} className="item">
             <div className="item-link">
               <div className="number">03.</div>
-              {location.pathname === "/" ? (
+              {location.pathname === '/' ? (
                 <ScLink
-                  to={"caseStudy"}
+                  to={'caseStudy'}
                   smooth
                   duration={1000}
                   onClick={menuSwitch}
@@ -142,7 +142,7 @@ const MenuMobile = ({ toggle }) => {
                   Case studies
                 </ScLink>
               ) : (
-                <Link to={"/"} state={{ scrollAnchor: "#caseStudy" }}>
+                <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>
                   Case studies
                 </Link>
               )}
@@ -172,7 +172,7 @@ const MenuMobile = ({ toggle }) => {
         </MobileMenuFooter>
       </div>
     </MobileMenuContainer>
-  )
-}
+  );
+};
 
-export default MenuMobile
+export default MenuMobile;

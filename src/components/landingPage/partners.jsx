@@ -1,6 +1,6 @@
-import React from "react"
-import { cardData } from "../../lib/partners"
-import { PartnersWrapper, CardWrapper, CardLogo, CardLink } from "../styled"
+import React from 'react';
+import { cardData } from '../../lib/partners';
+import { PartnersWrapper, CardWrapper, CardLogo, CardLink } from '../styled';
 
 const Card = ({ item }) => {
   return (
@@ -14,8 +14,8 @@ const Card = ({ item }) => {
         </a>
       </CardLink>
     </CardWrapper>
-  )
-}
+  );
+};
 
 const Partners = () => {
   return (
@@ -24,7 +24,7 @@ const Partners = () => {
         <Card item={item} key={index} />
       ))}
     </PartnersWrapper>
-  )
-}
+  );
+};
 
-export default Partners
+export default Partners;
