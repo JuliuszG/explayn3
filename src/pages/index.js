@@ -20,7 +20,7 @@ const IndexPage = ({ location }) => {
   })
 
   useEffect(() => {
-    setTimeout(() => {
+    const scrollTimeout = setTimeout(() => {
       if (
         location?.state?.scrollAnchor === "#caseStudy" &&
         caseStudyRef.current !== null
@@ -28,6 +28,9 @@ const IndexPage = ({ location }) => {
         caseStudyRef.current.scrollIntoView()
       }
     }, 500)
+    return () => {
+      clearTimeout(scrollTimeout)
+    }
   }, [location.state, caseStudyRef.current])
 
   return (
