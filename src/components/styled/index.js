@@ -5,6 +5,9 @@ import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
 import { colors } from "../../styles/colors"
+import BG from "../../images/development/header/bgSteps.jpg"
+import BGBranding from "../../images/branding_ikonki/duza kredka.svg"
+import BGMarketing from "../../images/ikonki marketing/duzy glosnik.svg"
 
 const spin = keyframes`
     0% {
@@ -2059,5 +2062,325 @@ export const MobileStudyWrapper = styled.section`
     font-weight: 300;
     font-size: 19px;
     line-height: 32px;
+  }
+`
+//services/steps.jsx
+
+export const StepsWrapper = styled.div`
+  background-image: url(${BG});
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  padding: 10% 0;
+  align-items: center;
+  font-family: "Poppins";
+  .header {
+    max-width: 1222px;
+    display: flex;
+    align-items: flex-start;
+    color: #000;
+    margin-bottom: 160px;
+    @media (max-width: 1500px) {
+      max-width: 900px;
+    }
+    @media (max-width: 1050px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 10%;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 3.4375rem;
+      line-height: 138.18%;
+      margin-right: 10px;
+      font-weight: 600;
+      @media (max-width: 1500px) {
+        width: 55%;
+      }
+      @media (max-width: 1050px) {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    p {
+      width: 50%;
+      font-size: 1.375rem;
+      line-height: 136.36%;
+      font-weight: 300;
+      @media (max-width: 1050px) {
+        width: 100%;
+      }
+    }
+  }
+  .icons {
+    max-width: 1400px;
+    .cnt {
+      width: 100%;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @media (max-width: 1150px) {
+        padding: 0 5vw;
+      }
+      @media (max-width: 1200px) {
+        flex-direction: column;
+        height: 100%;
+        padding-bottom: 5vh;
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .line {
+      width: 100px;
+      height: 5px;
+      border-bottom: 5px dotted grey;
+      margin: 0 20px;
+      @media (max-width: 1200px) {
+        height: 50px;
+        width: 5px;
+        border-bottom: none;
+        border-left: 5px dotted grey;
+        margin: 50px 0 20px;
+      }
+    }
+    .icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 70px;
+      max-height: 70px;
+      position: relative;
+      cursor: pointer;
+      h5 {
+        font-size: 1.6875rem;
+        font-weight: 600;
+        margin-top: 50px;
+        @media (max-width: 1200px) {
+          margin-top: 10px;
+        }
+      }
+      @media (min-width: 1200px) and (hover: hover) {
+        &:hover img {
+          transition: 0.2s ease-in;
+          transform: scale(1.1);
+        }
+        &:hover:nth-of-type(1)::after,
+        &:hover:nth-of-type(3)::after,
+        &:hover:nth-of-type(5)::after,
+        &:hover:nth-of-type(7)::after,
+        &:hover:nth-of-type(9)::after {
+          display: block;
+        }
+        &:hover:nth-of-type(1)::before,
+        &:hover:nth-of-type(3)::before,
+        &:hover:nth-of-type(5)::before,
+        &:hover:nth-of-type(7)::before,
+        &:hover:nth-of-type(9)::before {
+          display: block;
+        }
+        &:nth-of-type(1)::after {
+          content: "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.";
+          display: none;
+          position: absolute;
+          top: 12vw;
+          left: 1vw;
+          width: 40vw;
+          max-height: 200px;
+          background-color: #f5f6fa;
+          padding: 30px;
+          font-family: "Poppins";
+          font-size: 0.9rem;
+          line-height: 136%;
+        }
+        &:nth-child(1)::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 11.5vw;
+          left: 30px;
+          width: 30px;
+          height: 30px;
+          background-color: #f5f6fa;
+          transform: rotate(-120deg) skew(25deg);
+          z-index: 565;
+        }
+        &:nth-of-type(3)::after {
+          content: "Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.";
+          display: none;
+          position: absolute;
+          top: 12vw;
+          left: 1vw;
+          width: 40vw;
+          max-height: 200px;
+          background-color: #f5f6fa;
+          padding: 30px;
+          font-family: "Poppins";
+          font-size: 0.9rem;
+          line-height: 136%;
+        }
+        &:nth-child(3)::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 11.5vw;
+          left: 30px;
+          width: 30px;
+          height: 30px;
+          background-color: #f5f6fa;
+          transform: rotate(-120deg) skew(25deg);
+          z-index: 565;
+        }
+        &:nth-child(5)::after {
+          content: "At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.";
+          display: none;
+          position: absolute;
+          top: 12vw;
+          width: 40vw;
+          max-height: 200px;
+          background-color: #f5f6fa;
+          padding: 30px;
+          font-family: "Poppins";
+          font-size: 0.9rem;
+          line-height: 136%;
+        }
+        &:nth-of-type(5)::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 11.5vw;
+          left: 15px;
+          width: 30px;
+          height: 30px;
+          background-color: #f5f6fa;
+          transform: rotate(-120deg) skew(25deg);
+          z-index: 565;
+        }
+        &:nth-of-type(7)::after {
+          content: "Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.";
+          display: none;
+          position: absolute;
+          top: 12vw;
+          right: 1vw;
+          width: 40vw;
+          max-height: 200px;
+          background-color: #f5f6fa;
+          padding: 30px;
+          font-family: "Poppins";
+          font-size: 0.9rem;
+          line-height: 136%;
+        }
+        &:nth-child(7)::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 11.5vw;
+          left: 10px;
+          width: 30px;
+          height: 30px;
+          background-color: #f5f6fa;
+          transform: rotate(-120deg) skew(25deg);
+          z-index: 565;
+        }
+        &:nth-child(9)::after {
+          content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.";
+          display: none;
+          position: absolute;
+          top: 12vw;
+          right: 1vw;
+          width: 40vw;
+          max-height: 200px;
+          background-color: #f5f6fa;
+          padding: 30px;
+          font-family: "Poppins";
+          font-size: 0.9rem;
+          line-height: 136%;
+        }
+        &:nth-of-type(9)::before {
+          content: "";
+          display: none;
+          position: absolute;
+          top: 11.5vw;
+          left: 15px;
+          width: 30px;
+          height: 30px;
+          background-color: #f5f6fa;
+          transform: rotate(-120deg) skew(25deg);
+          z-index: 565;
+        }
+      }
+      @media (max-width: 1300px) {
+        width: 80%;
+        height: 80%;
+      }
+      @media (max-width: 1150px) {
+        width: 50%;
+        height: 50%;
+      }
+      @media (max-width: 1200px) {
+        max-width: 100px;
+        max-height: 100px;
+        width: 100px;
+        height: 100px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+`
+//services/brandingSteps.jsx
+
+export const BrandingStepsWrapper = styled(StepsWrapper)`
+  background-image: url(${BGBranding});
+  .icon {
+    @media (min-width: 1200px) and (hover: hover) {
+      &:nth-of-type(1)::after {
+        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+      }
+      &:nth-of-type(3)::after {
+        content: "We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand.";
+      }
+      &:nth-child(5)::after {
+        content: "This is our favorite part of the process. It's where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
+      }
+      &:nth-of-type(7)::after {
+        content: "The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible.";
+      }
+      &:nth-child(9)::after {
+        content: "This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization.";
+      }
+    }
+  }
+`
+//services/marketingSteps.jsx
+
+export const MarketingStepsWrapper = styled(StepsWrapper)`
+  background-image: url(${BGMarketing});
+  .icon {
+    @media (min-width: 1200px) and (hover: hover) {
+      &:nth-of-type(1)::after {
+        content: "Great things are built on research. The first phase oscillate around meetings to learn about your business goals and challenges. Once we have a better understanding of your needs we begin multi-platform research including target audience analysis, user journey analysis, keyword data & market condition.";
+      }
+      &:nth-of-type(3)::after {
+        content: "Once we’redone with research and identifying tasks, it's time to develop your digital marketing strategy. This is where we will develop a thorough action plan that aligns with your goals. A detailed strategy will include all the components and tools needed to reach your audience.";
+      }
+      &:nth-child(5)::after {
+        content: 'This is our favorite stage, where we use all our grey cells to deliver creative and engaging content for your future customer. We use knowledge and techniques to create creations geared towards conversions that are ultimately meant to "close the deal".';
+      }
+      &:nth-of-type(7)::after {
+        content: "It's showtime.  At this moment, we introduce you and your value proposition to clients. We focus on meeting specific objectives and tailoring activities to maximize the effect. We make sure the campaign runs smoothly, we test the content, and analyze the results.";
+      }
+      &:nth-child(9)::after {
+        content: "At this stage, we monitor campaigns and study customer behavior. We also evaluate the effectiveness of the campaign and the resources created. We create reports and discussing future steps.";
+      }
+    }
   }
 `
