@@ -1749,3 +1749,162 @@ export const LandingZigZag = styled.div`
     display: none;
   }
 `
+//landingPage/abuotUs.jsx
+
+export const AboutUsWrapper = styled(motion.section)`
+  background: ${colors.neutral90};
+  padding: 10% 0;
+  a {
+    text-decoration: none;
+  }
+  .cnt {
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    @media (max-width: 956px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &.first {
+      margin-top: 10%;
+    }
+  }
+  button {
+    width: 219px;
+    height: 58px;
+    display: inline-block;
+    background: ${colors.neutral80};
+    color: ${colors.neutral00};
+    cursor: pointer;
+    border: none;
+    border-radius: 33px;
+    outline: none;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 29px;
+    transition: all 0.1s ease-in;
+    &:hover {
+      transform: scale(1.1);
+      filter: brightness(120%);
+    }
+  }
+  .btn__cnt {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+  }
+`
+export const AboutUsHeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5% 0 10%;
+  font-size: 16px;
+  @media (max-width: 956px) {
+    font-size: 14px;
+  }
+  @media (max-width: 550px) {
+    font-size: 10px;
+  }
+  .text {
+    color: ${colors.neutral00};
+    font-family: "Poppins";
+    font-style: normal;
+    width: 70%;
+    @media (max-width: 956px) {
+      width: 100%;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 3.4375em;
+      line-height: 138%;
+    }
+    p {
+      width: 60%;
+      margin-top: 3%;
+      font-weight: 300;
+      font-size: 1.1875em;
+      line-height: 168%;
+      @media (max-width: 956px) {
+        width: 100%;
+      }
+    }
+  }
+`
+
+export const BoxWrapper = styled.div`
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral00};
+  width: 500px;
+  height: 310px;
+  cursor: pointer;
+  margin: 2% 0;
+  @media (max-width: 1600px) {
+    width: 400px;
+  }
+  @media (max-width: 1250px) {
+    width: 300px;
+  }
+  @media (max-width: 956px) {
+    max-width: 300px;
+  }
+  h3 {
+    max-width: 240px;
+    font-weight: 600;
+    font-size: 1.875em;
+    line-height: 168.42%;
+    padding-bottom: 3%;
+    border-bottom: 1px solid ${colors.neutral60};
+    margin-bottom: 3%;
+  }
+  ul {
+    list-style: none;
+    margin-bottom: 5%;
+    li {
+      font-weight: normal;
+      font-size: 1em;
+      line-height: 181.25%;
+      color: ${colors.neutral30};
+    }
+  }
+  a {
+    font-weight: 600;
+    font-size: 1em;
+    line-height: 181.25%;
+    transition: all 0.3s ease-in;
+    padding-bottom: 1%;
+    border-bottom: 1.3px solid ${colors.neutral00};
+    color: ${colors.neutral00};
+    text-decoration: none;
+  }
+  @media (hover: hover) {
+    a {
+      opacity: 0;
+    }
+    &:hover a {
+      opacity: 1;
+    }
+  }
+`
+
+export const BoxImageWrapper = styled.div`
+  width: 65px;
+  height: 65px;
+  padding: 0;
+  position: relative;
+  .hidden {
+    opacity: 0;
+  }
+`
+
+export const BoxImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: top;
+`
