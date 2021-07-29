@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components"
+import { Link } from "gatsby"
 import { Link as ScLink } from "react-scroll"
-import Image from "gatsby-image"
+import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
 import { colors } from "../../styles/colors"
@@ -64,7 +65,7 @@ export const AboutAuthor = styled.p`
   }
 `
 
-export const AuthorPic = styled(Image)`
+export const AuthorPic = styled(Img)`
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -252,7 +253,7 @@ export const SlideContentDetails = styled.div`
   }
 `
 
-export const SlideImage = styled(Image)`
+export const SlideImage = styled(Img)`
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -459,7 +460,7 @@ export const BigScreenWrapper = styled.div`
   margin-top: 25%;
 `
 
-export const BigScreenImage = styled(Image)`
+export const BigScreenImage = styled(Img)`
   width: 100%;
   height: 100%;
 `
@@ -650,7 +651,7 @@ export const DoubleImageWrapper = styled.div`
   }
 `
 
-export const CaseDoubleImageImage = styled(Image)`
+export const CaseDoubleImageImage = styled(Img)`
   height: 100%;
   object-fit: contain;
 `
@@ -767,7 +768,7 @@ export const CaseScreenWrapper = styled.div`
   }
 `
 
-export const CaseScreenImage = styled(Image)`
+export const CaseScreenImage = styled(Img)`
   width: 100%;
   height: 100%;
 `
@@ -1749,8 +1750,8 @@ export const LandingZigZag = styled.div`
     display: none;
   }
 `
-//landingPage/abuotUs.jsx
 
+//landingPage/abuotUs.jsx
 export const AboutUsWrapper = styled(motion.section)`
   background: ${colors.neutral90};
   padding: 10% 0;
@@ -1907,4 +1908,156 @@ export const BoxImage = styled.img`
   height: 100%;
   object-fit: contain;
   object-position: top;
+`
+
+//landingPage/caseStudy.jsx
+export const CaseStudyWrapper = styled.section`
+  position: relative;
+  margin-bottom: 10%;
+  .carousel__cnt {
+    .slide:nth-of-type(even) {
+      margin: 0 0.5%;
+      @media (max-width: 650px) {
+        margin: 25% 0;
+      }
+    }
+  }
+`
+
+export const CaseStudyHeaderWrapper = styled.div`
+  font-family: "Poppins";
+  font-style: normal;
+  padding: 10% 22% 10% 10%;
+  color: ${colors.neutral100};
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (max-width: 650px) {
+    justify-content: center;
+    padding: 25% 10%;
+    font-size: 10px;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 5em;
+    line-height: 95%;
+    margin-bottom: 3%;
+  }
+  p {
+    width: 60%;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 32px;
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+  }
+  .next {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    width: 130px;
+    height: 130px;
+    display: inline-block;
+    transition: 0.6s;
+    padding: 0;
+    perspective: 1000px;
+    &:hover {
+      transform: rotateZ(360deg);
+    }
+    @media (max-width: 1080px) {
+      display: none;
+    }
+  }
+`
+
+export const CaseStudySliderWrapper = styled(Link)`
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 16px;
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1080px) {
+    margin: 5vh 0;
+    padding: 0 10%;
+    font-size: 12px;
+  }
+  @media (max-width: 650px) {
+    font-size: 16px;
+  }
+  @media (max-width: 400px) {
+    padding: 0;
+  }
+  .text__cnt {
+    margin-top: 2%;
+    margin-left: 3%;
+    @media (max-width: 650px) {
+      margin-top: 6%;
+    }
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.875em;
+    line-height: 153.33%;
+    color: ${colors.neutral100};
+  }
+  p {
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 181.25%;
+    color: ${colors.neutral50};
+  }
+`
+
+export const CaseStudySliderImageWrapper = styled.div`
+  height: 70%;
+  overflow: hidden;
+  > div {
+    transition: all 0.5s ease-in-out;
+  }
+  &:hover > div {
+    transform: scale(1.1);
+  }
+  @media (max-width: 968px) {
+    height: 400px;
+  }
+`
+
+//landingPage/caseStudyMobile.jsx
+
+export const MobileStudyWrapper = styled.section`
+  position: relative;
+  margin-bottom: 10%;
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral100};
+  #header__study__mobile {
+    padding: 15% 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 650px) {
+      font-size: 10px;
+    }
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 5em;
+    line-height: 95%;
+    margin-bottom: 3%;
+  }
+  p {
+    width: 100%;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 32px;
+  }
 `
