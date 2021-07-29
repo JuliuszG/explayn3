@@ -12,6 +12,7 @@ import {
   DesktopMenuFooter,
   Copy,
 } from "../../styled"
+import { useLocation } from "@reach/router"
 
 const menuAnimation = {
   visible: {
@@ -86,6 +87,7 @@ const lineAnimation = {
 }
 
 const MenuDesktop = ({ toggle }) => {
+  const location = useLocation()
   const [subMenuIsOn, setSubMenuIsOn] = useState(false)
   const menuSwitch = () => {
     toggle()
@@ -127,7 +129,7 @@ const MenuDesktop = ({ toggle }) => {
           </motion.div>
           <motion.div variants={itemAnimation} className="item">
             <div className="number">03.</div>
-            {window.location.pathname === "/" ? (
+            {location.pathname === "/" ? (
               <ScLink
                 to={"caseStudy"}
                 smooth

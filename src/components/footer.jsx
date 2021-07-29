@@ -14,8 +14,10 @@ import {
   FooterSocialMediaContent,
   FooterDecoration,
 } from "./styled"
+import { useLocation } from "@reach/router"
 
 const Footer = () => {
+  const location = useLocation()
   const [value, setValue] = useState("")
   const [mailSend, setMailSend] = useState(false)
   const handleSubmit = e => {
@@ -88,7 +90,7 @@ const Footer = () => {
         <div className="site-links-column sl2">
           <h3>About</h3>
           <Link to="/">Home</Link>
-          {window.location.pathname === "/" ? (
+          {location.pathname === "/" ? (
             <ScLink to={"caseStudy"} smooth duration={1000}>
               Case studies
             </ScLink>
