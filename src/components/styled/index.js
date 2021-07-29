@@ -74,7 +74,7 @@ export const AuthorPic = styled(Img)`
   border-radius: 50%;
 `
 
-//blog/postSLider.js
+//blog/postSLider.jsx
 export const PostSliderWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -2756,4 +2756,477 @@ export const SwitchLangButton = styled.button`
   cursor: pointer;
   text-transform: uppercase;
   color: ${({ color }) => (color ? color : "#000")};
+`
+
+//navigation/mobile.jsx
+
+export const MobileNav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6%;
+  height: 75px;
+  background: ${colors.neutral10};
+  .contact-icon {
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+  .dec {
+    width: 1px;
+    height: 70px;
+    background: ${colors.neutral30};
+  }
+`
+//navigation/mobileMenu.jsx
+
+export const MobileMenuWrapper = styled.div`
+  background: ${colors.neutral90};
+  width: 100%;
+  height: 100%;
+  padding: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  overflow-y: auto;
+  .cnt {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+`
+export const MobileHeaderMenuWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    border: none;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    span {
+      display: block;
+      width: 100%;
+      height: 2.3px;
+      background: #fff;
+      &:first-of-type {
+        transform: rotate(45deg) translateY(-1px) translateX(-1px);
+      }
+      &:last-of-type {
+        transform: rotate(-45deg) translateX(2.2px) translateY(-2px);
+      }
+    }
+  }
+`
+export const MobileMenuLinks = styled.ul`
+  padding: 10% 10% 5%;
+  font-size: 16px;
+  .dropdown.active {
+    display: block;
+  }
+  .dropLink {
+    cursor: pointer;
+  }
+  li {
+    padding: 6% 0;
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    span {
+      margin-right: 5%;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1.5em;
+      line-height: 36px;
+      span {
+        color: #9498b2;
+      }
+    }
+    .dropdown {
+      display: none;
+      z-index: 1000;
+      li {
+        border: none;
+      }
+      a {
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.125em;
+        line-height: 27px;
+      }
+    }
+  }
+`
+export const MobileFooterMenu = styled.div`
+  padding: 10% 0 0;
+  padding-left: 5%;
+  color: #fff;
+  z-index: 500;
+  margin: 30% 0 10%;
+  .contact {
+    margin-bottom: 15%;
+    .header {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 36px;
+      margin-bottom: 10%;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 24px;
+      display: block;
+    }
+  }
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 19px;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+`
+export const MobileMenuImage = styled(Img)`
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -25%;
+`
+
+//navigation/menuMobile.jsx
+
+export const MobileMenuHeader = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8%;
+`
+
+export const MenuLinksMobile = styled.div`
+  width: 100%;
+  padding: 8%;
+  .item {
+    padding: 8% 0;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 150%;
+    color: ${colors.neutral00};
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    .item-link {
+      display: flex;
+    }
+    &:last-of-type {
+      border-bottom: none;
+    }
+    a {
+      width: 100%;
+      text-decoration: none;
+      display: block;
+      color: ${colors.neutral00};
+    }
+    .number {
+      color: ${colors.neutral40};
+      margin-right: 0.8em;
+    }
+  }
+`
+export const MobileSubMenu = styled.div`
+  width: 100%;
+  padding: 5% 0;
+  font-family: "Poppins";
+  font-style: normal;
+  display: block;
+  a {
+    padding: 2% 0;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.8em;
+    line-height: 150%;
+    color: ${colors.neutral00};
+  }
+`
+
+export const MobileMenuFooter = styled.div`
+  width: 100%;
+  padding: 8%;
+  h3 {
+    color: ${colors.neutral00};
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 150%;
+    margin-bottom: 5%;
+  }
+  a {
+    text-decoration: none;
+    color: ${colors.neutral00};
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 150%;
+    display: block;
+  }
+  .socials {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    a {
+      text-decoration: none;
+      color: ${colors.neutral00};
+      font-weight: 300;
+      font-size: 0.8125em;
+      line-height: 146.15%;
+    }
+  }
+`
+
+export const MobileMenuContainer = styled(motion.div)`
+  background: ${colors.neutral90};
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  overflow-y: auto;
+  font-family: "Poppins";
+  font-style: normal;
+  transition: all 0.5s ease-in;
+  .cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+`
+
+export const Exit = styled.div`
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+  &:after {
+    content: "";
+    height: 100%;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 10px;
+  }
+  :before {
+    content: "";
+    height: 100%;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 10px;
+  }
+  .sr {
+    display: none;
+  }
+`
+//navigation/menuDesktop.jsx
+
+export const DesktopMenu = styled(motion.div)`
+  background: ${colors.neutral90};
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+`
+
+export const DesktopHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 3%;
+`
+
+export const DesktopLinks = styled.div`
+  padding: 0 10%;
+  width: 100%;
+  display: flex;
+  @media (max-width: 1650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1050px) {
+    font-size: 10px;
+  }
+  @media (width: 1024px) and (height: 1366px) {
+    font-size: 16px;
+  }
+  .main:hover .item:not(:hover) a {
+    color: ${({ subMenuIsOn }) => !subMenuIsOn && "grey"};
+  }
+  .main {
+    width: 40em;
+    font-family: "Poppins";
+    font-style: normal;
+    .item {
+      cursor: pointer;
+      display: block;
+      text-decoration: none;
+      color: ${colors.neutral00};
+      font-weight: 600;
+      font-size: 2.75em;
+      line-height: 272.72%;
+      display: flex;
+      &:nth-of-type(2) a {
+        color: ${({ subMenuIsOn }) => subMenuIsOn && colors.neutral00};
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: ${({ subMenuIsOn }) =>
+          subMenuIsOn ? "grey" : colors.neutral00};
+        transition: all 0.3s ease-in-out;
+      }
+      .number {
+        color: ${colors.neutral40};
+        font-size: calc(1em / 2.3);
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 0.7%;
+        margin-right: 4%;
+      }
+    }
+  }
+  .line {
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: ${colors.neutral00};
+    margin-left: -12em;
+    margin-top: 12em;
+  }
+  .sub-menu:hover .sub-item:not(:hover) a {
+    color: grey;
+  }
+  .sub-menu {
+    width: 30%;
+    font-family: "Poppins";
+    font-style: normal;
+    margin-top: 10em;
+    margin-left: 8em;
+    .sub-item {
+      display: block;
+      a {
+        text-decoration: none;
+        color: ${colors.neutral00};
+        display: block;
+        font-weight: 600;
+        font-size: 1.5625em;
+        line-height: 244%;
+      }
+    }
+  }
+`
+
+export const DesktopMenuFooter = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10%;
+  font-family: "Poppins";
+  font-style: normal;
+  color: ${colors.neutral00};
+  .social {
+    display: flex;
+    .row {
+      flex-grow: 1;
+      &:first-of-type {
+        margin-right: 12em;
+      }
+      a {
+        display: block;
+        color: ${colors.neutral00};
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 1.0625em;
+        line-height: 264.7%;
+      }
+    }
+  }
+  .contact {
+    position: relative;
+    @media (max-width: 1650px) {
+      font-size: 12px;
+    }
+    @media (max-width: 1050px) {
+      font-size: 10px;
+    }
+    bottom: 5em;
+    h3 {
+      font-weight: 600;
+      font-size: 1.5625em;
+      line-height: 480%;
+    }
+    a {
+      display: block;
+      color: ${colors.neutral00};
+      text-decoration: none;
+      font-weight: 300;
+      font-size: 1.1875em;
+      line-height: 168.42%;
+    }
+  }
+`
+
+export const Copy = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 1650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1050px) {
+    font-size: 10px;
+  }
+  p {
+    color: ${colors.neutral30};
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375em;
+    line-height: 386.66%;
+  }
 `
