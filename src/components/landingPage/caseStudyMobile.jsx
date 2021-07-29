@@ -1,7 +1,7 @@
-import React, { useMemo } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { SliderContent } from "./caseStudy"
-import { MobileStudyWrapper } from "../styled"
+import React, { useMemo } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import { SliderContent } from './caseStudy';
+import { MobileStudyWrapper } from '../styled';
 
 const CaseStudyMobile = () => {
   const data = useStaticQuery(graphql`
@@ -16,38 +16,38 @@ const CaseStudyMobile = () => {
         }
       }
     }
-  `)
+  `);
   const slideData = useMemo(() => {
     return [
       {
         image: {
           src: data.allFile.nodes[2].childImageSharp.fluid,
-          alt: "grabbit-logo",
+          alt: 'grabbit-logo',
         },
-        title: "Grabbit, chwyć króliczka!",
-        desc: "Projekt portalu internetowego",
-        slug: "case1",
+        title: 'Grabbit, chwyć króliczka!',
+        desc: 'Projekt portalu internetowego',
+        slug: 'case1',
       },
       {
         image: {
           src: data.allFile.nodes[3].childImageSharp.fluid,
-          alt: "deventon-logo",
+          alt: 'deventon-logo',
         },
-        title: "Deventon, IT i engineering",
-        desc: "Projekt strony internetowej",
-        slug: "case2",
+        title: 'Deventon, IT i engineering',
+        desc: 'Projekt strony internetowej',
+        slug: 'case2',
       },
       {
         image: {
           src: data.allFile.nodes[4].childImageSharp.fluid,
-          alt: "twochicks-logo",
+          alt: 'twochicks-logo',
         },
-        title: "Twochicks, dwa pisklęta",
-        desc: "Film reklamowy",
-        slug: "case3",
+        title: 'Twochicks, dwa pisklęta',
+        desc: 'Film reklamowy',
+        slug: 'case3',
       },
-    ]
-  }, [data])
+    ];
+  }, [data]);
   return (
     <MobileStudyWrapper>
       <h2>Case studies</h2>
@@ -61,6 +61,6 @@ const CaseStudyMobile = () => {
         ))}
       </div>
     </MobileStudyWrapper>
-  )
-}
-export default CaseStudyMobile
+  );
+};
+export default CaseStudyMobile;

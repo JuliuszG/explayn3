@@ -1,9 +1,9 @@
-import React, { useState } from "react"
-import { motion } from "framer-motion"
-import { colors } from "../../../styles/colors"
-import { Link } from "gatsby"
-import ContactUs from "../contactUs"
-import { Link as ScLink } from "react-scroll"
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { colors } from '../../../styles/colors';
+import { Link } from 'gatsby';
+import ContactUs from '../contactUs';
+import { Link as ScLink } from 'react-scroll';
 import {
   Exit,
   DesktopMenu,
@@ -11,29 +11,29 @@ import {
   DesktopLinks,
   DesktopMenuFooter,
   Copy,
-} from "../../styled"
-import { useLocation } from "@reach/router"
+} from '../../styled';
+import { useLocation } from '@reach/router';
 
 const menuAnimation = {
   visible: {
     top: 0,
     transition: {
-      when: "beforeChildren",
+      when: 'beforeChildren',
       staggerChildren: 0.1,
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.5,
     },
   },
   hidden: {
-    top: "-100vh",
+    top: '-100vh',
     transition: {
-      when: "afterChildren",
+      when: 'afterChildren',
       staggerChildren: 0.1,
-      ease: "easeInOut",
+      ease: 'easeInOut',
       duration: 0.3,
     },
   },
-}
+};
 
 const itemAnimation = {
   visible: {
@@ -41,7 +41,7 @@ const itemAnimation = {
     y: 0,
     opacity: 1,
     transition: {
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 0.2,
     },
   },
@@ -49,7 +49,7 @@ const itemAnimation = {
     x: -300,
     opacity: 0,
   },
-}
+};
 
 const subItemAnimation = {
   visible: i => ({
@@ -57,7 +57,7 @@ const subItemAnimation = {
     opacity: 1,
     transition: {
       delay: i * 0.1,
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 0.2,
     },
   }),
@@ -65,14 +65,14 @@ const subItemAnimation = {
     x: 200,
     opacity: 0,
   },
-}
+};
 
 const lineAnimation = {
   visible: {
-    width: "5%",
+    width: '5%',
     opacity: 1,
     transition: {
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 0.2,
     },
   },
@@ -80,19 +80,19 @@ const lineAnimation = {
     width: 0,
     opacity: 0,
     transition: {
-      ease: "easeIn",
+      ease: 'easeIn',
       duration: 0.1,
     },
   },
-}
+};
 
 const MenuDesktop = ({ toggle }) => {
-  const location = useLocation()
-  const [subMenuIsOn, setSubMenuIsOn] = useState(false)
+  const location = useLocation();
+  const [subMenuIsOn, setSubMenuIsOn] = useState(false);
   const menuSwitch = () => {
-    toggle()
-    setSubMenuIsOn(false)
-  }
+    toggle();
+    setSubMenuIsOn(false);
+  };
   return (
     <DesktopMenu
       variants={menuAnimation}
@@ -129,9 +129,9 @@ const MenuDesktop = ({ toggle }) => {
           </motion.div>
           <motion.div variants={itemAnimation} className="item">
             <div className="number">03.</div>
-            {location.pathname === "/" ? (
+            {location.pathname === '/' ? (
               <ScLink
-                to={"caseStudy"}
+                to={'caseStudy'}
                 smooth
                 duration={1000}
                 onClick={menuSwitch}
@@ -139,7 +139,7 @@ const MenuDesktop = ({ toggle }) => {
                 Case studies
               </ScLink>
             ) : (
-              <Link to={"/"} state={{ scrollAnchor: "#caseStudy" }}>
+              <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>
                 Case studies
               </Link>
             )}
@@ -151,7 +151,7 @@ const MenuDesktop = ({ toggle }) => {
         </div>
         <motion.div
           variants={lineAnimation}
-          animate={subMenuIsOn ? "visible" : "hidden"}
+          animate={subMenuIsOn ? 'visible' : 'hidden'}
           className="line"
         ></motion.div>
         {subMenuIsOn && (
@@ -201,7 +201,7 @@ const MenuDesktop = ({ toggle }) => {
           </div>
         )}
       </DesktopLinks>
-      <div style={{ width: "100%" }}>
+      <div style={{ width: '100%' }}>
         <DesktopMenuFooter>
           <div className="social">
             <div className="row">
@@ -228,7 +228,7 @@ const MenuDesktop = ({ toggle }) => {
         </Copy>
       </div>
     </DesktopMenu>
-  )
-}
+  );
+};
 
-export default MenuDesktop
+export default MenuDesktop;

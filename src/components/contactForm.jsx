@@ -1,7 +1,7 @@
-import React, { useState, useContext } from "react"
-import { appContext } from "./context"
-import ContactFormImage from "../images/contactFormImage.svg"
-import emailjs from "emailjs-com"
+import React, { useState, useContext } from 'react';
+import { appContext } from './context';
+import ContactFormImage from '../images/contactFormImage.svg';
+import emailjs from 'emailjs-com';
 import {
   ContactFormWrapper,
   ContactCategories,
@@ -12,22 +12,22 @@ import {
   FormSubmitButton,
   ExitButton,
   ContactDecoration,
-} from "./styled"
+} from './styled';
 
 const categories = [
-  "BRANDING",
-  "ANIMATIONS/3D",
-  "VIDEO",
-  "APPS",
-  "eCOMMERCE",
-  "UI/UX",
-  "MARKETING STRATEGY",
-  "SOCIAL MEDIA",
-  "CONTENT MARKETING",
-  "e-EVENTS",
-  "SOFTWARE",
-  "OTHER",
-]
+  'BRANDING',
+  'ANIMATIONS/3D',
+  'VIDEO',
+  'APPS',
+  'eCOMMERCE',
+  'UI/UX',
+  'MARKETING STRATEGY',
+  'SOCIAL MEDIA',
+  'CONTENT MARKETING',
+  'e-EVENTS',
+  'SOFTWARE',
+  'OTHER',
+];
 
 const contactVariant = {
   in: {
@@ -37,88 +37,88 @@ const contactVariant = {
     },
   },
   out: {
-    y: "-100vh",
+    y: '-100vh',
   },
   exit: {
-    x: "-100vw",
+    x: '-100vw',
     transition: {
       duration: 0.3,
     },
   },
-}
+};
 
 export const ContactForm = () => {
-  const [list, setList] = useState([])
-  const { changeContactFormStatus } = useContext(appContext)
+  const [list, setList] = useState([]);
+  const { changeContactFormStatus } = useContext(appContext);
   const [formData, setFormData] = useState({
     email: null,
     phone: null,
     message: null,
-  })
+  });
 
   const [errorData, setErrorData] = useState({
     email: null,
     phone: null,
     message: null,
     cat: null,
-  })
+  });
 
   const handleAddingCategories = category => {
     if (list.indexOf(category) === -1) {
-      setList(prevState => [...prevState, category])
+      setList(prevState => [...prevState, category]);
       setErrorData(prevState => ({
         ...prevState,
         cat: null,
-      }))
+      }));
     } else {
-      setList(prevState => prevState.filter(el => el !== category))
+      setList(prevState => prevState.filter(el => el !== category));
     }
-  }
+  };
 
   const hashtagify = () => {
-    const newList = list.map(el => "#" + el)
-    return newList.join(" ")
-  }
+    const newList = list.map(el => '#' + el);
+    return newList.join(' ');
+  };
 
   const sendEmail = e => {
-    e.preventDefault()
-    const tags = hashtagify()
+    e.preventDefault();
+    const tags = hashtagify();
     const body = {
       ...formData,
       tags: tags,
-    }
+    };
     emailjs
       .send(
-        "default_service",
-        "template_fyltbjj",
+        'default_service',
+        'template_fyltbjj',
         body,
-        "user_VfGpMuhECXdgJOEm13gzv"
+        'user_VfGpMuhECXdgJOEm13gzv'
       )
       .then(response => {
-        changeContactFormStatus(2)
-      })
-  }
+        changeContactFormStatus(2);
+      });
+  };
 
   const handleSubmit = e => {
-    e.preventDefault()
+    e.preventDefault();
     if (checkAll()) {
-      sendEmail(e)
+      sendEmail(e);
     }
-  }
+  };
 
   const handleBlur = (name, value) => {
-    if (name === "email") {
-      const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    if (name === 'email') {
+      const regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       if (!regex.test(value)) {
         setErrorData(prevState => ({
           ...prevState,
-          email: "Incorrect Email",
-        }))
+          email: 'Incorrect Email',
+        }));
       } else {
         setErrorData(prevState => ({
           ...prevState,
           email: null,
-        }))
+        }));
       }
     }
 
@@ -137,42 +137,42 @@ export const ContactForm = () => {
     //     }
     // }
 
-    if (name === "message") {
+    if (name === 'message') {
       if (!value || value?.length < 10) {
         setErrorData(prevState => ({
           ...prevState,
-          message: "Message must contain at least 10 letters",
-        }))
+          message: 'Message must contain at least 10 letters',
+        }));
       } else {
         setErrorData(prevState => ({
           ...prevState,
           message: null,
-        }))
+        }));
       }
     }
-  }
+  };
 
   const handleChange = ({ value, name }) => {
     setFormData(prevState => ({
       ...prevState,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const checkAll = () => {
-    handleBlur("email", formData.email)
-    handleBlur("phone", formData.phone)
-    handleBlur("message", formData.message)
+    handleBlur('email', formData.email);
+    handleBlur('phone', formData.phone);
+    handleBlur('message', formData.message);
     if (list.length === 0) {
       setErrorData(prevState => ({
         ...prevState,
-        cat: "Select at least one category",
-      }))
+        cat: 'Select at least one category',
+      }));
     } else {
       setErrorData(prevState => ({
         ...prevState,
         cat: null,
-      }))
+      }));
     }
     if (
       errorData.email ||
@@ -183,10 +183,10 @@ export const ContactForm = () => {
       !formData.message ||
       list.length === 0
     ) {
-      return false
+      return false;
     }
-    return true
-  }
+    return true;
+  };
 
   return (
     <ContactFormWrapper
@@ -262,7 +262,7 @@ export const ContactForm = () => {
       </ExitButton>
       <ContactDecoration src={ContactFormImage} alt="decoration" />
     </ContactFormWrapper>
-  )
-}
+  );
+};
 
 // Thank You Card

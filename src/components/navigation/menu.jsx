@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import ContactUs from "./contactUs"
-import { colors } from "../../styles/colors"
-import MenuLanguage from "./menuLanguage"
-import { graphql, useStaticQuery, Link } from "gatsby"
+import React, { useState } from 'react';
+import ContactUs from './contactUs';
+import { colors } from '../../styles/colors';
+import MenuLanguage from './menuLanguage';
+import { graphql, useStaticQuery, Link } from 'gatsby';
 import {
   MenuWrapper,
   MenuFooterWrapper,
@@ -10,7 +10,7 @@ import {
   MenuImage,
   ExitMenu,
   MenuHeader,
-} from "../styled"
+} from '../styled';
 
 const MenuFooter = () => {
   return (
@@ -34,8 +34,8 @@ const MenuFooter = () => {
       </div>
       <span className="copy">&copy; explayn.it All rights reserved</span>
     </MenuFooterWrapper>
-  )
-}
+  );
+};
 
 const Header = ({ toggle }) => {
   return (
@@ -50,12 +50,12 @@ const Header = ({ toggle }) => {
         <MenuLanguage />
       </div>
     </MenuHeader>
-  )
-}
+  );
+};
 
 const LinksMenu = () => {
-  const [dropOn, setDropOn] = useState(false)
-  const handleDrop = () => setDropOn(prevState => !prevState)
+  const [dropOn, setDropOn] = useState(false);
+  const handleDrop = () => setDropOn(prevState => !prevState);
   return (
     <nav>
       <LinksWrapper>
@@ -68,8 +68,8 @@ const LinksMenu = () => {
           <Link>
             <span>02.</span>Co robimy
           </Link>
-          <span className={dropOn ? "longdash active" : "longdash"}></span>
-          <ul className={dropOn ? "dropdown active" : "dropdown"}>
+          <span className={dropOn ? 'longdash active' : 'longdash'}></span>
+          <ul className={dropOn ? 'dropdown active' : 'dropdown'}>
             <li>
               <Link to="/development">Development</Link>
             </li>
@@ -102,8 +102,8 @@ const LinksMenu = () => {
         </li>
       </LinksWrapper>
     </nav>
-  )
-}
+  );
+};
 
 const Menu = ({ toggle }) => {
   const data = useStaticQuery(graphql`
@@ -116,7 +116,7 @@ const Menu = ({ toggle }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <MenuWrapper>
@@ -126,10 +126,10 @@ const Menu = ({ toggle }) => {
       <MenuImage
         fluid={data.file.childImageSharp.fluid}
         alt="logo"
-        style={{ position: "absolute", right: 0, bottom: 0 }}
+        style={{ position: 'absolute', right: 0, bottom: 0 }}
       />
     </MenuWrapper>
-  )
-}
+  );
+};
 
-export default Menu
+export default Menu;

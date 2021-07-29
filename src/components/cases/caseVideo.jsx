@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import { motion, AnimatePresence } from "framer-motion"
-import Play from "../../images/play.svg"
-import { CaseVideoWrapper, VideoWrapper } from "../styled"
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Play from '../../images/play.svg';
+import { CaseVideoWrapper, VideoWrapper } from '../styled';
 
 const CaseVideo = ({ link }) => {
-  const [overlayOn, setOverlayOn] = useState(true)
+  const [overlayOn, setOverlayOn] = useState(true);
   return (
     <CaseVideoWrapper>
       <VideoWrapper bg={`https://img.youtube.com/vi/${link}/0.jpg`}>
@@ -39,7 +39,7 @@ const CaseVideo = ({ link }) => {
         </AnimatePresence>
       </VideoWrapper>
     </CaseVideoWrapper>
-  )
-}
+  );
+};
 
-export default CaseVideo
+export default CaseVideo;

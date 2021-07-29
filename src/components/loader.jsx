@@ -1,7 +1,7 @@
-import React from "react"
+import React from 'react';
 // import LoaderIcon from "react-loader-spinner"
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
-import { LoaderWrapper } from "./styled"
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+import { LoaderWrapper } from './styled';
 
 const Loader = () => {
   return (
@@ -16,7 +16,7 @@ const Loader = () => {
         width={100} /> */}
       <div className="loader" />
     </LoaderWrapper>
-  )
-}
+  );
+};
 
-export default Loader
+export default Loader;

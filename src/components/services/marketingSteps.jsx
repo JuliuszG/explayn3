@@ -1,6 +1,6 @@
-import React from "react"
-import Icon from "./stepIcon"
-import { MarketingStepsWrapper } from "../styled"
+import React from 'react';
+import Icon from './stepIcon';
+import { MarketingStepsWrapper } from '../styled';
 
 const MarketingSteps = ({ arr }) => {
   return (
@@ -23,12 +23,12 @@ const MarketingSteps = ({ arr }) => {
                   <div key={index} className="line"></div>
                 )}
               </>
-            )
+            );
           })}
         </div>
       </div>
     </MarketingStepsWrapper>
-  )
-}
+  );
+};
 
-export default MarketingSteps
+export default MarketingSteps;

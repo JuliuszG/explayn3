@@ -1,6 +1,6 @@
-import React, { useContext } from "react"
-import { appContext } from "./context"
-import { ThankYouCardWrapper, ThankYouButton } from "./styled"
+import React, { useContext } from 'react';
+import { appContext } from './context';
+import { ThankYouCardWrapper, ThankYouButton } from './styled';
 
 const thanksVariant = {
   in: {
@@ -10,17 +10,17 @@ const thanksVariant = {
     },
   },
   out: {
-    x: "-100vw",
+    x: '-100vw',
   },
   exit: {
-    y: "-100vh",
+    y: '-100vh',
     transition: {
       duration: 0.3,
     },
   },
-}
+};
 const ThankYouCard = () => {
-  const { changeContactFormStatus } = useContext(appContext)
+  const { changeContactFormStatus } = useContext(appContext);
   return (
     <ThankYouCardWrapper
       variants={thanksVariant}
@@ -40,7 +40,7 @@ const ThankYouCard = () => {
         </ThankYouButton>
       </div>
     </ThankYouCardWrapper>
-  )
-}
+  );
+};
 
-export default ThankYouCard
+export default ThankYouCard;

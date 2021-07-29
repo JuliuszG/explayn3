@@ -1,5 +1,5 @@
-import React from "react"
-import { SocialMediaWrapper } from "../styled"
+import React from 'react';
+import { SocialMediaWrapper } from '../styled';
 
 const SocialMedia = ({ title, slug }) => {
   return (
@@ -66,7 +66,7 @@ const SocialMedia = ({ title, slug }) => {
         </svg>
       </a>
     </SocialMediaWrapper>
-  )
-}
+  );
+};
 
-export default SocialMedia
+export default SocialMedia;

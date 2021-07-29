@@ -1,16 +1,16 @@
 const size = {
-  mobileS: "320px",
-  mobileM: "375px",
-  mobileL: "425px",
-  tablet: "768px",
-  tabletL: "960px",
-  laptop: "1024px",
-  laptopM: "1280px",
-  laptopL: "1440px",
-  desktop: "2560px",
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  tabletL: '960px',
+  laptop: '1024px',
+  laptopM: '1280px',
+  laptopL: '1440px',
+  desktop: '2560px',
   /* Custom force break */
-  tabletDown: "767px",
-}
+  tabletDown: '767px',
+};
 
 export const deviceMin = {
   mobileS: `(min-width: ${size.mobileS})`,
@@ -23,7 +23,7 @@ export const deviceMin = {
   laptopL: `(min-width: ${size.laptopL})`,
   desktop: `(min-width: ${size.desktop})`,
   desktopL: `(min-width: ${size.desktop})`,
-}
+};
 
 export const deviceMax = {
   mobileS: `(max-width: ${size.mobileS})`,
@@ -37,9 +37,9 @@ export const deviceMax = {
   desktop: `(max-width: ${size.desktop})`,
   desktopL: `(max-width: ${size.desktop})`,
   tabletDown: `(max-width: ${size.tabletDown})`,
-}
+};
 
 /* Custom breakpoint */
 export const forceBreak = {
   tabletDown: `(max-width: ${size.tabletDown})`,
-}
+};

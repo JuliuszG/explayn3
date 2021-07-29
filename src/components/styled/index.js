@@ -1,13 +1,14 @@
-import styled, { keyframes } from "styled-components"
-import { Link } from "gatsby"
-import { Link as ScLink } from "react-scroll"
-import Img from "gatsby-image"
-import BackgroundImage from "gatsby-background-image"
-import { motion } from "framer-motion"
-import { colors } from "../../styles/colors"
-import BG from "../../images/development/header/bgSteps.jpg"
-import BGBranding from "../../images/branding_ikonki/duza kredka.svg"
-import BGMarketing from "../../images/ikonki marketing/duzy glosnik.svg"
+import styled, { keyframes } from 'styled-components';
+import { Link } from 'gatsby';
+import { Link as ScLink } from 'react-scroll';
+import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
+import { motion } from 'framer-motion';
+import { colors } from '../../styles/colors';
+import BG from '../../images/development/header/bgSteps.jpg';
+import BGBranding from '../../images/branding_ikonki/duza kredka.svg';
+import BGMarketing from '../../images/ikonki marketing/duzy glosnik.svg';
+import Section3Bg from '../../images/development/header/section3bg.jpg';
 
 const spin = keyframes`
     0% {
@@ -17,18 +18,18 @@ const spin = keyframes`
     transform: rotate(360deg);
   }
 
-`
+`;
 
 //blog/author.jsx
 export const AuthorWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   @media (max-width: 550px) {
     flex-direction: column;
     justify-content: center;
   }
-`
+`;
 export const AuthorImageWrapper = styled.div`
   width: 151px;
   height: 151px;
@@ -37,7 +38,7 @@ export const AuthorImageWrapper = styled.div`
     margin-right: 0;
     margin-bottom: 10px;
   }
-`
+`;
 export const AuthorInfo = styled.div`
   width: calc(100% - 200px);
   @media (max-width: 550px) {
@@ -55,7 +56,7 @@ export const AuthorInfo = styled.div`
     line-height: 50px;
     color: #000;
   }
-`
+`;
 
 export const AboutAuthor = styled.p`
   font-size: 18px;
@@ -66,13 +67,13 @@ export const AboutAuthor = styled.p`
   @media (max-width: 550px) {
     width: 100%;
   }
-`
+`;
 
 export const AuthorPic = styled(Img)`
   width: 100%;
   height: 100%;
   border-radius: 50%;
-`
+`;
 
 //blog/postSLider.jsx
 export const PostSliderWrapper = styled.div`
@@ -94,18 +95,18 @@ export const PostSliderWrapper = styled.div`
   }
   .title {
     display: block;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-size: 3rem;
     transform: translateY(-10px);
   }
-`
+`;
 
 export const Trending = styled.div`
   width: 1500px;
   position: relative;
   margin: 0 auto;
   h3 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-size: 3rem;
     margin-bottom: 80px;
     text-align: center;
@@ -114,7 +115,7 @@ export const Trending = styled.div`
     padding: 2%;
     justify-content: center;
   }
-`
+`;
 
 export const PostSliderItems = styled.div`
   width: 100%;
@@ -122,7 +123,7 @@ export const PostSliderItems = styled.div`
   display: flex;
   justify-content: center;
   align-items: stretch;
-`
+`;
 
 export const SlideImageOverlay = styled.div`
   position: absolute;
@@ -133,7 +134,7 @@ export const SlideImageOverlay = styled.div`
   background-color: #4c65ff;
   opacity: 0;
   transition: all 0.5s ease-in;
-`
+`;
 
 export const SliderLink = styled.div`
   width: 100%;
@@ -150,12 +151,12 @@ export const SliderLink = styled.div`
     letter-spacing: 1.36px;
     font-weight: 600;
   }
-`
+`;
 
 export const Slide = styled.div`
   width: 400px;
   box-shadow: 0 0 40px #00000014;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   cursor: pointer;
   margin-right: 50px;
   &:last-of-type {
@@ -183,7 +184,7 @@ export const Slide = styled.div`
   &:hover ${SliderLink} {
     opacity: 1;
   }
-`
+`;
 
 export const SlideImageContainer = styled.div`
   width: 100%;
@@ -195,7 +196,7 @@ export const SlideImageContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
-`
+`;
 
 export const SlideContent = styled.div`
   height: 50%;
@@ -231,7 +232,7 @@ export const SlideContent = styled.div`
       line-height: 30px;
     }
   }
-`
+`;
 
 export const SlideContentDetails = styled.div`
   width: 100%;
@@ -254,17 +255,17 @@ export const SlideContentDetails = styled.div`
     color: #868686;
     text-transform: uppercase;
   }
-`
+`;
 
 export const SlideImage = styled(Img)`
   object-fit: cover;
   width: 100%;
   height: 100%;
-`
+`;
 
 //blog/sidebar.jsx
 export const SideBarWrapper = styled.aside`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   width: 412px;
   padding-right: 20px;
   @media (max-width: 450px) {
@@ -280,7 +281,7 @@ export const SideBarWrapper = styled.aside`
   }
   .trending {
   }
-`
+`;
 
 export const SideBarTrending = styled.div`
   a {
@@ -293,12 +294,12 @@ export const SideBarTrending = styled.div`
       color: #000;
     }
   }
-`
+`;
 
 export const SideBarTrendingFilters = styled.div`
   display: flex;
   flex-wrap: wrap;
-`
+`;
 
 export const SideBarTrendingFilter = styled.div`
   margin-bottom: 10px;
@@ -324,8 +325,8 @@ export const SideBarTrendingFilter = styled.div`
     }
   }
   ${({ isActive }) =>
-    isActive && "border-color: #5163f6; background: #5163f6; color: #fff;"}
-`
+    isActive && 'border-color: #5163f6; background: #5163f6; color: #fff;'}
+`;
 
 //blog/sideSocialMedia.jsx
 export const SocialMediaWrapper = styled.div`
@@ -347,7 +348,7 @@ export const SocialMediaWrapper = styled.div`
       transition: 0.3s ease-in;
     }
   }
-`
+`;
 
 //blog/sideNewsletter.jsx
 export const NewsletterWrapper = styled.div`
@@ -381,7 +382,7 @@ export const NewsletterWrapper = styled.div`
       border-bottom: 1px solid #ffffff;
       width: 100%;
       color: #ffffff;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-weight: 600px;
       color: #fff;
       font-size: 12px;
@@ -393,7 +394,7 @@ export const NewsletterWrapper = styled.div`
         font-size: 10px;
       }
       &::placeholder {
-        font-family: "Poppins";
+        font-family: 'Poppins';
         padding-left: 22px;
         font-weight: 600px;
         color: #ffffff;
@@ -407,7 +408,7 @@ export const NewsletterWrapper = styled.div`
     }
     button {
       padding: 7px 20px;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-weight: 600;
       border: none;
       background: #e8ebfb;
@@ -432,7 +433,7 @@ export const NewsletterWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 export const NewsletterThanks = styled.div`
   display: flex;
@@ -445,7 +446,7 @@ export const NewsletterThanks = styled.div`
     width: 40px;
     margin-bottom: 40px;
   }
-`
+`;
 
 export const NewsletterDescription = styled.div`
   display: flex;
@@ -454,25 +455,25 @@ export const NewsletterDescription = styled.div`
     margin-top: 10px;
     margin-right: 20px;
   }
-`
+`;
 
 //cases/caseBigScreen.jsx
 export const BigScreenWrapper = styled.div`
   position: relative;
   height: 100vh;
   margin-top: 25%;
-`
+`;
 
 export const BigScreenImage = styled(Img)`
   width: 100%;
   height: 100%;
-`
+`;
 
 //cases/caseData.jsx
 export const CaseDataWrapper = styled.section`
   display: flex;
   padding: 15%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
   @media (max-width: 1400px) {
@@ -492,7 +493,7 @@ export const CaseDataWrapper = styled.section`
     font-size: 10px;
     padding: 10% 5%;
   }
-`
+`;
 
 export const CaseDataLeft = styled.div`
   width: 70%;
@@ -524,7 +525,7 @@ export const CaseDataLeft = styled.div`
     border-bottom: 1.3px solid ${colors.neutral100};
     padding-bottom: 1%;
   }
-`
+`;
 
 export const CaseDataRight = styled.ul`
   width: 440px;
@@ -556,13 +557,13 @@ export const CaseDataRight = styled.ul`
       border-bottom: none;
     }
   }
-`
+`;
 
 //cases/caseDescription.jsx
 export const CaseDescriptionWrapper = styled.section`
   position: relative;
   padding: 15% 15% 5%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
   @media (max-width: 1250px) {
@@ -591,7 +592,7 @@ export const CaseDescriptionWrapper = styled.section`
       font-size: 2.3125em;
     }
   }
-`
+`;
 
 export const CaseDescriptionDescription = styled.div`
   width: 100%;
@@ -615,7 +616,7 @@ export const CaseDescriptionDescription = styled.div`
       }
     }
   }
-`
+`;
 
 export const ZigZag = styled.div`
   width: 227px;
@@ -635,7 +636,7 @@ export const ZigZag = styled.div`
     top: 3%;
     left: 3%;
   }
-`
+`;
 
 //cases/caseDoubleImage.jsx
 export const CaseDoubleImageWrapper = styled.div`
@@ -644,7 +645,7 @@ export const CaseDoubleImageWrapper = styled.div`
   @media (max-width: 950px) {
     flex-direction: column;
   }
-`
+`;
 
 export const DoubleImageWrapper = styled.div`
   width: 50%;
@@ -652,12 +653,12 @@ export const DoubleImageWrapper = styled.div`
   @media (max-width: 950px) {
     width: 100%;
   }
-`
+`;
 
 export const CaseDoubleImageImage = styled(Img)`
   height: 100%;
   object-fit: contain;
-`
+`;
 
 //case/caseLanding.jsx
 export const CaseLandingWrapper = styled(BackgroundImage)`
@@ -667,7 +668,7 @@ export const CaseLandingWrapper = styled(BackgroundImage)`
   background-size: cover;
   height: 100vh;
   position: relative;
-`
+`;
 
 export const CaseLandingCircle = styled.div`
   width: 217px;
@@ -680,12 +681,12 @@ export const CaseLandingCircle = styled.div`
     height: 69.5px;
     bottom: -2%;
   }
-`
+`;
 
 //case/caseLanding.jsx
 export const CaseListWrapper = styled.section`
   padding: 15%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
   @media (max-width: 1400px) {
@@ -704,7 +705,7 @@ export const CaseListWrapper = styled.section`
       font-size: 2em;
     }
   }
-`
+`;
 
 export const CaseListContentWrapper = styled.div`
   width: 100%;
@@ -760,7 +761,7 @@ export const CaseListContentWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 //case/caseScreen.jsx
 export const CaseScreenWrapper = styled.div`
@@ -769,12 +770,12 @@ export const CaseScreenWrapper = styled.div`
   @media (max-width: 450px) {
     padding: 0 5%;
   }
-`
+`;
 
 export const CaseScreenImage = styled(Img)`
   width: 100%;
   height: 100%;
-`
+`;
 
 //case/caseScreen.jsx
 export const CaseVideoWrapper = styled.div`
@@ -782,7 +783,7 @@ export const CaseVideoWrapper = styled.div`
   @media (max-width: 960px) {
     padding: 10% 0;
   }
-`
+`;
 
 export const VideoWrapper = styled.div`
   height: calc(100vh - 100px);
@@ -812,7 +813,7 @@ export const VideoWrapper = styled.div`
     width: 100%;
     height: 100%;
   }
-`
+`;
 //thankyoucard.jsx
 
 export const ThankYouCardWrapper = styled(motion.div)`
@@ -823,7 +824,7 @@ export const ThankYouCardWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   z-index: 999;
   @media (max-width: 1024px) {
     font-size: 14px;
@@ -864,7 +865,7 @@ export const ThankYouCardWrapper = styled(motion.div)`
   }
   button {
   }
-`
+`;
 export const ThankYouButton = styled.button`
   width: 254px;
   height: 58px;
@@ -896,7 +897,7 @@ export const ThankYouButton = styled.button`
     z-index: 500;
   }
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 254px;
     height: 100px;
@@ -912,7 +913,7 @@ export const ThankYouButton = styled.button`
     justify-content: center;
     margin-top: 10%;
   }
-`
+`;
 
 //loader.jsx
 export const LoaderWrapper = styled(motion.div)`
@@ -928,7 +929,7 @@ export const LoaderWrapper = styled(motion.div)`
   z-index: 1111;
   background: #fff;
   h1 {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     color: ${colors.neutral100};
     font-size: 40px;
@@ -944,14 +945,14 @@ export const LoaderWrapper = styled(motion.div)`
     width: 64px;
     height: 64px;
   }
-`
+`;
 
 //footer.jsx
 export const FooterWrapper = styled.footer`
   width: 100%;
   min-height: 100vh;
   background: #272727;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   padding: 5% 0;
   position: relative;
   overflow: hidden;
@@ -1003,7 +1004,7 @@ export const FooterWrapper = styled.footer`
   .sl3 {
     grid-area: sl3;
   }
-`
+`;
 
 export const FooterContent = styled.div`
   max-width: 1500px;
@@ -1013,57 +1014,57 @@ export const FooterContent = styled.div`
   grid-template-rows: auto;
   row-gap: 60px;
   grid-template-areas:
-    "contact contact . . sl1 . sl2 . sl3"
-    "newsletter newsletter newsletter . sl1 . sl2 . sl3"
-    "social social social social . . . . .";
+    'contact contact . . sl1 . sl2 . sl3'
+    'newsletter newsletter newsletter . sl1 . sl2 . sl3'
+    'social social social social . . . . .';
   @media (max-width: 1500px) {
     max-width: 1100px;
     grid-template-columns: repeat(10, 1fr);
     grid-template-areas:
-      "contact contact . . . sl1 . sl2 . sl3"
-      "newsletter newsletter newsletter newsletter . sl1 . sl2 .sl3"
-      "social social social social . . . .";
+      'contact contact . . . sl1 . sl2 . sl3'
+      'newsletter newsletter newsletter newsletter . sl1 . sl2 .sl3'
+      'social social social social . . . .';
   }
   @media (max-width: 1200px) {
     max-width: 800px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      "contact contact . ."
-      "newsletter newsletter newsletter newsletter"
-      "social social . ."
-      "sl1 sl1 . ."
-      "sl2 sl2 . ."
-      "sl3 sl3 . .";
+      'contact contact . .'
+      'newsletter newsletter newsletter newsletter'
+      'social social . .'
+      'sl1 sl1 . .'
+      'sl2 sl2 . .'
+      'sl3 sl3 . .';
   }
   @media (max-width: 1024px) {
     max-width: 100%;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-      "newsletter newsletter"
-      "sl1 sl2"
-      "sl3 sl3"
-      "social ."
-      "contact contact";
+      'newsletter newsletter'
+      'sl1 sl2'
+      'sl3 sl3'
+      'social .'
+      'contact contact';
   }
   @media (max-width: 650px) {
     grid-template-areas:
-      "newsletter newsletter"
-      "sl1 sl2"
-      "sl3 sl3"
-      "social social"
-      "contact contact";
+      'newsletter newsletter'
+      'sl1 sl2'
+      'sl3 sl3'
+      'social social'
+      'contact contact';
   }
   @media (max-width: 600px) {
     column-gap: 20px;
   }
-`
+`;
 
 export const FooterContactUs = styled.div`
   grid-area: contact;
   & div {
     margin: 12px 0;
   }
-`
+`;
 
 export const FooterNewsletter = styled.div`
   grid-area: newsletter;
@@ -1076,7 +1077,7 @@ export const FooterNewsletter = styled.div`
       font-size: 1rem;
     }
   }
-`
+`;
 
 export const FooterFormWrapper = styled.div`
   display: flex;
@@ -1116,12 +1117,12 @@ export const FooterFormWrapper = styled.div`
     cursor: pointer;
     margin-left: 4%;
   }
-`
+`;
 
 export const FotterSocialMedia = styled.div`
   grid-area: social;
   width: 100%;
-`
+`;
 
 export const FooterSocialMediaContent = styled.div`
   margin-top: 23px;
@@ -1138,7 +1139,7 @@ export const FooterSocialMediaContent = styled.div`
       text-align: end;
     }
   }
-`
+`;
 
 export const FooterDecoration = styled.div`
   position: absolute;
@@ -1153,7 +1154,7 @@ export const FooterDecoration = styled.div`
     width: 90px;
     height: 155px;
   }
-`
+`;
 //contactForm.jsx
 
 export const ContactFormWrapper = styled(motion.div)`
@@ -1162,7 +1163,7 @@ export const ContactFormWrapper = styled(motion.div)`
   z-index: 999;
   font-size: 15px;
   background-color: #fff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   position: relative;
   @media (max-width: 500px) {
     font-size: 12px;
@@ -1205,7 +1206,7 @@ export const ContactFormWrapper = styled(motion.div)`
       width: 100%;
     }
   }
-`
+`;
 
 export const ContactCategories = styled.div`
   display: flex;
@@ -1215,7 +1216,7 @@ export const ContactCategories = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
   }
-`
+`;
 export const ContactCategory = styled.label`
   margin-right: 5px;
   margin-bottom: 10px;
@@ -1243,7 +1244,7 @@ export const ContactCategory = styled.label`
     font-weight: 700;
   }
   ${({ isActive }) =>
-    isActive && " border-color: #5163f6; background: #5163f6; color: #fff;"}
+    isActive && ' border-color: #5163f6; background: #5163f6; color: #fff;'}
   @media (hover: hover) {
     &:hover {
       border-color: #5163f6;
@@ -1251,13 +1252,13 @@ export const ContactCategory = styled.label`
       color: #fff;
     }
   }
-`
+`;
 
 export const FormErrorMessage = styled.small`
   color: red;
   display: block;
-  ${({ space }) => space && "margin-bottom: 3vh;"}
-`
+  ${({ space }) => space && 'margin-bottom: 3vh;'}
+`;
 export const FormGroup = styled.div`
   display: flex;
   flex-direction: column;
@@ -1282,17 +1283,17 @@ export const FormGroup = styled.div`
     border: none;
     border-bottom: 1px solid #d3d3d3;
   }
-`
+`;
 export const FormButtonContainer = styled.div`
   @media (max-width: 1024px) {
     display: flex;
     justify-content: center;
     margin: 2vh 0 0 0;
   }
-`
+`;
 export const FormSubmitButton = styled.button`
   padding: 13px 70px;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 600;
   border: none;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
@@ -1315,7 +1316,7 @@ export const FormSubmitButton = styled.button`
       transition: all 0.3s ease 0s;
     }
   }
-`
+`;
 export const ExitButton = styled.button`
   position: absolute;
   top: 5%;
@@ -1347,7 +1348,7 @@ export const ExitButton = styled.button`
   .sr-only {
     display: none;
   }
-`
+`;
 export const ContactDecoration = styled.img`
   position: absolute;
   top: 30%;
@@ -1355,7 +1356,7 @@ export const ContactDecoration = styled.img`
   @media (max-width: 1024px) {
     display: none;
   }
-`
+`;
 //landingPage/team.jsx
 
 export const TeamWrapper = styled.section`
@@ -1363,10 +1364,10 @@ export const TeamWrapper = styled.section`
   @media (max-width: 400px) {
     font-size: 14px;
   }
-`
+`;
 
 export const TeamDescription = styled.div`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   padding: 0% 18% 10%;
   @media (max-width: 650px) {
@@ -1392,7 +1393,7 @@ export const TeamDescription = styled.div`
       width: 100%;
     }
   }
-`
+`;
 //landingPage/partners.jsx
 
 export const PartnersWrapper = styled.div`
@@ -1405,7 +1406,7 @@ export const PartnersWrapper = styled.div`
     flex-direction: column;
     align-items: center;
   }
-`
+`;
 export const CardWrapper = styled.div`
   width: 25%;
   height: 443px;
@@ -1424,7 +1425,7 @@ export const CardWrapper = styled.div`
   }
   a {
     text-decoration: none;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
     font-size: 22px;
@@ -1436,7 +1437,7 @@ export const CardWrapper = styled.div`
       }
     }
   }
-`
+`;
 export const CardLogo = styled.div`
   height: 80%;
   width: 100%;
@@ -1450,13 +1451,13 @@ export const CardLogo = styled.div`
     width: 60%;
     height: 40%;
   }
-`
+`;
 export const CardLink = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   height: 20%;
-`
+`;
 //landingPage/landing2.jsx
 
 export const Landing2Wrapper = styled.div`
@@ -1466,7 +1467,7 @@ export const Landing2Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   overflow: hidden;
   position: relative;
   overflow: none;
@@ -1651,7 +1652,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
   }
-`
+`;
 //landingPages/landing.jsx
 
 export const LandingWrapper = styled.section`
@@ -1690,7 +1691,7 @@ export const LandingWrapper = styled.section`
   }
   .text {
     max-width: 60%;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     color: ${colors.neutral100};
     @media (max-width: 950px) {
@@ -1716,7 +1717,7 @@ export const LandingWrapper = styled.section`
       }
     }
   }
-`
+`;
 
 export const LandingScroll = styled(ScLink)`
   width: 10em;
@@ -1738,11 +1739,11 @@ export const LandingScroll = styled(ScLink)`
     width: 122px;
     height: 122px;
   }
-`
+`;
 export const LandingScrollWrapper = styled(motion.div)`
   width: 100%;
   height: 100%;
-`
+`;
 export const LandingZigZag = styled.div`
   width: 17.5em;
   height: 3.5em;
@@ -1752,7 +1753,7 @@ export const LandingZigZag = styled.div`
   @media (max-width: 950px) {
     display: none;
   }
-`
+`;
 
 //landingPage/abuotUs.jsx
 export const AboutUsWrapper = styled(motion.section)`
@@ -1785,7 +1786,7 @@ export const AboutUsWrapper = styled(motion.section)`
     border: none;
     border-radius: 33px;
     outline: none;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
     font-size: 15px;
@@ -1801,7 +1802,7 @@ export const AboutUsWrapper = styled(motion.section)`
     display: flex;
     justify-content: center;
   }
-`
+`;
 export const AboutUsHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -1816,7 +1817,7 @@ export const AboutUsHeaderWrapper = styled.div`
   }
   .text {
     color: ${colors.neutral00};
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     width: 70%;
     @media (max-width: 956px) {
@@ -1838,10 +1839,10 @@ export const AboutUsHeaderWrapper = styled.div`
       }
     }
   }
-`
+`;
 
 export const BoxWrapper = styled.div`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral00};
   width: 500px;
@@ -1894,7 +1895,7 @@ export const BoxWrapper = styled.div`
       opacity: 1;
     }
   }
-`
+`;
 
 export const BoxImageWrapper = styled.div`
   width: 65px;
@@ -1904,14 +1905,14 @@ export const BoxImageWrapper = styled.div`
   .hidden {
     opacity: 0;
   }
-`
+`;
 
 export const BoxImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: top;
-`
+`;
 
 //landingPage/caseStudy.jsx
 export const CaseStudyWrapper = styled.section`
@@ -1925,10 +1926,10 @@ export const CaseStudyWrapper = styled.section`
       }
     }
   }
-`
+`;
 
 export const CaseStudyHeaderWrapper = styled.div`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   padding: 10% 22% 10% 10%;
   color: ${colors.neutral100};
@@ -1973,7 +1974,7 @@ export const CaseStudyHeaderWrapper = styled.div`
       display: none;
     }
   }
-`
+`;
 
 export const CaseStudySliderWrapper = styled(Link)`
   width: 100%;
@@ -1982,7 +1983,7 @@ export const CaseStudySliderWrapper = styled(Link)`
   display: flex;
   flex-direction: column;
   align-items: space-between;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-size: 16px;
   @media (max-width: 1200px) {
@@ -2018,7 +2019,7 @@ export const CaseStudySliderWrapper = styled(Link)`
     line-height: 181.25%;
     color: ${colors.neutral50};
   }
-`
+`;
 
 export const CaseStudySliderImageWrapper = styled.div`
   height: 70%;
@@ -2032,14 +2033,14 @@ export const CaseStudySliderImageWrapper = styled.div`
   @media (max-width: 968px) {
     height: 400px;
   }
-`
+`;
 
 //landingPage/caseStudyMobile.jsx
 
 export const MobileStudyWrapper = styled.section`
   position: relative;
   margin-bottom: 10%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
   #header__study__mobile {
@@ -2063,7 +2064,7 @@ export const MobileStudyWrapper = styled.section`
     font-size: 19px;
     line-height: 32px;
   }
-`
+`;
 //services/steps.jsx
 
 export const StepsWrapper = styled.div`
@@ -2077,7 +2078,7 @@ export const StepsWrapper = styled.div`
   flex-direction: column;
   padding: 10% 0;
   align-items: center;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   .header {
     max-width: 1222px;
     display: flex;
@@ -2186,7 +2187,7 @@ export const StepsWrapper = styled.div`
           display: block;
         }
         &:nth-of-type(1)::after {
-          content: "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.";
+          content: 'The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.';
           display: none;
           position: absolute;
           top: 12vw;
@@ -2195,12 +2196,12 @@ export const StepsWrapper = styled.div`
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 0.9rem;
           line-height: 136%;
         }
         &:nth-child(1)::before {
-          content: "";
+          content: '';
           display: none;
           position: absolute;
           top: 11.5vw;
@@ -2212,7 +2213,7 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-of-type(3)::after {
-          content: "Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.";
+          content: 'Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.';
           display: none;
           position: absolute;
           top: 12vw;
@@ -2221,12 +2222,12 @@ export const StepsWrapper = styled.div`
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 0.9rem;
           line-height: 136%;
         }
         &:nth-child(3)::before {
-          content: "";
+          content: '';
           display: none;
           position: absolute;
           top: 11.5vw;
@@ -2238,7 +2239,7 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-child(5)::after {
-          content: "At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.";
+          content: 'At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.';
           display: none;
           position: absolute;
           top: 12vw;
@@ -2246,12 +2247,12 @@ export const StepsWrapper = styled.div`
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 0.9rem;
           line-height: 136%;
         }
         &:nth-of-type(5)::before {
-          content: "";
+          content: '';
           display: none;
           position: absolute;
           top: 11.5vw;
@@ -2263,7 +2264,7 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-of-type(7)::after {
-          content: "Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.";
+          content: 'Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.';
           display: none;
           position: absolute;
           top: 12vw;
@@ -2272,12 +2273,12 @@ export const StepsWrapper = styled.div`
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 0.9rem;
           line-height: 136%;
         }
         &:nth-child(7)::before {
-          content: "";
+          content: '';
           display: none;
           position: absolute;
           top: 11.5vw;
@@ -2289,7 +2290,7 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-child(9)::after {
-          content: "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.";
+          content: 'By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.';
           display: none;
           position: absolute;
           top: 12vw;
@@ -2298,12 +2299,12 @@ export const StepsWrapper = styled.div`
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 0.9rem;
           line-height: 136%;
         }
         &:nth-of-type(9)::before {
-          content: "";
+          content: '';
           display: none;
           position: absolute;
           top: 11.5vw;
@@ -2335,7 +2336,7 @@ export const StepsWrapper = styled.div`
       }
     }
   }
-`
+`;
 //services/brandingSteps.jsx
 
 export const BrandingStepsWrapper = styled(StepsWrapper)`
@@ -2343,23 +2344,23 @@ export const BrandingStepsWrapper = styled(StepsWrapper)`
   .icon {
     @media (min-width: 1200px) and (hover: hover) {
       &:nth-of-type(1)::after {
-        content: "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.";
+        content: 'Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.';
       }
       &:nth-of-type(3)::after {
-        content: "We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand.";
+        content: 'We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand.';
       }
       &:nth-child(5)::after {
         content: "This is our favorite part of the process. It's where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
       }
       &:nth-of-type(7)::after {
-        content: "The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible.";
+        content: 'The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible.';
       }
       &:nth-child(9)::after {
-        content: "This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization.";
+        content: 'This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization.';
       }
     }
   }
-`
+`;
 //services/marketingSteps.jsx
 
 export const MarketingStepsWrapper = styled(StepsWrapper)`
@@ -2367,7 +2368,7 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
   .icon {
     @media (min-width: 1200px) and (hover: hover) {
       &:nth-of-type(1)::after {
-        content: "Great things are built on research. The first phase oscillate around meetings to learn about your business goals and challenges. Once we have a better understanding of your needs we begin multi-platform research including target audience analysis, user journey analysis, keyword data & market condition.";
+        content: 'Great things are built on research. The first phase oscillate around meetings to learn about your business goals and challenges. Once we have a better understanding of your needs we begin multi-platform research including target audience analysis, user journey analysis, keyword data & market condition.';
       }
       &:nth-of-type(3)::after {
         content: "Once we’redone with research and identifying tasks, it's time to develop your digital marketing strategy. This is where we will develop a thorough action plan that aligns with your goals. A detailed strategy will include all the components and tools needed to reach your audience.";
@@ -2379,11 +2380,11 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
         content: "It's showtime.  At this moment, we introduce you and your value proposition to clients. We focus on meeting specific objectives and tailoring activities to maximize the effect. We make sure the campaign runs smoothly, we test the content, and analyze the results.";
       }
       &:nth-child(9)::after {
-        content: "At this stage, we monitor campaigns and study customer behavior. We also evaluate the effectiveness of the campaign and the resources created. We create reports and discussing future steps.";
+        content: 'At this stage, we monitor campaigns and study customer behavior. We also evaluate the effectiveness of the campaign and the resources created. We create reports and discussing future steps.';
       }
     }
   }
-`
+`;
 //navigation/contactUs.jsx
 
 export const ContactUsButton = styled.div`
@@ -2394,9 +2395,9 @@ export const ContactUsButton = styled.div`
   align-items: center;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
   border-radius: 32px;
-  color: ${({ text }) => (text ? text : "#fff")};
+  color: ${({ text }) => (text ? text : '#fff')};
   text-decoration: none;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: 20px;
   font-style: normal;
   font-weight: 600;
@@ -2413,7 +2414,7 @@ export const ContactUsButton = styled.div`
       transition: all 0.3s ease 0s;
     }
   }
-`
+`;
 //navigation/desktop.jsx
 
 export const DesktopNav = styled.nav`
@@ -2448,9 +2449,9 @@ export const DesktopNav = styled.nav`
       width: 256px;
     }
   }
-`
+`;
 export const BlogTitle = styled.div`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-weight: 600;
   font-size: 30px;
   line-height: 38px;
@@ -2460,7 +2461,7 @@ export const BlogTitle = styled.div`
     color: #4b66ff;
     margin: 0 3px;
   }
-`
+`;
 
 //navigation/menuIcon.jsx
 
@@ -2473,24 +2474,24 @@ export const Burger = styled.div`
   cursor: pointer;
   border: none;
   padding: 0;
-`
+`;
 //navigation/logoImg.jsx
 
 export const LogoImageComponent = styled(Img)`
   width: 100%;
   height: 100%;
   object-fit: contain;
-`
+`;
 
 export const ImageSvg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
-`
+`;
 export const LogoImageWrapper = styled.div`
   width: ${({ customWidth }) => customWidth};
   height: ${({ customHeight }) => customHeight};
-`
+`;
 //navigation/menu.jsx
 
 export const MenuWrapper = styled.div`
@@ -2502,7 +2503,7 @@ export const MenuWrapper = styled.div`
   background: ${colors.neutral90};
   z-index: 999;
   overflow-y: auto;
-`
+`;
 
 export const MenuHeader = styled.div`
   display: flex;
@@ -2514,7 +2515,7 @@ export const MenuHeader = styled.div`
     display: flex;
     justify-content: space-between;
   }
-`
+`;
 
 export const ExitMenu = styled.div`
   background: transparent;
@@ -2526,7 +2527,7 @@ export const ExitMenu = styled.div`
   position: relative;
   z-index: 100;
   &:after {
-    content: "";
+    content: '';
     height: 100%;
     border-left: 2px solid #fff;
     position: absolute;
@@ -2534,7 +2535,7 @@ export const ExitMenu = styled.div`
     left: 10px;
   }
   :before {
-    content: "";
+    content: '';
     height: 100%;
     border-left: 2px solid #fff;
     position: absolute;
@@ -2544,10 +2545,10 @@ export const ExitMenu = styled.div`
   .sr {
     display: none;
   }
-`
+`;
 export const MenuImage = styled(Img)`
   width: 30%;
-`
+`;
 export const LinksWrapper = styled.ul`
   padding: 5%;
   font-size: 16px;
@@ -2581,7 +2582,7 @@ export const LinksWrapper = styled.ul`
     a {
       text-decoration: none;
       color: ${colors.neutral00};
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
       font-size: 2.75em;
@@ -2621,7 +2622,7 @@ export const LinksWrapper = styled.ul`
       margin-left: 10%;
     }
   }
-`
+`;
 
 export const MenuFooterWrapper = styled.div`
   padding: 0 10%;
@@ -2665,7 +2666,7 @@ export const MenuFooterWrapper = styled.div`
         display: flex;
         flex-direction: column;
         a {
-          font-family: "Poppins";
+          font-family: 'Poppins';
           font-size: 1.0625em;
           font-style: normal;
           font-weight: 300;
@@ -2676,7 +2677,7 @@ export const MenuFooterWrapper = styled.div`
       }
     }
     .contact {
-      font-family: "Poppins";
+      font-family: 'Poppins';
       position: absolute;
       right: 0;
       bottom: 10%;
@@ -2688,7 +2689,7 @@ export const MenuFooterWrapper = styled.div`
       }
       a {
         display: block;
-        font-family: "Poppins";
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 300;
         font-size: 1.1875em;
@@ -2699,28 +2700,28 @@ export const MenuFooterWrapper = styled.div`
   .copy {
     display: flex;
     justify-content: center;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 0.9375em;
     line-height: 3.625em;
   }
-`
+`;
 //navigation/menuLanguage.jsx
 
 export const LangMenu = styled.div`
   display: flex;
   align-items: center;
-  color: ${({ color }) => (color ? color : "#9498B2")};
+  color: ${({ color }) => (color ? color : '#9498B2')};
 
   .line {
     width: 40px;
     height: 1px;
     background: ${({ color }) => (color ? color : colors.neutral40)};
   }
-`
+`;
 export const LangButton = styled.button`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 500;
   font-size: 1.0625em;
@@ -2738,12 +2739,12 @@ export const LangButton = styled.button`
   &:last-of-type {
     margin-left: 10px;
   }
-  ${({ isActive }) => isActive && "color: #fff;"}
-`
+  ${({ isActive }) => isActive && 'color: #fff;'}
+`;
 //navigation/langSwitch.jsx
 
 export const SwitchLangButton = styled.button`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-size: 17px;
   font-style: normal;
   font-weight: 500;
@@ -2755,8 +2756,8 @@ export const SwitchLangButton = styled.button`
   border: none;
   cursor: pointer;
   text-transform: uppercase;
-  color: ${({ color }) => (color ? color : "#000")};
-`
+  color: ${({ color }) => (color ? color : '#000')};
+`;
 
 //navigation/mobile.jsx
 
@@ -2777,7 +2778,7 @@ export const MobileNav = styled.div`
     height: 70px;
     background: ${colors.neutral30};
   }
-`
+`;
 //navigation/mobileMenu.jsx
 
 export const MobileMenuWrapper = styled.div`
@@ -2795,7 +2796,7 @@ export const MobileMenuWrapper = styled.div`
     height: 100%;
     position: relative;
   }
-`
+`;
 export const MobileHeaderMenuWrapper = styled.div`
   display: flex;
   justify-content: space-between;
@@ -2824,7 +2825,7 @@ export const MobileHeaderMenuWrapper = styled.div`
       }
     }
   }
-`
+`;
 export const MobileMenuLinks = styled.ul`
   padding: 10% 10% 5%;
   font-size: 16px;
@@ -2844,7 +2845,7 @@ export const MobileMenuLinks = styled.ul`
     a {
       text-decoration: none;
       color: #fff;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
       font-size: 1.5em;
@@ -2860,7 +2861,7 @@ export const MobileMenuLinks = styled.ul`
         border: none;
       }
       a {
-        font-family: "Poppins";
+        font-family: 'Poppins';
         font-style: normal;
         font-weight: 500;
         font-size: 1.125em;
@@ -2868,7 +2869,7 @@ export const MobileMenuLinks = styled.ul`
       }
     }
   }
-`
+`;
 export const MobileFooterMenu = styled.div`
   padding: 10% 0 0;
   padding-left: 5%;
@@ -2878,7 +2879,7 @@ export const MobileFooterMenu = styled.div`
   .contact {
     margin-bottom: 15%;
     .header {
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 600;
       font-size: 24px;
@@ -2888,7 +2889,7 @@ export const MobileFooterMenu = styled.div`
     a {
       color: #fff;
       text-decoration: none;
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 300;
       font-size: 16px;
@@ -2901,7 +2902,7 @@ export const MobileFooterMenu = styled.div`
     justify-content: space-between;
     align-items: center;
     a {
-      font-family: "Poppins";
+      font-family: 'Poppins';
       font-style: normal;
       font-weight: 300;
       font-size: 13px;
@@ -2910,13 +2911,13 @@ export const MobileFooterMenu = styled.div`
       text-decoration: none;
     }
   }
-`
+`;
 export const MobileMenuImage = styled(Img)`
   width: 100%;
   position: absolute;
   left: 0;
   bottom: -25%;
-`
+`;
 
 //navigation/menuMobile.jsx
 
@@ -2926,7 +2927,7 @@ export const MobileMenuHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 8%;
-`
+`;
 
 export const MenuLinksMobile = styled.div`
   width: 100%;
@@ -2956,11 +2957,11 @@ export const MenuLinksMobile = styled.div`
       margin-right: 0.8em;
     }
   }
-`
+`;
 export const MobileSubMenu = styled.div`
   width: 100%;
   padding: 5% 0;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   display: block;
   a {
@@ -2973,7 +2974,7 @@ export const MobileSubMenu = styled.div`
     line-height: 150%;
     color: ${colors.neutral00};
   }
-`
+`;
 
 export const MobileMenuFooter = styled.div`
   width: 100%;
@@ -3006,7 +3007,7 @@ export const MobileMenuFooter = styled.div`
       line-height: 146.15%;
     }
   }
-`
+`;
 
 export const MobileMenuContainer = styled(motion.div)`
   background: ${colors.neutral90};
@@ -3017,7 +3018,7 @@ export const MobileMenuContainer = styled(motion.div)`
   left: 0;
   z-index: 900;
   overflow-y: auto;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   transition: all 0.5s ease-in;
   .cnt {
@@ -3026,7 +3027,7 @@ export const MobileMenuContainer = styled(motion.div)`
     justify-content: space-between;
     position: relative;
   }
-`
+`;
 
 export const Exit = styled.div`
   background: transparent;
@@ -3038,7 +3039,7 @@ export const Exit = styled.div`
   position: relative;
   z-index: 100;
   &:after {
-    content: "";
+    content: '';
     height: 100%;
     border-left: 2px solid #fff;
     position: absolute;
@@ -3046,7 +3047,7 @@ export const Exit = styled.div`
     left: 10px;
   }
   :before {
-    content: "";
+    content: '';
     height: 100%;
     border-left: 2px solid #fff;
     position: absolute;
@@ -3056,7 +3057,7 @@ export const Exit = styled.div`
   .sr {
     display: none;
   }
-`
+`;
 //navigation/menuDesktop.jsx
 
 export const DesktopMenu = styled(motion.div)`
@@ -3070,7 +3071,7 @@ export const DesktopMenu = styled(motion.div)`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-`
+`;
 
 export const DesktopHeader = styled.div`
   display: flex;
@@ -3078,7 +3079,7 @@ export const DesktopHeader = styled.div`
   align-items: center;
   width: 100%;
   padding: 3%;
-`
+`;
 
 export const DesktopLinks = styled.div`
   padding: 0 10%;
@@ -3094,11 +3095,11 @@ export const DesktopLinks = styled.div`
     font-size: 16px;
   }
   .main:hover .item:not(:hover) a {
-    color: ${({ subMenuIsOn }) => !subMenuIsOn && "grey"};
+    color: ${({ subMenuIsOn }) => !subMenuIsOn && 'grey'};
   }
   .main {
     width: 40em;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     .item {
       cursor: pointer;
@@ -3116,7 +3117,7 @@ export const DesktopLinks = styled.div`
         display: block;
         text-decoration: none;
         color: ${({ subMenuIsOn }) =>
-          subMenuIsOn ? "grey" : colors.neutral00};
+          subMenuIsOn ? 'grey' : colors.neutral00};
         transition: all 0.3s ease-in-out;
       }
       .number {
@@ -3142,7 +3143,7 @@ export const DesktopLinks = styled.div`
   }
   .sub-menu {
     width: 30%;
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     margin-top: 10em;
     margin-left: 8em;
@@ -3158,14 +3159,14 @@ export const DesktopLinks = styled.div`
       }
     }
   }
-`
+`;
 
 export const DesktopMenuFooter = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 0 10%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral00};
   .social {
@@ -3212,7 +3213,7 @@ export const DesktopMenuFooter = styled.div`
       line-height: 168.42%;
     }
   }
-`
+`;
 
 export const Copy = styled.div`
   width: 100%;
@@ -3227,10 +3228,1418 @@ export const Copy = styled.div`
   }
   p {
     color: ${colors.neutral30};
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
     font-size: 0.9375em;
     line-height: 386.66%;
   }
-`
+`;
+//pages/marketing.jsx
+
+export const MarketingWrapper = styled.div`
+  font-family: "Poppins";
+    @media (max-width: 1550px) {
+      font-size: 12px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 10px;
+    }
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    @media (max-width: 500px) {
+      font-size: 8px;
+      padding: 20% 5% 0;
+    }
+    
+    .landing-image {
+      margin-bottom: 2%;
+      img {
+        width: 33.375em;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .section-3 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(${Section3Bg});
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 15% 0;
+    .cnt {
+      max-width: 1250px;
+      margin: 0 auto;
+      @media (max-width: 1500px) {
+        max-width: 800px;
+      }
+      @media (max-width: 1024px) {
+        padding: 5% 10%;
+      }
+      h2 {
+        max-width: 1100px;
+        font-size: 55px;
+        line-height: 138.18%;
+        font-weight: 600;
+        color: #000;
+        @media (max-width: 650px) {
+          font-size: 40px;
+        }
+        @media (max-width: 450px) {
+          font-size: 35px;
+        }
+        span {
+          color: #4096ea;
+        }
+      }
+      .decoration {
+        background-color: #4096ea;
+        height: 6px;
+        width: 98.5px;
+        margin: 90px 0;
+      }
+      .text-cnt {
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 136%;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+        }
+        p {
+          max-width: 512px;
+          &:first-of-type {
+            margin-right: 15%;
+            @media (max-width: 1024px) {
+              margin-right: 0;
+              margin-bottom: 15%;
+            }
+          }
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
+  .section-5 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+    background: #f5f6fa;
+    h2 {
+      width: 449px;
+      font-size: 3.4375rem;
+      line-height: 138%;
+      margin-bottom: 15px;
+      font-weight: 600;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    p {
+      max-width: 532px;
+      font-size: 1.375rem;
+      line-height: 136%;
+      margin-bottom: 90px;
+      font-weight: 300;
+    }
+    &-cnt {
+      display: grid;
+      grid-template-columns: repeat(2, 556px);
+      column-gap: 200px;
+      row-gap: 120px;
+      @media (max-width: 1600px) {
+        grid-template-columns: repeat(2, 450px);
+        column-gap: 160px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1400px) {
+        grid-template-columns: repeat(2, 400px);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+    }
+    &-item {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      @media (max-width: 450px) {
+        flex-direction: column;
+      }
+      &-icon {
+        margin-right: 20px;
+        @media (max-width: 450px) {
+          margin: 0 0 20px 0;
+        }
+        &.res img {
+          width: 55px;
+          height: 60px;
+        }
+        &.sca img {
+          width: 60px;
+          height: 60px;
+        }
+        &.fun img {
+          width: 60px;
+          height: 60px;
+        }
+        &.sec img {
+          width: 57px;
+          height: 42px;
+        }
+      }
+      &-content {
+        h4 {
+          font-size: 1.6875rem;
+          font-weight: 600;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 1.375rem;
+          line-height: 136%;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+`;
+
+export const MarketingTopSection = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+`;
+export const MarketingScrollLink = styled(ScLink)`
+  width: 100px;
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 50px);
+  cursor: pointer;
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .title {
+      transform: translate(0, 25px);
+      color: #cccccc;
+    }
+  }
+`;
+
+export const MarketingContent = styled.div`
+  max-width: 761px;
+  padding-right: 5%;
+  @media (max-width: 1550px) {
+    max-width: 561px;
+  }
+  @media (max-width: 1100px) {
+    max-width: 461px;
+  }
+  @media (max-width: 500px) {
+    padding-right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  h1 {
+    color: #000;
+    font-weight: 600;
+    font-size: 5.9375rem;
+    line-height: 120%;
+    margin-bottom: 32px;
+    @media (max-width: 1550px) {
+      font-size: 4.5rem;
+    }
+    @media (max-width: 1400px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+  }
+  p {
+    width: 70%;
+    font-size: 1.375rem;
+    line-height: 136.36%;
+    color: #000;
+    font-weight: 300;
+    @media (max-width: 1550px) {
+      font-size: 1rem;
+    }
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+`;
+
+//pages/development.jsx
+export const DevelopmentWrapper = styled.div`
+  font-family: 'Poppins';
+  .landing {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .scroll {
+      width: 100px;
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - 50px);
+      cursor: pointer;
+      .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .title {
+          transform: translate(0, 25px);
+          color: #cccccc;
+        }
+      }
+    }
+    @media (max-width: 1550px) {
+      font-size: 12px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 10px;
+    }
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    @media (max-width: 500px) {
+      font-size: 8px;
+      padding: 20% 5% 0;
+    }
+    .content {
+      max-width: 761px;
+      padding-right: 5%;
+      @media (max-width: 1550px) {
+        max-width: 561px;
+      }
+      @media (max-width: 1100px) {
+        max-width: 461px;
+      }
+      @media (max-width: 500px) {
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      h1 {
+        color: #000;
+        font-weight: 600;
+        font-size: 5.9375rem;
+        line-height: 120%;
+        margin-bottom: 32px;
+        @media (max-width: 1550px) {
+          font-size: 4.5rem;
+        }
+        @media (max-width: 1400px) {
+          font-size: 3.5rem;
+        }
+        @media (max-width: 500px) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        width: 70%;
+        font-size: 1.375rem;
+        line-height: 136.36%;
+        color: #000;
+        font-weight: 300;
+        @media (max-width: 1550px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+    .landing-image {
+      margin-bottom: 2%;
+      img {
+        width: 33.375em;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .section-3 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(${Section3Bg});
+    background-size: cover;
+    background-position: center;
+    padding: 15% 0;
+    .cnt {
+      max-width: 1250px;
+      margin: 0 auto;
+      @media (max-width: 1500px) {
+        max-width: 800px;
+      }
+      @media (max-width: 1024px) {
+        padding: 5% 10%;
+      }
+      h2 {
+        max-width: 1100px;
+        font-size: 55px;
+        line-height: 138.18%;
+        font-weight: 600;
+        color: #000;
+        @media (max-width: 650px) {
+          font-size: 40px;
+        }
+        @media (max-width: 450px) {
+          font-size: 35px;
+        }
+        span {
+          color: #571ab6;
+        }
+      }
+      .decoration {
+        background-color: #501eaf;
+        height: 6px;
+        width: 98.5px;
+        margin: 90px 0;
+      }
+      .text-cnt {
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 136%;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+        }
+        p {
+          width: 512px;
+          &:first-of-type {
+            margin-right: 15%;
+            @media (max-width: 1024px) {
+              margin-right: 0;
+              margin-bottom: 15%;
+            }
+          }
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .section-4 {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f6fa;
+    display: flex;
+    font-family: 'Poppins';
+    @media (max-width: 1300px) {
+      flex-direction: column;
+    }
+    &-info {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10%;
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+      h2 {
+        font-size: 3.4375rem;
+        line-height: 138%;
+        margin-bottom: 60px;
+        font-weight: 600;
+        @media (max-width: 450px) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-weight: 300;
+        line-height: 136%;
+        font-size: 1.375rem;
+      }
+    }
+    &-icons {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      padding: 10%;
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+      .cnt {
+        display: grid;
+        column-gap: 70px;
+        row-gap: 90px;
+        grid-template-columns: repeat(4, 80px);
+        @media (max-width: 700px) {
+          grid-template-columns: repeat(3, 80px);
+        }
+        @media (max-width: 500px) {
+          grid-template-columns: repeat(2, 80px);
+        }
+      }
+      .icon-cnt {
+        .icon {
+          width: 74px;
+          height: 74px;
+          margin-bottom: 30px;
+          transition: all 0.2s ease-in;
+          @media (hover: hover) {
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 300;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .section-5 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+    h2 {
+      width: 85%;
+      font-size: 3.4375rem;
+      line-height: 138%;
+      margin-bottom: 100px;
+      font-weight: 600;
+      @media (max-width: 900px) {
+        font-size: 3rem;
+      }
+      @media (max-width: 600px) {
+        width: 100%;
+        font-size: 2.5rem;
+      }
+    }
+    &-cnt {
+      display: grid;
+      grid-template-columns: repeat(2, 556px);
+      column-gap: 200px;
+      row-gap: 120px;
+      @media (max-width: 1600px) {
+        grid-template-columns: repeat(2, 450px);
+        column-gap: 160px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1400px) {
+        grid-template-columns: repeat(2, 400px);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+    }
+    &-item {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      @media (max-width: 450px) {
+        flex-direction: column;
+      }
+      &-icon {
+        margin-right: 20px;
+        @media (max-width: 450px) {
+          margin: 0 0 20px 0;
+        }
+        &.res img {
+          width: 63px;
+          height: 40px;
+        }
+        &.sca img {
+          width: 52px;
+          height: 52px;
+        }
+        &.fun img {
+          width: 50px;
+          height: 50px;
+        }
+        &.sec img {
+          width: 45px;
+          height: 40px;
+        }
+      }
+      &-content {
+        h4 {
+          font-size: 1.6875rem;
+          font-weight: 600;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 1.375rem;
+          line-height: 136%;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+`;
+
+//pages/branding.jsx
+export const BrandingWrapper = styled.div`
+  font-family: 'Poppins';
+  .landing {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .scroll {
+      width: 100px;
+      position: absolute;
+      bottom: 20px;
+      left: calc(50% - 50px);
+      cursor: pointer;
+      .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .title {
+          transform: translate(0, 25px);
+          color: #cccccc;
+        }
+      }
+    }
+    @media (max-width: 1550px) {
+      font-size: 12px;
+    }
+    @media (max-width: 1400px) {
+      font-size: 10px;
+    }
+    @media (max-width: 900px) {
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+    }
+    @media (max-width: 500px) {
+      font-size: 8px;
+      padding: 20% 5% 0;
+    }
+    .content {
+      max-width: 761px;
+      padding-right: 5%;
+      @media (max-width: 1550px) {
+        max-width: 561px;
+      }
+      @media (max-width: 1100px) {
+        max-width: 461px;
+      }
+      @media (max-width: 500px) {
+        padding-right: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      h1 {
+        color: #000;
+        font-weight: 600;
+        font-size: 5.9375rem;
+        line-height: 120%;
+        margin-bottom: 32px;
+        @media (max-width: 1550px) {
+          font-size: 4.5rem;
+        }
+        @media (max-width: 1400px) {
+          font-size: 3.5rem;
+        }
+        @media (max-width: 500px) {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        width: 70%;
+        font-size: 1.375rem;
+        line-height: 136.36%;
+        color: #000;
+        font-weight: 300;
+        @media (max-width: 1550px) {
+          font-size: 1rem;
+        }
+        @media (max-width: 1024px) {
+          width: 100%;
+        }
+      }
+    }
+    .landing-image {
+      margin-bottom: 2%;
+      img {
+        width: 33.375em;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .section-3 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(${Section3Bg});
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 15% 0;
+    .cnt {
+      max-width: 1250px;
+      margin: 0 auto;
+      @media (max-width: 1500px) {
+        max-width: 800px;
+      }
+      @media (max-width: 1024px) {
+        padding: 5% 10%;
+      }
+      h2 {
+        max-width: 1100px;
+        font-size: 55px;
+        line-height: 138.18%;
+        font-weight: 600;
+        color: #000;
+        @media (max-width: 650px) {
+          font-size: 40px;
+        }
+        @media (max-width: 450px) {
+          font-size: 35px;
+        }
+        span {
+          color: #e36860;
+        }
+      }
+      .decoration {
+        background-color: #e36860;
+        height: 6px;
+        width: 98.5px;
+        margin: 90px 0;
+      }
+      .text-cnt {
+        display: flex;
+        justify-content: flex-start;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 136%;
+        @media (max-width: 1024px) {
+          flex-direction: column;
+        }
+        p {
+          max-width: 512px;
+          &:first-of-type {
+            margin-right: 15%;
+            @media (max-width: 1024px) {
+              margin-right: 0;
+              margin-bottom: 15%;
+            }
+          }
+          @media (max-width: 1024px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .section-4 {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f6fa;
+    display: flex;
+    font-family: 'Poppins';
+    @media (max-width: 1300px) {
+      flex-direction: column;
+    }
+    &-info {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10%;
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+      h2 {
+        font-size: 3.4375rem;
+        line-height: 138%;
+        margin-bottom: 60px;
+        font-weight: 600;
+        @media (max-width: 450px) {
+          font-size: 3rem;
+        }
+      }
+      p {
+        font-weight: 300;
+        line-height: 136%;
+        font-size: 1.375rem;
+      }
+    }
+    &-icons {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-wrap: wrap;
+      padding: 10%;
+      @media (max-width: 1300px) {
+        width: 100%;
+      }
+      .cnt {
+        display: grid;
+        column-gap: 70px;
+        row-gap: 90px;
+        grid-template-columns: repeat(4, 80px);
+        @media (max-width: 700px) {
+          grid-template-columns: repeat(3, 80px);
+        }
+        @media (max-width: 500px) {
+          grid-template-columns: repeat(2, 80px);
+        }
+      }
+      .icon-cnt {
+        .icon {
+          width: 74px;
+          height: 74px;
+          margin-bottom: 30px;
+          transition: all 0.2s ease-in;
+          @media (hover: hover) {
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        h4 {
+          font-size: 1.125rem;
+          font-weight: 300;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .section-5 {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10%;
+    background: #f5f6fa;
+    h2 {
+      width: 449px;
+      font-size: 3.4375rem;
+      line-height: 138%;
+      margin-bottom: 15px;
+      font-weight: 600;
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    p {
+      max-width: 532px;
+      font-size: 1.375rem;
+      line-height: 136%;
+      margin-bottom: 90px;
+      font-weight: 300;
+    }
+    &-cnt {
+      display: grid;
+      grid-template-columns: repeat(2, 556px);
+      column-gap: 200px;
+      row-gap: 120px;
+      @media (max-width: 1600px) {
+        grid-template-columns: repeat(2, 450px);
+        column-gap: 160px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1400px) {
+        grid-template-columns: repeat(2, 400px);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+      @media (max-width: 1200px) {
+        grid-template-columns: repeat(1, 100%);
+        column-gap: 120px;
+        row-gap: 80px;
+      }
+    }
+    &-item {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      @media (max-width: 450px) {
+        flex-direction: column;
+      }
+      &-icon {
+        margin-right: 20px;
+        @media (max-width: 450px) {
+          margin: 0 0 20px 0;
+        }
+        &.res img {
+          width: 69px;
+          height: 60px;
+        }
+        &.sca img {
+          width: 43px;
+          height: 36.8px;
+        }
+        &.fun img {
+          width: 34px;
+          height: 42px;
+        }
+        &.sec img {
+          width: 45px;
+          height: 40px;
+        }
+      }
+      &-content {
+        h4 {
+          font-size: 1.6875rem;
+          font-weight: 600;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 1.375rem;
+          line-height: 136%;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+`;
+//pages/blog.jsx
+
+export const BlogWrapper = styled.div`
+  font-family: 'Poppins';
+  width: 100%;
+  margin: 28vh 0;
+  @media (max-width: 900px) {
+    margin: 5vh 0;
+  }
+  .main-title {
+    font-weight: 600;
+    font-size: 55px;
+    color: #000000;
+    @media (max-width: 1100px) {
+      margin-left: 5%;
+    }
+    position: absolute;
+    left: 0;
+  }
+`;
+
+export const BlogContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48.44px;
+  margin: 0 auto;
+  max-width: 1500px;
+  position: relative;
+  padding-top: 10vh;
+  @media (max-width: 1700px) {
+    max-width: 1200px;
+  }
+  @media (max-width: 1300px) {
+    max-width: 1050px;
+  }
+  @media (max-width: 1024px) {
+    padding: 10vh 5% 0;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 680px) {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+`;
+export const BlogPost = styled(Link)`
+  box-shadow: 0px 0px 40px #00000014;
+  text-decoration: none;
+  min-height: 637px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  @media (max-width: 680px) {
+    min-height: 500px;
+  }
+  @media (hover: hover) {
+    &:hover .img .overlay {
+      opacity: 0.19;
+    }
+    &:hover .btn-cnt {
+      opacity: 1;
+    }
+  }
+  .img {
+    height: 50%;
+    width: 100%;
+    position: relative;
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #4c65ff;
+      opacity: 0;
+      z-index: 5;
+      transition: all 0.3s ease-in;
+    }
+  }
+  .content {
+    width: 100%;
+    padding: 10%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      font-size: 1.875rem;
+      line-height: 166.66%;
+      color: #000;
+      @media (max-width: 1700px) {
+        font-size: 1.675rem;
+      }
+      @media (max-width: 1300px) {
+        font-size: 1.475rem;
+      }
+      @media (max-width: 1024px) {
+        font-size: 1.875rem;
+      }
+      @media (max-width: 680px) {
+        font-size: 1.875rem;
+      }
+    }
+    .categories {
+      font-size: 0.75rem;
+      letter-spacing: 1.36px;
+      line-height: 150%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      @media (max-width: 1700px) {
+        flex-direction: column;
+      }
+      @media (max-width: 1024px) {
+        flex-direction: row;
+      }
+      .cat {
+        color: #4c65ff;
+      }
+      .read {
+        color: #868686;
+      }
+    }
+  }
+  .btn-cnt {
+    font-size: 0.75rem;
+    color: #4c65ff;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0% 10% 0;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+`;
+//templates/postTemplate.js
+
+export const PostTemplateWrapper = styled.section`
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+  .container {
+    max-width: 1720px;
+    background: #fff;
+    z-index: 40;
+    transform: translateY(-10%);
+    margin: 0 auto;
+    padding: 5% 5% 0;
+    overflow: visible !important;
+    padding-right: 0;
+    @media (max-width: 1800px) {
+      max-width: 1420px;
+    }
+    @media (max-width: 1500px) {
+      max-width: 1220px;
+    }
+    @media (max-width: 1300px) {
+      transform: translateY(0%);
+      padding-right: 5%;
+    }
+    .post-header {
+      padding-right: 20%;
+      @media (max-width: 800px) {
+        padding-right: 0;
+      }
+      h1 {
+        color: #000000;
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 61px;
+        font-size: 69px;
+        margin-bottom: 10px;
+        @media (max-width: 550px) {
+          font-size: 51px;
+          line-height: 59px;
+        }
+      }
+      .info {
+        span {
+          margin-right: 50px;
+          display: inline-block;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 1.36px;
+          font-weight: 600;
+          font-family: 'Poppins';
+          text-transform: uppercase;
+          &.categories {
+            color: #4c65ff;
+          }
+          &.read-time {
+            text-transform: uppercase;
+            color: #868686;
+          }
+        }
+      }
+    }
+    main {
+      display: flex;
+      margin-top: 60px;
+      width: 100%;
+      overflow: visible !important;
+      @media (max-width: 985px) {
+        display: flex;
+        flex-direction: column;
+      }
+      article {
+        width: 900px;
+        margin-right: 184px;
+        @media (max-width: 980px) {
+          width: 100%;
+          margin-right: 0;
+        }
+        ul li {
+          line-height: 140%;
+        }
+        ol li {
+          line-height: 140%;
+          list-style: circle;
+          margin-left: 6%;
+        }
+        .lead {
+          font-family: 'Poppins';
+          margin: 128px 0;
+          color: #4c65ff;
+          font-size: 18px;
+          line-height: 29px;
+          letter-spacing: 0.05px;
+          @media (max-width: 668px) {
+            margin: 80px 0;
+          }
+        }
+        .content {
+          width: 100%;
+          font-family: 'Poppins';
+          img {
+            width: 100%;
+            object-fit: cover;
+            margin-bottom: 20px;
+          }
+          h1,
+          h2,
+          h3,
+          h4,
+          h5 {
+            font-size: 30px;
+            line-height: 50px;
+            margin-bottom: 40px;
+            color: #000;
+          }
+          p {
+            font-size: 18px;
+            line-height: 29px;
+            letter-spacing: 0.05px;
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+  .related-cnt {
+    .title {
+      display: inline-block;
+      font-family: 'Poppins';
+      font-size: 3rem;
+      font-weight: 600;
+    }
+  }
+`;
+export const PostTemplateLandingScreen = styled(BackgroundImage)`
+  background-position: ${({ framing }) => (framing ? framing : 'center')};
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+`;
+//templates/servicesTemplate.js
+
+export const ServicesWrapper = styled.section`
+  width: 100%;
+  height: 100vh;
+  background: ${colors.neutral00};
+  display: flex;
+  align-items: center;
+  padding-left: 17%;
+  font-size: 16px;
+  position: relative;
+  @media (max-height: 1720px) {
+    font-size: 13px;
+  }
+  @media (max-width: 1520px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 11px;
+  }
+  @media (max-width: 1120px) {
+    font-size: 10px;
+  }
+  @media (max-width: 950px) {
+    padding: 0 5%;
+    font-size: 12px;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .text {
+    max-width: 50%;
+    font-family: 'Poppins';
+    font-style: normal;
+    color: ${colors.neutral100};
+    margin-bottom: 10%;
+    @media (max-width: 950px) {
+      max-width: 80%;
+      margin-bottom: 30%;
+    }
+    @media (orientation: landscape) {
+      margin-bottom: 0;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 5.125em;
+      line-height: 119.5%;
+      margin-bottom: 4%;
+      @media (max-width: 600px) {
+        font-size: 3em;
+      }
+    }
+    p {
+      max-width: 55%;
+      font-weight: 300;
+      font-size: 1.375em;
+      line-height: 163.63%;
+      @media (max-width: 950px) {
+        max-width: 100%;
+      }
+    }
+  }
+`;
+export const ServicesLogo = styled.div`
+  width: 201px;
+  height: 191px;
+  margin-left: 20%;
+  margin-bottom: 16%;
+  @media (max-width: 950px) {
+    width: 161px;
+    height: 141px;
+    margin-left: 10%;
+    align-self: flex-start;
+    margin-bottom: 1%;
+  }
+  @media (max-width: 600px) {
+    margin-bottom: 10%;
+  }
+  @media (orientation: landscape) {
+    margin-bottom: 0;
+  }
+`;
+
+export const ServicesSection = styled.section`
+  background: ${colors.neutral90};
+  padding: 15%;
+  display: flex;
+  justify-content: space-between;
+  color: ${colors.neutral00};
+  font-family: 'Poppins';
+  font-style: normal;
+  font-size: 16px;
+  position: relative;
+  @media (max-width: 1500px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1250px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1100px) {
+    font-size: 10px;
+  }
+  @media (max-width: 950px) {
+    font-size: 14px;
+    flex-direction: column;
+  }
+  @media (max-width: 650px) {
+    font-size: 12px;
+  }
+  @media (max-width: 450px) {
+    font-size: 10px;
+    padding: 15% 5%;
+  }
+  .left {
+    width: 40%;
+    @media (max-width: 950px) {
+      width: 100%;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 3.4375em;
+      line-height: 138.18%;
+      margin-bottom: 7%;
+    }
+    p {
+      font-weight: 300;
+      font-size: 1.1875em;
+      line-height: 168.42%;
+      color: ${colors.neutral30};
+    }
+  }
+  ul {
+    width: 40%;
+    list-style: none;
+    @media (max-width: 950px) {
+      width: 100%;
+      margin-top: 20%;
+    }
+    li {
+      font-weight: 600;
+      font-size: 1.6875em;
+      line-height: 351.85%;
+      border-bottom: 1px solid ${colors.neutral60};
+      span {
+        margin-right: 5%;
+        font-size: 74%;
+        color: ${colors.neutral30};
+      }
+    }
+  }
+  .triangle {
+    width: 159px;
+    height: 205px;
+    position: absolute;
+    left: 3%;
+    bottom: -11%;
+    z-index: 5;
+    @media (max-width: 1450px) {
+      bottom: -13%;
+    }
+    @media (max-width: 1250px) {
+      bottom: -16%;
+    }
+    @media (max-width: 950px) {
+      bottom: -11%;
+    }
+    @media (max-width: 700px) {
+      bottom: -15%;
+      width: 119px;
+      height: 165px;
+    }
+    @media (max-width: 450px) {
+      bottom: -15%;
+      width: 89px;
+      height: 135px;
+    }
+  }
+`;
+
+export const QuoteSection = styled.div`
+  padding: 15% 22%;
+  color: ${colors.neutral80};
+  position: relative;
+  background: ${colors.neutral10};
+  @media (max-width: 1600px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1180px) {
+    font-size: 12px;
+  }
+  @media (max-width: 850px) {
+    font-size: 10px;
+  }
+  @media (max-width: 650px) {
+    font-size: 8px;
+    padding: 15%;
+  }
+  @media (max-width: 450px) {
+    font-size: 6px;
+    padding: 15% 10%;
+  }
+  p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.4375em;
+    line-height: 138.18%;
+  }
+  .quote {
+    width: 3.875em;
+    height: 3.875em;
+    position: relative;
+    right: 5%;
+  }
+  .square {
+    width: 14.6875em;
+    height: 14.5625em;
+    position: absolute;
+    top: 20%;
+    right: 23%;
+  }
+  .half-circle {
+    width: 11.25em;
+    height: 10.5625em;
+    position: absolute;
+    bottom: -6%;
+    right: 15%;
+  }
+`;

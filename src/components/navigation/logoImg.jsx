@@ -1,7 +1,7 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Logo from "../../images/explaynLogo.svg"
-import { LogoImageComponent, ImageSvg, LogoImageWrapper } from "../styled"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Logo from '../../images/explaynLogo.svg';
+import { LogoImageComponent, ImageSvg, LogoImageWrapper } from '../styled';
 
 const LogoImg = ({ mainPage = true, darkMode, customWidth, customHeight }) => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,7 @@ const LogoImg = ({ mainPage = true, darkMode, customWidth, customHeight }) => {
         }
       }
     }
-  `)
+  `);
   return (
     <LogoImageWrapper customWidth={customWidth} customHeight={customHeight}>
       {mainPage ? (
@@ -35,7 +35,7 @@ const LogoImg = ({ mainPage = true, darkMode, customWidth, customHeight }) => {
         <ImageSvg src={Logo} alt="logo" />
       )}
     </LogoImageWrapper>
-  )
-}
+  );
+};
 
-export default LogoImg
+export default LogoImg;

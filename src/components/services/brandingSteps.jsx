@@ -1,6 +1,6 @@
-import React from "react"
-import Icon from "./stepIcon"
-import { BrandingStepsWrapper } from "../styled"
+import React from 'react';
+import Icon from './stepIcon';
+import { BrandingStepsWrapper } from '../styled';
 
 const BrandingSteps = ({ arr }) => {
   return (
@@ -23,12 +23,12 @@ const BrandingSteps = ({ arr }) => {
                   <div key={index} className="line"></div>
                 )}
               </>
-            )
+            );
           })}
         </div>
       </div>
     </BrandingStepsWrapper>
-  )
-}
+  );
+};
 
-export default BrandingSteps
+export default BrandingSteps;

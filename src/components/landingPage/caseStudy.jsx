@@ -1,30 +1,30 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import {
   CarouselProvider,
   Slider,
   Slide,
   ButtonNext,
-} from "pure-react-carousel"
-import { useMediaQuery } from "react-responsive"
-import { motion } from "framer-motion"
-import { AnimatedHeader, AnimatedParagraph } from "../util/animations"
-import { useInView } from "react-intersection-observer"
-import ScrollRight from "../../images/scrollright.svg"
+} from 'pure-react-carousel';
+import { useMediaQuery } from 'react-responsive';
+import { motion } from 'framer-motion';
+import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
+import { useInView } from 'react-intersection-observer';
+import ScrollRight from '../../images/scrollright.svg';
 import {
   CaseStudyWrapper,
   CaseStudyHeaderWrapper,
   CaseStudySliderWrapper,
   CaseStudySliderImageWrapper,
-} from "../styled"
+} from '../styled';
 
 export const SliderContent = ({ item }) => {
   return (
     <CaseStudySliderWrapper to={`/case/${item.slug}`}>
       <CaseStudySliderImageWrapper>
         <Img
-          style={{ height: "100%" }}
+          style={{ height: '100%' }}
           fluid={item.landingimage.fluid}
           alt="logo"
         />
@@ -34,14 +34,14 @@ export const SliderContent = ({ item }) => {
         <p>{item.component2Services}</p>
       </div>
     </CaseStudySliderWrapper>
-  )
-}
+  );
+};
 
 const Header = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  })
+  });
   return (
     <CaseStudyHeaderWrapper ref={ref}>
       <div className="text">
@@ -51,13 +51,13 @@ const Header = () => {
         </AnimatedParagraph>
       </div>
       <ButtonNext className="next">
-        <motion.div style={{ width: "100%", height: "100%" }}>
+        <motion.div style={{ width: '100%', height: '100%' }}>
           <img src={ScrollRight} alt="scroll right button" />
         </motion.div>
       </ButtonNext>
     </CaseStudyHeaderWrapper>
-  )
-}
+  );
+};
 
 const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
@@ -85,27 +85,27 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         }
       }
     }
-  `)
+  `);
   const isMobile = useMediaQuery({
-    query: "(max-device-width: 1080px)",
-  })
-  if (isMobile) triangle = false
+    query: '(max-device-width: 1080px)',
+  });
+  if (isMobile) triangle = false;
   const renderSlider = (
-    <Slider style={{ outline: "none" }}>
+    <Slider style={{ outline: 'none' }}>
       {data.cases.nodes.map((item, index) => (
         <Slide className="slide" key={index} index={index}>
           <SliderContent item={item} />
         </Slide>
       ))}
     </Slider>
-  )
+  );
   const mobile = (
     <>
       {data.cases.nodes.map(
         (item, index) => index < 3 && <SliderContent item={item} key={index} />
       )}
     </>
-  )
+  );
   const content = (
     <CaseStudyWrapper ref={refProp} id="caseStudy">
       <CarouselProvider
@@ -124,8 +124,8 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       </CarouselProvider>
       {isMobile && mobile}
     </CaseStudyWrapper>
-  )
-  return data && content
-}
+  );
+  return data && content;
+};
 
-export default CaseStudy
+export default CaseStudy;

@@ -6,9 +6,9 @@ module.exports = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-tagmanager",
+      resolve: 'gatsby-plugin-google-tagmanager',
       options: {
-        id: "GTM-M2CQZ3W",
+        id: 'GTM-M2CQZ3W',
         enableWebVitalsTracking: true,
       },
     },
@@ -32,9 +32,9 @@ module.exports = {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
-        "minify": true,
-        "transpileTemplateLiterals": true,
-        "pure": true
+        minify: true,
+        transpileTemplateLiterals: true,
+        pure: true,
       },
     },
     `gatsby-transformer-sharp`,
@@ -48,12 +48,14 @@ module.exports = {
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: `src/images/favicon2.png`
+        icon: `src/images/favicon2.png`,
       },
-    }
+    },
+    {
+      resolve: 'gatsby-plugin-eslint',
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
-
+};

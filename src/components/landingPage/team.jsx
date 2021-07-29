@@ -1,13 +1,13 @@
-import React from "react"
-import { AnimatedHeader, AnimatedParagraph } from "../util/animations"
-import { useInView } from "react-intersection-observer"
-import { TeamWrapper, TeamDescription } from "../styled"
+import React from 'react';
+import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
+import { useInView } from 'react-intersection-observer';
+import { TeamWrapper, TeamDescription } from '../styled';
 
 const Team = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  })
+  });
   return (
     <TeamWrapper>
       <TeamDescription ref={ref}>
@@ -22,7 +22,7 @@ const Team = () => {
         </AnimatedParagraph>
       </TeamDescription>
     </TeamWrapper>
-  )
-}
+  );
+};
 
-export default Team
+export default Team;

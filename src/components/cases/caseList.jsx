@@ -1,7 +1,7 @@
-import React, { useMemo } from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
-import { CaseListWrapper, CaseListContentWrapper } from "../styled"
+import React, { useMemo } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
+import { CaseListWrapper, CaseListContentWrapper } from '../styled';
 
 const CaseList = ({ title, paragraph, arrObj }) => {
   const data = useStaticQuery(graphql`
@@ -14,8 +14,8 @@ const CaseList = ({ title, paragraph, arrObj }) => {
         }
       }
     }
-  `)
-  const list = useMemo(() => [...arrObj.List], [arrObj.List])
+  `);
+  const list = useMemo(() => [...arrObj.List], [arrObj.List]);
   return (
     <CaseListWrapper>
       <h2>{title}</h2>
@@ -33,7 +33,7 @@ const CaseList = ({ title, paragraph, arrObj }) => {
         </ul>
       </CaseListContentWrapper>
     </CaseListWrapper>
-  )
-}
+  );
+};
 
-export default CaseList
+export default CaseList;

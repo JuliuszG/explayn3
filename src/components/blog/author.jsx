@@ -1,11 +1,11 @@
-import React from "react"
+import React from 'react';
 import {
   AuthorWrapper,
   AuthorImageWrapper,
   AuthorInfo,
   AboutAuthor,
   AuthorPic,
-} from "../styled"
+} from '../styled';
 
 const Author = ({ name, about, photo }) => {
   return (
@@ -19,7 +19,7 @@ const Author = ({ name, about, photo }) => {
         <AboutAuthor className="about">{about}</AboutAuthor>
       </AuthorInfo>
     </AuthorWrapper>
-  )
-}
+  );
+};
 
-export default Author
+export default Author;

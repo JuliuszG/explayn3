@@ -1,12 +1,12 @@
-import React from "react"
-import { useInView } from "react-intersection-observer"
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
 import {
   AnimatedHeader,
   AnimatedParagraph,
   AnimatedLink,
-} from "../util/animations"
+} from '../util/animations';
 
-import { CaseDataWrapper, CaseDataLeft, CaseDataRight } from "../styled"
+import { CaseDataWrapper, CaseDataLeft, CaseDataRight } from '../styled';
 
 const CaseData = ({
   title,
@@ -20,7 +20,7 @@ const CaseData = ({
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
-  })
+  });
   return (
     <CaseDataWrapper>
       <CaseDataLeft ref={ref}>
@@ -51,7 +51,7 @@ const CaseData = ({
         </li>
       </CaseDataRight>
     </CaseDataWrapper>
-  )
-}
+  );
+};
 
-export default CaseData
+export default CaseData;
