@@ -127,14 +127,20 @@ const MenuDesktop = ({ toggle }) => {
           </motion.div>
           <motion.div variants={itemAnimation} className="item">
             <div className="number">03.</div>
-            <ScLink
-              to={"caseStudy"}
-              smooth
-              duration={1000}
-              onClick={menuSwitch}
-            >
-              Case studies
-            </ScLink>
+            {window.location.pathname === "/" ? (
+              <ScLink
+                to={"caseStudy"}
+                smooth
+                duration={1000}
+                onClick={menuSwitch}
+              >
+                Case studies
+              </ScLink>
+            ) : (
+              <Link to={"/"} state={{ scrollAnchor: "#caseStudy" }}>
+                Case studies
+              </Link>
+            )}
           </motion.div>
           <motion.div variants={itemAnimation} className="item">
             <div className="number">04.</div>
