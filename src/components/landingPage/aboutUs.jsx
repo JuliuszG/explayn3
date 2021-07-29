@@ -151,7 +151,7 @@ const AboutUs = () => {
       {renderSecond()}
       <div className="btn__cnt">
         <button onClick={() => setIsCollapsed(prevState => !prevState)}>
-          {isCollapsed ? "Show more" : "Collapse"}
+          {isCollapsed ? "Show more" : "Show less"}
         </button>
       </div>
     </AboutUsWrapper>
