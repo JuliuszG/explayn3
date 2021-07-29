@@ -2384,3 +2384,376 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
     }
   }
 `
+//navigation/contactUs.jsx
+
+export const ContactUsButton = styled.div`
+  width: 194px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+  border-radius: 32px;
+  color: ${({ text }) => (text ? text : "#fff")};
+  text-decoration: none;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  transition: all 0.1s ease-in;
+  cursor: pointer;
+  @media (hover: hover) {
+    &:hover {
+      color: #404040 !important;
+      font-weight: 600 !important;
+      letter-spacing: 3px;
+      background: #fff;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.3s ease 0s;
+    }
+  }
+`
+//navigation/desktop.jsx
+
+export const DesktopNav = styled.nav`
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  background: transparent;
+  z-index: 100;
+  width: 100%;
+  .logo-link {
+    margin-left: 80px;
+  }
+  a {
+    text-decoration: none;
+  }
+  .desktop__cnt {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: 1300px) {
+      width: 30%;
+    }
+    &:first-of-type {
+      width: 336px;
+    }
+    &:last-of-type {
+      width: 256px;
+    }
+  }
+`
+export const BlogTitle = styled.div`
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  text-decoration: none;
+  color: #000000;
+  span {
+    color: #4b66ff;
+    margin: 0 3px;
+  }
+`
+
+//navigation/menuIcon.jsx
+
+export const Burger = styled.div`
+  width: ${({ customWidth }) => customWidth};
+  height: ${({ customHeight }) => customHeight};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+`
+//navigation/logoImg.jsx
+
+export const LogoImageComponent = styled(Img)`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
+
+export const ImageSvg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+`
+export const LogoImageWrapper = styled.div`
+  width: ${({ customWidth }) => customWidth};
+  height: ${({ customHeight }) => customHeight};
+`
+//navigation/menu.jsx
+
+export const MenuWrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background: ${colors.neutral90};
+  z-index: 999;
+  overflow-y: auto;
+`
+
+export const MenuHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  .cnt {
+    width: 367px;
+    display: flex;
+    justify-content: space-between;
+  }
+`
+
+export const ExitMenu = styled.div`
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  position: relative;
+  z-index: 100;
+  &:after {
+    content: "";
+    height: 100%;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 10px;
+  }
+  :before {
+    content: "";
+    height: 100%;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 10px;
+  }
+  .sr {
+    display: none;
+  }
+`
+export const MenuImage = styled(Img)`
+  width: 30%;
+`
+export const LinksWrapper = styled.ul`
+  padding: 5%;
+  font-size: 16px;
+  @media (max-height: 1720px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1520px) {
+    font-size: 12px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 8px;
+  }
+  @media (max-width: 1120px) and (min-height: 1300px) {
+    font-size: 16px;
+  }
+  .dropdown.active {
+    display: block;
+  }
+  .longdash.active {
+    display: inline-block;
+  }
+  .dropLink {
+    cursor: pointer;
+  }
+  li {
+    margin-bottom: 1%;
+    position: relative;
+    span {
+      margin-right: 5%;
+    }
+    a {
+      text-decoration: none;
+      color: ${colors.neutral00};
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2.75em;
+      line-height: 272.72%;
+      span {
+        color: ${colors.neutral40};
+        font-size: calc(1em / 2.3);
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+    .dropdown {
+      position: absolute;
+      display: none;
+      top: 3vh;
+      right: 50%;
+      z-index: 1000;
+      @media (max-width: 1350px) {
+        top: 0;
+      }
+      @media (max-width: 1366px) and (min-height: 1024px) {
+        right: 40%;
+      }
+      @media (max-width: 1024px) {
+        right: 45%;
+        top: 0;
+      }
+      a {
+        font-size: 1.5625em;
+        line-height: 61px;
+      }
+    }
+    .longdash {
+      width: 100px;
+      height: 1px;
+      background: ${colors.neutral00};
+      margin-left: 10%;
+    }
+  }
+`
+
+export const MenuFooterWrapper = styled.div`
+  padding: 0 10%;
+  color: #fff;
+  font-size: 16px;
+  margin-top: auto;
+  @media (max-height: 1720px) {
+    font-size: 16px;
+  }
+  @media (max-width: 1520px) {
+    font-size: 15px;
+  }
+  @media (max-width: 1350px) {
+    font-size: 14px;
+  }
+  @media (max-width: 1120px) {
+    font-size: 13px;
+  }
+  @media (max-width: 1120px) and (min-height: 768px) {
+    margin: 15% 0 5%;
+    font-size: 14px;
+  }
+  @media (max-width: 1120px) and (min-height: 1300px) {
+    margin: 40% 0 10%;
+    font-size: 16px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .main {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-content: flex-start;
+    .social {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+      .row {
+        display: flex;
+        flex-direction: column;
+        a {
+          font-family: "Poppins";
+          font-size: 1.0625em;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 2.8125em;
+          letter-spacing: 0em;
+          text-align: left;
+        }
+      }
+    }
+    .contact {
+      font-family: "Poppins";
+      position: absolute;
+      right: 0;
+      bottom: 10%;
+      .header {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5625em;
+        line-height: 7.5em;
+      }
+      a {
+        display: block;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.1875em;
+        margin-bottom: 5%;
+      }
+    }
+  }
+  .copy {
+    display: flex;
+    justify-content: center;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 0.9375em;
+    line-height: 3.625em;
+  }
+`
+//navigation/menuLanguage.jsx
+
+export const LangMenu = styled.div`
+  display: flex;
+  align-items: center;
+  color: ${({ color }) => (color ? color : "#9498B2")};
+
+  .line {
+    width: 40px;
+    height: 1px;
+    background: ${({ color }) => (color ? color : colors.neutral40)};
+  }
+`
+export const LangButton = styled.button`
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.0625em;
+  line-height: 119.5%;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  color: #9498b2;
+  &:first-of-type {
+    margin-right: 10px;
+  }
+  &:last-of-type {
+    margin-left: 10px;
+  }
+  ${({ isActive }) => isActive && "color: #fff;"}
+`
+//navigation/langSwitch.jsx
+
+export const SwitchLangButton = styled.button`
+  font-family: "Poppins";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: ${({ color }) => (color ? color : "#000")};
+`

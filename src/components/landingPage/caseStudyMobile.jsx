@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useMemo } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { SliderContent } from "./caseStudy"
 import { MobileStudyWrapper } from "../styled"
@@ -17,35 +17,37 @@ const CaseStudyMobile = () => {
       }
     }
   `)
-  const slideData = [
-    {
-      image: {
-        src: data.allFile.nodes[2].childImageSharp.fluid,
-        alt: "grabbit-logo",
+  const slideData = useMemo(() => {
+    return [
+      {
+        image: {
+          src: data.allFile.nodes[2].childImageSharp.fluid,
+          alt: "grabbit-logo",
+        },
+        title: "Grabbit, chwyć króliczka!",
+        desc: "Projekt portalu internetowego",
+        slug: "case1",
       },
-      title: "Grabbit, chwyć króliczka!",
-      desc: "Projekt portalu internetowego",
-      slug: "case1",
-    },
-    {
-      image: {
-        src: data.allFile.nodes[3].childImageSharp.fluid,
-        alt: "deventon-logo",
+      {
+        image: {
+          src: data.allFile.nodes[3].childImageSharp.fluid,
+          alt: "deventon-logo",
+        },
+        title: "Deventon, IT i engineering",
+        desc: "Projekt strony internetowej",
+        slug: "case2",
       },
-      title: "Deventon, IT i engineering",
-      desc: "Projekt strony internetowej",
-      slug: "case2",
-    },
-    {
-      image: {
-        src: data.allFile.nodes[4].childImageSharp.fluid,
-        alt: "twochicks-logo",
+      {
+        image: {
+          src: data.allFile.nodes[4].childImageSharp.fluid,
+          alt: "twochicks-logo",
+        },
+        title: "Twochicks, dwa pisklęta",
+        desc: "Film reklamowy",
+        slug: "case3",
       },
-      title: "Twochicks, dwa pisklęta",
-      desc: "Film reklamowy",
-      slug: "case3",
-    },
-  ]
+    ]
+  }, [data])
   return (
     <MobileStudyWrapper>
       <h2>Case studies</h2>
