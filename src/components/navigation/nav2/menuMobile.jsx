@@ -10,6 +10,7 @@ import {
   MobileMenuContainer,
   MobileMenuFooter,
 } from "../../styled"
+import { useLocation } from "@reach/router"
 
 const menuAnimation = {
   visible: {
@@ -66,6 +67,7 @@ const subItemAnimation = {
 }
 
 const MenuMobile = ({ toggle }) => {
+  const location = useLocation()
   const [subMenuIsOn, setSubMenuIsOn] = useState(false)
   const menuSwitch = () => {
     toggle()
@@ -130,14 +132,20 @@ const MenuMobile = ({ toggle }) => {
           <motion.div variants={itemAnimation} className="item">
             <div className="item-link">
               <div className="number">03.</div>
-              <ScLink
-                to={"caseStudy"}
-                smooth
-                duration={1000}
-                onClick={menuSwitch}
-              >
-                Case studies
-              </ScLink>
+              {location.pathname === "/" ? (
+                <ScLink
+                  to={"caseStudy"}
+                  smooth
+                  duration={1000}
+                  onClick={menuSwitch}
+                >
+                  Case studies
+                </ScLink>
+              ) : (
+                <Link to={"/"} state={{ scrollAnchor: "#caseStudy" }}>
+                  Case studies
+                </Link>
+              )}
             </div>
           </motion.div>
           <motion.div variants={itemAnimation} className="item">

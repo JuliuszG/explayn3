@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { Link as ScLink } from "react-scroll"
 import Dots from "../images/footer-dots.svg"
 import Arrow from "../images/footer-arrow.svg"
 import emailjs from "emailjs-com"
@@ -13,8 +14,10 @@ import {
   FooterSocialMediaContent,
   FooterDecoration,
 } from "./styled"
+import { useLocation } from "@reach/router"
 
 const Footer = () => {
+  const location = useLocation()
   const [value, setValue] = useState("")
   const [mailSend, setMailSend] = useState(false)
   const handleSubmit = e => {
@@ -87,7 +90,15 @@ const Footer = () => {
         <div className="site-links-column sl2">
           <h3>About</h3>
           <Link to="/">Home</Link>
-          <Link to="/#caseStudy">Case studies</Link>
+          {location.pathname === "/" ? (
+            <ScLink to={"caseStudy"} smooth duration={1000}>
+              Case studies
+            </ScLink>
+          ) : (
+            <Link to={"/"} state={{ scrollAnchor: "#caseStudy" }}>
+              Case studies
+            </Link>
+          )}
           <Link to="/blog">Blog</Link>
         </div>
         <div className="site-links-column sl3">

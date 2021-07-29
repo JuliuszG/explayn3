@@ -59,7 +59,7 @@ const Header = () => {
   )
 }
 
-const CaseStudy = ({ triangle = true }) => {
+const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
     {
       cases: allDatoCmsRealizacja(
@@ -107,7 +107,7 @@ const CaseStudy = ({ triangle = true }) => {
     </>
   )
   const content = (
-    <CaseStudyWrapper id="caseStudy">
+    <CaseStudyWrapper ref={refProp} id="caseStudy">
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={100}
