@@ -16,7 +16,6 @@ import Responsive from '../images/branding_ikonki/1.benefits.svg';
 import Functional from '../images/branding_ikonki/2.benefits.svg';
 import Scalable from '../images/branding_ikonki/3.benefits.svg';
 import More from '../images/landing/more.svg';
-import { Link as ScLink } from 'react-scroll';
 import {
   ServiceWrapper,
   ServicesSection,
