@@ -17,7 +17,7 @@ import Functional from '../images/ikonki marketing/relevant.svg';
 import Scalable from '../images/ikonki marketing/insightful.svg';
 import More from '../images/landing/more.svg';
 import {
-  MarketingWrapper,
+  ServiceWrapper,
   ServicesTopSection,
   ServicesScrollLink,
   ServicesContent,
@@ -29,8 +29,8 @@ import {
   ServicesImgContainer,
   SentenceSection,
   SentenceSectionContent,
-  HowWeWorkSection,
-  HowWeWorkContent,
+  BenefitsSection,
+  BenefitsContent,
 } from '../components/styled';
 
 const Marketing = () => {
@@ -41,7 +41,7 @@ const Marketing = () => {
     <Layout>
       <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
-      <MarketingWrapper>
+      <ServiceWrapper>
         <ServicesTopSection>
           <ServicesContent>
             <ServicesMainHeader>Marketing</ServicesMainHeader>
@@ -125,14 +125,14 @@ const Marketing = () => {
             { img: Launch, text: 'Measure' },
           ]}
         />
-        <HowWeWorkSection>
+        <BenefitsSection>
           <h2>How we work</h2>
           <p>
             We use best practices to deliver comprehensive digital marketing
             services and provide a compelling message that sticks in the minds
             of those yYou’re trying to reach.
           </p>
-          <HowWeWorkContent>
+          <BenefitsContent>
             <div className="item">
               <div className="item-icon res">
                 <img src={Responsive} alt="responsive icon" />
@@ -171,9 +171,9 @@ const Marketing = () => {
                 </p>
               </div>
             </div>
-          </HowWeWorkContent>
-        </HowWeWorkSection>
-      </MarketingWrapper>
+          </BenefitsContent>
+        </BenefitsSection>
+      </ServiceWrapper>
       <Footer />
     </Layout>
   );
