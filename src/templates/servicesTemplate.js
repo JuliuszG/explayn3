@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
@@ -25,22 +25,21 @@ import {
   DemandList,
   ServicesMainHeader,
   ServicesMainDescription,
-  ServicesImgContainer,
   ServicesLogo,
 } from '../components/styled';
 
 const ServiceTemplate = ({ pageContext }) => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  const [ref2, inView2] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  const isMobile = useMediaQuery({
-    query: '(max-device-width: 950px)',
-  });
+  const {
+    logo,
+    first: { Title: firstSectionTitle, Desc: firstSectionDescription },
+    second: {
+      Title: secondSectionTitle,
+      Desc: secondSectionDescription,
+      List: secondSectionList,
+    },
+    third: { Quote: thirdSectionQuote },
+  } = pageContext;
+
   const data = useStaticQuery(graphql`
     {
       triangle1: file(relativePath: { eq: "servicesPage/1.png" }) {
@@ -74,6 +73,43 @@ const ServiceTemplate = ({ pageContext }) => {
     }
   `);
 
+  const {
+    // triangle1: {
+    //   childImageSharp: { fluid: triandle1Img },
+    // },
+    // quote: {
+    //   childImageSharp: { fluid: quoteImg },
+    // },
+    dots: {
+      childImageSharp: { fluid: dotsImg },
+    },
+    triangle2: {
+      childImageSharp: { fluid: triangle2Img },
+    },
+  } = data;
+  // const [ref, inView] = useInView({
+  //   triggerOnce: true,
+  //   threshold: 0.5,
+  // });
+
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+
+  const isMobile = useMediaQuery({
+    query: '(max-device-width: 950px)',
+  });
+
+  const renderList = useMemo(() => {
+    secondSectionList.map((item, index) => (
+      <li key={index}>
+        <span>0{index + 1}.</span>
+        {item}
+      </li>
+    ));
+  }, [secondSectionList]);
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -82,23 +118,23 @@ const ServiceTemplate = ({ pageContext }) => {
         <ServicesTopSection>
           {/* <div className="text" ref={ref}>
             <AnimatedHeader inView={inView}>
-              {pageContext.first.Title}
+              {firstSectionTitle}
             </AnimatedHeader>
             <AnimatedParagraph inView={inView}>
-              {pageContext.first.Desc}
+              {firstSectionDescription}
             </AnimatedParagraph>
           </div>
            */}
 
           <ServicesContent>
-            <ServicesMainHeader>{pageContext.first.Title}</ServicesMainHeader>
+            <ServicesMainHeader>{firstSectionTitle}</ServicesMainHeader>
             <ServicesMainDescription>
-              {pageContext.first.Desc}
+              {firstSectionDescription}
             </ServicesMainDescription>
           </ServicesContent>
           <ServicesLogo>
             <Img
-              fluid={pageContext.logo}
+              fluid={logo}
               placeholderStyle={{ visibility: 'hidden' }}
               alt="subpage logo"
             />
@@ -113,34 +149,24 @@ const ServiceTemplate = ({ pageContext }) => {
         <ServicesSection id="services-section">
           <DemandLeftSection ref={ref2}>
             <AnimatedHeader inView={inView2}>
-              {pageContext.second.Title}
+              {secondSectionTitle}
             </AnimatedHeader>
             <AnimatedParagraph inView={inView2}>
-              {pageContext.second.Desc}
+              {secondSectionDescription}
             </AnimatedParagraph>
           </DemandLeftSection>
-          <DemandList>
-            {pageContext.second.List.map((item, index) => (
-              <li key={index}>
-                <span>0{index + 1}.</span>
-                {item}
-              </li>
-            ))}
-          </DemandList>
+          <DemandList>{renderList}</DemandList>
           {/* <div className="triangle">
-          <Img fluid={data.triangle1.childImageSharp.fluid} alt="decoration" />
+          <Img fluid={triangle1Img} alt="decoration" />
         </div> */}
         </ServicesSection>
         <QuoteSection>
-          <p>{pageContext.third.Quote}</p>
+          <p>{thirdSectionQuote}</p>
           <div className="square">
-            <Img fluid={data.dots.childImageSharp.fluid} alt="decoration" />
+            <Img fluid={dotsImg} alt="decoration" />
           </div>
           <div className="half-circle">
-            <Img
-              fluid={data.triangle2.childImageSharp.fluid}
-              alt="decoration"
-            />
+            <Img fluid={triangle2Img} alt="decoration" />
           </div>
         </QuoteSection>
         <CaseStudy triangle={false} />
