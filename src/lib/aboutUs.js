@@ -158,21 +158,21 @@ export const imageColorVariant = {
     opacity: 1,
     scale: 1.5,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       ease: 'easeInOut',
     },
   },
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       ease: 'easeInOut',
     },
   },
   initial: {
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.6,
       ease: 'easeInOut',
     },
   },
