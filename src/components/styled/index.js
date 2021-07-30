@@ -1944,14 +1944,14 @@ export const CaseStudyHeaderWrapper = styled.div`
   }
   h2 {
     font-weight: 600;
-    font-size: 5em;
+    font-size: 44px;
     line-height: 95%;
-    margin-bottom: 3%;
+    margin-bottom: 30px;
   }
   p {
     width: 60%;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 32px;
     @media (max-width: 650px) {
       width: 100%;
@@ -2010,14 +2010,14 @@ export const CaseStudySliderWrapper = styled(Link)`
   }
   h3 {
     font-weight: 600;
-    font-size: 1.875em;
-    line-height: 153.33%;
+    font-size: 20px;
+    line-height: 153%;
     color: ${colors.neutral100};
   }
   p {
     font-weight: normal;
-    font-size: 1em;
-    line-height: 181.25%;
+    font-size: 16epx;
+    line-height: 181%;
     color: ${colors.neutral50};
   }
 `;
@@ -3895,16 +3895,12 @@ export const ServicesWrapper = styled.section`
 `;
 
 export const ServicesLogo = styled.div`
-  width: 201px;
-  height: 191px;
-  margin-left: 20%;
-  margin-bottom: 16%;
+  width: 250px;
+  height: 100%;
+  margin-right: 200px;
   @media (max-width: 950px) {
-    width: 161px;
-    height: 141px;
-    margin-left: 10%;
+    margin-right: 100px;
     align-self: flex-start;
-    margin-bottom: 1%;
   }
   @media (max-width: 600px) {
     margin-bottom: 10%;
@@ -4012,7 +4008,7 @@ export const DemandList = styled.ul`
 `;
 
 export const QuoteSection = styled.div`
-  padding: 15% 22%;
+  padding: 100px 180px;
   color: ${colors.neutral80};
   position: relative;
   background: ${colors.neutral10};
@@ -4037,8 +4033,9 @@ export const QuoteSection = styled.div`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 3.4375em;
-    line-height: 138.18%;
+    font-size: 44px;
+    line-height: 138%;
+    max-width: 1100px;
   }
   .quote {
     width: 3.875em;
