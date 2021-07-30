@@ -3181,7 +3181,6 @@ export const DesktopMenuFooter = styled.div`
         display: block;
         color: #aaa;
         text-decoration: none;
-        font-weight: 300;
         font-size: 1rem;
         line-height: 264.7%;
         transition: 0.3s ease-in;
