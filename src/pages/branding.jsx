@@ -55,7 +55,7 @@ const Branding = () => {
           <ServicesImgContainer>
             <img src={HeaderImg} alt="dev icon" />
           </ServicesImgContainer>
-          <ServicesScrollLink to={'aboutUs'} smooth duration={500}>
+          <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />

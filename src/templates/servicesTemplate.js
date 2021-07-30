@@ -103,14 +103,14 @@ const ServiceTemplate = ({ pageContext }) => {
               alt="subpage logo"
             />
           </ServicesLogo>
-          <ServicesScrollLink to={'aboutUs'} smooth duration={500}>
+          <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
             </div>
           </ServicesScrollLink>
         </ServicesTopSection>
-        <ServicesSection>
+        <ServicesSection id="services-section">
           <DemandLeftSection ref={ref2}>
             <AnimatedHeader inView={inView2}>
               {pageContext.second.Title}
