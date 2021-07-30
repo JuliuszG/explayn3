@@ -951,10 +951,9 @@ export const LoaderWrapper = styled(motion.div)`
 //footer.jsx
 export const FooterWrapper = styled.footer`
   width: 100%;
-  min-height: 100vh;
   background: #272727;
   font-family: 'Poppins';
-  padding: 5% 0;
+  padding: 80px 40px 0;
   position: relative;
   overflow: hidden;
   @media (max-width: 1024px) {
@@ -962,17 +961,17 @@ export const FooterWrapper = styled.footer`
   }
   h3 {
     color: #ffffff;
-    font-size: 1.575rem;
+    font-size: 20px;
     font-weight: 600;
     line-height: 153%;
     @media (max-width: 600px) {
-      font-size: 1.3rem;
+      font-size: 18px;
     }
   }
   a {
     color: #aaaaaa;
-    font-size: 1rem;
-    line-height: 145%;
+    font-size: 14px;
+    line-height: 120%;
     text-decoration: none;
     transition: 0.3s ease-in;
     @media (hover: hover) {
@@ -990,10 +989,10 @@ export const FooterWrapper = styled.footer`
     display: flex;
     flex-direction: column;
     h3 {
-      margin-bottom: 33px;
+      margin-bottom: 20px;
     }
     a {
-      margin-bottom: 33px;
+      margin-bottom: 15px;
     }
   }
   .sl1 {
@@ -1071,11 +1070,11 @@ export const FooterNewsletter = styled.div`
   grid-area: newsletter;
   p {
     color: #aaaaaa;
-    font-size: 1rem;
-    line-height: 145%;
+    font-size: 14px;
+    line-height: 125%;
     margin-bottom: 40px;
     @media (max-width: 600px) {
-      font-size: 1rem;
+      font-size: 14px;
     }
   }
 `;
@@ -1096,16 +1095,16 @@ export const FooterFormWrapper = styled.div`
     border-bottom: 3px solid white;
     background: transparent;
     color: #aaaaaa;
-    font-size: 1.2rem;
-    line-height: 145%;
+    font-size: 16px;
+    line-height: 135%;
     font-weight: 300;
     @media (max-width: 600px) {
       width: 70%;
     }
     &::placeholder {
       color: #aaaaaa;
-      font-size: 1.2rem;
-      line-height: 145%;
+      font-size: 16px;
+      line-height: 125%;
       font-weight: 300;
     }
   }
@@ -1375,20 +1374,20 @@ export const TeamDescription = styled.div`
     padding: 18% 12%;
   }
   h2 {
-    font-size: 3.4375em;
+    font-size: 44px;
     font-weight: 600;
-    line-height: 138.18%;
+    line-height: 138%;
     text-align: left;
     margin-bottom: 4%;
     @media (max-width: 650px) {
-      font-size: 2.5em;
+      font-size: 44px;
     }
   }
   p {
     width: 65%;
-    font-size: 1.1875em;
+    font-size: 16px;
     font-weight: 300;
-    line-height: 168.42%;
+    line-height: 168%;
     text-align: left;
     @media (max-width: 950px) {
       width: 100%;
@@ -1410,7 +1409,7 @@ export const PartnersWrapper = styled.div`
 `;
 export const CardWrapper = styled.div`
   width: 25%;
-  height: 443px;
+  height: 380px;
   border: 1px solid ${colors.neutral30};
   @media (max-width: 1500px) {
     height: 350px;
@@ -1422,15 +1421,13 @@ export const CardWrapper = styled.div`
     width: 80%;
     height: 280px;
   }
-  .logo {
-  }
   a {
     text-decoration: none;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 32px;
+    font-size: 18px;
+    line-height: 28px;
     color: ${colors.neutral60};
     .arrow {
       @media (max-width: 968px) {
@@ -1449,7 +1446,7 @@ export const CardLogo = styled.div`
   justify-content: center;
   align-items: center;
   img {
-    width: 60%;
+    width: 50%;
     height: 40%;
   }
 `;
@@ -1702,7 +1699,7 @@ export const LandingWrapper = styled.section`
     h1 {
       font-weight: 600;
       font-size: 5.125em;
-      line-height: 119.5%;
+      line-height: 119%;
       margin-bottom: 4%;
       @media (max-width: 650px) {
         line-height: 125%;
@@ -1712,7 +1709,7 @@ export const LandingWrapper = styled.section`
       max-width: 55%;
       font-weight: 300;
       font-size: 19px;
-      line-height: 163.63%;
+      line-height: 163%;
       @media (max-width: 950px) {
         max-width: 100%;
       }
@@ -1759,12 +1756,12 @@ export const LandingZigZag = styled.div`
 //landingPage/abuotUs.jsx
 export const AboutUsWrapper = styled(motion.section)`
   background: ${colors.neutral90};
-  padding: 10% 0;
+  padding: 100px 0;
   a {
     text-decoration: none;
   }
   .cnt {
-    padding-left: 5%;
+    padding-left: 100px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -1774,12 +1771,12 @@ export const AboutUsWrapper = styled(motion.section)`
       align-items: center;
     }
     &.first {
-      margin-top: 10%;
+      margin-top: 80px;
     }
   }
   button {
-    width: 219px;
-    height: 58px;
+    width: 180px;
+    height: 52px;
     display: inline-block;
     background: ${colors.neutral80};
     color: ${colors.neutral00};
@@ -1790,8 +1787,8 @@ export const AboutUsWrapper = styled(motion.section)`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 15px;
-    line-height: 29px;
+    font-size: 14px;
+    line-height: 24px;
     transition: all 0.1s ease-in;
     &:hover {
       transform: scale(1.1);
@@ -1826,14 +1823,14 @@ export const AboutUsHeaderWrapper = styled.div`
     }
     h2 {
       font-weight: 600;
-      font-size: 3.4375em;
+      font-size: 44px;
       line-height: 138%;
     }
     p {
       width: 60%;
       margin-top: 3%;
       font-weight: 300;
-      font-size: 1.1875em;
+      font-size: 16px;
       line-height: 168%;
       @media (max-width: 956px) {
         width: 100%;
@@ -1862,26 +1859,26 @@ export const BoxWrapper = styled.div`
   h3 {
     max-width: 240px;
     font-weight: 600;
-    font-size: 1.875em;
-    line-height: 168.42%;
+    font-size: 22px;
+    line-height: 168%;
     padding-bottom: 3%;
     border-bottom: 1px solid ${colors.neutral60};
     margin-bottom: 3%;
   }
   ul {
     list-style: none;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
     li {
       font-weight: normal;
-      font-size: 1em;
-      line-height: 181.25%;
+      font-size: 16px;
+      line-height: 170%;
       color: ${colors.neutral30};
     }
   }
   a {
     font-weight: 600;
-    font-size: 1em;
-    line-height: 181.25%;
+    font-size: 14px;
+    line-height: 170%;
     transition: all 0.3s ease-in;
     padding-bottom: 1%;
     border-bottom: 1.3px solid ${colors.neutral00};
@@ -1918,12 +1915,12 @@ export const BoxImage = styled.img`
 //landingPage/caseStudy.jsx
 export const CaseStudyWrapper = styled.section`
   position: relative;
-  margin-bottom: 10%;
+  margin-bottom: 100px;
   .carousel__cnt {
     .slide:nth-of-type(even) {
       margin: 0 0.5%;
       @media (max-width: 650px) {
-        margin: 25% 0;
+        margin: 80px 0;
       }
     }
   }
@@ -1932,7 +1929,7 @@ export const CaseStudyWrapper = styled.section`
 export const CaseStudyHeaderWrapper = styled.div`
   font-family: 'Poppins';
   font-style: normal;
-  padding: 10% 22% 10% 10%;
+  padding: 100px 100px 60px;
   color: ${colors.neutral100};
   display: flex;
   justify-content: space-between;
@@ -3108,8 +3105,8 @@ export const DesktopLinks = styled.div`
       text-decoration: none;
       color: ${colors.neutral00};
       font-weight: 600;
-      font-size: 2.75em;
-      line-height: 272.72%;
+      font-size: 32px;
+      line-height: 220%;
       display: flex;
       &:nth-of-type(2) a {
         color: ${({ subMenuIsOn }) => subMenuIsOn && colors.neutral00};
@@ -3172,6 +3169,8 @@ export const DesktopMenuFooter = styled.div`
   color: ${colors.neutral00};
   .social {
     display: flex;
+    margin-top: 50px;
+    align-self: flex-end;
     .row {
       flex-grow: 1;
       &:first-of-type {
@@ -3181,8 +3180,8 @@ export const DesktopMenuFooter = styled.div`
         display: block;
         color: #aaa;
         text-decoration: none;
-        font-size: 1rem;
-        line-height: 264.7%;
+        font-size: 16px;
+        line-height: 265%;
         transition: 0.3s ease-in;
         &:hover {
           color: #fff;
@@ -3198,19 +3197,19 @@ export const DesktopMenuFooter = styled.div`
     @media (max-width: 1050px) {
       font-size: 10px;
     }
-    bottom: 5em;
+    bottom: -20px;
     h3 {
       font-weight: 600;
-      font-size: 1.5625em;
-      line-height: 480%;
+      font-size: 22px;
+      line-height: 180%;
     }
     a {
       display: block;
       color: ${colors.neutral00};
       text-decoration: none;
       font-weight: 300;
-      font-size: 1.1875em;
-      line-height: 168.42%;
+      font-size: 16px;
+      line-height: 168%;
     }
   }
 `;
@@ -3231,7 +3230,7 @@ export const Copy = styled.div`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 300;
-    font-size: 0.9375em;
+    font-size: 12px;
     line-height: 386.66%;
   }
 `;
