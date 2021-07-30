@@ -16,8 +16,22 @@ import Responsive from '../images/branding_ikonki/1.benefits.svg';
 import Functional from '../images/branding_ikonki/2.benefits.svg';
 import Scalable from '../images/branding_ikonki/3.benefits.svg';
 import More from '../images/landing/more.svg';
-import { Link as ScLink } from 'react-scroll';
-import { BrandingWrapper, ServicesSection } from '../components/styled';
+import {
+  ServiceWrapper,
+  ServicesSection,
+  ServicesTopSection,
+  ServicesScrollLink,
+  ServicesContent,
+  DemandLeftSection,
+  DemandList,
+  ServicesMainHeader,
+  ServicesMainDescription,
+  ServicesImgContainer,
+  SentenceSection,
+  SentenceSectionContent,
+  BenefitsSection,
+  BenefitsContent,
+} from '../components/styled';
 
 const Branding = () => {
   const isMobile = useMediaQuery({
@@ -27,29 +41,29 @@ const Branding = () => {
     <Layout>
       <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
-      <BrandingWrapper>
-        <div className="landing">
-          <div className="content">
-            <h1>Branding</h1>
-            <p>
+      <ServiceWrapper>
+        <ServicesTopSection>
+          <ServicesContent>
+            <ServicesMainHeader>Branding</ServicesMainHeader>
+            <ServicesMainDescription>
               We make every experience people have with your business worth
               remembering. We build brands that can't be ignored. Brands that
               matter. Brands that make a lasting connection with your customers.
               Branding that sells
-            </p>
-          </div>
-          <div className="landing-image">
+            </ServicesMainDescription>
+          </ServicesContent>
+          <ServicesImgContainer>
             <img src={HeaderImg} alt="dev icon" />
-          </div>
-          <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
+          </ServicesImgContainer>
+          <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
             </div>
-          </ScLink>
-        </div>
+          </ServicesScrollLink>
+        </ServicesTopSection>
         <ServicesSection id="services-section">
-          <div className="left">
+          <DemandLeftSection>
             <h2>Branding that sells</h2>
             <p>
               The process of building brand awareness is complex and consists of
@@ -57,8 +71,8 @@ const Branding = () => {
               coherent concept that will enable your brand to create a
               sustainable bond with your customer.
             </p>
-          </div>
-          <ul className="right">
+          </DemandLeftSection>
+          <DemandList>
             <li>
               <span>01.</span>
               Visual identification
@@ -75,10 +89,10 @@ const Branding = () => {
               <span>04.</span>
               UI/UX Design
             </li>
-          </ul>
+          </DemandList>
         </ServicesSection>
-        <div className="section-3">
-          <div className="cnt">
+        <SentenceSection>
+          <SentenceSectionContent>
             <h2>
               In today’s <span>dynamically changing</span> world, a company
               needs a <span>fresh look</span> at its online presence.
@@ -100,8 +114,8 @@ const Branding = () => {
                 potential customers, creating bonds that stay.
               </p>
             </div>
-          </div>
-        </div>
+          </SentenceSectionContent>
+        </SentenceSection>
         <BrandingSteps
           arr={[
             { img: Discovery, text: 'Discovery' },
@@ -111,20 +125,19 @@ const Branding = () => {
             { img: Launch, text: 'Launch' },
           ]}
         />
-
-        <div className="section-5">
+        <BenefitsSection>
           <h2>Benefits</h2>
           <p>
             A brand is not just a logo. A brand is a person’s feelings about a
             product, service, or organization. We make every effort to make your
             brand experience meaningful.
           </p>
-          <div className="section-5-cnt">
-            <div className="section-5-item">
-              <div className="section-5-item-icon res">
+          <BenefitsContent>
+            <div className="item">
+              <div className="item-icon res">
                 <img src={Responsive} alt="responsive icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Recognition</h4>
                 <p>
                   The most important reason why branding is crucial to a
@@ -133,11 +146,11 @@ const Branding = () => {
                 </p>
               </div>
             </div>
-            <div className="section-5-item">
-              <div className="section-5-item-icon fun">
+            <div className="item">
+              <div className="tem-icon fun">
                 <img src={Functional} alt="Functional icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Business Value</h4>
                 <p>
                   A strongly established brand increases the value of a company,
@@ -147,11 +160,11 @@ const Branding = () => {
                 </p>
               </div>
             </div>
-            <div className="section-5-item">
-              <div className="section-5-item-icon sca">
+            <div className="item">
+              <div className="item-icon sca">
                 <img src={Scalable} alt="Scalable icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Trust</h4>
                 <p>
                   A professional appearance and well-designed branding will help
@@ -161,9 +174,9 @@ const Branding = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </BrandingWrapper>
+          </BenefitsContent>
+        </BenefitsSection>
+      </ServiceWrapper>
       <Footer />
     </Layout>
   );

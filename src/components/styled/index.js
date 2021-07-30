@@ -9,6 +9,7 @@ import BG from '../../images/development/header/bgSteps.jpg';
 import BGBranding from '../../images/branding_ikonki/duza kredka.svg';
 import BGMarketing from '../../images/ikonki marketing/duzy glosnik.svg';
 import Section3Bg from '../../images/development/header/section3bg.jpg';
+import { deviceMin, deviceMax } from '../../utils/breakpoints';
 
 const spin = keyframes`
     0% {
@@ -1943,14 +1944,14 @@ export const CaseStudyHeaderWrapper = styled.div`
   }
   h2 {
     font-weight: 600;
-    font-size: 5em;
+    font-size: 44px;
     line-height: 95%;
-    margin-bottom: 3%;
+    margin-bottom: 30px;
   }
   p {
     width: 60%;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 32px;
     @media (max-width: 650px) {
       width: 100%;
@@ -2009,14 +2010,14 @@ export const CaseStudySliderWrapper = styled(Link)`
   }
   h3 {
     font-weight: 600;
-    font-size: 1.875em;
-    line-height: 153.33%;
+    font-size: 20px;
+    line-height: 153%;
     color: ${colors.neutral100};
   }
   p {
     font-weight: normal;
-    font-size: 1em;
-    line-height: 181.25%;
+    font-size: 16epx;
+    line-height: 181%;
     color: ${colors.neutral50};
   }
 `;
@@ -2073,10 +2074,10 @@ export const StepsWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
-  min-height: 120vh;
   display: flex;
   flex-direction: column;
-  padding: 10% 0;
+  padding-top: 120px;
+  padding-bottom: 280px;
   align-items: center;
   font-family: 'Poppins';
   .header {
@@ -2084,7 +2085,7 @@ export const StepsWrapper = styled.div`
     display: flex;
     align-items: flex-start;
     color: #000;
-    margin-bottom: 160px;
+    margin-bottom: 60px;
     @media (max-width: 1500px) {
       max-width: 900px;
     }
@@ -2096,8 +2097,8 @@ export const StepsWrapper = styled.div`
       margin-bottom: 20px;
     }
     h2 {
-      font-size: 3.4375rem;
-      line-height: 138.18%;
+      font-size: 44px;
+      line-height: 138%;
       margin-right: 10px;
       font-weight: 600;
       @media (max-width: 1500px) {
@@ -2111,8 +2112,8 @@ export const StepsWrapper = styled.div`
     }
     p {
       width: 50%;
-      font-size: 1.375rem;
-      line-height: 136.36%;
+      font-size: 16px;
+      line-height: 136%;
       font-weight: 300;
       @media (max-width: 1050px) {
         width: 100%;
@@ -2120,7 +2121,6 @@ export const StepsWrapper = styled.div`
     }
   }
   .icons {
-    max-width: 1400px;
     .cnt {
       width: 100%;
       height: 120px;
@@ -2160,9 +2160,9 @@ export const StepsWrapper = styled.div`
       position: relative;
       cursor: pointer;
       h5 {
-        font-size: 1.6875rem;
+        font-size: 22px;
         font-weight: 600;
-        margin-top: 50px;
+        margin-top: 30px;
         @media (max-width: 1200px) {
           margin-top: 10px;
         }
@@ -2190,21 +2190,21 @@ export const StepsWrapper = styled.div`
           content: 'The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.';
           display: none;
           position: absolute;
-          top: 12vw;
+          top: 150px;
           left: 1vw;
           width: 40vw;
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
           font-family: 'Poppins';
-          font-size: 0.9rem;
+          font-size: 14px;
           line-height: 136%;
         }
         &:nth-child(1)::before {
           content: '';
           display: none;
           position: absolute;
-          top: 11.5vw;
+          top: 140px;
           left: 30px;
           width: 30px;
           height: 30px;
@@ -2216,21 +2216,21 @@ export const StepsWrapper = styled.div`
           content: 'Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.';
           display: none;
           position: absolute;
-          top: 12vw;
+          top: 150px;
           left: 1vw;
           width: 40vw;
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
           font-family: 'Poppins';
-          font-size: 0.9rem;
+          font-size: 14px;
           line-height: 136%;
         }
         &:nth-child(3)::before {
           content: '';
           display: none;
           position: absolute;
-          top: 11.5vw;
+          top: 140px;
           left: 30px;
           width: 30px;
           height: 30px;
@@ -2242,20 +2242,20 @@ export const StepsWrapper = styled.div`
           content: 'At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.';
           display: none;
           position: absolute;
-          top: 12vw;
+          top: 150px;
           width: 40vw;
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
           font-family: 'Poppins';
-          font-size: 0.9rem;
+          font-size: 14px;
           line-height: 136%;
         }
         &:nth-of-type(5)::before {
           content: '';
           display: none;
           position: absolute;
-          top: 11.5vw;
+          top: 140px;
           left: 15px;
           width: 30px;
           height: 30px;
@@ -2267,21 +2267,21 @@ export const StepsWrapper = styled.div`
           content: 'Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.';
           display: none;
           position: absolute;
-          top: 12vw;
+          top: 150px;
           right: 1vw;
           width: 40vw;
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
           font-family: 'Poppins';
-          font-size: 0.9rem;
+          font-size: 14px;
           line-height: 136%;
         }
         &:nth-child(7)::before {
           content: '';
           display: none;
           position: absolute;
-          top: 11.5vw;
+          top: 140px;
           left: 10px;
           width: 30px;
           height: 30px;
@@ -2293,21 +2293,21 @@ export const StepsWrapper = styled.div`
           content: 'By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.';
           display: none;
           position: absolute;
-          top: 12vw;
+          top: 150px;
           right: 1vw;
           width: 40vw;
           max-height: 200px;
           background-color: #f5f6fa;
           padding: 30px;
           font-family: 'Poppins';
-          font-size: 0.9rem;
+          font-size: 14px;
           line-height: 136%;
         }
         &:nth-of-type(9)::before {
           content: '';
           display: none;
           position: absolute;
-          top: 11.5vw;
+          top: 140px;
           left: 15px;
           width: 30px;
           height: 30px;
@@ -2388,8 +2388,8 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
 //navigation/contactUs.jsx
 
 export const ContactUsButton = styled.div`
-  width: 194px;
-  height: 50px;
+  width: 180px;
+  height: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2487,6 +2487,7 @@ export const ImageSvg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: contain;
+  max-width: 160px;
 `;
 export const LogoImageWrapper = styled.div`
   width: ${({ customWidth }) => customWidth};
@@ -3180,7 +3181,6 @@ export const DesktopMenuFooter = styled.div`
         display: block;
         color: #aaa;
         text-decoration: none;
-        font-weight: 300;
         font-size: 1rem;
         line-height: 264.7%;
         transition: 0.3s ease-in;
@@ -3237,194 +3237,29 @@ export const Copy = styled.div`
 `;
 //pages/marketing.jsx
 
-export const MarketingWrapper = styled.div`
-  font-family: "Poppins";
-    @media (max-width: 1550px) {
-      font-size: 12px;
-    }
-    @media (max-width: 1400px) {
-      font-size: 10px;
-    }
-    @media (max-width: 900px) {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-    }
-    @media (max-width: 500px) {
-      font-size: 8px;
-      padding: 20% 5% 0;
-    }
-    
-    .landing-image {
-      margin-bottom: 2%;
-      img {
-        width: 33.375em;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .section-3 {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(${Section3Bg});
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 15% 0;
-    .cnt {
-      max-width: 1250px;
-      margin: 0 auto;
-      @media (max-width: 1500px) {
-        max-width: 800px;
-      }
-      @media (max-width: 1024px) {
-        padding: 5% 10%;
-      }
-      h2 {
-        max-width: 1100px;
-        font-size: 55px;
-        line-height: 138.18%;
-        font-weight: 600;
-        color: #000;
-        @media (max-width: 650px) {
-          font-size: 40px;
-        }
-        @media (max-width: 450px) {
-          font-size: 35px;
-        }
-        span {
-          color: #4096ea;
-        }
-      }
-      .decoration {
-        background-color: #4096ea;
-        height: 6px;
-        width: 98.5px;
-        margin: 90px 0;
-      }
-      .text-cnt {
-        display: flex;
-        justify-content: flex-start;
-        font-weight: 300;
-        font-size: 22px;
-        line-height: 136%;
-        @media (max-width: 1024px) {
-          flex-direction: column;
-        }
-        p {
-          max-width: 512px;
-          &:first-of-type {
-            margin-right: 15%;
-            @media (max-width: 1024px) {
-              margin-right: 0;
-              margin-bottom: 15%;
-            }
-          }
-          @media (max-width: 1024px) {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  
-  .section-5 {
-    width: 100%;
-    min-height: 100vh;
-    padding: 10%;
-    background: #f5f6fa;
-    h2 {
-      width: 449px;
-      font-size: 3.4375rem;
-      line-height: 138%;
-      margin-bottom: 15px;
-      font-weight: 600;
-      @media (max-width: 600px) {
-        width: 100%;
-      }
-    }
-    p {
-      max-width: 532px;
-      font-size: 1.375rem;
-      line-height: 136%;
-      margin-bottom: 90px;
-      font-weight: 300;
-    }
-    &-cnt {
-      display: grid;
-      grid-template-columns: repeat(2, 556px);
-      column-gap: 200px;
-      row-gap: 120px;
-      @media (max-width: 1600px) {
-        grid-template-columns: repeat(2, 450px);
-        column-gap: 160px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1400px) {
-        grid-template-columns: repeat(2, 400px);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1200px) {
-        grid-template-columns: repeat(1, 100%);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-    }
-    &-item {
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      @media (max-width: 450px) {
-        flex-direction: column;
-      }
-      &-icon {
-        margin-right: 20px;
-        @media (max-width: 450px) {
-          margin: 0 0 20px 0;
-        }
-        &.res img {
-          width: 55px;
-          height: 60px;
-        }
-        &.sca img {
-          width: 60px;
-          height: 60px;
-        }
-        &.fun img {
-          width: 60px;
-          height: 60px;
-        }
-        &.sec img {
-          width: 57px;
-          height: 42px;
-        }
-      }
-      &-content {
-        h4 {
-          font-size: 1.6875rem;
-          font-weight: 600;
-          margin-bottom: 40px;
-        }
-        p {
-          font-size: 1.375rem;
-          line-height: 136%;
-          font-weight: 300;
-        }
-      }
-    }
+export const ServiceWrapper = styled.div`
+  font-family: 'Poppins';
+`;
+
+export const ServicesTopSection = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  @media ${deviceMax.tabletL} {
+    justify-content: flex-end;
+    padding: 0 16px;
+    padding-bottom: 120px;
+    flex-direction: column-reverse;
+    min-height: 100%;
+    align-items: baseline;
   }
 `;
 
-export const MarketingTopSection = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-`;
-export const MarketingScrollLink = styled(ScLink)`
+export const ServicesScrollLink = styled(ScLink)`
   width: 100px;
   position: absolute;
   bottom: 20px;
@@ -3443,699 +3278,279 @@ export const MarketingScrollLink = styled(ScLink)`
   }
 `;
 
-export const MarketingContent = styled.div`
-  max-width: 761px;
-  padding-right: 5%;
-  @media (max-width: 1550px) {
-    max-width: 561px;
+export const ServicesContent = styled.div`
+  max-width: 500px;
+  padding-right: 15px;
+`;
+
+export const ServicesMainHeader = styled.h1`
+  color: #000;
+  font-weight: 600;
+  font-size: 66px;
+  line-height: 120%;
+  margin-bottom: 32px;
+  @media ${deviceMax.mobileL} {
+    font-size: 44px;
   }
-  @media (max-width: 1100px) {
-    max-width: 461px;
-  }
-  @media (max-width: 500px) {
-    padding-right: 0;
+`;
+
+export const ServicesMainDescription = styled.p`
+  width: 90%;
+  font-size: 16px;
+  line-height: 136%;
+  color: #000;
+  font-weight: 300;
+  @media ${deviceMax.laptop} {
     width: 100%;
-    max-width: 100%;
   }
-  h1 {
-    color: #000;
+  @media ${deviceMax.mobileL} {
+    font-size: 14px;
+  }
+`;
+
+export const ServicesImgContainer = styled.div`
+  & img {
+    max-width: 530px;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const SentenceSection = styled.div`
+  width: 100%;
+  background-image: url(${Section3Bg});
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  padding: 120px 0;
+`;
+
+export const SentenceSectionContent = styled.div`
+  width: 100%;
+  padding: 0 180px;
+  @media (max-width: 1500px) {
+    max-width: 800px;
+  }
+  @media (max-width: 1024px) {
+    padding: 5% 10%;
+  }
+  h2 {
+    max-width: 1000px;
+    font-size: 44px;
+    line-height: 138%;
     font-weight: 600;
-    font-size: 5.9375rem;
-    line-height: 120%;
-    margin-bottom: 32px;
-    @media (max-width: 1550px) {
-      font-size: 4.5rem;
+    color: #000;
+    @media (max-width: 650px) {
+      font-size: 36px;
     }
-    @media (max-width: 1400px) {
-      font-size: 3.5rem;
+    @media (max-width: 450px) {
+      font-size: 28px;
     }
-    @media (max-width: 500px) {
-      font-size: 2.5rem;
+    span {
+      color: #4096ea;
+    }
+  }
+  .decoration {
+    background-color: #4096ea;
+    height: 6px;
+    width: 98.5px;
+    margin: 90px 0;
+  }
+  .text-cnt {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 136%;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+    p {
+      max-width: 512px;
+      &:first-of-type {
+        margin-right: 15%;
+        @media (max-width: 1024px) {
+          margin-right: 0;
+          margin-bottom: 15%;
+        }
+      }
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+  }
+`;
+
+export const BenefitsSection = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding: 80px 180px;
+  background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
+  h2 {
+    max-width: 740px;
+    font-size: 44px;
+    line-height: 138%;
+    margin-bottom: 15px;
+    font-weight: 600;
+    @media (max-width: 600px) {
+      width: 100%;
     }
   }
   p {
-    width: 70%;
-    font-size: 1.375rem;
-    line-height: 136.36%;
-    color: #000;
+    max-width: 532px;
+    font-size: 16px;
+    line-height: 136%;
+    margin-bottom: 90px;
     font-weight: 300;
-    @media (max-width: 1550px) {
-      font-size: 1rem;
+  }
+
+  & .item {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    @media (max-width: 450px) {
+      flex-direction: column;
     }
-    @media (max-width: 1024px) {
-      width: 100%;
+    & .item-icon {
+      margin-right: 20px;
+      @media (max-width: 450px) {
+        margin: 0 0 20px 0;
+      }
+      &.res img {
+        width: 75px;
+        height: 100%;
+      }
+      &.sca img {
+        width: 75px;
+        height: 100%;
+      }
+      &.fun img {
+        width: 75px;
+        height: 100%;
+      }
+      &.sec img {
+        width: 75px;
+        height: 100%;
+      }
     }
+    & .item-content {
+      margin-top: 30px;
+      h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 16px;
+        line-height: 136%;
+        font-weight: 300;
+      }
+    }
+  }
+`;
+
+export const BenefitsContent = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 556px);
+  column-gap: 200px;
+  row-gap: 60px;
+  @media (max-width: 1600px) {
+    grid-template-columns: repeat(2, 450px);
+    column-gap: 160px;
+  }
+  @media (max-width: 1400px) {
+    grid-template-columns: repeat(2, 400px);
+    column-gap: 120px;
+  }
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(1, 100%);
+    column-gap: 120px;
   }
 `;
 
 //pages/development.jsx
-export const DevelopmentWrapper = styled.div`
+
+export const TechnologySection = styled.div`
+  width: 100%;
+  background: #f5f6fa;
+  padding: 80px 180px;
+  display: flex;
+  justify-content: space-between;
   font-family: 'Poppins';
-  .landing {
-    width: 100%;
-    min-height: 100vh;
+  @media (max-width: 1300px) {
+    flex-direction: column;
+  }
+  & .info {
+    width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    .scroll {
-      width: 100px;
-      position: absolute;
-      bottom: 20px;
-      left: calc(50% - 50px);
-      cursor: pointer;
-      .content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .title {
-          transform: translate(0, 25px);
-          color: #cccccc;
-        }
+    flex-direction: column;
+    @media (max-width: 1300px) {
+      width: 100%;
+    }
+    h2 {
+      font-size: 44px;
+      line-height: 138%;
+      margin-bottom: 60px;
+      font-weight: 600;
+      @media (max-width: 450px) {
+        font-size: 44px;
       }
     }
-    @media (max-width: 1550px) {
-      font-size: 12px;
+    p {
+      font-weight: 300;
+      line-height: 136%;
+      font-size: 16px;
+      margin-bottom: 20px;
     }
-    @media (max-width: 1400px) {
-      font-size: 10px;
+  }
+  & .icons {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    @media (max-width: 1300px) {
+      width: 100%;
     }
-    @media (max-width: 900px) {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-    }
-    @media (max-width: 500px) {
-      font-size: 8px;
-      padding: 20% 5% 0;
-    }
-    .content {
-      max-width: 761px;
-      padding-right: 5%;
-      @media (max-width: 1550px) {
-        max-width: 561px;
-      }
-      @media (max-width: 1100px) {
-        max-width: 461px;
+    .cnt {
+      display: grid;
+      column-gap: 70px;
+      row-gap: 90px;
+      grid-template-columns: repeat(4, 80px);
+      @media (max-width: 700px) {
+        grid-template-columns: repeat(3, 80px);
       }
       @media (max-width: 500px) {
-        padding-right: 0;
-        width: 100%;
-        max-width: 100%;
+        grid-template-columns: repeat(2, 80px);
       }
-      h1 {
-        color: #000;
-        font-weight: 600;
-        font-size: 5.9375rem;
-        line-height: 120%;
-        margin-bottom: 32px;
-        @media (max-width: 1550px) {
-          font-size: 4.5rem;
+    }
+    .icon-cnt {
+      .icon {
+        width: 74px;
+        height: 74px;
+        margin-bottom: 30px;
+        transition: all 0.2s ease-in;
+        @media (hover: hover) {
+          &:hover {
+            transform: scale(1.2);
+          }
         }
-        @media (max-width: 1400px) {
-          font-size: 3.5rem;
-        }
-        @media (max-width: 500px) {
-          font-size: 2.5rem;
-        }
-      }
-      p {
-        width: 70%;
-        font-size: 1.375rem;
-        line-height: 136.36%;
-        color: #000;
-        font-weight: 300;
-        @media (max-width: 1550px) {
-          font-size: 1rem;
-        }
-        @media (max-width: 1024px) {
+        img {
           width: 100%;
+          height: 100%;
         }
       }
-    }
-    .landing-image {
-      margin-bottom: 2%;
-      img {
-        width: 33.375em;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .section-3 {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(${Section3Bg});
-    background-size: cover;
-    background-position: center;
-    padding: 15% 0;
-    .cnt {
-      max-width: 1250px;
-      margin: 0 auto;
-      @media (max-width: 1500px) {
-        max-width: 800px;
-      }
-      @media (max-width: 1024px) {
-        padding: 5% 10%;
-      }
-      h2 {
-        max-width: 1100px;
-        font-size: 55px;
-        line-height: 138.18%;
-        font-weight: 600;
-        color: #000;
-        @media (max-width: 650px) {
-          font-size: 40px;
-        }
-        @media (max-width: 450px) {
-          font-size: 35px;
-        }
-        span {
-          color: #571ab6;
-        }
-      }
-      .decoration {
-        background-color: #501eaf;
-        height: 6px;
-        width: 98.5px;
-        margin: 90px 0;
-      }
-      .text-cnt {
-        display: flex;
-        justify-content: flex-start;
+      h4 {
+        font-size: 16px;
         font-weight: 300;
-        font-size: 22px;
-        line-height: 136%;
-        @media (max-width: 1024px) {
-          flex-direction: column;
-        }
-        p {
-          width: 512px;
-          &:first-of-type {
-            margin-right: 15%;
-            @media (max-width: 1024px) {
-              margin-right: 0;
-              margin-bottom: 15%;
-            }
-          }
-          @media (max-width: 1024px) {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  .section-4 {
-    width: 100%;
-    min-height: 100vh;
-    background: #f5f6fa;
-    display: flex;
-    font-family: 'Poppins';
-    @media (max-width: 1300px) {
-      flex-direction: column;
-    }
-    &-info {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 10%;
-      @media (max-width: 1300px) {
-        width: 100%;
-      }
-      h2 {
-        font-size: 3.4375rem;
-        line-height: 138%;
-        margin-bottom: 60px;
-        font-weight: 600;
-        @media (max-width: 450px) {
-          font-size: 3rem;
-        }
-      }
-      p {
-        font-weight: 300;
-        line-height: 136%;
-        font-size: 1.375rem;
-      }
-    }
-    &-icons {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-wrap: wrap;
-      padding: 10%;
-      @media (max-width: 1300px) {
-        width: 100%;
-      }
-      .cnt {
-        display: grid;
-        column-gap: 70px;
-        row-gap: 90px;
-        grid-template-columns: repeat(4, 80px);
-        @media (max-width: 700px) {
-          grid-template-columns: repeat(3, 80px);
-        }
-        @media (max-width: 500px) {
-          grid-template-columns: repeat(2, 80px);
-        }
-      }
-      .icon-cnt {
-        .icon {
-          width: 74px;
-          height: 74px;
-          margin-bottom: 30px;
-          transition: all 0.2s ease-in;
-          @media (hover: hover) {
-            &:hover {
-              transform: scale(1.2);
-            }
-          }
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        h4 {
-          font-size: 1.125rem;
-          font-weight: 300;
-          text-align: center;
-        }
-      }
-    }
-  }
-  .section-5 {
-    width: 100%;
-    min-height: 100vh;
-    padding: 10%;
-    h2 {
-      width: 85%;
-      font-size: 3.4375rem;
-      line-height: 138%;
-      margin-bottom: 100px;
-      font-weight: 600;
-      @media (max-width: 900px) {
-        font-size: 3rem;
-      }
-      @media (max-width: 600px) {
-        width: 100%;
-        font-size: 2.5rem;
-      }
-    }
-    &-cnt {
-      display: grid;
-      grid-template-columns: repeat(2, 556px);
-      column-gap: 200px;
-      row-gap: 120px;
-      @media (max-width: 1600px) {
-        grid-template-columns: repeat(2, 450px);
-        column-gap: 160px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1400px) {
-        grid-template-columns: repeat(2, 400px);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1200px) {
-        grid-template-columns: repeat(1, 100%);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-    }
-    &-item {
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      @media (max-width: 450px) {
-        flex-direction: column;
-      }
-      &-icon {
-        margin-right: 20px;
-        @media (max-width: 450px) {
-          margin: 0 0 20px 0;
-        }
-        &.res img {
-          width: 63px;
-          height: 40px;
-        }
-        &.sca img {
-          width: 52px;
-          height: 52px;
-        }
-        &.fun img {
-          width: 50px;
-          height: 50px;
-        }
-        &.sec img {
-          width: 45px;
-          height: 40px;
-        }
-      }
-      &-content {
-        h4 {
-          font-size: 1.6875rem;
-          font-weight: 600;
-          margin-bottom: 40px;
-        }
-        p {
-          font-size: 1.375rem;
-          line-height: 136%;
-          font-weight: 300;
-        }
+        text-align: center;
       }
     }
   }
 `;
 
-//pages/branding.jsx
-export const BrandingWrapper = styled.div`
-  font-family: 'Poppins';
-  .landing {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    .scroll {
-      width: 100px;
-      position: absolute;
-      bottom: 20px;
-      left: calc(50% - 50px);
-      cursor: pointer;
-      .content {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        .title {
-          transform: translate(0, 25px);
-          color: #cccccc;
-        }
-      }
-    }
-    @media (max-width: 1550px) {
-      font-size: 12px;
-    }
-    @media (max-width: 1400px) {
-      font-size: 10px;
-    }
-    @media (max-width: 900px) {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-    }
-    @media (max-width: 500px) {
-      font-size: 8px;
-      padding: 20% 5% 0;
-    }
-    .content {
-      max-width: 761px;
-      padding-right: 5%;
-      @media (max-width: 1550px) {
-        max-width: 561px;
-      }
-      @media (max-width: 1100px) {
-        max-width: 461px;
-      }
-      @media (max-width: 500px) {
-        padding-right: 0;
-        width: 100%;
-        max-width: 100%;
-      }
-      h1 {
-        color: #000;
-        font-weight: 600;
-        font-size: 5.9375rem;
-        line-height: 120%;
-        margin-bottom: 32px;
-        @media (max-width: 1550px) {
-          font-size: 4.5rem;
-        }
-        @media (max-width: 1400px) {
-          font-size: 3.5rem;
-        }
-        @media (max-width: 500px) {
-          font-size: 2.5rem;
-        }
-      }
-      p {
-        width: 70%;
-        font-size: 1.375rem;
-        line-height: 136.36%;
-        color: #000;
-        font-weight: 300;
-        @media (max-width: 1550px) {
-          font-size: 1rem;
-        }
-        @media (max-width: 1024px) {
-          width: 100%;
-        }
-      }
-    }
-    .landing-image {
-      margin-bottom: 2%;
-      img {
-        width: 33.375em;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-  .section-3 {
-    width: 100%;
-    min-height: 100vh;
-    background-image: url(${Section3Bg});
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    padding: 15% 0;
-    .cnt {
-      max-width: 1250px;
-      margin: 0 auto;
-      @media (max-width: 1500px) {
-        max-width: 800px;
-      }
-      @media (max-width: 1024px) {
-        padding: 5% 10%;
-      }
-      h2 {
-        max-width: 1100px;
-        font-size: 55px;
-        line-height: 138.18%;
-        font-weight: 600;
-        color: #000;
-        @media (max-width: 650px) {
-          font-size: 40px;
-        }
-        @media (max-width: 450px) {
-          font-size: 35px;
-        }
-        span {
-          color: #e36860;
-        }
-      }
-      .decoration {
-        background-color: #e36860;
-        height: 6px;
-        width: 98.5px;
-        margin: 90px 0;
-      }
-      .text-cnt {
-        display: flex;
-        justify-content: flex-start;
-        font-weight: 300;
-        font-size: 22px;
-        line-height: 136%;
-        @media (max-width: 1024px) {
-          flex-direction: column;
-        }
-        p {
-          max-width: 512px;
-          &:first-of-type {
-            margin-right: 15%;
-            @media (max-width: 1024px) {
-              margin-right: 0;
-              margin-bottom: 15%;
-            }
-          }
-          @media (max-width: 1024px) {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  .section-4 {
-    width: 100%;
-    min-height: 100vh;
-    background: #f5f6fa;
-    display: flex;
-    font-family: 'Poppins';
-    @media (max-width: 1300px) {
-      flex-direction: column;
-    }
-    &-info {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      padding: 10%;
-      @media (max-width: 1300px) {
-        width: 100%;
-      }
-      h2 {
-        font-size: 3.4375rem;
-        line-height: 138%;
-        margin-bottom: 60px;
-        font-weight: 600;
-        @media (max-width: 450px) {
-          font-size: 3rem;
-        }
-      }
-      p {
-        font-weight: 300;
-        line-height: 136%;
-        font-size: 1.375rem;
-      }
-    }
-    &-icons {
-      width: 50%;
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      flex-wrap: wrap;
-      padding: 10%;
-      @media (max-width: 1300px) {
-        width: 100%;
-      }
-      .cnt {
-        display: grid;
-        column-gap: 70px;
-        row-gap: 90px;
-        grid-template-columns: repeat(4, 80px);
-        @media (max-width: 700px) {
-          grid-template-columns: repeat(3, 80px);
-        }
-        @media (max-width: 500px) {
-          grid-template-columns: repeat(2, 80px);
-        }
-      }
-      .icon-cnt {
-        .icon {
-          width: 74px;
-          height: 74px;
-          margin-bottom: 30px;
-          transition: all 0.2s ease-in;
-          @media (hover: hover) {
-            &:hover {
-              transform: scale(1.2);
-            }
-          }
-          img {
-            width: 100%;
-            height: 100%;
-          }
-        }
-        h4 {
-          font-size: 1.125rem;
-          font-weight: 300;
-          text-align: center;
-        }
-      }
-    }
-  }
-  .section-5 {
-    width: 100%;
-    min-height: 100vh;
-    padding: 10%;
-    background: #f5f6fa;
-    h2 {
-      width: 449px;
-      font-size: 3.4375rem;
-      line-height: 138%;
-      margin-bottom: 15px;
-      font-weight: 600;
-      @media (max-width: 600px) {
-        width: 100%;
-      }
-    }
-    p {
-      max-width: 532px;
-      font-size: 1.375rem;
-      line-height: 136%;
-      margin-bottom: 90px;
-      font-weight: 300;
-    }
-    &-cnt {
-      display: grid;
-      grid-template-columns: repeat(2, 556px);
-      column-gap: 200px;
-      row-gap: 120px;
-      @media (max-width: 1600px) {
-        grid-template-columns: repeat(2, 450px);
-        column-gap: 160px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1400px) {
-        grid-template-columns: repeat(2, 400px);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-      @media (max-width: 1200px) {
-        grid-template-columns: repeat(1, 100%);
-        column-gap: 120px;
-        row-gap: 80px;
-      }
-    }
-    &-item {
-      width: 100%;
-      display: flex;
-      align-items: flex-start;
-      @media (max-width: 450px) {
-        flex-direction: column;
-      }
-      &-icon {
-        margin-right: 20px;
-        @media (max-width: 450px) {
-          margin: 0 0 20px 0;
-        }
-        &.res img {
-          width: 69px;
-          height: 60px;
-        }
-        &.sca img {
-          width: 43px;
-          height: 36.8px;
-        }
-        &.fun img {
-          width: 34px;
-          height: 42px;
-        }
-        &.sec img {
-          width: 45px;
-          height: 40px;
-        }
-      }
-      &-content {
-        h4 {
-          font-size: 1.6875rem;
-          font-weight: 600;
-          margin-bottom: 40px;
-        }
-        p {
-          font-size: 1.375rem;
-          line-height: 136%;
-          font-weight: 300;
-        }
-      }
-    }
-  }
-`;
 //pages/blog.jsx
 
 export const BlogWrapper = styled.div`
@@ -4477,17 +3892,14 @@ export const ServicesWrapper = styled.section`
     }
   }
 `;
+
 export const ServicesLogo = styled.div`
-  width: 201px;
-  height: 191px;
-  margin-left: 20%;
-  margin-bottom: 16%;
+  width: 250px;
+  height: 100%;
+  margin-right: 200px;
   @media (max-width: 950px) {
-    width: 161px;
-    height: 141px;
-    margin-left: 10%;
+    margin-right: 100px;
     align-self: flex-start;
-    margin-bottom: 1%;
   }
   @media (max-width: 600px) {
     margin-bottom: 10%;
@@ -4499,8 +3911,8 @@ export const ServicesLogo = styled.div`
 
 export const ServicesSection = styled.section`
   background: ${colors.neutral90};
-  padding: 15%;
   display: flex;
+  padding: 140px 180px;
   justify-content: space-between;
   color: ${colors.neutral00};
   font-family: 'Poppins';
@@ -4526,43 +3938,6 @@ export const ServicesSection = styled.section`
   @media (max-width: 450px) {
     font-size: 10px;
     padding: 15% 5%;
-  }
-  .left {
-    width: 40%;
-    @media (max-width: 950px) {
-      width: 100%;
-    }
-    h2 {
-      font-weight: 600;
-      font-size: 3.4375em;
-      line-height: 138.18%;
-      margin-bottom: 7%;
-    }
-    p {
-      font-weight: 300;
-      font-size: 1.1875em;
-      line-height: 168.42%;
-      color: ${colors.neutral30};
-    }
-  }
-  ul {
-    width: 40%;
-    list-style: none;
-    @media (max-width: 950px) {
-      width: 100%;
-      margin-top: 20%;
-    }
-    li {
-      font-weight: 600;
-      font-size: 1.6875em;
-      line-height: 351.85%;
-      border-bottom: 1px solid ${colors.neutral60};
-      span {
-        margin-right: 5%;
-        font-size: 74%;
-        color: ${colors.neutral30};
-      }
-    }
   }
   .triangle {
     width: 159px;
@@ -4593,8 +3968,46 @@ export const ServicesSection = styled.section`
   }
 `;
 
+export const DemandLeftSection = styled.div`
+  max-width: 480px;
+  @media ${deviceMax.tabletL} {
+    width: 100%;
+  }
+  & h2 {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 138%;
+    margin-bottom: 40px;
+    max-width: 300px;
+  }
+  & p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    color: ${colors.neutral30};
+  }
+`;
+
+export const DemandList = styled.ul`
+  list-style: none;
+  @media ${deviceMax.tabletL} {
+    width: 100%;
+    margin-top: 60px;
+  }
+  & li {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 350%;
+    border-bottom: 1px solid ${colors.neutral60};
+    span {
+      margin-right: 10px;
+      color: ${colors.neutral30};
+    }
+  }
+`;
+
 export const QuoteSection = styled.div`
-  padding: 15% 22%;
+  padding: 100px 180px;
   color: ${colors.neutral80};
   position: relative;
   background: ${colors.neutral10};
@@ -4619,8 +4032,9 @@ export const QuoteSection = styled.div`
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 600;
-    font-size: 3.4375em;
-    line-height: 138.18%;
+    font-size: 44px;
+    line-height: 138%;
+    max-width: 1100px;
   }
   .quote {
     width: 3.875em;

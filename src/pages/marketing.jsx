@@ -17,43 +17,52 @@ import Functional from '../images/ikonki marketing/relevant.svg';
 import Scalable from '../images/ikonki marketing/insightful.svg';
 import More from '../images/landing/more.svg';
 import {
-  MarketingWrapper,
-  MarketingTopSection,
-  MarketingScrollLink,
-  MarketingContent,
+  ServiceWrapper,
+  ServicesTopSection,
+  ServicesScrollLink,
+  ServicesContent,
   ServicesSection,
+  DemandLeftSection,
+  DemandList,
+  ServicesMainHeader,
+  ServicesMainDescription,
+  ServicesImgContainer,
+  SentenceSection,
+  SentenceSectionContent,
+  BenefitsSection,
+  BenefitsContent,
 } from '../components/styled';
 
 const Marketing = () => {
   const isMobile = useMediaQuery({
-    query: '(max-device-width: 950px)',
+    query: '(max-device-width: 960px)',
   });
   return (
     <Layout>
       <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
-      <MarketingWrapper>
-        <MarketingTopSection>
-          <MarketingContent>
-            <h1>Marketing</h1>
-            <p>
+      <ServiceWrapper>
+        <ServicesTopSection>
+          <ServicesContent>
+            <ServicesMainHeader>Marketing</ServicesMainHeader>
+            <ServicesMainDescription>
               At a time when no company can afford not to have a digital
               marketing strategy, we are committed to offering 360˚ digital
               marketing services focused on delivering results.
-            </p>
-          </MarketingContent>
-          <div className="landing-image">
+            </ServicesMainDescription>
+          </ServicesContent>
+          <ServicesImgContainer>
             <img src={HeaderImg} alt="dev icon" />
-          </div>
-          <MarketingScrollLink to={'aboutUs'} smooth duration={500}>
+          </ServicesImgContainer>
+          <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
               <img src={More} alt="scroll down" />
             </div>
-          </MarketingScrollLink>
-        </MarketingTopSection>
+          </ServicesScrollLink>
+        </ServicesTopSection>
         <ServicesSection id="services-section">
-          <div className="left">
+          <DemandLeftSection>
             <h2>Marketing on demand.</h2>
             <p>
               Everything begins with the recognition of the customer’s needs, a
@@ -61,8 +70,8 @@ const Marketing = () => {
               will be the foundation of a consistent and multidimensional
               communication with your clients.
             </p>
-          </div>
-          <ul className="right">
+          </DemandLeftSection>
+          <DemandList>
             <li>
               <span>01.</span>
               Marketing strategies
@@ -79,13 +88,13 @@ const Marketing = () => {
               <span>04.</span>
               Marketing campains
             </li>
-          </ul>
+          </DemandList>
         </ServicesSection>
-        <div className="section-3">
-          <div className="cnt">
+        <SentenceSection>
+          <SentenceSectionContent>
             <h2>
-              Focusing on the methods for driving profitable customer action is
-              the key to our work.
+              Focusing on the methods for driving{' '}
+              <span>profitable customer action</span> is the key to our work.
             </h2>
             <div className="decoration"></div>
             <div className="text-cnt">
@@ -105,8 +114,8 @@ const Marketing = () => {
                 but also those with an established position on the market.
               </p>
             </div>
-          </div>
-        </div>
+          </SentenceSectionContent>
+        </SentenceSection>
         <MarketingSteps
           arr={[
             { img: Discovery, text: 'Discovery' },
@@ -116,19 +125,19 @@ const Marketing = () => {
             { img: Launch, text: 'Measure' },
           ]}
         />
-        <div className="section-5">
+        <BenefitsSection>
           <h2>How we work</h2>
           <p>
             We use best practices to deliver comprehensive digital marketing
             services and provide a compelling message that sticks in the minds
             of those yYou’re trying to reach.
           </p>
-          <div className="section-5-cnt">
-            <div className="section-5-item">
-              <div className="section-5-item-icon res">
+          <BenefitsContent>
+            <div className="item">
+              <div className="item-icon res">
                 <img src={Responsive} alt="responsive icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Omnichannel</h4>
                 <p>
                   From social media to email campaigns to digital ads, we create
@@ -136,11 +145,11 @@ const Marketing = () => {
                 </p>
               </div>
             </div>
-            <div className="section-5-item">
-              <div className="section-5-item-icon fun">
+            <div className="item">
+              <div className="item-icon fun">
                 <img src={Functional} alt="Functional icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Relevant</h4>
                 <p>
                   We make sure the content is perfectly tailored to the target
@@ -149,11 +158,11 @@ const Marketing = () => {
                 </p>
               </div>
             </div>
-            <div className="section-5-item">
-              <div className="section-5-item-icon sca">
+            <div className="item">
+              <div className="item-icon sca">
                 <img src={Scalable} alt="Scalable icon" />
               </div>
-              <div className="section-5-item-content">
+              <div className="item-content">
                 <h4>Insightful</h4>
                 <p>
                   Defining the audience is a big part of a successful campaign.
@@ -162,9 +171,9 @@ const Marketing = () => {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </MarketingWrapper>
+          </BenefitsContent>
+        </BenefitsSection>
+      </ServiceWrapper>
       <Footer />
     </Layout>
   );
