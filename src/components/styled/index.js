@@ -619,26 +619,6 @@ export const CaseDescriptionDescription = styled.div`
   }
 `;
 
-export const ZigZag = styled.div`
-  width: 227px;
-  height: 113px;
-  position: absolute;
-  top: 20%;
-  right: 10%;
-  @media (max-width: 950px) {
-    width: 147px;
-    height: 33px;
-    top: 5%;
-    right: 5%;
-  }
-  @media (max-width: 650px) {
-    width: 127px;
-    height: 13px;
-    top: 3%;
-    left: 3%;
-  }
-`;
-
 //cases/caseDoubleImage.jsx
 export const CaseDoubleImageWrapper = styled.div`
   display: flex;
