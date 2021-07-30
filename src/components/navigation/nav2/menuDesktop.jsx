@@ -206,12 +206,12 @@ const MenuDesktop = ({ toggle }) => {
           <div className="social">
             <div className="row">
               <a href="https://www.facebook.com/explayn.it">Facebook</a>
+              <a href="https://www.instagram.com/explayn.it/">Instagram</a>
+            </div>
+            <div className="row">
               <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">
                 Youtube
               </a>
-            </div>
-            <div className="row">
-              <a href="https://www.instagram.com/explayn.it/">Instagram</a>
               <a href="https://www.linkedin.com/company/explayn-digital-agency">
                 Linkedin
               </a>

@@ -35,7 +35,7 @@ const IndexPage = ({ location }) => {
 
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop />}
       <Landing2 />
       {/* <Landing /> */}
