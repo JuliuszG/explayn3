@@ -91,7 +91,7 @@ const Marketing = () => {
           </DemandList>
         </ServicesSection>
         <SentenceSection>
-          <SentenceSectionContent>
+          <SentenceSectionContent section={'marketing'}>
             <h2>
               Focusing on the methods for driving{' '}
               <span>profitable customer action</span> is the key to our work.

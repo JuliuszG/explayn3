@@ -3326,11 +3326,29 @@ export const SentenceSectionContent = styled.div`
       font-size: 28px;
     }
     span {
-      color: #4096ea;
+      color: ${({ section }) => {
+        switch (section) {
+          case 'branding':
+            return '#e36860';
+          case 'development':
+            return '#571ab6';
+          case 'marketing':
+            return '#4096ea';
+        }
+      }};
     }
   }
   .decoration {
-    background-color: #4096ea;
+    background-color: ${({ section }) => {
+      switch (section) {
+        case 'branding':
+          return '#e36860';
+        case 'development':
+          return '#571ab6';
+        case 'marketing':
+          return '#4096ea';
+      }
+    }};
     height: 6px;
     width: 98.5px;
     margin: 90px 0;
@@ -3396,20 +3414,28 @@ export const BenefitsSection = styled.div`
         margin: 0 0 20px 0;
       }
       &.res img {
-        width: 75px;
+        width: 100%;
         height: 100%;
+        margin-top: 22px;
+        padding-right: 10px;
       }
       &.sca img {
-        width: 75px;
+        width: 100%;
         height: 100%;
+        margin-top: 22px;
+        padding-right: 10px;
       }
       &.fun img {
-        width: 75px;
+        width: 100%;
         height: 100%;
+        margin-top: 22px;
+        padding-right: 10px;
       }
       &.sec img {
-        width: 75px;
+        width: 100%;
         height: 100%;
+        margin-top: 22px;
+        padding-right: 10px;
       }
     }
     & .item-content {
