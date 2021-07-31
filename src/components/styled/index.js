@@ -63,6 +63,7 @@ export const AboutAuthor = styled.p`
   font-size: 18px;
   line-height: 29px;
   letter-spacing: 0.05px;
+  font-weight: 200;
   color: #000;
   width: 100%;
   @media (max-width: 550px) {
@@ -4060,5 +4061,16 @@ export const QuoteSection = styled.div`
     position: absolute;
     bottom: -6%;
     right: 15%;
+  }
+`;
+
+export const CategorySection = styled.div`
+  display: flex;
+  & a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-right: 20px;
+    margin-bottom: 0px;
   }
 `;
