@@ -102,7 +102,7 @@ const Development = () => {
           </DemandList>
         </ServicesSection>
         <SentenceSection>
-          <SentenceSectionContent>
+          <SentenceSectionContent section={'development'}>
             <h2>
               In today’s <span>dynamically changing</span> world, a company
               needs a <span>fresh look</span> at its online presence.
