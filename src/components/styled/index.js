@@ -82,7 +82,8 @@ export const PostSliderWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 10%;
+  margin-top: 150px;
+  margin-bottom: 0;
 
   @media (max-width: 1300px) {
     transform: translateY(0%);
@@ -332,7 +333,7 @@ export const SideBarTrendingFilter = styled.div`
 
 //blog/sideSocialMedia.jsx
 export const SocialMediaWrapper = styled.div`
-  margin-bottom: 59px;
+  margin-bottom: 35px;
   a {
     width: 34px;
     height: 34px;
@@ -354,7 +355,7 @@ export const SocialMediaWrapper = styled.div`
 
 //blog/sideNewsletter.jsx
 export const NewsletterWrapper = styled.div`
-  margin-bottom: 59px;
+  margin-bottom: 35px;
   background-color: #4a62f7;
   border: 1px solid #707070;
   border-radius: 16px;
@@ -3815,6 +3816,7 @@ export const PostTemplateWrapper = styled.section`
             line-height: 29px;
             letter-spacing: 0.05px;
             margin-bottom: 30px;
+            font-weight: 200;
           }
         }
       }
@@ -4072,5 +4074,32 @@ export const CategorySection = styled.div`
     letter-spacing: 1.4px;
     margin-right: 20px;
     margin-bottom: 0px;
+  }
+`;
+
+export const ContentArticle = styled.div`
+  & ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+  & ul li {
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 200;
+    color: #000;
+    padding-bottom: 20px;
+  }
+  & ol {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+  & ol li {
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 200;
+    color: #000;
+    padding-bottom: 20px;
   }
 `;

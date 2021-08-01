@@ -11,6 +11,7 @@ import Footer from '../components/footer';
 import {
   PostTemplateLandingScreen,
   PostTemplateWrapper,
+  ContentArticle,
 } from '../components/styled';
 
 export const query = graphql`
@@ -86,20 +87,21 @@ const PostTemplate = ({ data }) => {
                 photo={personalPhoto.fluid}
               />
               <p className="lead">{leadText}</p>
-              <div
+              <ContentArticle
                 className="content"
                 dangerouslySetInnerHTML={{ __html: content }}
-              ></div>
+              />
             </article>
             <SideBar title={blogTitle} slug={slug} id={id} />
           </main>
+          <div className="related-cnt">
+            <PostSlider filters={{ currentPost: id }} />
+          </div>
         </div>
-        <div className="related-cnt">
-          {/* <div className="title">
-                        Related Articles
-                    </div> */}
+        {/* <div className="related-cnt">
+          <div className="title">Related Articles</div>
           <PostSlider filters={{ currentPost: id }} />
-        </div>
+        </div> */}
       </PostTemplateWrapper>
       <Footer />
     </Layout>
