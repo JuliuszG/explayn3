@@ -189,6 +189,39 @@ export const Slide = styled.div`
   }
 `;
 
+export const SlideInfinity = styled.div`
+  width: 400px;
+  box-shadow: 0 0 10px #00000014;
+  font-family: 'Poppins';
+  cursor: pointer;
+  margin-right: 50px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  @media (max-width: 1480px) {
+    margin: 0px;
+    width: 300px;
+    height: 450px;
+  }
+  @media (max-width: 1100px) {
+    margin: 0px;
+    width: 400px;
+    height: 650px;
+  }
+  @media (max-width: 750px) {
+    margin: 0px;
+    width: 320px;
+    height: 450px;
+  }
+  &:hover ${SlideImageOverlay} {
+    opacity: 0.2;
+    z-index: 10;
+  }
+  &:hover ${SliderLink} {
+    opacity: 1;
+  }
+`;
+
 export const SlideImageContainer = styled.div`
   width: 100%;
   height: 50%;
@@ -201,8 +234,56 @@ export const SlideImageContainer = styled.div`
   }
 `;
 
+export const SlideImageContainerInfinity = styled.div`
+  width: 100%;
+  height: 250px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
 export const SlideContent = styled.div`
   height: 50%;
+  width: 100%;
+  padding: 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: 1480px) {
+    padding: 20px;
+  }
+  @media (max-width: 1024px) {
+    padding: 60px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: left;
+    @media (max-width: 1480px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    @media (max-width: 600px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+`;
+
+export const SlideContentInfinity = styled.div`
+  height: 70%;
   width: 100%;
   padding: 20px 20px 40px;
   display: flex;
@@ -4101,5 +4182,45 @@ export const ContentArticle = styled.div`
     font-weight: 200;
     color: #000;
     padding-bottom: 20px;
+  }
+`;
+
+export const SliderContainer = styled.div`
+  width: 100%;
+  & div.slick-slide {
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    @media (max-width: 1100px) {
+      height: 700px;
+    }
+    ${
+      '' /* @media (max-width: 1480px) {
+      margin: 20px;
+      width: 300px;
+      height: 450px;
+    }
+    @media (max-width: 1100px) {
+      width: auto;
+    }
+    @media (max-width: 750px) {
+       width: auto;
+    } */
+    }
+  }
+  & div.slick-list {
+    margin: 0px auto;
+    flex-direction: column;
+    width: 90%;
+    display: flex;
+    @media (max-width: 1100px) {
+      height: 100%;
+    }
+  }
+  & div.slick-slider {
+    margin: 0px auto;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
   }
 `;
