@@ -14,7 +14,7 @@ import {
   SliderLink,
 } from '../styled';
 
-const PostSlider = ({ filters }) => {
+const PostSlider = ({ filters, showFrom }) => {
   const data = useStaticQuery(
     graphql`
       {
@@ -59,7 +59,7 @@ const PostSlider = ({ filters }) => {
 
   return (
     <PostSliderWrapper>
-      {posts.length > 2 && (
+      {posts.length > showFrom && (
         <Trending>
           <h3>Related articles</h3>
           <PostSliderItems>

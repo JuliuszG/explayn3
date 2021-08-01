@@ -95,7 +95,7 @@ const PostTemplate = ({ data }) => {
             <SideBar title={blogTitle} slug={slug} id={id} />
           </main>
           <div className="related-cnt">
-            <PostSlider filters={{ currentPost: id }} />
+            <PostSlider showFrom={2} filters={{ currentPost: id }} />
           </div>
         </div>
         {/* <div className="related-cnt">
