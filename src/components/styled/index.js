@@ -83,7 +83,7 @@ export const PostSliderWrapper = styled.div`
   justify-content: center;
   align-content: center;
   margin-top: 150px;
-  margin-bottom: 0;
+  margin-bottom: 150px;
 
   @media (max-width: 1300px) {
     transform: translateY(0%);
@@ -201,7 +201,7 @@ export const SlideInfinity = styled.div`
   @media (max-width: 1480px) {
     margin: 0px;
     width: 300px;
-    height: 450px;
+    height: 50%;
   }
   @media (max-width: 1100px) {
     margin: 0px;
@@ -238,11 +238,13 @@ export const SlideImageContainerInfinity = styled.div`
   width: 100%;
   height: 250px;
   position: relative;
-
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  @media (max-width: 1100px) {
+    height: 50%;
   }
 `;
 
@@ -290,14 +292,22 @@ export const SlideContentInfinity = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  @media (min-width: 1480px) {
+    height: 290px;
+  }
   @media (max-width: 1480px) {
     padding: 20px;
+    height: 220px;
   }
   @media (max-width: 1024px) {
     padding: 60px;
+    height: 50%;
+    padding: 40px;
   }
   @media (max-width: 600px) {
     padding: 20px;
+    height: 50%;
+    padding: 40px;
   }
   h3 {
     font-size: 25px;
@@ -4125,6 +4135,9 @@ export const SliderContainer = styled.div`
     @media (max-width: 1100px) {
       height: 700px;
     }
+    @media (max-width: 600px) {
+      height: 50%;
+    }
     ${
       '' /* @media (max-width: 1480px) {
       margin: 20px;
@@ -4146,6 +4159,7 @@ export const SliderContainer = styled.div`
     display: flex;
     @media (max-width: 1100px) {
       height: 100%;
+      width: 100%;
     }
   }
   & div.slick-slider {

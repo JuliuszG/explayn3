@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-// import { Helmet } from 'react-helmet';
-// import Slider from 'react-slick';
+import { Helmet } from 'react-helmet';
+import Slider from 'react-slick';
 import {
   PostSliderWrapper,
   Trending,
@@ -20,7 +20,8 @@ import {
   SliderLink,
   SliderContainer,
 } from '../styled';
-import ScrollRight from '../../images/scrollright.svg';
+import arrowLeft from '../../images/Icon_ionic-ios-arrow-back.svg';
+import arrowRight from '../../images/Icon_ionic-ios-arrow-backa.svg';
 
 const settings = {
   dots: false,
@@ -33,12 +34,12 @@ const settings = {
   arrows: true,
   nextArrow: (
     <motion.div style={{ width: '50px', height: '50px' }}>
-      <img src={ScrollRight} alt="scroll right button" />
+      <img src={arrowLeft} alt="scroll right button" />
     </motion.div>
   ),
   prevArrow: (
     <motion.div style={{ width: '50px', height: '50px' }}>
-      <img src={ScrollRight} alt="scroll right button" />
+      <img src={arrowRight} alt="scroll right button" />
     </motion.div>
   ),
   responsive: [
@@ -118,7 +119,7 @@ const PostSlider = ({ filters, showFrom }) => {
 
   return (
     <>
-      {/* <Helmet>
+      <Helmet>
         <link
           rel="stylesheet"
           type="text/css"
@@ -147,7 +148,7 @@ const PostSlider = ({ filters, showFrom }) => {
                       </SlideImageContainerInfinity>
                       <SlideContentInfinity>
                         <h3>{post.blogTitle}</h3>
-                        <div>
+                        <div style={{ width: '100%' }}>
                           <SlideContentDetails>
                             {categories.map(el => (
                               <span>{el.toUpperCase()}</span>
@@ -168,7 +169,7 @@ const PostSlider = ({ filters, showFrom }) => {
             </Slider>
           </SliderContainer>
         </Trending>
-      </PostSliderWrapper> */}
+      </PostSliderWrapper>
       <PostSliderWrapper>
         {posts.length > showFrom && (
           <Trending>
