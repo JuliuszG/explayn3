@@ -931,9 +931,10 @@ export const LoaderWrapper = styled(motion.div)`
 //footer.jsx
 export const FooterWrapper = styled.footer`
   width: 100%;
+  height: 100vh;
   background: #272727;
   font-family: 'Poppins';
-  padding: 80px 40px 0;
+  padding: 100px 40px 0;
   position: relative;
   overflow: hidden;
   @media (max-width: 1024px) {
@@ -1124,7 +1125,7 @@ export const FooterSocialMediaContent = styled.div`
 export const FooterDecoration = styled.div`
   position: absolute;
   right: 0;
-  bottom: 15%;
+  bottom: 90px;
   width: 258px;
   @media (max-width: 1024px) {
     position: static;
@@ -1754,33 +1755,14 @@ export const AboutUsWrapper = styled(motion.section)`
       margin-top: 80px;
     }
   }
-  button {
-    width: 180px;
-    height: 52px;
-    display: inline-block;
-    background: ${colors.neutral80};
-    color: ${colors.neutral00};
-    cursor: pointer;
-    border: none;
-    border-radius: 33px;
-    outline: none;
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 24px;
-    transition: all 0.1s ease-in;
-    &:hover {
-      transform: scale(1.1);
-      filter: brightness(120%);
-    }
-  }
+
   .btn__cnt {
     margin-top: 2%;
     display: flex;
     justify-content: center;
   }
 `;
+
 export const AboutUsHeaderWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -2364,15 +2346,13 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
 `;
 //navigation/contactUs.jsx
 
-export const ContactUsButton = styled.div`
+export const PageButton = styled.div`
   width: 180px;
   height: 44px;
+  border-radius: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
-  border-radius: 32px;
-  color: ${({ text }) => (text ? text : '#fff')};
   text-decoration: none;
   font-family: 'Poppins';
   font-size: 20px;
@@ -2380,18 +2360,29 @@ export const ContactUsButton = styled.div`
   font-weight: 600;
   transition: all 0.1s ease-in;
   cursor: pointer;
-  @media (hover: hover) {
-    &:hover {
-      color: #404040 !important;
-      font-weight: 600 !important;
-      letter-spacing: 3px;
-      background: #fff;
-      -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-      -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-      transition: all 0.3s ease 0s;
-    }
+  &:hover {
+    color: #404040;
+    font-weight: 600;
+    letter-spacing: 3px;
+    background: #fff;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    transition: all 0.3s ease 0s;
   }
 `;
+
+export const ContactUsButton = styled(PageButton)`
+  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+  color: ${({ text }) => (text ? text : '#fff')};
+`;
+
+export const AboutUsButton = styled(PageButton)`
+  background: ${colors.neutral80};
+  color: ${colors.neutral00};
+  &:hover {
+  }
+`;
+
 //navigation/desktop.jsx
 
 export const DesktopNav = styled.nav`

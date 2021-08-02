@@ -7,6 +7,7 @@ import { items, imageVariant, imageColorVariant } from '../../lib/aboutUs';
 import {
   AboutUsWrapper,
   AboutUsHeaderWrapper,
+  AboutUsButton,
   BoxWrapper,
   BoxImageWrapper,
   BoxImage,
@@ -150,9 +151,9 @@ const AboutUs = () => {
       </div>
       {renderSecond()}
       <div className="btn__cnt">
-        <button onClick={() => setIsCollapsed(prevState => !prevState)}>
+        <AboutUsButton onClick={() => setIsCollapsed(prevState => !prevState)}>
           {isCollapsed ? 'Show more' : 'Show less'}
-        </button>
+        </AboutUsButton>
       </div>
     </AboutUsWrapper>
   );
