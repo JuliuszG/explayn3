@@ -36,7 +36,7 @@ const ThankYouCard = () => {
       <p>In the meantime see how we helped others achieve their goals.</p>
       <div>
         <ThankYouButton onClick={() => changeContactFormStatus(0)}>
-          <p>Go back</p>
+          Go back
         </ThankYouButton>
       </div>
     </ThankYouCardWrapper>
