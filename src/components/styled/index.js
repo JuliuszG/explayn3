@@ -4004,7 +4004,6 @@ export const ServicesWrapper = styled.section`
 
 export const ServicesLogo = styled.div`
   width: 250px;
-  height: 100%;
   margin-right: 200px;
   @media (max-width: 950px) {
     margin-right: 100px;
