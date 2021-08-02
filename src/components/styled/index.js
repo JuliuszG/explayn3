@@ -2051,6 +2051,10 @@ export const StepsWrapper = styled.div`
   padding-bottom: 280px;
   align-items: center;
   font-family: 'Poppins';
+  @media ${deviceMax.tabletL} {
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
   .header {
     max-width: 1222px;
     display: flex;
@@ -2072,13 +2076,17 @@ export const StepsWrapper = styled.div`
       line-height: 138%;
       margin-right: 10px;
       font-weight: 600;
-      @media (max-width: 1500px) {
+      @media ${deviceMax.laptopL} {
         width: 55%;
       }
-      @media (max-width: 1050px) {
+      @media ${deviceMax.laptop} {
         margin-right: 0;
         width: 100%;
         margin-bottom: 40px;
+      }
+
+      @media ${deviceMax.mobileL} {
+        font-size: 32px;
       }
     }
     p {
@@ -2086,8 +2094,11 @@ export const StepsWrapper = styled.div`
       font-size: 16px;
       line-height: 136%;
       font-weight: 300;
-      @media (max-width: 1050px) {
+      @media ${deviceMax.laptop} {
         width: 100%;
+      }
+      @media ${deviceMax.mobileL} {
+        font-size: 14px;
       }
     }
   }
@@ -2130,12 +2141,16 @@ export const StepsWrapper = styled.div`
       max-height: 70px;
       position: relative;
       cursor: pointer;
+
       h5 {
         font-size: 22px;
         font-weight: 600;
         margin-top: 30px;
-        @media (max-width: 1200px) {
+        @media ${deviceMax.laptopM} {
           margin-top: 10px;
+        }
+        @media ${deviceMax.mobileL} {
+          font-size: 18px;
         }
       }
       @media (min-width: 1200px) and (hover: hover) {
@@ -2301,6 +2316,10 @@ export const StepsWrapper = styled.div`
         width: 100px;
         height: 100px;
       }
+      @media ${deviceMax.mobileL} {
+        max-width: 70px;
+        max-height: 70px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -2358,10 +2377,12 @@ export const MarketingStepsWrapper = styled(StepsWrapper)`
 `;
 //navigation/contactUs.jsx
 
-export const PageButton = styled.div`
+export const PageButton = styled.button`
+  border: none;
   width: 180px;
   height: 44px;
   border-radius: 32px;
+  outline: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3236,19 +3257,28 @@ export const ServiceWrapper = styled.div`
 
 export const ServicesTopSection = styled.div`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   padding: 0 180px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media ${deviceMax.laptopM} {
+    padding: 0 120px;
+  }
   @media ${deviceMax.tabletL} {
     justify-content: flex-end;
+    height: 100%;
+    align-items: center;
     padding: 0 16px;
     padding-bottom: 120px;
     flex-direction: column-reverse;
-    min-height: 100%;
     align-items: baseline;
+  }
+  @media ${deviceMax.tablet} {
+    padding: 60px 10px 100px 10px;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -3282,8 +3312,12 @@ export const ServicesMainHeader = styled.h1`
   font-size: 66px;
   line-height: 120%;
   margin-bottom: 32px;
-  @media ${deviceMax.mobileL} {
+  @media ${deviceMax.tablet} {
     font-size: 44px;
+    text-align: center;
+  }
+  @media ${deviceMax.mobileL} {
+    font-size: 38px;
   }
 `;
 
@@ -3295,6 +3329,7 @@ export const ServicesMainDescription = styled.p`
   font-weight: 300;
   @media ${deviceMax.laptop} {
     width: 100%;
+    text-align: center;
   }
   @media ${deviceMax.mobileL} {
     font-size: 14px;
@@ -3306,6 +3341,15 @@ export const ServicesImgContainer = styled.div`
     max-width: 530px;
     height: 100%;
     object-fit: cover;
+    @media ${deviceMax.laptopM} {
+      max-width: 360px;
+    }
+    @media ${deviceMax.mobileL} {
+      max-width: 310px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
   }
 `;
 
@@ -3316,6 +3360,9 @@ export const SentenceSection = styled.div`
   display: flex;
   align-items: center;
   padding: 120px 0;
+  @media ${deviceMax.laptopM} {
+    padding: 60px 0;
+  }
 `;
 
 export const SentenceSectionContent = styled.div`
@@ -3333,11 +3380,8 @@ export const SentenceSectionContent = styled.div`
     line-height: 138%;
     font-weight: 600;
     color: #000;
-    @media (max-width: 650px) {
-      font-size: 36px;
-    }
-    @media (max-width: 450px) {
-      font-size: 28px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
     }
     span {
       color: ${({ section }) => {
@@ -3366,6 +3410,9 @@ export const SentenceSectionContent = styled.div`
     height: 6px;
     width: 98.5px;
     margin: 90px 0;
+    @media ${deviceMax.mobileL} {
+      margin: 40px 0;
+    }
   }
   .text-cnt {
     display: flex;
@@ -3373,20 +3420,24 @@ export const SentenceSectionContent = styled.div`
     font-weight: 300;
     font-size: 16px;
     line-height: 136%;
-    @media (max-width: 1024px) {
+    @media ${deviceMax.laptop} {
       flex-direction: column;
+      align-items: center;
     }
     p {
       max-width: 512px;
       &:first-of-type {
         margin-right: 15%;
-        @media (max-width: 1024px) {
+        @media ${deviceMax.laptop} {
           margin-right: 0;
           margin-bottom: 15%;
         }
       }
-      @media (max-width: 1024px) {
+      @media ${deviceMax.laptop} {
         width: 100%;
+      }
+      @media ${deviceMax.mobileL} {
+        font-size: 14px;
       }
     }
   }
@@ -3396,6 +3447,12 @@ export const BenefitsSection = styled.div`
   width: 100%;
   min-height: 100vh;
   padding: 80px 180px;
+  @media ${deviceMax.laptopM} {
+    padding: 80px 120px;
+  }
+  @media ${deviceMax.tablet} {
+    padding: 80px 10px;
+  }
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
   h2 {
     max-width: 740px;
@@ -3406,6 +3463,12 @@ export const BenefitsSection = styled.div`
     @media (max-width: 600px) {
       width: 100%;
     }
+    @media ${deviceMax.tablet} {
+      padding: 0 10px;
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
+    }
   }
   p {
     max-width: 532px;
@@ -3413,17 +3476,25 @@ export const BenefitsSection = styled.div`
     line-height: 136%;
     margin-bottom: 90px;
     font-weight: 300;
+    @media ${deviceMax.tablet} {
+      padding: 0 10px;
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
   }
 
   & .item {
     width: 100%;
     display: flex;
     align-items: flex-start;
-    @media (max-width: 450px) {
+    @media ${deviceMax.mobileL} {
       flex-direction: column;
+      align-items: center;
     }
     & .item-icon {
       margin-right: 20px;
+      max-width: 70px;
       @media (max-width: 450px) {
         margin: 0 0 20px 0;
       }
@@ -3458,11 +3529,18 @@ export const BenefitsSection = styled.div`
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 20px;
+        @media ${deviceMax.mobileL} {
+          font-size: 20px;
+          text-align: center;
+        }
       }
       p {
         font-size: 16px;
         line-height: 136%;
         font-weight: 300;
+        @media ${deviceMax.mobileL} {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -3493,19 +3571,23 @@ export const TechnologySection = styled.div`
   width: 100%;
   background: #f5f6fa;
   padding: 80px 180px;
+  @media ${deviceMax.laptopM} {
+    padding: 80px 120px;
+    flex-direction: column;
+  }
+  @media ${deviceMax.tablet} {
+    padding: 80px 10px;
+  }
   display: flex;
   justify-content: space-between;
   font-family: 'Poppins';
-  @media (max-width: 1300px) {
-    flex-direction: column;
-  }
   & .info {
     width: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    @media (max-width: 1300px) {
+    @media ${deviceMax.laptopM} {
       width: 100%;
     }
     h2 {
@@ -3513,8 +3595,8 @@ export const TechnologySection = styled.div`
       line-height: 138%;
       margin-bottom: 60px;
       font-weight: 600;
-      @media (max-width: 450px) {
-        font-size: 44px;
+      @media ${deviceMax.mobileL} {
+        font-size: 32px;
       }
     }
     p {
@@ -3522,6 +3604,9 @@ export const TechnologySection = styled.div`
       line-height: 136%;
       font-size: 16px;
       margin-bottom: 20px;
+      @media ${deviceMax.mobileL} {
+        font-size: 14px;
+      }
     }
   }
   & .icons {
@@ -3530,7 +3615,7 @@ export const TechnologySection = styled.div`
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    @media (max-width: 1300px) {
+    @media ${deviceMax.laptopM} {
       width: 100%;
     }
     .cnt {
@@ -3551,6 +3636,7 @@ export const TechnologySection = styled.div`
         height: 74px;
         margin-bottom: 30px;
         transition: all 0.2s ease-in;
+
         @media (hover: hover) {
           &:hover {
             transform: scale(1.2);
@@ -3565,6 +3651,9 @@ export const TechnologySection = styled.div`
         font-size: 16px;
         font-weight: 300;
         text-align: center;
+        @media ${deviceMax.mobileL} {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -3894,8 +3983,8 @@ export const ServicesWrapper = styled.section`
     }
     h2 {
       font-weight: 600;
-      font-size: 5.125em;
-      line-height: 119.5%;
+      font-size: 44px;
+      line-height: 119%;
       margin-bottom: 4%;
       @media (max-width: 600px) {
         font-size: 3em;
@@ -3904,8 +3993,8 @@ export const ServicesWrapper = styled.section`
     p {
       max-width: 55%;
       font-weight: 300;
-      font-size: 1.375em;
-      line-height: 163.63%;
+      font-size: 16px;
+      line-height: 163%;
       @media (max-width: 950px) {
         max-width: 100%;
       }
@@ -3919,13 +4008,16 @@ export const ServicesLogo = styled.div`
   margin-right: 200px;
   @media (max-width: 950px) {
     margin-right: 100px;
-    align-self: flex-start;
+    align-self: center;
   }
   @media (max-width: 600px) {
     margin-bottom: 10%;
   }
   @media (orientation: landscape) {
     margin-bottom: 0;
+  }
+  @media ${deviceMax.mobileL} {
+    width: 180px;
   }
 `;
 
@@ -3999,12 +4091,18 @@ export const DemandLeftSection = styled.div`
     line-height: 138%;
     margin-bottom: 40px;
     max-width: 300px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
+    }
   }
   & p {
     font-weight: 300;
     font-size: 16px;
     line-height: 168%;
     color: ${colors.neutral30};
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -4023,6 +4121,9 @@ export const DemandList = styled.ul`
       margin-right: 10px;
       color: ${colors.neutral30};
     }
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+    }
   }
 `;
 
@@ -4031,22 +4132,11 @@ export const QuoteSection = styled.div`
   color: ${colors.neutral80};
   position: relative;
   background: ${colors.neutral10};
-  @media (max-width: 1600px) {
-    font-size: 14px;
+  @media ${deviceMax.laptopM} {
+    padding: 80px 120px;
   }
-  @media (max-width: 1180px) {
-    font-size: 12px;
-  }
-  @media (max-width: 850px) {
-    font-size: 10px;
-  }
-  @media (max-width: 650px) {
-    font-size: 8px;
-    padding: 15%;
-  }
-  @media (max-width: 450px) {
-    font-size: 6px;
-    padding: 15% 10%;
+  @media ${deviceMax.tablet} {
+    padding: 80px 10px;
   }
   p {
     font-family: 'Poppins';
@@ -4055,6 +4145,9 @@ export const QuoteSection = styled.div`
     font-size: 44px;
     line-height: 138%;
     max-width: 1100px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
+    }
   }
   .quote {
     width: 3.875em;
@@ -4068,6 +4161,9 @@ export const QuoteSection = styled.div`
     position: absolute;
     top: 20%;
     right: 23%;
+    @media ${deviceMax.mobileL} {
+      display: none;
+    }
   }
   .half-circle {
     width: 11.25em;
@@ -4075,6 +4171,9 @@ export const QuoteSection = styled.div`
     position: absolute;
     bottom: -6%;
     right: 15%;
+    @media ${deviceMax.mobileL} {
+      display: none;
+    }
   }
 `;
 
