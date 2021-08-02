@@ -566,9 +566,10 @@ export const CaseDataWrapper = styled.section`
   @media (max-width: 1250px) {
     font-size: 10px;
   }
-  @media (max-width: 968px) {
+  @media ${deviceMax.tabletL} {
     font-size: 16px;
     flex-direction: column;
+    align-items: center;
   }
   @media (max-width: 650px) {
     font-size: 12px;
@@ -582,7 +583,7 @@ export const CaseDataWrapper = styled.section`
 export const CaseDataLeft = styled.div`
   width: 70%;
   margin-right: 15%;
-  @media (max-width: 968px) {
+  @media ${deviceMax.mobileL}(max-width: 968px) {
     width: 100%;
     margin-right: 0;
     margin-bottom: 10%;
@@ -592,6 +593,9 @@ export const CaseDataLeft = styled.div`
     font-size: 44px;
     line-height: 120%;
     margin-bottom: 30px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
+    }
   }
   p {
     padding-right: 60px;
@@ -599,6 +603,9 @@ export const CaseDataLeft = styled.div`
     font-size: 16px;
     line-height: 168%;
     margin-bottom: 30px;
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
   }
   a {
     text-decoration: none;
@@ -608,6 +615,9 @@ export const CaseDataLeft = styled.div`
     color: ${colors.neutral100};
     border-bottom: 1.3px solid ${colors.neutral100};
     padding-bottom: 1%;
+    @media ${deviceMax.mobileL} {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -622,6 +632,9 @@ export const CaseDataRight = styled.ul`
     width: 100%;
     padding-left: 5%;
   }
+  @media ${deviceMax.tablet} {
+    margin-top: 40px;
+  }
   li {
     span {
       display: block;
@@ -631,12 +644,18 @@ export const CaseDataRight = styled.ul`
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: ${colors.neutral60};
+      @media ${deviceMax.mobileL} {
+        font-size: 10px;
+      }
     }
     font-weight: 600;
     font-size: 16px;
     line-height: 29px;
     border-bottom: 1px solid ${colors.neutral30};
     padding: 10% 0;
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
     &:last-of-type {
       border-bottom: none;
     }
@@ -650,12 +669,7 @@ export const CaseDescriptionWrapper = styled.section`
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
-  @media (max-width: 1250px) {
-    font-size: 14px;
-  }
-  @media (max-width: 950px) {
-    font-size: 12px;
-  }
+
   @media (max-width: 650px) {
     font-size: 10px;
     padding: 25% 5% 5%;
@@ -672,8 +686,8 @@ export const CaseDescriptionWrapper = styled.section`
     @media (max-width: 950px) {
       width: 100%;
     }
-    @media (max-width: 650px) {
-      font-size: 2.3125em;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
     }
   }
 `;
@@ -699,6 +713,9 @@ export const CaseDescriptionDescription = styled.div`
         margin-bottom: 0;
       }
     }
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
   }
 `;
 
@@ -716,6 +733,7 @@ export const DoubleImageWrapper = styled.div`
   height: 80vh;
   @media (max-width: 950px) {
     width: 100%;
+    height: 100%;
   }
 `;
 
@@ -732,6 +750,13 @@ export const CaseLandingWrapper = styled(BackgroundImage)`
   background-size: cover;
   height: 100vh;
   position: relative;
+  @media ${deviceMax.tablet} {
+    height: 100%;
+    min-height: 400px;
+  }
+  @media ${deviceMax.mobileS} {
+    min-height: 320px;
+  }
 `;
 
 export const CaseLandingCircle = styled.div`
@@ -753,9 +778,7 @@ export const CaseListWrapper = styled.section`
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
-  @media (max-width: 1400px) {
-    font-size: 14px;
-  }
+
   @media (max-width: 650px) {
     font-size: 12px;
     padding: 10% 5%;
@@ -765,8 +788,8 @@ export const CaseListWrapper = styled.section`
     font-size: 44px;
     line-height: 120%;
     margin-bottom: 30px;
-    @media (max-width: 650px) {
-      font-size: 2em;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
     }
   }
 `;
@@ -789,8 +812,8 @@ export const CaseListContentWrapper = styled.div`
       margin-bottom: 10%;
       width: 100%;
     }
-    @media (max-width: 650px) {
-      font-size: 1.3em;
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
     }
   }
   ul {
@@ -815,6 +838,10 @@ export const CaseListContentWrapper = styled.div`
         font-weight: 300;
         font-size: 15px;
         line-height: 168%;
+        @media ${deviceMax.mobileL} {
+          font-size: 14px;
+          line-height: 120%;
+        }
       }
       span {
         margin-right: 4%;
@@ -832,7 +859,7 @@ export const CaseScreenWrapper = styled.div`
   padding: 0 15% 5%;
   width: 100%;
   @media (max-width: 450px) {
-    padding: 0 5%;
+    padding: 5%;
   }
 `;
 
@@ -1918,6 +1945,9 @@ export const CaseStudyHeaderWrapper = styled.div`
     font-size: 44px;
     line-height: 95%;
     margin-bottom: 30px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
+    }
   }
   p {
     width: 60%;
@@ -1926,6 +1956,9 @@ export const CaseStudyHeaderWrapper = styled.div`
     line-height: 32px;
     @media (max-width: 650px) {
       width: 100%;
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
     }
   }
   .next {
