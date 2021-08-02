@@ -133,21 +133,21 @@ export const imageVariant = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: 'easeInOut',
     },
   },
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
   initial: {
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
@@ -165,7 +165,7 @@ export const imageColorVariant = {
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.6,
+      duration: 0.2,
       ease: 'easeInOut',
     },
   },
