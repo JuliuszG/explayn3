@@ -461,19 +461,19 @@ export const NewsletterDescription = styled.div`
 //cases/caseBigScreen.jsx
 export const BigScreenWrapper = styled.div`
   position: relative;
-  height: 100vh;
-  margin-top: 25%;
+  height: 100%;
 `;
 
 export const BigScreenImage = styled(Img)`
   width: 100%;
   height: 100%;
+  object-fit: cover;
 `;
 
 //cases/caseData.jsx
 export const CaseDataWrapper = styled.section`
   display: flex;
-  padding: 15%;
+  padding: 80px 180px;
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
@@ -506,21 +506,21 @@ export const CaseDataLeft = styled.div`
   }
   h2 {
     font-weight: 600;
-    font-size: 3.3125em;
-    line-height: 143.39%;
-    margin-bottom: 8%;
+    font-size: 44px;
+    line-height: 120%;
+    margin-bottom: 30px;
   }
   p {
-    padding-right: 10%;
+    padding-right: 60px;
     font-weight: 300;
-    font-size: 1.1875em;
-    line-height: 168.42%;
-    margin-bottom: 8%;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom: 30px;
   }
   a {
     text-decoration: none;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 29px;
     color: ${colors.neutral100};
     border-bottom: 1.3px solid ${colors.neutral100};
@@ -550,7 +550,7 @@ export const CaseDataRight = styled.ul`
       color: ${colors.neutral60};
     }
     font-weight: 600;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 29px;
     border-bottom: 1px solid ${colors.neutral30};
     padding: 10% 0;
@@ -563,7 +563,7 @@ export const CaseDataRight = styled.ul`
 //cases/caseDescription.jsx
 export const CaseDescriptionWrapper = styled.section`
   position: relative;
-  padding: 15% 15% 5%;
+  padding: 80px 180px 20px;
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
@@ -582,10 +582,10 @@ export const CaseDescriptionWrapper = styled.section`
   }
   h2 {
     font-weight: 600;
-    font-size: 3.3125em;
-    line-height: 143.39%;
+    font-size: 44px;
+    line-height: 120%;
     width: 80%;
-    margin-bottom: 8%;
+    margin-bottom: 30px;
     @media (max-width: 950px) {
       width: 100%;
     }
@@ -607,8 +607,8 @@ export const CaseDescriptionDescription = styled.div`
   p {
     width: 40%;
     font-weight: 300;
-    font-size: 1.1875em;
-    line-height: 168.42%;
+    font-size: 16px;
+    line-height: 168%;
     margin-bottom: 5%;
     @media (max-width: 650px) {
       width: 100%;
@@ -666,7 +666,7 @@ export const CaseLandingCircle = styled.div`
 
 //case/caseLanding.jsx
 export const CaseListWrapper = styled.section`
-  padding: 15%;
+  padding: 80px 180px;
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral100};
@@ -679,9 +679,9 @@ export const CaseListWrapper = styled.section`
   }
   h2 {
     font-weight: 600;
-    font-size: 3.3125em;
-    line-height: 143.39%;
-    margin-bottom: 8%;
+    font-size: 44px;
+    line-height: 120%;
+    margin-bottom: 30px;
     @media (max-width: 650px) {
       font-size: 2em;
     }
@@ -700,7 +700,7 @@ export const CaseListContentWrapper = styled.div`
   p {
     width: 40%;
     font-weight: 600;
-    font-size: 1.5625em;
+    font-size: 16px;
     line-height: 156%;
     @media (max-width: 950px) {
       margin-bottom: 10%;
@@ -730,15 +730,15 @@ export const CaseListContentWrapper = styled.div`
       p {
         width: 100%;
         font-weight: 300;
-        font-size: 1.1875em;
-        line-height: 168.42%;
+        font-size: 15px;
+        line-height: 168%;
       }
       span {
         margin-right: 4%;
         margin-top: 1.5%;
         display: block;
-        width: 1.5em;
-        height: 1.5em;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -1152,24 +1152,25 @@ export const ContactFormWrapper = styled(motion.div)`
   h1 {
     font-style: normal;
     font-weight: 400;
-    font-size: 5.25em;
+    font-size: 66px;
     letter-spacing: -1.34px;
     color: #000000;
     line-height: 148%;
-    margin-bottom: 2.38vh;
+    margin-bottom: 15px;
     @media (max-width: 500px) {
       font-size: 4em;
     }
   }
   p,
   h4 {
-    font-size: 1.5em;
+    font-size: 22px;
     letter-spacing: -1.08px;
     color: #000000;
     line-height: 145%;
   }
   p {
-    margin-bottom: 3vh;
+    font-size: 16px;
+    margin-bottom: 15px;
     width: 50%;
     @media (max-width: 1024px) {
       width: 100%;
@@ -1209,7 +1210,7 @@ export const ContactCategory = styled.label`
   cursor: pointer;
   outline: none;
   transition: all 0.3s ease-in;
-  font-size: 20px;
+  font-size: 16px;
   position: relative;
   user-select: none;
   input {
@@ -1239,6 +1240,8 @@ export const FormErrorMessage = styled.small`
   color: red;
   display: block;
   ${({ space }) => space && 'margin-bottom: 3vh;'}
+  margin-top: 4px;
+  font-size: 14px;
 `;
 export const FormGroup = styled.div`
   display: flex;
@@ -1248,14 +1251,14 @@ export const FormGroup = styled.div`
     margin-bottom: 0;
   }
   label {
-    font-size: 1.5em;
+    font-size: 18px;
     line-height: 148%;
   }
   input {
     border: none;
     border-bottom: 1px solid #d3d3d3;
     outline: none;
-    font-size: 1.2em;
+    font-size: 16px;
   }
   textarea {
     resize: none;
@@ -1265,6 +1268,7 @@ export const FormGroup = styled.div`
     border-bottom: 1px solid #d3d3d3;
   }
 `;
+
 export const FormButtonContainer = styled.div`
   @media (max-width: 1024px) {
     display: flex;
@@ -1272,32 +1276,7 @@ export const FormButtonContainer = styled.div`
     margin: 2vh 0 0 0;
   }
 `;
-export const FormSubmitButton = styled.button`
-  padding: 13px 70px;
-  font-family: 'Poppins';
-  font-weight: 600;
-  border: none;
-  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
-  color: #ffffff !important;
-  font-size: 20px;
-  text-transform: uppercase;
-  border-radius: 32px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-  letter-spacing: 0.65px;
-  cursor: pointer;
-  @media (hover: hover) {
-    &:hover {
-      color: #404040 !important;
-      font-weight: 600 !important;
-      letter-spacing: 3px;
-      background: none;
-      -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-      -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-      transition: all 0.3s ease 0s;
-    }
-  }
-`;
+
 export const ExitButton = styled.button`
   position: absolute;
   top: 5%;
@@ -1585,7 +1564,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h1 {
-      font-size: 5.9375em;
+      font-size: 66px;
       line-height: 126%;
       font-weight: 600;
       margin-left: 12%;
@@ -1601,7 +1580,7 @@ export const Landing2Wrapper = styled.div`
     p {
       color: #000;
       font-weight: 300;
-      font-size: 1.375em;
+      font-size: 16px;
       line-height: 136%;
       width: 60%;
       padding-left: 140px;
@@ -1679,7 +1658,7 @@ export const LandingWrapper = styled.section`
     }
     h1 {
       font-weight: 600;
-      font-size: 5.125em;
+      font-size: 66px;
       line-height: 119%;
       margin-bottom: 4%;
       @media (max-width: 650px) {
@@ -1689,7 +1668,7 @@ export const LandingWrapper = styled.section`
     p {
       max-width: 55%;
       font-weight: 300;
-      font-size: 19px;
+      font-size: 18px;
       line-height: 163%;
       @media (max-width: 950px) {
         max-width: 100%;
@@ -2014,14 +1993,14 @@ export const MobileStudyWrapper = styled.section`
   }
   h2 {
     font-weight: 600;
-    font-size: 5em;
+    font-size: 44px;
     line-height: 95%;
     margin-bottom: 3%;
   }
   p {
     width: 100%;
     font-weight: 300;
-    font-size: 19px;
+    font-size: 16px;
     line-height: 32px;
   }
 `;
@@ -2381,6 +2360,11 @@ export const AboutUsButton = styled(PageButton)`
   color: ${colors.neutral00};
   &:hover {
   }
+`;
+
+export const FormSubmitButton = styled(PageButton)`
+  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+  color: #ffffff;
 `;
 
 //navigation/desktop.jsx
