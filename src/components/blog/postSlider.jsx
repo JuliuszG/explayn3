@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-import { Helmet } from 'react-helmet';
-import Slider from 'react-slick';
+// import { Helmet } from 'react-helmet';
+// import Slider from 'react-slick';
 import {
   PostSliderWrapper,
   Trending,
@@ -113,12 +113,12 @@ const PostSlider = ({ filters, showFrom }) => {
       newPosts = newPosts.filter(post => post.id !== filter.currentPost);
     }
     newPosts = newPosts.filter((post, index) => index <= 2);
-    setPosts(nodes);
+    setPosts(newPosts);
   }, [filter]);
 
   return (
     <>
-      <Helmet>
+      {/* <Helmet>
         <link
           rel="stylesheet"
           type="text/css"
@@ -168,7 +168,7 @@ const PostSlider = ({ filters, showFrom }) => {
             </Slider>
           </SliderContainer>
         </Trending>
-      </PostSliderWrapper>
+      </PostSliderWrapper> */}
       <PostSliderWrapper>
         {posts.length > showFrom && (
           <Trending>
