@@ -2359,6 +2359,8 @@ export const AboutUsButton = styled(PageButton)`
   background: ${colors.neutral80};
   color: ${colors.neutral00};
   &:hover {
+    background: #4f4f4f;
+    color: ${colors.neutral00};
   }
 `;
 
