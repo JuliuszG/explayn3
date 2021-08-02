@@ -147,7 +147,7 @@ const Branding = () => {
               </div>
             </div>
             <div className="item">
-              <div className="tem-icon fun">
+              <div className="item-icon fun">
                 <img src={Functional} alt="Functional icon" />
               </div>
               <div className="item-content">

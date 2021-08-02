@@ -102,7 +102,7 @@ const ServiceTemplate = ({ pageContext }) => {
   });
 
   const renderList = useMemo(() => {
-    secondSectionList.map((item, index) => (
+    return secondSectionList.map((item, index) => (
       <li key={index}>
         <span>0{index + 1}.</span>
         {item}
