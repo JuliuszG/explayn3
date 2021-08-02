@@ -63,6 +63,7 @@ export const AboutAuthor = styled.p`
   font-size: 18px;
   line-height: 29px;
   letter-spacing: 0.05px;
+  font-weight: 200;
   color: #000;
   width: 100%;
   @media (max-width: 550px) {
@@ -81,7 +82,8 @@ export const PostSliderWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-content: center;
-  margin-bottom: 10%;
+  margin-top: 150px;
+  margin-bottom: 0;
 
   @media (max-width: 1300px) {
     transform: translateY(0%);
@@ -187,6 +189,39 @@ export const Slide = styled.div`
   }
 `;
 
+export const SlideInfinity = styled.div`
+  width: 400px;
+  box-shadow: 0 0 10px #00000014;
+  font-family: 'Poppins';
+  cursor: pointer;
+  margin-right: 50px;
+  &:last-of-type {
+    margin-right: 0;
+  }
+  @media (max-width: 1480px) {
+    margin: 0px;
+    width: 300px;
+    height: 450px;
+  }
+  @media (max-width: 1100px) {
+    margin: 0px;
+    width: 400px;
+    height: 650px;
+  }
+  @media (max-width: 750px) {
+    margin: 0px;
+    width: 320px;
+    height: 450px;
+  }
+  &:hover ${SlideImageOverlay} {
+    opacity: 0.2;
+    z-index: 10;
+  }
+  &:hover ${SliderLink} {
+    opacity: 1;
+  }
+`;
+
 export const SlideImageContainer = styled.div`
   width: 100%;
   height: 50%;
@@ -199,8 +234,56 @@ export const SlideImageContainer = styled.div`
   }
 `;
 
+export const SlideImageContainerInfinity = styled.div`
+  width: 100%;
+  height: 250px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
 export const SlideContent = styled.div`
   height: 50%;
+  width: 100%;
+  padding: 20px 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: 1480px) {
+    padding: 20px;
+  }
+  @media (max-width: 1024px) {
+    padding: 60px;
+  }
+  @media (max-width: 600px) {
+    padding: 20px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 40px;
+    text-align: left;
+    @media (max-width: 1480px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    @media (max-width: 600px) {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+`;
+
+export const SlideContentInfinity = styled.div`
+  height: 70%;
   width: 100%;
   padding: 20px 20px 40px;
   display: flex;
@@ -331,7 +414,7 @@ export const SideBarTrendingFilter = styled.div`
 
 //blog/sideSocialMedia.jsx
 export const SocialMediaWrapper = styled.div`
-  margin-bottom: 59px;
+  margin-bottom: 35px;
   a {
     width: 34px;
     height: 34px;
@@ -353,7 +436,7 @@ export const SocialMediaWrapper = styled.div`
 
 //blog/sideNewsletter.jsx
 export const NewsletterWrapper = styled.div`
-  margin-bottom: 59px;
+  margin-bottom: 35px;
   background-color: #4a62f7;
   border: 1px solid #707070;
   border-radius: 16px;
@@ -3745,6 +3828,7 @@ export const PostTemplateWrapper = styled.section`
             line-height: 29px;
             letter-spacing: 0.05px;
             margin-bottom: 30px;
+            font-weight: 200;
           }
         }
       }
@@ -3991,5 +4075,83 @@ export const QuoteSection = styled.div`
     position: absolute;
     bottom: -6%;
     right: 15%;
+  }
+`;
+
+export const CategorySection = styled.div`
+  display: flex;
+  & a {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+  }
+`;
+
+export const ContentArticle = styled.div`
+  & ul {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+  & ul li {
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 200;
+    color: #000;
+    padding-bottom: 20px;
+  }
+  & ol {
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 20px;
+  }
+  & ol li {
+    font-size: 18px;
+    line-height: 29px;
+    font-weight: 200;
+    color: #000;
+    padding-bottom: 20px;
+  }
+`;
+
+export const SliderContainer = styled.div`
+  width: 100%;
+  & div.slick-slide {
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    @media (max-width: 1100px) {
+      height: 700px;
+    }
+    ${
+      '' /* @media (max-width: 1480px) {
+      margin: 20px;
+      width: 300px;
+      height: 450px;
+    }
+    @media (max-width: 1100px) {
+      width: auto;
+    }
+    @media (max-width: 750px) {
+       width: auto;
+    } */
+    }
+  }
+  & div.slick-list {
+    margin: 0px auto;
+    flex-direction: column;
+    width: 90%;
+    display: flex;
+    @media (max-width: 1100px) {
+      height: 100%;
+    }
+  }
+  & div.slick-slider {
+    margin: 0px auto;
+    flex-direction: column;
+    width: 100%;
+    display: flex;
   }
 `;

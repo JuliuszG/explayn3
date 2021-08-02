@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
+import { CategorySection } from '../styled';
 
 const animations = {
   initial: {
@@ -25,7 +26,7 @@ const Item = ({ post }) => {
 
   return (
     <motion.div {...animations} layout className="trending-post">
-      <div className="categories">
+      <CategorySection>
         {categories.map((category, index) => (
           <Link
             to={`/blog?category=${category.toLowerCase().replace('/', '')}`}
@@ -35,7 +36,7 @@ const Item = ({ post }) => {
             {category}
           </Link>
         ))}
-      </div>
+      </CategorySection>
       <Link to={`/blog/${post.slug}`}>
         <h2>{post.blogTitle}</h2>
       </Link>
