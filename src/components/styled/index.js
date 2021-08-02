@@ -1597,7 +1597,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h1 {
-      font-size: 94px;
+      font-size: 5.9375em;
       line-height: 126%;
       font-weight: 600;
       margin-left: 12%;
@@ -1613,7 +1613,7 @@ export const Landing2Wrapper = styled.div`
     p {
       color: #000;
       font-weight: 300;
-      font-size: 16px;
+      font-size: 1.375em;
       line-height: 136%;
       width: 60%;
       padding-left: 140px;
