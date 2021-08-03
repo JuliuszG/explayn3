@@ -113,6 +113,9 @@ export const Trending = styled.div`
     font-size: 3rem;
     margin-bottom: 80px;
     text-align: center;
+    @media ${deviceMax.tablet} {
+      margin-bottom: 30px;
+    }
   }
   @media (max-width: 1400px) {
     padding: 2%;
@@ -163,7 +166,9 @@ export const Slide = styled.div`
   cursor: pointer;
   margin-right: 50px;
   &:last-of-type {
-    margin-right: 0;
+    @media ${deviceMin.laptopM} {
+      margin-right: 0;
+    }
   }
   @media (max-width: 1480px) {
     margin: 20px;
@@ -362,8 +367,6 @@ export const SideBarWrapper = styled.aside`
     color: #868686;
     margin-bottom: 20px;
     font-weight: 600;
-  }
-  .trending {
   }
 `;
 
@@ -1001,7 +1004,10 @@ export const FooterWrapper = styled.footer`
     padding: 10%;
   }
   @media ${deviceMax.mobileM} {
-    padding: 5px 10px;
+    padding: 25px 10px 0;
+  }
+  @media ${deviceMax.mobileS} {
+    padding: 10px 10px 0;
   }
   h3 {
     color: #ffffff;
@@ -3412,7 +3418,6 @@ export const ServicesMainHeader = styled(motion.h1)`
   margin-bottom: 32px;
   @media ${deviceMax.tablet} {
     font-size: 44px;
-    text-align: center;
   }
   @media ${deviceMax.mobileL} {
     font-size: 38px;
@@ -3427,7 +3432,6 @@ export const ServicesMainDescription = styled(motion.p)`
   font-weight: 300;
   @media ${deviceMax.laptop} {
     width: 100%;
-    text-align: center;
   }
   @media ${deviceMax.mobileL} {
     font-size: 14px;
