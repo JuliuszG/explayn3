@@ -165,9 +165,9 @@ const ServiceTemplate = ({ pageContext }) => {
           <div className="square">
             <Img fluid={dotsImg} alt="decoration" />
           </div>
-          <div className="half-circle">
+          {/* <div className="half-circle">
             <Img fluid={triangle2Img} alt="decoration" />
-          </div>
+          </div> */}
         </QuoteSection>
         <CaseStudy triangle={false} />
       </ServiceWrapper>
