@@ -2159,7 +2159,7 @@ export const StepsWrapper = styled.div`
     padding-bottom: 80px;
   }
   .header {
-    max-width: 1222px;
+    max-width: 1300px;
     display: flex;
     align-items: flex-start;
     color: #000;
@@ -3454,7 +3454,7 @@ export const ServicesMainDescription = styled(motion.p)`
 
 export const ServicesImgContainer = styled.div`
   & img {
-    max-width: 530px;
+    max-width: 420px;
     height: 100%;
     object-fit: cover;
     @media ${deviceMax.laptopM} {
