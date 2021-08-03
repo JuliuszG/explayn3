@@ -3296,6 +3296,9 @@ export const ServicesTopSection = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media ${deviceMin.desktop} {
+    justify-content: space-around;
+  }
   @media ${deviceMax.laptopM} {
     padding: 0 120px;
   }
@@ -4051,6 +4054,11 @@ export const ServicesLogo = styled.div`
   @media ${deviceMax.mobileL} {
     width: 180px;
   }
+  @media ${deviceMax.desktop} {
+    & img {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const ServicesSection = styled.section`
@@ -4063,21 +4071,14 @@ export const ServicesSection = styled.section`
   font-style: normal;
   font-size: 16px;
   position: relative;
-  @media (max-width: 1500px) {
-    font-size: 14px;
-  }
-  @media (max-width: 1250px) {
-    font-size: 12px;
-  }
-  @media (max-width: 1100px) {
-    font-size: 10px;
+  @media ${deviceMin.desktop} {
+    justify-content: center;
+    & > ul {
+      margin-left: 360px;
+    }
   }
   @media (max-width: 950px) {
-    font-size: 14px;
     flex-direction: column;
-  }
-  @media (max-width: 650px) {
-    font-size: 12px;
   }
   @media (max-width: 450px) {
     font-size: 10px;
