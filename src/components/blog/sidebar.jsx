@@ -76,15 +76,14 @@ const SideBar = ({ title, slug, id }) => {
     }
   };
   const stickyPosition = useMemo(() => {
-    switch (pathname) {
-      case '/blog/howtobehappy/':
-        return 660;
-      case '/blog/cocaine/':
-        return 260;
-      case '/blog/hacker-cat/':
-        return 285;
-      case '/blog/bitches/':
-        return 260;
+    if (pathname.includes('howtobehappy')) {
+      return 660;
+    } else if (pathname.includes('cocaine')) {
+      return 260;
+    } else if (pathname.includes('hacker-cat')) {
+      return 285;
+    } else if (pathname.includes('bitches')) {
+      return 260;
     }
   }, [pathname]);
 
