@@ -1,11 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { AnimatePresence, AnimateSharedLayout, motion } from 'framer-motion';
 import Item from './item';
 import SocialMedia from './sideBarSocialMedia';
 import Newsletter from './sideNewsletter';
+import { useLocation } from '@reach/router';
 import {
+  SideBarWrapperContainer,
   SideBarWrapper,
+  SideBarSticky,
   SideBarTrending,
   SideBarTrendingFilters,
   SideBarTrendingFilter,
@@ -22,9 +25,10 @@ const filterList = [
 ];
 
 const SideBar = ({ title, slug, id }) => {
+  const location = useLocation();
   const [filters, setFilters] = useState([]);
   const [trending, setTrending] = useState([]);
-
+  const { pathname } = location;
   const data = useStaticQuery(
     graphql`
       {
@@ -71,36 +75,52 @@ const SideBar = ({ title, slug, id }) => {
       setFilters(prevState => prevState.filter(el => el !== category));
     }
   };
+  const stickyPosition = useMemo(() => {
+    switch (pathname) {
+      case '/blog/howtobehappy/':
+        return 660;
+      case '/blog/cocaine/':
+        return 260;
+      case '/blog/hacker-cat/':
+        return 285;
+      case '/blog/bitches/':
+        return 260;
+    }
+  }, [pathname]);
 
   return (
-    <SideBarWrapper>
-      <SocialMedia title={title} slug={slug} />
-      <Newsletter />
-      <SideBarTrending>
-        <h3>TRENDING ARTICLES</h3>
-        <AnimateSharedLayout>
-          <motion.div layout>
-            <AnimatePresence layout>
-              {trending.map((post, index) => (
-                <Item key={index} post={post} />
+    <SideBarWrapperContainer>
+      <SideBarWrapper>
+        <SideBarSticky stickyPosition={stickyPosition}>
+          <SocialMedia title={title} slug={slug} />
+          <Newsletter />
+          <SideBarTrending>
+            <h3>TRENDING ARTICLES</h3>
+            <AnimateSharedLayout>
+              <motion.div layout>
+                <AnimatePresence layout>
+                  {trending.map((post, index) => (
+                    <Item key={index} post={post} />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            </AnimateSharedLayout>
+            <h3>POPULAR TAGS</h3>
+            <SideBarTrendingFilters>
+              {filterList.map((filter, index) => (
+                <SideBarTrendingFilter
+                  isActive={filters.includes(filter)}
+                  key={index}
+                  onClick={() => handleAddingCategories(filter)}
+                >
+                  {filter}
+                </SideBarTrendingFilter>
               ))}
-            </AnimatePresence>
-          </motion.div>
-        </AnimateSharedLayout>
-        <h3>POPULAR TAGS</h3>
-        <SideBarTrendingFilters>
-          {filterList.map((filter, index) => (
-            <SideBarTrendingFilter
-              isActive={filters.includes(filter)}
-              key={index}
-              onClick={() => handleAddingCategories(filter)}
-            >
-              {filter}
-            </SideBarTrendingFilter>
-          ))}
-        </SideBarTrendingFilters>
-      </SideBarTrending>
-    </SideBarWrapper>
+            </SideBarTrendingFilters>
+          </SideBarTrending>
+        </SideBarSticky>
+      </SideBarWrapper>
+    </SideBarWrapperContainer>
   );
 };
 

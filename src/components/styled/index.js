@@ -353,7 +353,18 @@ export const SlideImage = styled(Img)`
 `;
 
 //blog/sidebar.jsx
+export const SideBarWrapperContainer = styled.div`
+  display: table;
+`;
+export const SideBarSticky = styled.div`
+  position: sticky;
+  top: ${({ stickyPosition }) => stickyPosition}px;
+  z-index: 1;
+`;
+
 export const SideBarWrapper = styled.aside`
+  align-self: flex-start;
+  display: table-cell;
   font-family: 'Poppins';
   width: 412px;
   padding-right: 20px;
@@ -362,10 +373,10 @@ export const SideBarWrapper = styled.aside`
   }
   h3 {
     font-size: 12px;
-    line-height: 18px;
+    line-height: 16px;
     letter-spacing: 1.36px;
     color: #868686;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     font-weight: 600;
   }
 `;
@@ -373,11 +384,11 @@ export const SideBarWrapper = styled.aside`
 export const SideBarTrending = styled.div`
   a {
     text-decoration: none;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: block;
     h2 {
-      font-size: 30px;
-      line-height: 50px;
+      font-size: 26px;
+      line-height: 36px;
       color: #000;
     }
   }
@@ -389,12 +400,12 @@ export const SideBarTrendingFilters = styled.div`
 `;
 
 export const SideBarTrendingFilter = styled.div`
-  margin-bottom: 10px;
-  margin-right: 10px;
+  margin-bottom: 7px;
+  margin-right: 7px;
   padding: 0 25px;
   font-weight: 300;
-  font-size: 18px;
-  line-height: 27px;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: -0.22px;
   color: #000;
   border: 1px solid #333333;
@@ -417,7 +428,7 @@ export const SideBarTrendingFilter = styled.div`
 
 //blog/sideSocialMedia.jsx
 export const SocialMediaWrapper = styled.div`
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   a {
     width: 34px;
     height: 34px;
@@ -439,11 +450,11 @@ export const SocialMediaWrapper = styled.div`
 
 //blog/sideNewsletter.jsx
 export const NewsletterWrapper = styled.div`
-  margin-bottom: 35px;
+  margin-bottom: 15px;
   background-color: #4a62f7;
   border: 1px solid #707070;
   border-radius: 16px;
-  padding: 50px;
+  padding: 25px 30px;
   @media (max-width: 1480px) {
     padding: 25px;
   }
@@ -452,8 +463,8 @@ export const NewsletterWrapper = styled.div`
     color: #ffffff;
   }
   p {
-    font-size: 18px;
-    line-height: 29px;
+    font-size: 16px;
+    line-height: 22px;
     letter-spacing: 0.05px;
     color: #fff;
     margin-bottom: 30px;
