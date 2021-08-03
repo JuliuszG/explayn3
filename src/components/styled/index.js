@@ -2164,6 +2164,9 @@ export const StepsWrapper = styled.div`
     align-items: flex-start;
     color: #000;
     margin-bottom: 60px;
+    @media ${deviceMin.desktop} {
+      max-width: 1055px;
+    }
     @media (max-width: 1500px) {
       max-width: 900px;
     }
@@ -3487,6 +3490,11 @@ export const SentenceSectionContent = styled.div`
   @media (max-width: 1024px) {
     padding: 5% 10%;
   }
+  @media ${deviceMin.desktop} {
+    max-width: 1430px;
+    margin: 0 auto;
+  }
+
   h2 {
     max-width: 1000px;
     font-size: 44px;
@@ -4248,6 +4256,7 @@ export const QuoteSection = styled.div`
   @media ${deviceMax.tablet} {
     padding: 80px 10px;
   }
+
   p {
     font-family: 'Poppins';
     font-style: normal;
@@ -4255,6 +4264,11 @@ export const QuoteSection = styled.div`
     font-size: 44px;
     line-height: 138%;
     max-width: 1100px;
+    @media ${deviceMin.desktop} {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
     @media ${deviceMax.mobileL} {
       font-size: 32px;
     }

@@ -39,6 +39,7 @@ import {
   BenefitsSection,
   BenefitsContent,
 } from '../components/styled';
+
 const Branding = () => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
