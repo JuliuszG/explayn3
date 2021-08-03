@@ -1000,6 +1000,9 @@ export const FooterWrapper = styled.footer`
   @media (max-width: 1024px) {
     padding: 10%;
   }
+  @media ${deviceMax.mobileM} {
+    padding: 5px 10px;
+  }
   h3 {
     color: #ffffff;
     font-size: 20px;
@@ -1007,6 +1010,9 @@ export const FooterWrapper = styled.footer`
     line-height: 153%;
     @media (max-width: 600px) {
       font-size: 18px;
+    }
+    @media ${deviceMax.mobileS} {
+      font-size: 16px;
     }
   }
   a {
@@ -1021,7 +1027,7 @@ export const FooterWrapper = styled.footer`
       }
     }
     @media (max-width: 600px) {
-      font-size: 1rem;
+      font-size: 12px;
     }
   }
   .cnt {
@@ -1031,9 +1037,15 @@ export const FooterWrapper = styled.footer`
     flex-direction: column;
     h3 {
       margin-bottom: 20px;
+      @media ${deviceMax.mobileL} {
+        margin-bottom: 12px;
+      }
     }
     a {
       margin-bottom: 15px;
+      @media ${deviceMax.mobileL} {
+        margin-bottom: 10px;
+      }
     }
   }
   .sl1 {
@@ -1058,6 +1070,18 @@ export const FooterContent = styled.div`
     'contact contact . . sl1 . sl2 . sl3'
     'newsletter newsletter newsletter . sl1 . sl2 . sl3'
     'social social social social . . . . .';
+  @media ${deviceMin.desktop} {
+    max-width: 2100px;
+  }
+  @media ${deviceMax.tablet} {
+    row-gap: 20px;
+  }
+  @media ${deviceMax.mobileL} {
+    row-gap: 12px;
+  }
+  @media ${deviceMax.mobileM} {
+    row-gap: 5px;
+  }
   @media (max-width: 1500px) {
     max-width: 1100px;
     grid-template-columns: repeat(10, 1fr);
@@ -1104,6 +1128,9 @@ export const FooterContactUs = styled.div`
   grid-area: contact;
   & div {
     margin: 12px 0;
+    @media ${deviceMax.mobileM} {
+      margin: 8px 0;
+    }
   }
 `;
 
@@ -1115,7 +1142,13 @@ export const FooterNewsletter = styled.div`
     line-height: 125%;
     margin-bottom: 40px;
     @media (max-width: 600px) {
-      font-size: 14px;
+      font-size: 12px;
+    }
+    @media ${deviceMax.mobileL} {
+      margin-bottom: 12px;
+    }
+    @media ${deviceMax.mobileM} {
+      margin-bottom: 8px;
     }
   }
 `;
@@ -1173,11 +1206,17 @@ export const FooterSocialMediaContent = styled.div`
   @media (max-width: 650px) {
     max-width: 250px;
   }
+  @media ${deviceMax.mobileS} {
+    margin-top: 10px;
+  }
   a {
     width: 50%;
     margin-bottom: 32px;
     &:nth-child(even) {
       text-align: end;
+    }
+    @media ${deviceMax.tablet} {
+      margin-bottom: 15px;
     }
   }
 `;
@@ -1190,6 +1229,7 @@ export const FooterDecoration = styled.div`
   @media (max-width: 1024px) {
     position: static;
     margin-left: auto;
+    margin-top: -60px;
   }
   @media (max-width: 600px) {
     width: 90px;
@@ -1399,8 +1439,8 @@ export const TeamDescription = styled.div`
     line-height: 138%;
     text-align: left;
     margin-bottom: 4%;
-    @media (max-width: 650px) {
-      font-size: 44px;
+    @media ${deviceMax.mobileL} {
+      font-size: 32px;
     }
   }
   p {
@@ -1411,6 +1451,9 @@ export const TeamDescription = styled.div`
     text-align: left;
     @media (max-width: 950px) {
       width: 100%;
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
     }
   }
 `;
@@ -1588,7 +1631,7 @@ export const Landing2Wrapper = styled.div`
       font-size: 10px;
     }
     @media (max-width: 850px) {
-      padding: 20% 5%;
+      padding: 20% 17%;
     }
     @media (max-width: 450px) {
       font-size: 8px;
@@ -1790,6 +1833,9 @@ export const AboutUsWrapper = styled(motion.section)`
       justify-content: center;
       align-items: center;
     }
+    @media ${deviceMax.mobileL} {
+      padding-left: 0;
+    }
     &.first {
       margin-top: 80px;
     }
@@ -1808,11 +1854,8 @@ export const AboutUsHeaderWrapper = styled.div`
   justify-content: space-between;
   padding: 0 5% 0 10%;
   font-size: 16px;
-  @media (max-width: 956px) {
-    font-size: 14px;
-  }
-  @media (max-width: 550px) {
-    font-size: 10px;
+  @media ${deviceMax.mobileL} {
+    font-size: 32px;
   }
   .text {
     color: ${colors.neutral00};
@@ -1826,6 +1869,9 @@ export const AboutUsHeaderWrapper = styled.div`
       font-weight: 600;
       font-size: 44px;
       line-height: 138%;
+      @media ${deviceMax.mobileL} {
+        font-size: 32px;
+      }
     }
     p {
       width: 60%;
@@ -1835,6 +1881,9 @@ export const AboutUsHeaderWrapper = styled.div`
       line-height: 168%;
       @media (max-width: 956px) {
         width: 100%;
+      }
+      @media ${deviceMax.mobileL} {
+        font-size: 14px;
       }
     }
   }
@@ -1856,6 +1905,7 @@ export const BoxWrapper = styled.div`
   }
   @media (max-width: 956px) {
     max-width: 300px;
+    padding: 5px;
   }
   h3 {
     max-width: 240px;
@@ -1865,6 +1915,9 @@ export const BoxWrapper = styled.div`
     padding-bottom: 3%;
     border-bottom: 1px solid ${colors.neutral60};
     margin-bottom: 3%;
+    @media ${deviceMax.mobileL} {
+      max-width: 100%;
+    }
   }
   ul {
     list-style: none;
@@ -2977,7 +3030,7 @@ export const MobileMenuHeader = styled.div`
 
 export const MenuLinksMobile = styled.div`
   width: 100%;
-  padding: 8%;
+  padding: 10px 8%;
   .item {
     padding: 8% 0;
     width: 100%;
@@ -3024,21 +3077,30 @@ export const MobileSubMenu = styled.div`
 
 export const MobileMenuFooter = styled.div`
   width: 100%;
-  padding: 8%;
+  padding: 10px 8%;
   h3 {
     color: ${colors.neutral00};
     font-weight: 600;
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: 150%;
     margin-bottom: 5%;
+    @media ${deviceMax.tablet} {
+      margin-bottom: 15px;
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+    }
   }
   a {
     text-decoration: none;
     color: ${colors.neutral00};
     font-weight: 300;
-    font-size: 1em;
+    font-size: 16px;
     line-height: 150%;
     display: block;
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
   }
   .socials {
     display: flex;
@@ -3296,6 +3358,9 @@ export const ServicesTopSection = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
+  @media ${deviceMin.desktop} {
+    justify-content: space-around;
+  }
   @media ${deviceMax.laptopM} {
     padding: 0 120px;
   }
@@ -4051,6 +4116,11 @@ export const ServicesLogo = styled.div`
   @media ${deviceMax.mobileL} {
     width: 180px;
   }
+  @media ${deviceMax.desktop} {
+    & img {
+      margin-left: 0;
+    }
+  }
 `;
 
 export const ServicesSection = styled.section`
@@ -4063,21 +4133,14 @@ export const ServicesSection = styled.section`
   font-style: normal;
   font-size: 16px;
   position: relative;
-  @media (max-width: 1500px) {
-    font-size: 14px;
-  }
-  @media (max-width: 1250px) {
-    font-size: 12px;
-  }
-  @media (max-width: 1100px) {
-    font-size: 10px;
+  @media ${deviceMin.desktop} {
+    justify-content: center;
+    & > ul {
+      margin-left: 360px;
+    }
   }
   @media (max-width: 950px) {
-    font-size: 14px;
     flex-direction: column;
-  }
-  @media (max-width: 650px) {
-    font-size: 12px;
   }
   @media (max-width: 450px) {
     font-size: 10px;
