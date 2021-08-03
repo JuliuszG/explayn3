@@ -29,6 +29,13 @@ import Functional from '../images/development/korzysci/setings.svg';
 import Scalable from '../images/development/korzysci/scalable.svg';
 import Secure from '../images/development/korzysci/secure.svg';
 import More from '../images/landing/more.svg';
+import { useInView } from 'react-intersection-observer';
+import {
+  AnimatedHeader,
+  AnimatedParagraph,
+} from '../components/util/animations';
+import { H2Variant, PVariant } from '../components/landingPage/landing';
+
 import {
   ServiceWrapper,
   ServicesSection,
@@ -51,15 +58,45 @@ const Development = () => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   return (
     <Layout>
       <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>
-          <ServicesContent>
-            <ServicesMainHeader>Web & Mobile Development</ServicesMainHeader>
-            <ServicesMainDescription>
+          <ServicesContent ref={ref}>
+            <ServicesMainHeader
+              variants={H2Variant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              Web & Mobile Development
+            </ServicesMainHeader>
+            <ServicesMainDescription
+              variants={PVariant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
               Full-stack web development team capable of facing modern technical
               and business challenges.
             </ServicesMainDescription>
@@ -75,12 +112,14 @@ const Development = () => {
           </ServicesScrollLink>
         </ServicesTopSection>
         <ServicesSection id="services-section">
-          <DemandLeftSection>
-            <h2>Development on demand</h2>
-            <p>
+          <DemandLeftSection ref={ref2}>
+            <AnimatedHeader inView={inView2}>
+              Development on demand
+            </AnimatedHeader>
+            <AnimatedParagraph inView={inView2}>
               Build modern applications that help you stay on top of the game.
               We create an alluring user experience that keeps them coming back.
-            </p>
+            </AnimatedParagraph>
           </DemandLeftSection>
           <DemandList>
             <li>
@@ -102,24 +141,24 @@ const Development = () => {
           </DemandList>
         </ServicesSection>
         <SentenceSection>
-          <SentenceSectionContent section={'development'}>
-            <h2>
+          <SentenceSectionContent section={'development'} ref={ref3}>
+            <AnimatedHeader inView={inView3}>
               In today’s <span>dynamically changing</span> world, a company
               needs a <span>fresh look</span> at its online presence.
-            </h2>
+            </AnimatedHeader>
             <div className="decoration"></div>
             <div className="text-cnt">
-              <p>
+              <AnimatedParagraph inView={inView3}>
                 A website is often the first and most important touchpoint
                 between a customer and a brand. It is not just a URL, but a key
                 aspect of your business and marketing strategy.
-              </p>
-              <p>
+              </AnimatedParagraph>
+              <AnimatedParagraph inView={inView3}>
                 With all the options available in the market today, you need
                 someone you can trust to execute your vision to the highest
                 level of quality. No matter what you do, at Explayn we help you
                 create a digital experience seamlessly.
-              </p>
+              </AnimatedParagraph>
             </div>
           </SentenceSectionContent>
         </SentenceSection>
@@ -133,14 +172,16 @@ const Development = () => {
           ]}
         />
         <TechnologySection>
-          <div className="info">
-            <h2>Best technology for your product</h2>
-            <p>
+          <div className="info" ref={ref4}>
+            <AnimatedHeader inView={inView4}>
+              Best technology for your product
+            </AnimatedHeader>
+            <AnimatedParagraph inView={inView4}>
               Having released over 40 products we have a set of technologies
               that we love to work with. Tell us about your product vision and
               goals and we will choose technologies that will help you achieve
               them.
-            </p>
+            </AnimatedParagraph>
           </div>
           <div className="icons">
             <div className="cnt">
@@ -222,11 +263,11 @@ const Development = () => {
             </div>
           </div>
         </TechnologySection>
-        <BenefitsSection light>
-          <h2>
+        <BenefitsSection light ref={ref5}>
+          <AnimatedHeader inView={inView5}>
             We create enterprise web services and small business web solutions
             that set you apart from the competitors.
-          </h2>
+          </AnimatedHeader>
           <p></p>
           <BenefitsContent>
             <div className="item">

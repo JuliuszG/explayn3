@@ -3404,7 +3404,7 @@ export const ServicesContent = styled.div`
   padding-right: 15px;
 `;
 
-export const ServicesMainHeader = styled.h1`
+export const ServicesMainHeader = styled(motion.h1)`
   color: #000;
   font-weight: 600;
   font-size: 66px;
@@ -3419,7 +3419,7 @@ export const ServicesMainHeader = styled.h1`
   }
 `;
 
-export const ServicesMainDescription = styled.p`
+export const ServicesMainDescription = styled(motion.p)`
   width: 90%;
   font-size: 16px;
   line-height: 136%;

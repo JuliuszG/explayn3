@@ -16,6 +16,13 @@ import Responsive from '../images/ikonki marketing/omnichanel.svg';
 import Functional from '../images/ikonki marketing/relevant.svg';
 import Scalable from '../images/ikonki marketing/insightful.svg';
 import More from '../images/landing/more.svg';
+import { useInView } from 'react-intersection-observer';
+import {
+  AnimatedHeader,
+  AnimatedParagraph,
+} from '../components/util/animations';
+import { H2Variant, PVariant } from '../components/landingPage/landing';
+
 import {
   ServiceWrapper,
   ServicesTopSection,
@@ -37,15 +44,45 @@ const Marketing = () => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 960px)',
   });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
   return (
     <Layout>
       <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>
-          <ServicesContent>
-            <ServicesMainHeader>Marketing</ServicesMainHeader>
-            <ServicesMainDescription>
+          <ServicesContent ref={ref}>
+            <ServicesMainHeader
+              variants={H2Variant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              Marketing
+            </ServicesMainHeader>
+            <ServicesMainDescription
+              variants={PVariant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
               At a time when no company can afford not to have a digital
               marketing strategy, we are committed to offering 360˚ digital
               marketing services focused on delivering results.
@@ -62,14 +99,16 @@ const Marketing = () => {
           </ServicesScrollLink>
         </ServicesTopSection>
         <ServicesSection id="services-section">
-          <DemandLeftSection>
-            <h2>Marketing on demand.</h2>
-            <p>
+          <DemandLeftSection ref={ref2}>
+            <AnimatedHeader inView={inView2}>
+              Marketing on demand.
+            </AnimatedHeader>
+            <AnimatedParagraph inView={inView2}>
               Everything begins with the recognition of the customer’s needs, a
               thorough market analysis and defining a marketing strategy, which
               will be the foundation of a consistent and multidimensional
               communication with your clients.
-            </p>
+            </AnimatedParagraph>
           </DemandLeftSection>
           <DemandList>
             <li>
@@ -91,28 +130,28 @@ const Marketing = () => {
           </DemandList>
         </ServicesSection>
         <SentenceSection>
-          <SentenceSectionContent section={'marketing'}>
-            <h2>
+          <SentenceSectionContent section={'marketing'} ref={ref3}>
+            <AnimatedHeader inView={inView3}>
               Focusing on the methods for driving{' '}
               <span>profitable customer action</span> is the key to our work.
-            </h2>
+            </AnimatedHeader>
             <div className="decoration"></div>
             <div className="text-cnt">
-              <p>
+              <AnimatedParagraph inView={inView3}>
                 Attracting customers is just the first step. We make sure you
                 retain them by putting together all the methods that allow
                 understanding your audience better. All our decisions are based
                 on thorough research that guarantees measurable results. We test
                 different solutions to choose the most beneficial ones for your
                 business.
-              </p>
-              <p>
+              </AnimatedParagraph>
+              <AnimatedParagraph inView={inView3}>
                 To provide you with the highest level of consistency, we offer a
                 one-stop service. From visual identity to complex marketing
                 strategy and its implementation - with us, you can count on a
                 coherent result. It's a perfect solution for emerging companies
                 but also those with an established position on the market.
-              </p>
+              </AnimatedParagraph>
             </div>
           </SentenceSectionContent>
         </SentenceSection>
@@ -125,13 +164,13 @@ const Marketing = () => {
             { img: Launch, text: 'Measure' },
           ]}
         />
-        <BenefitsSection>
-          <h2>How we work</h2>
-          <p>
+        <BenefitsSection ref={ref4}>
+          <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
+          <AnimatedParagraph inView={inView4}>
             We use best practices to deliver comprehensive digital marketing
             services and provide a compelling message that sticks in the minds
             of those yYou’re trying to reach.
-          </p>
+          </AnimatedParagraph>
           <BenefitsContent>
             <div className="item">
               <div className="item-icon res">

@@ -16,6 +16,13 @@ import Responsive from '../images/branding_ikonki/1.benefits.svg';
 import Functional from '../images/branding_ikonki/2.benefits.svg';
 import Scalable from '../images/branding_ikonki/3.benefits.svg';
 import More from '../images/landing/more.svg';
+import { useInView } from 'react-intersection-observer';
+import {
+  AnimatedHeader,
+  AnimatedParagraph,
+} from '../components/util/animations';
+import { H2Variant, PVariant } from '../components/landingPage/landing';
+
 import {
   ServiceWrapper,
   ServicesSection,
@@ -32,10 +39,29 @@ import {
   BenefitsSection,
   BenefitsContent,
 } from '../components/styled';
-
 const Branding = () => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
+  });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref3, inView3] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref4, inView4] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref5, inView5] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
   });
   return (
     <Layout>
@@ -43,9 +69,19 @@ const Branding = () => {
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>
-          <ServicesContent>
-            <ServicesMainHeader>Branding</ServicesMainHeader>
-            <ServicesMainDescription>
+          <ServicesContent ref={ref}>
+            <ServicesMainHeader
+              variants={H2Variant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              Branding
+            </ServicesMainHeader>
+            <ServicesMainDescription
+              variants={PVariant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
               We make every experience people have with your business worth
               remembering. We build brands that can't be ignored. Brands that
               matter. Brands that make a lasting connection with your customers.
@@ -63,14 +99,16 @@ const Branding = () => {
           </ServicesScrollLink>
         </ServicesTopSection>
         <ServicesSection id="services-section">
-          <DemandLeftSection>
-            <h2>Branding that sells</h2>
-            <p>
+          <DemandLeftSection ref={ref2}>
+            <AnimatedHeader inView={inView2}>
+              Branding that sells
+            </AnimatedHeader>
+            <AnimatedParagraph inView={inView2}>
               The process of building brand awareness is complex and consists of
               many stages. One right element is not enough - it has to be a
               coherent concept that will enable your brand to create a
               sustainable bond with your customer.
-            </p>
+            </AnimatedParagraph>
           </DemandLeftSection>
           <DemandList>
             <li>
@@ -92,27 +130,27 @@ const Branding = () => {
           </DemandList>
         </ServicesSection>
         <SentenceSection>
-          <SentenceSectionContent section={'branding'}>
-            <h2>
+          <SentenceSectionContent section={'branding'} ref={ref3}>
+            <AnimatedHeader inView={inView3}>
               In today’s <span>dynamically changing</span> world, a company
               needs a <span>fresh look</span> at its online presence.
-            </h2>
+            </AnimatedHeader>
             <div className="decoration"></div>
             <div className="text-cnt">
-              <p>
+              <AnimatedParagraph inView={inView3}>
                 Visual identity, communication, voice, slogan - all these
                 elements are essential to brand image. For them to emerge, we
                 take our time to research and try out the different variants.
                 Our branding strategy never comes out of nowhere. It's a result
                 of thoughtful planning and hours of brainstorming sessions.
-              </p>
-              <p>
+              </AnimatedParagraph>
+              <AnimatedParagraph inView={inView3}>
                 The saturated online market doesn't like repetition. Branding
                 should depend not on trends but a deep understanding of the
                 company's audience, mission, and goals. We'll make sure that the
                 logo, symbols, and iconography resonate with your existing and
                 potential customers, creating bonds that stay.
-              </p>
+              </AnimatedParagraph>
             </div>
           </SentenceSectionContent>
         </SentenceSection>
@@ -125,13 +163,13 @@ const Branding = () => {
             { img: Launch, text: 'Launch' },
           ]}
         />
-        <BenefitsSection>
-          <h2>Benefits</h2>
-          <p>
+        <BenefitsSection ref={ref4}>
+          <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
+          <AnimatedParagraph inView={inView4}>
             A brand is not just a logo. A brand is a person’s feelings about a
             product, service, or organization. We make every effort to make your
             brand experience meaningful.
-          </p>
+          </AnimatedParagraph>
           <BenefitsContent>
             <div className="item">
               <div className="item-icon res">

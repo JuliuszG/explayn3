@@ -14,6 +14,7 @@ import {
   AnimatedHeader,
   AnimatedParagraph,
 } from '../components/util/animations';
+import { H2Variant, PVariant } from '../components/landingPage/landing';
 import {
   ServicesSection,
   QuoteSection,
@@ -87,12 +88,16 @@ const ServiceTemplate = ({ pageContext }) => {
       childImageSharp: { fluid: triangle2Img },
     },
   } = data;
-  // const [ref, inView] = useInView({
-  //   triggerOnce: true,
-  //   threshold: 0.5,
-  // });
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
 
   const [ref2, inView2] = useInView({
+    triggerOnce: true,
+    threshold: 0.5,
+  });
+  const [ref3, inView3] = useInView({
     triggerOnce: true,
     threshold: 0.5,
   });
@@ -126,9 +131,19 @@ const ServiceTemplate = ({ pageContext }) => {
           </div>
            */}
 
-          <ServicesContent>
-            <ServicesMainHeader>{firstSectionTitle}</ServicesMainHeader>
-            <ServicesMainDescription>
+          <ServicesContent ref={ref}>
+            <ServicesMainHeader
+              variants={H2Variant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
+              {firstSectionTitle}
+            </ServicesMainHeader>
+            <ServicesMainDescription
+              variants={PVariant}
+              initial="hidden"
+              animate={inView ? 'visible' : 'hidden'}
+            >
               {firstSectionDescription}
             </ServicesMainDescription>
           </ServicesContent>
@@ -160,8 +175,10 @@ const ServiceTemplate = ({ pageContext }) => {
           <Img fluid={triangle1Img} alt="decoration" />
         </div> */}
         </ServicesSection>
-        <QuoteSection>
-          <p>{thirdSectionQuote}</p>
+        <QuoteSection ref={ref3}>
+          <AnimatedParagraph inView={inView3}>
+            {thirdSectionQuote}
+          </AnimatedParagraph>
           <div className="square">
             <Img fluid={dotsImg} alt="decoration" />
           </div>
