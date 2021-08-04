@@ -1670,10 +1670,13 @@ export const Landing2Wrapper = styled.div`
       font-size: 10px;
     }
     @media (max-width: 850px) {
-      padding: 20% 17%;
+      padding: 20% 10%;
     }
     @media (max-width: 450px) {
       font-size: 8px;
+    }
+    @media (max-width: 375px) {
+      padding: 20% 0 5% 10%;
     }
   }
   .content {
@@ -1717,6 +1720,9 @@ export const Landing2Wrapper = styled.div`
         margin-left: 0;
         margin-top: 20px;
         max-width: 400px;
+      }
+      @media (max-width: 375px) {
+        font-size: 5.5375em;
       }
     }
     p {
