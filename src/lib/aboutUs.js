@@ -133,7 +133,7 @@ export const imageVariant = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.1,
+      duration: 0.4,
     },
   },
   exit: {
@@ -161,7 +161,7 @@ export const imageColorVariant = {
   exit: {
     opacity: 0,
     transition: {
-      duration: 0.1,
+      duration: 0.3,
     },
   },
   initial: {
