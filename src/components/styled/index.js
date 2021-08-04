@@ -3383,7 +3383,7 @@ export const ServiceWrapper = styled.div`
 export const ServicesTopSection = styled.div`
   width: 100%;
   height: 100vh;
-  padding: 0 180px;
+  padding: 0 10%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3391,21 +3391,19 @@ export const ServicesTopSection = styled.div`
   @media ${deviceMin.desktop} {
     justify-content: space-around;
   }
-  @media ${deviceMax.laptopM} {
-    padding: 0 120px;
-  }
+
   @media ${deviceMax.tabletL} {
     justify-content: flex-end;
-    height: 100%;
     align-items: center;
-    padding: 0 16px;
+    padding: 0 10%;
     padding-bottom: 120px;
     flex-direction: column-reverse;
     align-items: baseline;
   }
   @media ${deviceMax.tablet} {
-    padding: 60px 10px 100px 10px;
-    align-items: center;
+    padding: 60px 10% 100px 10%;
+    height: 100%;
+    align-items: flex-start;
     justify-content: center;
   }
 `;
@@ -3699,6 +3697,9 @@ export const BenefitsContent = styled.div`
     grid-template-columns: repeat(1, 100%);
     column-gap: 120px;
   }
+  @media ${deviceMax.tablet} {
+    row-gap: 20px;
+  }
 `;
 
 //pages/development.jsx
@@ -3716,11 +3717,11 @@ export const TechnologySection = styled.div`
       max-width: 1055px;
       margin: 0 auto;
     }
+    @media ${deviceMax.laptopM} {
+      flex-direction: column;
+    }
   }
 
-  @media ${deviceMax.laptopM} {
-    flex-direction: column;
-  }
   & .info {
     width: 35%;
     @media ${deviceMax.laptopM} {
@@ -3751,6 +3752,9 @@ export const TechnologySection = styled.div`
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    @media ${deviceMax.tablet} {
+      margin-top: 40px;
+    }
     @media ${deviceMax.laptopM} {
       width: 100%;
     }

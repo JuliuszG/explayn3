@@ -266,10 +266,17 @@ const Development = () => {
           </div>
         </TechnologySection>
         <BenefitsSection light ref={ref5}>
-          <AnimatedHeader inView={inView5}>
-            We create enterprise web services and small business web solutions
-            that set you apart from the competitors.
-          </AnimatedHeader>
+          {isMobile ? (
+            <h2>
+              We create enterprise web services and small business web solutions
+              that set you apart from the competitors.
+            </h2>
+          ) : (
+            <AnimatedHeader inView={inView5}>
+              We create enterprise web services and small business web solutions
+              that set you apart from the competitors.
+            </AnimatedHeader>
+          )}
           <p></p>
           <BenefitsContent>
             <div className="item">
