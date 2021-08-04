@@ -119,57 +119,64 @@ const PostSlider = ({ filters, showFrom }) => {
 
   return (
     <>
-      <Helmet>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </Helmet>
-      <PostSliderWrapper>
-        <Trending>
-          <h3>Related articles</h3>
-          <SliderContainer>
-            <Slider {...settings}>
-              {posts.map((post, index) => {
-                const { categories } = JSON.parse(post.categories);
-                return (
-                  <div>
-                    <SlideInfinity index={index} key={index}>
-                      <SlideImageContainerInfinity>
-                        <SlideImageOverlay />
-                        <SlideImage fluid={post.bigScreen.fluid} alt="post" />
-                      </SlideImageContainerInfinity>
-                      <SlideContentInfinity>
-                        <h3>{post.blogTitle}</h3>
-                        <div style={{ width: '100%' }}>
-                          <SlideContentDetails>
-                            {categories.map(el => (
-                              <span>{el.toUpperCase()}</span>
-                            ))}
-                            <span>{post.timeToRead}</span>
-                          </SlideContentDetails>
-                          <SliderLink>
-                            <a href={`/blog/${post.slug}`}>
-                              READ THIS ARTICLE {'>'}
-                            </a>
-                          </SliderLink>
-                        </div>
-                      </SlideContentInfinity>
-                    </SlideInfinity>
-                  </div>
-                );
-              })}
-            </Slider>
-          </SliderContainer>
-        </Trending>
-      </PostSliderWrapper>
+      {posts.length > showFrom && (
+        <>
+          <Helmet>
+            <link
+              rel="stylesheet"
+              type="text/css"
+              charset="UTF-8"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+            />
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+            />
+          </Helmet>
+          <PostSliderWrapper>
+            <Trending>
+              <h3>Related articles</h3>
+              <SliderContainer>
+                <Slider {...settings}>
+                  {posts.map((post, index) => {
+                    const { categories } = JSON.parse(post.categories);
+                    return (
+                      <div>
+                        <SlideInfinity index={index} key={index}>
+                          <SlideImageContainerInfinity>
+                            <SlideImageOverlay />
+                            <SlideImage
+                              fluid={post.bigScreen.fluid}
+                              alt="post"
+                            />
+                          </SlideImageContainerInfinity>
+                          <SlideContentInfinity>
+                            <h3>{post.blogTitle}</h3>
+                            <div style={{ width: '100%' }}>
+                              <SlideContentDetails>
+                                {categories.map(el => (
+                                  <span>{el.toUpperCase()}</span>
+                                ))}
+                                <span>{post.timeToRead}</span>
+                              </SlideContentDetails>
+                              <SliderLink>
+                                <a href={`/blog/${post.slug}`}>
+                                  READ THIS ARTICLE {'>'}
+                                </a>
+                              </SliderLink>
+                            </div>
+                          </SlideContentInfinity>
+                        </SlideInfinity>
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </SliderContainer>
+            </Trending>
+          </PostSliderWrapper>
+        </>
+      )}
       <PostSliderWrapper>
         {posts.length > showFrom && (
           <Trending>
