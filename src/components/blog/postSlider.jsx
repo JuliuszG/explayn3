@@ -18,6 +18,8 @@ import {
   SlideContentInfinity,
   SlideContentDetails,
   SliderLink,
+  SliderBottomContainer,
+  SliderTime,
   SliderContainer,
 } from '../styled';
 import arrowLeft from '../../images/Icon_ionic-ios-arrow-back.svg';
@@ -158,13 +160,17 @@ const PostSlider = ({ filters, showFrom }) => {
                                 {categories.map(el => (
                                   <span>{el.toUpperCase()}</span>
                                 ))}
-                                <span>{post.timeToRead}</span>
                               </SlideContentDetails>
-                              <SliderLink>
-                                <a href={`/blog/${post.slug}`}>
-                                  READ THIS ARTICLE {'>'}
-                                </a>
-                              </SliderLink>
+                              <SliderBottomContainer>
+                                <SliderTime>
+                                  <span>{post.timeToRead}</span>
+                                </SliderTime>
+                                <SliderLink>
+                                  <a href={`/blog/${post.slug}`}>
+                                    READ THIS ARTICLE {'>'}
+                                  </a>
+                                </SliderLink>
+                              </SliderBottomContainer>
                             </div>
                           </SlideContentInfinity>
                         </SlideInfinity>
@@ -196,13 +202,22 @@ const PostSlider = ({ filters, showFrom }) => {
                         {categories.map(el => (
                           <span>{el.toUpperCase()}</span>
                         ))}
-                        <span>{post.timeToRead}</span>
                       </SlideContentDetails>
-                      <SliderLink>
+                      <SliderBottomContainer>
+                        <SliderTime>
+                          <span>{post.timeToRead}</span>
+                        </SliderTime>
+                        <SliderLink>
+                          <a href={`/blog/${post.slug}`}>
+                            READ THIS ARTICLE {'>'}
+                          </a>
+                        </SliderLink>
+                      </SliderBottomContainer>
+                      {/* <SliderLink>
                         <a href={`/blog/${post.slug}`}>
                           READ THIS ARTICLE {'>'}
                         </a>
-                      </SliderLink>
+                      </SliderLink> */}
                     </SlideContent>
                   </Slide>
                 );
