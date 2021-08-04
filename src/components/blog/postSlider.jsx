@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useStaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
-// import { Helmet } from 'react-helmet';
-// import Slider from 'react-slick';
+import { Helmet } from 'react-helmet';
+import Slider from 'react-slick';
 import {
   PostSliderWrapper,
   Trending,
@@ -20,7 +20,8 @@ import {
   SliderLink,
   SliderContainer,
 } from '../styled';
-import ScrollRight from '../../images/scrollright.svg';
+import arrowLeft from '../../images/Icon_ionic-ios-arrow-back.svg';
+import arrowRight from '../../images/Icon_ionic-ios-arrow-backa.svg';
 
 const settings = {
   dots: false,
@@ -33,12 +34,12 @@ const settings = {
   arrows: true,
   nextArrow: (
     <motion.div style={{ width: '50px', height: '50px' }}>
-      <img src={ScrollRight} alt="scroll right button" />
+      <img src={arrowLeft} alt="scroll right button" />
     </motion.div>
   ),
   prevArrow: (
     <motion.div style={{ width: '50px', height: '50px' }}>
-      <img src={ScrollRight} alt="scroll right button" />
+      <img src={arrowRight} alt="scroll right button" />
     </motion.div>
   ),
   responsive: [
@@ -118,57 +119,64 @@ const PostSlider = ({ filters, showFrom }) => {
 
   return (
     <>
-      {/* <Helmet>
-        <link
-          rel="stylesheet"
-          type="text/css"
-          charset="UTF-8"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
-        />
-        <link
-          rel="stylesheet"
-          type="text/css"
-          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
-        />
-      </Helmet>
-      <PostSliderWrapper>
-        <Trending>
-          <h3>Related articles</h3>
-          <SliderContainer>
-            <Slider {...settings}>
-              {posts.map((post, index) => {
-                const { categories } = JSON.parse(post.categories);
-                return (
-                  <div>
-                    <SlideInfinity index={index} key={index}>
-                      <SlideImageContainerInfinity>
-                        <SlideImageOverlay />
-                        <SlideImage fluid={post.bigScreen.fluid} alt="post" />
-                      </SlideImageContainerInfinity>
-                      <SlideContentInfinity>
-                        <h3>{post.blogTitle}</h3>
-                        <div>
-                          <SlideContentDetails>
-                            {categories.map(el => (
-                              <span>{el.toUpperCase()}</span>
-                            ))}
-                            <span>{post.timeToRead}</span>
-                          </SlideContentDetails>
-                          <SliderLink>
-                            <a href={`/blog/${post.slug}`}>
-                              READ THIS ARTICLE {'>'}
-                            </a>
-                          </SliderLink>
-                        </div>
-                      </SlideContentInfinity>
-                    </SlideInfinity>
-                  </div>
-                );
-              })}
-            </Slider>
-          </SliderContainer>
-        </Trending>
-      </PostSliderWrapper> */}
+      {posts.length > showFrom && (
+        <>
+          <Helmet>
+            <link
+              rel="stylesheet"
+              type="text/css"
+              charset="UTF-8"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+            />
+            <link
+              rel="stylesheet"
+              type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+            />
+          </Helmet>
+          <PostSliderWrapper>
+            <Trending>
+              <h3>Related articles</h3>
+              <SliderContainer>
+                <Slider {...settings}>
+                  {posts.map((post, index) => {
+                    const { categories } = JSON.parse(post.categories);
+                    return (
+                      <div>
+                        <SlideInfinity index={index} key={index}>
+                          <SlideImageContainerInfinity>
+                            <SlideImageOverlay />
+                            <SlideImage
+                              fluid={post.bigScreen.fluid}
+                              alt="post"
+                            />
+                          </SlideImageContainerInfinity>
+                          <SlideContentInfinity>
+                            <h3>{post.blogTitle}</h3>
+                            <div style={{ width: '100%' }}>
+                              <SlideContentDetails>
+                                {categories.map(el => (
+                                  <span>{el.toUpperCase()}</span>
+                                ))}
+                                <span>{post.timeToRead}</span>
+                              </SlideContentDetails>
+                              <SliderLink>
+                                <a href={`/blog/${post.slug}`}>
+                                  READ THIS ARTICLE {'>'}
+                                </a>
+                              </SliderLink>
+                            </div>
+                          </SlideContentInfinity>
+                        </SlideInfinity>
+                      </div>
+                    );
+                  })}
+                </Slider>
+              </SliderContainer>
+            </Trending>
+          </PostSliderWrapper>
+        </>
+      )}
       <PostSliderWrapper>
         {posts.length > showFrom && (
           <Trending>
