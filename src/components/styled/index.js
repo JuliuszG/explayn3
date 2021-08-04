@@ -4055,6 +4055,15 @@ export const PostTemplateWrapper = styled.section`
     }
   }
   .related-cnt {
+    transform: translateY(0%);
+    ${
+      '' /* @media (max-height: 1720px) {
+      transform: translateY(0%);
+    }
+    @media (max-width: 1520px) {
+      transform: translateY(0%);
+    } */
+    }
     .title {
       display: inline-block;
       font-family: 'Poppins';
