@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -15,7 +15,7 @@ import {
 
 const Box = ({ content }) => {
   const [hovered, setHovered] = useState(false);
-  const renderImage = () => {
+  const renderImage = useMemo(() => {
     return (
       <BoxImageWrapper>
         <AnimatePresence initial={false}>
@@ -57,13 +57,12 @@ const Box = ({ content }) => {
         </AnimatePresence>
       </BoxImageWrapper>
     );
-  };
-  const handleHover = () =>
-    window?.matchMedia('(hover: hover)').matches &&
-    setHovered(prevState => !prevState);
+  }, [hovered]);
+  const handleHover = () => setHovered(true);
+  const handleLeave = () => setHovered(false);
   return (
-    <BoxWrapper onMouseOver={handleHover} onMouseOut={handleHover}>
-      {renderImage()}
+    <BoxWrapper onMouseOver={handleHover} onMouseOut={handleLeave}>
+      {renderImage}
       <h3>{content.name}</h3>
       <ul>
         {content.list.map((item, index) => (
