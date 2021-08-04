@@ -1446,7 +1446,7 @@ export const TeamWrapper = styled.section`
 export const TeamDescription = styled.div`
   font-family: 'Poppins';
   font-style: normal;
-  padding: 0% 18% 10%;
+  padding: 0% 10% 10%;
   @media (max-width: 650px) {
     padding: 18% 12%;
   }
@@ -2000,7 +2000,7 @@ export const CaseStudyWrapper = styled.section`
 export const CaseStudyHeaderWrapper = styled.div`
   font-family: 'Poppins';
   font-style: normal;
-  padding: 100px 100px 60px;
+  padding: 100px 10% 60px;
   color: ${colors.neutral100};
   display: flex;
   justify-content: space-between;
@@ -3567,14 +3567,13 @@ export const SentenceSectionContent = styled.div`
 export const BenefitsSection = styled.div`
   width: 100%;
   min-height: 100vh;
-  padding: 80px 180px;
-  @media ${deviceMax.laptopM} {
-    padding: 80px 120px;
-  }
-  @media ${deviceMax.tablet} {
-    padding: 80px 10px;
-  }
+  padding: 80px 10%;
+
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
+  @media (min-width: 2560px) {
+    max-width: 1630px;
+    margin: 0 auto;
+  }
   h2 {
     max-width: 740px;
     font-size: 44px;
@@ -3659,6 +3658,9 @@ export const BenefitsSection = styled.div`
         font-size: 16px;
         line-height: 136%;
         font-weight: 300;
+        @media (min-width: 2560px) {
+          max-width: 330px;
+        }
         @media ${deviceMax.mobileL} {
           font-size: 14px;
         }
@@ -3672,6 +3674,9 @@ export const BenefitsContent = styled.div`
   grid-template-columns: repeat(2, 556px);
   column-gap: 200px;
   row-gap: 60px;
+  @media (min-width: 2560px) {
+    column-gap: 50px;
+  }
   @media (max-width: 1600px) {
     grid-template-columns: repeat(2, 450px);
     column-gap: 160px;
@@ -3691,23 +3696,23 @@ export const BenefitsContent = styled.div`
 export const TechnologySection = styled.div`
   width: 100%;
   background: #f5f6fa;
-  padding: 80px 180px;
+  padding: 80px 10%;
+
+  font-family: 'Poppins';
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    @media (min-width: 2560px) {
+      max-width: 1055px;
+      margin: 0 auto;
+    }
+  }
+
   @media ${deviceMax.laptopM} {
-    padding: 80px 120px;
     flex-direction: column;
   }
-  @media ${deviceMax.tablet} {
-    padding: 80px 10px;
-  }
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Poppins';
   & .info {
     width: 35%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     @media ${deviceMax.laptopM} {
       width: 100%;
     }
@@ -4149,7 +4154,7 @@ export const ServicesLogo = styled.div`
 export const ServicesSection = styled.section`
   background: ${colors.neutral90};
   display: flex;
-  padding: 140px 180px;
+  padding: 140px 10%;
   justify-content: space-between;
   color: ${colors.neutral00};
   font-family: 'Poppins';

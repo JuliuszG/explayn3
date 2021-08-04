@@ -172,93 +172,95 @@ const Development = () => {
           ]}
         />
         <TechnologySection>
-          <div className="info" ref={ref4}>
-            <AnimatedHeader inView={inView4}>
-              Best technology for your product
-            </AnimatedHeader>
-            <AnimatedParagraph inView={inView4}>
-              Having released over 40 products we have a set of technologies
-              that we love to work with. Tell us about your product vision and
-              goals and we will choose technologies that will help you achieve
-              them.
-            </AnimatedParagraph>
-          </div>
-          <div className="icons">
-            <div className="cnt">
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Next} alt="next js icon" />
+          <div>
+            <div className="info" ref={ref4}>
+              <AnimatedHeader inView={inView4}>
+                Best technology for your product
+              </AnimatedHeader>
+              <AnimatedParagraph inView={inView4}>
+                Having released over 40 products we have a set of technologies
+                that we love to work with. Tell us about your product vision and
+                goals and we will choose technologies that will help you achieve
+                them.
+              </AnimatedParagraph>
+            </div>
+            <div className="icons">
+              <div className="cnt">
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Next} alt="next js icon" />
+                  </div>
+                  <h4>next.js</h4>
                 </div>
-                <h4>next.js</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={ReactJS} alt="react icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={ReactJS} alt="react icon" />
+                  </div>
+                  <h4>
+                    <div>react &</div>
+                    <div>react native</div>
+                  </h4>
                 </div>
-                <h4>
-                  <div>react &</div>
-                  <div>react native</div>
-                </h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Graph} alt="graphql icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Graph} alt="graphql icon" />
+                  </div>
+                  <h4>graphql</h4>
                 </div>
-                <h4>graphql</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Node} alt="node.js icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Node} alt="node.js icon" />
+                  </div>
+                  <h4>node.js</h4>
                 </div>
-                <h4>node.js</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={TypeScript} alt="typescript icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={TypeScript} alt="typescript icon" />
+                  </div>
+                  <h4>typescript</h4>
                 </div>
-                <h4>typescript</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Ruby} alt="ruby icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Ruby} alt="ruby icon" />
+                  </div>
+                  <h4>ruby</h4>
                 </div>
-                <h4>ruby</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={JS} alt="javascript icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={JS} alt="javascript icon" />
+                  </div>
+                  <h4>javascript</h4>
                 </div>
-                <h4>javascript</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Three} alt="three js icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Three} alt="three js icon" />
+                  </div>
+                  <h4>three.js</h4>
                 </div>
-                <h4>three.js</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Drupal} alt="drupal icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Drupal} alt="drupal icon" />
+                  </div>
+                  <h4>drupal</h4>
                 </div>
-                <h4>drupal</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Ghost} alt="ghost icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Ghost} alt="ghost icon" />
+                  </div>
+                  <h4>ghost</h4>
                 </div>
-                <h4>ghost</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={Dato} alt="dato cmsicon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={Dato} alt="dato cmsicon" />
+                  </div>
+                  <h4>datoCMS</h4>
                 </div>
-                <h4>datoCMS</h4>
-              </div>
-              <div className="icon-cnt">
-                <div className="icon">
-                  <img src={WP} alt="wordpress icon" />
+                <div className="icon-cnt">
+                  <div className="icon">
+                    <img src={WP} alt="wordpress icon" />
+                  </div>
+                  <h4>wordpress</h4>
                 </div>
-                <h4>wordpress</h4>
               </div>
             </div>
           </div>
