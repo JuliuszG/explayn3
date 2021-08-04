@@ -90,6 +90,9 @@ export const PostSliderWrapper = styled.div`
     margin-bottom: 5%;
     margin-top: 5%;
   }
+  @media (max-width: 320px) {
+    margin-bottom: 15%;
+  }
   .trending {
     .post-cnt {
     }
@@ -120,6 +123,10 @@ export const Trending = styled.div`
   @media (max-width: 1400px) {
     padding: 2%;
     justify-content: center;
+  }
+  @media (max-width: 320px) {
+    padding: 0%;
+    width: 100%;
   }
 `;
 
@@ -217,6 +224,11 @@ export const SlideInfinity = styled.div`
     margin: 0px;
     width: 320px;
     height: 450px;
+  }
+  @media (max-width: 320px) {
+    margin: 0px;
+    width: 300px;
+    height: 500px;
   }
   &:hover ${SlideImageOverlay} {
     opacity: 0.2;
