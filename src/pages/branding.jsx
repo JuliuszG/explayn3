@@ -165,12 +165,25 @@ const Branding = () => {
           ]}
         />
         <BenefitsSection ref={ref4}>
-          <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
-          <AnimatedParagraph inView={inView4}>
-            A brand is not just a logo. A brand is a person’s feelings about a
-            product, service, or organization. We make every effort to make your
-            brand experience meaningful.
-          </AnimatedParagraph>
+          {isMobile ? (
+            <>
+              <h2>Benefits</h2>
+              <p>
+                A brand is not just a logo. A brand is a person’s feelings about
+                a product, service, or organization. We make every effort to
+                make your brand experience meaningful.
+              </p>
+            </>
+          ) : (
+            <>
+              <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
+              <AnimatedParagraph inView={inView4}>
+                A brand is not just a logo. A brand is a person’s feelings about
+                a product, service, or organization. We make every effort to
+                make your brand experience meaningful.
+              </AnimatedParagraph>
+            </>
+          )}
           <BenefitsContent>
             <div className="item">
               <div className="item-icon res">

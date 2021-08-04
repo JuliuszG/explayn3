@@ -165,12 +165,25 @@ const Marketing = () => {
           ]}
         />
         <BenefitsSection ref={ref4}>
-          <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
-          <AnimatedParagraph inView={inView4}>
-            We use best practices to deliver comprehensive digital marketing
-            services and provide a compelling message that sticks in the minds
-            of those yYou’re trying to reach.
-          </AnimatedParagraph>
+          {isMobile ? (
+            <>
+              <h2>How we work</h2>
+              <p>
+                We use best practices to deliver comprehensive digital marketing
+                services and provide a compelling message that sticks in the
+                minds of those yYou’re trying to reach.
+              </p>
+            </>
+          ) : (
+            <>
+              <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
+              <AnimatedParagraph inView={inView4}>
+                We use best practices to deliver comprehensive digital marketing
+                services and provide a compelling message that sticks in the
+                minds of those yYou’re trying to reach.
+              </AnimatedParagraph>
+            </>
+          )}
           <BenefitsContent>
             <div className="item">
               <div className="item-icon res">
