@@ -166,6 +166,28 @@ export const SliderLink = styled.div`
   }
 `;
 
+export const SliderTime = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  ${'' /* margin-top: 20px; */}
+  span {
+    color: #868686 !important;
+    text-transform: uppercase;
+    color: #4c65ff;
+    text-decoration: none;
+    font-size: 10px;
+    letter-spacing: 1.36px;
+    font-weight: 400;
+  }
+`;
+
+export const SliderBottomContainer = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+`;
+
 export const Slide = styled.div`
   width: 400px;
   box-shadow: 0 0 40px #00000014;
@@ -193,7 +215,7 @@ export const Slide = styled.div`
     height: 450px;
   }
   &:hover ${SlideImageOverlay} {
-    opacity: 0.2;
+    opacity: 0.5;
     z-index: 10;
   }
   &:hover ${SliderLink} {
@@ -231,7 +253,7 @@ export const SlideInfinity = styled.div`
     height: 500px;
   }
   &:hover ${SlideImageOverlay} {
-    opacity: 0.2;
+    opacity: 0.5;
     z-index: 10;
   }
   &:hover ${SliderLink} {

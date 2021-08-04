@@ -40,7 +40,7 @@ const Desktop = ({ darkMode, mainPage }) => {
           <LogoImg
             mainPage={mainPage}
             darkMode={darkMode}
-            customWidth="194px"
+            customWidth="160px"
             customHeight="41px"
           />
           {url === '/blog' && (
