@@ -2634,6 +2634,7 @@ export const BlogTitle = styled.div`
   line-height: 38px;
   text-decoration: none;
   color: #000000;
+  margin-left: -30px;
   span {
     color: #4b66ff;
     margin: 0 3px;
