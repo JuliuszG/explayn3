@@ -90,7 +90,7 @@ export const PostSliderWrapper = styled.div`
     margin-bottom: 5%;
     margin-top: 5%;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     margin-bottom: 15%;
   }
   .trending {
@@ -124,7 +124,7 @@ export const Trending = styled.div`
     padding: 2%;
     justify-content: center;
   }
-  @media (max-width: 320px) {
+  @media (max-width: 425px) {
     padding: 0%;
     width: 100%;
   }
@@ -247,6 +247,16 @@ export const SlideInfinity = styled.div`
     width: 320px;
     height: 450px;
   }
+  @media (max-width: 425px) {
+    margin: 0px;
+    width: 385px;
+    height: 500px;
+  }
+  @media (max-width: 375px) {
+    margin: 0px;
+    width: 335px;
+    height: 500px;
+  }
   @media (max-width: 320px) {
     margin: 0px;
     width: 300px;
@@ -346,7 +356,6 @@ export const SlideContentInfinity = styled.div`
   @media (max-width: 600px) {
     padding: 20px;
     height: 50%;
-    padding: 40px;
   }
   h3 {
     font-size: 25px;
