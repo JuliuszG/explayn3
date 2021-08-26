@@ -2583,8 +2583,8 @@ export const PageButton = styled.button`
 `;
 
 export const ContactUsButton = styled(PageButton)`
-  width: 200px;
-  height: 57px;
+  width: 180px;
+  height: 50px;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
   color: ${({ text }) => (text ? text : '#fff')};
 `;
@@ -2592,8 +2592,8 @@ export const ContactUsButton = styled(PageButton)`
 export const AboutUsButton = styled(PageButton)`
   background: ${colors.neutral80};
   color: ${colors.neutral00};
-  width: 200px;
-  height: 57px;
+  width: 180px;
+  height: 50px;
   &:hover {
     background: #4f4f4f;
     color: ${colors.neutral00};
@@ -2601,8 +2601,8 @@ export const AboutUsButton = styled(PageButton)`
 `;
 
 export const FormSubmitButton = styled(PageButton)`
-  width: 200px;
-  height: 57px;
+  width: 180px;
+  height: 50px;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
   color: #ffffff;
 `;
