@@ -52,6 +52,7 @@
     "react-sticky-box": "^0.9.3",
     "react-sticky-el": "^2.0.9",
     "react-youtube": "^7.13.1",
+    "slick-carousel": "^1.8.1",
     "slugify": "^1.5.0",
     "styled-components": "^5.2.1",
     "woodpecker-api": "^1.1.0"

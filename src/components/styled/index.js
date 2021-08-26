@@ -170,6 +170,7 @@ export const SliderTime = styled.div`
   width: 50%;
   display: flex;
   justify-content: flex-start;
+  opacity: 0;
   ${'' /* margin-top: 20px; */}
   span {
     color: #868686 !important;
@@ -221,6 +222,9 @@ export const Slide = styled.div`
   &:hover ${SliderLink} {
     opacity: 1;
   }
+  &:hover ${SliderTime} {
+    opacity: 1;
+  }
 `;
 
 export const SlideInfinity = styled.div`
@@ -267,6 +271,9 @@ export const SlideInfinity = styled.div`
     z-index: 10;
   }
   &:hover ${SliderLink} {
+    opacity: 1;
+  }
+  &:hover ${SliderTime} {
     opacity: 1;
   }
 `;
@@ -394,7 +401,7 @@ export const SlideContentDetails = styled.div`
     }
   }
   & span:last-child {
-    color: #868686;
+    color: #4c65ff;
     text-transform: uppercase;
   }
 `;
@@ -1206,6 +1213,9 @@ export const FooterContactUs = styled.div`
 
 export const FooterNewsletter = styled.div`
   grid-area: newsletter;
+  @media ${deviceMax.mobileL} {
+    margin: 20px 0 30px;
+  }
   p {
     color: #aaaaaa;
     font-size: 14px;
@@ -1304,6 +1314,9 @@ export const FooterDecoration = styled.div`
   @media (max-width: 600px) {
     width: 90px;
     height: 155px;
+  }
+  @media (max-width: 600px) {
+    display: none;
   }
 `;
 //contactForm.jsx
@@ -2570,6 +2583,8 @@ export const PageButton = styled.button`
 `;
 
 export const ContactUsButton = styled(PageButton)`
+  width: 200px;
+  height: 57px;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
   color: ${({ text }) => (text ? text : '#fff')};
 `;
@@ -2577,6 +2592,8 @@ export const ContactUsButton = styled(PageButton)`
 export const AboutUsButton = styled(PageButton)`
   background: ${colors.neutral80};
   color: ${colors.neutral00};
+  width: 200px;
+  height: 57px;
   &:hover {
     background: #4f4f4f;
     color: ${colors.neutral00};
@@ -2584,6 +2601,8 @@ export const AboutUsButton = styled(PageButton)`
 `;
 
 export const FormSubmitButton = styled(PageButton)`
+  width: 200px;
+  height: 57px;
   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
   color: #ffffff;
 `;

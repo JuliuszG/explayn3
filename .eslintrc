@@ -6,7 +6,10 @@
     "es6": true
   },
   "rules": {
-    "react/require-default-props": [0]
+    "react/require-default-props": [0],
+    "prettier/prettier": ["error",{
+      "endOfLine": "auto"}
+    ]
   },
   "parserOptions": {
     "ecmaVersion": 8,

@@ -162,7 +162,7 @@ const PostSlider = ({ filters, showFrom }) => {
                                 ))}
                               </SlideContentDetails>
                               <SliderBottomContainer>
-                                <SliderTime>
+                                <SliderTime className="slider-time">
                                   <span>{post.timeToRead}</span>
                                 </SliderTime>
                                 <SliderLink>
@@ -183,7 +183,7 @@ const PostSlider = ({ filters, showFrom }) => {
           </PostSliderWrapper>
         </>
       )}
-      <PostSliderWrapper>
+      {/* <PostSliderWrapper>
         {posts.length > showFrom && (
           <Trending>
             <h3>Related articles</h3>
@@ -213,11 +213,11 @@ const PostSlider = ({ filters, showFrom }) => {
                           </a>
                         </SliderLink>
                       </SliderBottomContainer>
-                      {/* <SliderLink>
+                      <SliderLink>
                         <a href={`/blog/${post.slug}`}>
                           READ THIS ARTICLE {'>'}
                         </a>
-                      </SliderLink> */}
+                      </SliderLink>
                     </SlideContent>
                   </Slide>
                 );
@@ -225,7 +225,7 @@ const PostSlider = ({ filters, showFrom }) => {
             </PostSliderItems>
           </Trending>
         )}
-      </PostSliderWrapper>
+      </PostSliderWrapper> */}
     </>
   );
 };
