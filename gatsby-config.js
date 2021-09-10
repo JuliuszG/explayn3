@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Explayn`,
+    title: `Explayn Digital Agency`,
     description: `A Full Service Web Design And Digital Marketing Agency Powered By Growth Solutions. If there's anything you need to know, We'll be happy to explayn.`,
     author: `Explayn`,
   },

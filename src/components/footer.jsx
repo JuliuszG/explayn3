@@ -103,8 +103,8 @@ const Footer = () => {
         </div>
         <div className="site-links-column sl3">
           <h3>Support</h3>
-          <Link to="/privacy">Privacy policy</Link>
-          <Link to="/cookies">Cookie policy</Link>
+          <Link to="/policy">Privacy policy</Link>
+          <Link to="/policy#cookie">Cookie policy</Link>
         </div>
       </FooterContent>
       <FooterDecoration>

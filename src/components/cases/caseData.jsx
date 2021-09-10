@@ -28,7 +28,7 @@ const CaseData = ({
         <AnimatedParagraph inView={inView}>{paragraph}</AnimatedParagraph>
         {link && (
           <AnimatedLink inView={inView} url={link}>
-            Zobacz stronę online
+            View website
           </AnimatedLink>
         )}
       </CaseDataLeft>

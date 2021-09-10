@@ -22,7 +22,7 @@ import {
   AnimatedParagraph,
 } from '../components/util/animations';
 import { H2Variant, PVariant } from '../components/landingPage/landing';
-
+import CaseStudy from '../components/landingPage/caseStudy';
 import {
   ServiceWrapper,
   ServicesSection,
@@ -229,6 +229,7 @@ const Branding = () => {
           </BenefitsContent>
         </BenefitsSection>
       </ServiceWrapper>
+      <CaseStudy triangle={false} />
       <Footer />
     </Layout>
   );
