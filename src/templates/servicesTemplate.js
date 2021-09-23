@@ -148,11 +148,11 @@ const ServiceTemplate = ({ pageContext }) => {
             </ServicesMainDescription>
           </ServicesContent>
           <ServicesLogo>
-            <Img
+            {/* <Img
               fluid={logo}
               placeholderStyle={{ visibility: 'hidden' }}
               alt="subpage logo"
-            />
+            /> */}
           </ServicesLogo>
           <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
