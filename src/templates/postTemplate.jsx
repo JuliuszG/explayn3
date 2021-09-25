@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import { useMediaQuery } from 'react-responsive';
+import { appContext } from '../components/context';
 import Layout from '../components/layout';
 import Author from '../components/blog/author';
 import SideBar from '../components/blog/sidebar';
@@ -58,6 +59,7 @@ const PostTemplate = ({ data }) => {
     id,
   } = data.datoCmsBlog;
   const { categories } = JSON.parse(data.datoCmsBlog.categories);
+  const { changeContactFormStatus } = useContext(appContext);
   return (
     <Layout>
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
@@ -90,7 +92,11 @@ const PostTemplate = ({ data }) => {
               <ContentArticle
                 className="content"
                 dangerouslySetInnerHTML={{ __html: content }}
-              />
+              >
+              </ContentArticle>
+              <ContentArticle >
+                <p style={{ fontSize: '18px'}} className="content"><span class="blue" onClick={() => changeContactFormStatus(1)}>Contact us</span> to talk about your idea or get a quote.</p>
+              </ContentArticle>
             </article>
             <SideBar title={blogTitle} slug={slug} id={id} />
           </main>

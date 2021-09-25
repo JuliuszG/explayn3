@@ -75,17 +75,7 @@ const SideBar = ({ title, slug, id }) => {
       setFilters(prevState => prevState.filter(el => el !== category));
     }
   };
-  const stickyPosition = useMemo(() => {
-    if (pathname.includes('howtobehappy')) {
-      return 660;
-    } else if (pathname.includes('cocaine')) {
-      return 260;
-    } else if (pathname.includes('hacker-cat')) {
-      return 285;
-    } else if (pathname.includes('bitches')) {
-      return 260;
-    }
-  }, [pathname]);
+  const stickyPosition = 215;
 
   return (
     <SideBarWrapperContainer>

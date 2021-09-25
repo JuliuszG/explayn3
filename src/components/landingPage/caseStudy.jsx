@@ -63,7 +63,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
     {
       cases: allDatoCmsRealizacja(
-        limit: 6
+        limit: 7
         sort: { fields: meta___createdAt, order: DESC }
       ) {
         nodes {
@@ -89,20 +89,26 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 1080px)',
   });
+  const url = location.pathname;
+
   if (isMobile) triangle = false;
   const renderSlider = (
     <Slider style={{ outline: 'none' }}>
-      {data.cases.nodes.map((item, index) => (
-        <Slide className="slide" key={index} index={index}>
+      {data.cases.nodes.map((item, index) => { 
+         if (url !== `/case/${item.slug}`)
+        return <Slide className="slide" key={index} index={index} id={item.slug}>
           <SliderContent item={item} />
         </Slide>
-      ))}
+      }
+      )
+      }
     </Slider>
   );
+
   const mobile = (
     <>
       {data.cases.nodes.map(
-        (item, index) => index < 3 && <SliderContent item={item} key={index} />
+        (item, index) => (index < 4 && url !== `/case/${item.slug}`) && <SliderContent item={item} key={index} />
       )}
     </>
   );

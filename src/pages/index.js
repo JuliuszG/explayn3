@@ -11,6 +11,7 @@ import Team from '../components/landingPage/team';
 import Partners from '../components/landingPage/partners';
 import Footer from '../components/footer';
 import Landing2 from '../components/landingPage/landing2';
+import { Helmet } from 'react-helmet';
 
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
@@ -36,6 +37,11 @@ const IndexPage = ({ location }) => {
   return (
     <Layout>
       <SEO title="Explayn Digital Agency" />
+      <Helmet>
+        <html lang="en-US"  xmlns= "http://www.w3.org/1999/xhtml"/>
+        <meta http-equiv="Content-Language" content="en-US"/>
+        
+      </Helmet>
       {isMobile ? <Mobile /> : <Desktop />}
       <Landing2 />
       {/* <Landing /> */}

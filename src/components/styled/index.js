@@ -791,6 +791,22 @@ export const CaseDescriptionDescription = styled.div`
       font-size: 14px;
     }
   }
+  div {
+    width: 40%;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom: 5%;
+    @media (max-width: 650px) {
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    @media ${deviceMax.mobileL} {
+      font-size: 14px;
+    }
+  }
 `;
 
 //cases/caseDoubleImage.jsx
@@ -2635,10 +2651,23 @@ export const PageButton = styled.button`
 `;
 
 export const ContactUsButton = styled(PageButton)`
-  width: 180px;
-  height: 50px;
-  background-image: linear-gradient(#4c65ff 0%, #263380 180%);
-  color: ${({ text }) => (text ? text : '#fff')};
+   width: 180px;
+   height: 50px;
+   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+   color: ${({ text }) => (text ? text : '#fff')};
+`;
+
+export const ContactUsButtonScroll = styled(PageButton)`
+@media (min-width: 1200px) {
+   position: fixed;
+   top: 40px;
+   right: 40px;
+   width: 99px;
+   height: 99px;
+   border-radius: 50%;
+   background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+   color: ${({ text }) => (text ? text : '#fff')};
+}
 `;
 
 export const AboutUsButton = styled(PageButton)`
@@ -2723,6 +2752,22 @@ export const Burger = styled.div`
   cursor: pointer;
   border: none;
   padding: 0;
+`;
+
+export const BurgerScroll = styled(Burger)`
+  @media (min-width: 1200px) {
+    width: 99px;
+    height: 99px;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.16);
+    background: white;
+    top: 40px;
+    left: 40px;
+    border-radius:50%;
+    padding: 0;
+  }
 `;
 //navigation/logoImg.jsx
 
@@ -4068,7 +4113,7 @@ export const PostTemplateWrapper = styled.section`
     max-width: 1720px;
     background: #fff;
     z-index: 40;
-    transform: translateY(-10%);
+    transform: translateY(-4%);
     margin: 0 auto;
     padding: 5% 5% 0;
     overflow: visible !important;
@@ -4485,6 +4530,12 @@ export const ContentArticle = styled.div`
     font-weight: 200;
     color: #000;
     padding-bottom: 20px;
+  }
+  .content{
+    .blue{
+      color: #3D52CE;
+      cursor: pointer;
+    }
   }
 `;
 

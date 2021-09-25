@@ -31,7 +31,7 @@ function SEO({ description, lang, meta, title }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: 'en-US',
       }}
       title={metaTitle}
       meta={[
@@ -67,6 +67,7 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+       
       ].concat(meta)}
     />
   );

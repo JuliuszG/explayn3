@@ -26,7 +26,7 @@ import {
   DemandList,
   ServicesMainHeader,
   ServicesMainDescription,
-  ServicesLogo,
+  ServicesImgContainer,
 } from '../components/styled';
 
 const ServiceTemplate = ({ pageContext }) => {
@@ -147,13 +147,9 @@ const ServiceTemplate = ({ pageContext }) => {
               {firstSectionDescription}
             </ServicesMainDescription>
           </ServicesContent>
-          <ServicesLogo>
-            {/* <Img
-              fluid={logo}
-              placeholderStyle={{ visibility: 'hidden' }}
-              alt="subpage logo"
-            /> */}
-          </ServicesLogo>
+          <ServicesImgContainer>
+            <img src={require(`../images/servicesLogos/${firstSectionTitle}.svg`)} alt="dev icon" />
+          </ServicesImgContainer>
           <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
