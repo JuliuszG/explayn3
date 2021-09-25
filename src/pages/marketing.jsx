@@ -159,7 +159,7 @@ const Marketing = () => {
           arr={[
             { img: Discovery, text: 'Discovery' },
             { img: Planning, text: 'Planning' },
-            { img: Design, text: 'Design' },
+            { img: Design, text: 'Designing' },
             { img: DevelopmentStepIcon, text: 'Launch' },
             { img: Launch, text: 'Measure' },
           ]}

@@ -66,7 +66,6 @@ const Branding = () => {
   });
   return (
     <Layout>
-      <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>

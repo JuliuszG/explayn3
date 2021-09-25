@@ -50,7 +50,7 @@ const Desktop = ({ darkMode, mainPage }) => {
           )}
         </Link>
       </div>
-      <ContactUs mainPage={mainPage} darkMode={darkMode} />
+      {url !== '/ads' && <ContactUs mainPage={mainPage} darkMode={darkMode} />}
       <div style={{ position: 'absolute' }}>
         <AnimatePresence>{renderMenu()}</AnimatePresence>
       </div>

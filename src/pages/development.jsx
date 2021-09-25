@@ -80,7 +80,7 @@ const Development = () => {
   });
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>

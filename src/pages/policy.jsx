@@ -84,7 +84,7 @@ const Policy = ({ location }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
         <Container>
             <h1>PRIVACY POLICY</h1>

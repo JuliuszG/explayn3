@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Layout from '../components/layout';
-// import Landing from "../components/landingPage/landing"
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import SEO from '../components/seo';
@@ -10,7 +9,7 @@ import CaseStudy from '../components/landingPage/caseStudy';
 import Team from '../components/landingPage/team';
 import Partners from '../components/landingPage/partners';
 import Footer from '../components/footer';
-import Landing2 from '../components/landingPage/landing2';
+import LandingPl from '../components/landingPage/landingPl';
 
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
@@ -37,8 +36,7 @@ const IndexPage = ({ location }) => {
     <Layout>
       <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
-      <Landing2 />
-      {/* <Landing /> */}
+      <LandingPl />
       <AboutUs />
       <CaseStudy refProp={caseStudyRef} />
       <Team />

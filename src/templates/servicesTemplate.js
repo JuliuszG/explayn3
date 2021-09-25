@@ -117,7 +117,7 @@ const ServiceTemplate = ({ pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
       <ServiceWrapper>
         <ServicesTopSection>

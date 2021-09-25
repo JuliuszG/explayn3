@@ -11,6 +11,7 @@ module.exports = {
         id: 'GTM-M2CQZ3W',
         defaultDataLayer: { platform: 'gatsby' },
         enableWebVitalsTracking: true,
+        includeInDevelopment: true,
       },
     },
     `gatsby-plugin-react-helmet`,

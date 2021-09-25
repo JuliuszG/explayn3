@@ -69,7 +69,7 @@ const CaseTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? (
         <Mobile />
       ) : (

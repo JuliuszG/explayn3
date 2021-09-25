@@ -1494,8 +1494,9 @@ export const ExitButton = styled.button`
 `;
 export const ContactDecoration = styled.img`
   position: absolute;
-  top: 30%;
+  top: 28%;
   right: 20%;
+  width: 244px;
   @media (max-width: 1024px) {
     display: none;
   }
@@ -1626,6 +1627,14 @@ export const Landing2Wrapper = styled.div`
     img {
       width: 100%;
     }
+    &-pl--top {
+      left: calc(50% - 170px);
+      top: 12%;
+    }
+    &-pl--left{
+      left: -152px;
+      top: 45%;
+    }
     &-left {
       @media (max-width: 1600px) {
         width: 180px;
@@ -1685,7 +1694,7 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .scroll {
-    width: 100px;
+    width: 111px;
     position: absolute;
     bottom: 20px;
     left: calc(50% - 50px);
@@ -1721,6 +1730,49 @@ export const Landing2Wrapper = styled.div`
     }
     @media (max-width: 375px) {
       padding: 20% 0 5% 10%;
+    }
+  }
+  .content--pl {
+    position: relative;
+    h1 {
+      font-size: 60px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 87px;
+    }
+    
+    blue {
+        color: #3D52CE;
+      }
+    }
+    h2 {
+      margin-top: 100px;
+      font-size: 28px;
+      font-weight: 300;
+      text-align: center;
+      .blue {
+        color: #3D52CE;
+      }
+    }
+    p {
+      width: 556px;
+      margin: 55px auto 0 auto;
+      font-size: 18px;
+      font-weight: 300;
+      text-align: center;
+      line-height: 28px;
+    }
+    button {
+      margin-top: 55px;
+      margin-left: calc(50% - 165px);
+      background: linear-gradient(#4c65ff 0%,#263380 180%);
+      border-radius: 29px;
+      color: white;
+      padding:12px 26px;
+      border: none;
+      opacity: 1;
+      font-family: 'Poppins';
+      font-size: 16px;
     }
   }
   .content {
@@ -2509,7 +2561,7 @@ export const StepsWrapper = styled.div`
 
 export const BrandingStepsWrapper = styled(StepsWrapper)`
   background-image: url(${BGBranding});
-  .icon {
+  && .icon{
     @media (min-width: 1200px) and (hover: hover) {
       &:nth-of-type(1)::after {
         content: 'Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.';
@@ -2533,13 +2585,13 @@ export const BrandingStepsWrapper = styled(StepsWrapper)`
 
 export const MarketingStepsWrapper = styled(StepsWrapper)`
   background-image: url(${BGMarketing});
-  .icon {
+  && .icon {
     @media (min-width: 1200px) and (hover: hover) {
       &:nth-of-type(1)::after {
         content: 'Great things are built on research. The first phase oscillate around meetings to learn about your business goals and challenges. Once we have a better understanding of your needs we begin multi-platform research including target audience analysis, user journey analysis, keyword data & market condition.';
       }
       &:nth-of-type(3)::after {
-        content: "Once we’redone with research and identifying tasks, it's time to develop your digital marketing strategy. This is where we will develop a thorough action plan that aligns with your goals. A detailed strategy will include all the components and tools needed to reach your audience.";
+        content: "Once we’re done with research and identifying tasks, it's time to develop your digital marketing strategy. This is where we will develop a thorough action plan that aligns with your goals. A detailed strategy will include all the components and tools needed to reach your audience.";
       }
       &:nth-child(5)::after {
         content: 'This is our favorite stage, where we use all our grey cells to deliver creative and engaging content for your future customer. We use knowledge and techniques to create creations geared towards conversions that are ultimately meant to "close the deal".';
