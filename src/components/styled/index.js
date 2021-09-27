@@ -2755,6 +2755,9 @@ export const Burger = styled.div`
 `;
 
 export const BurgerScroll = styled(Burger)`
+  svg  {
+    fill: black;
+  }
   @media (min-width: 1200px) {
     width: 99px;
     height: 99px;
