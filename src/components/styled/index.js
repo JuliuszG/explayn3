@@ -1750,14 +1750,13 @@ export const Landing2Wrapper = styled.div`
   }
   .content--pl {
     position: relative;
+
     h1 {
       font-size: 60px;
       font-weight: 600;
       text-align: center;
-      line-height: 87px;
-    }
-    
-    blue {
+      line-height: 87px; 
+      .blue {
         color: #3D52CE;
       }
     }
@@ -1791,6 +1790,7 @@ export const Landing2Wrapper = styled.div`
       font-size: 16px;
     }
   }
+
   .content {
     position: relative;
     display: flex;

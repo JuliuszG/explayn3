@@ -8,15 +8,15 @@ const LandingPl = () => {
   return (
     <Landing2Wrapper>
       <div className="cnt">
-        <div class="decoration decoration-pl--top">
+        <div className="decoration decoration-pl--top">
             <img src={landingCircle} alt="decoration" />
         </div>
-        <div class="decoration decoration-pl--left">
+        <div className="decoration decoration-pl--left">
             <img src={landingCircle} alt="decoration" />
         </div>
         <div className="content--pl">
-          <h1 class="title--pl">Reklama w internecie<br/>jest <span class="blue">kluczowa</span> do osiągnięcia <br/><span class="blue">sukcesu.</span></h1>
-          <h2>W Explayn stawiamy na <span class="blue">rozwój Twojego biznesu.</span></h2>
+          <h1 className="title--pl">Reklama w internecie<br/>jest <span className="blue">kluczowa</span> do osiągnięcia <br/><span className="blue">sukcesu.</span></h1>
+          <h2>W Explayn stawiamy na <span className="blue">rozwój Twojego biznesu.</span></h2>
           <p>Zastanawiasz się, jak zwielokrotnić wyniki swojej sprzedaży dzięki płatnej reklamie w internecie? Budujemy świadomość, zaangażowanie i pozyskujemy dla Ciebie nowych klientów.</p>
           <button>Umów się na bezpłatną konsultację</button>
         </div>
