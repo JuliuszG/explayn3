@@ -75,11 +75,11 @@ const MenuMobile = ({ toggle }) => {
   };
   const renderSubMenu = () => (
     <MobileSubMenu>
-      <motion.a variants={subItemAnimation} custom={1} href="/development">
-        Development
+      <motion.a variants={subItemAnimation} custom={1} href="/marketing">
+        Marketing
       </motion.a>
-      <motion.a variants={subItemAnimation} custom={2} href="/visual">
-        Visual
+      <motion.a variants={subItemAnimation} custom={2} href="/development">
+        Development
       </motion.a>
       <motion.a variants={subItemAnimation} custom={3} href="/branding">
         Branding
@@ -90,8 +90,8 @@ const MenuMobile = ({ toggle }) => {
       <motion.a variants={subItemAnimation} custom={5} href="/events">
         Events
       </motion.a>
-      <motion.a variants={subItemAnimation} custom={6} href="/marketing">
-        Marketing
+      <motion.a variants={subItemAnimation} custom={6} href="/visual">
+        Visual
       </motion.a>
     </MobileSubMenu>
   );

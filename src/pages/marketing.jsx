@@ -113,19 +113,19 @@ const Marketing = () => {
           <DemandList>
             <li>
               <span>01.</span>
-              Marketing strategies
+              Marketing strategy
             </li>
             <li>
               <span>02.</span>
-              Social media
+              Paid Advertising
             </li>
             <li>
               <span>03.</span>
-              Content marketing
+              Social Media Management
             </li>
             <li>
               <span>04.</span>
-              Marketing campains
+              Marketing Automation
             </li>
           </DemandList>
         </ServicesSection>
