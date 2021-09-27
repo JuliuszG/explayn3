@@ -21,6 +21,20 @@ const spin = keyframes`
 
 `;
 
+const show = keyframes `{
+  0% {
+      opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  } 
+  100% {
+      opacity: 1;
+  }
+}`
+
+
+
 //blog/author.jsx
 export const AuthorWrapper = styled.div`
   display: flex;
@@ -2662,11 +2676,12 @@ export const ContactUsButtonScroll = styled(PageButton)`
    position: fixed;
    top: 40px;
    right: 40px;
-   width: 99px;
-   height: 99px;
+   width: 80px;
+   height: 80px;
    border-radius: 50%;
    background-image: linear-gradient(#4c65ff 0%, #263380 180%);
    color: ${({ text }) => (text ? text : '#fff')};
+   animation: ${show} 1s;
 }
 `;
 
@@ -2759,8 +2774,8 @@ export const BurgerScroll = styled(Burger)`
     fill: black;
   }
   @media (min-width: 1200px) {
-    width: 99px;
-    height: 99px;
+    width: 80px;
+    height: 80px;
     position: fixed;
     align-items: center;
     justify-content: center;
@@ -2770,6 +2785,7 @@ export const BurgerScroll = styled(Burger)`
     left: 40px;
     border-radius:50%;
     padding: 0;
+    animation: ${show} 1s;
   }
 `;
 //navigation/logoImg.jsx

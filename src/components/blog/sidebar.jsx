@@ -84,6 +84,8 @@ const SideBar = ({ title, slug, id }) => {
           <SocialMedia title={title} slug={slug} />
           <Newsletter />
           <SideBarTrending>
+          {trending.length > 4 && 
+            <React.Fragment>
             <h3>TRENDING ARTICLES</h3>
             <AnimateSharedLayout>
               <motion.div layout>
@@ -94,6 +96,8 @@ const SideBar = ({ title, slug, id }) => {
                 </AnimatePresence>
               </motion.div>
             </AnimateSharedLayout>
+            </React.Fragment>}
+
             <h3>POPULAR TAGS</h3>
             <SideBarTrendingFilters>
               {filterList.map((filter, index) => (
