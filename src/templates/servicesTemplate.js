@@ -26,7 +26,7 @@ import {
   DemandList,
   ServicesMainHeader,
   ServicesMainDescription,
-  ServicesImgContainer,
+  ServicesImg,
 } from '../components/styled';
 
 const ServiceTemplate = ({ pageContext }) => {
@@ -147,9 +147,9 @@ const ServiceTemplate = ({ pageContext }) => {
               {firstSectionDescription}
             </ServicesMainDescription>
           </ServicesContent>
-          <ServicesImgContainer>
-            <img src={require(`../images/servicesLogos/${firstSectionTitle}.svg`)} alt="dev icon" />
-          </ServicesImgContainer>
+          <ServicesImg>
+            <img src={require(`../images/servicesLogos/${firstSectionTitle}.png`)} alt="dev icon" />
+          </ServicesImg>
           <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>

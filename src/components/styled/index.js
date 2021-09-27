@@ -3640,6 +3640,22 @@ export const ServicesImgContainer = styled.div`
       justify-content: center;
       width: 100%;
     }
+    & .services--image {
+      max-height: 300px;
+      margin-right: 120px;
+      margin-top: 60px;
+    }
+  }
+`;
+
+export const ServicesImg = styled.div`
+  & img {
+      max-height: 300px;
+      margin-right: 120px;
+      margin-top: 60px;
+    @media ${deviceMax.laptopM} {
+      max-width: 200px;
+    }
   }
 `;
 
