@@ -35,13 +35,12 @@ const IndexPage = ({ location }) => {
   }, [location.state, caseStudyRef.current]);
 
   return (
+    <>
+    <SEO title="Explayn Digital Agency" />
+    <Helmet>
+      <html lang="en-US" xmlLang="en-US" xmlns="http://www.w3.org/1999/xhtml"></html>
+    </Helmet>
     <Layout>
-      <SEO title="Explayn Digital Agency" />
-      <Helmet>
-        <html lang="en-US"  xmlns= "http://www.w3.org/1999/xhtml"/>
-        <meta http-equiv="Content-Language" content="en-US"/>
-        
-      </Helmet>
       {isMobile ? <Mobile /> : <Desktop />}
       <Landing2 />
       {/* <Landing /> */}
@@ -51,6 +50,7 @@ const IndexPage = ({ location }) => {
       <Partners />
       <Footer />
     </Layout>
+    </>
   );
 };
 

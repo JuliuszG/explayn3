@@ -6,6 +6,10 @@ import Facebook from '../../images/landingPL/facebook.svg';
 import Tiktok from '../../images/landingPL/tiktok.svg';
 import Linkedin from '../../images/landingPL/linkedin.svg';
 import Google from '../../images/landingPL/google.svg';
+import Pencil from '../../images/landingPL/pencil.svg';
+import Rocket from '../../images/landingPL/rocket.svg';
+import Ruler from '../../images/landingPL/ruler.svg';
+import Lightbulb from '../../images/landingPL/lightbulb.svg';
 
 
 export const benefits = [
@@ -51,6 +55,7 @@ export const benefits = [
       },
   ];
 
+
   export const offer = [
     {
       image: [
@@ -91,5 +96,24 @@ export const benefits = [
       ],
       name: 'TikTok Ads',
       text: 'TikTok to najczęściej pobierana aplikacja na świecie. To idealne miejsce do budowania świadomości i pozyskiwania nowych klientów. Dzięki niskiej konkurencji i niskim koszcie reklamy, to doskonałe miejsce do promowania swojej marki.',
+    },
+  ];
+
+  export const proces = [
+    {
+      image: Lightbulb,
+      text: 'Analiza potrzeb',
+    },
+    {
+      image: Pencil,
+      text: 'Projektowanie',
+    },
+    {
+      image: Rocket,
+      text: 'Wdrożenie',
+    },
+    {
+      image: Ruler,
+      text: 'Monitorowanie',
     },
   ];

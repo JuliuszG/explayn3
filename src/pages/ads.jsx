@@ -7,6 +7,7 @@ import { useMediaQuery } from 'react-responsive';
 import Benefit from '../components/landingPl/benefits';
 import Client from '../components/landingPl/client';
 import Offer from '../components/landingPl/offer';
+import Proces from '../components/landingPl/proces';
 
 import Team from '../components/landingPage/team';
 import Partners from '../components/landingPage/partners';
@@ -42,6 +43,7 @@ const IndexPage = ({ location }) => {
       <Benefit />
       <Client />
       <Offer />
+      <Proces />
       <Team />
       <Partners />
       <Footer />
