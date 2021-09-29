@@ -95,7 +95,7 @@ const PostTemplate = ({ data }) => {
               >
               </ContentArticle>
               <ContentArticle >
-                <p style={{ fontSize: '18px'}} className="content"><span class="blue" onClick={() => changeContactFormStatus(1)}>Contact us</span> to talk about your idea or get a quote.</p>
+                <p style={{ fontSize: '18px', marginBottom: '30px'}} className="content"><span className="blue" onClick={() => changeContactFormStatus(1)}>Contact us</span> to talk about your idea or get a quote.</p>
               </ContentArticle>
             </article>
             <SideBar title={blogTitle} slug={slug} id={id} />

@@ -8,9 +8,8 @@ import Benefit from '../components/landingPl/benefits';
 import Client from '../components/landingPl/client';
 import Offer from '../components/landingPl/offer';
 import Proces from '../components/landingPl/proces';
+import Trust from '../components/landingPl/trust';
 
-import Team from '../components/landingPage/team';
-import Partners from '../components/landingPage/partners';
 import Footer from '../components/footer';
 import LandingPl from '../components/landingPage/landingPl';
 
@@ -44,8 +43,7 @@ const IndexPage = ({ location }) => {
       <Client />
       <Offer />
       <Proces />
-      <Team />
-      <Partners />
+      <Trust />
       <Footer />
     </Layout>
   );

@@ -1095,7 +1095,7 @@ export const LoaderWrapper = styled(motion.div)`
 //footer.jsx
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: #272727;
   font-family: 'Poppins';
   padding: 100px 40px 0;
@@ -1757,6 +1757,7 @@ export const Landing2Wrapper = styled.div`
     }
     @media (max-width: 450px) {
       font-size: 8px;
+      margin-bottom: 20vh;
     }
     @media (max-width: 375px) {
       padding: 20% 0 5% 10%;
@@ -2383,13 +2384,15 @@ export const StepsWrapper = styled.div`
     .line {
       width: 100px;
       height: 5px;
-      border-bottom: 5px dotted grey;
+      border-bottom: 4px dotted #f2f2f2;
+      webkit-border-bottom: 4px dashed #f2f2f2;
       margin: 0 20px;
       @media (max-width: 1200px) {
-        height: 50px;
+        height: 56px;
         width: 5px;
         border-bottom: none;
-        border-left: 5px dotted grey;
+        border-left: 4px dashed #f2f2f2;
+        webkit-border-left: 4px dashed #f2f2f2;
         margin: 50px 0 20px;
       }
     }
@@ -2682,6 +2685,8 @@ export const ContactUsButtonScroll = styled(PageButton)`
    background-image: linear-gradient(#4c65ff 0%, #263380 180%);
    color: ${({ text }) => (text ? text : '#fff')};
    animation: ${show} 1s;
+   font-size: 17px;
+   line-height: 18px;
 }
 `;
 
@@ -2772,6 +2777,7 @@ export const Burger = styled.div`
 export const BurgerScroll = styled(Burger)`
   svg  {
     fill: black;
+    height: 20px;
   }
   @media (min-width: 1200px) {
     width: 80px;
@@ -3343,7 +3349,7 @@ export const MobileMenuContainer = styled(motion.div)`
   overflow-y: auto;
   font-family: 'Poppins';
   font-style: normal;
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease-in;
   .cnt {
     display: flex;
     flex-direction: column;
@@ -3809,6 +3815,7 @@ export const BenefitsSection = styled.div`
       padding: 0 10px;
     }
     @media ${deviceMax.mobileL} {
+      margin-bottom: 0px;
       font-size: 14px;
     }
   }
@@ -3819,7 +3826,6 @@ export const BenefitsSection = styled.div`
     align-items: flex-start;
     @media ${deviceMax.mobileL} {
       flex-direction: column;
-      align-items: center;
     }
     & .item-icon {
       margin-right: 20px;
@@ -3860,7 +3866,6 @@ export const BenefitsSection = styled.div`
         margin-bottom: 20px;
         @media ${deviceMax.mobileL} {
           font-size: 20px;
-          text-align: center;
         }
       }
       p {
@@ -3871,6 +3876,7 @@ export const BenefitsSection = styled.div`
           max-width: 330px;
         }
         @media ${deviceMax.mobileL} {
+          padding: 0;
           font-size: 14px;
         }
       }
@@ -4149,7 +4155,7 @@ export const PostTemplateWrapper = styled.section`
     background: #fff;
     z-index: 40;
     transform: translateY(-4%);
-    margin: 0 auto;
+    margin: -1px auto;
     padding: 5% 5% 0;
     overflow: visible !important;
     padding-right: 0;

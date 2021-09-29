@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { appContext } from './context';
 import ContactFormImage from '../images/contactFormImage.svg';
 import emailjs from 'emailjs-com';
@@ -41,13 +41,14 @@ const contactVariant = {
   },
   exit: {
     x: '-100vw',
-    transition: {
-      duration: 0.3,
-    },
   },
 };
 
 export const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+  
   const [list, setList] = useState([]);
   const { changeContactFormStatus } = useContext(appContext);
   const [formData, setFormData] = useState({

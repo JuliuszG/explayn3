@@ -16,7 +16,6 @@ const CaseList = ({ title, paragraph, arrObj }) => {
     }
   `);
   const list = useMemo(() => [...arrObj.List], [arrObj.List]);
-  console.log(paragraph)
   return (
     <CaseListWrapper>
       <h2>{title}</h2>

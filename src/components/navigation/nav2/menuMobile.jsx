@@ -19,16 +19,13 @@ const menuAnimation = {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       ease: 'easeInOut',
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   hidden: {
     top: '-100vh',
     transition: {
-      when: 'afterChildren',
-      staggerChildren: 0.2,
-      ease: 'easeInOut',
-      duration: 0.3,
+      duration: 0,
     },
   },
 };
@@ -55,9 +52,9 @@ const subItemAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      delay: i * 0.1,
+      delay: 0.05 * i,
       ease: 'easeIn',
-      duration: 0.2,
+      duration: 0.1,
     },
   }),
   hidden: {

@@ -10,6 +10,10 @@ import Pencil from '../../images/landingPL/pencil.svg';
 import Rocket from '../../images/landingPL/rocket.svg';
 import Ruler from '../../images/landingPL/ruler.svg';
 import Lightbulb from '../../images/landingPL/lightbulb.svg';
+import Avallon from '../../images/landingPL/avallon.svg';
+import Chillnchips from '../../images/landingPL/chillnchips.svg';
+import System from '../../images/landingPL/system.svg';
+import Tajm from '../../images/landingPL/tajm.svg';
 
 
 export const benefits = [
@@ -115,5 +119,36 @@ export const benefits = [
     {
       image: Ruler,
       text: 'Monitorowanie',
+    },
+  ];
+
+  export const trust = [
+    {
+      image: {
+        src: System,
+        alt: 'Systemeg.net',
+      },
+      name: 'Systemeg.net',
+    },
+    {
+      image: {
+        src: Chillnchips,
+        alt: 'Chillnchips logo',
+      },
+      name: 'Chillnchips.com',
+    },
+    {
+      image: {
+        src: Avallon,
+        alt: 'Avalon.com logo',
+      },
+      name: 'avallon.com',
+    },
+    {
+      image: {
+        src: Tajm,
+        alt: 'Tajm.com logo',
+      },
+      name: 'tajm.com',
     },
   ];

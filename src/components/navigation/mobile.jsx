@@ -21,7 +21,9 @@ const Mobile = () => {
       </Link>
       <div className="dec"></div>
       <button
-        onClick={() => changeContactFormStatus(1)}
+        onClick={() => {
+          changeContactFormStatus(1)
+        }}
         className="contact-icon"
       >
         <img src={Phone} alt="phone" />
