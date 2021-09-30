@@ -3830,31 +3830,29 @@ export const BenefitsSection = styled.div`
     & .item-icon {
       margin-right: 20px;
       max-width: 70px;
+      margin-top: 20px;
       @media (max-width: 450px) {
-        margin: 0 0 20px 0;
+        margin-top: 110px;
+        margin-bottom: 10px;
       }
       &.res img {
         width: 100%;
         height: 100%;
-        margin-top: 22px;
         padding-right: 10px;
       }
       &.sca img {
         width: 100%;
         height: 100%;
-        margin-top: 22px;
         padding-right: 10px;
       }
       &.fun img {
         width: 100%;
         height: 100%;
-        margin-top: 22px;
         padding-right: 10px;
       }
       &.sec img {
         width: 100%;
         height: 100%;
-        margin-top: 22px;
         padding-right: 10px;
       }
     }
