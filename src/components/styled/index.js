@@ -3709,7 +3709,7 @@ export const SentenceSectionContent = styled.div`
   width: 100%;
   margin:0 auto;
   padding: 0 10%;
-  @media (max-width: 1500px) {
+  @media (max-width: 1200px) {
     max-width: 800px;
   }
   @media (max-width: 1024px) {
