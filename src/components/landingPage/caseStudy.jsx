@@ -7,11 +7,13 @@ import {
   Slide,
   ButtonNext,
 } from 'pure-react-carousel';
+import { useLocation } from '@reach/router';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
 import { useInView } from 'react-intersection-observer';
 import ScrollRight from '../../images/scrollright.svg';
+
 import {
   CaseStudyWrapper,
   CaseStudyHeaderWrapper,
@@ -42,8 +44,9 @@ const Header = () => {
     triggerOnce: true,
     threshold: 0.5,
   });
+  const location = useLocation();
   return (
-    <CaseStudyHeaderWrapper ref={ref}>
+    <CaseStudyHeaderWrapper ref={ref} className={ !location.pathname === '/' && 'wrapper'}>
       <div className="text">
         <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
         <AnimatedParagraph inView={inView}>

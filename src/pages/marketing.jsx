@@ -25,6 +25,8 @@ import { H2Variant, PVariant } from '../components/landingPage/landing';
 import CaseStudy from '../components/landingPage/caseStudy';
 import {
   ServiceWrapper,
+  BenefitsContentWrapper,
+  ServicesWrapperSection,
   ServicesTopSection,
   ServicesScrollLink,
   ServicesContent,
@@ -98,37 +100,39 @@ const Marketing = () => {
             </div>
           </ServicesScrollLink>
         </ServicesTopSection>
-        <ServicesSection id="services-section">
-          <DemandLeftSection ref={ref2}>
-            <AnimatedHeader inView={inView2}>
-              Marketing on demand.
-            </AnimatedHeader>
-            <AnimatedParagraph inView={inView2}>
-              Everything begins with the recognition of the customer’s needs, a
-              thorough market analysis and defining a marketing strategy, which
-              will be the foundation of a consistent and multidimensional
-              communication with your clients.
-            </AnimatedParagraph>
-          </DemandLeftSection>
-          <DemandList>
-            <li>
-              <span>01.</span>
-              Marketing strategy
-            </li>
-            <li>
-              <span>02.</span>
-              Paid Advertising
-            </li>
-            <li>
-              <span>03.</span>
-              Social Media Management
-            </li>
-            <li>
-              <span>04.</span>
-              Marketing Automation
-            </li>
-          </DemandList>
-        </ServicesSection>
+        <ServicesWrapperSection>
+          <ServicesSection id="services-section">
+            <DemandLeftSection ref={ref2}>
+              <AnimatedHeader inView={inView2}>
+                Marketing on demand.
+              </AnimatedHeader>
+              <AnimatedParagraph inView={inView2}>
+                Everything begins with the recognition of the customer’s needs, a
+                thorough market analysis and defining a marketing strategy, which
+                will be the foundation of a consistent and multidimensional
+                communication with your clients.
+              </AnimatedParagraph>
+            </DemandLeftSection>
+            <DemandList>
+              <li>
+                <span>01.</span>
+                Marketing strategy
+              </li>
+              <li>
+                <span>02.</span>
+                Paid Advertising
+              </li>
+              <li>
+                <span>03.</span>
+                Social Media Management
+              </li>
+              <li>
+                <span>04.</span>
+                Marketing Automation
+              </li>
+            </DemandList>
+          </ServicesSection>
+        </ServicesWrapperSection>
         <SentenceSection>
           <SentenceSectionContent section={'marketing'} ref={ref3}>
             <AnimatedHeader inView={inView3}>
@@ -164,67 +168,69 @@ const Marketing = () => {
             { img: Launch, text: 'Measure' },
           ]}
         />
-        <BenefitsSection ref={ref4}>
-          {isMobile ? (
-            <>
-              <h2>How we work</h2>
-              <p>
-                We use best practices to deliver comprehensive digital marketing
-                services and provide a compelling message that sticks in the
-                minds of those yYou’re trying to reach.
-              </p>
-            </>
-          ) : (
-            <>
-              <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
-              <AnimatedParagraph inView={inView4}>
-                We use best practices to deliver comprehensive digital marketing
-                services and provide a compelling message that sticks in the
-                minds of those yYou’re trying to reach.
-              </AnimatedParagraph>
-            </>
-          )}
-          <BenefitsContent>
-            <div className="item">
-              <div className="item-icon res">
-                <img src={Responsive} alt="responsive icon" />
-              </div>
-              <div className="item-content">
-                <h4>Omnichannel</h4>
+        <BenefitsContentWrapper>
+          <BenefitsSection ref={ref4}>
+            {isMobile ? (
+              <>
+                <h2>How we work</h2>
                 <p>
-                  From social media to email campaigns to digital ads, we create
-                  a path that leads your future customers to profitable actions.
+                  We use best practices to deliver comprehensive digital marketing
+                  services and provide a compelling message that sticks in the
+                  minds of those yYou’re trying to reach.
                 </p>
+              </>
+            ) : (
+              <>
+                <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
+                <AnimatedParagraph inView={inView4}>
+                  We use best practices to deliver comprehensive digital marketing
+                  services and provide a compelling message that sticks in the
+                  minds of those yYou’re trying to reach.
+                </AnimatedParagraph>
+              </>
+            )}
+            <BenefitsContent>
+              <div className="item">
+                <div className="item-icon res">
+                  <img src={Responsive} alt="responsive icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Omnichannel</h4>
+                  <p>
+                    From social media to email campaigns to digital ads, we create
+                    a path that leads your future customers to profitable actions.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="item">
-              <div className="item-icon fun">
-                <img src={Functional} alt="Functional icon" />
+              <div className="item">
+                <div className="item-icon fun">
+                  <img src={Functional} alt="Functional icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Relevant</h4>
+                  <p>
+                    We make sure the content is perfectly tailored to the target
+                    audience, compelling, easy to read, as well as credible and
+                    accurate.
+                  </p>
+                </div>
               </div>
-              <div className="item-content">
-                <h4>Relevant</h4>
-                <p>
-                  We make sure the content is perfectly tailored to the target
-                  audience, compelling, easy to read, as well as credible and
-                  accurate.
-                </p>
+              <div className="item">
+                <div className="item-icon sca">
+                  <img src={Scalable} alt="Scalable icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Insightful</h4>
+                  <p>
+                    Defining the audience is a big part of a successful campaign.
+                    Through accurate segmentation and target group analysis, we
+                    achieve the best possible results.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="item">
-              <div className="item-icon sca">
-                <img src={Scalable} alt="Scalable icon" />
-              </div>
-              <div className="item-content">
-                <h4>Insightful</h4>
-                <p>
-                  Defining the audience is a big part of a successful campaign.
-                  Through accurate segmentation and target group analysis, we
-                  achieve the best possible results.
-                </p>
-              </div>
-            </div>
-          </BenefitsContent>
-        </BenefitsSection>
+            </BenefitsContent>
+          </BenefitsSection>
+        </BenefitsContentWrapper>
       </ServiceWrapper>
       <CaseStudy triangle={false} />
       <Footer />

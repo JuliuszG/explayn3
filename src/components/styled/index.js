@@ -21,7 +21,7 @@ const spin = keyframes`
 
 `;
 
-const show = keyframes `{
+const show = keyframes`{
   0% {
       opacity: 0;
   }
@@ -1095,7 +1095,8 @@ export const LoaderWrapper = styled(motion.div)`
 //footer.jsx
 export const FooterWrapper = styled.footer`
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  min-width: 100%;
   background: #272727;
   font-family: 'Poppins';
   padding: 100px 40px 0;
@@ -1167,8 +1168,8 @@ export const FooterWrapper = styled.footer`
 `;
 
 export const FooterContent = styled.div`
-  max-width: 1500px;
   margin: 0 auto;
+  padding:0 10%;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
@@ -2155,7 +2156,7 @@ export const CaseStudyWrapper = styled.section`
 export const CaseStudyHeaderWrapper = styled.div`
   font-family: 'Poppins';
   font-style: normal;
-  padding: 100px 10% 60px;
+  padding: 100px 10% 60px 10%;
   color: ${colors.neutral100};
   display: flex;
   justify-content: space-between;
@@ -2164,6 +2165,11 @@ export const CaseStudyHeaderWrapper = styled.div`
     justify-content: center;
     padding: 25% 10%;
     font-size: 10px;
+  }
+  .wrapper {
+    margin: 0 auto;
+    paddin: 0 10%;
+    width: 100%
   }
   h2 {
     font-weight: 600;
@@ -2303,6 +2309,8 @@ export const StepsWrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   width: 100%;
+  margin: 0 auto;
+  padding:120px 10% 280px 10%;
   display: flex;
   flex-direction: column;
   padding-top: 120px;
@@ -3446,7 +3454,7 @@ export const DesktopLinks = styled.div`
         display: block;
         text-decoration: none;
         color: ${({ subMenuIsOn }) =>
-          subMenuIsOn ? 'grey' : colors.neutral00};
+    subMenuIsOn ? 'grey' : colors.neutral00};
         transition: all 0.3s ease-in-out;
       }
       .number {
@@ -3572,6 +3580,7 @@ export const ServiceWrapper = styled.div`
 `;
 
 export const ServicesTopSection = styled.div`
+  margin: 0 auto;
   width: 100%;
   height: 100vh;
   padding: 0 10%;
@@ -3698,7 +3707,8 @@ export const SentenceSection = styled.div`
 
 export const SentenceSectionContent = styled.div`
   width: 100%;
-  padding: 0 180px;
+  margin:0 auto;
+  padding: 0 10%;
   @media (max-width: 1500px) {
     max-width: 800px;
   }
@@ -3706,7 +3716,7 @@ export const SentenceSectionContent = styled.div`
     padding: 5% 10%;
   }
   @media ${deviceMin.desktop} {
-    max-width: 1430px;
+    max-width: 1630px;
     margin: 0 auto;
   }
 
@@ -3721,28 +3731,28 @@ export const SentenceSectionContent = styled.div`
     }
     span {
       color: ${({ section }) => {
-        switch (section) {
-          case 'branding':
-            return '#e36860';
-          case 'development':
-            return '#571ab6';
-          case 'marketing':
-            return '#4096ea';
-        }
-      }};
+    switch (section) {
+      case 'branding':
+        return '#e36860';
+      case 'development':
+        return '#571ab6';
+      case 'marketing':
+        return '#4096ea';
+    }
+  }};
     }
   }
   .decoration {
     background-color: ${({ section }) => {
-      switch (section) {
-        case 'branding':
-          return '#e36860';
-        case 'development':
-          return '#571ab6';
-        case 'marketing':
-          return '#4096ea';
-      }
-    }};
+    switch (section) {
+      case 'branding':
+        return '#e36860';
+      case 'development':
+        return '#571ab6';
+      case 'marketing':
+        return '#4096ea';
+    }
+  }};
     height: 6px;
     width: 98.5px;
     margin: 90px 0;
@@ -3780,6 +3790,7 @@ export const SentenceSectionContent = styled.div`
 `;
 
 export const BenefitsSection = styled.div`
+  margin:0 auto;
   width: 100%;
   min-height: 100vh;
   padding: 80px 10%;
@@ -3881,10 +3892,14 @@ export const BenefitsSection = styled.div`
     }
   }
 `;
+export const BenefitsContentWrapper = styled.div`
+  width:100%;
+  background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
+`
 
 export const BenefitsContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 556px);
+  grid-template-columns: repeat(2, 1fr);
   column-gap: 200px;
   row-gap: 60px;
   @media (min-width: 2560px) {
@@ -3909,7 +3924,10 @@ export const BenefitsContent = styled.div`
 
 //pages/development.jsx
 
+
 export const TechnologySection = styled.div`
+  margin:0 auto;
+  min-height: 100vh;
   width: 100%;
   background: #f5f6fa;
   padding: 80px 10%;
@@ -4030,7 +4048,7 @@ export const BlogContent = styled.div`
   grid-template-columns: repeat(3, 1fr);
   gap: 48.44px;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1600px;
   position: relative;
   padding-top: 10vh;
   @media (max-width: 1700px) {
@@ -4270,14 +4288,13 @@ export const PostTemplateWrapper = styled.section`
   }
   .related-cnt {
     transform: translateY(0%);
-    ${
-      '' /* @media (max-height: 1720px) {
+    ${'' /* @media (max-height: 1720px) {
       transform: translateY(0%);
     }
     @media (max-width: 1520px) {
       transform: translateY(0%);
     } */
-    }
+  }
     .title {
       display: inline-block;
       font-family: 'Poppins';
@@ -4379,6 +4396,11 @@ export const ServicesLogo = styled.div`
   }
 `;
 
+export const ServicesWrapperSection = styled.div`
+  background: ${colors.neutral90};
+  width: 100%;`
+
+
 export const ServicesSection = styled.section`
   background: ${colors.neutral90};
   display: flex;
@@ -4389,6 +4411,7 @@ export const ServicesSection = styled.section`
   font-style: normal;
   font-size: 16px;
   position: relative;
+  margin:0 auto;
   @media ${deviceMin.desktop} {
     justify-content: center;
     & > ul {
@@ -4479,7 +4502,9 @@ export const DemandList = styled.ul`
 `;
 
 export const QuoteSection = styled.div`
-  padding: 100px 180px;
+  width: 100%;
+  margin:0 auto;
+  padding: 100px 10%;
   color: ${colors.neutral80};
   position: relative;
   background: ${colors.neutral10};
@@ -4590,8 +4615,7 @@ export const SliderContainer = styled.div`
     @media (max-width: 600px) {
       height: 50%;
     }
-    ${
-      '' /* @media (max-width: 1480px) {
+    ${'' /* @media (max-width: 1480px) {
       margin: 20px;
       width: 300px;
       height: 450px;
@@ -4602,7 +4626,7 @@ export const SliderContainer = styled.div`
     @media (max-width: 750px) {
        width: auto;
     } */
-    }
+  }
   }
   & div.slick-list {
     margin: 0px auto;
