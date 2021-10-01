@@ -1107,6 +1107,8 @@ export const FooterWrapper = styled.footer`
   }
   @media ${deviceMax.mobileM} {
     padding: 25px 10px 0;
+    height: 100%;
+
   }
   @media ${deviceMax.mobileS} {
     padding: 10px 10px 0;
