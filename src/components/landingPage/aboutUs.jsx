@@ -15,11 +15,12 @@ import {
 
 const Box = ({ content }) => {
   const [hovered, setHovered] = useState(false);
+  const isDesktop = window.matchMedia('(min-width: 450px)')
   const renderImage = useMemo(() => {
     return (
       <BoxImageWrapper>
         <AnimatePresence initial={false}>
-          {hovered ? (
+          {(hovered && isDesktop) ? (
             <motion.div
               style={{
                 position: 'absolute',
