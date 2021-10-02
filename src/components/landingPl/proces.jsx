@@ -15,7 +15,7 @@ const Process = () => {
                         return (
                         <>
                             <div className="icon-box">
-                                <Icon key={`${index}-${s.text}`} img={s.image} text={s.text} />
+                                <Icon key={`p-${index}-${s.text}`} img={s.image} text={s.text} />
                             </div>
                             {index !== proces.length - 1 && (
                             <div key={index} className="line"></div>

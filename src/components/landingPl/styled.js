@@ -137,3 +137,170 @@ export const Icons = styled.div`
     }
 }
 `;
+
+export const FooterContainer = styled.div`
+    background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
+    height: 100vh;
+`;
+
+export const ConsultationContainer = styled.div`
+    background: white;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+`;
+
+export const ContactContainer = styled.div`
+    background: rgba(220,220,220,0.19);
+    height: fit-content;
+    padding:110px 88px;
+    font-family: Poppins;
+    form {
+      button {
+        margin-top: 24px;
+        width: 550px;
+        height:64px;
+        background: linear-gradient(#4c65ff 0%,#263380 180%);
+        border-radius: 29px;
+        color: white;
+        padding: 12px 26px;
+        border: none;
+        opacity: 1;
+        font-family: 'Poppins';
+        font-size: 24px;
+        }
+    }
+     .input {
+      display:grid;
+      margin-bottom: 50px;
+      .text {
+        position: relative;
+        width: 550px;
+        height: 48px;
+        font-size: 16px;
+        appearance: none;
+        padding: 13px 16px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #707070;
+        border-image: initial;
+        border-radius: 6px;
+      }
+      .label {
+        margin-bottom: 10px;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left;
+      }
+    }
+    }
+    .checkbox {
+      span {
+        max-width: 400px;
+        margin-left: 30px;
+        font-size: 9px;
+        line-height: 28px;
+        font-weight: 600;
+        text-align: left;
+      }
+      @supports(-webkit-appearance: none) or (-moz-appearance: none) {
+        input[type='checkbox'] {
+          --active: #275EFE;
+          --active-inner: #fff;
+          --border: #BBC1E1;
+          --background: #fff;
+          --disabled: #F6F8FF;
+          --disabled-inner: #E1E6F9;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          height: 21px;
+          transform: scale(1.2);
+          outline: none;
+          display: inline-block;
+          vertical-align: top;
+          position: relative;
+          margin-top: 6px;
+          cursor: pointer;
+          border: 1px solid var(--bc, var(--border));
+          background: var(--b, var(--background));
+           width: 21px;
+            &:after {
+              opacity: var(--o, 0);
+            }
+            &:checked {
+              --o: 1;
+            }
+          &:after {
+            content: '';
+            display: block;
+            left: 0;
+            top: 0;
+            position: absolute;
+          }
+          &:checked {
+            --b: var(--active);
+            --bc: var(--active);
+            --d-o: .3s;
+            --d-t: .6s;
+            --d-t-e: cubic-bezier(.2, .85, .32, 1.2);
+          }
+          &:disabled {
+            --b: var(--disabled);
+            cursor: not-allowed;
+            opacity: .9;
+            &:checked {
+              --b: var(--disabled-inner);
+              --bc: var(--border);
+            }
+            & + label {
+              cursor: not-allowed;
+            }
+          }
+          &:hover {
+            &:not(:checked) {
+              &:not(:disabled) {
+                --bc: var(--border-hover);
+              }
+            }
+          }
+          &:focus {
+            box-shadow: 0 0 0 var(--focus);
+          }
+          & + label {
+            font-size: 14px;
+            line-height: 21px;
+            display: inline-block;
+            vertical-align: top;
+            cursor: pointer;
+            margin-left: 4px;
+          }
+        }
+        input[type='checkbox'] {
+            border-radius: 7px;
+            &:after {
+              width: 5px;
+              height: 9px;
+              border: 2px solid var(--active-inner);
+              border-top: 0;
+              border-left: 0;
+              left: 7px;
+              top: 2px;
+              transform: rotate(var(--r, 20deg));
+            }
+            &:checked {
+              --r: 43deg;
+            }
+        }
+      }
+    }
+`;
+
+export const ConsultationText = styled.div`
+  background: white;
+  h2 {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 76px;
+  }
+`;

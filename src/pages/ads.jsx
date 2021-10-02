@@ -5,11 +5,11 @@ import Mobile from '../components/navigation/mobile';
 import SEO from '../components/seo';
 import { useMediaQuery } from 'react-responsive';
 import Benefit from '../components/landingPl/benefits';
+import Consultation from '../components/landingPl/consultation';
 import Client from '../components/landingPl/client';
 import Offer from '../components/landingPl/offer';
 import Proces from '../components/landingPl/proces';
 import Trust from '../components/landingPl/trust';
-
 import Footer from '../components/footer';
 import LandingPl from '../components/landingPage/landingPl';
 
@@ -43,6 +43,7 @@ const IndexPage = ({ location }) => {
       <Client />
       <Offer />
       <Proces />
+      <Consultation/>
       <Trust />
       <Footer />
     </Layout>
