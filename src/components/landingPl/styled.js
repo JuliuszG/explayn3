@@ -148,12 +148,14 @@ export const ConsultationContainer = styled.div`
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding:0 0 0 10%;
+    margin-top: 200px;
 `;
 
 export const ContactContainer = styled.div`
     background: rgba(220,220,220,0.19);
     height: fit-content;
-    padding:110px 88px;
+    padding: 110px 88px 110px 10%;
     font-family: Poppins;
     form {
       button {
@@ -175,7 +177,7 @@ export const ContactContainer = styled.div`
       margin-bottom: 50px;
       .text {
         position: relative;
-        width: 550px;
+        max-width: 550px;
         height: 48px;
         font-size: 16px;
         appearance: none;
@@ -297,10 +299,58 @@ export const ContactContainer = styled.div`
 `;
 
 export const ConsultationText = styled.div`
+  position: relative;
+  font-family: Poppins;
   background: white;
+  padding-right: 119px;
   h2 {
+    position: relative;
     font-weight: 600;
     font-size: 55px;
     line-height: 76px;
+    margin-bottom: 32px;
+  }
+  p {
+    margin-bottom: 32px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 28px;
+  }
+  .decoration {
+    position: absolute;
+    left: -254px;
+    top: -172px;
+  }
+  .quote-wrapper {
+    margin-top: 60px;
+    position: relative;
+    img {
+      position: absolute;
+      top: -10px;
+    }
+    p {
+      margin-left: 78px;
+    }
+  }
+  .referal-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 78px;
+    .circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: #F1F1F1
+    }
+    .name {
+      margin-left: 45px;
+      margin-bottom: 5px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .bold {
+      font-weight: 500;
+    }
   }
 `;
