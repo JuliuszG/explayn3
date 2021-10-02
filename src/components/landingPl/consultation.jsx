@@ -6,7 +6,7 @@ import Icon from '../../images/landingPl/icon.svg';
 
 const Consultation = () => {
     return (
-        <ConsultationContainer>
+        <ConsultationContainer id="consultation">
             <ConsultationText>
                 <div className="decoration">
                     <img src={landingCircle} alt="decoration" />

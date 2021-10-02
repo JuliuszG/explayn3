@@ -1805,7 +1805,8 @@ export const Landing2Wrapper = styled.div`
       opacity: 1;
       font-family: 'Poppins';
       font-size: 16px;
-    }
+      cursor: pointer;
+        }
   }
 
   .content {

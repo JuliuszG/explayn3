@@ -65,6 +65,7 @@ export const BenefitCardSocial = styled.div`
         position: absolute;
         top: -73px;
         margin: auto 0;
+        opacity: 0.5;
     }
     .card {
         display: grid;
@@ -85,6 +86,11 @@ export const BenefitCardSocial = styled.div`
         font-weight: 300;
         font-size: 18px;
         line-height: 28px;
+    }
+    &:hover {
+      .image {
+        opacity: 1;
+    }
     }
 `;
 
@@ -175,6 +181,9 @@ export const Icons = styled.div`
     position: relative;
     cursor: pointer;
     margin-top: 43px;
+    &:hover {
+      transform: scale(1.2);
+    }
 
     h5 {
       font-size: 22px;
