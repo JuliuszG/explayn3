@@ -18,12 +18,12 @@ const Consultation = () => {
                     <img src={Icon} alt="decoration" />
                     <p className="quote">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
                 </div>
-                <div class="referal-wrapper">
+                <div className="referal-wrapper">
                     <div className="circle"></div>
                     <div>
-                        <p class="name bold">JOANNA WIŚNIEWSKA</p>
-                        <p class="name">Chief Marketing Officer</p>
-                        <p class="name bold">Fundusz Inwestycyjny AVALLON</p>
+                        <p className="name bold">JOANNA WIŚNIEWSKA</p>
+                        <p className="name">Chief Marketing Officer</p>
+                        <p className="name bold">Fundusz Inwestycyjny AVALLON</p>
                     </div>
                 </div>
             </ConsultationText>

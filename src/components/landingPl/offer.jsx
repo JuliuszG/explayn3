@@ -1,7 +1,7 @@
 import React from 'react';
 import {
     BenefitsWrapper,
-    BenefitCard
+    BenefitCardSocial
   } from './styled';
   
 import {
@@ -10,7 +10,7 @@ import {
 
 const Card = ({ item }) => {
     return (
-      <BenefitCard>
+      <BenefitCardSocial>
           <div className="card">
                 <div className="image">
                     <img src={item.image[0].src} alt={item.image[0].alt} />
@@ -18,7 +18,7 @@ const Card = ({ item }) => {
                 <p className="title">{item.name}</p>
             </div>
             <p className="text">{item.text}</p>
-      </BenefitCard>
+      </BenefitCardSocial>
     );
   };
 

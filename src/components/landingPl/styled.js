@@ -20,6 +20,19 @@ export const BenefitsWrapper = styled.div`
         column-gap: 160px;
     }
 `;
+
+export const TrustElement = styled.div`
+    font-family: Poppins; 
+    h2 {
+        margin-bottom: 100px;
+        margin-top: 100px;
+        text-align: center;
+        font-size: 55px;
+        line-height: 76px;
+        font-weight: 600;
+    }
+`;
+
 export const BenefitCard = styled.div` 
     color: white;
     .image {
@@ -29,6 +42,7 @@ export const BenefitCard = styled.div`
         display: grid;
         grid-template-columns:80px 1fr;
         margin-bottom: 30px;
+        position: relative;
     }
     .title {
         font-weight: 600;
@@ -39,6 +53,35 @@ export const BenefitCard = styled.div`
     .text {
         margin-bottom: 143px;
         margin-left: 130px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 28px;
+    }
+`;
+
+export const BenefitCardSocial = styled.div` 
+    color: white;
+    .image {
+        position: absolute;
+        top: -73px;
+        margin: auto 0;
+    }
+    .card {
+        display: grid;
+        grid-template-columns:80px 1fr;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    .title {
+        position: relative;
+        width: 250px;
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 39px;
+    }
+    .text {
+        margin-top: 70px;
+        margin-bottom: 143px;
         font-weight: 300;
         font-size: 18px;
         line-height: 28px;
@@ -58,6 +101,7 @@ export const ClientWrapper = styled.div`
         line-height: 76px;
     }
     button {
+        margin-top:127px;
         background: linear-gradient(#4c65ff 0%,#263380 180%);
         border-radius: 29px;
         color: white;
@@ -67,6 +111,15 @@ export const ClientWrapper = styled.div`
         font-size: 16px;
         font-family: Poppins;
         }
+    .header-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      }
+    }
     }
 `;
 
@@ -121,12 +174,15 @@ export const Icons = styled.div`
     align-items: center;
     position: relative;
     cursor: pointer;
-    margin-top: 90px;
+    margin-top: 43px;
 
     h5 {
       font-size: 22px;
       font-weight: 600;
       margin-top: 30px;
+      margin-top: 30px;
+      width: 170px;
+      text-align: center;
       @media ${deviceMax.laptopM} {
         margin-top: 54px;
       }
@@ -354,3 +410,4 @@ export const ConsultationText = styled.div`
     }
   }
 `;
+
