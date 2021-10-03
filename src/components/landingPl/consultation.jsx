@@ -2,7 +2,7 @@ import React from 'react';
 import ContactForm from './contactForm';
 import { ConsultationContainer, ConsultationText } from './styled';
 import landingCircle from '../../images/landing/landing-multi-circle.svg';
-import Icon from '../../images/landingPl/icon.svg';
+import Icon from '../../images/landingPL/icon.svg';
 
 const Consultation = () => {
     return (
