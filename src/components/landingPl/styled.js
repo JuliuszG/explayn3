@@ -131,14 +131,28 @@ export const ClientWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 164px;
+    padding: 10%;
     font-family: Poppins;
+
     h2 {
         margin-bottom: 156px;
         font-weight: 600;
         font-size: 55px;
         line-height: 76px;
+
+        @media (max-width: 576px) {
+          text-align: center;
+          margin-bottom: 70px;
+          font-weight: 600;
+          font-size: 32px;
+          line-height: 42px;
+        }
     }
+      img {
+        @media (max-width: 576px) {
+          transform: scale(0.6)
+        }
+      }
     button {
         margin-top:127px;
         background: linear-gradient(#4c65ff 0%,#263380 180%);
@@ -149,17 +163,27 @@ export const ClientWrapper = styled.div`
         opacity: 1;
         font-size: 16px;
         font-family: Poppins;
+
+        @media (max-width: 576px) {
+          margin-top: 60px;
         }
-    .header-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    p {
-      font-weight: 300;
-      font-size: 18px;
-      line-height: 28px;
+        }
+
+      .header-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        @media (max-width: 576px) {
+           grid-template-columns: 1fr;
+        }
+        p {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 28px;
+          text-align: center;
+          }
+        }
       }
-    }
-    }
 `;
 
 export const Icons = styled.div`
@@ -191,6 +215,15 @@ export const Icons = styled.div`
       border-left: 15px dashed #f2f2f2;
       margin: 50px 0 20px;
     }
+    @media (max-width: 576px) {
+      height: 70px;
+      width: 5px;
+      border-bottom: none;
+      border-left: 5px dashed #f2f2f2;
+      margin-top: 20px;
+      margin-bottom: 10px;
+
+    }
   }
   .icon-box {
     width: 87px;
@@ -217,6 +250,9 @@ export const Icons = styled.div`
     &:hover {
       transform: scale(1.2);
     }
+    @media (max-width: 576px) {
+      margin-top: 0;
+    }
 
     h5 {
       font-size: 22px;
@@ -230,6 +266,8 @@ export const Icons = styled.div`
       }
       @media ${deviceMax.mobileL} {
         font-size: 18px;
+        margin-top: 10px;
+
       }
     }
     }
