@@ -167,6 +167,7 @@ export const ClientWrapper = styled.div`
         opacity: 1;
         font-size: 16px;
         font-family: Poppins;
+        cursor: pointer;
 
         @media (max-width: 576px) {
           margin-top: 60px;
@@ -319,6 +320,7 @@ export const ContactContainer = styled.div`
         opacity: 1;
         font-family: 'Poppins';
         font-size: 24px;
+        cursor: pointer;
 
         @media (max-width: 576px) {
           width: 100%;
