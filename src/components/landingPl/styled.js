@@ -27,7 +27,7 @@ export const BenefitsWrapper = styled.div`
         grid-template-columns: 1fr 1fr; 
         column-gap: 160px;
 
-        @media (max-width: 576px) {
+        @media (max-width: 1024px) {
           grid-template-columns: 1fr; 
       } 
     }
@@ -177,7 +177,7 @@ export const ClientWrapper = styled.div`
         display: grid;
         grid-template-columns: 1fr 1fr;
 
-        @media (max-width: 576px) {
+        @media (max-width: 1024px) {
            grid-template-columns: 1fr;
         }
         p {
@@ -219,7 +219,7 @@ export const Icons = styled.div`
       border-left: 15px dashed #f2f2f2;
       margin: 50px 0 20px;
     }
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
       height: 70px;
       width: 5px;
       border-bottom: none;
@@ -284,14 +284,14 @@ export const FooterContainer = styled.div`
 `;
 
 export const ConsultationContainer = styled.div`
-    background: rgba(220,220,220,0.19);
+    background: white;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:0 0 0 10%;
     margin-top: 200px;
 
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
       grid-template-columns: 1fr;
       height: 100%;
       padding: 0;
@@ -466,7 +466,7 @@ export const ConsultationText = styled.div`
     font-size: 55px;
     line-height: 76px;
     margin-bottom: 32px;
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
       padding: 0 25px;
       font-size: 35px;
       line-height: 46px;
@@ -478,7 +478,7 @@ export const ConsultationText = styled.div`
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
-    @media (max-width: 576px) {
+    @media (max-width: 1024px) {
       padding: 0 25px;
       font-size: 16px;
     }
