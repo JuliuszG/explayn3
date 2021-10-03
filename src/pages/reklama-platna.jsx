@@ -40,11 +40,11 @@ const IndexPage = ({ location }) => {
       {isMobile ? <Mobile /> : <Desktop />}
       <LandingPl />
       <Benefit />
-      <Client />
+      {/* <Client />
       <Offer />
       <Proces />
       <Consultation/>
-      <TrustComponent />
+      <TrustComponent /> */}
       <Footer />
     </Layout>
   );

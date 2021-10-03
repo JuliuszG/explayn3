@@ -5,19 +5,31 @@ import { deviceMin, deviceMax } from '../../utils/breakpoints';
 export const BenefitsWrapper = styled.div`
     font-family: Poppins;
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
-    padding: 185px 200px 39px 200px;   
+    padding: 185px 10% 39px;  
+    @media (max-width: 576px) {
+        padding-top: 90px;
+    } 
     h2 {
         margin-bottom: 182px;
         color: white;
         font-size: 55px;
         line-height: 76px;
         font-weight: 600;
-        line-spacing: 76px;
+
+        @media (max-width: 576px) {
+          margin-bottom: 90px;
+          font-size: 30px;
+          line-height: 46px;
+        }
     }
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
         column-gap: 160px;
+
+        @media (max-width: 576px) {
+          grid-template-columns: 1fr; 
+      } 
     }
 `;
 
@@ -37,18 +49,32 @@ export const BenefitCard = styled.div`
     color: white;
     .image {
         margin: auto 0;
+        @media (max-width: 576px) {
+          transform: scale(0.7)
+      } 
+
     }
     .card {
         display: grid;
-        grid-template-columns:80px 1fr;
+        grid-template-columns: 80px 1fr;
         margin-bottom: 30px;
         position: relative;
+        @media (max-width: 576px) {
+          grid-template-columns: 60px 1fr;
+      } 
     }
     .title {
         font-weight: 600;
         font-size: 27px;
         line-height: 39px;
         margin-left: 50px;
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+          margin-left: 15px;
+          line-height: 24px;
+      } 
+
     }
     .text {
         margin-bottom: 143px;
@@ -56,6 +82,13 @@ export const BenefitCard = styled.div`
         font-weight: 300;
         font-size: 18px;
         line-height: 28px;
+
+        @media (max-width: 576px) {
+          margin-left: 0;
+          margin-bottom: 60px;
+
+      } 
+        
     }
 `;
 

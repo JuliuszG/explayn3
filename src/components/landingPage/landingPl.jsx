@@ -7,7 +7,7 @@ import landingCircle from '../../images/landing/landing-multi-circle.svg';
 const LandingPl = () => {
   return (
     <Landing2Wrapper>
-      <div className="cnt">
+      <div className="cnt cnt-pl">
         <div className="decoration decoration-pl--top">
           <img src={landingCircle} alt="decoration" />
         </div>
