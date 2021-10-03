@@ -43,8 +43,8 @@ const IndexPage = ({ location }) => {
       <Client />
       <Offer />
       <Proces />
-      {/* <Consultation/>
-      <TrustComponent /> */}
+      <Consultation/>
+      <TrustComponent />
       <Footer />
     </Layout>
   );

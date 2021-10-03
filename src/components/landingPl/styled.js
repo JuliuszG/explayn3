@@ -42,6 +42,10 @@ export const TrustElement = styled.div`
         font-size: 55px;
         line-height: 76px;
         font-weight: 600;
+        @media (max-width: 576px) {
+          font-size: 35px;
+          line-height: 46px;
+        }
     }
 `;
 
@@ -259,7 +263,7 @@ export const Icons = styled.div`
       font-weight: 600;
       margin-top: 30px;
       margin-top: 30px;
-      width: 170px;
+      max-width: 170px;
       text-align: center;
       @media ${deviceMax.laptopM} {
         margin-top: 54px;
@@ -280,12 +284,18 @@ export const FooterContainer = styled.div`
 `;
 
 export const ConsultationContainer = styled.div`
-    background: white;
+    background: rgba(220,220,220,0.19);
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:0 0 0 10%;
     margin-top: 200px;
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+      height: 100%;
+      padding: 0;
+    }
 `;
 
 export const ContactContainer = styled.div`
@@ -293,6 +303,9 @@ export const ContactContainer = styled.div`
     height: fit-content;
     padding: 110px 88px 110px 10%;
     font-family: Poppins;
+    @media (max-width: 576px) {
+      padding:50px 25px 50px 25px;
+    }
     form {
       button {
         margin-top: 24px;
@@ -306,6 +319,10 @@ export const ContactContainer = styled.div`
         opacity: 1;
         font-family: 'Poppins';
         font-size: 24px;
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
         }
     }
      .input {
@@ -439,18 +456,32 @@ export const ConsultationText = styled.div`
   font-family: Poppins;
   background: white;
   padding-right: 119px;
+
+  @media (max-width: 576px) {
+    padding: 0;
+  }
   h2 {
     position: relative;
     font-weight: 600;
     font-size: 55px;
     line-height: 76px;
     margin-bottom: 32px;
+    @media (max-width: 576px) {
+      padding: 0 25px;
+      font-size: 35px;
+      line-height: 46px;
+    }
   }
+
   p {
     margin-bottom: 32px;
     font-weight: 300;
     font-size: 18px;
     line-height: 28px;
+    @media (max-width: 576px) {
+      padding: 0 25px;
+      font-size: 16px;
+    }
   }
   .decoration {
     position: absolute;
@@ -464,19 +495,24 @@ export const ConsultationText = styled.div`
       position: absolute;
       top: -10px;
     }
-    p {
-      margin-left: 78px;
-    }
   }
   .referal-wrapper {
     display: flex;
     align-items: center;
     margin-left: 78px;
+    @media (max-width: 576px) {
+      margin-left: 25px;
+      display: block;
+
+    }
     .circle {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
-      background: #F1F1F1
+      background: #F1F1F1;
+      @media (max-width: 576px) {
+        margin-bottom: 15px;
+      }
     }
     .name {
       margin-left: 45px;
@@ -484,6 +520,9 @@ export const ConsultationText = styled.div`
       font-weight: 300;
       font-size: 18px;
       line-height: 28px;
+      @media (max-width: 576px) {
+        margin-left: -25px;
+      }
     }
     .bold {
       font-weight: 500;
