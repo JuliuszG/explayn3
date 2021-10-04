@@ -185,7 +185,9 @@ export const ClientWrapper = styled.div`
           font-weight: 300;
           font-size: 18px;
           line-height: 28px;
-          text-align: center;
+          @media (max-width: 576px) {
+            text-align: center;
+          }
           }
         }
       }
@@ -252,8 +254,9 @@ export const Icons = styled.div`
     position: relative;
     cursor: pointer;
     margin-top: 43px;
-    &:hover {
-      transform: scale(1.2);
+
+    img {
+      transform: scale(0.805);
     }
     @media (max-width: 576px) {
       margin-top: 0;
@@ -272,10 +275,118 @@ export const Icons = styled.div`
       @media ${deviceMax.mobileL} {
         font-size: 18px;
         margin-top: 10px;
-
       }
     }
+    @media (min-width: 1200px) and (hover: hover) {
+      &:hover img {
+        transition: 0.2s ease-in;
+        transform: scale(0.9);
+      }
+      &:hover:nth-of-type(1)::after {
+        content: 'Wielkie rzeczy buduje się w oparciu o dobre badania. Pierwszy etap to konsultacje mające na celu poznanie Twoich celów biznesowych. Kiedy już lepiej zrozumiemy Twoje potrzeby, rozpoczynamy wieloplatformowe badania obejmujące analizę grupy docelowej, ścieżki zakupu i warunków rynkowych.';
+        display: block;
+        position: absolute;
+        top: 200px;
+        left: 6vw;
+        width: 40vw;
+        max-height: 200px;
+        background-color: #f5f6fa;
+        padding: 30px;
+        font-family: 'Poppins';
+        font-size: 14px;
+        line-height: 136%;
+      }
+      &:hover:nth-child(1)::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 186px;
+        left: 103px;
+        width: 30px;
+        height: 30px;
+        background-color: #f5f6fa;
+        transform: rotate(-120deg) skew(25deg);
+        z-index: 565;
+      }
+      &:hover:nth-of-type(3)::after {
+        content: 'Kiedy już skończymy z badaniami i określimy zadania, nadchodzi czas na wypracowanie strategii działań. W tym miejscu opracujemy dokładny plan działania, który będzie zgodny z Twoimi celami. Szczegółowa strategia będzie zawierała wszystkie elementy i narzędzia potrzebne do dotarcia do Twojej grupy odbiorców.';
+        display: block;
+        position: absolute;
+        top: 200px;
+        left: 1vw;
+        width: 40vw;
+        max-height: 200px;
+        background-color: #f5f6fa;
+        padding: 30px;
+        font-family: 'Poppins';
+        font-size: 14px;
+        line-height: 136%;
+      }
+      &:hover:nth-child(3)::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 186px;
+        left: 30px;
+        width: 30px;
+        height: 30px;
+        background-color: #f5f6fa;
+        transform: rotate(-120deg) skew(25deg);
+        z-index: 565;
+      }
+      &:hover:nth-child(5)::after {
+        content: 'Czas pokazanie się Twoim klientom.  Uruchamiamy kampanię i skupiamy się na realizacji konkretnych celów i dopasowaniu działań tak, aby zmaksymalizować efekt. Czuwamy nad sprawnym przebiegiem kampanii, testujemy treści, analizujemy wyniki.';
+        display: block;
+        position: absolute;
+        top: 200px;
+        width: 40vw;
+        max-height: 200px;
+        background-color: #f5f6fa;
+        padding: 30px;
+        font-family: 'Poppins';
+        font-size: 14px;
+        line-height: 136%;
+      }
+      &:hover:nth-of-type(5)::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 186px;
+        left: 15px;
+        width: 30px;
+        height: 30px;
+        background-color: #f5f6fa;
+        transform: rotate(-120deg) skew(25deg);
+        z-index: 565;
+      }
+      &:hover:nth-of-type(7)::after {
+        content: 'Na tym etapie monitorujemy działania i badamy zachowania klientów. Oceniamy również skuteczność kampanii. Tworzymy raporty i omawiamy kolejne kroki.';
+        display: block;
+        position: absolute;
+        top: 200px;
+        right: 1vw;
+        width: 40vw;
+        max-height: 200px;
+        background-color: #f5f6fa;
+        padding: 30px;
+        font-family: 'Poppins';
+        font-size: 14px;
+        line-height: 136%;
+      }
+      &:hover:nth-child(7)::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 186px;
+        left: 10px;
+        width: 30px;
+        height: 30px;
+        background-color: #f5f6fa;
+        transform: rotate(-120deg) skew(25deg);
+        z-index: 565;
+      }
     }
+  }
 }
 `;
 
@@ -329,7 +440,7 @@ export const ContactContainer = styled.div`
     }
      .input {
       display:grid;
-      margin-bottom: 50px;
+      margin-bottom: 25px;
       .text {
         position: relative;
         max-width: 550px;
