@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import SurmaLogo from '../../images/landingPL/surma.svg';
 import landingCircle from '../../images/landing/landing-multi-circle.svg';
 import chartGray from '../../images/landingPL/chart-gray.svg';
@@ -9,58 +9,10 @@ import {
     SurmaContent
   } from './styled';
 
-import {
-  ClientWrapper,
-  SurmaWrapper
-} from './styled';
 
-
-const Client = () => {
-  const ref = useRef();
-  const [open, setOpen] = useState(false)
-  function useOnClickOutside(ref, handler) {
-    useEffect(
-      () => {
-        const listener = (event) => {
-          // Do nothing if clicking ref's element or descendent elements
-          if (!ref.current || ref.current.contains(event.target)) {
-            return;
-          }
-          handler(event);
-        };
-        document.addEventListener("mousedown", listener);
-        document.addEventListener("touchstart", listener);
-        return () => {
-          document.removeEventListener("mousedown", listener);
-          document.removeEventListener("touchstart", listener);
-        };
-      },
-      // Add ref and handler to effect dependencies
-      // It's worth noting that because passed in handler is a new ...
-      // ... function on every render that will cause this effect ...
-      // ... callback/cleanup to run every render. It's not a big deal ...
-      // ... but to optimize you can wrap handler in useCallback before ...
-      // ... passing it into this hook.
-      [ref, handler]
-    );
-  }
-  useOnClickOutside(ref, () => setOpen(false));
-
-  if (open) {
-    document.querySelector('html').style.overflow = 'hidden'
-  } else {
-    document.querySelector('html').style.overflow = 'scroll'
-  }
-
-  return (
-    <>
-      <ClientWrapper>
-        <h2>Zobacz wyniki naszych klientów</h2>
-        <img src={SurmaLogo} alt='surma logo' />
-        <button onClick={() => setOpen(true)}>Zobacz case study</button>
-        <SurmaWrapper>
-        <div id="surma" className={open ? 'show' : 'none'} >
-        <SurmaContent ref={ref}>
+const Surma = () => {
+    return (
+        <SurmaContent>
             <img src={SurmaLogo} alt='surma logo' className="logo"/>
             <h3>Zakres pracy</h3>
             <p className="strategy">Strategia reklamowa / Facebook Ads / Instagram Ads</p>
@@ -137,11 +89,7 @@ const Client = () => {
             <img src={explaynLogo} alt="logo" className="logo-small"/>
             <p className="data">&#9426; 2021</p>
         </SurmaContent>
-        </div>
-      </SurmaWrapper>
-      </ClientWrapper>
-    </>
-  );
-};
-
-export default Client;
+    );
+  };
+  
+  export default Surma;

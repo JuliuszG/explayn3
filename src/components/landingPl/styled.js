@@ -99,6 +99,7 @@ export const BenefitCard = styled.div`
 export const BenefitCardSocial = styled.div` 
     color: white;
     .image {
+        transform: scale(0.8);
         position: absolute;
         top: -73px;
         margin: auto 0;
@@ -643,3 +644,160 @@ export const ConsultationText = styled.div`
   }
 `;
 
+export const SurmaContent = styled.div`
+    font-family: Poppins;
+    padding: 0;
+    border: 0;
+    margin:3% auto;
+    width: fit-content;
+    border-radius: 12px;
+    background: white;
+    overflow-y: scroll;
+    height: 90%;
+    box-shadow: 0px 3px 76px #00000029;
+    .logo {
+      margin: 200px 400px 110px 400px;
+    }
+    h3 {
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 168%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    p {
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      @media (max-width: 576px){
+        font-size: 16px;
+      }
+    }
+    .strategy {
+      margin-top: 35px;
+      margin-bottom: 100px;
+      text-align: center;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+    }
+    .number {
+      margin-bottom:20px;
+      font-weight: 900;
+      font-size: 127px;
+      line-height: 140px;
+      color: #e8e8e8;
+    }
+    .number-wrapper {
+      margin-top: 30px;
+      margin-bottom: 90px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+
+      .text {
+        margin-bottom:20px;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 84px;
+        color: #e8e8e8;
+      }
+    }
+    .number-flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      p {
+        text-align: center;
+      }
+      img {
+        margin-bottom: 24px;
+        margin-top: 16px;
+      }
+    }
+    .challenge-wrapper {
+      padding:0 250px 0 100px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 70px;
+      h3 {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        text-align: left;
+      }
+      p {
+        max-width: 500px;
+        margin-bottom:88px;
+      }
+    }
+    .solutions {
+      position: relative;
+      padding: 0 100px;
+      .right {
+        padding-left: 420px;
+      }
+      .bottom {
+        padding-left: 144px;
+      }
+      .decoration {
+        position: absolute;
+
+        &-top {
+          top: 31%;
+          left:-100px;
+        }
+        &-up {
+          right: 339px;
+          top: 14%;
+          transform: rotate(90deg);
+        }
+        &-bottom {
+          top: 55%;
+          left: 300px;
+        }
+      }
+    }
+    .solutions-flex {
+      display: flex;
+      margin-bottom: 150px;
+    }
+    .solutions-text {
+      max-width: 550px;
+      margin-left: 45px;
+
+      .bold {
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+    }
+    .logo-small {
+      margin-top: 190px;
+      margin-bottom:34px;
+      margin-left: calc(50% - 69px);
+     }
+
+    .data {
+      text-align: center;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 39px;
+      margin-bottom:20px;
+    }
+`;
+
+export const SurmaWrapper = styled.div`
+  position: relative;
+  .none {
+    display: none;
+  }
+  .show {
+    background: transparent;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    z-index:9999;
+  }
+
+`;
