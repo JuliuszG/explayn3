@@ -12,9 +12,9 @@ export const BenefitsWrapper = styled.div`
     h2 {
         margin-bottom: 182px;
         color: white;
-        font-size: 55px;
-        line-height: 76px;
         font-weight: 600;
+        font-size: 44px;
+        line-height: 138%;
 
         @media (max-width: 576px) {
           margin-bottom: 90px;
@@ -39,11 +39,11 @@ export const TrustElement = styled.div`
         margin-bottom: 100px;
         margin-top: 100px;
         text-align: center;
-        font-size: 55px;
-        line-height: 76px;
         font-weight: 600;
+        font-size: 44px;
+        line-height: 138%;
         @media (max-width: 576px) {
-          font-size: 35px;
+          font-size: 30px;
           line-height: 46px;
         }
     }
@@ -56,6 +56,9 @@ export const BenefitCard = styled.div`
         @media (max-width: 576px) {
           transform: scale(0.7)
       } 
+        &:hover {
+          transition: 0.2s ease-in;
+      }
 
     }
     .card {
@@ -84,10 +87,11 @@ export const BenefitCard = styled.div`
         margin-bottom: 143px;
         margin-left: 130px;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 168%;
 
         @media (max-width: 576px) {
+          font-size: 14px;
           margin-left: 0;
           margin-bottom: 60px;
 
@@ -122,8 +126,11 @@ export const BenefitCardSocial = styled.div`
         margin-top: 70px;
         margin-bottom: 143px;
         font-weight: 300;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 16px;
+        line-height: 168%;
+        @media (max-width: 576px) {
+          font-size: 14px;
+      } 
     }
     &:hover {
       .image {
@@ -141,16 +148,15 @@ export const ClientWrapper = styled.div`
 
     h2 {
         margin-bottom: 156px;
-        font-weight: 600;
         font-size: 55px;
         line-height: 76px;
-
+        font-weight: 600;
         @media (max-width: 576px) {
           text-align: center;
           margin-bottom: 70px;
           font-weight: 600;
-          font-size: 32px;
-          line-height: 42px;
+          font-size: 35px;
+          line-height: 46px;
         }
     }
       img {
@@ -184,9 +190,10 @@ export const ClientWrapper = styled.div`
         }
         p {
           font-weight: 300;
-          font-size: 18px;
-          line-height: 28px;
-          @media (max-width: 576px) {
+          font-size: 16px;
+          line-height: 168%;
+        @media (max-width: 576px) {
+            font-size: 14px;
             text-align: center;
           }
           }
@@ -398,7 +405,6 @@ export const FooterContainer = styled.div`
 
 export const ConsultationContainer = styled.div`
     background: white;
-    height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:0 0 0 10%;
@@ -577,12 +583,13 @@ export const ConsultationText = styled.div`
   h2 {
     position: relative;
     font-weight: 600;
-    font-size: 55px;
-    line-height: 76px;
-    margin-bottom: 32px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 138%;
+    margin-bottom: 24px;
     @media (max-width: 1024px) {
       padding: 0 25px;
-      font-size: 35px;
+      font-size: 30px;
       line-height: 46px;
     }
   }
@@ -590,11 +597,11 @@ export const ConsultationText = styled.div`
   p {
     margin-bottom: 32px;
     font-weight: 300;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 168%;
     @media (max-width: 1024px) {
       padding: 0 25px;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
   .decoration {

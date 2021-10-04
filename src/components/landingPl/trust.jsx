@@ -1,5 +1,5 @@
 import React from 'react';
-import { trust } from './data';
+import { cardData } from '../../lib/partners';
 import { PartnersWrapper, CardWrapper, CardLogo, CardLink } from '../styled';
 import { TrustElement } from './styled';
 
@@ -23,7 +23,7 @@ const TrustComponent = () => {
     <TrustElement>
     <h2>Zaufali nam</h2>
     <PartnersWrapper>
-      {trust.map((item, index) => (
+      {cardData.map((item, index) => (
         <Card item={item} key={index} />
       ))}
     </PartnersWrapper>

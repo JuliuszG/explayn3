@@ -1774,10 +1774,10 @@ export const Landing2Wrapper = styled.div`
     position: relative;
 
     h1 {
-      font-size: 60px;
       font-weight: 600;
+      font-size: 66px;
+      line-height: 120%;
       text-align: center;
-      line-height: 87px; 
       .blue {
         color: #3D52CE;
       }
@@ -1804,8 +1804,8 @@ export const Landing2Wrapper = styled.div`
       margin: 55px auto 0 auto;
       font-size: 18px;
       font-weight: 300;
-      text-align: center;
-      line-height: 28px;
+      font-size: 1.375em;
+      line-height: 136%;
       @media (max-width: 576px) {
         margin-top: 20px;
         font-size: 16px;

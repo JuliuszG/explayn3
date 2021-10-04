@@ -1,7 +1,11 @@
 import ArrivesImage from '../../images/landingPL/arrives.svg';
+import ArrivesImageHover from '../../images/landingPL/arrivesHover.svg';
 import AwarenessImage from '../../images/landingPL/awareness.svg';
+import AwarenessImageHover from '../../images/landingPL/awarenessHover.svg';
 import CompetitorImage from '../../images/landingPL/competitor.svg';
+import CompetitorImageHover from '../../images/landingPL/competitorHover.svg';
 import SalesImage from '../../images/landingPL/sales.svg';
+import SalesImageHover from '../../images/landingPL/salesHover.svg';
 import Facebook from '../../images/landingPL/facebook.svg';
 import Tiktok from '../../images/landingPL/tiktok.svg';
 import Linkedin from '../../images/landingPL/linkedin.svg';
@@ -22,6 +26,7 @@ export const benefits = [
         {
           src: SalesImage,
           alt: 'icon',
+          srcHover: SalesImageHover,
         },
       ],
       name: 'Zwiększ sprzedaż i pozyskaj nowych klientów',
@@ -32,6 +37,7 @@ export const benefits = [
           {
             src: CompetitorImage,
             alt: 'icon',
+            srcHover: CompetitorImageHover,
           },
         ],
         name: 'Bądź konkurencyjny na tle innych',
@@ -42,6 +48,8 @@ export const benefits = [
           {
             src: AwarenessImage,
             alt: 'icon',
+            srcHover: AwarenessImageHover,
+
           },
         ],
         name: 'Zwiększaj świadomość swoich odbiorców',
@@ -52,6 +60,7 @@ export const benefits = [
           {
             src: ArrivesImage,
             alt: 'icon',
+            srcHover: ArrivesImageHover,
           },
         ],
         name: 'Docieraj do swoich obecnych klientów',
