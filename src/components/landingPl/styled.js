@@ -422,7 +422,7 @@ export const ContactContainer = styled.div`
     form {
       button {
         margin-top: 24px;
-        width: 550px;
+        width: 450px;
         height:64px;
         background: linear-gradient(#4c65ff 0%,#263380 180%);
         border-radius: 29px;
@@ -444,7 +444,7 @@ export const ContactContainer = styled.div`
       margin-bottom: 25px;
       .text {
         position: relative;
-        max-width: 550px;
+        max-width: 450px;
         height: 48px;
         font-size: 16px;
         appearance: none;
@@ -645,6 +645,7 @@ export const ConsultationText = styled.div`
 `;
 
 export const SurmaContent = styled.div`
+    position: relative;
     font-family: Poppins;
     padding: 0;
     border: 0;
@@ -654,9 +655,21 @@ export const SurmaContent = styled.div`
     background: white;
     overflow-y: scroll;
     height: 90%;
+    @media (max-width: 992px) {
+      margin: 0;
+      padding-top: 200px;
+      height: 100%;
+      width: 100%;
+    }
     box-shadow: 0px 3px 76px #00000029;
     .logo {
       margin: 200px 400px 110px 400px;
+      @media (max-width: 992px) {
+        margin: 5%;
+        position: absolute;
+        top: 40px;
+        left: calc(50% - 260px);
+      }
     }
     h3 {
       font-weight: 600;
@@ -687,12 +700,19 @@ export const SurmaContent = styled.div`
       font-size: 127px;
       line-height: 140px;
       color: #e8e8e8;
+      @media (max-width: 992px) {
+        font-size: 67px;
+        line-height: 80px;
+      }
     }
     .number-wrapper {
       margin-top: 30px;
       margin-bottom: 90px;
       display:grid;
       grid-template-columns: 1fr 1fr 1fr;
+      @media (max-width: 992px) {
+        grid-template-columns: 1fr;
+      }
 
       .text {
         margin-bottom:20px;
@@ -706,6 +726,9 @@ export const SurmaContent = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
+      @media (max-width: 992px) {
+        margin-bottom: 20px;
+      }
       p {
         text-align: center;
       }
@@ -713,12 +736,18 @@ export const SurmaContent = styled.div`
         margin-bottom: 24px;
         margin-top: 16px;
       }
+
     }
     .challenge-wrapper {
       padding:0 250px 0 100px;
       display: flex;
       justify-content: space-between;
       margin-bottom: 70px;
+      @media (max-width: 992px) {
+        flex-direction: column;
+        padding:0 5%;
+
+      }
       h3 {
         margin-top: 20px;
         margin-bottom: 40px;
@@ -727,23 +756,37 @@ export const SurmaContent = styled.div`
       p {
         max-width: 500px;
         margin-bottom:88px;
+        @media (max-width: 992px) {
+          margin-bottom: 20px;
+        }
       }
     }
     .solutions {
       position: relative;
       padding: 0 100px;
+      @media (max-width: 992px) {
+        padding: 0 5%;
+      }
       .right {
         padding-left: 420px;
+        @media (max-width: 992px) {
+          padding-left: 5%;
+        }
       }
       .bottom {
-        padding-left: 144px;
+        padding-left: 5%;
       }
       .decoration {
         position: absolute;
-
+        @media (max-width: 992px) {
+          display:none;
+        }
         &-top {
           top: 31%;
           left:-100px;
+          @media (max-width: 992px) {
+            display:none;
+          }
         }
         &-up {
           right: 339px;
@@ -763,6 +806,10 @@ export const SurmaContent = styled.div`
     .solutions-text {
       max-width: 550px;
       margin-left: 45px;
+      @media (max-width: 992px) {
+        margin-left: 25px;
+        max-width: 300px;
+      }
 
       .bold {
         font-weight: 600;
@@ -770,7 +817,6 @@ export const SurmaContent = styled.div`
       }
     }
     .logo-small {
-      margin-top: 190px;
       margin-bottom:34px;
       margin-left: calc(50% - 69px);
      }
@@ -781,6 +827,32 @@ export const SurmaContent = styled.div`
       font-size: 14px;
       line-height: 39px;
       margin-bottom:20px;
+    }
+    button {
+      width: 44px;
+      height: 44px;
+      background: #f8f8f8;
+      filter: drop-shadow(-2px -2px 2px #fff);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: black;
+      font-weight: 900;
+      font-size: 22px;
+      position: absolute;
+      top: -105px;
+      right: 20px;
+      padding:0;
+
+      @media (max-width: 992px) {
+         top: -49px;
+      }
+    }
+    .circle {
+      @media (max-width: 992px) {
+        display:none;
+      }
     }
 `;
 

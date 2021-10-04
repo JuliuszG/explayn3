@@ -61,6 +61,7 @@ const Client = () => {
         <SurmaWrapper>
         <div id="surma" className={open ? 'show' : 'none'} >
         <SurmaContent ref={ref}>
+            <button onClick={() => setOpen(false)}>x</button>
             <img src={SurmaLogo} alt='surma logo' className="logo"/>
             <h3>Zakres pracy</h3>
             <p className="strategy">Strategia reklamowa / Facebook Ads / Instagram Ads</p>
@@ -85,7 +86,7 @@ const Client = () => {
                     <p>Analizując specyfikę branży i to w jaki sposób przebiega proces zakupowy, maksymalnie dostosowaliśmy działania do wymagań rynkowych i oczekiwań klienta.</p>
                     <p>Razem z klientem opracowaliśmy założenia:</p>
                 </div>
-                <img src={landingCircle} alt="decoration" />
+                <img src={landingCircle} alt="decoration" class="circle"/>
             </div>
             <div className="number-wrapper">
                 <div className="number-flex">
@@ -106,7 +107,7 @@ const Client = () => {
                     <h3>Rozwiązanie</h3>
                     <p>Analizując specyfikę branży i to w jaki sposób przebiega proces zakupowy, maksymalnie dostosowaliśmy działania do wymagań rynkowych i oczekiwań klienta.</p>
                 </div>
-                <img src={landingCircle} alt="decoration" />
+                <img src={landingCircle} alt="decoration" class="circle"/>
             </div>
             <div className="solutions">
             <img src={line} alt="decoration" className="decoration decoration-up" />
