@@ -436,7 +436,7 @@ export const ContactContainer = styled.div`
     }
     form {
       button {
-        margin-top: 24px;
+        margin-top: 40px;
         width: 450px;
         height:64px;
         background: linear-gradient(#4c65ff 0%,#263380 180%);
@@ -489,11 +489,17 @@ export const ContactContainer = styled.div`
     }
     }
     .checkbox {
+      position: relative;
+      height: 80px;
+      @media (max-width: 450px) {
+        height: 120px;
+      }
       span {
+        position: absolute;
         max-width: 400px;
         margin-left: 30px;
         font-size: 9px;
-        line-height: 28px;
+        line-height: 20px;
         font-weight: 600;
         text-align: left;
       }

@@ -157,8 +157,8 @@ const ContactForm = () => {
                     <label />
                     <input type="checkbox" name='checkbox' className="checkbox-item" onBlur={event => handleBlur(event.target.name, event.target.value)}/>
                     <span>Wyrażasz zgodę na kontakt telefoniczny w celu obsługi niniejszego zgłoszenia. Wyrażasz zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej wysyłanymi przez www.explayn.it oraz na wykorzystanie komunikacji email w celach marketingowych (Polityka Prywatności).</span>
-                    <FormErrorMessage>{errorData.checkbox}</FormErrorMessage>
                 </div>
+                <FormErrorMessage>{errorData.checkbox}</FormErrorMessage>
                 <button type="submit" value="Wyślij">Wyślij</button>
             </form>
         </ContactContainer>
