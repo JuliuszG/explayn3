@@ -1660,7 +1660,7 @@ export const Landing2Wrapper = styled.div`
     }
     &-pl--top {
       left: calc(50% - 170px);
-      top: 12%;
+      top: 15%;
     }
     &-pl--left{
       left: -152px;
@@ -1781,7 +1781,7 @@ export const Landing2Wrapper = styled.div`
 
     h1 {
       font-weight: 600;
-      font-size: 66px;
+      font-size: 50px;
       line-height: 120%;
       text-align: center;
       .blue {
@@ -1794,8 +1794,8 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h2 {
-      margin-top: 100px;
-      font-size: 28px;
+      margin-top: 60px;
+      font-size: 24px;
       font-weight: 300;
       text-align: center;
       .blue {
@@ -1807,18 +1807,20 @@ export const Landing2Wrapper = styled.div`
     }
     p {
       max-width: 556px;
-      margin: 55px auto 0 auto;
+      margin: 25px auto 0 auto;
       font-size: 18px;
       font-weight: 300;
       font-size: 1.375em;
       line-height: 136%;
+      text-align: center;
       @media (max-width: 576px) {
+        tex-align: left;
         margin-top: 20px;
         font-size: 16px;
       }
     }
     button {
-      margin-top: 55px;
+      margin-top: 35px;
       margin-left: calc(50% - 165px);
       background: linear-gradient(#4c65ff 0%,#263380 180%);
       border-radius: 29px;
