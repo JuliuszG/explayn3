@@ -1096,7 +1096,6 @@ export const LoaderWrapper = styled(motion.div)`
 export const FooterWrapper = styled.footer`
   width: 100%;
   height: 100vh;
-  min-width: 100%;
   background: #272727;
   font-family: 'Poppins';
   padding: 100px 40px 0;
@@ -1167,8 +1166,8 @@ export const FooterWrapper = styled.footer`
 `;
 
 export const FooterContent = styled.div`
+  max-width: 1500px;
   margin: 0 auto;
-  padding:0 10%;
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   grid-template-rows: auto;
