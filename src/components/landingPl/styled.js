@@ -53,11 +53,13 @@ export const BenefitCard = styled.div`
     color: white;
     .image {
         margin: auto 0;
+        opacity:0.5;
         @media (max-width: 576px) {
           transform: scale(0.7)
       } 
         &:hover {
           transition: 0.2s ease-in;
+          opacity:1;
       }
 
     }
