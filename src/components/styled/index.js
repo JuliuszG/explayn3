@@ -1104,12 +1104,14 @@ export const FooterWrapper = styled.footer`
   @media (max-width: 1024px) {
     padding: 10%;
   }
-  @media ${deviceMax.mobileM} {
+  @media ${deviceMax.mobileL} {
     padding: 25px 10px 0;
-    height: 100%;
   }
   @media ${deviceMax.mobileS} {
     padding: 10px 10px 0;
+  }
+  @media (max-height: 700px) {
+    height: 100%;
   }
   h3 {
     color: #ffffff;
