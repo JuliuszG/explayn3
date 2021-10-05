@@ -3141,6 +3141,16 @@ export const MobileNav = styled.div`
     background: ${colors.neutral30};
   }
 `;
+
+export const MobileNavWrapper = styled.div`
+  .sticky {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index:99999;
+  }
+`;
 //navigation/mobileMenu.jsx
 
 export const MobileMenuWrapper = styled.div`
