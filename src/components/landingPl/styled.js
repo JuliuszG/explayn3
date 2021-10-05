@@ -304,7 +304,7 @@ export const Icons = styled.div`
         display: block;
         position: absolute;
         top: 200px;
-        left: 6vw;
+        left: 2vw;
         width: 40vw;
         max-height: 200px;
         background-color: #f5f6fa;
@@ -330,7 +330,7 @@ export const Icons = styled.div`
         display: block;
         position: absolute;
         top: 200px;
-        left: 1vw;
+        left: -3vw;
         width: 40vw;
         max-height: 200px;
         background-color: #f5f6fa;
