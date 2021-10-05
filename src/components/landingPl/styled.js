@@ -175,7 +175,16 @@ export const ClientWrapper = styled.div`
         font-size: 16px;
         font-family: Poppins;
         cursor: pointer;
-
+        transition: all 0.1s ease-in;
+        &:hover {
+          color: #404040;
+          font-weight: 600;
+          letter-spacing: 3px;
+          background: #fff;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          transition: all 0.3s ease 0s;
+        }
         @media (max-width: 576px) {
           margin-top: 60px;
         }
@@ -439,7 +448,16 @@ export const ContactContainer = styled.div`
         font-family: 'Poppins';
         font-size: 24px;
         cursor: pointer;
-
+        transition: all 0.1s ease-in;
+        &:hover {
+          color: #404040;
+          font-weight: 600;
+          letter-spacing: 3px;
+          background: #fff;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          transition: all 0.3s ease 0s;
+        }
         @media (max-width: 576px) {
           width: 100%;
         }
@@ -777,11 +795,11 @@ export const SurmaContent = styled.div`
       .right {
         padding-left: 420px;
         @media (max-width: 992px) {
-          padding-left: 5%;
+          padding-left: 0;
         }
       }
       .bottom {
-        padding-left: 5%;
+        padding-left: 0;
       }
       .decoration {
         position: absolute;
@@ -851,7 +869,16 @@ export const SurmaContent = styled.div`
       top: -105px;
       right: 20px;
       padding:0;
-
+      transition: all 0.1s ease-in;
+      &:hover {
+        color: #404040;
+        font-weight: 600;
+        letter-spacing: 3px;
+        background: #fff;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.3s ease 0s;
+      }
       @media (max-width: 992px) {
          top: -49px;
       }
