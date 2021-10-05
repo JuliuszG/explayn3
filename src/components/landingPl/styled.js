@@ -911,7 +911,7 @@ export const SurmaWrapper = styled.div`
     left: 0;
     width: 100vw;
     height: 100%;
-    z-index:9999;
+    z-index:99999;
   }
 
 `;
