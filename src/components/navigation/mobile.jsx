@@ -47,9 +47,9 @@ const Mobile = () => {
   }
 
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    if (window.scrollY > 700) {
       setScroll(true)
-    } else if (window.scrollY < 100) {
+    } else if (window.scrollY < 700) {
       setScroll(false)
     }
   })
