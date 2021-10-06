@@ -1794,7 +1794,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h2 {
-      margin-top: 60px;
+      margin-top: 40px;
       font-size: 24px;
       font-weight: 300;
       text-align: center;
@@ -1807,7 +1807,7 @@ export const Landing2Wrapper = styled.div`
     }
     p {
       max-width: 556px;
-      margin: 25px auto 0 auto;
+      margin: 20px auto 0 auto;
       font-size: 18px;
       font-weight: 300;
       font-size: 1.375em;
@@ -1820,7 +1820,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     button {
-      margin-top: 35px;
+      margin-top: 25px;
       margin-left: calc(50% - 165px);
       background: linear-gradient(#4c65ff 0%,#263380 180%);
       border-radius: 29px;
