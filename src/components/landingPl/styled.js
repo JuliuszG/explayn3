@@ -232,13 +232,14 @@ export const Icons = styled.div`
   .line {
     width: 100px;
     height: 5px;
-    border-bottom: 5px dashed #f2f2f2;
-    margin: 0 20px;
+    border-bottom: 4px dotted #f2f2f2;
+    margin: 0 20px 22px 20px;
+
     @media (max-width: 1200px) {
       height: 50px;
       width: 5px;
       border-bottom: none;
-      border-left: 15px dashed #f2f2f2;
+      border-left: 5px dashed #f2f2f2;
       margin: 50px 0 20px;
     }
     @media (max-width: 1024px) {
@@ -288,6 +289,7 @@ export const Icons = styled.div`
       margin-top: 30px;
       max-width: 170px;
       text-align: center;
+      height: 44px;
       @media ${deviceMax.laptopM} {
         margin-top: 54px;
       }
