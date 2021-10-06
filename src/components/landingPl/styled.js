@@ -504,6 +504,15 @@ export const ContactContainer = styled.div`
         line-height: 20px;
         font-weight: 600;
         text-align: left;
+
+        a {
+          font-size: 9px;
+          line-height: 20px;
+          font-weight: 600;
+          text-align: left;
+          color: #3D52CE;
+          text-decoration: none;
+        }
       }
       @supports(-webkit-appearance: none) or (-moz-appearance: none) {
         input[type='checkbox'] {
