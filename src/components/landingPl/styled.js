@@ -292,10 +292,13 @@ export const Icons = styled.div`
       height: 44px;
       @media ${deviceMax.laptopM} {
         margin-top: 54px;
+
       }
       @media ${deviceMax.mobileL} {
         font-size: 18px;
         margin-top: 10px;
+        height: 0px;
+
       }
     }
     @media (min-width: 1200px) and (hover: hover) {
