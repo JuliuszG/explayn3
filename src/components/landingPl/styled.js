@@ -286,7 +286,7 @@ export const Icons = styled.div`
       font-size: 22px;
       font-weight: 600;
       margin-top: 30px;
-      margin-top: 30px;
+      margin-bottom: 0;
       max-width: 170px;
       text-align: center;
       height: 44px;
@@ -298,6 +298,7 @@ export const Icons = styled.div`
         font-size: 18px;
         margin-top: 10px;
         height: 0px;
+        margin-bottom: 12px;
 
       }
     }
