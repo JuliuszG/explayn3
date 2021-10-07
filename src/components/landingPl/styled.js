@@ -230,10 +230,10 @@ export const Icons = styled.div`
     }
   }
   .line {
-    width: 100px;
+    width: 150px;
     height: 5px;
     border-bottom: 4px dotted #f2f2f2;
-    margin: 0 20px 22px 20px;
+    margin-bottom: 22px;
 
     @media (max-width: 1200px) {
       height: 50px;
