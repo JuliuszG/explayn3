@@ -3680,7 +3680,7 @@ export const ServicesTopSection = styled.div`
     margin-bottom: 30px;
     margin-left: 200px;
     margin-top: -110px;
-    z-index: 9999;
+    z-index: 9;
     position: relative;
     @media ${deviceMax.tablet} {
       margin-left: 20px;
