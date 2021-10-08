@@ -2035,17 +2035,19 @@ export const AboutUsWrapper = styled(motion.section)`
     text-decoration: none;
   }
   .cnt {
-    padding-left: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     @media (max-width: 956px) {
       flex-direction: column;
-      justify-content: center;
       align-items: center;
     }
     @media ${deviceMax.mobileL} {
-      padding-left: 0;
+      padding-left: 10%;
+      align-items: flex-start;
+    }
     }
     &.first {
       margin-top: 80px;
@@ -2104,15 +2106,16 @@ export const BoxWrapper = styled.div`
   font-family: 'Poppins';
   font-style: normal;
   color: ${colors.neutral00};
-  width: 500px;
+  macwidth: 400px;
   height: 310px;
   cursor: pointer;
   margin: 2% 0;
+  width:100%;
   @media (max-width: 1600px) {
-    width: 400px;
+    max-width: 300px;
   }
   @media (max-width: 1250px) {
-    width: 300px;
+    max-width: 300px;
   }
   @media (max-width: 956px) {
     max-width: 300px;

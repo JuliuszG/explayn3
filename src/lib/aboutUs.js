@@ -70,6 +70,26 @@ export const items = [
   {
     image: [
       {
+        src: MarketingImage,
+        alt: 'Marketing',
+      },
+      {
+        src: MarketingHover,
+        alt: 'Marketing',
+      },
+    ],
+    name: 'Marketing',
+    list: [
+      'Marketing strategy',
+      'Paid Advertising',
+      'Social Media Management',
+      'Marketing Automation',
+    ],
+    url: '/marketing',
+  },
+  {
+    image: [
+      {
         src: EcommerceImage,
         alt: 'eCommerce',
       },
@@ -106,26 +126,6 @@ export const items = [
       'Audient',
     ],
     url: '/events',
-  },
-  {
-    image: [
-      {
-        src: MarketingImage,
-        alt: 'Marketing',
-      },
-      {
-        src: MarketingHover,
-        alt: 'Marketing',
-      },
-    ],
-    name: 'Marketing',
-    list: [
-      'Marketing strategy',
-      'Paid Advertising',
-      'Social Media Management',
-      'Marketing Automation',
-    ],
-    url: '/marketing',
   },
 ];
 

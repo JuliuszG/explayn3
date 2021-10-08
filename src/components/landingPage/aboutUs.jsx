@@ -142,7 +142,7 @@ const AboutUs = () => {
       <div className="cnt first">
         {items.map(
           (item, index) =>
-            index < 3 && (
+            index < 4 && (
               <a key={index} href={item.url}>
                 <Box isCollapsed={isCollapsed} content={item} />
               </a>
@@ -150,11 +150,11 @@ const AboutUs = () => {
         )}
       </div>
       {renderSecond()}
-      <div className="btn__cnt">
+      {/* <div className="btn__cnt">
         <AboutUsButton onClick={() => setIsCollapsed(prevState => !prevState)}>
           {isCollapsed ? 'Show more' : 'Show less'}
         </AboutUsButton>
-      </div>
+      </div> */}
     </AboutUsWrapper>
   );
 };
