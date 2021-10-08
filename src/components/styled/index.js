@@ -1096,7 +1096,7 @@ export const LoaderWrapper = styled(motion.div)`
 export const FooterWrapper = styled.footer`
   width: 100%;
   height: 100vh;
-  background: #272727;
+  background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
   font-family: 'Poppins';
   padding: 100px 40px 0;
   position: relative;
