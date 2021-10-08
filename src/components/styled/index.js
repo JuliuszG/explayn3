@@ -2048,7 +2048,6 @@ export const AboutUsWrapper = styled(motion.section)`
       padding-left: 10%;
       align-items: flex-start;
     }
-    }
     &.first {
       margin-top: 80px;
     }
