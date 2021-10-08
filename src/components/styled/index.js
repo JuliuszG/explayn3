@@ -3656,6 +3656,52 @@ export const ServicesTopSection = styled.div`
     align-items: flex-start;
     justify-content: center;
   }
+  .grey {
+    font-family: Poppins;
+    font-weight: 900;
+    font-size: 282px;
+    line-height: 339px;
+    text-align: left;
+    color: #ebebeb;
+    opacity: 0.35;
+
+    @media ${deviceMax.tablet} {
+      font-size: 150px;
+      line-height: 170px;
+    }
+  }
+
+  .text {
+    max-width: 450px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    margin-left: 200px;
+    margin-top: -110px;
+    z-index: 9999;
+    position: relative;
+    @media ${deviceMax.tablet} {
+      margin-left: 20px;
+      margin-top: -50px;
+    }
+  }
+
+  a {
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 200px;
+    color: #3f54d3;
+    cursor: pointer;
+    position: relative;
+
+    @media ${deviceMax.tablet} {
+      margin-left: 20px;
+    }
+  }
 `;
 
 export const ServicesScrollLink = styled(ScLink)`
