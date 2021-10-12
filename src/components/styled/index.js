@@ -1774,6 +1774,7 @@ export const Landing2Wrapper = styled.div`
       font-size: 8px;
       margin-bottom: 10vh;
       padding-top: 0;
+      margin: 10% auto 5%;
     }
   }
   .content--pl {
@@ -1807,7 +1808,7 @@ export const Landing2Wrapper = styled.div`
     }
     p {
       max-width: 556px;
-      margin: 20px auto 0 auto;
+      margin: 60px auto 0 auto;
       font-size: 18px;
       font-weight: 300;
       font-size: 1.375em;

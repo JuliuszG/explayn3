@@ -6,6 +6,7 @@ export const BenefitsWrapper = styled.div`
     font-family: Poppins;
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
     padding: 100px 10% 39px;  
+    height: 100vh;
     @media (max-width: 576px) {
         padding-top: 90px;
     } 
@@ -25,7 +26,7 @@ export const BenefitsWrapper = styled.div`
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
-        column-gap: 120px;
+        column-gap: 100px;
 
         @media (max-width: 1024px) {
           grid-template-columns: 1fr; 
@@ -86,7 +87,7 @@ export const BenefitCard = styled.div`
 
     }
     .text {
-        margin-bottom: 143px;
+        margin-bottom: 100px;
         margin-left: 130px;
         font-weight: 300;
         font-size: 16px;
@@ -126,7 +127,7 @@ export const BenefitCardSocial = styled.div`
     }
     .text {
         margin-top: 70px;
-        margin-bottom: 143px;
+        margin-bottom: 100px;
         font-weight: 300;
         font-size: 16px;
         line-height: 23px;
