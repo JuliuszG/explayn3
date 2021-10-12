@@ -3671,7 +3671,7 @@ export const ServicesTopSection = styled.div`
     max-width: 450px;
     font-family: Poppins;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     margin-bottom: 30px;
     margin-left: 200px;
@@ -3684,10 +3684,10 @@ export const ServicesTopSection = styled.div`
     }
   }
 
-  a {
+  .link {
     font-family: Poppins;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 22px;
     line-height: 30px;
     margin-left: 200px;
     color: #3f54d3;
@@ -3888,6 +3888,7 @@ export const BenefitsSection = styled.div`
   margin:0 auto;
   width: 100%;
   min-height: 100vh;
+  height: 100%;
   padding: 80px 10%;
 
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};

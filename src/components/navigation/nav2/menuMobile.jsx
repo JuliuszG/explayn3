@@ -81,12 +81,6 @@ const MenuMobile = ({ toggle }) => {
       <motion.a variants={subItemAnimation} custom={3} href="/branding">
         Branding
       </motion.a>
-      <motion.a variants={subItemAnimation} custom={4} href="/ecommerce">
-        eCommerce
-      </motion.a>
-      <motion.a variants={subItemAnimation} custom={5} href="/events">
-        Events
-      </motion.a>
       <motion.a variants={subItemAnimation} custom={6} href="/visual">
         Visual
       </motion.a>

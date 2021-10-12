@@ -180,20 +180,6 @@ const MenuDesktop = ({ toggle }) => {
             <motion.div
               className="sub-item"
               variants={subItemAnimation}
-              custom={4}
-            >
-              <Link to="/ecommerce">eCommerce</Link>
-            </motion.div>
-            <motion.div
-              className="sub-item"
-              variants={subItemAnimation}
-              custom={5}
-            >
-              <Link to="/events">Events</Link>
-            </motion.div>
-            <motion.div
-              className="sub-item"
-              variants={subItemAnimation}
               custom={6}
             >
               <Link to="/visual">Visual </Link>

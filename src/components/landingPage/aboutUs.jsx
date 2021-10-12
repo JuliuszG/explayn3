@@ -15,7 +15,7 @@ import {
 
 const Box = ({ content }) => {
   const [hovered, setHovered] = useState(false);
-  const isDesktop = window.matchMedia('(min-width: 450px)')
+  const isDesktop = window.matchMedia('(min-width: 450px)').matches
   const renderImage = useMemo(() => {
     return (
       <BoxImageWrapper>

@@ -23,7 +23,7 @@ const PageNotFound = () => {
         <div>
           <h1 className="grey">404</h1>
           <p className="text">OOOPS… WE COULDN’T FIND THE PAGE YOUR LOOKING FOR.</p>
-          <a href="/">VISIT HOMEPAGE</a>
+          <a href="/" className="link">VISIT HOMEPAGE</a>
         </div>
         <ServicesImgContainer>
           <img src={Image} alt="dev icon" />
