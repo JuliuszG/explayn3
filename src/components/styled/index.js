@@ -1770,11 +1770,11 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .cnt-pl {
+    margin: 10% auto 0 !important;
     @media (max-width: 450px) {
       font-size: 8px;
       margin-bottom: 10vh;
       padding-top: 0;
-      margin: 10% auto 5%;
     }
   }
   .content--pl {

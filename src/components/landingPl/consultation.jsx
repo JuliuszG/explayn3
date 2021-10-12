@@ -16,7 +16,7 @@ const Consultation = () => {
                 <p>Podczas rozmowy, możesz bezpłatnie skonsultować dowolny temat związany z marketingiem, a my zadbamy o najwyższy poziom udzielanych odpowiedzi. </p>
                 <div className="quote-wrapper">
                     <img src={Icon} alt="decoration" />
-                    <p className="quote">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</p>
+                    <p className="quote">Explayn poszerzył naszą perspektywę na digital marketing. Dzięki współpracy poznaliśmy alternatywne i precyzyjne sposoby pozyskiwania partnerów biznesowych.</p>
                 </div>
                 <div className="referal-wrapper">
                     <div className="circle"></div>
