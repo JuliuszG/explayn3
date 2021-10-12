@@ -2363,35 +2363,31 @@ export const StepsWrapper = styled.div`
     padding-bottom: 80px;
   }
   .header {
-    max-width: 1300px;
-    display: flex;
-    align-items: flex-start;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15%;
     color: #000;
     margin-bottom: 60px;
-    @media ${deviceMin.desktop} {
-      max-width: 1055px;
-    }
-    @media (max-width: 1500px) {
-      max-width: 900px;
-    }
+
     @media (max-width: 1050px) {
+      display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 10%;
+      padding: 10% 0;
       margin-bottom: 20px;
     }
     h2 {
       font-size: 44px;
       line-height: 138%;
-      margin-right: 10px;
       font-weight: 600;
       @media ${deviceMax.laptopL} {
-        width: 55%;
+        max-width: 512px;
       }
       @media ${deviceMax.laptop} {
         margin-right: 0;
-        width: 100%;
+        max-width: 512px;
         margin-bottom: 40px;
       }
 
@@ -2400,12 +2396,12 @@ export const StepsWrapper = styled.div`
       }
     }
     p {
-      width: 50%;
+      max-width: 512px;
       font-size: 16px;
       line-height: 136%;
       font-weight: 300;
       @media ${deviceMax.laptop} {
-        width: 100%;
+        max-width: 512px;
       }
       @media ${deviceMax.mobileL} {
         font-size: 14px;
@@ -3631,7 +3627,6 @@ export const ServiceWrapper = styled.div`
 `;
 
 export const ServicesTopSection = styled.div`
-  margin: 0 auto;
   width: 100%;
   height: 100vh;
   padding: 0 10%;
@@ -3706,11 +3701,12 @@ export const ServicesTopSection = styled.div`
 `;
 
 export const ServicesScrollLink = styled(ScLink)`
-  width: 100px;
-  position: absolute;
+  width: 110px;
+  position: absolute !important;
   bottom: 20px;
   left: calc(50% - 50px);
   cursor: pointer;
+  margin-left: 0 !important;
   .content {
     width: 100%;
     display: flex;
@@ -3858,12 +3854,14 @@ export const SentenceSectionContent = styled.div`
     }
   }
   .text-cnt {
-    display: flex;
-    justify-content: flex-start;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 15%;
     font-weight: 300;
     font-size: 16px;
     line-height: 136%;
     @media ${deviceMax.laptop} {
+      displaY: flex;
       flex-direction: column;
       align-items: center;
     }
