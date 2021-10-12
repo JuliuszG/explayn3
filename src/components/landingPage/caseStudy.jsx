@@ -7,7 +7,6 @@ import {
   Slide,
   ButtonNext,
 } from 'pure-react-carousel';
-import { useLocation } from '@reach/router';
 import { useMediaQuery } from 'react-responsive';
 import { motion } from 'framer-motion';
 import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
@@ -44,9 +43,8 @@ const Header = () => {
     triggerOnce: true,
     threshold: 0.5,
   });
-  const location = useLocation();
   return (
-    <CaseStudyHeaderWrapper ref={ref} className={ !location.pathname === '/' && 'wrapper'}>
+    <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.origin == window.location.href) && 'wrapper'}>
       <div className="text">
         <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
         <AnimatedParagraph inView={inView}>

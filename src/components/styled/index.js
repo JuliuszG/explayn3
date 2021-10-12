@@ -2192,6 +2192,13 @@ export const CaseStudyWrapper = styled.section`
       }
     }
   }
+  .wrapper {
+    @media ${deviceMin.LaptopL} {
+      max-width: 1303px;
+      padding: 100px 0 60px;
+      margin:0 auto;
+    }
+  }
 `;
 
 export const CaseStudyHeaderWrapper = styled.div`
@@ -2377,6 +2384,9 @@ export const StepsWrapper = styled.div`
       align-items: center;
       padding: 10% 0;
       margin-bottom: 20px;
+    }
+    @media ${deviceMin.LaptopL} {
+      max-width:1303px;
     }
     h2 {
       font-size: 44px;
@@ -3634,8 +3644,8 @@ export const ServicesTopSection = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  @media ${deviceMin.desktop} {
-    justify-content: space-around;
+  @media ${deviceMin.desktopL} {
+    justify-content: center;
   }
 
   @media ${deviceMax.tabletL} {
@@ -3761,6 +3771,9 @@ export const ServicesImgContainer = styled.div`
     @media ${deviceMax.laptopM} {
       max-width: 360px;
     }
+    @media ${deviceMin.laptopL} {
+      margin-left: 360px;
+    }
     @media ${deviceMax.mobileL} {
       max-width: 310px;
       display: flex;
@@ -3783,6 +3796,10 @@ export const ServicesImg = styled.div`
     @media ${deviceMax.laptopM} {
       max-width: 200px;
     }
+    @media ${deviceMin.laptopl} {
+      width: 420px;
+      margin-left: 360px;
+    }
   }
 `;
 
@@ -3796,6 +3813,7 @@ export const SentenceSection = styled.div`
   @media ${deviceMax.laptopM} {
     padding: 60px 0;
   }
+  
 `;
 
 export const SentenceSectionContent = styled.div`
@@ -3811,6 +3829,11 @@ export const SentenceSectionContent = styled.div`
   @media ${deviceMin.desktop} {
     max-width: 1630px;
     margin: 0 auto;
+  }
+  @media ${deviceMin.laptopL} {
+    padding:0;
+    max-width: 1303px;
+
   }
 
   h2 {
@@ -3893,8 +3916,8 @@ export const BenefitsSection = styled.div`
 
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
   @media (min-width: 2560px) {
-    max-width: 1630px;
-    margin: 0 auto;
+    max-width: 1303px;
+    padding: 80px 0;
   }
   h2 {
     max-width: 740px;
@@ -3991,6 +4014,10 @@ export const BenefitsSection = styled.div`
 export const BenefitsContentWrapper = styled.div`
   width:100%;
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
+
+  @media (min-width: 2560px) {
+    margin:0 auto;
+  }
 `
 
 export const BenefitsContent = styled.div`
@@ -4000,6 +4027,7 @@ export const BenefitsContent = styled.div`
   row-gap: 60px;
   @media (min-width: 2560px) {
     column-gap: 50px;
+
   }
   @media (max-width: 1600px) {
     grid-template-columns: repeat(2, 450px);
@@ -4033,7 +4061,7 @@ export const TechnologySection = styled.div`
     display: flex;
     justify-content: space-between;
     @media (min-width: 2560px) {
-      max-width: 1055px;
+      max-width: 1303px;
       margin: 0 auto;
     }
     @media ${deviceMax.laptopM} {
@@ -4551,7 +4579,7 @@ export const ServicesSection = styled.section`
 `;
 
 export const DemandLeftSection = styled.div`
-  max-width: 480px;
+  max-width: 500px;
   @media ${deviceMax.tabletL} {
     width: 100%;
   }
@@ -4581,6 +4609,9 @@ export const DemandList = styled.ul`
   @media ${deviceMax.tabletL} {
     width: 100%;
     margin-top: 60px;
+  }
+  @media ${deviceMin.LaptoptL} {
+    width: 420px;
   }
   & li {
     font-weight: 600;
@@ -4618,8 +4649,8 @@ export const QuoteSection = styled.div`
     font-size: 44px;
     line-height: 138%;
     max-width: 1100px;
-    @media ${deviceMin.desktop} {
-      max-width: 1100px;
+    @media ${deviceMin.desktopL} {
+      max-width: 1303px;
       margin: 0 auto;
     }
 
