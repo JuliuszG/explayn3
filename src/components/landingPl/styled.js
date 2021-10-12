@@ -6,7 +6,7 @@ export const BenefitsWrapper = styled.div`
     font-family: Poppins;
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
     padding: 100px 10% 39px;  
-    height: 100vh;
+    min-height: 100vh;
     @media (max-width: 576px) {
         padding-top: 90px;
     } 
@@ -275,6 +275,7 @@ export const Icons = styled.div`
     position: relative;
     cursor: pointer;
     margin-top: 43px;
+    width: 170px;
 
     img {
       transform: scale(0.805);
