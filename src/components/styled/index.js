@@ -3796,7 +3796,7 @@ export const ServicesImg = styled.div`
     @media ${deviceMax.laptopM} {
       max-width: 200px;
     }
-    @media ${deviceMin.laptopl} {
+    @media ${deviceMin.laptopL} {
       width: 420px;
       margin-left: 360px;
     }
