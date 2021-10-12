@@ -44,7 +44,7 @@ const Header = () => {
     threshold: 0.5,
   });
   return (
-    <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.origin == window.location.href) && 'wrapper'}>
+    <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.pathname == '/') && 'wrapper'}>
       <div className="text">
         <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
         <AnimatedParagraph inView={inView}>

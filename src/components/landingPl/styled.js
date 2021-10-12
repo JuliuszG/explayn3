@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { colors } from '../../styles/colors';
+import BrandingImage from '../../images/landingPL/joanna.png';
 import { deviceMin, deviceMax } from '../../utils/breakpoints';
 
 export const BenefitsWrapper = styled.div`
@@ -673,7 +673,9 @@ export const ConsultationText = styled.div`
       width: 90px;
       height: 90px;
       border-radius: 50%;
-      background: #F1F1F1;
+      background-image: url(${BrandingImage});
+      background-position: 49% 35%;
+      background-size: 100%;
       @media (max-width: 576px) {
         margin-bottom: 15px;
       }
