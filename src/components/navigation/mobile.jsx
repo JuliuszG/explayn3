@@ -23,7 +23,7 @@ const Mobile = () => {
       setScroll(false)
     }
   })
-  console.log(scroll)
+
   const styles =  scroll ? {
     active: {
       visibility: "visible",
