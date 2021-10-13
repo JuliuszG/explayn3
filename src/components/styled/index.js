@@ -1240,6 +1240,9 @@ export const FooterContactUs = styled.div`
       margin: 8px 0;
     }
   }
+  @media ${deviceMax.mobileL} {
+    padding-bottom: 50px;
+  }
 `;
 
 export const FooterNewsletter = styled.div`
