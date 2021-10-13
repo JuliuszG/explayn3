@@ -4614,7 +4614,7 @@ export const DemandList = styled.ul`
     margin-top: 60px;
   }
   @media ${deviceMin.LaptoptL} {
-    width: 420px;
+    max-width: 420px;
   }
   & li {
     font-weight: 600;

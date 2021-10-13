@@ -17,7 +17,7 @@ const Mobile = () => {
   const { changeContactFormStatus } = useContext(appContext);
   const { y, x, scrollDirection } = useScroll();  
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 700 && window.scrollY < (document.body.clientHeight - window.innerHeight - 75)) {
+    if (window.scrollY > 700 && window.scrollY < (document.body.clientHeight - window.innerHeight - 175)) {
       setScroll(true)
     } else if (window.scrollY < 700) {
       setScroll(false)
