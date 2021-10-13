@@ -1773,7 +1773,7 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .cnt-pl {
-    margin: 10% auto 0 !important;
+    margin: 5% auto 0 !important;
     @media (max-width: 450px) {
       font-size: 8px;
       margin-bottom: 10vh;
@@ -3703,12 +3703,18 @@ export const ServicesTopSection = styled.div`
     font-size: 22px;
     line-height: 30px;
     margin-left: 200px;
-    color: #3f54d3;
+    color:  #ebebeb;
     cursor: pointer;
     position: relative;
-
+    text-decoration: none;
+    opacity: 0.35;
     @media ${deviceMax.tablet} {
       margin-left: 20px;
+    }
+    &:after {
+      width: 179px;
+      height: 1px;
+      color: #ebebeb;
     }
   }
 `;
