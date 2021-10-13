@@ -23,7 +23,7 @@ const Mobile = () => {
       setScroll(false)
     }
   })
-
+  console.log(scroll)
   const styles =  scroll ? {
     active: {
       visibility: "visible",
@@ -45,14 +45,6 @@ const Mobile = () => {
     hidden: {
     }
   }
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 700) {
-      setScroll(true)
-    } else if (window.scrollY < 700) {
-      setScroll(false)
-    }
-  })
   return (
     <MobileNavWrapper>
       <MobileNav style={scrollDirection === "down" ? styles.active: styles.hidden}>

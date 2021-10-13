@@ -86,7 +86,7 @@ const Client = () => {
                     <p>Analizując specyfikę branży i to w jaki sposób przebiega proces zakupowy, maksymalnie dostosowaliśmy działania do wymagań rynkowych i oczekiwań klienta.</p>
                     <p>Razem z klientem opracowaliśmy założenia:</p>
                 </div>
-                <img src={landingCircle} alt="decoration" class="circle"/>
+                <img src={landingCircle} alt="decoration" className="circle"/>
             </div>
             <div className="number-wrapper">
                 <div className="number-flex">
@@ -107,7 +107,7 @@ const Client = () => {
                     <h3>Rozwiązanie</h3>
                     <p>Analizując specyfikę branży i to w jaki sposób przebiega proces zakupowy, maksymalnie dostosowaliśmy działania do wymagań rynkowych i oczekiwań klienta.</p>
                 </div>
-                <img src={landingCircle} alt="decoration" class="circle"/>
+                <img src={landingCircle} alt="decoration" className="circle"/>
             </div>
             <div className="solutions">
             <img src={line} alt="decoration" className="decoration decoration-up" />
