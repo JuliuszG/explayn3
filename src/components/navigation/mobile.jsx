@@ -18,7 +18,7 @@ const Mobile = () => {
   const { y, x, scrollDirection } = useScroll();  
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 75)) {
+      if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 175)) {
         setScroll(true)
       } else {
         setScroll(false)
