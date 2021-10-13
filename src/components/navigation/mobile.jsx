@@ -17,13 +17,13 @@ const Mobile = () => {
   const { changeContactFormStatus } = useContext(appContext);
   const { y, x, scrollDirection } = useScroll();  
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 700 && window.scrollY < (document.body.clientHeight - window.innerHeight - 175)) {
+    if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 275)) {
       setScroll(true)
-    } else if (window.scrollY < 700) {
+    } else if (window.scrollY < 700 || window.scrollY > ((document.body.clientHeight - window.innerHeight) - 275)) {
       setScroll(false)
     }
   })
-
+  console.log(scroll)
   const styles =  scroll ? {
     active: {
       visibility: "visible",
