@@ -1818,7 +1818,7 @@ export const Landing2Wrapper = styled.div`
       line-height: 136%;
       text-align: center;
       @media (max-width: 576px) {
-        tex-align: left;
+        text-align: left !important;
         margin-top: 20px;
         font-size: 16px;
       }
