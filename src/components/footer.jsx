@@ -83,8 +83,6 @@ const Footer = () => {
           <Link to="/development">Development</Link>
           <Link to="/visual">Visual</Link>
           <Link to="/branding">Branding</Link>
-          <Link to="/ecommerce">eCommerce</Link>
-          <Link to="/events">Events</Link>
           <Link to="/marketing">Marketing</Link>
         </div>
         <div className="site-links-column sl2">
