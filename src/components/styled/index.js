@@ -3665,6 +3665,32 @@ export const ServicesTopSection = styled.div`
     align-items: flex-start;
     justify-content: center;
   }
+`;
+
+export const ServicesTopSection404 = styled.div`
+  width: 100%;
+  height: 100vh;
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  @media ${deviceMin.desktopL} {
+    justify-content: center;
+  }
+
+  @media ${deviceMax.tabletL} {
+    justify-content: flex-end;
+    padding: 0 10%;
+    padding-bottom: 120px;
+    flex-direction: column-reverse;
+    align-items: baseline;
+  }
+  @media ${deviceMax.tablet} {
+    padding: 60px 10% 100px 10%;
+    height: 100%;
+    align-items: flex-start;
+  }
   .grey {
     font-family: Poppins;
     font-weight: 900;
@@ -3703,19 +3729,26 @@ export const ServicesTopSection = styled.div`
     font-size: 22px;
     line-height: 30px;
     margin-left: 200px;
-    color:  #ebebeb;
+    color:  #4056da;
     cursor: pointer;
     position: relative;
     text-decoration: none;
-    opacity: 0.35;
     @media ${deviceMax.tablet} {
       margin-left: 20px;
     }
     &:after {
+      content:'';
+      position: absolute;
       width: 179px;
       height: 1px;
-      color: #ebebeb;
+      background-color: #4056da;
+      bottom: -1px;
+      left: 0;
     }
+  }
+
+  img {
+    margin-left: 20px !important;
   }
 `;
 
