@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import MenuIcon from './menuIcon';
 import LogoImg from './logoImg';
 import { MobileNav, MobileNavWrapper } from '../styled';
@@ -16,13 +16,15 @@ const Mobile = () => {
   const handleToggle = () => setMenuOn(prevState => !prevState);
   const { changeContactFormStatus } = useContext(appContext);
   const { y, x, scrollDirection } = useScroll();  
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 75)) {
-      setScroll(true)
-    } else if (window.scrollY < 700 || window.scrollY > ((document.body.clientHeight - window.innerHeight) - 75)) {
-      setScroll(false)
-    }
-  })
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 75)) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    })
+  }, [window.scrollY ]);
 
   const styles =  scroll ? {
     active: {
