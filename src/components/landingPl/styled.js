@@ -34,6 +34,15 @@ export const BenefitsWrapper = styled.div`
     }
 `;
 
+export const ImgContainer = styled.div`
+  padding: 3%;
+  width: 100%;
+  cursor: pointer;
+  @media (max-width: 576px) {
+    padding: 3% 10%;
+  } 
+`;
+
 export const TrustElement = styled.div`
     font-family: Poppins; 
     h2 {

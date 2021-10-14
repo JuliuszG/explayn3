@@ -1,7 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import Layout from '../components/layout';
-import Desktop from '../components/navigation/desktop';
-import Mobile from '../components/navigation/mobile';
 import SEO from '../components/seo';
 import { useMediaQuery } from 'react-responsive';
 import Benefit from '../components/landingPl/benefits';
@@ -12,7 +10,8 @@ import Proces from '../components/landingPl/proces';
 import TrustComponent from '../components/landingPl/trust';
 import FooterPl from '../components/footerPl';
 import LandingPl from '../components/landingPage/landingPl';
-
+import LogoImg from '../components/navigation/logoImg';
+import { ImgContainer } from '../components/landingPl/styled';
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
 
@@ -37,13 +36,20 @@ const IndexPage = ({ location }) => {
   return (
     <Layout>
       <SEO title="Explayn Digital Agency" />
-      {isMobile ? <Mobile /> : <Desktop />}
+      <ImgContainer>
+      <a href="/">
+        <LogoImg
+          customWidth="194px"
+          customHeight="41px"
+        />
+      </a>
+      </ImgContainer>
       <LandingPl />
       <Benefit />
       <Client />
       <Offer />
       <Proces />
-      <Consultation/>
+      <Consultation />
       <TrustComponent />
       <FooterPl />
     </Layout>
