@@ -35,7 +35,7 @@ export const BenefitsWrapper = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  padding: 3%;
+  padding: 5%;
   width: 100%;
   cursor: pointer;
   @media (max-width: 576px) {
