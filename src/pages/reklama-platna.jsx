@@ -10,7 +10,7 @@ import Client from '../components/landingPl/client';
 import Offer from '../components/landingPl/offer';
 import Proces from '../components/landingPl/proces';
 import TrustComponent from '../components/landingPl/trust';
-import Footer from '../components/footer';
+import FooterPl from '../components/footerPl';
 import LandingPl from '../components/landingPage/landingPl';
 
 const IndexPage = ({ location }) => {
@@ -45,7 +45,7 @@ const IndexPage = ({ location }) => {
       <Proces />
       <Consultation/>
       <TrustComponent />
-      <Footer />
+      <FooterPl />
     </Layout>
   );
 };
