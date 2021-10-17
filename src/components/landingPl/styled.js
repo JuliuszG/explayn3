@@ -35,9 +35,12 @@ export const BenefitsWrapper = styled.div`
 `;
 
 export const ImgContainer = styled.div`
-  padding: 5%;
+  padding: 3% 5%;
   width: 100%;
   cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   @media (max-width: 576px) {
     padding: 3% 10%;
   } 
@@ -208,6 +211,7 @@ export const ClientWrapper = styled.div`
 
         @media (max-width: 1024px) {
            grid-template-columns: 1fr;
+           margin-bottom: 20px;
         }
         p {
           font-weight: 300;
@@ -445,6 +449,43 @@ export const ConsultationContainer = styled.div`
     }
 `;
 
+export const ConsultationContainerThank = styled.div`
+    background: white;
+    display: none;
+    padding:0 0 0 10%;
+    margin-top: 200px;
+    text-align: center;
+    @media (max-width: 1024px) {
+      height: 100%;
+      padding: 0;
+    }
+    h2 {
+      position: relative;
+      font-weight: 600;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 138%;
+      margin-bottom: 44px;
+      @media (max-width: 1024px) {
+        padding: 0 25px;
+        font-size: 30px;
+        line-height: 46px;
+        margin-bottom: 24px;
+      }
+    }
+  
+    p {
+      margin: 0 auto 32px auto;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 168%;
+      max-width: 474px;
+      @media (max-width: 1024px) {
+        padding: 0 25px;
+        font-size: 14px;
+      }
+`;
+
 export const ContactContainer = styled.div`
     background: rgba(220,220,220,0.19);
     height: fit-content;
@@ -645,6 +686,12 @@ export const ConsultationText = styled.div`
       line-height: 46px;
     }
   }
+  .center {
+    margin-top: 300px;
+    @media (max-width: 576px) {
+      margin-top: -100px;
+    }
+  }
 
   p {
     margin-bottom: 32px;
@@ -661,6 +708,15 @@ export const ConsultationText = styled.div`
     left: -254px;
     top: -172px;
   }
+  .decoration-center {
+    position: absolute;
+    left: calc(50% - 233px);
+    top: -257px;
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
+
   .quote-wrapper {
     margin-top: 60px;
     position: relative;
@@ -703,6 +759,42 @@ export const ConsultationText = styled.div`
       font-weight: 500;
     }
   }
+  button {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    max-width: 540px;
+    width: 100%;
+    height: 66px;
+    background: linear-gradient(#4c65ff 0%,#263380 180%);
+    border-radius: 29px;
+    color: white;
+    padding: 12px 26px;
+    border: none;
+    opacity: 1;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.1s ease-in;
+    &:hover {
+      color: #404040;
+      font-weight: 600;
+      letter-spacing: 3px;
+      background: #fff;
+      -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+      transition: all 0.3s ease 0s;
+    }
+    @media (max-width: 576px) {
+      width: 100%;
+      max-width: 320px;
+      font-size: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+    }
+  
 `;
 
 export const SurmaContent = styled.div`

@@ -1,5 +1,4 @@
-import React, { useState, useContext } from 'react';
-import { appContext } from '../context';
+import React, { useState } from 'react';
 import { ContactContainer } from './styled';
 import emailjs from 'emailjs-com';
 import {
@@ -8,8 +7,6 @@ import {
   
 
 const ContactForm = () => {
-
-    const { changeContactFormStatus } = useContext(appContext);
     const [formData, setFormData] = useState({
         email: null,
         phone: null,
@@ -35,7 +32,9 @@ const ContactForm = () => {
                 'user_VfGpMuhECXdgJOEm13gzv'
             )
             .then(response => {
-                changeContactFormStatus(2);
+                const contactForms = document.querySelector('#consultation')
+                contactForms.style.display='none';
+                thankYouPage.style.display='block';
             });
     };
 
