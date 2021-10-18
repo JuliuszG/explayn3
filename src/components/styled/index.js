@@ -4601,6 +4601,11 @@ export const ServicesSection = styled.section`
     font-size: 10px;
     padding: 15% 5%;
   }
+  @media ${deviceMin.laptopL} {
+    justify-content: space-between;
+    max-width: 1303px;
+    padding: 140px 0;
+  }
   .triangle {
     width: 159px;
     height: 205px;
