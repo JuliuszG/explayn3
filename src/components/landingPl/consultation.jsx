@@ -38,7 +38,7 @@ const Consultation = () => {
                     <h2 class="center">Gratulacje!<br/>Zamówiłeś bezpłatną konsultacje</h2>
                     <p>Wkrótce odezwie się do Ciebie jeden z naszych specjalistów.</p>
                     <p>Przygotuj wszystkie nurtujące Cię pytania, a jeżeli masz trochę wolnego czasu, przejrzyj nasze ostatnie realizacje. </p>
-                    <button href="/case"className="button">Przejdź do case studies</button>
+                    <button onClick={e =>  window.location.href='/case/torbasmaku'} className="button">Przejdź do case studies</button>
                 </ConsultationText>
             </ConsultationContainerThank>
         </>
