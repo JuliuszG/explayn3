@@ -3851,8 +3851,8 @@ export const SentenceSection = styled.div`
   background-size: cover;
   display: flex;
   align-items: center;
-  padding: 120px 0;
-  @media ${deviceMax.laptopM} {
+  padding: 120px 10%;
+  @media ${deviceMax.laptopL} {
     padding: 60px 0;
   }
   
