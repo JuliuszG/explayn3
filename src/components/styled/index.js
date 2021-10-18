@@ -3843,6 +3843,16 @@ export const ServicesImg = styled.div`
       margin-left: 360px;
     }
   }
+  .icon-services {
+    max-height: 300px;
+    margin-right: 120px;
+    margin-top: 60px;
+    @media ${deviceMin.laptopM} {
+      width: 300px;
+      margin-left: 360px;
+
+    }
+  }
 `;
 
 export const SentenceSection = styled.div`

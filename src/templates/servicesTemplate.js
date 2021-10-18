@@ -150,7 +150,7 @@ const ServiceTemplate = ({ pageContext }) => {
             </ServicesMainDescription>
           </ServicesContent>
           <ServicesImg>
-            <img src={require(`../images/servicesLogos/${firstSectionTitle}.png`)} alt="dev icon" />
+            <img src={require(`../images/servicesLogos/${firstSectionTitle}.png`)} className="icon-services" alt="dev icon" />
           </ServicesImg>
           <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
