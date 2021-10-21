@@ -97,6 +97,9 @@ const FooterPl = () => {
             </Link>
           )}
           <Link to="/blog">Blog</Link>
+          <ScLink to={'consultation'} smooth duration={1000}>
+              Kontakt
+            </ScLink>
         </div>
         <div className="site-links-column sl3">
           <h3>Informacje</h3>

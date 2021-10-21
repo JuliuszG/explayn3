@@ -767,7 +767,7 @@ export const ConsultationText = styled.div`
     height: 66px;
     background: linear-gradient(#4c65ff 0%,#263380 180%);
     border-radius: 29px;
-    color: white;
+    color: white !important;
     padding: 12px 26px;
     border: none;
     opacity: 1;
@@ -778,7 +778,7 @@ export const ConsultationText = styled.div`
     cursor: pointer;
     transition: all 0.1s ease-in;
     &:hover {
-      color: #404040;
+      color: #404040 !important;
       font-weight: 600;
       letter-spacing: 3px;
       background: #fff;
@@ -793,6 +793,13 @@ export const ConsultationText = styled.div`
       margin-top: 40px;
       margin-bottom: 40px;
     }
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: #404040;
+      }
     }
   
 `;
