@@ -1,4 +1,6 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'gatsby';
+
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { useMediaQuery } from 'react-responsive';
@@ -37,7 +39,7 @@ const IndexPage = ({ location }) => {
     <Layout>
       <SEO title="Explayn Digital Agency" />
       <ImgContainer>
-      <a href="/">
+      <a href="/" style={{position:'relative', display:'block', zIndex:'99'}}>
         <LogoImg
           customWidth="194px"
           customHeight="41px"
