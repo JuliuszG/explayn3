@@ -1,7 +1,6 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import { graphql, useStaticQuery } from 'gatsby';
-import { CaseLandingWrapper, CaseLandingCircle } from '../styled';
+import { CaseLandingWrapper } from '../styled';
 
 const CaseLanding = ({ background }) => {
   const data = useStaticQuery(graphql`
@@ -17,9 +16,6 @@ const CaseLanding = ({ background }) => {
   `);
   return (
     <CaseLandingWrapper fluid={background} Tag="section">
-      <CaseLandingCircle>
-        <Img fluid={data.file.childImageSharp.fluid} alt="decoration" />
-      </CaseLandingCircle>
     </CaseLandingWrapper>
   );
 };

@@ -22,7 +22,7 @@ import {
 
 export const SliderContent = ({ item }) => {
   return (
-    <CaseStudySliderWrapper to={`/case/${item.slug}`}>
+    <CaseStudySliderWrapper to={item.slug === 'torbasmaku' ? '/torbasmaku' :`/case/${item.slug}`}>
       <CaseStudySliderImageWrapper>
         <Img
           style={{ height: '100%' }}
@@ -96,7 +96,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   const renderSlider = (
     <Slider style={{ outline: 'none' }}>
       {data.cases.nodes.map((item, index) => { 
-         if (url !== `/case/${item.slug}`)
+         if (!url.includes(item.slug))
         return <Slide className="slide" key={index} index={index} id={item.slug}>
           <SliderContent item={item} />
         </Slide>
@@ -109,7 +109,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   const mobile = (
     <>
       {data.cases.nodes.map(
-        (item, index) => (index < 4 && url !== `/case/${item.slug}`) && <SliderContent item={item} key={index} />
+        (item, index) => (index < 4 && !url.includes(item.slug)) && <SliderContent item={item} key={index} />
       )}
     </>
   );

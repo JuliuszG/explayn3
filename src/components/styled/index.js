@@ -671,7 +671,7 @@ export const CaseDataWrapper = styled.section`
 export const CaseDataLeft = styled.div`
   width: 70%;
   margin-right: 15%;
-  @media ${deviceMax.mobileL}(max-width: 968px) {
+  @media (max-width: 968px) {
     width: 100%;
     margin-right: 0;
     margin-bottom: 10%;
@@ -693,6 +693,7 @@ export const CaseDataLeft = styled.div`
     margin-bottom: 30px;
     @media ${deviceMax.mobileL} {
       font-size: 14px;
+      padding-right: 0;
     }
   }
   a {
@@ -4828,4 +4829,364 @@ export const SliderContainer = styled.div`
     width: 100%;
     display: flex;
   }
+`;
+
+export const CaseAbout = styled.div`
+  padding: 0 10%;
+  font-family: Poppins;
+  margin-bottom: 80px;
+  @media (max-width: 960px) {
+    padding: 5% 0 0 0;
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      margin-left: 20px;
+    }
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 992px) {
+      display:block;
+    }
+  }
+  .wrapper-grid {
+    padding-left: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
+    @media screen and (max-width: 992px) {
+      grid-template-columns: 1fr;
+      padding-left: 20px;
+      padding-right:20px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom:24px;
+    @media screen and (max-width: 992px) {
+      font-size: 14px;
+    }
+  }
+  li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+`;
+
+export const CaseWork = styled.div`
+  padding: 0 10%;
+  font-family: Poppins;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 960px) {
+    padding: 5% 0 0 0;
+  }
+  h2 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      margin-left: 20px;
+
+    }
+  }
+  h3 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 25px;
+      display:block;
+    }
+  }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom:24px;
+    padding-left: 150px;
+    @media screen and (max-width: 992px) {
+      padding: 0 20px 0 20px;
+      font-size: 14px;
+    }
+  }
+
+  .img {
+    padding-left: 100px;
+    @media screen and (max-width: 992px) {
+      display:none;
+    }
+  }
+`;
+
+export const CaseWorkRevert = styled.div`
+  padding: 0 10%;
+  font-family: Poppins;
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr 600px;
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 960px) {
+    padding: 5% 0 0 0;
+  }
+  h2 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      margin-left: 20px;
+
+    }
+  }
+  h3 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 25px;
+      display:block;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom:24px;
+    padding-left: 150px;
+    @media screen and (max-width: 992px) {
+      padding: 0 20px 0 20px;
+      font-size: 14px;
+    }
+  }
+
+  .img {
+    padding-left: 100px;
+    @media screen and (max-width: 992px) {
+      display:none;
+    }
+  }
+`;
+
+export const CaseImg = styled.div`
+  padding: 0;
+  font-family: Poppins;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 960px) {
+    padding: 5% 0;
+  }
+  h2 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      margin-left: 20px;
+
+    }
+  }
+  
+  }
+  h3 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 25px;
+      display: block;
+    }
+  }
+  .wrapper-work {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 20%;
+    @media screen and (max-width: 992px) {
+      padding-left: 20px;
+    }
+
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom:24px;
+    padding-left: 150px;
+    margin-right: 80px;
+    @media screen and (max-width: 992px) {
+      padding-left: 20px;
+      margin-right: 20px;
+      font-size: 14px;
+    }
+  }
+
+`;
+
+export const CaseImgRevert = styled.div`
+  padding: 0;
+  font-family: Poppins;
+  margin-bottom: 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 992px) {
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: 960px) {
+    padding: 5% 0;
+  }
+  h2 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 120%;
+    @media screen and (max-width: 992px) {
+      font-size: 32px;
+      margin-left: 20px;
+    }
+  }
+  h3 {
+    margin-left: 25px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    @media screen and (max-width: 992px) {
+      margin-left: 20px;
+    }
+  }
+  .wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      margin-bottom: 25px;
+      display: block;
+      margin-top: 50px;
+    }
+  }
+  .wrapper-work {
+    margin-left: 80px;
+    padding-right: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 992px) {
+      padding-right: 20px;
+      margin-left: 20px;
+
+    }
+  }
+  p {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 168%;
+    margin-bottom:24px;
+    padding-left: 150px;
+    @media screen and (max-width: 992px) {
+      padding-left: 20px;
+      font-size: 14px;
+    }
+  }
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 747px;
+  overflow: hidden;
+  @media screen and (max-width: 992px) {
+    max-height: 500px;
+    min-height: 200px;
+    margin-top: 20px;
+  }
+}
+.img {
+  position: absolute;
+  object-position: right;
+  object-fit: cover;
+  right: 0;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+`;
+
+export const CaseScreenImageFull = styled(Img)`
+  width: 100%;
+  height: 100%;
+  min-height: 747px;
+  @media screen and (max-width: 992px) {
+    max-height: 500px;
+    min-height: 200px;
+  }
+  img {
+    object-position: left !important;
+  }
+`;
+
+export const Margin = styled.div`
+  margin-top: 80px;
 `;
