@@ -5167,6 +5167,7 @@ export const CaseImgRevert = styled.div`
   position: absolute;
   object-position: right;
   object-fit: cover;
+  image-orientation: none;
   right: 0;
   @media screen and (max-width: 992px) {
     width: 100%;
