@@ -38,28 +38,6 @@ export const SliderContent = ({ item }) => {
   );
 };
 
-const Header = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  return (
-    <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.pathname == '/') && 'wrapper'}>
-      <div className="text">
-        <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
-        <AnimatedParagraph inView={inView}>
-          Let our work to the talking. Projects we've been working on recently.
-        </AnimatedParagraph>
-      </div>
-      <ButtonNext className="next">
-        <motion.div style={{ width: '100%', height: '100%' }}>
-          <img src={ScrollRight} alt="scroll right button" />
-        </motion.div>
-      </ButtonNext>
-    </CaseStudyHeaderWrapper>
-  );
-};
-
 const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
     {
@@ -87,6 +65,31 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       }
     }
   `);
+  const slideNumber = !(window.location.pathname == '/') ?  data.cases.nodes.length - 1 : data.cases.nodes.length
+  console.log(slideNumber)
+  const Header = () => {
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      threshold: 0.5,
+    });
+    return (
+      <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.pathname == '/') && 'wrapper'}>
+        <div className="text">
+          <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
+          <AnimatedParagraph inView={inView}>
+            Let our work to the talking. Projects we've been working on recently.
+          </AnimatedParagraph>
+        </div>
+        {slideNumber > 3 ?
+        <ButtonNext className="next">
+          <motion.div style={{ width: '100%', height: '100%' }}>
+            <img src={ScrollRight} alt="scroll right button" />
+          </motion.div>
+        </ButtonNext> : ''}
+      </CaseStudyHeaderWrapper>
+    );
+  };
+  
   const isMobile = useMediaQuery({
     query: '(max-device-width: 1080px)',
   });
@@ -118,6 +121,9 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={100}
+        touchEnabled={slideNumber > 3 ? true : false}
+        dragEnabled={slideNumber > 3 ? true : false}
+
         totalSlides={data.cases.nodes.length + 1}
         className="carousel__cnt"
         visibleSlides={
@@ -127,7 +133,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         step={3}
       >
         <Header />
-        {!isMobile && renderSlider}
+        {!isMobile  && renderSlider}
       </CarouselProvider>
       {isMobile && mobile}
     </CaseStudyWrapper>
