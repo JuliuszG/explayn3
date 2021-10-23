@@ -3653,8 +3653,10 @@ export const ServicesTopSection = styled.div`
   justify-content: space-between;
   align-items: center;
   position: relative;
-  @media ${deviceMin.desktopL} {
+  @media ${deviceMin.laptopL} {
     justify-content: center;
+    max-width: 1303px;
+    margin: 0 auto;
   }
 
   @media ${deviceMax.tabletL} {
@@ -3973,7 +3975,7 @@ export const BenefitsSection = styled.div`
   padding: 80px 10%;
 
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
-  @media (min-width: 2560px) {
+  @media ${deviceMin.laptopL} {
     max-width: 1303px;
     padding: 80px 0;
   }
@@ -4058,7 +4060,7 @@ export const BenefitsSection = styled.div`
         font-size: 16px;
         line-height: 136%;
         font-weight: 300;
-        @media (min-width: 2560px) {
+        @media ${deviceMin.laptopL} {
           max-width: 330px;
         }
         @media ${deviceMax.mobileL} {
@@ -4073,7 +4075,7 @@ export const BenefitsContentWrapper = styled.div`
   width:100%;
   background: ${({ light }) => (light ? '#fff' : '#f5f6fa')};
 
-  @media (min-width: 2560px) {
+  @media ${deviceMin.laptopL} {
     margin:0 auto;
   }
 `
@@ -4083,7 +4085,7 @@ export const BenefitsContent = styled.div`
   grid-template-columns: repeat(2, 1fr);
   column-gap: 200px;
   row-gap: 60px;
-  @media (min-width: 2560px) {
+  @media ${deviceMin.laptopL}{
     column-gap: 50px;
 
   }
@@ -4118,7 +4120,7 @@ export const TechnologySection = styled.div`
   & > div {
     display: flex;
     justify-content: space-between;
-    @media (min-width: 2560px) {
+    @media ${deviceMin.laptopL} {
       max-width: 1303px;
       margin: 0 auto;
     }
