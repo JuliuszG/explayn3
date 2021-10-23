@@ -3989,7 +3989,7 @@ export const BenefitsSection = styled.div`
       width: 100%;
     }
     @media ${deviceMax.tablet} {
-      padding: 0 10px;
+      padding: 0;
     }
     @media ${deviceMax.mobileL} {
       font-size: 32px;
@@ -4002,7 +4002,7 @@ export const BenefitsSection = styled.div`
     margin-bottom: 90px;
     font-weight: 300;
     @media ${deviceMax.tablet} {
-      padding: 0 10px;
+      padding: 0;
     }
     @media ${deviceMax.mobileL} {
       margin-bottom: 0px;
@@ -4607,7 +4607,7 @@ export const ServicesSection = styled.section`
   }
   @media (max-width: 450px) {
     font-size: 10px;
-    padding: 15% 5%;
+    padding: 15% 10%;
   }
   @media ${deviceMin.desktop} {
     justify-content: space-between;
