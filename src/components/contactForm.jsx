@@ -16,16 +16,18 @@ import {
 
 const categories = [
   'BRANDING',
-  'ANIMATIONS/3D',
-  'VIDEO',
-  'APPS',
-  'eCOMMERCE',
-  'UI/UX',
   'MARKETING STRATEGY',
+  'MARKETING AUTOMATION',
+  'PAID ADS',
   'SOCIAL MEDIA',
   'CONTENT MARKETING',
-  'e-EVENTS',
-  'SOFTWARE',
+  'DEVELOPMENT',
+  'LANDING PAGE',
+  'UX / UI',
+  'APPS',
+  'ECOMMERCE',
+  'VIDEO',
+  'GRAPHIC DESIGN',
   'OTHER',
 ];
 

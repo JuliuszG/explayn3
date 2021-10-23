@@ -2197,11 +2197,15 @@ export const CaseStudyWrapper = styled.section`
     }
   }
   .wrapper {
-    @media ${deviceMin.LaptopL} {
+    @media ${deviceMin.mobileL} {
+      padding: 100px 10% 60px;
+    }
+    @media ${deviceMin.laptopL} {
       max-width: 1303px;
       padding: 100px 0 60px;
       margin:0 auto;
     }
+    padding: 25% 10%;
   }
 `;
 
