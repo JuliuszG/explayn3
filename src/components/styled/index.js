@@ -3667,9 +3667,10 @@ export const ServicesTopSection = styled.div`
   align-items: center;
   position: relative;
   @media ${deviceMin.desktop} {
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1303px;
     margin: 0 auto;
+    padding:0;
   }
 
   @media ${deviceMax.tabletL} {
