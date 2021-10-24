@@ -33,6 +33,11 @@ const show = keyframes`{
   }
 }`
 
+const slide = keyframes`
+  0% { transform : translateY(100%) }
+  100%{ transform : translateY(0) } 
+}
+`
 
 
 //blog/author.jsx
@@ -5205,4 +5210,35 @@ export const CaseScreenImageFull = styled(Img)`
 
 export const Margin = styled.div`
   margin-top: 80px;
+`;
+
+export const SlideContainer = styled.div`
+ opacity:0.8;
+ position: relative;
+  &:hover {
+    opacity:1;
+    cursor: pointer;
+  }
+  .arrow {
+    position: absolute;
+    top: calc(50% - 47px);
+    left: calc(50% - 47px);
+    animation: ${slide} 0.2s;
+  }
+`;
+
+export const VideoContainer = styled.div`
+  width: 100vh;
+  heigth: 100vh !important;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: black;
+  z-index: 999999999;
+  .video {
+    width: 100%;
+    height:100%'
+  }
 `;

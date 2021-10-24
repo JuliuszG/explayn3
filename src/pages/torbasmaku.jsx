@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import CaseStudy from '../components/landingPage/caseStudy';
@@ -20,14 +21,62 @@ import Marketing from '../images/torba/Marketing.svg';
 import Visual from '../images/torba/Visual.svg';
 import Michal from '../images/torba/Michal.png';
 import BrandingBig from '../images/torba/Branding-big.svg';
+import Arrow from '../images/torba/Arrow.svg';
+
 import CaseLanding from '../components/cases/caseLanding';
 import CaseData from '../components/cases/caseData';
 import CaseScreen from '../components/cases/caseScreen';
 import CaseBigScreen from '../components/cases/caseBigScreen';
 import CaseDoubleImage from '../components/cases/caseDoubleImage';
-import CaseList from '../components/cases/caseList';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import ReactPlayer from 'react-player'
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+} from 'pure-react-carousel';
 
-import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert } from '../components/styled/index'
+import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../components/styled/index'
+
+const SlideVideo = ({item})=> {
+  const [isShownHoverContent, setIsShownHoverContent] = useState(false);
+  const [openVideo, setOpenVideo] = useState(false);
+  console.log(openVideo)
+  if (openVideo) {
+    document.querySelector('body').style.overflow="hidden"
+    document.querySelector('html').style.overflow="hidden"
+  } else {
+    document.querySelector('body').style.overflow="scroll"
+    document.querySelector('html').style.overflow="scroll"
+  }
+  return (
+    <>
+    <Slide>
+    <SlideContainer
+        onMouseEnter={() => setIsShownHoverContent(true)}
+        onMouseLeave={() => setIsShownHoverContent(false)}
+        onClick={() => setOpenVideo(true)}
+    >
+      <Img
+        style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
+        fluid={item.photo.fluid}
+        alt="torba smaku"
+      />
+      {isShownHoverContent && <img src={Arrow} className="arrow"/>}
+    </SlideContainer>
+  </Slide>
+  {/* {
+    openVideo && 
+    <VideoContainer>
+         <div
+         onClick={() => setOpenVideo(false)}
+        >x</div> 
+       <ReactPlayer url={item.linkYoutube} class="video"/> 
+    </VideoContainer>
+  } */}
+  </>
+  )
+}
 
 const CaseTemplate = () => {
   const isMobile = useMediaQuery({
@@ -77,9 +126,19 @@ const CaseTemplate = () => {
       component7Paragraph
       component7List
     }
+    allDatoCmsVideo {
+      nodes{
+        photo {
+          fluid(maxWidth: 1750) {
+            ...GatsbyDatoCmsFluid_tracedSVG
+          }
+        }
+        linkYoutube
+      }
+    }
   }
 `)
-
+  console.log(data)
   return (
     <Layout>
       <SEO title="Explayn Digital Agency" />
@@ -205,14 +264,14 @@ const CaseTemplate = () => {
       </CaseImg>
       <CaseImgRevert>
         <div className="img-wrapper">
-          <img src={Michal} class="img"/>
+          <img src={Michal} className="img" />
         </div>
         <div className="wrapper-work">
           <div className="wrapper">
             <img src={Marketing} alt="logo torba smaku" className="logo" />
             <div>
               <h3>MARKETING</h3>
-              <h2>Marketing <br/>campaing</h2>
+              <h2>Marketing <br />campaing</h2>
             </div>
           </div>
           <p>Marketing campaign: The introduction of the new brand to the market could go unnoticed without a well-targeted brand promotion. Our client decided to bet on a YouTube campaign since it’s the easiest way to reach broad recognition within a short time. To reach out to clients through social media, we’ve used Facebook Ads, too. Google Ads campaign made up to the overall promotion, allowing us to access the target group directly and spark its interest. </p>
@@ -223,9 +282,31 @@ const CaseTemplate = () => {
               <h2>Video ads</h2>
             </div>
           </div>
-        <p>Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.</p>
+          <p>Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.</p>
         </div>
       </CaseImgRevert>
+      <div
+        style={{ width: '100%', margin: 'auto', }}
+      >
+        <CarouselProvider
+          naturalSlideWidth={999}
+          naturalSlideHeight={561}
+          visibleSlides={1}
+          currentSlide={1}
+          totalSlides={3}
+          className="carousel__cnt"
+          infinite={true}
+          step={1}
+        >
+          <Slider style={{ paddingLeft: '25%', paddingRight: '25%' }}>
+            {data.allDatoCmsVideo.nodes.map((item, index) => (
+              <SlideVideo item={item}/>
+            )
+            )
+            }
+          </Slider>
+        </CarouselProvider>
+      </div>
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>
