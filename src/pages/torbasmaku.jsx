@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
@@ -41,6 +41,28 @@ import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseI
 
 
 const CaseTemplate = () => {
+  const ref = useRef();
+  const [open, setOpen] = useState(false)
+  function useOnClickOutside(ref, handler) {
+    useEffect(
+      () => {
+        const listener = (event) => {
+          if (!ref.current || ref.current.contains(event.target)) {
+            return;
+          }
+          handler(event);
+        };
+        document.addEventListener("mousedown", listener);
+        document.addEventListener("touchstart", listener);
+        return () => {
+          document.removeEventListener("mousedown", listener);
+          document.removeEventListener("touchstart", listener);
+        };
+      },
+      [ref, handler]
+    );
+  }
+  useOnClickOutside(ref, () => setOpen(false));
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
@@ -49,7 +71,7 @@ const CaseTemplate = () => {
   const SlideVideo = ({item})=> {
     const [isShownHoverContent, setIsShownHoverContent] = useState(false);
     console.log(openVideo)
-    if (openVideo) {
+    if (open) {
       document.querySelector('body').style.overflow="hidden"
       document.querySelector('html').style.overflow="hidden"
     } else {
@@ -71,6 +93,7 @@ const CaseTemplate = () => {
         {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
             setOpenVideo(true)
             setUrl(item.linkYoutube)
+            setOpen(true)
           }}/>}
       </SlideContainer>
     </Slide>
@@ -294,7 +317,7 @@ const CaseTemplate = () => {
           infinite={true}
           step={1}
         >
-          <Slider style={!isMobile ? { paddingLeft: '25%', paddingRight: '25%' }: {paddingLeft: '0', paddingRight: '5%' }}>
+          <Slider style={!isMobile ? { paddingLeft: '15%', paddingRight: '15%' }: {paddingLeft: '0', paddingRight: '5%' }}>
             {data.allDatoCmsVideo.nodes.map((item, index) => (
               <SlideVideo item={item}/>
             )
@@ -305,13 +328,9 @@ const CaseTemplate = () => {
         
       </div>
       {
-      openVideo && 
-      <VideoContainer>
-           <div
-           className="close"
-           onClick={() => setOpenVideo(false)}
-          >&#x2715;</div> 
-         <ReactPlayer url={url} class="video"/> 
+      (openVideo && open) && 
+      <VideoContainer ref={ref}>
+         <ReactPlayer url={url} class="video" /> 
       </VideoContainer>
     }
       <CaseStudy triangle={false} />

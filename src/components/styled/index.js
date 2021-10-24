@@ -5233,35 +5233,20 @@ export const SlideContainer = styled.div`
 
 export const VideoContainer = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: black;
+  top: 50px;
+  right: 50px;
+  left: 50px;
+  bottom: 50px;
   z-index: 99999;
+  @media (max-width: 992px){
+    top: 150px;
+    right: 0;
+    left: 0;
+    bottom: 150px;
+  }
   .video {
-    padding: 30px 50px 50px 50px;
     width: 100% !important;
     height: 100% !important;
-    @media (max-width: 992px){
-      padding: 30px 0 50px 0;
-      width: 100% !important;
-      margin-bottom: 30%;
-    }
-  }
-  .close {
-    text-align:right;
-    padding-right:30px;
-    color: white;
-    font-size: 30px;
-    font-weight: 300;
-    padding-top: 20px;
-    cursor: pointer;
-    &:hover {
-      color: rgb(63, 84, 211);
-      font-weight: 800;
-      padding-top: 20px;
-    }
   }
 
 `;
