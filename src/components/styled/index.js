@@ -1242,7 +1242,7 @@ export const FooterContactUs = styled.div`
     }
   }
   @media ${deviceMax.mobileL} {
-    padding-bottom: 50px;
+    padding-bottom: 10px;
   }
 `;
 

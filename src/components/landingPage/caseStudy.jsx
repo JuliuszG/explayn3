@@ -66,7 +66,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
     }
   `);
   const slideNumber = !(window.location.pathname == '/') ?  data.cases.nodes.length - 1 : data.cases.nodes.length
-  console.log(slideNumber)
+
   const Header = () => {
     const [ref, inView] = useInView({
       triggerOnce: true,
