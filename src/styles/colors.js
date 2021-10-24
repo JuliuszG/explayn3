@@ -1,6 +1,6 @@
 export const colors = {
   neutral100: '#000000',
-  neutral90: '#282828',
+  neutral90: 'linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%)',
   neutral80: '#393A41',
   neutral60: '#6C7089',
   neutral50: '#7D82A1',

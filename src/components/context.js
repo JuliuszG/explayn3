@@ -1,4 +1,5 @@
 import React, { useState, createContext } from 'react';
+import { Helmet } from 'react-helmet';
 
 export const appContext = createContext(0);
 const AppContextProvider = ({ children }) => {
@@ -7,6 +8,10 @@ const AppContextProvider = ({ children }) => {
     setContactFormOpen(status);
   };
   return (
+    <>
+    <Helmet>
+      <html lang="en-US"></html>
+    </Helmet>
     <appContext.Provider
       value={{
         contactFormStatus: contactFormOpen,
@@ -15,6 +20,7 @@ const AppContextProvider = ({ children }) => {
     >
       {children}
     </appContext.Provider>
+    </>
   );
 };
 

@@ -73,7 +73,7 @@ const Blog = ({ data: { allDatoCmsBlog } }) => {
   });
   return (
     <Layout>
-      <SEO title="" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
       <BlogWrapper>
         <BlogContent>

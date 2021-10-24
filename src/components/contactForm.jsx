@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import { appContext } from './context';
 import ContactFormImage from '../images/contactFormImage.svg';
 import emailjs from 'emailjs-com';
@@ -16,16 +16,18 @@ import {
 
 const categories = [
   'BRANDING',
-  'ANIMATIONS/3D',
-  'VIDEO',
-  'APPS',
-  'eCOMMERCE',
-  'UI/UX',
   'MARKETING STRATEGY',
+  'MARKETING AUTOMATION',
+  'PAID ADS',
   'SOCIAL MEDIA',
   'CONTENT MARKETING',
-  'e-EVENTS',
-  'SOFTWARE',
+  'DEVELOPMENT',
+  'LANDING PAGE',
+  'UX / UI',
+  'APPS',
+  'ECOMMERCE',
+  'VIDEO',
+  'GRAPHIC DESIGN',
   'OTHER',
 ];
 
@@ -41,13 +43,14 @@ const contactVariant = {
   },
   exit: {
     x: '-100vw',
-    transition: {
-      duration: 0.3,
-    },
   },
 };
 
 export const ContactForm = () => {
+  useEffect(() => {
+    window.scrollTo(0,0)
+  }, []);
+  
   const [list, setList] = useState([]);
   const { changeContactFormStatus } = useContext(appContext);
   const [formData, setFormData] = useState({

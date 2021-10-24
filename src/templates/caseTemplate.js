@@ -66,10 +66,9 @@ const CaseTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
-
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? (
         <Mobile />
       ) : (

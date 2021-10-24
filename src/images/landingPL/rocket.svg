@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="87" viewBox="0 0 87 87">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.363" cy="-0.184" r="1.307" gradientTransform="scale(1 3)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4c65ff"/>
+      <stop offset="1" stop-color="#263380"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_184" data-name="Group 184" transform="translate(-1530.61 -6040)">
+    <path id="Path_513" data-name="Path 513" d="M43.5,0A43.5,43.5,0,1,1,0,43.5,43.5,43.5,0,0,1,43.5,0Z" transform="translate(1530.61 6040)" fill="url(#radial-gradient)"/>
+    <path id="Path_169" data-name="Path 169" d="M13.5,17.252l4.822,4.822L34.4,6" transform="translate(1556.652 6066.309)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" opacity="0"/>
+    <path id="Path_120" data-name="Path 120" d="M45.519,3.947a.45.45,0,0,0-.336-.346c-5.54-1.354-18.341,3.473-25.276,10.408a29.977,29.977,0,0,0-3.371,3.982,12.543,12.543,0,0,0-6.1.764c-5.143,2.261-6.64,8.167-7.057,10.7a.912.912,0,0,0,1,1.059l8.259-.906a18.36,18.36,0,0,0,.112,1.864,1.848,1.848,0,0,0,.54,1.13l3.2,3.2a1.848,1.848,0,0,0,1.13.54,18.327,18.327,0,0,0,1.853.112L18.563,44.7a.912.912,0,0,0,1.059,1c2.536-.407,8.452-1.9,10.7-7.047a12.6,12.6,0,0,0,.774-6.08A30.025,30.025,0,0,0,35.091,29.2C42.057,22.277,46.853,9.761,45.519,3.947ZM28.9,20.23a4.349,4.349,0,1,1,6.151,0A4.346,4.346,0,0,1,28.9,20.23Z" transform="translate(1549.947 6058.958)" fill="#fff"/>
+  </g>
+</svg>

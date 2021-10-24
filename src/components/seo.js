@@ -9,6 +9,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
+import Image from '../images/ogimage.jpeg';
+
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -26,15 +28,14 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const metaDescription = description || site.siteMetadata.description;
-  const defaultTitle = site.siteMetadata?.title;
+  const metaTitle = site.siteMetadata.title;
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: 'en-US',
       }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      title={metaTitle}
       meta={[
         {
           name: `description`,
@@ -53,6 +54,10 @@ function SEO({ description, lang, meta, title }) {
           content: `website`,
         },
         {
+          property: `og:image`,
+          content: `https://explayn.it${Image}`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
@@ -68,13 +73,14 @@ function SEO({ description, lang, meta, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+       
       ].concat(meta)}
     />
   );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `en-US`,
   meta: [],
   description: ``,
 };

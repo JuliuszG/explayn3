@@ -37,7 +37,9 @@ import {
 import { H2Variant, PVariant } from '../components/landingPage/landing';
 import CaseStudy from '../components/landingPage/caseStudy';
 import {
+  BenefitsContentWrapper,
   ServiceWrapper,
+  ServicesWrapperSection,
   ServicesSection,
   ServicesTopSection,
   ServicesScrollLink,
@@ -80,7 +82,7 @@ const Development = () => {
   });
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>
@@ -111,35 +113,37 @@ const Development = () => {
             </div>
           </ServicesScrollLink>
         </ServicesTopSection>
-        <ServicesSection id="services-section">
-          <DemandLeftSection ref={ref2}>
-            <AnimatedHeader inView={inView2}>
-              Development on demand
-            </AnimatedHeader>
-            <AnimatedParagraph inView={inView2}>
-              Build modern applications that help you stay on top of the game.
-              We create an alluring user experience that keeps them coming back.
-            </AnimatedParagraph>
-          </DemandLeftSection>
-          <DemandList>
-            <li>
-              <span>01.</span>
-              Websites
-            </li>
-            <li>
-              <span>02.</span>
-              Online stores
-            </li>
-            <li>
-              <span>03.</span>
-              iOS & Android Apps
-            </li>
-            <li>
-              <span>04.</span>
-              Dedicated systems
-            </li>
-          </DemandList>
-        </ServicesSection>
+        <ServicesWrapperSection>
+          <ServicesSection id="services-section">
+            <DemandLeftSection ref={ref2}>
+              <AnimatedHeader inView={inView2}>
+                Development on demand
+              </AnimatedHeader>
+              <AnimatedParagraph inView={inView2}>
+                Build modern applications that help you stay on top of the game.
+                We create an alluring user experience that keeps them coming back.
+              </AnimatedParagraph>
+            </DemandLeftSection>
+            <DemandList>
+              <li>
+                <span>01.</span>
+                Websites
+              </li>
+              <li>
+                <span>02.</span>
+                Online stores
+              </li>
+              <li>
+                <span>03.</span>
+                iOS & Android Apps
+              </li>
+              <li>
+                <span>04.</span>
+                Dedicated systems
+              </li>
+            </DemandList>
+          </ServicesSection>
+        </ServicesWrapperSection>
         <SentenceSection>
           <SentenceSectionContent section={'development'} ref={ref3}>
             <AnimatedHeader inView={inView3}>
@@ -171,100 +175,102 @@ const Development = () => {
             { img: Launch, text: 'Launch' },
           ]}
         />
-        <TechnologySection>
-          <div>
-            <div className="info" ref={ref4}>
-              <AnimatedHeader inView={inView4}>
-                Best technology for your product
-              </AnimatedHeader>
-              <AnimatedParagraph inView={inView4}>
-                Having released over 40 products we have a set of technologies
-                that we love to work with. Tell us about your product vision and
-                goals and we will choose technologies that will help you achieve
-                them.
-              </AnimatedParagraph>
-            </div>
-            <div className="icons">
-              <div className="cnt">
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Next} alt="next js icon" />
+        <BenefitsContentWrapper>
+          <TechnologySection>
+            <div>
+              <div className="info" ref={ref4}>
+                <AnimatedHeader inView={inView4}>
+                  Best technology for your product
+                </AnimatedHeader>
+                <AnimatedParagraph inView={inView4}>
+                  Having released over 40 products we have a set of technologies
+                  that we love to work with. Tell us about your product vision and
+                  goals and we will choose technologies that will help you achieve
+                  them.
+                </AnimatedParagraph>
+              </div>
+              <div className="icons">
+                <div className="cnt">
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Next} alt="next js icon" />
+                    </div>
+                    <h4>next.js</h4>
                   </div>
-                  <h4>next.js</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={ReactJS} alt="react icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={ReactJS} alt="react icon" />
+                    </div>
+                    <h4>
+                      <div>react &</div>
+                      <div>react native</div>
+                    </h4>
                   </div>
-                  <h4>
-                    <div>react &</div>
-                    <div>react native</div>
-                  </h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Graph} alt="graphql icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Graph} alt="graphql icon" />
+                    </div>
+                    <h4>graphql</h4>
                   </div>
-                  <h4>graphql</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Node} alt="node.js icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Node} alt="node.js icon" />
+                    </div>
+                    <h4>node.js</h4>
                   </div>
-                  <h4>node.js</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={TypeScript} alt="typescript icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={TypeScript} alt="typescript icon" />
+                    </div>
+                    <h4>typescript</h4>
                   </div>
-                  <h4>typescript</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Ruby} alt="ruby icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Ruby} alt="ruby icon" />
+                    </div>
+                    <h4>ruby</h4>
                   </div>
-                  <h4>ruby</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={JS} alt="javascript icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={JS} alt="javascript icon" />
+                    </div>
+                    <h4>javascript</h4>
                   </div>
-                  <h4>javascript</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Three} alt="three js icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Three} alt="three js icon" />
+                    </div>
+                    <h4>three.js</h4>
                   </div>
-                  <h4>three.js</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Drupal} alt="drupal icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Drupal} alt="drupal icon" />
+                    </div>
+                    <h4>drupal</h4>
                   </div>
-                  <h4>drupal</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Ghost} alt="ghost icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Ghost} alt="ghost icon" />
+                    </div>
+                    <h4>ghost</h4>
                   </div>
-                  <h4>ghost</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={Dato} alt="dato cmsicon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={Dato} alt="dato cmsicon" />
+                    </div>
+                    <h4>datoCMS</h4>
                   </div>
-                  <h4>datoCMS</h4>
-                </div>
-                <div className="icon-cnt">
-                  <div className="icon">
-                    <img src={WP} alt="wordpress icon" />
+                  <div className="icon-cnt">
+                    <div className="icon">
+                      <img src={WP} alt="wordpress icon" />
+                    </div>
+                    <h4>wordpress</h4>
                   </div>
-                  <h4>wordpress</h4>
                 </div>
               </div>
             </div>
-          </div>
-        </TechnologySection>
+          </TechnologySection>
+        </BenefitsContentWrapper>
         <BenefitsSection light ref={ref5}>
           {isMobile ? (
             <h2>

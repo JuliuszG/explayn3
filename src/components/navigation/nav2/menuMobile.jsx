@@ -19,16 +19,13 @@ const menuAnimation = {
       when: 'beforeChildren',
       staggerChildren: 0.1,
       ease: 'easeInOut',
-      duration: 0.5,
+      duration: 0.3,
     },
   },
   hidden: {
     top: '-100vh',
     transition: {
-      when: 'afterChildren',
-      staggerChildren: 0.2,
-      ease: 'easeInOut',
-      duration: 0.3,
+      duration: 0,
     },
   },
 };
@@ -55,9 +52,9 @@ const subItemAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      delay: i * 0.1,
+      delay: 0.05 * i,
       ease: 'easeIn',
-      duration: 0.2,
+      duration: 0.1,
     },
   }),
   hidden: {
@@ -75,23 +72,17 @@ const MenuMobile = ({ toggle }) => {
   };
   const renderSubMenu = () => (
     <MobileSubMenu>
-      <motion.a variants={subItemAnimation} custom={1} href="/development">
-        Development
+      <motion.a variants={subItemAnimation} custom={1} href="/marketing">
+        Marketing
       </motion.a>
-      <motion.a variants={subItemAnimation} custom={2} href="/visual">
-        Visual
+      <motion.a variants={subItemAnimation} custom={2} href="/development">
+        Development
       </motion.a>
       <motion.a variants={subItemAnimation} custom={3} href="/branding">
         Branding
       </motion.a>
-      <motion.a variants={subItemAnimation} custom={4} href="/ecommerce">
-        eCommerce
-      </motion.a>
-      <motion.a variants={subItemAnimation} custom={5} href="/events">
-        Events
-      </motion.a>
-      <motion.a variants={subItemAnimation} custom={6} href="/marketing">
-        Marketing
+      <motion.a variants={subItemAnimation} custom={6} href="/visual">
+        Visual
       </motion.a>
     </MobileSubMenu>
   );

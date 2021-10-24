@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="154" viewBox="0 0 140 154">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.5" cy="0.5" r="0.478" gradientTransform="translate(0 -0.081) scale(1 1.161)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#bfc1c6"/>
+      <stop offset="1" stop-color="#e7ebf5"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.085" cy="0.287" r="0.797" gradientTransform="translate(0 -0.027) scale(1 1.161)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ecedf1"/>
+      <stop offset="1" stop-color="#d0d3db"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-51" cx="0.175" cy="0.106" r="1.264" gradientTransform="matrix(0.494, 0.869, -0.636, 0.361, 0.156, -0.084)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#48a4ff"/>
+      <stop offset="1" stop-color="#2e7ece"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_259" data-name="Group 259" transform="translate(-320 -5992)">
+    <g id="Group_225" data-name="Group 225" transform="translate(18 726)">
+      <ellipse id="Ellipse_309" data-name="Ellipse 309" cx="55.5" cy="7" rx="55.5" ry="7" transform="translate(331 5406)" opacity="0.14" fill="url(#radial-gradient)"/>
+      <g id="Group_224" data-name="Group 224" transform="translate(67 -18)">
+        <g id="Group_219" data-name="Group 219" transform="translate(56.433 5104.561)" opacity="0.259">
+          <g id="Group_3" data-name="Group 3" transform="translate(178.669 179.875)">
+            <circle id="Ellipse_1" data-name="Ellipse 1" cx="4" cy="4" r="4" transform="translate(-0.102 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_14" data-name="Ellipse 14" cx="4" cy="4" r="4" transform="translate(-0.102 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_21" data-name="Ellipse 21" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(-0.102 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_28" data-name="Ellipse 28" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(-0.102 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_35" data-name="Ellipse 35" cx="4" cy="4" r="4" transform="translate(-0.102 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_42" data-name="Ellipse 42" cx="4" cy="4" r="4" transform="translate(-0.102 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_49" data-name="Ellipse 49" cx="4" cy="4" r="4" transform="translate(-0.102 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_2" data-name="Ellipse 2" cx="4" cy="4" r="4" transform="translate(16.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_13" data-name="Ellipse 13" cx="4" cy="4" r="4" transform="translate(16.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_20" data-name="Ellipse 20" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(16.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_27" data-name="Ellipse 27" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(16.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_34" data-name="Ellipse 34" cx="4" cy="4" r="4" transform="translate(16.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_41" data-name="Ellipse 41" cx="4" cy="4" r="4" transform="translate(16.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_48" data-name="Ellipse 48" cx="4" cy="4" r="4" transform="translate(16.898 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_7" data-name="Ellipse 7" cx="4" cy="4" r="4" transform="translate(68.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_10" data-name="Ellipse 10" cx="4" cy="4" r="4" transform="translate(68.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_17" data-name="Ellipse 17" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(68.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_24" data-name="Ellipse 24" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(68.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_31" data-name="Ellipse 31" cx="4" cy="4" r="4" transform="translate(68.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_38" data-name="Ellipse 38" cx="4" cy="4" r="4" transform="translate(68.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_45" data-name="Ellipse 45" cx="4" cy="4" r="4" transform="translate(68.898 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_3" data-name="Ellipse 3" cx="4" cy="4" r="4" transform="translate(33.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_12" data-name="Ellipse 12" cx="4" cy="4" r="4" transform="translate(33.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_19" data-name="Ellipse 19" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(33.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_26" data-name="Ellipse 26" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(33.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_33" data-name="Ellipse 33" cx="4" cy="4" r="4" transform="translate(33.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_40" data-name="Ellipse 40" cx="4" cy="4" r="4" transform="translate(33.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_47" data-name="Ellipse 47" cx="4" cy="4" r="4" transform="translate(33.898 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_6" data-name="Ellipse 6" cx="4" cy="4" r="4" transform="translate(84.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_9" data-name="Ellipse 9" cx="4" cy="4" r="4" transform="translate(84.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_16" data-name="Ellipse 16" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(84.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(84.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_30" data-name="Ellipse 30" cx="4" cy="4" r="4" transform="translate(84.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_37" data-name="Ellipse 37" cx="4" cy="4" r="4" transform="translate(84.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_44" data-name="Ellipse 44" cx="4" cy="4" r="4" transform="translate(84.898 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_4" data-name="Ellipse 4" cx="4" cy="4" r="4" transform="translate(50.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_11" data-name="Ellipse 11" cx="4" cy="4" r="4" transform="translate(50.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_18" data-name="Ellipse 18" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(50.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_25" data-name="Ellipse 25" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(50.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_32" data-name="Ellipse 32" cx="4" cy="4" r="4" transform="translate(50.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_39" data-name="Ellipse 39" cx="4" cy="4" r="4" transform="translate(50.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_46" data-name="Ellipse 46" cx="4" cy="4" r="4" transform="translate(50.898 -0.436)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_5" data-name="Ellipse 5" cx="4" cy="4" r="4" transform="translate(101.898 102.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_8" data-name="Ellipse 8" cx="4" cy="4" r="4" transform="translate(101.898 85.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_15" data-name="Ellipse 15" cx="4" cy="4.5" rx="4" ry="4.5" transform="translate(101.898 68.564)" fill="url(#radial-gradient-2)"/>
+            <ellipse id="Ellipse_22" data-name="Ellipse 22" cx="4" cy="3.5" rx="4" ry="3.5" transform="translate(101.898 51.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_29" data-name="Ellipse 29" cx="4" cy="4" r="4" transform="translate(101.898 33.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_36" data-name="Ellipse 36" cx="4" cy="4" r="4" transform="translate(101.898 16.564)" fill="url(#radial-gradient-2)"/>
+            <circle id="Ellipse_43" data-name="Ellipse 43" cx="4" cy="4" r="4" transform="translate(101.898 -0.436)" fill="url(#radial-gradient-2)"/>
+          </g>
+        </g>
+        <g id="Group_222" data-name="Group 222" transform="translate(308.253 5327.456)">
+          <g id="Group_220" data-name="Group 220" transform="translate(0 18.201)">
+            <path id="Path_469" data-name="Path 469" d="M19.23,5.394V7.271H17.4V21.012a.172.172,0,0,1-.047.141h0V21.2a.859.859,0,0,1-.61.7,21.5,21.5,0,0,0-14.868,20.4,21.15,21.15,0,0,0,6.285,15.1,21.345,21.345,0,0,0,30.252,0,21.4,21.4,0,0,0,2.2-27.719A21.452,21.452,0,0,0,29.876,21.9a.847.847,0,0,1-.657-.7v-.047h0V7.271H19.23V5.394H29.782A1.918,1.918,0,0,0,31,4.879h0a1.732,1.732,0,0,0,.516-1.267A1.7,1.7,0,0,0,31,2.393h0a1.7,1.7,0,0,0-1.219-.517H16.837a1.733,1.733,0,0,0-1.266.517,1.918,1.918,0,0,0-.516,1.219,1.7,1.7,0,0,0,.516,1.22v.047a1.922,1.922,0,0,0,1.219.516h2.44ZM6.426,36.772a.935.935,0,1,1-1.782-.563,19.951,19.951,0,0,1,3.19-6A20.4,20.4,0,0,1,12.9,25.655a.891.891,0,0,1,1.266.329.916.916,0,0,1-.281,1.266,17.321,17.321,0,0,0-4.55,4.128,17.638,17.638,0,0,0-2.908,5.394Zm9.1-16.416V6.989a3.607,3.607,0,0,1-1.267-.8l-.047-.047A3.749,3.749,0,0,1,13.18,3.611,3.683,3.683,0,0,1,16.838,0H29.783a3.588,3.588,0,0,1,2.533,1.078h0a3.569,3.569,0,0,1,0,5.113h0a2.636,2.636,0,0,1-1.22.8V20.355a23.355,23.355,0,0,1,11.022,8.255,23.106,23.106,0,0,1,4.456,13.7A23.287,23.287,0,1,1,15.525,20.356Z" transform="translate(15.863 0) rotate(14)" fill="url(#radial-gradient-51)"/>
+            <path id="Path_470" data-name="Path 470" d="M40.147,0H0A20.056,20.056,0,0,0,20.074,19.23,20.055,20.055,0,0,0,30.983,16,20.078,20.078,0,0,0,40.147,0Z" transform="translate(8.201 47.133)" fill="url(#radial-gradient-51)"/>
+          </g>
+          <path id="Ellipse_303_-_Outline" data-name="Ellipse 303 - Outline" d="M4.216,1.686A2.529,2.529,0,1,0,6.745,4.216,2.532,2.532,0,0,0,4.216,1.686M4.216,0A4.216,4.216,0,1,1,0,4.216,4.216,4.216,0,0,1,4.216,0Z" transform="translate(42.33 11.804)" fill="url(#radial-gradient-51)"/>
+          <path id="Ellipse_305_-_Outline" data-name="Ellipse 305 - Outline" d="M2.529,1.686a.843.843,0,1,0,.843.843.844.844,0,0,0-.843-.843M2.529,0A2.529,2.529,0,1,1,0,2.529,2.529,2.529,0,0,1,2.529,0Z" transform="translate(33.899 13.49)" fill="url(#radial-gradient-51)"/>
+          <path id="Ellipse_304_-_Outline" data-name="Ellipse 304 - Outline" d="M3.372,1.686A1.686,1.686,0,1,0,5.059,3.372,1.688,1.688,0,0,0,3.372,1.686M3.372,0A3.372,3.372,0,1,1,0,3.372,3.372,3.372,0,0,1,3.372,0Z" transform="translate(38.957)" fill="url(#radial-gradient-51)"/>
+        </g>
+        <g id="Group_223" data-name="Group 223" transform="translate(272.274 5335.321)">
+          <g id="Group_221" data-name="Group 221" transform="translate(0 20.938)">
+            <path id="Path_469-2" data-name="Path 469" d="M13.674,43.173l0-1.346-1.3,0,.015-9.858a.124.124,0,0,0-.033-.1h0v-.034a.612.612,0,0,0-.434-.5A15.361,15.361,0,0,1,5.837,5.871,15.226,15.226,0,0,1,16.648,1.346,14.994,14.994,0,0,1,27.413,5.838a15.168,15.168,0,0,1,4.466,10.827A15.389,15.389,0,0,1,21.285,31.317a.608.608,0,0,0-.469.506v.034h0q0,.05,0,.1L20.8,41.815l-7.124.011,0,1.346,7.526-.012h0a1.36,1.36,0,0,1,.869.369h0a1.242,1.242,0,0,1,.367.908,1.227,1.227,0,0,1-.369.875h0a1.215,1.215,0,0,1-.87.372l-9.232.014a1.228,1.228,0,0,1-.9-.369,1.376,1.376,0,0,1-.367-.874,1.229,1.229,0,0,1,.369-.876v-.034a1.371,1.371,0,0,1,.87-.371h.033Zm-9.1-22.495a.661.661,0,0,0-.835-.436.671.671,0,0,0-.437.842,14.285,14.285,0,0,0,2.268,4.3,14.512,14.512,0,0,0,3.608,3.259.635.635,0,0,0,.9-.237.658.658,0,0,0-.2-.908,12.323,12.323,0,0,1-3.24-2.956,12.628,12.628,0,0,1-2.068-3.866Zm6.472,11.766-.015,9.589a2.581,2.581,0,0,0-.9.573l-.033.034a2.706,2.706,0,0,0-.739,1.818,2.625,2.625,0,0,0,2.605,2.587l9.232-.014A2.56,2.56,0,0,0,23,46.254h0a2.571,2.571,0,0,0,.006-3.668h0a1.871,1.871,0,0,0-.869-.571l.015-9.589A16.787,16.787,0,0,0,28.384,4.861,16.566,16.566,0,0,0,4.9,4.9a16.686,16.686,0,0,0,6.146,27.546Z" transform="translate(43.611 45.648) rotate(166)" fill="url(#radial-gradient-51)"/>
+            <path id="Path_470-2" data-name="Path 470" d="M28.622,13.8H0a14.321,14.321,0,0,1,28.622,0Z" transform="translate(37.733 47.596) rotate(180)" fill="url(#radial-gradient-51)"/>
+          </g>
+          <path id="Ellipse_306_-_Outline" data-name="Ellipse 306 - Outline" d="M4.216,1.686A2.529,2.529,0,1,0,6.745,4.216,2.532,2.532,0,0,0,4.216,1.686M4.216,0A4.216,4.216,0,1,1,0,4.216,4.216,4.216,0,0,1,4.216,0Z" transform="translate(2.573 15.129) rotate(-20)" fill="url(#radial-gradient-51)"/>
+          <path id="Ellipse_307_-_Outline" data-name="Ellipse 307 - Outline" d="M2.529,1.686a.843.843,0,1,0,.843.843.844.844,0,0,0-.843-.843M2.529,0A2.529,2.529,0,1,1,0,2.529,2.529,2.529,0,0,1,2.529,0Z" transform="translate(15.322 13.18) rotate(-20)" fill="url(#radial-gradient-51)"/>
+          <path id="Ellipse_308_-_Outline" data-name="Ellipse 308 - Outline" d="M3.372,1.686A1.686,1.686,0,1,0,5.059,3.372,1.688,1.688,0,0,0,3.372,1.686M3.372,0A3.372,3.372,0,1,1,0,3.372,3.372,3.372,0,0,1,3.372,0Z" transform="translate(3.289 2.307) rotate(-20)" fill="url(#radial-gradient-51)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

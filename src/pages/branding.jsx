@@ -24,8 +24,10 @@ import {
 import { H2Variant, PVariant } from '../components/landingPage/landing';
 import CaseStudy from '../components/landingPage/caseStudy';
 import {
+  BenefitsContentWrapper,
   ServiceWrapper,
   ServicesSection,
+  ServicesWrapperSection,
   ServicesTopSection,
   ServicesScrollLink,
   ServicesContent,
@@ -66,7 +68,6 @@ const Branding = () => {
   });
   return (
     <Layout>
-      <SEO title="Home" />
       {isMobile ? <Mobile /> : <Desktop mainPage={true} />}
       <ServiceWrapper>
         <ServicesTopSection>
@@ -99,37 +100,40 @@ const Branding = () => {
             </div>
           </ServicesScrollLink>
         </ServicesTopSection>
-        <ServicesSection id="services-section">
-          <DemandLeftSection ref={ref2}>
-            <AnimatedHeader inView={inView2}>
-              Branding that sells
-            </AnimatedHeader>
-            <AnimatedParagraph inView={inView2}>
-              The process of building brand awareness is complex and consists of
-              many stages. One right element is not enough - it has to be a
-              coherent concept that will enable your brand to create a
-              sustainable bond with your customer.
-            </AnimatedParagraph>
-          </DemandLeftSection>
-          <DemandList>
-            <li>
-              <span>01.</span>
-              Visual identification
-            </li>
-            <li>
-              <span>02.</span>
-              Product branding
-            </li>
-            <li>
-              <span>03.</span>
-              Brand strategy
-            </li>
-            <li>
-              <span>04.</span>
-              UI/UX Design
-            </li>
-          </DemandList>
-        </ServicesSection>
+        <ServicesWrapperSection>
+          <ServicesSection id="services-section">
+            <DemandLeftSection ref={ref2}>
+              <AnimatedHeader inView={inView2}>
+                Branding that sells
+              </AnimatedHeader>
+              <AnimatedParagraph inView={inView2}>
+                The process of building brand awareness is complex and consists of
+                many stages. One right element is not enough - it has to be a
+                coherent concept that will enable your brand to create a
+                sustainable bond with your customer.
+              </AnimatedParagraph>
+            </DemandLeftSection>
+            <DemandList>
+              <li>
+                <span>01.</span>
+                Visual identification
+              </li>
+              <li>
+                <span>02.</span>
+                Product branding
+              </li>
+              <li>
+                <span>03.</span>
+                Brand strategy
+              </li>
+              <li>
+                <span>04.</span>
+                UI/UX Design
+              </li>
+            </DemandList>
+          </ServicesSection>
+        </ServicesWrapperSection>
+
         <SentenceSection>
           <SentenceSectionContent section={'branding'} ref={ref3}>
             <AnimatedHeader inView={inView3}>
@@ -164,70 +168,72 @@ const Branding = () => {
             { img: Launch, text: 'Launch' },
           ]}
         />
-        <BenefitsSection ref={ref4}>
-          {isMobile ? (
-            <>
-              <h2>Benefits</h2>
-              <p>
-                A brand is not just a logo. A brand is a person’s feelings about
-                a product, service, or organization. We make every effort to
-                make your brand experience meaningful.
-              </p>
-            </>
-          ) : (
-            <>
-              <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
-              <AnimatedParagraph inView={inView4}>
-                A brand is not just a logo. A brand is a person’s feelings about
-                a product, service, or organization. We make every effort to
-                make your brand experience meaningful.
-              </AnimatedParagraph>
-            </>
-          )}
-          <BenefitsContent>
-            <div className="item">
-              <div className="item-icon res">
-                <img src={Responsive} alt="responsive icon" />
-              </div>
-              <div className="item-content">
-                <h4>Recognition</h4>
+        <BenefitsContentWrapper>
+          <BenefitsSection ref={ref4}>
+            {isMobile ? (
+              <>
+                <h2>Benefits</h2>
                 <p>
-                  The most important reason why branding is crucial to a
-                  company's success is that it is how a company gets recognized
-                  and written permanently in the minds of consumers.
+                  A brand is not just a logo. A brand is a person’s feelings about
+                  a product, service, or organization. We make every effort to
+                  make your brand experience meaningful.
                 </p>
+              </>
+            ) : (
+              <>
+                <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
+                <AnimatedParagraph inView={inView4}>
+                  A brand is not just a logo. A brand is a person’s feelings about
+                  a product, service, or organization. We make every effort to
+                  make your brand experience meaningful.
+                </AnimatedParagraph>
+              </>
+            )}
+            <BenefitsContent>
+              <div className="item">
+                <div className="item-icon res">
+                  <img src={Responsive} alt="responsive icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Recognition</h4>
+                  <p>
+                    The most important reason why branding is crucial to a
+                    company's success is that it is how a company gets recognized
+                    and written permanently in the minds of consumers.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="item">
-              <div className="item-icon fun">
-                <img src={Functional} alt="Functional icon" />
+              <div className="item">
+                <div className="item-icon fun">
+                  <img src={Functional} alt="Functional icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Business Value</h4>
+                  <p>
+                    A strongly established brand increases the value of a company,
+                    giving it more momentum. This makes it a more attractive
+                    investment opportunity because of its firmly established place
+                    in the market.
+                  </p>
+                </div>
               </div>
-              <div className="item-content">
-                <h4>Business Value</h4>
-                <p>
-                  A strongly established brand increases the value of a company,
-                  giving it more momentum. This makes it a more attractive
-                  investment opportunity because of its firmly established place
-                  in the market.
-                </p>
+              <div className="item">
+                <div className="item-icon sca">
+                  <img src={Scalable} alt="Scalable icon" />
+                </div>
+                <div className="item-content">
+                  <h4>Trust</h4>
+                  <p>
+                    A professional appearance and well-designed branding will help
+                    a company build trust among consumers and partners. People are
+                    more likely to do business with a company that has a
+                    great-looking and professional image.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="item">
-              <div className="item-icon sca">
-                <img src={Scalable} alt="Scalable icon" />
-              </div>
-              <div className="item-content">
-                <h4>Trust</h4>
-                <p>
-                  A professional appearance and well-designed branding will help
-                  a company build trust among consumers and partners. People are
-                  more likely to do business with a company that has a
-                  great-looking and professional image.
-                </p>
-              </div>
-            </div>
-          </BenefitsContent>
-        </BenefitsSection>
+            </BenefitsContent>
+          </BenefitsSection>
+        </BenefitsContentWrapper>
       </ServiceWrapper>
       <CaseStudy triangle={false} />
       <Footer />

@@ -12,6 +12,7 @@ import { motion } from 'framer-motion';
 import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
 import { useInView } from 'react-intersection-observer';
 import ScrollRight from '../../images/scrollright.svg';
+
 import {
   CaseStudyWrapper,
   CaseStudyHeaderWrapper,
@@ -21,7 +22,7 @@ import {
 
 export const SliderContent = ({ item }) => {
   return (
-    <CaseStudySliderWrapper to={`/case/${item.slug}`}>
+    <CaseStudySliderWrapper to={item.slug === 'torbasmaku' ? '/torbasmaku' :`/case/${item.slug}`}>
       <CaseStudySliderImageWrapper>
         <Img
           style={{ height: '100%' }}
@@ -37,33 +38,11 @@ export const SliderContent = ({ item }) => {
   );
 };
 
-const Header = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    threshold: 0.5,
-  });
-  return (
-    <CaseStudyHeaderWrapper ref={ref}>
-      <div className="text">
-        <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
-        <AnimatedParagraph inView={inView}>
-          Let our work to the talking. Projects we've been working on recently.
-        </AnimatedParagraph>
-      </div>
-      <ButtonNext className="next">
-        <motion.div style={{ width: '100%', height: '100%' }}>
-          <img src={ScrollRight} alt="scroll right button" />
-        </motion.div>
-      </ButtonNext>
-    </CaseStudyHeaderWrapper>
-  );
-};
-
 const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
     {
       cases: allDatoCmsRealizacja(
-        limit: 6
+        limit: 7
         sort: { fields: meta___createdAt, order: DESC }
       ) {
         nodes {
@@ -86,23 +65,54 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       }
     }
   `);
+  const slideNumber = !(window.location.pathname == '/') ?  data.cases.nodes.length - 1 : data.cases.nodes.length
+
+  const Header = () => {
+    const [ref, inView] = useInView({
+      triggerOnce: true,
+      threshold: 0.5,
+    });
+    return (
+      <CaseStudyHeaderWrapper ref={ref} className={ !(window.location.pathname == '/') && 'wrapper'}>
+        <div className="text">
+          <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
+          <AnimatedParagraph inView={inView}>
+            Let our work to the talking. Projects we've been working on recently.
+          </AnimatedParagraph>
+        </div>
+        {slideNumber > 3 ?
+        <ButtonNext className="next">
+          <motion.div style={{ width: '100%', height: '100%' }}>
+            <img src={ScrollRight} alt="scroll right button" />
+          </motion.div>
+        </ButtonNext> : ''}
+      </CaseStudyHeaderWrapper>
+    );
+  };
+  
   const isMobile = useMediaQuery({
     query: '(max-device-width: 1080px)',
   });
+  const url = location.pathname;
+
   if (isMobile) triangle = false;
   const renderSlider = (
     <Slider style={{ outline: 'none' }}>
-      {data.cases.nodes.map((item, index) => (
-        <Slide className="slide" key={index} index={index}>
+      {data.cases.nodes.map((item, index) => { 
+         if (!url.includes(item.slug))
+        return <Slide className="slide" key={index} index={index} id={item.slug}>
           <SliderContent item={item} />
         </Slide>
-      ))}
+      }
+      )
+      }
     </Slider>
   );
+
   const mobile = (
     <>
       {data.cases.nodes.map(
-        (item, index) => index < 3 && <SliderContent item={item} key={index} />
+        (item, index) => (index < 4 && !url.includes(item.slug)) && <SliderContent item={item} key={index} />
       )}
     </>
   );
@@ -111,6 +121,9 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       <CarouselProvider
         naturalSlideWidth={100}
         naturalSlideHeight={100}
+        touchEnabled={slideNumber > 3 ? true : false}
+        dragEnabled={slideNumber > 3 ? true : false}
+
         totalSlides={data.cases.nodes.length + 1}
         className="carousel__cnt"
         visibleSlides={
@@ -120,7 +133,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         step={3}
       >
         <Header />
-        {!isMobile && renderSlider}
+        {!isMobile  && renderSlider}
       </CarouselProvider>
       {isMobile && mobile}
     </CaseStudyWrapper>

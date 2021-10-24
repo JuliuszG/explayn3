@@ -16,17 +16,19 @@ import {
 } from '../components/util/animations';
 import { H2Variant, PVariant } from '../components/landingPage/landing';
 import {
+  BenefitsContentWrapper,
   ServicesSection,
   QuoteSection,
   ServiceWrapper,
   ServicesTopSection,
+  ServicesWrapperSection,
   ServicesScrollLink,
   ServicesContent,
   DemandLeftSection,
   DemandList,
   ServicesMainHeader,
   ServicesMainDescription,
-  ServicesLogo,
+  ServicesImg,
 } from '../components/styled';
 
 const ServiceTemplate = ({ pageContext }) => {
@@ -117,7 +119,7 @@ const ServiceTemplate = ({ pageContext }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
       <ServiceWrapper>
         <ServicesTopSection>
@@ -147,13 +149,9 @@ const ServiceTemplate = ({ pageContext }) => {
               {firstSectionDescription}
             </ServicesMainDescription>
           </ServicesContent>
-          <ServicesLogo>
-            {/* <Img
-              fluid={logo}
-              placeholderStyle={{ visibility: 'hidden' }}
-              alt="subpage logo"
-            /> */}
-          </ServicesLogo>
+          <ServicesImg>
+            <img src={require(`../images/servicesLogos/${firstSectionTitle}.png`)} className="icon-services" alt="dev icon" />
+          </ServicesImg>
           <ServicesScrollLink to={'services-section'} smooth duration={500}>
             <div className="content">
               <div className="title">learn more</div>
@@ -161,31 +159,35 @@ const ServiceTemplate = ({ pageContext }) => {
             </div>
           </ServicesScrollLink>
         </ServicesTopSection>
-        <ServicesSection id="services-section">
-          <DemandLeftSection ref={ref2}>
-            <AnimatedHeader inView={inView2}>
-              {secondSectionTitle}
-            </AnimatedHeader>
-            <AnimatedParagraph inView={inView2}>
-              {secondSectionDescription}
-            </AnimatedParagraph>
-          </DemandLeftSection>
-          <DemandList>{renderList}</DemandList>
-          {/* <div className="triangle">
+        <ServicesWrapperSection>
+          <ServicesSection id="services-section">
+            <DemandLeftSection ref={ref2}>
+              <AnimatedHeader inView={inView2}>
+                {secondSectionTitle}
+              </AnimatedHeader>
+              <AnimatedParagraph inView={inView2}>
+                {secondSectionDescription}
+              </AnimatedParagraph>
+            </DemandLeftSection>
+            <DemandList>{renderList}</DemandList>
+            {/* <div className="triangle">
           <Img fluid={triangle1Img} alt="decoration" />
         </div> */}
-        </ServicesSection>
-        <QuoteSection ref={ref3}>
-          <AnimatedParagraph inView={inView3}>
-            {thirdSectionQuote}
-          </AnimatedParagraph>
-          <div className="square">
-            <Img fluid={dotsImg} alt="decoration" />
-          </div>
-          {/* <div className="half-circle">
+          </ServicesSection>
+        </ServicesWrapperSection>
+        <BenefitsContentWrapper>
+          <QuoteSection ref={ref3}>
+            <AnimatedParagraph inView={inView3}>
+              {thirdSectionQuote}
+            </AnimatedParagraph>
+            <div className="square">
+              <Img fluid={dotsImg} alt="decoration" />
+            </div>
+            {/* <div className="half-circle">
             <Img fluid={triangle2Img} alt="decoration" />
           </div> */}
-        </QuoteSection>
+          </QuoteSection>
+        </BenefitsContentWrapper>
         <CaseStudy triangle={false} />
       </ServiceWrapper>
       <Footer />
