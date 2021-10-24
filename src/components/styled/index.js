@@ -5216,17 +5216,26 @@ export const Margin = styled.div`
 export const SlideContainer = styled.div`
  opacity:0.8;
  position: relative;
+ @media (max-width: 992px){
+    opacity:1;
+  }
+@media (min-width: 992px){
   &:hover {
     opacity:1;
     cursor: pointer;
+    }
   }
+  
   .arrow {
     position: absolute;
     top: calc(50% - 47px);
     left: calc(50% - 47px);
-    animation: ${slide} 0.2s;
     @media (max-width: 992px){
       transform: scale(0.6)
+    }
+    @media (min-width: 992px){
+      animation: ${slide} 0.2s;
+
     }
   }
 `;
