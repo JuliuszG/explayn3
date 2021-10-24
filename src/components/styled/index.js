@@ -1797,6 +1797,10 @@ export const Landing2Wrapper = styled.div`
         line-height: 47px;
         text-align: left;
       }
+      @media (max-width: 330px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
     }
     h2 {
       margin-top: 40px;
@@ -1837,6 +1841,10 @@ export const Landing2Wrapper = styled.div`
       font-size: 16px;
       cursor: pointer;
       transition: all 0.1s ease-in;
+      @media (max-width: 576px) {
+        margin-left: auto;
+        margin-right: auto;
+      }
       &:hover {
         margin-left: calc(50% - 233px);
         color: #404040;

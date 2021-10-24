@@ -43,6 +43,8 @@ export const ImgContainer = styled.div`
   left: 0px;
   @media (max-width: 576px) {
     padding: 3% 10%;
+    position: static;
+    height: 10vh;
   } 
 `;
 
@@ -167,7 +169,7 @@ export const ClientWrapper = styled.div`
         line-height: 76px;
         font-weight: 600;
         @media (max-width: 576px) {
-          text-align: center;
+          text-align: left;
           margin-bottom: 70px;
           font-weight: 600;
           font-size: 35px;
@@ -219,7 +221,7 @@ export const ClientWrapper = styled.div`
           line-height: 168%;
         @media (max-width: 576px) {
             font-size: 14px;
-            text-align: center;
+            text-align: left;
           }
           }
         }
