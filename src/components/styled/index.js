@@ -5224,21 +5224,43 @@ export const SlideContainer = styled.div`
     top: calc(50% - 47px);
     left: calc(50% - 47px);
     animation: ${slide} 0.2s;
+    @media (max-width: 992px){
+      transform: scale(0.6)
+    }
   }
 `;
 
 export const VideoContainer = styled.div`
-  width: 100vh;
-  heigth: 100vh !important;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
   bottom: 0;
   background: black;
-  z-index: 999999999;
+  z-index: 99999;
   .video {
-    width: 100%;
-    height:100%'
+    padding: 30px 50px 50px 50px;
+    width: 100% !important;
+    height: 100% !important;
+    @media (max-width: 992px){
+      padding: 30px 0 50px 0;
+      width: 100% !important;
+      margin-bottom: 30%;
+    }
   }
+  .close {
+    text-align:right;
+    padding-right:30px;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 20px;
+    cursor: pointer;
+    &:hover {
+      color: rgb(63, 84, 211);
+      font-weight: 800;
+      padding-top: 20px;
+    }
+  }
+
 `;

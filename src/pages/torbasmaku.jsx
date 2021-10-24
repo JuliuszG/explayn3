@@ -38,50 +38,45 @@ import {
 
 import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../components/styled/index'
 
-const SlideVideo = ({item})=> {
-  const [isShownHoverContent, setIsShownHoverContent] = useState(false);
-  const [openVideo, setOpenVideo] = useState(false);
-  console.log(openVideo)
-  if (openVideo) {
-    document.querySelector('body').style.overflow="hidden"
-    document.querySelector('html').style.overflow="hidden"
-  } else {
-    document.querySelector('body').style.overflow="scroll"
-    document.querySelector('html').style.overflow="scroll"
-  }
-  return (
-    <>
-    <Slide>
-    <SlideContainer
-        onMouseEnter={() => setIsShownHoverContent(true)}
-        onMouseLeave={() => setIsShownHoverContent(false)}
-        onClick={() => setOpenVideo(true)}
-    >
-      <Img
-        style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
-        fluid={item.photo.fluid}
-        alt="torba smaku"
-      />
-      {isShownHoverContent && <img src={Arrow} className="arrow"/>}
-    </SlideContainer>
-  </Slide>
-  {/* {
-    openVideo && 
-    <VideoContainer>
-         <div
-         onClick={() => setOpenVideo(false)}
-        >x</div> 
-       <ReactPlayer url={item.linkYoutube} class="video"/> 
-    </VideoContainer>
-  } */}
-  </>
-  )
-}
+
 
 const CaseTemplate = () => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  const [openVideo, setOpenVideo] = useState(false);
+  const [url, setUrl] = useState('');
+  const SlideVideo = ({item})=> {
+    const [isShownHoverContent, setIsShownHoverContent] = useState(false);
+    console.log(openVideo)
+    if (openVideo) {
+      document.querySelector('body').style.overflow="hidden"
+      document.querySelector('html').style.overflow="hidden"
+    } else {
+      document.querySelector('body').style.overflow="scroll"
+      document.querySelector('html').style.overflow="scroll"
+    }
+    return (
+      <>
+      <Slide>
+      <SlideContainer
+          onMouseEnter={() => setIsShownHoverContent(true)}
+          onMouseLeave={() => setIsShownHoverContent(false)}
+      >
+        <Img
+          style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
+          fluid={item.photo.fluid}
+          alt="torba smaku"
+        />
+        {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
+            setOpenVideo(true)
+            setUrl(item.linkYoutube)
+          }}/>}
+      </SlideContainer>
+    </Slide>
+    </>
+    )
+  }
   const data = useStaticQuery(graphql`
   query myQueryAndMyQuery($id: String) {
     datoCmsRealizacja(id: { eq: $id }) {
@@ -288,17 +283,18 @@ const CaseTemplate = () => {
       <div
         style={{ width: '100%', margin: 'auto', }}
       >
+      
         <CarouselProvider
           naturalSlideWidth={999}
           naturalSlideHeight={561}
           visibleSlides={1}
           currentSlide={1}
-          totalSlides={3}
+          totalSlides={data.allDatoCmsVideo.nodes.length}
           className="carousel__cnt"
           infinite={true}
           step={1}
         >
-          <Slider style={{ paddingLeft: '25%', paddingRight: '25%' }}>
+          <Slider style={!isMobile ? { paddingLeft: '25%', paddingRight: '25%' }: {paddingLeft: '0', paddingRight: '5%' }}>
             {data.allDatoCmsVideo.nodes.map((item, index) => (
               <SlideVideo item={item}/>
             )
@@ -306,7 +302,18 @@ const CaseTemplate = () => {
             }
           </Slider>
         </CarouselProvider>
+        
       </div>
+      {
+      openVideo && 
+      <VideoContainer>
+           <div
+           className="close"
+           onClick={() => setOpenVideo(false)}
+          >&#x2715;</div> 
+         <ReactPlayer url={url} class="video"/> 
+      </VideoContainer>
+    }
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>
