@@ -2250,7 +2250,6 @@ export const CaseStudyHeaderWrapper = styled.div`
     }
   }
   p {
-    width: 60%;
     font-weight: 300;
     font-size: 16px;
     line-height: 32px;

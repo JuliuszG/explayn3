@@ -77,7 +77,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         <div className="text">
           <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
           <AnimatedParagraph inView={inView}>
-            Let our work to the talking. Projects we've been working on recently.
+            Let our work to the talking.<br/>Projects we've been working on recently.
           </AnimatedParagraph>
         </div>
         {slideNumber > 3 ?

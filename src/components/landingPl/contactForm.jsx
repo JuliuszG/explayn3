@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import Spinner from 'react-bootstrap/Spinner';
 import { ContactContainer } from './styled';
 import emailjs from 'emailjs-com';
 import {
     FormErrorMessage,
-  } from '../styled';
-  
+} from '../styled';
+
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -33,14 +34,17 @@ const ContactForm = () => {
             )
             .then(response => {
                 const contactForms = document.querySelector('#consultation')
-                contactForms.style.display='none';
-                thankYouPage.style.display='block';
+                contactForms.style.display = 'none';
+                thankYouPage.style.display = 'block';
+                thankYouPage.scrollIntoView();
             });
     };
 
     const handleSubmit = e => {
         e.preventDefault();
         if (checkAll()) {
+            document.querySelector('#advSendButton').innerHTML=`<div style='transition: max-width 1s linear'
+            >Trwa wywyłanie</div>`
             sendEmail(e);
         }
     };
@@ -75,10 +79,10 @@ const ContactForm = () => {
                 }))
             }
         }
-        if (name === 'checkbox'){
+        if (name === 'checkbox') {
             const checkbox = document.querySelector('.checkbox-item')
-            if (checkbox.checked != true){
-                console.log(checkbox.checked )
+            if (checkbox.checked != true) {
+                console.log(checkbox.checked)
                 setErrorData(prevState => ({
                     ...prevState,
                     checkbox: "Pole musi być zaznaczone"
@@ -111,7 +115,7 @@ const ContactForm = () => {
             errorData.phone ||
             !formData.email ||
             !formData.phone ||
-            !checkbox.checked 
+            !checkbox.checked
         ) {
             return false;
         }
@@ -123,17 +127,17 @@ const ContactForm = () => {
             <form onSubmit={handleSubmit}>
                 <div className="input">
                     <label htmlFor="name" className="label">Imię</label>
-                    <input className="text" id="name" 
-                      onChange={event => handleChange(event.target)}
-                      type="name"
-                      onBlur={event => handleBlur(event.target.name, event.target.value)}
-                      name="name"
+                    <input className="text" id="name"
+                        onChange={event => handleChange(event.target)}
+                        type="name"
+                        onBlur={event => handleBlur(event.target.name, event.target.value)}
+                        name="name"
                     ></input>
                     <FormErrorMessage>{errorData.name}</FormErrorMessage>
                 </div>
                 <div className="input">
                     <label htmlFor="email" className="label">Firmowy adres e-mail</label>
-                    <input className="text" id="email" 
+                    <input className="text" id="email"
                         onChange={event => handleChange(event.target)}
                         onBlur={event => handleBlur(event.target.name, event.target.value)}
                         type="email"
@@ -143,7 +147,7 @@ const ContactForm = () => {
                 </div>
                 <div className="input">
                     <label htmlFor="phone" className="label">Telefon kontaktowy</label>
-                    <input className="text" id="phone" 
+                    <input className="text" id="phone"
                         onChange={event => handleChange(event.target)}
                         onBlur={event => handleBlur(event.target.name, event.target.value)}
                         type="number"
@@ -154,11 +158,12 @@ const ContactForm = () => {
                 </div>
                 <div className="checkbox">
                     <label />
-                    <input type="checkbox" name='checkbox' className="checkbox-item" onBlur={event => handleBlur(event.target.name, event.target.value)}/>
+                    <input type="checkbox" name='checkbox' className="checkbox-item" onBlur={event => handleBlur(event.target.name, event.target.value)} />
                     <span>Wyrażasz zgodę na kontakt telefoniczny w celu obsługi niniejszego zgłoszenia. Wyrażasz zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej wysyłanymi przez www.explayn.it oraz na wykorzystanie komunikacji email w celach marketingowych (<a href="/policy">Polityka Prywatności</a>).</span>
                 </div>
                 <FormErrorMessage>{errorData.checkbox}</FormErrorMessage>
-                <button type="submit" value="Wyślij">Wyślij</button>
+                <button type="submit" id="advSendButton" value="Wyślij" >
+                <div className="send">Wyślij</div></button>
             </form>
         </ContactContainer>
     );

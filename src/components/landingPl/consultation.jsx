@@ -32,7 +32,7 @@ const Consultation = () => {
                 <ContactForm />
             </ConsultationContainer>
             <ConsultationContainerThank id="thankYouPage">
-                <ConsultationText>
+                <ConsultationText className="thankText">
                     <div className="decoration-center">
                         <img src={landingCircle} alt="decoration" />
                     </div>
