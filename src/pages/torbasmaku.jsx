@@ -70,7 +70,6 @@ const CaseTemplate = () => {
   const [url, setUrl] = useState('');
   const SlideVideo = ({item})=> {
     const [isShownHoverContent, setIsShownHoverContent] = useState(false);
-    console.log(openVideo)
     if (open) {
       document.querySelector('body').style.overflow="hidden"
       document.querySelector('html').style.overflow="hidden"
@@ -92,7 +91,7 @@ const CaseTemplate = () => {
         />
         {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
             setOpenVideo(true)
-            setUrl(item.linkYoutube)
+            setUrl(item.video.url)    
             setOpen(true)
           }}/>}
       </SlideContainer>
@@ -152,11 +151,13 @@ const CaseTemplate = () => {
           }
         }
         linkYoutube
+        video {
+          url
+        }
       }
     }
   }
 `)
-  console.log(data)
   return (
     <Layout>
       <SEO title="Explayn Digital Agency" />
@@ -330,7 +331,14 @@ const CaseTemplate = () => {
       {
       (openVideo && open) && 
       <VideoContainer ref={ref}>
-         <ReactPlayer url={url} class="video" /> 
+        <iframe src={url} 
+           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          frameBorder="0"
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          className="video"
+          allowFullScreen
+          />
       </VideoContainer>
     }
       <CaseStudy triangle={false} />
