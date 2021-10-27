@@ -44,7 +44,7 @@ const ContactForm = () => {
         e.preventDefault();
         if (checkAll()) {
             document.querySelector('#advSendButton').innerHTML=`<div style='transition: max-width 1s linear'
-            >Trwa wywyłanie</div>`
+            >Trwa wysyłanie</div>`
             sendEmail(e);
         }
     };
