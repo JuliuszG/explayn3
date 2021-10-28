@@ -29,7 +29,6 @@ import CaseScreen from '../components/cases/caseScreen';
 import CaseBigScreen from '../components/cases/caseBigScreen';
 import CaseDoubleImage from '../components/cases/caseDoubleImage';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import ReactPlayer from 'react-player'
 import {
   CarouselProvider,
   Slider,
@@ -150,7 +149,6 @@ const CaseTemplate = () => {
             ...GatsbyDatoCmsFluid_tracedSVG
           }
         }
-        linkYoutube
         video {
           url
         }
