@@ -331,14 +331,13 @@ const CaseTemplate = () => {
       {
       (openVideo && open) && 
       <VideoContainer ref={ref}>
-        <iframe src={url} 
-           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          frameBorder="0"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
+        <video controls="false" autoplay="autoplay" type="video/mp4">
+        <source src={url} 
+          type="video/mp4"
           className="video"
-          allowFullScreen
           />
+          <source src={url} type="video/webm"></source>
+          </video>
       </VideoContainer>
     }
       <CaseStudy triangle={false} />

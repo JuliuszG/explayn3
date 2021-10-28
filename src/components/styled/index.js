@@ -5246,6 +5246,7 @@ export const VideoContainer = styled.div`
   left: 50px;
   bottom: 50px;
   z-index: 99999;
+  animation: ${slide} 0.5s;
   @media (max-width: 992px){
     top: 150px;
     right: 0;
@@ -5256,5 +5257,12 @@ export const VideoContainer = styled.div`
     width: 100% !important;
     height: 100% !important;
   }
-
+  video ::-webkit-media-controls {
+    display:none !important;
+  }
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 `;
