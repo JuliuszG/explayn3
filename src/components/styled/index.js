@@ -1253,6 +1253,7 @@ export const FooterContactUs = styled.div`
 
 export const FooterNewsletter = styled.div`
   grid-area: newsletter;
+  height: 164px;
   @media ${deviceMax.mobileL} {
     margin: 20px 0 30px;
   }
