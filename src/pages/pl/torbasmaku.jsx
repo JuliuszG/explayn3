@@ -314,14 +314,14 @@ const Case= () => {
         <CarouselProvider
           naturalSlideWidth={999}
           naturalSlideHeight={561}
-          visibleSlides={1}
+          visibleSlides={isMobile ? 1 : 2}
           currentSlide={1}
           totalSlides={data.allDatoCmsVideo.nodes.length}
           className="carousel__cnt"
           infinite={true}
           step={1}
         >
-          <Slider style={!isMobile ? { paddingLeft: '15%', paddingRight: '15%' }: {paddingLeft: '0', paddingRight: '5%' }}>
+          <Slider style={!isMobile ? { paddingLeft: '10%', paddingRight: '10%' }: {paddingLeft: '0', paddingRight: '15%' }}>
             {data.allDatoCmsVideo.nodes.map((item, index) => (
               <SlideVideo item={item}/>
             )
