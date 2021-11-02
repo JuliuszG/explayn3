@@ -46,7 +46,7 @@ const FooterPl = () => {
             <a href="mailto:we@explayn.it">we@explayn.it</a>
           </div>
         </FooterContactUs>
-        <FooterNewsletter>
+        {!mailSend ?<FooterNewsletter>
           <h3>NEWSLETTER</h3>
           <p>
             Dołącz do społeczności Explayn i otrzymuj<br/> najlepsze wskazkówki.
@@ -64,7 +64,11 @@ const FooterPl = () => {
               </button>
             </form>
           </FooterFormWrapper>
-        </FooterNewsletter>
+        </FooterNewsletter>: 
+         <FooterNewsletter>
+          <h3>Dziękujemy za dodanie się do Explaynlettera.<br/>Pozostajemy w kontakcie!</h3>
+       </FooterNewsletter>
+        }
         <FotterSocialMedia>
           <h3>Social media</h3>
           <FooterSocialMediaContent>
