@@ -16,6 +16,13 @@ const Mobile = () => {
   const handleToggle = () => setMenuOn(prevState => !prevState);
   const { changeContactFormStatus } = useContext(appContext);
   const { y, x, scrollDirection } = useScroll();  
+  if (menuOn) {
+    document.querySelector('body').style.overflow = "hidden"
+    document.querySelector('html').style.overflow = "hidden"
+  } else {
+    document.querySelector('body').style.overflow = "scroll"
+    document.querySelector('html').style.overflow = "scroll"
+  }
   useEffect(() => {
     window.addEventListener('scroll', () => {
       if (window.scrollY > 700 && window.scrollY < ((document.body.clientHeight - window.innerHeight) - 175)) {
