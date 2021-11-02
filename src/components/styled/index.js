@@ -1255,6 +1255,7 @@ export const FooterNewsletter = styled.div`
   grid-area: newsletter;
   height: 164px;
   @media ${deviceMax.mobileL} {
+    height: 115px;
     margin: 20px 0 30px;
   }
   p {
