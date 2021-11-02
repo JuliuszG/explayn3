@@ -15,10 +15,10 @@ import {
   FooterDecoration,
 } from './styled';
 import { useLocation } from '@reach/router';
-const url = location.pathname;
 
 const FooterPl = () => {
   const location = useLocation();
+  const url = location.pathname;
   const [value, setValue] = useState('');
   const [mailSend, setMailSend] = useState(false);
   const handleSubmit = e => {
