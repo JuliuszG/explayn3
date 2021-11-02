@@ -5,6 +5,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const serviceTemplate = path.resolve(`src/templates/servicesTemplate.js`);
   const caseTemplate = path.resolve(`src/templates/caseTemplate.js`);
   const postTemplate = path.resolve(`src/templates/postTemplate.jsx`);
+
   const result = await graphql(`
     query MyQuery {
       allDatoCmsServicepage {

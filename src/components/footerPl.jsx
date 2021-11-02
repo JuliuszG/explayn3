@@ -15,6 +15,7 @@ import {
   FooterDecoration,
 } from './styled';
 import { useLocation } from '@reach/router';
+const url = location.pathname;
 
 const FooterPl = () => {
   const location = useLocation();
@@ -97,9 +98,11 @@ const FooterPl = () => {
             </Link>
           )}
           <Link to="/blog">Blog</Link>
+          { url == '/reklama-platna' &&
           <ScLink to={'consultation'} smooth duration={1000}>
               Kontakt
             </ScLink>
+            }
         </div>
         <div className="site-links-column sl3">
           <h3>Informacje</h3>
