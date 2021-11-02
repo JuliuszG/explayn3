@@ -41,40 +41,42 @@ import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseI
 const Case= () => {
   const ref = useRef();
   const [open, setOpen] = useState(false)
-  function useOnClickOutside(ref, handler) {
-    useEffect(
-      () => {
-        const listener = (event) => {
-          if (!ref.current || ref.current.contains(event.target)) {
-            return;
-          }
-          handler(event);
-        };
-        document.addEventListener("mousedown", listener);
-        document.addEventListener("touchstart", listener);
-        return () => {
-          document.removeEventListener("mousedown", listener);
-          document.removeEventListener("touchstart", listener);
-        };
-      },
-      [ref, handler]
-    );
-  }
-  useOnClickOutside(ref, () => setOpen(false));
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
   const [openVideo, setOpenVideo] = useState(false);
   const [url, setUrl] = useState('');
-  const SlideVideo = ({item})=> {
+  const [fluid, setFluid] = useState('');
+
+  const SlideVideo = ({ item }) => {
     const [isShownHoverContent, setIsShownHoverContent] = useState(false);
     if (open) {
-      document.querySelector('body').style.overflow="hidden"
-      document.querySelector('html').style.overflow="hidden"
+      document.querySelector('body').style.overflow = "hidden"
+      document.querySelector('html').style.overflow = "hidden"
     } else {
-      document.querySelector('body').style.overflow="scroll"
-      document.querySelector('html').style.overflow="scroll"
+      document.querySelector('body').style.overflow = "scroll"
+      document.querySelector('html').style.overflow = "scroll"
     }
+    function useOnClickOutside(ref, handler) {
+      useEffect(
+        () => {
+          const listener = (event) => {
+            if (!ref.current || ref.current.contains(event.target)) {
+              return;
+            }
+            handler(event);
+          };
+          document.addEventListener("mousedown", listener);
+          document.addEventListener("touchstart", listener);
+          return () => {
+            document.removeEventListener("mousedown", listener);
+            document.removeEventListener("touchstart", listener);
+          };
+        },
+        [ref, handler]
+      );
+    }
+    isMobile && useOnClickOutside(ref, () => setOpen(false));
     return (
       <>
       <Slide>
@@ -330,17 +332,23 @@ const Case= () => {
         
       </div>
       {
-      (openVideo && open) && 
-      <VideoContainer ref={ref}>
-        <video controls="false" autoplay="autoplay" type="video/mp4">
-        <source src={url} 
-          type="video/mp4"
-          className="video"
-          />
-          <source src={url} type="video/webm"></source>
+        (openVideo && open) &&
+        <VideoContainer ref={ref}>
+           <Img
+            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'static' }}
+            fluid={fluid}
+            alt="post picture"
+        />
+          <button className="video-button" onClick={() => setOpen(false)}> &#x2715; </button>
+          <video controls="true" autoplay="autoplay" type="video/mp4">
+            <source src={url}
+              type="video/mp4"
+              className="video"
+            />
+            <source src={url} type="video/webm"></source>
           </video>
-      </VideoContainer>
-    }
+        </VideoContainer>
+      }
       <FooterPl />
     </Layout>
   );

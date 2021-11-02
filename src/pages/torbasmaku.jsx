@@ -1,4 +1,4 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
@@ -42,60 +42,63 @@ import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseI
 const CaseTemplate = () => {
   const ref = useRef();
   const [open, setOpen] = useState(false)
-  function useOnClickOutside(ref, handler) {
-    useEffect(
-      () => {
-        const listener = (event) => {
-          if (!ref.current || ref.current.contains(event.target)) {
-            return;
-          }
-          handler(event);
-        };
-        document.addEventListener("mousedown", listener);
-        document.addEventListener("touchstart", listener);
-        return () => {
-          document.removeEventListener("mousedown", listener);
-          document.removeEventListener("touchstart", listener);
-        };
-      },
-      [ref, handler]
-    );
-  }
-  useOnClickOutside(ref, () => setOpen(false));
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
   const [openVideo, setOpenVideo] = useState(false);
   const [url, setUrl] = useState('');
-  const SlideVideo = ({item})=> {
+  const [fluid, setFluid] = useState('');
+
+  const SlideVideo = ({ item }) => {
     const [isShownHoverContent, setIsShownHoverContent] = useState(false);
     if (open) {
-      document.querySelector('body').style.overflow="hidden"
-      document.querySelector('html').style.overflow="hidden"
+      document.querySelector('body').style.overflow = "hidden"
+      document.querySelector('html').style.overflow = "hidden"
     } else {
-      document.querySelector('body').style.overflow="scroll"
-      document.querySelector('html').style.overflow="scroll"
+      document.querySelector('body').style.overflow = "scroll"
+      document.querySelector('html').style.overflow = "scroll"
     }
+    function useOnClickOutside(ref, handler) {
+      useEffect(
+        () => {
+          const listener = (event) => {
+            if (!ref.current || ref.current.contains(event.target)) {
+              return;
+            }
+            handler(event);
+          };
+          document.addEventListener("mousedown", listener);
+          document.addEventListener("touchstart", listener);
+          return () => {
+            document.removeEventListener("mousedown", listener);
+            document.removeEventListener("touchstart", listener);
+          };
+        },
+        [ref, handler]
+      );
+    }
+    isMobile && useOnClickOutside(ref, () => setOpen(false));
     return (
       <>
-      <Slide>
-      <SlideContainer
-          onMouseEnter={() => setIsShownHoverContent(true)}
-          onMouseLeave={() => setIsShownHoverContent(false)}
-      >
-        <Img
-          style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
-          fluid={item.photo.fluid}
-          alt="torba smaku"
-        />
-        {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
-            setOpenVideo(true)
-            setUrl(item.video.url)    
-            setOpen(true)
-          }}/>}
-      </SlideContainer>
-    </Slide>
-    </>
+        <Slide>
+          <SlideContainer
+            onMouseEnter={() => setIsShownHoverContent(true)}
+            onMouseLeave={() => setIsShownHoverContent(false)}
+          >
+            <Img
+              style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
+              fluid={item.photo.fluid}
+              alt="torba smaku"
+            />
+            {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
+              setOpenVideo(true)
+              setUrl(item.video.url)
+              setOpen(true)
+              setFluid(item.photo.fluid)
+            }} />}
+          </SlideContainer>
+        </Slide>
+      </>
     )
   }
   const data = useStaticQuery(graphql`
@@ -305,39 +308,45 @@ const CaseTemplate = () => {
       <div
         style={{ width: '100%', margin: 'auto', }}
       >
-      
+
         <CarouselProvider
           naturalSlideWidth={999}
           naturalSlideHeight={561}
-          visibleSlides={isMobile? 1 : 2}
+          visibleSlides={isMobile ? 1 : 2}
           currentSlide={1}
           totalSlides={data.allDatoCmsVideo.nodes.length}
           className="carousel__cnt"
           infinite={true}
           step={1}
         >
-          <Slider style={!isMobile ? { paddingLeft: '5%', paddingRight: '5%' }: {paddingLeft: '0', paddingRight: '15%' }}>
+          <Slider style={!isMobile ? { paddingLeft: '5%', paddingRight: '5%' } : { paddingLeft: '0', paddingRight: '15%' }}>
             {data.allDatoCmsVideo.nodes.map((item, index) => (
-              <SlideVideo item={item}/>
+              <SlideVideo item={item} />
             )
             )
             }
           </Slider>
         </CarouselProvider>
-        
+
       </div>
       {
-      (openVideo && open) && 
-      <VideoContainer ref={ref}>
-        <video controls="false" autoplay="autoplay" type="video/mp4">
-        <source src={url} 
-          type="video/mp4"
-          className="video"
-          />
-          <source src={url} type="video/webm"></source>
+        (openVideo && open) &&
+        <VideoContainer ref={ref}>
+           <Img
+            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'static' }}
+            fluid={fluid}
+            alt="post picture"
+        />
+          <button className="video-button" onClick={() => setOpen(false)}> &#x2715; </button>
+          <video controls="true" autoplay="autoplay" type="video/mp4">
+            <source src={url}
+              type="video/mp4"
+              className="video"
+            />
+            <source src={url} type="video/webm"></source>
           </video>
-      </VideoContainer>
-    }
+        </VideoContainer>
+      }
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>

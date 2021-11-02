@@ -5243,26 +5243,52 @@ export const SlideContainer = styled.div`
 
 export const VideoContainer = styled.div`
   position: fixed;
-  top: 50px;
-  right: 50px;
-  left: 50px;
-  bottom: 50px;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   z-index: 99999;
-  animation: ${slide} 0.5s;
+  // animation: ${slide} 0.5s;
   @media (max-width: 992px){
     top: 150px;
     right: 0;
     left: 0;
     bottom: 150px;
   }
+  .video-button {
+      position: absolute;
+      right: 25px;
+      font-size: 25px;
+      top: 25px;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+      border:none;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      z-index:9999;
+      @media (hover: hover) {
+        &:hover {
+          color: #fff !important;
+          background: none;
+          background: #484d5b;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          transition: all 0.3s ease 0s;
+        }
+      }
+  }
   .video {
     width: 100% !important;
     height: 100% !important;
   }
-  video ::-webkit-media-controls {
-    display:none !important;
-  }
+
   video {
+    position: absolute;
+    z-index:99;
+    top:0;
     width: 100%;
     height: 100%;
     object-fit: cover;
