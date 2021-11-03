@@ -34,7 +34,7 @@ import {
   Slide,
 } from 'pure-react-carousel';
 
-import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../../components/styled/index'
+import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer, MarginBottom } from '../../components/styled/index'
 
 
 
@@ -350,6 +350,7 @@ const Case = () => {
           </video>
         </VideoContainer>
       }
+      <MarginBottom/>
       <FooterPl />
     </Layout>
   );

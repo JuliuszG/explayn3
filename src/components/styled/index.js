@@ -5293,3 +5293,7 @@ export const VideoContainer = styled.div`
     object-fit: cover;
   }
 `;
+
+export const MarginBottom = styled.div`
+  margin-bottom: 68px;
+`;
