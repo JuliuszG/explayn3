@@ -18,6 +18,7 @@ import { useLocation } from '@reach/router';
 
 const FooterPl = () => {
   const location = useLocation();
+  const url = location.pathname;
   const [value, setValue] = useState('');
   const [mailSend, setMailSend] = useState(false);
   const handleSubmit = e => {
@@ -45,7 +46,7 @@ const FooterPl = () => {
             <a href="mailto:we@explayn.it">we@explayn.it</a>
           </div>
         </FooterContactUs>
-        <FooterNewsletter>
+        {!mailSend ?<FooterNewsletter>
           <h3>NEWSLETTER</h3>
           <p>
             Dołącz do społeczności Explayn i otrzymuj<br/> najlepsze wskazkówki.
@@ -63,7 +64,11 @@ const FooterPl = () => {
               </button>
             </form>
           </FooterFormWrapper>
-        </FooterNewsletter>
+        </FooterNewsletter>: 
+         <FooterNewsletter>
+          <h3>Dziękujemy za dodanie się do Explaynlettera.<br/>Pozostajemy w kontakcie!</h3>
+       </FooterNewsletter>
+        }
         <FotterSocialMedia>
           <h3>Social media</h3>
           <FooterSocialMediaContent>
@@ -97,9 +102,11 @@ const FooterPl = () => {
             </Link>
           )}
           <Link to="/blog">Blog</Link>
+          { url == '/reklama-platna' &&
           <ScLink to={'consultation'} smooth duration={1000}>
               Kontakt
             </ScLink>
+            }
         </div>
         <div className="site-links-column sl3">
           <h3>Informacje</h3>

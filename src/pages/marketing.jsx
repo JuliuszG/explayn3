@@ -185,7 +185,7 @@ const Marketing = () => {
                 <AnimatedParagraph inView={inView4}>
                   We use best practices to deliver comprehensive digital marketing
                   services and provide a compelling message that sticks in the
-                  minds of those yYou’re trying to reach.
+                  minds of those You’re trying to reach.
                 </AnimatedParagraph>
               </>
             )}

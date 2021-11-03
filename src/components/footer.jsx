@@ -45,7 +45,8 @@ const Footer = () => {
             <a href="mailto:we@explayn.it">we@explayn.it</a>
           </div>
         </FooterContactUs>
-        <FooterNewsletter>
+        {!mailSend ?
+          <FooterNewsletter>
           <h3>NEWSLETTER</h3>
           <p>
             Join our community and get our best insights, tips and strategies
@@ -64,7 +65,11 @@ const Footer = () => {
               </button>
             </form>
           </FooterFormWrapper>
+        </FooterNewsletter> :
+        <FooterNewsletter>
+          <h3>That’s great!<br/>We’ll keep you updated!</h3>
         </FooterNewsletter>
+        }
         <FotterSocialMedia>
           <h3>Follow us on social media</h3>
           <FooterSocialMediaContent>

@@ -33,6 +33,11 @@ const show = keyframes`{
   }
 }`
 
+const slide = keyframes`
+  0% { transform : translateY(100%) }
+  100%{ transform : translateY(0) } 
+}
+`
 
 
 //blog/author.jsx
@@ -1248,7 +1253,9 @@ export const FooterContactUs = styled.div`
 
 export const FooterNewsletter = styled.div`
   grid-area: newsletter;
+  height: 164px;
   @media ${deviceMax.mobileL} {
+    height: 115px;
     margin: 20px 0 30px;
   }
   p {
@@ -2245,7 +2252,6 @@ export const CaseStudyHeaderWrapper = styled.div`
     }
   }
   p {
-    width: 60%;
     font-weight: 300;
     font-size: 16px;
     line-height: 32px;
@@ -3662,9 +3668,10 @@ export const ServicesTopSection = styled.div`
   align-items: center;
   position: relative;
   @media ${deviceMin.desktop} {
-    justify-content: center;
+    justify-content: space-between;
     max-width: 1303px;
     margin: 0 auto;
+    padding:0;
   }
 
   @media ${deviceMax.tabletL} {
@@ -5183,9 +5190,9 @@ export const CaseImgRevert = styled.div`
   object-fit: cover;
   image-orientation: none;
   right: 0;
+  height: 100%;
   @media screen and (max-width: 992px) {
     width: 100%;
-    height: 100%;
   }
 }
 `;
@@ -5205,4 +5212,88 @@ export const CaseScreenImageFull = styled(Img)`
 
 export const Margin = styled.div`
   margin-top: 80px;
+`;
+
+export const SlideContainer = styled.div`
+ opacity:0.8;
+ position: relative;
+ @media (max-width: 992px){
+    opacity:1;
+  }
+@media (min-width: 992px){
+  &:hover {
+    opacity:1;
+    cursor: pointer;
+    }
+  }
+  
+  .arrow {
+    position: absolute;
+    top: calc(50% - 47px);
+    left: calc(50% - 47px);
+    @media (max-width: 992px){
+      transform: scale(0.6)
+    }
+    @media (min-width: 992px){
+      animation: ${slide} 0.2s;
+
+    }
+  }
+`;
+
+export const VideoContainer = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  @media (max-width: 992px){
+    top: 150px;
+    right: 0;
+    left: 0;
+    bottom: 150px;
+  }
+  .video-button {
+      position: absolute;
+      right: 25px;
+      font-size: 25px;
+      top: 25px;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background-image: linear-gradient(#4c65ff 0%, #263380 180%);
+      border:none;
+      transition: all 0.3s ease 0s;
+      cursor: pointer;
+      z-index:9999;
+      @media (hover: hover) {
+        &:hover {
+          color: #fff !important;
+          background: none;
+          background: #484d5b;
+          -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+          transition: all 0.3s ease 0s;
+        }
+      }
+  }
+  .video {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  video {
+    position: absolute;
+    z-index:99;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+`;
+
+export const MarginBottom = styled.div`
+  margin-bottom: 68px;
 `;

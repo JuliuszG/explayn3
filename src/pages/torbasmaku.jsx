@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import CaseStudy from '../components/landingPage/caseStudy';
@@ -20,19 +21,86 @@ import Marketing from '../images/torba/Marketing.svg';
 import Visual from '../images/torba/Visual.svg';
 import Michal from '../images/torba/Michal.png';
 import BrandingBig from '../images/torba/Branding-big.svg';
+import Arrow from '../images/torba/Arrow.svg';
+import {items} from '../lib/video';
 import CaseLanding from '../components/cases/caseLanding';
 import CaseData from '../components/cases/caseData';
 import CaseScreen from '../components/cases/caseScreen';
 import CaseBigScreen from '../components/cases/caseBigScreen';
 import CaseDoubleImage from '../components/cases/caseDoubleImage';
-import CaseList from '../components/cases/caseList';
+import 'pure-react-carousel/dist/react-carousel.es.css';
+import {
+  CarouselProvider,
+  Slider,
+  Slide,
+} from 'pure-react-carousel';
 
-import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert } from '../components/styled/index'
+import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../components/styled/index'
+
+
 
 const CaseTemplate = () => {
+  const ref = useRef();
+  const [open, setOpen] = useState(false)
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  const [openVideo, setOpenVideo] = useState(false);
+  const [url, setUrl] = useState('');
+  const [fluid, setFluid] = useState('');
+
+  const SlideVideo = ({ item }) => {
+    const [isShownHoverContent, setIsShownHoverContent] = useState(false);
+    if (open) {
+      document.querySelector('body').style.overflow = "hidden"
+      document.querySelector('html').style.overflow = "hidden"
+    } else {
+      document.querySelector('body').style.overflow = "scroll"
+      document.querySelector('html').style.overflow = "scroll"
+    }
+    function useOnClickOutside(ref, handler) {
+      useEffect(
+        () => {
+          const listener = (event) => {
+            if (!ref.current || ref.current.contains(event.target)) {
+              return;
+            }
+            handler(event);
+          };
+          document.addEventListener("mousedown", listener);
+          document.addEventListener("touchstart", listener);
+          return () => {
+            document.removeEventListener("mousedown", listener);
+            document.removeEventListener("touchstart", listener);
+          };
+        },
+        [ref, handler]
+      );
+    }
+    isMobile && useOnClickOutside(ref, () => setOpen(false));
+    return (
+      <>
+        <Slide>
+          <SlideContainer
+            onMouseEnter={() => setIsShownHoverContent(true)}
+            onMouseLeave={() => setIsShownHoverContent(false)}
+          >
+            <img
+              style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
+              src={item.image}
+              alt="torba smaku"
+            />
+            {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
+              setOpenVideo(true)
+              setUrl(item.video)
+              setOpen(true)
+              setFluid(item.image)
+            }} />}
+          </SlideContainer>
+        </Slide>
+      </>
+    )
+  }
   const data = useStaticQuery(graphql`
   query myQueryAndMyQuery($id: String) {
     datoCmsRealizacja(id: { eq: $id }) {
@@ -77,9 +145,20 @@ const CaseTemplate = () => {
       component7Paragraph
       component7List
     }
+    allDatoCmsVideo {
+      nodes{
+        photo {
+          fluid(maxWidth: 1750) {
+            ...GatsbyDatoCmsFluid_tracedSVG
+          }
+        }
+        video {
+          url
+        }
+      }
+    }
   }
 `)
-
   return (
     <Layout>
       <SEO title="Explayn Digital Agency" />
@@ -205,14 +284,14 @@ const CaseTemplate = () => {
       </CaseImg>
       <CaseImgRevert>
         <div className="img-wrapper">
-          <img src={Michal} class="img"/>
+          <img src={Michal} className="img" />
         </div>
         <div className="wrapper-work">
           <div className="wrapper">
             <img src={Marketing} alt="logo torba smaku" className="logo" />
             <div>
               <h3>MARKETING</h3>
-              <h2>Marketing <br/>campaing</h2>
+              <h2>Marketing <br />campaing</h2>
             </div>
           </div>
           <p>Marketing campaign: The introduction of the new brand to the market could go unnoticed without a well-targeted brand promotion. Our client decided to bet on a YouTube campaign since it’s the easiest way to reach broad recognition within a short time. To reach out to clients through social media, we’ve used Facebook Ads, too. Google Ads campaign made up to the overall promotion, allowing us to access the target group directly and spark its interest. </p>
@@ -223,9 +302,51 @@ const CaseTemplate = () => {
               <h2>Video ads</h2>
             </div>
           </div>
-        <p>Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.</p>
+          <p>Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.</p>
         </div>
       </CaseImgRevert>
+      <div
+        style={{ width: '100%', margin: 'auto', }}
+      >
+
+        <CarouselProvider
+          naturalSlideWidth={999}
+          naturalSlideHeight={561}
+          visibleSlides={isMobile ? 1 : 2}
+          currentSlide={1}
+          totalSlides={items.length}
+          className="carousel__cnt"
+          infinite={true}
+          step={1}
+        >
+          <Slider style={!isMobile ? { paddingLeft: '5%', paddingRight: '5%' } : { paddingLeft: '0', paddingRight: '15%' }}>
+            {items.map((item, index) => (
+              <SlideVideo item={item} />
+            )
+            )
+            }
+          </Slider>
+        </CarouselProvider>
+
+      </div>
+      {
+        (openVideo && open) &&
+        <VideoContainer ref={ref}>
+           <img
+            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'absolute' }}
+            src={fluid}
+            alt="post picture"
+        />
+          <button className="video-button" onClick={() => setOpen(false)}> &#x2715; </button>
+          <video controls="true" autoplay="autoplay" type="video/mp4">
+            <source src={url}
+              type="video/mp4"
+              className="video"
+            />
+            <source src={url} type="video/webm"></source>
+          </video>
+        </VideoContainer>
+      }
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>

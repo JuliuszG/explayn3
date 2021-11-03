@@ -454,11 +454,14 @@ export const ConsultationContainer = styled.div`
 export const ConsultationContainerThank = styled.div`
     background: white;
     display: none;
-    padding:0 0 0 10%;
-    margin-top: 200px;
+    padding:0;
+    padding-top: 10px;
     text-align: center;
     @media (max-width: 1024px) {
       height: 100%;
+      padding-top: 150px;
+    }
+    .thankText  {
       padding: 0;
     }
     h2 {
@@ -524,6 +527,7 @@ export const ContactContainer = styled.div`
           width: 100%;
         }
         }
+
     }
      .input {
       display:grid;
@@ -554,7 +558,7 @@ export const ContactContainer = styled.div`
       position: relative;
       height: 80px;
       @media (max-width: 450px) {
-        height: 120px;
+        height: 150px;
       }
       span {
         position: absolute;
@@ -665,6 +669,38 @@ export const ContactContainer = styled.div`
       }
     }
 `;
+export const Spinner= styled.div`
+  display: none;
+  width: 3.5em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+ div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #fc2f70;
+  animation: fade 0.8s ease-in-out alternate infinite;
+}
+
+div:nth-of-type(1) {
+  animation-delay: -0.4s;
+}
+
+div:nth-of-type(2) {
+  animation-delay: -0.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}`;
 
 export const ConsultationText = styled.div`
   position: relative;
@@ -712,7 +748,7 @@ export const ConsultationText = styled.div`
   }
   .decoration-center {
     position: absolute;
-    left: calc(50% - 233px);
+    left: calc(50% - 175px);
     top: -257px;
     @media (max-width: 576px) {
       display: none;
@@ -1042,5 +1078,5 @@ export const SurmaWrapper = styled.div`
     height: 100%;
     z-index:99999;
   }
-
 `;
+

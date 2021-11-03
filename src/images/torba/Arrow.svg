@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="95" height="95" viewBox="0 0 95 95">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.485" cy="1.043" r="1.278" gradientTransform="matrix(-0.065, -0.998, 0.624, -0.041, -0.134, 1.569)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4c65ff"/>
+      <stop offset="1" stop-color="#263380"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_254" data-name="Group 254" transform="translate(-452 -233)">
+    <g id="Group_242" data-name="Group 242" transform="translate(-457.5 -8725.5)">
+      <circle id="Ellipse_310" data-name="Ellipse 310" cx="47.5" cy="47.5" r="47.5" transform="translate(909.5 8958.5)" fill="url(#radial-gradient)"/>
+      <path id="Icon_awesome-play" data-name="Icon awesome-play" d="M32.884,16.636,5.61.511A3.7,3.7,0,0,0,0,3.711V35.952a3.716,3.716,0,0,0,5.61,3.2L32.884,23.036a3.715,3.715,0,0,0,0-6.4Z" transform="translate(944.144 8985.661)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
