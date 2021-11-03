@@ -22,7 +22,7 @@ import Visual from '../images/torba/Visual.svg';
 import Michal from '../images/torba/Michal.png';
 import BrandingBig from '../images/torba/Branding-big.svg';
 import Arrow from '../images/torba/Arrow.svg';
-
+import {items} from '../lib/video';
 import CaseLanding from '../components/cases/caseLanding';
 import CaseData from '../components/cases/caseData';
 import CaseScreen from '../components/cases/caseScreen';
@@ -85,16 +85,16 @@ const CaseTemplate = () => {
             onMouseEnter={() => setIsShownHoverContent(true)}
             onMouseLeave={() => setIsShownHoverContent(false)}
           >
-            <Img
+            <img
               style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
-              fluid={item.photo.fluid}
+              src={item.image}
               alt="torba smaku"
             />
             {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
               setOpenVideo(true)
-              setUrl(item.video.url)
+              setUrl(item.video)
               setOpen(true)
-              setFluid(item.photo.fluid)
+              setFluid(item.image)
             }} />}
           </SlideContainer>
         </Slide>
@@ -314,13 +314,13 @@ const CaseTemplate = () => {
           naturalSlideHeight={561}
           visibleSlides={isMobile ? 1 : 2}
           currentSlide={1}
-          totalSlides={data.allDatoCmsVideo.nodes.length}
+          totalSlides={items.length}
           className="carousel__cnt"
           infinite={true}
           step={1}
         >
           <Slider style={!isMobile ? { paddingLeft: '5%', paddingRight: '5%' } : { paddingLeft: '0', paddingRight: '15%' }}>
-            {data.allDatoCmsVideo.nodes.map((item, index) => (
+            {items.map((item, index) => (
               <SlideVideo item={item} />
             )
             )
@@ -332,9 +332,9 @@ const CaseTemplate = () => {
       {
         (openVideo && open) &&
         <VideoContainer ref={ref}>
-           <Img
-            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'static' }}
-            fluid={fluid}
+           <img
+            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'absolute' }}
+            src={fluid}
             alt="post picture"
         />
           <button className="video-button" onClick={() => setOpen(false)}> &#x2715; </button>

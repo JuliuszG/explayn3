@@ -1,14 +1,14 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
 import Desktop from '../../components/navigation/desktop';
 import Mobile from '../../components/navigation/mobile';
-import CaseStudy from '../../components/landingPage/caseStudy';
 import { useMediaQuery } from 'react-responsive';
 import Layout from '../../components/layout';
 import FooterPl from '../../components/footerPl';
 import SEO from '../../components/seo';
 import Torba from '../../images/torba/torba.svg';
+import { items } from '../../lib/video';
 import SubjectBig from '../../images/torba/Subject-big.svg';
 import Subject from '../../images/torba/Subject.svg';
 import Challenges from '../../images/torba/Challenges.svg';
@@ -38,7 +38,7 @@ import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseI
 
 
 
-const Case= () => {
+const Case = () => {
   const ref = useRef();
   const [open, setOpen] = useState(false)
   const isMobile = useMediaQuery({
@@ -79,24 +79,25 @@ const Case= () => {
     isMobile && useOnClickOutside(ref, () => setOpen(false));
     return (
       <>
-      <Slide>
-      <SlideContainer
-          onMouseEnter={() => setIsShownHoverContent(true)}
-          onMouseLeave={() => setIsShownHoverContent(false)}
-      >
-        <Img
-          style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
-          fluid={item.photo.fluid}
-          alt="torba smaku"
-        />
-        {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
-            setOpenVideo(true)
-            setUrl(item.video.url)    
-            setOpen(true)
-          }}/>}
-      </SlideContainer>
-    </Slide>
-    </>
+        <Slide>
+          <SlideContainer
+            onMouseEnter={() => setIsShownHoverContent(true)}
+            onMouseLeave={() => setIsShownHoverContent(false)}
+          >
+            <img
+              style={{ height: 'calc(100% - 20px)', width: 'calc(100% - 20px)', left: '10px', background: "red" }}
+              src={item.image}
+              alt="torba smaku"
+            />
+            {(isShownHoverContent || isMobile) && <img src={Arrow} className="arrow" onClick={() => {
+              setOpenVideo(true)
+              setUrl(item.video)
+              setOpen(true)
+              setFluid(item.image)
+            }} />}
+          </SlideContainer>
+        </Slide>
+      </>
     )
   }
   const data = useStaticQuery(graphql`
@@ -310,35 +311,35 @@ const Case= () => {
       <div
         style={{ width: '100%', margin: 'auto', }}
       >
-      
+
         <CarouselProvider
           naturalSlideWidth={999}
           naturalSlideHeight={561}
           visibleSlides={isMobile ? 1 : 2}
           currentSlide={1}
-          totalSlides={data.allDatoCmsVideo.nodes.length}
+          totalSlides={items.length}
           className="carousel__cnt"
           infinite={true}
           step={1}
         >
-          <Slider style={!isMobile ? { paddingLeft: '10%', paddingRight: '10%' }: {paddingLeft: '0', paddingRight: '15%' }}>
-            {data.allDatoCmsVideo.nodes.map((item, index) => (
-              <SlideVideo item={item}/>
+          <Slider style={!isMobile ? { paddingLeft: '10%', paddingRight: '10%' } : { paddingLeft: '0', paddingRight: '15%' }}>
+            {items.map((item, index) => (
+              <SlideVideo item={item} />
             )
             )
             }
           </Slider>
         </CarouselProvider>
-        
+
       </div>
       {
         (openVideo && open) &&
         <VideoContainer ref={ref}>
-           <Img
-            style={{ height: '100%', width: '100%', objectFit: 'cover', position:'static' }}
-            fluid={fluid}
+          <Img
+            style={{ height: '100%', width: '100%', objectFit: 'cover', position: 'absolute' }}
+            src={fluid}
             alt="post picture"
-        />
+          />
           <button className="video-button" onClick={() => setOpen(false)}> &#x2715; </button>
           <video controls="true" autoplay="autoplay" type="video/mp4">
             <source src={url}

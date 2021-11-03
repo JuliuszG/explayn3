@@ -5248,7 +5248,6 @@ export const VideoContainer = styled.div`
   left: 0;
   bottom: 0;
   z-index: 99999;
-  // animation: ${slide} 0.5s;
   @media (max-width: 992px){
     top: 150px;
     right: 0;
