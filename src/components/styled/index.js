@@ -4389,6 +4389,12 @@ export const PostTemplateWrapper = styled.section`
       @media (max-width: 800px) {
         padding-right: 0;
       }
+      @media (max-width: 550px) and (min-width: 401px) {
+        height: 30vh;
+      }
+      @media (max-width: 400px) {
+        height: 40vh;
+      }
       h1 {
         color: #000000;
         font-family: 'Poppins';
@@ -4397,8 +4403,8 @@ export const PostTemplateWrapper = styled.section`
         font-size: 69px;
         margin-bottom: 10px;
         @media (max-width: 550px) {
-          font-size: 51px;
-          line-height: 59px;
+          font-size: 32px;
+          line-height: 120%;
         }
       }
       .info {
@@ -4506,8 +4512,11 @@ export const PostTemplateLandingScreen = styled(BackgroundImage)`
   background-position: ${({ framing }) => (framing ? framing : 'center')};
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   z-index: -1;
+  @media (min-width: 560px) {
+    height: 100vh;
+  }
 `;
 //templates/servicesTemplate.js
 
