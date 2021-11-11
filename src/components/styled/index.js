@@ -4269,7 +4269,6 @@ export const BlogContent = styled.div`
 export const BlogPost = styled(Link)`
   box-shadow: 0px 0px 40px #00000014;
   text-decoration: none;
-  min-height: 637px;
   display: flex;
   flex-direction: column;
   align-content: space-between;
@@ -4285,7 +4284,8 @@ export const BlogPost = styled(Link)`
     }
   }
   .img {
-    height: 50%;
+    min-height: 250px;
+    max-height: 300px;
     width: 100%;
     position: relative;
     .overlay {
@@ -4303,7 +4303,7 @@ export const BlogPost = styled(Link)`
   .content {
     width: 100%;
     padding: 10%;
-    height: 45%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -4351,7 +4351,7 @@ export const BlogPost = styled(Link)`
     color: #4c65ff;
     display: flex;
     justify-content: flex-end;
-    padding: 0% 10% 0;
+    padding: 0% 10% 2%;
     opacity: 0;
     transition: all 0.3s ease-in;
     @media (max-width: 1024px) {
@@ -4389,6 +4389,12 @@ export const PostTemplateWrapper = styled.section`
       @media (max-width: 800px) {
         padding-right: 0;
       }
+      @media (max-width: 550px) and (min-width: 401px) {
+        height: 30vh;
+      }
+      @media (max-width: 400px) {
+        height: 40vh;
+      }
       h1 {
         color: #000000;
         font-family: 'Poppins';
@@ -4397,8 +4403,8 @@ export const PostTemplateWrapper = styled.section`
         font-size: 69px;
         margin-bottom: 10px;
         @media (max-width: 550px) {
-          font-size: 51px;
-          line-height: 59px;
+          font-size: 32px;
+          line-height: 120%;
         }
       }
       .info {
@@ -4506,8 +4512,11 @@ export const PostTemplateLandingScreen = styled(BackgroundImage)`
   background-position: ${({ framing }) => (framing ? framing : 'center')};
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   z-index: -1;
+  @media (min-width: 560px) {
+    height: 100vh;
+  }
 `;
 //templates/servicesTemplate.js
 
@@ -4801,6 +4810,9 @@ export const ContentArticle = styled.div`
     font-weight: 200;
     color: #000;
     padding-bottom: 20px;
+  }
+  & p b {
+    font-weight: 600;
   }
   .content{
     .blue{

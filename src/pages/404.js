@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import Layout from '../components/layout';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
@@ -16,8 +16,9 @@ const PageNotFound = () => {
 
 
   return (
+  <>
+    <SEO title="Explayn Digital Agency" />
     <Layout>
-      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
       <ServicesTopSection404>
         <div>
@@ -31,6 +32,7 @@ const PageNotFound = () => {
       </ServicesTopSection404>
       <Footer />
     </Layout>
+    </>
   );
 };
 
