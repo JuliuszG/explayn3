@@ -12,7 +12,7 @@ import FooterPl from '../components/footerPl';
 import LandingPl from '../components/landingPage/landingPl';
 import LogoImg from '../components/navigation/logoImg';
 import { ImgContainer } from '../components/landingPl/styled';
-import BlueMobile from '../images/landingPl/blueMobile.svg';
+import BlueMobile from '../images/landingPL/blueMobile.svg';
 
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
