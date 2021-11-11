@@ -44,8 +44,20 @@ export const ImgContainer = styled.div`
   @media (max-width: 576px) {
     padding: 3% 10%;
     position: static;
-    height: 10vh;
-  } 
+    height: 20vh;
+    a
+     {
+      filter: brightness(0) invert(1);
+    }
+  }
+  .blue--mobile {
+    position: absolute;
+    top: -491px;
+    left: -330px;
+    @media (min-width: 1280px) {
+      display: none;
+    }
+  }
 `;
 
 export const TrustElement = styled.div`

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="917.956" height="876.411" viewBox="0 0 917.956 876.411">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.703" cy="0.898" r="0.951" gradientTransform="matrix(0.995, 0.098, -0.127, 1.286, 0.125, -0.33)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f2f2f2"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.543" cy="0.692" r="0.492" gradientTransform="matrix(0.992, 0.123, -0.154, 1.237, 0.115, -0.229)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#f4f4f4"/>
+    </radialGradient>
+    <filter id="Polygon_17" x="89.654" y="50.955" width="738.152" height="706.501" filterUnits="userSpaceOnUse">
+      <feOffset dx="-13" dy="-13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6.5" result="blur"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_168" data-name="Group 168" transform="translate(124.748 -141.887)">
+    <path id="Polygon_16" data-name="Polygon 16" d="M251.551,174.406c48.747-79.722,164.54-79.722,213.287,0L600.082,395.586C651.013,478.88,591.069,585.8,493.439,585.8H222.95c-97.631,0-157.574-106.916-106.643-190.209Z" transform="matrix(-0.848, -0.53, 0.53, -0.848, 482.784, 1018.297)" fill="url(#radial-gradient)"/>
+    <g transform="matrix(1, 0, 0, 1, -124.75, 141.89)" filter="url(#Polygon_17)">
+      <path id="Polygon_17-2" data-name="Polygon 17" d="M206.276,108.821c30.419-49.744,102.67-49.744,133.089,0l133.7,218.635c31.783,51.975-5.622,118.692-66.544,118.692H139.125c-60.922,0-98.327-66.717-66.544-118.692Z" transform="matrix(-0.85, -0.53, 0.53, -0.85, 584.88, 750.96)" fill="url(#radial-gradient-2)"/>
+    </g>
+  </g>
+</svg>

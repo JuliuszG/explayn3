@@ -2,27 +2,30 @@ import React from 'react';
 import More from '../../images/landing/more.svg';
 import { Link as ScLink } from 'react-scroll';
 import { Landing2Wrapper } from '../styled';
-import landingCircle from '../../images/landing/landing-multi-circle.svg';
+import Blue from '../../images/landingPl/blue.svg';
+import White from '../../images/landingPl/white.svg';
+
 
 const LandingPl = () => {
   return (
-    <Landing2Wrapper>
+    <Landing2Wrapper className="pl">
       <div className="cnt cnt-pl">
-        <div className="decoration decoration-pl--top">
-          <img src={landingCircle} alt="decoration" />
-        </div>
-        <div className="decoration decoration-pl--left">
-          <img src={landingCircle} alt="decoration" />
-        </div>
-        <div className="content--pl">
-          <h1 className="title--pl">Reklama w internecie<br />jest <span className="blue">kluczowa</span> do osiągnięcia <br /><span className="blue">sukcesu.</span></h1>
-          <h2>W Explayn stawiamy na <span className="blue">rozwój Twojego biznesu.</span></h2>
-          <p>Zastanawiasz się, jak zwielokrotnić wyniki swojej sprzedaży dzięki płatnej reklamie w internecie? Budujemy świadomość, zaangażowanie i pozyskujemy dla Ciebie nowych klientów.</p>
-          <button onClick={() => {
+      <button onClick={() => {
             document.getElementById('consultation').scrollIntoView({
               behavior: 'smooth'
             })
           }}>Umów się na bezpłatną konsultację</button>
+        <div className="decoration decoration-pl--left">
+        </div>
+        <div className="content--pl">
+          <div className="content--wrapper">
+            <img src={White} alt="decoration" className="white-image"/>
+            <div className="text--wrapper">
+              <h1 className="title--pl">Reklama w internecie<br />jest <span className="blue">kluczowa</span> do osiągnięcia <br /><span className="blue">sukcesu.</span></h1>
+              <p>Zastanawiasz się, jak zwielokrotnić wyniki swojej sprzedaży dzięki płatnej reklamie w internecie? Budujemy świadomość, zaangażowanie i pozyskujemy dla Ciebie nowych klientów.</p>
+            </div>
+          <img src={Blue} alt="decoration" className="blue--img"/>
+          </div>
         </div>
       </div>
       <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
