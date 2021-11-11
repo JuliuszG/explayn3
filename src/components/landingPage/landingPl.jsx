@@ -2,8 +2,8 @@ import React from 'react';
 import More from '../../images/landing/more.svg';
 import { Link as ScLink } from 'react-scroll';
 import { Landing2Wrapper } from '../styled';
-import Blue from '../../images/landingPl/blue.svg';
-import White from '../../images/landingPl/white.svg';
+import Blue from '../../images/landingPL/blue.svg';
+import White from '../../images/landingPL/white.svg';
 
 
 const LandingPl = () => {
