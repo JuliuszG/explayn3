@@ -1738,6 +1738,7 @@ export const Landing2Wrapper = styled.div`
   &.pl {
     @media (max-width: 1280px) {
       min-height: 80vh !important;
+      max-height: 80vh !important;
     }
   }
   .scroll {
