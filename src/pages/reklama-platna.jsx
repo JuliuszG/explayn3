@@ -36,25 +36,27 @@ const IndexPage = ({ location }) => {
   }, [location.state, caseStudyRef.current]);
 
   return (
-    <Layout>
+    <>
       <SEO title="Explayn Digital Agency" />
-      <ImgContainer>
-      <a href="/" style={{position:'relative', display:'block', zIndex:'99'}}>
-        <LogoImg
-          customWidth="194px"
-          customHeight="41px"
-        />
-      </a>
-      </ImgContainer>
-      <LandingPl />
-      <Benefit />
-      <Client />
-      <Offer />
-      <Proces />
-      <Consultation />
-      <TrustComponent />
-      <FooterPl />
-    </Layout>
+      <Layout>
+        <ImgContainer>
+          <a href="/" style={{ position: 'relative', display: 'block', zIndex: '99' }}>
+            <LogoImg
+              customWidth="194px"
+              customHeight="41px"
+            />
+          </a>
+        </ImgContainer>
+        <LandingPl />
+        <Benefit />
+        <Client />
+        <Offer />
+        <Proces />
+        <Consultation />
+        <TrustComponent />
+        <FooterPl />
+      </Layout>
+    </>
   );
 };
 

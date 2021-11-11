@@ -72,19 +72,21 @@ const Blog = ({ data: { allDatoCmsBlog } }) => {
     query: '(max-device-width: 950px)',
   });
   return (
-    <Layout>
+    <>
       <SEO title="Explayn Digital Agency" />
-      {isMobile ? <Mobile /> : <Desktop />}
-      <BlogWrapper>
-        <BlogContent>
-          <h1 className="main-title">Articles</h1>
-          {allDatoCmsBlog.nodes.map(post => (
-            <Card key={post.id} post={post} />
-          ))}
-        </BlogContent>
-      </BlogWrapper>
-      <Footer />
-    </Layout>
+      <Layout>
+        {isMobile ? <Mobile /> : <Desktop />}
+        <BlogWrapper>
+          <BlogContent>
+            <h1 className="main-title">Articles</h1>
+            {allDatoCmsBlog.nodes.map(post => (
+              <Card key={post.id} post={post} />
+            ))}
+          </BlogContent>
+        </BlogWrapper>
+        <Footer />
+      </Layout>
+    </>
   );
 };
 
