@@ -1862,7 +1862,7 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .content--pl {
-    margin: 5%;
+    margin: 5% 10%;
     position: relative;
     @media (max-width: 1280px) {
       margin:0;
