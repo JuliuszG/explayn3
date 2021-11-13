@@ -67,8 +67,9 @@ const CaseTemplate = ({ data }) => {
     query: '(max-device-width: 950px)',
   });
   return (
+    <>
+    <SEO title="Explayn Digital Agency" />
     <Layout>
-      <SEO title="Explayn Digital Agency" />
       {isMobile ? (
         <Mobile />
       ) : (
@@ -114,6 +115,7 @@ const CaseTemplate = ({ data }) => {
       <CaseStudy triangle={false} />
       <Footer />
     </Layout>
+    </>
   );
 };
 
