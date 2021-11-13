@@ -42,10 +42,22 @@ export const ImgContainer = styled.div`
   top: 0px;
   left: 0px;
   @media (max-width: 576px) {
-    padding: 3% 10%;
+    padding: 7% 5%;
     position: static;
-    height: 10vh;
-  } 
+    height: 20vh;
+    a
+     {
+      filter: brightness(0) invert(1);
+    }
+  }
+  .blue--mobile {
+    position: absolute;
+    top: -446px;
+    left: -401px;
+    @media (min-width: 576px) {
+      display: none;
+    }
+  }
 `;
 
 export const TrustElement = styled.div`

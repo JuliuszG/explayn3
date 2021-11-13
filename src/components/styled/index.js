@@ -1735,6 +1735,12 @@ export const Landing2Wrapper = styled.div`
       }
     }
   }
+  &.pl {
+    @media (max-width: 576px) {
+      min-height: 80vh !important;
+      max-height: 80vh !important;
+    }
+  }
   .scroll {
     width: 111px;
     position: absolute;
@@ -1747,6 +1753,7 @@ export const Landing2Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
+     
       .title {
         transform: translate(0, 25px);
         color: #cccccc;
@@ -1756,6 +1763,16 @@ export const Landing2Wrapper = styled.div`
           margin-right: 2px;
         }
       }
+    }
+    .content-pl {
+      @media (max-width: 570px) {
+        transform: scale(0.7);
+      }
+    }
+  }
+  .scroll-pl {
+    @media (max-width: 570px) {
+      bottom: 10px;
     }
   }
   .cnt {
@@ -1781,63 +1798,34 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .cnt-pl {
-    margin: 5% auto 0 !important;
+    margin: 0;
+    background: linear-gradient(#fff 0%, #f2f2f2 100%);
+    min-width: 100%;
+    min-height: 100vh;
+    position: relative;
     @media (max-width: 450px) {
       font-size: 8px;
-      margin-bottom: 10vh;
       padding-top: 0;
     }
-  }
-  .content--pl {
-    position: relative;
-
-    h1 {
-      font-weight: 600;
-      font-size: 50px;
-      line-height: 120%;
-      text-align: center;
-      .blue {
-        color: #3D52CE;
-      }
-      @media (max-width: 576px) {
-        font-size: 29px;
-        line-height: 47px;
-        text-align: left;
-      }
-      @media (max-width: 330px) {
-        font-size: 24px;
-        line-height: 30px;
-      }
+    @media (max-width: 450px) {
+      font-size: 8px;
+      margin-bottom: 0;
+      padding-top: 0;
     }
-    h2 {
-      margin-top: 40px;
-      font-size: 24px;
-      font-weight: 300;
-      text-align: center;
-      .blue {
-        color: #3D52CE;
-      }
-      @media (max-width: 576px) {
-        display: none;
-      }
+    @media (min-width: 570px) {
+      padding-top: 0;
     }
-    p {
-      max-width: 556px;
-      margin: 60px auto 0 auto;
-      font-size: 18px;
-      font-weight: 300;
-      font-size: 1.375em;
-      line-height: 136%;
-      text-align: center;
-      @media (max-width: 576px) {
-        text-align: left !important;
-        margin-top: 20px;
-        font-size: 16px;
-      }
+    @media (min-width: 850px) {
+      padding-left: 10%;
+    }
+    @media (min-width: 1280px) {
+      padding-left: 0;
     }
     button {
-      margin-top: 25px;
-      margin-left: calc(50% - 165px);
+      z-index: 999;
+      position: absolute;
+      margin-top: 3%;
+      right:5%;
       background: linear-gradient(#4c65ff 0%,#263380 180%);
       border-radius: 29px;
       color: white;
@@ -1849,8 +1837,17 @@ export const Landing2Wrapper = styled.div`
       cursor: pointer;
       transition: all 0.1s ease-in;
       @media (max-width: 576px) {
-        margin-left: auto;
-        margin-right: auto;
+        width: 340px;
+        left: calc(50% - 170px);
+        bottom: 23%;
+        margin 3% 0 0 0;
+      }
+      @media (max-width: 320px) {
+        width: 300px;
+        left: calc(50% - 150px);
+        font-size: 14px;
+        bottom: 23%;
+        margin 3% 0 0 0;
       }
       &:hover {
         margin-left: calc(50% - 233px);
@@ -1862,7 +1859,97 @@ export const Landing2Wrapper = styled.div`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
         transition: all 0.3s ease 0s;
       }
-        }
+    }
+  }
+  .content--pl {
+    margin: 5% 10%;
+    position: relative;
+    @media (max-width: 1280px) {
+      margin:0;
+    }
+    .content--wrapper {
+      position: relative
+    }
+    .white-image {
+      position: absolute;
+      height: 247px;
+      top: 25%;
+      left: calc(50% - 115px);
+      @media (min-width: 570px) {
+        position: absolute;
+        left: -5%;
+        height: 80%;
+        top: 2%;
+      }
+    }
+    .text--wrapper{
+      position: relative;
+      padding-top: 10%;
+      max-width: 75%;
+      padding-left: 5%;
+      @media (min-width: 750px) and (max-width: 1280px) {
+        padding-left: 0;
+        display: block;
+        z-index: 4;
+        margin-top: 20%;
+        max-width: 100%;
+      }
+      @media (min-width: 500px) and (max-width: 750px) {
+        padding-left: 0;
+        display: block;
+        z-index: 4;
+        padding-top: 0;
+        max-width: 100%;
+      }
+      @media (max-width: 500px) {
+        padding-left: 0;
+        display: block;
+        z-index: 4;
+        padding-top: 25%;
+        max-width: 100%;
+      }
+
+    }
+    .blue--img {
+      display: none;
+      @media (min-width: 1280px) {
+        display: block;
+        height: 70%;
+        position: absolute;
+        right: -100px;
+        top: 10%;
+      }
+    }
+    h1 {
+      font-weight: 600;
+      font-size: 49px;
+      line-height: 76px;
+      .blue {
+        color: #3D52CE;
+      }
+      @media (max-width: 1280px) {
+        font-size: 26px;
+        line-height: 47px;
+        text-align: left;
+      }
+      @media (max-width: 330px) {
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+    p {
+      max-width: 556px;
+      margin: 40px 0 0 120px;
+      font-weight: 300;
+      font-size: 18px;
+      line-height: 28px;
+      @media (max-width: 1280px) {
+        text-align: left !important;
+        font-size: 14px;
+        margin: 20px 0 0 0;
+
+      }
+    }
   }
 
   .content {
@@ -1895,7 +1982,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h1 {
-      font-size: 5.9375em;
+      font-size: 5em;
       line-height: 126%;
       font-weight: 600;
       margin-left: 12%;

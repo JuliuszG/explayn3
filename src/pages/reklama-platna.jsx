@@ -1,6 +1,4 @@
 import React, { useRef, useEffect } from 'react';
-import { Link } from 'gatsby';
-
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import { useMediaQuery } from 'react-responsive';
@@ -14,6 +12,8 @@ import FooterPl from '../components/footerPl';
 import LandingPl from '../components/landingPage/landingPl';
 import LogoImg from '../components/navigation/logoImg';
 import { ImgContainer } from '../components/landingPl/styled';
+import BlueMobile from '../images/landingPL/blueMobile.svg';
+
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
 
@@ -40,10 +40,12 @@ const IndexPage = ({ location }) => {
       <SEO title="Explayn Digital Agency" />
       <Layout>
         <ImgContainer>
+        <img src={BlueMobile} alt="decoration" className="blue--mobile"/>
           <a href="/" style={{ position: 'relative', display: 'block', zIndex: '99' }}>
             <LogoImg
               customWidth="194px"
               customHeight="41px"
+              className="logo"
             />
           </a>
         </ImgContainer>
