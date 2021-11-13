@@ -1885,7 +1885,7 @@ export const Landing2Wrapper = styled.div`
     .text--wrapper{
       position: relative;
       padding-top: 10%;
-      max-width: 70%;
+      max-width: 75%;
       padding-left: 5%;
       @media (min-width: 750px) and (max-width: 1280px) {
         padding-left: 0;
@@ -1922,8 +1922,8 @@ export const Landing2Wrapper = styled.div`
     }
     h1 {
       font-weight: 600;
-      font-size: 60px;
-      line-height: 87px;
+      font-size: 49px;
+      line-height: 76px;
       .blue {
         color: #3D52CE;
       }
@@ -1982,7 +1982,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h1 {
-      font-size: 5.9375em;
+      font-size: 5em;
       line-height: 126%;
       font-weight: 600;
       margin-left: 12%;
