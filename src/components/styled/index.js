@@ -1982,7 +1982,7 @@ export const Landing2Wrapper = styled.div`
       }
     }
     h1 {
-      font-size: 5em;
+      font-size: 5.9375em;
       line-height: 126%;
       font-weight: 600;
       margin-left: 12%;
