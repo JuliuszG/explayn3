@@ -9,6 +9,8 @@ import Author from '../components/blog/author';
 import SideBar from '../components/blog/sidebar';
 import PostSlider from '../components/blog/postSlider';
 import Footer from '../components/footer';
+import SEO from '../components/seo';
+
 import {
   PostTemplateLandingScreen,
   PostTemplateWrapper,
