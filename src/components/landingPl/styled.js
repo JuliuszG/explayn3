@@ -42,7 +42,7 @@ export const ImgContainer = styled.div`
   top: 0px;
   left: 0px;
   @media (max-width: 576px) {
-    padding: 3% 10%;
+    padding: 7% 5%;
     position: static;
     height: 20vh;
     a
@@ -52,9 +52,9 @@ export const ImgContainer = styled.div`
   }
   .blue--mobile {
     position: absolute;
-    top: -491px;
-    left: -330px;
-    @media (min-width: 1280px) {
+    top: -438px;
+    left: -396px;
+    @media (min-width: 576px) {
       display: none;
     }
   }

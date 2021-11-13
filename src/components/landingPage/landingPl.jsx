@@ -28,8 +28,8 @@ const LandingPl = () => {
           </div>
         </div>
       </div>
-      <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
-        <div className="content">
+      <ScLink className="scroll scroll-pl" to={'aboutUs'} smooth duration={500}>
+        <div className="content content-pl">
           <div className="title">zobacz więcej</div>
           <img src={More} alt="scroll down" />
         </div>

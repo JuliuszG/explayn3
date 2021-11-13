@@ -1736,7 +1736,7 @@ export const Landing2Wrapper = styled.div`
     }
   }
   &.pl {
-    @media (max-width: 1280px) {
+    @media (max-width: 576px) {
       min-height: 80vh !important;
       max-height: 80vh !important;
     }
@@ -1753,6 +1753,7 @@ export const Landing2Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       flex-direction: column;
+     
       .title {
         transform: translate(0, 25px);
         color: #cccccc;
@@ -1762,6 +1763,16 @@ export const Landing2Wrapper = styled.div`
           margin-right: 2px;
         }
       }
+    }
+    .content-pl {
+      @media (max-width: 570px) {
+        transform: scale(0.7);
+      }
+    }
+  }
+  .scroll-pl {
+    @media (max-width: 570px) {
+      bottom: 10px;
     }
   }
   .cnt {
@@ -1801,6 +1812,15 @@ export const Landing2Wrapper = styled.div`
       margin-bottom: 0;
       padding-top: 0;
     }
+    @media (min-width: 570px) {
+      padding-top: 0;
+    }
+    @media (min-width: 850px) {
+      padding-left: 10%;
+    }
+    @media (min-width: 1280px) {
+      padding-left: 0;
+    }
     button {
       z-index: 999;
       position: absolute;
@@ -1816,9 +1836,16 @@ export const Landing2Wrapper = styled.div`
       font-size: 16px;
       cursor: pointer;
       transition: all 0.1s ease-in;
-      @media (max-width: 1280px) {
+      @media (max-width: 576px) {
+        width: 340px;
+        left: calc(50% - 170px);
+        bottom: 23%;
+        margin 3% 0 0 0;
+      }
+      @media (max-width: 320px) {
         width: 300px;
         left: calc(50% - 150px);
+        font-size: 14px;
         bottom: 23%;
         margin 3% 0 0 0;
       }
@@ -1844,19 +1871,42 @@ export const Landing2Wrapper = styled.div`
       position: relative
     }
     .white-image {
-      display: none;
-      @media (min-width: 1280px) {
-        display: block;
+      position: absolute;
+      height: 247px;
+      top: 25%;
+      left: calc(50% - 115px);
+      @media (min-width: 570px) {
         position: absolute;
-        left: -400px;
+        left: -5%;
+        height: 80%;
+        top: 2%;
       }
     }
     .text--wrapper{
       position: relative;
-      padding-top: 210px;
-      @media (max-width: 1280px) {
+      padding-top: 10%;
+      max-width: 70%;
+      padding-left: 5%;
+      @media (min-width: 750px) and (max-width: 1280px) {
+        padding-left: 0;
         display: block;
-        padding-top: 20%;
+        z-index: 4;
+        margin-top: 20%;
+        max-width: 100%;
+      }
+      @media (min-width: 500px) and (max-width: 750px) {
+        padding-left: 0;
+        display: block;
+        z-index: 4;
+        padding-top: 0;
+        max-width: 100%;
+      }
+      @media (max-width: 500px) {
+        padding-left: 0;
+        display: block;
+        z-index: 4;
+        padding-top: 25%;
+        max-width: 100%;
       }
 
     }
@@ -1864,9 +1914,13 @@ export const Landing2Wrapper = styled.div`
       display: none;
       @media (min-width: 1280px) {
         display: block;
+        height: 70%;
         position: absolute;
-        right: -200px;
-        top: 5%;
+        right: -100px;
+        top: 10%;
+      }
+      @media (min-width: 2000px) {
+        height: 100%;
       }
     }
     h1 {
@@ -1877,7 +1931,7 @@ export const Landing2Wrapper = styled.div`
         color: #3D52CE;
       }
       @media (max-width: 1280px) {
-        font-size: 29px;
+        font-size: 26px;
         line-height: 47px;
         text-align: left;
       }
@@ -1894,7 +1948,7 @@ export const Landing2Wrapper = styled.div`
       line-height: 28px;
       @media (max-width: 1280px) {
         text-align: left !important;
-        font-size: 16px;
+        font-size: 14px;
         margin: 20px 0 0 0;
 
       }
