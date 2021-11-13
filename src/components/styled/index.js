@@ -1862,7 +1862,7 @@ export const Landing2Wrapper = styled.div`
     }
   }
   .content--pl {
-    margin: 10%;
+    margin: 5%;
     position: relative;
     @media (max-width: 1280px) {
       margin:0;
@@ -1918,9 +1918,6 @@ export const Landing2Wrapper = styled.div`
         position: absolute;
         right: -100px;
         top: 10%;
-      }
-      @media (min-width: 2000px) {
-        height: 100%;
       }
     }
     h1 {
