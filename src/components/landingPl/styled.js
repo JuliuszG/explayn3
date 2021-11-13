@@ -52,8 +52,8 @@ export const ImgContainer = styled.div`
   }
   .blue--mobile {
     position: absolute;
-    top: -438px;
-    left: -396px;
+    top: -446px;
+    left: -401px;
     @media (min-width: 576px) {
       display: none;
     }
