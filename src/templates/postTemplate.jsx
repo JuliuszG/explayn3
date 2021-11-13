@@ -61,6 +61,8 @@ const PostTemplate = ({ data }) => {
   const { categories } = JSON.parse(data.datoCmsBlog.categories);
   const { changeContactFormStatus } = useContext(appContext);
   return (
+    <>
+    <SEO title="Explayn Digital Agency" />
     <Layout>
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
       <PostTemplateWrapper>
@@ -111,6 +113,7 @@ const PostTemplate = ({ data }) => {
       </PostTemplateWrapper>
       <Footer />
     </Layout>
+    </>
   );
 };
 
