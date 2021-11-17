@@ -24,6 +24,7 @@ export const query = graphql`
         fluid(maxWidth: 1750) {
           ...GatsbyDatoCmsFluid_tracedSVG
         }
+          url
       }
       bigScreenFraming
       personalPhoto {
@@ -64,7 +65,7 @@ const PostTemplate = ({ data }) => {
   const { changeContactFormStatus } = useContext(appContext);
   return (
     <>
-    <SEO title="Explayn Digital Agency" />
+    <SEO title="Explayn Digital Agency" ogTitle={blogTitle} ogImage={bigScreen.url}/>
     <Layout>
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
       <PostTemplateWrapper>

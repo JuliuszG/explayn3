@@ -118,8 +118,9 @@ const ServiceTemplate = ({ pageContext }) => {
   }, [secondSectionList]);
 
   return (
+    <>
+    <SEO title="Explayn Digital Agency" />
     <Layout>
-      <SEO title="Explayn Digital Agency" />
       {isMobile ? <Mobile /> : <Desktop />}
       <ServiceWrapper>
         <ServicesTopSection>
@@ -192,6 +193,7 @@ const ServiceTemplate = ({ pageContext }) => {
       </ServiceWrapper>
       <Footer />
     </Layout>
+    </>
   );
 };
 

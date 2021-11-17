@@ -12,7 +12,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import Image from '../images/ogimage.jpeg';
 
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, meta, title, ogTitle, ogImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -43,7 +43,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: `Explayn Digital Agency`,
+          content: ogTitle || `Explayn Digital Agency`,
         },
         {
           property: `og:description`,
@@ -55,7 +55,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:image`,
-          content: `https://explayn.it${Image}`,
+          content: ogImage || `https://explayn.it${Image}`,
         },
         {
           name: `twitter:card`,
