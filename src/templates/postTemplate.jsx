@@ -65,7 +65,7 @@ const PostTemplate = ({ data }) => {
   const { changeContactFormStatus } = useContext(appContext);
   return (
     <>
-    <SEO title="Explayn Digital Agency" ogTitle={blogTitle} ogImage={bigScreen.url}/>
+    <SEO title="Explayn Digital Agency" ogTitle={blogTitle} ogImage={bigScreen.url} ogDescription={leadText}/>
     <Layout>
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
       <PostTemplateWrapper>
