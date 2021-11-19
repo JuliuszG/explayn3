@@ -47,6 +47,8 @@ const Newsletter = ({}) => {
             <input
               type="email"
               value={email}
+              minLength={2}
+              required={true}
               onChange={e => setEmail(e.target.value)}
               placeholder="enter your email address"
             />

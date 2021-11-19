@@ -57,6 +57,8 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Email adress"
+                minLength={2}
+                required={true}
                 value={value}
                 onChange={e => setValue(e.target.value)}
               />
