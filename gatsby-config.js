@@ -56,6 +56,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-eslint',
     },
+    {
+      resolve: `gatsby-plugin-facebook-pixel`,
+      options: {
+        pixelId: `vys0r3mgisvdwegx3xck13nkjy551l`,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
