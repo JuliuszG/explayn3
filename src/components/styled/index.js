@@ -1827,8 +1827,7 @@ export const Landing2Wrapper = styled.div`
     button {
       z-index: 999;
       position: absolute;
-      top: 5%;
-      right:5%;
+      right: 5%;
       background: linear-gradient(#4c65ff 0%,#263380 180%);
       border-radius: 29px;
       color: white;
@@ -1851,6 +1850,9 @@ export const Landing2Wrapper = styled.div`
         font-size: 14px;
         bottom: 23%;
         margin 3% 0 0 0;
+      }
+      @media (min-width: 1280px) {
+        top: 5%;
       }
       &:hover {
         margin-left: calc(50% - 233px);
