@@ -1820,11 +1820,14 @@ export const Landing2Wrapper = styled.div`
     }
     @media (min-width: 1280px) {
       padding-left: 0;
+      display: flex;
+      min-width: 100%;
+      align-items: center;
     }
     button {
       z-index: 999;
       position: absolute;
-      margin-top: 3%;
+      top: 5%;
       right:5%;
       background: linear-gradient(#4c65ff 0%,#263380 180%);
       border-radius: 29px;
@@ -1860,12 +1863,21 @@ export const Landing2Wrapper = styled.div`
         transition: all 0.3s ease 0s;
       }
     }
+    .scrollButton {
+      @media (min-width: 1280px) {
+        position: fixed;
+        top: 5%;
+        right: 5%;
+        animation: ${show} 0.5s;
+      }
+    }
   }
   .content--pl {
     margin: 5% 10%;
     position: relative;
+    width: 100%;
     @media (max-width: 1280px) {
-      margin:0;
+      margin: 0;
     }
     .content--wrapper {
       position: relative
@@ -1914,7 +1926,7 @@ export const Landing2Wrapper = styled.div`
       display: none;
       @media (min-width: 1280px) {
         display: block;
-        height: 70%;
+        height: 100%;
         position: absolute;
         right: -100px;
         top: 10%;

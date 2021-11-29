@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import More from '../../images/landing/more.svg';
 import { Link as ScLink } from 'react-scroll';
 import { Landing2Wrapper } from '../styled';
@@ -7,10 +7,18 @@ import White from '../../images/landingPL/white.svg';
 
 
 const LandingPl = () => {
+  const [scroll, setScroll] = useState(false)
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScroll(window.scrollY > 100)
+    })
+  }, [window.scrollY])
+
   return (
     <Landing2Wrapper className="pl">
       <div className="cnt cnt-pl">
-      <button onClick={() => {
+      <button className={scroll && "scrollButton"} onClick={() => {
             document.getElementById('consultation').scrollIntoView({
               behavior: 'smooth'
             })
