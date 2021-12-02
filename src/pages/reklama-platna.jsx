@@ -21,6 +21,7 @@ const IndexPage = ({ location }) => {
     query: '(max-device-width: 950px)',
   });
 
+  
   useEffect(() => {
     const scrollTimeout = setTimeout(() => {
       if (
@@ -29,6 +30,15 @@ const IndexPage = ({ location }) => {
       ) {
         caseStudyRef.current.scrollIntoView();
       }
+      const hash = window.location.hash;
+
+      if (hash) {
+        const element = document.querySelector(`${hash}`);
+        if (element) {
+          element.scrollIntoView()
+        }
+      }
+
     }, 500);
     return () => {
       clearTimeout(scrollTimeout);
