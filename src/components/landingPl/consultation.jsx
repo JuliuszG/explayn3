@@ -36,7 +36,7 @@ const Consultation = () => {
                     <div className="decoration-center">
                         <img src={landingCircle} alt="decoration" />
                     </div>
-                    <h2 class="center">Gratulacje!<br/>Zamówiłeś bezpłatną konsultacje</h2>
+                    <h2 className="center">Gratulacje!<br/>Zamówiłeś bezpłatną konsultacje</h2>
                     <p>Wkrótce odezwie się do Ciebie jeden z naszych specjalistów.</p>
                     <p>Przygotuj wszystkie nurtujące Cię pytania, a jeżeli masz trochę wolnego czasu, przejrzyj nasze ostatnie realizacje. </p>
                     <button className="button"> <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>Przejdź do case studies</Link></button>

@@ -23,7 +23,7 @@ const Card = ({ item }) => {
 
 const Benefit = () => {
   return (
-    <BenefitsWrapper>
+    <BenefitsWrapper id="benefits">
       <h2>Dlaczego Twój biznes potrzebuje <br />reklam w internecie?</h2>
       <div className="benefit-wrapper">
         {benefits.map((benefit, index) => (
