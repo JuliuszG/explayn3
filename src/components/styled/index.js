@@ -1953,10 +1953,10 @@ export const Landing2Wrapper = styled.div`
     }
     p {
       max-width: 556px;
-      margin: 40px 0 0 120px;
+      margin: 24px 0 0 120px;
       font-weight: 300;
-      font-size: 18px;
-      line-height: 28px;
+      font-size: 16px;
+      line-height: 24px;
       @media (max-width: 1280px) {
         text-align: left !important;
         font-size: 14px;

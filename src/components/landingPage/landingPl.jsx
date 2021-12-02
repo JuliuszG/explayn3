@@ -18,7 +18,7 @@ const LandingPl = () => {
   return (
     <Landing2Wrapper className="pl">
       <div className="cnt cnt-pl">
-      <button className={scroll && "scrollButton"} onClick={() => {
+      <button className={scroll ? "scrollButton" : ''} onClick={() => {
             document.getElementById('consultation').scrollIntoView({
               behavior: 'smooth'
             })
@@ -36,7 +36,7 @@ const LandingPl = () => {
           </div>
         </div>
       </div>
-      <ScLink className="scroll scroll-pl" to={'aboutUs'} smooth duration={500}>
+      <ScLink className="scroll scroll-pl" to={'benefits'} smooth duration={500}>
         <div className="content content-pl">
           <div className="title">zobacz więcej</div>
           <img src={More} alt="scroll down" />
