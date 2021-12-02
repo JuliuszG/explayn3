@@ -41,7 +41,6 @@ const FooterPl = () => {
           <h3>Kontakt</h3>
           <div>
             <a href="tel:+48 881 772 030">+48 881 772 030</a>
-            <a href="/reklama-platna#consultation">test</a>
           </div>
           <div className="mail">
             <a href="mailto:we@explayn.it">we@explayn.it</a>
