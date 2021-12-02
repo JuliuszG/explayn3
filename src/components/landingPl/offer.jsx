@@ -24,7 +24,7 @@ const Card = ({ item }) => {
 
 const Offer = () => {
   return (
-      <BenefitsWrapper>
+      <BenefitsWrapper id="offers">
           <h2>Co oferujemy?</h2>
           <div className="benefit-wrapper">
             { offer.map((benefit, index) => (
