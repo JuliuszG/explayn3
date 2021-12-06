@@ -40,6 +40,7 @@ const ContactForm = () => {
             });
             const requestOptions = {
                 method: 'POST',
+                mode: 'no-cors',
                 headers: { 
                     'Content-Type': 'application/json',
                     'Acces-Control-Allow-Origin': '*',
