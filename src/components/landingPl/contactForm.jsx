@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import Spinner from 'react-bootstrap/Spinner';
+import React, { useState, useEffect } from 'react';
 import { ContactContainer } from './styled';
 import emailjs from 'emailjs-com';
 import {
@@ -25,6 +24,7 @@ const ContactForm = () => {
         const body = {
             ...formData,
         };
+        console.log(JSON.stringify(body))
         emailjs
             .send(
                 'default_service',
@@ -38,6 +38,18 @@ const ContactForm = () => {
                 thankYouPage.style.display = 'block';
                 thankYouPage.scrollIntoView();
             });
+            const requestOptions = {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Acces-Control-Allow-Origin': '*',
+                    'Acces-Control-Allow-Methods': 'GET,POST,PUT,PATCH,DELETE'
+                 },
+                body: JSON.stringify(body)
+            };
+            fetch("https://hooks.zapier.com/hooks/catch/11421623/bm8k2u6/", requestOptions)
+            
     };
 
     const handleSubmit = e => {
@@ -82,7 +94,6 @@ const ContactForm = () => {
         if (name === 'checkbox') {
             const checkbox = document.querySelector('.checkbox-item')
             if (checkbox.checked != true) {
-                console.log(checkbox.checked)
                 setErrorData(prevState => ({
                     ...prevState,
                     checkbox: "Pole musi być zaznaczone"
@@ -117,9 +128,14 @@ const ContactForm = () => {
             !formData.phone ||
             !checkbox.checked
         ) {
+            if (document.querySelector('#advSendButton').classList.contains('clicked')) {
+                 document.querySelector('#advSendButton').classList.remove('clicked')
+            }
             return false;
+        } else {
+            document.querySelector('#advSendButton').classList.add('clicked')
+            return true;
         }
-        return true;
     };
 
     return (
@@ -128,9 +144,14 @@ const ContactForm = () => {
                 <div className="input">
                     <label htmlFor="name" className="label">Imię</label>
                     <input className="text" id="name"
-                        onChange={event => handleChange(event.target)}
+                        onChange={event => {
+                            handleChange(event.target)
+                            checkAll()
+                        }}                        
                         type="name"
-                        onBlur={event => handleBlur(event.target.name, event.target.value)}
+                        onBlur={event => {
+                            handleBlur(event.target.name, event.target.value)
+                        }}
                         name="name"
                     ></input>
                     <FormErrorMessage>{errorData.name}</FormErrorMessage>
@@ -138,7 +159,10 @@ const ContactForm = () => {
                 <div className="input">
                     <label htmlFor="email" className="label">Firmowy adres e-mail</label>
                     <input className="text" id="email"
-                        onChange={event => handleChange(event.target)}
+                        onChange={event => {
+                            handleChange(event.target)
+                            checkAll()
+                        }}                        
                         onBlur={event => handleBlur(event.target.name, event.target.value)}
                         type="email"
                         name="email"></input>
@@ -148,7 +172,10 @@ const ContactForm = () => {
                 <div className="input">
                     <label htmlFor="phone" className="label">Telefon kontaktowy</label>
                     <input className="text" id="phone"
-                        onChange={event => handleChange(event.target)}
+                        onChange={event => {
+                            handleChange(event.target)
+                            checkAll()
+                        }}
                         onBlur={event => handleBlur(event.target.name, event.target.value)}
                         type="number"
                         name="phone"
@@ -158,7 +185,7 @@ const ContactForm = () => {
                 </div>
                 <div className="checkbox">
                     <label />
-                    <input type="checkbox" name='checkbox' className="checkbox-item" onBlur={event => handleBlur(event.target.name, event.target.value)} />
+                    <input type="checkbox" name='checkbox' className="checkbox-item" onBlur={event => handleBlur(event.target.name, event.target.value)} onClick={()=>{checkAll()}}/>
                     <span>Wyrażasz zgodę na kontakt telefoniczny w celu obsługi niniejszego zgłoszenia. Wyrażasz zgodę na otrzymywanie informacji handlowych środkami komunikacji elektronicznej wysyłanymi przez www.explayn.it oraz na wykorzystanie komunikacji email w celach marketingowych (<a href="/policy">Polityka Prywatności</a>).</span>
                 </div>
                 <FormErrorMessage>{errorData.checkbox}</FormErrorMessage>
