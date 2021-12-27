@@ -15,6 +15,7 @@ module.exports = {
         includeInDevelopment: true,
       },
     },
+    //sitemap
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
