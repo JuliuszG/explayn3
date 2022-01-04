@@ -60,6 +60,11 @@ export const AccordionWrapper = styled.div`
       font-size: 16px;
       line-height: 168%;
     }
+
+    li {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
     
 `;
 
