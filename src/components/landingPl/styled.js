@@ -4,7 +4,10 @@ import { deviceMin, deviceMax } from '../../utils/breakpoints';
 
 export const AccordionWrapper = styled.div`
     font-family: Poppins;
-    padding: 10% 10% 0 10%;
+    padding: 5% 10% 0 10%;
+    @media ${deviceMax.mobileL} {
+      padding-top: 10%;
+    }
     .accordion-wrapper {
       border: solid 1px #ccc;
       border-radius: 6px;
@@ -28,13 +31,17 @@ export const AccordionWrapper = styled.div`
     }
     
     .accordion-title {
-      font-size: 18px;
+      font-size: 22px;
       font-weight: 600;
       cursor: pointer;
       padding: 0.5em 1.5em;
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @media ${deviceMax.mobileL} {
+        font-size: 18px;
+      }
     
       &::after {
         content: "";
@@ -59,6 +66,9 @@ export const AccordionWrapper = styled.div`
       font-weight: 300;
       font-size: 16px;
       line-height: 168%;
+      @media ${deviceMax.mobileL} {
+        font-size: 14px;
+      }
     }
 
     li {
@@ -67,6 +77,16 @@ export const AccordionWrapper = styled.div`
     }
     
 `;
+
+export const  AccordionTitle = styled.div`
+    font-family: Poppins;
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+    }
+`
 
 export const BenefitsWrapper = styled.div`
     font-family: Poppins;

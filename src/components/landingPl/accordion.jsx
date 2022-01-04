@@ -2,17 +2,21 @@ import React from 'react';
 import AccordionElement from './accordion-element';
 import { faq } from './data';
 import {
-    AccordionWrapper
-  } from './styled';
+    AccordionWrapper,
+    AccordionTitle
+} from './styled';
 
 const Accordion = () => {
     return (
-        <AccordionWrapper>
-            {faq.map((element) => (
-                <AccordionElement element={element}/>
-            ))
-            }
-        </AccordionWrapper>
+        <>
+            <AccordionTitle>Najczęściej zadawane pytania</AccordionTitle>
+            <AccordionWrapper>
+                {faq.map((element) => (
+                    <AccordionElement element={element} />
+                ))
+                }
+            </AccordionWrapper>
+        </>
     );
 };
 
