@@ -165,7 +165,7 @@ export const benefits = [
   export const faq = [
     {
       question: "Jakie platformy reklamowe obsługujecie",
-      text: "W Explayn, obsługujemy<ul><li>reklamy w wyszukiwarce w Google</li><li>reklamy displayowe Google</li><li>reklamy remarketingowe Google</li><li>reklamy w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li><li>remarketing w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li></ul>",
+      text: "W Explayn, obsługujemy:<ul><li>reklamy w wyszukiwarce w Google</li><li>reklamy displayowe Google</li><li>reklamy remarketingowe Google</li><li>reklamy w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li><li>remarketing w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li></ul>",
     },
     {
       question: "Ile muszę wydać na budżet reklamowy?",
