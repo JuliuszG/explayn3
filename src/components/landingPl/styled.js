@@ -34,7 +34,7 @@ export const AccordionWrapper = styled.div`
       font-size: 22px;
       font-weight: 600;
       cursor: pointer;
-      padding: 0.5em 1.5em;
+      padding: 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -62,7 +62,7 @@ export const AccordionWrapper = styled.div`
     }
     
     .accordion-content {
-      padding: 1em 1.5em;
+      padding: 16px;
       font-weight: 300;
       font-size: 16px;
       line-height: 168%;
