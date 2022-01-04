@@ -2,6 +2,67 @@ import styled from 'styled-components';
 import BrandingImage from '../../images/landingPL/joanna.png';
 import { deviceMin, deviceMax } from '../../utils/breakpoints';
 
+export const AccordionWrapper = styled.div`
+    font-family: Poppins;
+    padding: 10% 10% 0 10%;
+    .accordion-wrapper {
+      border: solid 1px #ccc;
+      border-radius: 6px;
+      margin-bottom: 16px;
+      padding: 8px 0;
+      & + * {
+        margin-top: 0.5em;
+      }
+    }
+    
+    .accordion-item {
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(1, 0, 1, 0);
+      height: auto;
+      max-height: 9999px;
+    }
+    
+    .accordion-item.collapsed {
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+    }
+    
+    .accordion-title {
+      font-size: 22px;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0.5em 1.5em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
+      &::after {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid currentColor;
+      }
+    
+      &.open {
+        &::after {
+          content: "";
+          border-top: 0;
+          border-bottom: 5px solid;
+        }
+      }
+    }
+    
+    .accordion-content {
+      padding: 1em 1.5em;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 168%;
+    }
+    
+`;
+
 export const BenefitsWrapper = styled.div`
     font-family: Poppins;
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);

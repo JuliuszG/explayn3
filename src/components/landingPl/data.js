@@ -161,3 +161,46 @@ export const benefits = [
       name: 'tajm.com',
     },
   ];
+
+  export const faq = [
+    {
+      question: "Jakie platformy reklamowe obsługujecie",
+      text: "W Explayn, obsługujemy<ul><li>reklamy w wyszukiwarce w Google</li><li>reklamy displayowe Google</li><li>reklamy remarketingowe Google</li><li>reklamy w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li><li>remarketing w Social Mediach ( Facebook, Instagram, Tiktok, LinkedIn)</li></ul>",
+    },
+    {
+      question: "Ile muszę wydać na budżet reklamowy?",
+      text:"Niestety, nie ma magicznej liczby, przy której płatna reklama będzie działała najlepiej. Ostatecznie, będzie to zależeć od branży i krajobrazu konkurencyjnego, jak również, które kanały będą używane. W ramach współpracy pomagamy określić odpowiedni budżet dla Twojej marki. Następnie możemy opracować strategiczny plan, który pomoże Ci uzyskać najlepsze wyniki przy efektywnym wydatkowaniu budżetu.",
+    },
+    {
+      question: "Co to jest remarketing?",
+      text:"Remarketing i związane z nim kampanie, to technika mająca na celu zachęcenia osób, które widziały już Twoją stronę do zakupu lub skorzystania z usługi. Odbywa się to poprzez wyświetlanie reklam tym osobom, które wcześniej wykazały zainteresowanie Twoją marką (poprzez aktywność na stronie lub social mediach).",
+    },
+    {
+      question: "Czy tworzycie kreacje reklamowe?",
+      text:"Tak. Jeśli zdecydujesz się skorzystać z naszych usług, możemy zaprojektować kreacje reklamowe, aby zapewnić spójność we wszystkich kanałach. Z naszego doświadczenia wiemy, że pomaga budować poczucie zaufania u odbiorców. Niezależnie od tego, czy chodzi o reklamy na Facebooku, Instagramie, LinkedIn czy reklamy displayowe Google.",
+    },
+    {
+      question: "W jaki sposób przebiega współpraca?",
+      text:"Zajmujemy się kompleksową obsługą Twojego konta reklamowego. Tworzymy dla Ciebie kreacje i teksty reklamowe. Optymalizujemy kampanię, aby uzyskać najlepsze rezultaty.",
+    },
+    {
+      question: "Ile kosztuje usługa?",
+      text:"Obsługa jednego konta reklamowego zaczyna się już od 990 zł.",
+    },
+    {
+      question: "Jak wygląda rozliczenie?",
+      text:"Rozliczasz się co miesiąc, a wszystko w ramach jednej opłaty, w której zawarty jest budżet i opłata za usługę.",
+    },
+    {
+      question: "Czy musimy podpisywać umowę?",
+      text:"Współpraca przebiega bez zobowiązań i zbędnych umów. Świadczymy dla Ciebie usługę równo 30 dni. Możesz wycofać się w każdej chwili.",
+    },
+    {
+      question: "Ile będzie trwało wdrożenie usługi?",
+      text:"Po udzieleniu wszystkich potrzebnych informacji i nadaniu dostępów do konta, reklamy na Twoim koncie uruchomimy do 7 dni roboczych.",
+    },
+    {
+      question: "W jaki sposób poznam wyniki Waszych działań?",
+      text:"Dostarczamy miesięczne podsumowanie działań w formie raportu oraz rekomendacji na przyszły miesiąc działań od naszego specjalisty.",
+    },
+  ];
