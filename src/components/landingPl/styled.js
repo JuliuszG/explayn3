@@ -28,7 +28,7 @@ export const AccordionWrapper = styled.div`
     }
     
     .accordion-title {
-      font-size: 22px;
+      font-size: 18px;
       font-weight: 600;
       cursor: pointer;
       padding: 0.5em 1.5em;
