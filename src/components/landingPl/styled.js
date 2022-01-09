@@ -5,14 +5,17 @@ import { deviceMin, deviceMax } from '../../utils/breakpoints';
 export const AccordionWrapper = styled.div`
     font-family: Poppins;
     padding: 5% 10% 0 10%;
+    position: relative;
     @media ${deviceMax.mobileL} {
       padding-top: 10%;
     }
     .accordion-wrapper {
-      border: solid 1px #ccc;
-      border-radius: 6px;
+      border: solid 1px #d1d1d1;
+      border-radius: 10px;
       margin-bottom: 16px;
       padding: 8px 0;
+      z-index: 2;
+      position: relative;
       & + * {
         margin-top: 0.5em;
       }
@@ -75,7 +78,11 @@ export const AccordionWrapper = styled.div`
       list-style-type: disc;
       margin-left: 20px;
     }
-    
+    img {
+      position: absolute;
+      top: -200px;
+      left: 200px;
+    }
 `;
 
 export const  AccordionTitle = styled.div`
@@ -536,7 +543,7 @@ export const FooterContainer = styled.div`
 `;
 
 export const ConsultationContainer = styled.div`
-    background: white;
+    background: transparent;
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding:0 0 0 10%;
