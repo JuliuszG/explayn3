@@ -5033,7 +5033,7 @@ export const CaseWork = styled.div`
   font-family: Poppins;
   margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 500px 1fr;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
   }
@@ -5068,7 +5068,7 @@ export const CaseWork = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 150px;
+    padding-left: 50px;
 
     @media ${deviceMax.mobileL} {
       font-size: 18px;
@@ -5098,9 +5098,13 @@ export const CaseWork = styled.div`
       font-size: 14px;
     }
   }
+  .text {
+    padding-left: 50px;
 
+  }
   .img {
-    padding-left: 100px;
+    width: 100%;
+    padding-right: 100px;
     @media screen and (max-width: 992px) {
       display:none;
     }
@@ -5112,7 +5116,7 @@ export const CaseWorkRevert = styled.div`
   font-family: Poppins;
   margin-bottom: 100px;
   display: grid;
-  grid-template-columns: 1fr 600px;
+  grid-template-columns: 1fr 500px;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
   }
@@ -5179,6 +5183,7 @@ export const CaseWorkRevert = styled.div`
 
   .img {
     padding-left: 100px;
+    width: 100%;
     @media screen and (max-width: 992px) {
       display:none;
     }
