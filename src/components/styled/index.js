@@ -4168,8 +4168,9 @@ export const BenefitsSection = styled.div`
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 20px;
-        @media ${deviceMax.mobileL} {
+        @media () {
           font-size: 20px;
+          padding-left: 0;
         }
       }
       p {
@@ -5059,6 +5060,22 @@ export const CaseWork = styled.div`
       margin-left: 20px;
     }
   }
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+      padding-left: 20px;
+    }
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -5122,6 +5139,22 @@ export const CaseWorkRevert = styled.div`
       margin-left: 20px;
     }
   }
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 150px;
+
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+      padding-left: 20px;
+    }
+  }
+
   .wrapper {
     display: flex;
     align-items: center;

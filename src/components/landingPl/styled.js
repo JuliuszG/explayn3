@@ -85,7 +85,7 @@ export const AccordionWrapper = styled.div`
     }
 `;
 
-export const  AccordionTitle = styled.div`
+export const AccordionTitle = styled.div`
     font-family: Poppins;
     font-size: 22px;
     font-weight: 600;
@@ -98,11 +98,51 @@ export const  AccordionTitle = styled.div`
 export const BenefitsWrapper = styled.div`
     font-family: Poppins;
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
-    padding: 100px 10% 39px;  
+    padding: 10% 10%;  
     min-height: 100vh;
     @media (max-width: 576px) {
         padding-top: 90px;
     } 
+    .benefits-additional {
+      display: grid;
+      grid-gap: 10%;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 100px;
+      margin-bottom: 100px;
+
+      @media (max-width: 992px)  {
+        grid-template-columns: 1fr;
+        grid-gap: 5%;
+      }
+    }
+    .benefit-additional {
+      display: flex;
+      flex-direction: column;
+      .title {
+        font-weight: 600;
+        font-size: 27px;
+        line-height: 39px;
+        margin-left: 0;
+        text-align: left;
+
+        @media (max-width: 576px) {
+          font-size: 18px;
+          line-height: 24px;
+          margin-bottom: 24px;
+          } 
+        }
+      .text {
+        text-align: left;
+      }
+    }
+    .img {
+      height: 200px;
+      margin-bottom: 32px;
+      @media (max-width: 576px) {
+        width: 100%;
+        } 
+      }
+    }
     h2 {
         margin-bottom: 100px;
         color: white;
@@ -125,6 +165,135 @@ export const BenefitsWrapper = styled.div`
           grid-template-columns: 1fr; 
       } 
     }
+    .benefits-title {
+      text-align: center;
+      margin-bottom: 16px;
+      margin-top: 100px;
+    }
+    p {
+      margin-bottom: 30px;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 23px;
+      text-align: center;
+      color: white;
+
+        @media (max-width: 576px) {
+          font-size: 14px;
+          margin-left: 0;
+          margin-bottom: 60px;
+      } 
+    }
+
+    .offers-wrapper {
+      display: grid;
+      grid-template-columns:1fr 1fr;
+      padding-bottom: 10%;
+      column-gap: 100px;
+
+      @media (max-width: 1024px)  {
+        grid-template-columns: 1fr;
+      }
+      img {
+        @media (max-width: 1024px)  {
+          width: 100%;
+        }
+      }
+    }
+    .offer-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h2 {
+        margin-bottom: 16px;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    .types-wrapper {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      text-align: center;
+      padding-bottom: 500px;
+      padding-top: 200px;
+      @media (max-width: 576px) {
+        padding-top: 10%;
+        padding-bottom: 10%;
+        height: 500px;
+
+      }
+
+      img {
+        position: absolute;
+        top: -15%;
+        width: fit-content;
+        @media (max-width: 576px) {
+          display: none;
+        }
+       }
+    }
+   .button_wrapper {
+     padding-top: 10%;
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+     h2 {
+       max-width: 700px;
+       position: relative;
+       margin-bottom: 60px;
+
+     }
+     p {
+      max-width: 600px;
+      position: relative;
+
+    }
+    .arrow {
+      top: calc( 50% - 302px);
+      position: absolute;
+      left: calc( 50% - 251px);
+      @media (max-width: 556px)  {
+        display: none;
+      }
+  }
+    }
+    button {
+      position: relative;
+      margin-top: 16px;
+      background: linear-gradient(#4c65ff 0%,#263380 180%);
+      border-radius: 29px;
+      color: white;
+      padding: 12px 26px;
+      border: none;
+      opacity: 1;
+      font-size: 16px;
+      font-family: Poppins;
+      cursor: pointer;
+      transition: all 0.1s ease-in;
+      &:hover {
+        color: #404040;
+        font-weight: 600;
+        letter-spacing: 3px;
+        background: #fff;
+        -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+        transition: all 0.3s ease 0s;
+      }
+      @media (max-width: 576px) {
+        margin-top: 60px;
+      }
+      }
+   }
 `;
 
 export const ImgContainer = styled.div`
@@ -211,6 +380,7 @@ export const BenefitCard = styled.div`
         font-weight: 300;
         font-size: 16px;
         line-height: 23px;
+        text-align: left;
 
         @media (max-width: 576px) {
           font-size: 14px;
@@ -313,24 +483,22 @@ export const ClientWrapper = styled.div`
         }
 
       .header-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-
-        @media (max-width: 1024px) {
-           grid-template-columns: 1fr;
-           margin-bottom: 20px;
+        text-align: center;
+        margin-bottom: 10%;
+        max-width: 728px;
+        h2 {
+          margin-bottom: 16px;
         }
-        p {
-          font-weight: 300;
-          font-size: 16px;
-          line-height: 168%;
-        @media (max-width: 576px) {
-            font-size: 14px;
-            text-align: left;
-          }
-          }
+          p {
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 168%;
+              @media (max-width: 576px) {
+                  font-size: 14px;
+                  text-align: left;
+                }
+            }
         }
-      }
 `;
 
 export const Icons = styled.div`
@@ -774,7 +942,7 @@ export const ContactContainer = styled.div`
       }
     }
 `;
-export const Spinner= styled.div`
+export const Spinner = styled.div`
   display: none;
   width: 3.5em;
   display: flex;

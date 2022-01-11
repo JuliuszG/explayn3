@@ -67,6 +67,7 @@
     "slick-carousel": "^1.8.1",
     "slugify": "^1.5.0",
     "styled-components": "^5.2.1",
+    "typewriter-effect": "^2.18.2",
     "use-onclickoutside": "^0.4.0",
     "woodpecker-api": "^1.1.0"
   },

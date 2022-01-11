@@ -61,9 +61,9 @@ const IndexPage = ({ location }) => {
           </a>
         </ImgContainer>
         <LandingPl />
-        <Benefit />
-        <Client />
         <Offer />
+        <Client />
+        <Benefit />
         <Proces />
         <Accordion />
         <Consultation />
