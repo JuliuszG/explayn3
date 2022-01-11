@@ -43,7 +43,7 @@ const Offer = () => {
         <img src={Types} />
         <Typewriter
           options={{
-            strings: ['<span style="color: white;font-size:44px;font-family:Poppins;font-weight:600;line-height: 138%;max-width:700px;height:300px;text-align:center;position:relative">Jesteś zadowolony z działania Twojego biznesu, ale chcesz się rozwijać?</span>'],
+            strings: ['<span style="color: white;font-size:44px;font-family:Poppins;font-weight:600;line-height:138%;max-width:700px;height:300px;text-align:center;position:relative">Jesteś zadowolony z działania Twojego biznesu, ale chcesz się rozwijać?</span>'],
             autoStart: true,
             loop: true,
           }}
@@ -60,7 +60,11 @@ const Offer = () => {
         <img className="arrow" src={GrayArrow} />
         <h2>Nie wiesz, która platforma będzie dla Ciebie najlepsza?</h2>
         <p>Podczas bezpłatnej konsultacji, dobierzemy najlepsze kanały reklamowe dostosowane do Twoich celów biznesowych.</p>
-        <button>Umów się na bezpłatną konsultację</button>
+        <button onClick={() => {
+            document.getElementById('consultation').scrollIntoView({
+              behavior: 'smooth'
+            })
+          }}>Umów się na bezpłatną konsultację</button>
       </div>
     </BenefitsWrapper>
   );
