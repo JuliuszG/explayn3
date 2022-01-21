@@ -294,6 +294,72 @@ export const BenefitsWrapper = styled.div`
       }
       }
    }
+   .swiper {
+    width: 600px;
+    height: 244px;
+  }
+  
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 570px;
+    height: 244px;
+    display: block;
+  }
+
+  .swiper-content {
+    width: 600px;
+    height: 244px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 58px 91px;
+    font-weight: 600;
+    font-size: 27px;
+    line-height: 39px;
+    color: white;
+
+  }
+  .swiper-button-next {
+    color: white;
+    height: 22px;
+    right: 0;
+    top: calc(50% - 10px);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 30px;
+    border-radius: 32.5px 0px 0px 32.5px;
+    &:after {
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+  }
+  .swiper-button-prev {
+    color: white;
+    height: 22px;
+    left: 0;
+    top: calc(50% - 10px);
+    background-color: rgba(255, 255, 255, 0.04);
+    padding: 30px;
+    border-radius: 0px 32.5px 32.5px 0px;
+    &:after {
+      font-size: 26px;
+      font-weight: 900;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 20.55px;
+    height: 21.85px;
+    border-radius: 5px;
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+  .swiper-pagination-bullets {
+    bottom: -40px;
+  }
 `;
 
 export const ImgContainer = styled.div`
