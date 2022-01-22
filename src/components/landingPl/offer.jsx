@@ -72,19 +72,23 @@ function TabGroup() {
     if (index == 0) {
       setActive(types[4]);
       setText(types[4].html)
+      setIndex(4)
     } else {
       setActive(types[index-1]);
       setText(types[index-1].html)
+      setIndex(index-1)
     }
   }
 
   const goNext = (index) => {
-    if (index == 5) {
+    if (index == 4) {
       setActive(types[0]);
       setText(types[0].html)
+      setIndex(0)
     } else {
       setActive(types[index+1]);
       setText(types[index+1].html)
+      setIndex(index+1)
     }
   }
   return (
@@ -105,9 +109,9 @@ function TabGroup() {
           </Tab>
         ))}
       </ButtonGroup>
-      <button onClick={()=>goBack()}>prev</button>
+      <button onClick={()=>goBack(index)}>prev</button>
         <p>{parse(text)} </p>
-        <button onClick={()=>goNext()}>next</button>
+        <button onClick={()=>goNext(index)}>next</button>
     </>
   );
 }
