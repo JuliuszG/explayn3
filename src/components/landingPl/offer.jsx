@@ -5,9 +5,6 @@ import {
   BenefitCardSocial
 } from './styled';
 
-import {
-  offer
-} from './data';
 import Offer1 from '../../images/landingPL/offer1.svg';
 import GrayArrow from '../../images/landingPL/grayArrow.svg';
 import SwiperCore, {
@@ -24,20 +21,27 @@ import 'swiper/components/effect-flip/effect-flip.min.css'
 
 SwiperCore.use([EffectFlip, Pagination, Navigation]);
 
-
-const Card = ({ item }) => {
+const Card = () => {
   return (
-    <BenefitCardSocial>
-      <div className="card">
-        <div className="image">
-          <img src={item.image[0].src} alt={item.image[0].alt} />
-        </div>
-        <p className="title">{item.name}</p>
+    <>
+      <div>
+        <p>Google Ads</p>
+        <p>Przeciętny człowiek odwiedza Facebooka średnio</p>
+        <p>8 razy</p>
+        <p>każdego dnia. Chcesz dotrzeć do ludzi lubiących meble Ikea, albo do właścicieli restauracji? To nie problem - precyzyjny dobór grupy odbiorców pozwala Ci na wyświetlanie reklam dokładnie tym osobom, do których chcesz dotrzeć.</p>
       </div>
-      <p className="text">{item.text}</p>
-    </BenefitCardSocial>
-  );
-};
+      <div>
+        <p>Dotrzyj do swoich potencjalnych klientów, używając rozbudowanych segmentów zainteresowań i opcji demograficznych Facebooka. Dzięki precyzyjnemu targetowaniu, trafisz do odbiorców, którzy z największym prawdopodobieństwem będą zainteresowani Twoją ofertą.</p>
+        <p>Dzięki reklamie na Facebooku:</p>
+        <ul>
+          <li>dotrzesz do nowych klientów</li>
+          <li>zbudujesz relacje z obecnymi klientami</li>
+          <li>obniżysz koszty reklamy</li>
+        </ul>
+      </div>
+    </>
+  )
+}
 
 const Offer = () => {
   return (
@@ -47,7 +51,7 @@ const Offer = () => {
         <p>Zobacz z jakimi problemami mierzą się nasi klienci.<br />Elastycznie dopasowujemy rozwiązania do różnych problemów. </p>
       </div>
       <img src={Offer1} />
-      <Swiper effect={'flip'} grabCursor={true} pagination={{clickable: true}} navigation={true} className="swiper">
+      <Swiper effect={'flip'} grabCursor={true} pagination={{ clickable: true }} navigation={true} className="swiper">
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Jesteś zadowolony z działania Twojego biznesu, ale chcesz się rozwijać</div></SwiperSlide>
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Poszukujesz sposobu na zwiększenie rozpoznawalności Twojej marki</div></SwiperSlide>
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Prowadzisz lokalny biznes i chcesz, aby wszyscy w okolicy o nim usłyszeli</div></SwiperSlide>
@@ -57,12 +61,7 @@ const Offer = () => {
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Próbowałeś sił w reklamach, ale tracisz tylko pieniądze</div></SwiperSlide>
       </Swiper>
       <h2>Co oferujemy?</h2>
-      <div className="benefit-wrapper">
-        {offer.map((benefit, index) => (
-          <Card item={benefit} key={`${benefit}-${index}`} />
-        ))
-        }
-      </div>
+      <Card/>
       <div className="button_wrapper">
         <img className="arrow" src={GrayArrow} />
         <h2>Nie wiesz, która platforma będzie dla Ciebie najlepsza?</h2>

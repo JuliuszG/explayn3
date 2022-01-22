@@ -9,6 +9,7 @@ export const AccordionWrapper = styled.div`
     @media ${deviceMax.mobileL} {
       padding-top: 10%;
     }
+
     .accordion-wrapper {
       border: solid 1px #d1d1d1;
       border-radius: 10px;
@@ -78,6 +79,7 @@ export const AccordionWrapper = styled.div`
       list-style-type: disc;
       margin-left: 20px;
     }
+
     img {
       position: absolute;
       top: -200px;
@@ -100,9 +102,11 @@ export const BenefitsWrapper = styled.div`
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
     padding: 10% 10%;  
     min-height: 100vh;
+
     @media (max-width: 576px) {
         padding-top: 90px;
     } 
+
     .benefits-additional {
       display: grid;
       grid-gap: 10%;
@@ -118,6 +122,7 @@ export const BenefitsWrapper = styled.div`
     .benefit-additional {
       display: flex;
       flex-direction: column;
+
       .title {
         font-weight: 600;
         font-size: 27px;
@@ -131,18 +136,22 @@ export const BenefitsWrapper = styled.div`
           margin-bottom: 24px;
           } 
         }
+
       .text {
         text-align: left;
       }
     }
+
     .img {
       height: 200px;
       margin-bottom: 32px;
+
       @media (max-width: 576px) {
         width: 100%;
         } 
       }
     }
+
     h2 {
         margin-bottom: 100px;
         color: white;
@@ -156,6 +165,7 @@ export const BenefitsWrapper = styled.div`
           line-height: 46px;
         }
     }
+
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
@@ -165,11 +175,13 @@ export const BenefitsWrapper = styled.div`
           grid-template-columns: 1fr; 
       } 
     }
+
     .benefits-title {
       text-align: center;
       margin-bottom: 16px;
       margin-top: 100px;
     }
+
     p {
       margin-bottom: 30px;
       font-weight: 300;
@@ -194,12 +206,14 @@ export const BenefitsWrapper = styled.div`
       @media (max-width: 1024px)  {
         grid-template-columns: 1fr;
       }
+
       img {
         @media (max-width: 1024px)  {
           width: 100%;
         }
       }
     }
+
     .offer-wrapper {
       display: flex;
       flex-direction: column;
@@ -208,10 +222,12 @@ export const BenefitsWrapper = styled.div`
       h2 {
         margin-bottom: 16px;
       }
+
       p {
         text-align: left;
       }
     }
+
     .types-wrapper {
       height: 300px;
       display: flex;
@@ -223,21 +239,22 @@ export const BenefitsWrapper = styled.div`
       text-align: center;
       padding-bottom: 500px;
       padding-top: 200px;
+
       @media (max-width: 576px) {
         padding-top: 10%;
         padding-bottom: 10%;
         height: 500px;
-
       }
 
     img {
       position: absolute;
       top: -15%;
       width: fit-content;
+
         @media (max-width: 576px) {
           display: none;
         }
-       }
+      }
     }
 
    .button_wrapper {
@@ -248,6 +265,7 @@ export const BenefitsWrapper = styled.div`
      justify-content: center;
      align-items: center;
      position: relative;
+
      h2 {
        max-width: 700px;
        position: relative;
@@ -268,6 +286,7 @@ export const BenefitsWrapper = styled.div`
         }
       }
     }
+
     button {
       position: relative;
       margin-top: 16px;
@@ -292,9 +311,8 @@ export const BenefitsWrapper = styled.div`
       }
       @media (max-width: 576px) {
         margin-top: 60px;
-      }
-      }
-   }
+       }
+    }
 
   .swiper {
     width: 600px;
@@ -374,15 +392,17 @@ export const ImgContainer = styled.div`
   position: absolute;
   top: 0px;
   left: 0px;
+
   @media (max-width: 576px) {
     padding: 7% 5%;
     position: static;
     height: 20vh;
-    a
-     {
+
+    a {
       filter: brightness(0) invert(1);
     }
   }
+
   .blue--mobile {
     position: absolute;
     top: -446px;
@@ -395,6 +415,7 @@ export const ImgContainer = styled.div`
 
 export const TrustElement = styled.div`
     font-family: Poppins; 
+
     h2 {
         margin-bottom: 100px;
         margin-top: 100px;
@@ -411,18 +432,18 @@ export const TrustElement = styled.div`
 
 export const BenefitCard = styled.div` 
     color: white;
+
     .image {
         margin: auto 0;
         opacity:0.5;
         @media (max-width: 576px) {
           transform: scale(0.7)
-      } 
-        &:hover {
+      } &:hover {
           transition: 0.2s ease-in;
           opacity:1;
       }
-
     }
+
     .card {
         display: grid;
         grid-template-columns: 80px 1fr;
@@ -443,8 +464,8 @@ export const BenefitCard = styled.div`
           margin-left: 15px;
           line-height: 24px;
       } 
-
     }
+
     .text {
         margin-bottom: 100px;
         margin-left: 130px;
@@ -457,14 +478,13 @@ export const BenefitCard = styled.div`
           font-size: 14px;
           margin-left: 0;
           margin-bottom: 60px;
-
       } 
-        
     }
 `;
 
 export const BenefitCardSocial = styled.div` 
     color: white;
+
     .image {
         transform: scale(0.8);
         position: absolute;
@@ -472,12 +492,14 @@ export const BenefitCardSocial = styled.div`
         margin: auto 0;
         opacity: 0.5;
     }
+
     .card {
         display: grid;
         grid-template-columns:80px 1fr;
         margin-bottom: 30px;
         position: relative;
     }
+
     .title {
         position: relative;
         width: 250px;
@@ -485,6 +507,7 @@ export const BenefitCardSocial = styled.div`
         font-size: 27px;
         line-height: 39px;
     }
+
     .text {
         margin-top: 70px;
         margin-bottom: 100px;
@@ -498,7 +521,7 @@ export const BenefitCardSocial = styled.div`
     &:hover {
       .image {
         opacity: 1;
-    }
+      }
     }
 `;
 
@@ -521,12 +544,14 @@ export const ClientWrapper = styled.div`
           font-size: 35px;
           line-height: 46px;
         }
-    }
+      }
+
       img {
         @media (max-width: 576px) {
           transform: scale(0.6)
         }
       }
+
     button {
         margin-top:127px;
         background: linear-gradient(#4c65ff 0%,#263380 180%);
@@ -547,10 +572,11 @@ export const ClientWrapper = styled.div`
           -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
           -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
           transition: all 0.3s ease 0s;
-        }
+          }
+
         @media (max-width: 576px) {
           margin-top: 60px;
-        }
+          }
         }
 
       .header-wrapper {
@@ -569,7 +595,7 @@ export const ClientWrapper = styled.div`
                   text-align: left;
                 }
             }
-        }
+    }
 `;
 
 export const Icons = styled.div`
@@ -589,6 +615,7 @@ export const Icons = styled.div`
       padding-right: 0;
     }
   }
+
   .line {
     width: 150px;
     height: 5px;
@@ -602,6 +629,7 @@ export const Icons = styled.div`
       border-left: 5px dashed #f2f2f2;
       margin: 50px 0 20px;
     }
+
     @media (max-width: 1024px) {
       height: 70px;
       width: 5px;
@@ -609,9 +637,9 @@ export const Icons = styled.div`
       border-left: 5px dashed #f2f2f2;
       margin-top: 20px;
       margin-bottom: 10px;
-
     }
   }
+
   .icon-box {
     width: 87px;
     height: 87px;
@@ -625,8 +653,8 @@ export const Icons = styled.div`
         transition: 0.2s ease-in;
         transform: scale(1.1);
     }
-    
   }
+
   .icon {
     display: flex;
     flex-direction: column;
@@ -653,21 +681,22 @@ export const Icons = styled.div`
       height: 44px;
       @media ${deviceMax.laptopM} {
         margin-top: 54px;
-
       }
       @media ${deviceMax.mobileL} {
         font-size: 18px;
         margin-top: 10px;
         height: 0px;
         margin-bottom: 12px;
-
       }
     }
+
     @media (min-width: 1200px) and (hover: hover) {
+
       &:hover img {
         transition: 0.2s ease-in;
         transform: scale(0.9);
       }
+
       &:hover:nth-of-type(1)::after {
         content: 'Wielkie rzeczy buduje się w oparciu o dobre badania. Pierwszy etap to konsultacje mające na celu poznanie Twoich celów biznesowych. Kiedy już lepiej zrozumiemy Twoje potrzeby, rozpoczynamy wieloplatformowe badania obejmujące analizę grupy docelowej, ścieżki zakupu i warunków rynkowych.';
         display: block;
@@ -682,6 +711,7 @@ export const Icons = styled.div`
         font-size: 14px;
         line-height: 136%;
       }
+
       &:hover:nth-child(1)::before {
         content: '';
         display: block;
@@ -694,6 +724,7 @@ export const Icons = styled.div`
         transform: rotate(-120deg) skew(25deg);
         z-index: 565;
       }
+
       &:hover:nth-of-type(3)::after {
         content: 'Kiedy już skończymy z badaniami i określimy zadania, nadchodzi czas na wypracowanie strategii działań. W tym miejscu opracujemy dokładny plan działania, który będzie zgodny z Twoimi celami. Szczegółowa strategia będzie zawierała wszystkie elementy i narzędzia potrzebne do dotarcia do Twojej grupy odbiorców.';
         display: block;
@@ -708,6 +739,7 @@ export const Icons = styled.div`
         font-size: 14px;
         line-height: 136%;
       }
+
       &:hover:nth-child(3)::before {
         content: '';
         display: block;
@@ -773,7 +805,6 @@ export const Icons = styled.div`
       }
     }
   }
-}
 `;
 
 export const FooterContainer = styled.div`
@@ -833,6 +864,7 @@ export const ConsultationContainerThank = styled.div`
         padding: 0 25px;
         font-size: 14px;
       }
+    }
 `;
 
 export const ContactContainer = styled.div`
@@ -1011,8 +1043,8 @@ export const ContactContainer = styled.div`
             }
         }
       }
-    }
 `;
+
 export const Spinner = styled.div`
   display: none;
   width: 3.5em;
