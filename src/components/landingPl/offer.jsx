@@ -1,16 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import styled from 'styled-components';
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  EffectFlip, Pagination, Navigation
+} from 'swiper';
+import parse from 'html-react-parser'
+
+
 
 import {
   BenefitsWrapper,
-  BenefitCardSocial
 } from './styled';
 
 import Offer1 from '../../images/landingPL/offer1.svg';
 import GrayArrow from '../../images/landingPL/grayArrow.svg';
-import SwiperCore, {
-  EffectFlip, Pagination, Navigation
-} from 'swiper';
-import { Swiper, SwiperSlide } from "swiper/react";
+import Facebook from '../../images/landingPL/facebook1.svg';
+import Google from '../../images/landingPL/google1.svg';
+import Instagram from '../../images/landingPL/instagram1.svg';
+import Tiktok from '../../images/landingPL/tiktok1.svg';
+import Linkedin from '../../images/landingPL/linkedin1.svg';
+
+
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css'
@@ -21,27 +31,87 @@ import 'swiper/components/effect-flip/effect-flip.min.css'
 
 SwiperCore.use([EffectFlip, Pagination, Navigation]);
 
-const Card = () => {
+const Tab = styled.div`
+  font-size: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 0;
+  outline: 0;
+  filter: invert(29%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(99%) contrast(10%);
+  ${({ active }) =>
+    active &&
+    `
+    filter: none;
+    opacity: 1;
+    transform: scale(1.2);
+  `}
+  &:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+`;
+const ButtonGroup = styled.div`
+  display: flex;
+`;
+
+const types = [
+  {img: Facebook, text: 'Facebook', html: '<p>Przeciętny człowiek odwiedza Facebooka średnio</p><p>8 razy</p><p>każdego dnia.</p><p>Chcesz dotrzeć do ludzi lubiących meble Ikea, albo do właścicieli restauracji? To nie problem - precyzyjny dobór grupy odbiorców pozwala Ci na wyświetlanie reklam dokładnie tym osobom, do których chcesz dotrzeć.</p><p>Dotrzyj do swoich potencjalnych klientów, używając rozbudowanych segmentów zainteresowań i opcji demograficznych Facebooka. Dzięki precyzyjnemu targetowaniu, trafisz do odbiorców, którzy z największym prawdopodobieństwem będą zainteresowani Twoją ofertą.</p><p>Dzięki reklamie na Facebooku:</p><ul><li>dotrzesz do nowych klientów</li><li>zbudujesz relacje z obecnymi klientami</li><li>obniżysz koszty reklamy </li></ul>'},
+  {img: Tiktok, text: 'Tiktok', html: '<p>TikTok jest obecnie</p><p>numerem 1</p><p>w rankingu najczęściej pobieranych aplikacji na świecie i wciąż szturmem zdobywa cyfrową przestrzeń społecznościową.</p><p>Chociaż platforma kojarzy się z najmłodszymi odbiorcami to ponad 60% użytkowników to osoby w wieku 20-50 lat. Z racji braku dużego zainteresowania przez firmy, używając reklamy na TikToku wyprzedzisz inne firmy z Twojej branży.</p><p>To idealne miejsce do budowania świadomości i pozyskiwania nowych klientów. Dzięki niskiej konkurencji i niskim koszcie reklamy, to doskonałe miejsce do promowania swojej marki.</p><p>Dzięki reklamie na TikToku:</p><ul><li>zbudujesz przewagę konkurencyjną</li><li>dotrzesz do szerokiej grupy odbiorców niskim kosztem</li><li>nawiażesz relacje z wysoko zaangażowanymi użykownikami, gotowymi do podjęcia działania</li></ul>'},
+  {img: Instagram, text: 'Instagram', html: '<p>Instagram jest</p><p>7 najczęściej</p><p>odwiedzaną stroną w sieci.</p><p>Reklamy na Instagramie znajdują zastosowanie przy docieraniu do nowych klientów poprzez atrakcyjne kreacje reklamowe. W połączeniu z Facebookiem tworzą potężny duet, dzięki któremu zbudujesz silną markę w social mediach.</p><p>Instagram pozwala budować markę i łączyć się z odbiorcami w osobisty sposób. To platforma, która połączy Twoją markę z wieloma influencerami.</p><p>Dzięki reklamie na Instagramie:</p><ul><li>zbudujesz świadomość marki</li><li>poprawisz skuteczność reklam na Facebooku</li><li>dotrzesz do szerszej grupy odbiorców</li></ul>'},
+  {img: Google, text: 'Google', html: '<p>Aż</p><p>46% osób</p><p> zaczyna szukanie produktu lub usługi w Google i tak, w tej grupie też są Twoi klienci. Reklamy w wyszukiwarce Google pozwalają dotrzeć do osób, które szukają dokładnie tego co Ty oferujesz.</p><p>Dzięki Google Ads jesteś tam, gdzie ludzie szukają informacji o problemie, na które oferujesz rozwiązanie. Promuj swój biznes wśród osób, które szukają firm takich jak Twoja.</p><p>Dzięki reklamie w Google:<p><ul><li>dotrzesz dokładnie do tych osób, które szukają Twoich usług</li><li>zachowasz kontrolę nad wydawanym budżetem</li><li>uzyskasz natychmiastowe rezultaty</li></ul>'},
+  {img: Linkedin, text: 'LInkedin', html: '<p>LinkedIn to nie rozwiązanie dla każdej firmy. Największe korzyści czerpią z niego firmy B2B. Reklamując się na LinkedIn, zwiększasz świadomość swojej marki wśród profesjonalistów i pozyskujesz wysokiej jakości leady.</p><p>33% decydentów</p><p>B2B używa LinkedIn do zbadania firmy, z którą chcą podjąć współpracę</p><p>LinkedIn to największa platforma, zrzeszająca specjalistów, menadżerów i właścicieli firm. Powiększasz zespół? To rozwiązanie dla Ciebie. Przeglądaj profile użytkowników, i znajdź odpowiednie osoby na stanowisko.</p><p>Dzięki reklamie na LinkedIn:</p><ul><li>pozyskasz wysokiej jakości kontakty</li><li>dotrzesz do osób na konkretnych stanowiskach dzięki zaawansowanym profilom zawodowym</li><li>zbudujesz wizerunek firmy godnej zaufania</li></ul>'}]
+  ;
+function TabGroup() {
+  const [active, setActive] = useState(types[0]);
+  const [text, setText] = useState('<p>Przeciętny człowiek odwiedza Facebooka średnio</p><p>8 razy</p><p>każdego dnia.</p><p>Chcesz dotrzeć do ludzi lubiących meble Ikea, albo do właścicieli restauracji? To nie problem - precyzyjny dobór grupy odbiorców pozwala Ci na wyświetlanie reklam dokładnie tym osobom, do których chcesz dotrzeć.</p><p>Dotrzyj do swoich potencjalnych klientów, używając rozbudowanych segmentów zainteresowań i opcji demograficznych Facebooka. Dzięki precyzyjnemu targetowaniu, trafisz do odbiorców, którzy z największym prawdopodobieństwem będą zainteresowani Twoją ofertą.</p><p>Dzięki reklamie na Facebooku:</p><ul><li>dotrzesz do nowych klientów</li><li>zbudujesz relacje z obecnymi klientami</li><li>obniżysz koszty reklamy </li></ul>')
+  const [index, setIndex] = useState(0);
+
+  const goBack = (index) => {
+    if (index == 0) {
+      setActive(types[4]);
+      setText(types[4].html)
+    } else {
+      setActive(types[index-1]);
+      setText(types[index-1].html)
+    }
+  }
+
+  const goNext = (index) => {
+    if (index == 5) {
+      setActive(types[0]);
+      setText(types[0].html)
+    } else {
+      setActive(types[index+1]);
+      setText(types[index+1].html)
+    }
+  }
   return (
     <>
-      <div>
-        <p>Google Ads</p>
-        <p>Przeciętny człowiek odwiedza Facebooka średnio</p>
-        <p>8 razy</p>
-        <p>każdego dnia. Chcesz dotrzeć do ludzi lubiących meble Ikea, albo do właścicieli restauracji? To nie problem - precyzyjny dobór grupy odbiorców pozwala Ci na wyświetlanie reklam dokładnie tym osobom, do których chcesz dotrzeć.</p>
-      </div>
-      <div>
-        <p>Dotrzyj do swoich potencjalnych klientów, używając rozbudowanych segmentów zainteresowań i opcji demograficznych Facebooka. Dzięki precyzyjnemu targetowaniu, trafisz do odbiorców, którzy z największym prawdopodobieństwem będą zainteresowani Twoją ofertą.</p>
-        <p>Dzięki reklamie na Facebooku:</p>
-        <ul>
-          <li>dotrzesz do nowych klientów</li>
-          <li>zbudujesz relacje z obecnymi klientami</li>
-          <li>obniżysz koszty reklamy</li>
-        </ul>
-      </div>
+      <ButtonGroup>
+        {types.map((type, i) => (
+          <Tab
+            key={type}
+            active={active === type}
+            onClick={() => {
+              setActive(type)
+              setText(type.html)
+              setIndex(i)
+            }}
+          >
+            <img src={type.img}/>
+            <p>{type.text}</p>
+          </Tab>
+        ))}
+      </ButtonGroup>
+      <button onClick={()=>goBack()}>prev</button>
+        <p>{parse(text)} </p>
+        <button onClick={()=>goNext()}>next</button>
     </>
-  )
+  );
 }
+
 
 const Offer = () => {
   return (
@@ -61,7 +131,7 @@ const Offer = () => {
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Próbowałeś sił w reklamach, ale tracisz tylko pieniądze</div></SwiperSlide>
       </Swiper>
       <h2>Co oferujemy?</h2>
-      <Card/>
+      <TabGroup/>
       <div className="button_wrapper">
         <img className="arrow" src={GrayArrow} />
         <h2>Nie wiesz, która platforma będzie dla Ciebie najlepsza?</h2>
