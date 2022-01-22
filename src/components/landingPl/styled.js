@@ -230,15 +230,16 @@ export const BenefitsWrapper = styled.div`
 
       }
 
-      img {
-        position: absolute;
-        top: -15%;
-        width: fit-content;
+    img {
+      position: absolute;
+      top: -15%;
+      width: fit-content;
         @media (max-width: 576px) {
           display: none;
         }
        }
     }
+
    .button_wrapper {
      padding-top: 10%;
      text-align: center;
@@ -251,21 +252,21 @@ export const BenefitsWrapper = styled.div`
        max-width: 700px;
        position: relative;
        margin-bottom: 60px;
-
      }
+
      p {
       max-width: 600px;
       position: relative;
-
     }
+
     .arrow {
       top: calc( 50% - 302px);
       position: absolute;
       left: calc( 50% - 251px);
-      @media (max-width: 556px)  {
+      @media (max-width: 556px) {
         display: none;
+        }
       }
-  }
     }
     button {
       position: relative;
@@ -294,7 +295,8 @@ export const BenefitsWrapper = styled.div`
       }
       }
    }
-   .swiper {
+
+  .swiper {
     width: 600px;
     height: 244px;
   }
@@ -321,8 +323,8 @@ export const BenefitsWrapper = styled.div`
     font-size: 27px;
     line-height: 39px;
     color: white;
-
   }
+
   .swiper-button-next {
     color: white;
     height: 22px;
@@ -335,8 +337,8 @@ export const BenefitsWrapper = styled.div`
       font-size: 26px;
       font-weight: 900;
     }
-
   }
+
   .swiper-button-prev {
     color: white;
     height: 22px;
@@ -350,6 +352,7 @@ export const BenefitsWrapper = styled.div`
       font-weight: 900;
     }
   }
+
   .swiper-pagination-bullet {
     width: 20.55px;
     height: 21.85px;
@@ -357,8 +360,10 @@ export const BenefitsWrapper = styled.div`
     background: transparent;
     background-color: rgba(255, 255, 255, 0.04);
   }
+
   .swiper-pagination-bullets {
     bottom: -40px;
+    pointer-events: none;
   }
 `;
 

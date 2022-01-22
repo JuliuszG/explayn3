@@ -47,7 +47,7 @@ const Offer = () => {
         <p>Zobacz z jakimi problemami mierzą się nasi klienci.<br />Elastycznie dopasowujemy rozwiązania do różnych problemów. </p>
       </div>
       <img src={Offer1} />
-      <Swiper effect={'flip'} grabCursor={true} pagination={true} navigation={true} className="swiper">
+      <Swiper effect={'flip'} grabCursor={true} pagination={{clickable: true}} navigation={true} className="swiper">
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Jesteś zadowolony z działania Twojego biznesu, ale chcesz się rozwijać</div></SwiperSlide>
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Poszukujesz sposobu na zwiększenie rozpoznawalności Twojej marki</div></SwiperSlide>
         <SwiperSlide className="swiper-slide"><div className="swiper-content">Prowadzisz lokalny biznes i chcesz, aby wszyscy w okolicy o nim usłyszeli</div></SwiperSlide>
