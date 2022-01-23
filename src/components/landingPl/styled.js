@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import BrandingImage from '../../images/landingPL/joanna.png';
 import { deviceMin, deviceMax } from '../../utils/breakpoints';
+import LiImage from '../../images/landingPL/li.svg';
 
 export const AccordionWrapper = styled.div`
     font-family: Poppins;
@@ -164,6 +165,80 @@ export const BenefitsWrapper = styled.div`
           font-size: 30px;
           line-height: 46px;
         }
+    }
+
+    h3 {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 42px;
+      line-height: 118px;
+      text-align: left;
+      color: #fff;
+      padding-bottom: 30px;
+    }
+
+    .tabContainer {
+      margin-left: 118px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 140px;
+      p {
+        text-align: left;
+      }
+      b {
+        font-weight: 600;
+      }
+      ul {
+        text-align: left;
+        font-weight: 300;
+      }
+      li {
+        position: relative;
+        padding-left: 30px;
+        &:before {
+          display: block;
+          position: absolute;
+          content: ' ';
+          background-image: url(${LiImage});
+          background-size: 23px 21px;
+          height: 21px;
+          width: 21px;
+          left: 0;
+        }
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      background: none;
+      border: none;
+      &:hover {
+        background: none;
+      }
+    }
+    
+    .arrow-right {
+      transform: rotate(180deg);
+      right: -100px;
+    }
+
+    .arrow-left {
+      left: -100px;
+    }
+    .tab  {
+      position: relative;
+      min-height: 550px;
+    }
+
+    .special {
+      font-family: Poppins;
+      font-weight: 600;
+      font-size: 75px;
+      line-height: 50px;
+      text-align: left;
+      color: #fff;
+      text-shadow: 2px 2px #3a4dc3;
     }
 
     .benefit-wrapper {
@@ -836,9 +911,11 @@ export const ConsultationContainerThank = styled.div`
       height: 100%;
       padding-top: 150px;
     }
+
     .thankText  {
       padding: 0;
     }
+
     h2 {
       position: relative;
       font-weight: 600;
@@ -875,6 +952,7 @@ export const ContactContainer = styled.div`
     @media (max-width: 576px) {
       padding:50px 25px 50px 25px;
     }
+
     form {
       button {
         margin-top: 40px;
@@ -902,9 +980,9 @@ export const ContactContainer = styled.div`
         @media (max-width: 576px) {
           width: 100%;
         }
-        }
-
+      }
     }
+
      .input {
       display:grid;
       margin-bottom: 25px;
@@ -927,15 +1005,17 @@ export const ContactContainer = styled.div`
         font-size: 18px;
         line-height: 28px;
         text-align: left;
+       }
       }
     }
-    }
+
     .checkbox {
       position: relative;
       height: 80px;
       @media (max-width: 450px) {
         height: 150px;
       }
+
       span {
         position: absolute;
         max-width: 400px;
@@ -954,6 +1034,7 @@ export const ContactContainer = styled.div`
           text-decoration: none;
         }
       }
+
       @supports(-webkit-appearance: none) or (-moz-appearance: none) {
         input[type='checkbox'] {
           --active: #275EFE;
@@ -1087,6 +1168,7 @@ export const ConsultationText = styled.div`
   @media (max-width: 576px) {
     padding: 0;
   }
+
   h2 {
     position: relative;
     font-weight: 600;
@@ -1100,6 +1182,7 @@ export const ConsultationText = styled.div`
       line-height: 46px;
     }
   }
+
   .center {
     margin-top: 300px;
     @media (max-width: 576px) {
@@ -1117,11 +1200,13 @@ export const ConsultationText = styled.div`
       font-size: 14px;
     }
   }
+
   .decoration {
     position: absolute;
     left: -254px;
     top: -172px;
   }
+
   .decoration-center {
     position: absolute;
     left: calc(50% - 175px);
@@ -1139,6 +1224,7 @@ export const ConsultationText = styled.div`
       top: -10px;
     }
   }
+
   .referal-wrapper {
     display: flex;
     align-items: center;
@@ -1148,6 +1234,7 @@ export const ConsultationText = styled.div`
       display: block;
 
     }
+
     .circle {
       width: 90px;
       height: 90px;
@@ -1159,6 +1246,7 @@ export const ConsultationText = styled.div`
         margin-bottom: 15px;
       }
     }
+
     .name {
       margin-left: 45px;
       margin-bottom: 5px;
@@ -1169,10 +1257,12 @@ export const ConsultationText = styled.div`
         margin-left: -25px;
       }
     }
+
     .bold {
       font-weight: 500;
     }
   }
+
   button {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -1200,14 +1290,16 @@ export const ConsultationText = styled.div`
       -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
       transition: all 0.3s ease 0s;
     }
+
     @media (max-width: 576px) {
       width: 100%;
       max-width: 320px;
       font-size: 20px;
       margin-top: 40px;
       margin-bottom: 40px;
+      }
     }
-    }
+
     a {
       text-decoration: none;
       color: white;
@@ -1235,7 +1327,8 @@ export const SurmaContent = styled.div`
       height: 100%;
       width: 100%;
     }
-    box-shadow: 0px 3px 76px #00000029;
+    box-shadow: 0px 3px 76px #000029;
+
     .logo {
       margin: 200px 400px 110px 400px;
       @media (max-width: 992px) {
@@ -1245,6 +1338,7 @@ export const SurmaContent = styled.div`
         left: calc(50% - 260px);
       }
     }
+
     h3 {
       font-weight: 600;
       font-size: 22px;
@@ -1252,6 +1346,7 @@ export const SurmaContent = styled.div`
       margin: 0 auto;
       text-align: center;
     }
+
     p {
       font-weight: 300;
       font-size: 18px;
@@ -1260,6 +1355,7 @@ export const SurmaContent = styled.div`
         font-size: 16px;
       }
     }
+
     .strategy {
       margin-top: 35px;
       margin-bottom: 100px;
@@ -1268,6 +1364,7 @@ export const SurmaContent = styled.div`
       font-size: 18px;
       line-height: 28px;
     }
+
     .number {
       margin-bottom:20px;
       font-weight: 900;
@@ -1279,6 +1376,7 @@ export const SurmaContent = styled.div`
         line-height: 80px;
       }
     }
+
     .number-wrapper {
       margin-top: 30px;
       margin-bottom: 90px;
@@ -1296,6 +1394,7 @@ export const SurmaContent = styled.div`
         color: #e8e8e8;
       }
     }
+
     .number-flex {
       display: flex;
       flex-direction: column;
@@ -1303,15 +1402,17 @@ export const SurmaContent = styled.div`
       @media (max-width: 992px) {
         margin-bottom: 20px;
       }
+
       p {
         text-align: center;
       }
+
       img {
         margin-bottom: 24px;
         margin-top: 16px;
       }
-
     }
+
     .challenge-wrapper {
       padding:0 250px 0 100px;
       display: flex;
@@ -1322,11 +1423,13 @@ export const SurmaContent = styled.div`
         padding:0 5%;
 
       }
+
       h3 {
         margin-top: 20px;
         margin-bottom: 40px;
         text-align: left;
       }
+
       p {
         max-width: 500px;
         margin-bottom:88px;
@@ -1335,21 +1438,25 @@ export const SurmaContent = styled.div`
         }
       }
     }
+
     .solutions {
       position: relative;
       padding: 0 100px;
       @media (max-width: 992px) {
         padding: 0 5%;
       }
+
       .right {
         padding-left: 420px;
         @media (max-width: 992px) {
           padding-left: 0;
         }
       }
+
       .bottom {
         padding-left: 0;
       }
+
       .decoration {
         position: absolute;
         @media (max-width: 992px) {
@@ -1373,10 +1480,12 @@ export const SurmaContent = styled.div`
         }
       }
     }
+
     .solutions-flex {
       display: flex;
       margin-bottom: 150px;
     }
+
     .solutions-text {
       max-width: 550px;
       margin-left: 45px;
@@ -1390,6 +1499,7 @@ export const SurmaContent = styled.div`
         margin-bottom: 16px;
       }
     }
+
     .logo-small {
       margin-bottom:34px;
       margin-left: calc(50% - 69px);
@@ -1402,6 +1512,7 @@ export const SurmaContent = styled.div`
       line-height: 39px;
       margin-bottom:20px;
     }
+
     button {
       width: 44px;
       height: 44px;
@@ -1432,6 +1543,7 @@ export const SurmaContent = styled.div`
          top: -49px;
       }
     }
+
     .circle {
       @media (max-width: 992px) {
         display:none;
@@ -1441,9 +1553,11 @@ export const SurmaContent = styled.div`
 
 export const SurmaWrapper = styled.div`
   position: relative;
+
   .none {
     display: none;
   }
+
   .show {
     background: transparent;
     display: block;
