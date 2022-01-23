@@ -1,6 +1,7 @@
 import React from 'react';
 import AccordionElement from './accordion-element';
-import Faq from '../../images/landingPL/faq.svg';
+import FaqQuestion from '../../images/landingPL/faq_bg_question.svg';
+import FaqPlay from '../../images/landingPL/faq_bg_play.svg';
 
 import { faq } from './data';
 import {
@@ -18,6 +19,11 @@ const Accordion = () => {
                     <AccordionElement element={element} />
                 ))
                 }
+            <img src={FaqPlay} className="fplay"/>
+            <img src={FaqQuestion} className="fup"/>
+            <img src={FaqQuestion} className="fright"/>
+            <img src={FaqQuestion} className="fleft"/>
+
             </AccordionWrapper>
         </>
     );

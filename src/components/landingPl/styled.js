@@ -7,8 +7,10 @@ export const AccordionWrapper = styled.div`
     font-family: Poppins;
     padding: 5% 10% 0 10%;
     position: relative;
+    margin-bottom: 340px;
     @media ${deviceMax.mobileL} {
       padding-top: 10%;
+      margin-bottom: 0;
     }
 
     .accordion-wrapper {
@@ -83,8 +85,43 @@ export const AccordionWrapper = styled.div`
 
     img {
       position: absolute;
-      top: -200px;
-      left: 200px;
+    }
+
+    .fplay{
+      display: block;
+      top: calc(50% - 450px);
+      left: calc(50% - 682px);
+      @media (max-width: 1200px) {
+        display: none
+      }
+    }
+
+    .fup {
+      display: block;
+      right: 10%;
+      top: -5%;
+      @media (max-width: 1200px) {
+        display: none
+      }
+    }
+
+   .fright {
+      display: block;
+      right: 20%;
+      width: 122px;
+      bottom: 10%;
+      @media (max-width: 1200px) {
+        display: none
+      }
+    }
+
+    .fleft {
+      display: block;
+      width: 275px;
+      bottom: -131px;
+      @media (max-width: 1200px) {
+        display: none
+      }
     }
 `;
 
@@ -103,10 +140,6 @@ export const BenefitsWrapper = styled.div`
     background: linear-gradient(#3e3e3e 0%, #343434 49.75%, #262525 100%);
     padding: 10% 10%;  
     min-height: 100vh;
-
-    @media (max-width: 576px) {
-        padding-top: 90px;
-    } 
 
     .benefits-additional {
       display: grid;
@@ -178,6 +211,7 @@ export const BenefitsWrapper = styled.div`
       color: #fff;
       padding-bottom: 30px;
       @media (max-width: 992px) {
+        padding-left: 20px;
         padding-bottom: 12px;
         font-size: 30px;
         line-height: 46px;
@@ -635,6 +669,7 @@ export const BenefitCard = styled.div`
         position: relative;
         @media (max-width: 576px) {
           grid-template-columns: 60px 1fr;
+          padding-bottom:20px;
       } 
     }
     .title {
