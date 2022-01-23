@@ -241,6 +241,15 @@ export const BenefitsWrapper = styled.div`
       text-shadow: 2px 2px #3a4dc3;
     }
 
+    .what-offer {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .what-offer-text {
+      margin: 0 auto 57px;
+      max-width: 420px;
+    }
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
@@ -296,10 +305,6 @@ export const BenefitsWrapper = styled.div`
 
       h2 {
         margin-bottom: 16px;
-      }
-
-      p {
-        text-align: left;
       }
     }
 
