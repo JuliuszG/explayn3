@@ -14,7 +14,6 @@ const Accordion = () => {
     <>
       <AccordionTitle>Najczęściej zadawane pytania</AccordionTitle>
       <AccordionWrapper>
-        {/* <img src={Faq}/> */}
         {faq.map((element) => (
           <AccordionElement element={element} />
         ))
