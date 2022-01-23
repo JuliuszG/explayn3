@@ -28,7 +28,7 @@ const Process = () => {
           <div className="wrapper">
             <h4>Projektowanie</h4>
           </div>
-          <p className="text">Kiedy już skończymy z badaniami i określimy zadania, nadchodzi czas na wypracowanie strategii działań. W tym miejscu opracujemy dokładny plan działania, który będzie zgodny z Twoimi celami. Szczegółowa strategia będzie zawierała wszystkie elementy i narzędzia potrzebne do dotarcia do Twojej grupy odbiorców.</p>
+          <p className="text" style={{padding: '0'}}>Kiedy już skończymy z badaniami i określimy zadania, nadchodzi czas na wypracowanie strategii działań. W tym miejscu opracujemy dokładny plan działania, który będzie zgodny z Twoimi celami. Szczegółowa strategia będzie zawierała wszystkie elementy i narzędzia potrzebne do dotarcia do Twojej grupy odbiorców.</p>
         </div>
         <img src={Proces2} alt="icon" className="img" />
       </CaseWorkRevert>
@@ -46,7 +46,7 @@ const Process = () => {
           <div className="wrapper">
             <h4>Monitorowanie</h4>
           </div>
-          <p className="text">Na tym etapie monitorujemy działania i badamy zachowania klientów. Oceniamy również skuteczność kampanii. Tworzymy raporty i omawiamy kolejne kroki. </p>
+          <p className="text" style={{padding: '0'}}>Na tym etapie monitorujemy działania i badamy zachowania klientów. Oceniamy również skuteczność kampanii. Tworzymy raporty i omawiamy kolejne kroki. </p>
         </div>
         <img src={Proces4} alt="icon" className="img" />
 

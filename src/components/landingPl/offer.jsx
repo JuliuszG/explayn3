@@ -42,6 +42,12 @@ const Tab = styled.div`
   border: 0;
   outline: 0;
   filter: invert(29%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(99%) contrast(10%);
+
+  @media (max-width: 992px) {
+    padding: 10px 5px;
+    transform: scale(0.7);
+  }
+
   ${({ active }) =>
     active &&
     `
@@ -53,6 +59,9 @@ const Tab = styled.div`
     filter: none;
     opacity: 1;
     transform: scale(1.2);
+    @media (max-width: 992px) {
+      transform: scale(1);
+    }
   }
 
   img {

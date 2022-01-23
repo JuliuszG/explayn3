@@ -146,7 +146,9 @@ export const BenefitsWrapper = styled.div`
     .img {
       height: 200px;
       margin-bottom: 32px;
-
+      @media (max-width: 1300px) {
+        width: 80%;
+        } 
       @media (max-width: 576px) {
         width: 100%;
         } 
@@ -175,6 +177,11 @@ export const BenefitsWrapper = styled.div`
       text-align: left;
       color: #fff;
       padding-bottom: 30px;
+      @media (max-width: 992px) {
+        padding-bottom: 12px;
+        font-size: 30px;
+        line-height: 46px;
+      }
     }
 
     .tabContainer {
@@ -182,6 +189,14 @@ export const BenefitsWrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 140px;
+      
+      @media (max-width: 992px) {
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        margin-left: 0;
+        gap:0;
+      }
+
       p {
         text-align: left;
       }
@@ -221,10 +236,16 @@ export const BenefitsWrapper = styled.div`
     .arrow-right {
       transform: rotate(180deg);
       right: -100px;
+      @media (max-width: 992px){
+        right: -45px;
+      }
     }
 
     .arrow-left {
       left: -100px;
+      @media (max-width: 992px){
+        left: -45px;
+      }
     }
 
     .tab  {
@@ -240,31 +261,47 @@ export const BenefitsWrapper = styled.div`
       text-align: left;
       color: #fff;
       text-shadow: 2px 2px #3a4dc3;
+
+      @media (max-width: 992px) {
+        font-size: 30px;
+        margin-left: 0;
+      } 
     }
 
     .what-offer {
       text-align: center;
       margin: 20px 0;
+      @media (max-width: 992px) {
+        margin-top: 16px;
+      }
     }
 
     .what-offer-text {
       margin: 0 auto 57px;
       max-width: 420px;
+      @media (max-width: 992px) {
+        margin: 0 auto 20px;
+      }
     }
 
     .swiper-carousel {
       position: relative;
       padding-top: 200px;
-      padding-bottom: 140px;
+      padding-bottom: 267px;
       max-width: 833px;
       margin: 0 auto;
+
+      @media (max-width: 992px) {
+        padding-top: 24px;
+        padding-bottom: 45px;
+      }
     }
 
     .swiper-carousel-wrapper {
       position: relative;
     }
   
-    
+
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
@@ -279,6 +316,9 @@ export const BenefitsWrapper = styled.div`
       text-align: center;
       margin-bottom: 16px;
       margin-top: 100px;
+      @media (max-width: 1024px) {
+       margin-top: 0;
+     } 
     }
 
     p {
@@ -292,7 +332,7 @@ export const BenefitsWrapper = styled.div`
         @media (max-width: 576px) {
           font-size: 14px;
           margin-left: 0;
-          margin-bottom: 60px;
+          margin-bottom: 0;
       } 
     }
 
@@ -373,7 +413,7 @@ export const BenefitsWrapper = styled.div`
     }
 
     .arrow {
-      top: calc( 50% - 302px);
+      top: calc( 50% - 342px);
       position: absolute;
       left: calc( 50% - 251px);
       @media (max-width: 556px) {
@@ -413,6 +453,11 @@ export const BenefitsWrapper = styled.div`
     width: 600px;
     height: 244px;
     margin-left: -37px;
+    @media (max-width: 992px) {
+      margin-left: auto;
+      max-width: 300px;
+      height: 244px;
+    }
   }
   
   .swiper-slide {
@@ -421,6 +466,9 @@ export const BenefitsWrapper = styled.div`
     width: 570px;
     height: 244px;
     display: block;
+    @media (max-width: 992px) {
+      max-width: 300px;
+    }
   }
 
   .swiper-content {
@@ -437,6 +485,12 @@ export const BenefitsWrapper = styled.div`
     font-size: 27px;
     line-height: 39px;
     color: white;
+    @media (max-width: 992px) {
+      max-width: 300px;
+      padding: 30px;
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
 
   .swiper-button-next {
@@ -451,6 +505,13 @@ export const BenefitsWrapper = styled.div`
       font-size: 26px;
       font-weight: 900;
     }
+    @media (max-width: 992px) {
+      padding: 20px;
+      top: 50%;
+      &:after {
+        font-size: 20px;
+      }
+    }
   }
 
   .swiper-button-prev {
@@ -464,6 +525,13 @@ export const BenefitsWrapper = styled.div`
     &:after {
       font-size: 26px;
       font-weight: 900;
+    }
+    @media (max-width: 992px) {
+      padding: 20px;
+      top: 50%;
+      &:after {
+        font-size: 20px;
+      }
     }
   }
 
@@ -481,16 +549,24 @@ export const BenefitsWrapper = styled.div`
   }
 
   .people {
+    display: block;
     position: absolute;
     top: -110px;
     z-index: 9;
     right: 0;
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 
   .decoration {
+    display: block;
     position: absolute;
     top: -60px;
     left: -43px;
+    @media (max-width: 992px) {
+      display: none;
+    }
   }
 `;
 
@@ -556,7 +632,6 @@ export const BenefitCard = styled.div`
     .card {
         display: grid;
         grid-template-columns: 80px 1fr;
-        margin-bottom: 30px;
         position: relative;
         @media (max-width: 576px) {
           grid-template-columns: 60px 1fr;
@@ -567,7 +642,7 @@ export const BenefitCard = styled.div`
         font-size: 27px;
         line-height: 39px;
         margin-left: 50px;
-
+        text-align: left;
         @media (max-width: 576px) {
           font-size: 18px;
           margin-left: 15px;

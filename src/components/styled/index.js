@@ -5036,9 +5036,10 @@ export const CaseWork = styled.div`
   grid-template-columns: 500px 1fr;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
+    margin-bottom: 24px;
   }
   @media (max-width: 960px) {
-    padding: 5% 0 0 0;
+    padding: 0 0 0 0;
   }
   h2 {
     margin-left: 25px;
@@ -5072,7 +5073,7 @@ export const CaseWork = styled.div`
 
     @media ${deviceMax.mobileL} {
       font-size: 18px;
-      padding-left: 20px;
+      padding-left: 0;
     }
   }
 
@@ -5101,6 +5102,9 @@ export const CaseWork = styled.div`
   .text {
     padding-left: 50px;
 
+    @media screen and (max-width: 992px) {
+      padding-left: 0;
+    }
   }
   .img {
     width: 100%;
@@ -5119,9 +5123,10 @@ export const CaseWorkRevert = styled.div`
   grid-template-columns: 1fr 500px;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
+    margin-bottom: 24px;
   }
   @media (max-width: 960px) {
-    padding: 5% 0 0 0;
+    padding: 0;
   }
   h2 {
     margin-left: 25px;
@@ -5131,7 +5136,6 @@ export const CaseWorkRevert = styled.div`
     @media screen and (max-width: 992px) {
       font-size: 32px;
       margin-left: 20px;
-
     }
   }
   h3 {
@@ -5155,7 +5159,7 @@ export const CaseWorkRevert = styled.div`
 
     @media ${deviceMax.mobileL} {
       font-size: 18px;
-      padding-left: 20px;
+      padding-left: 0;
     }
   }
 
@@ -5176,7 +5180,8 @@ export const CaseWorkRevert = styled.div`
     margin-bottom:24px;
     padding-left: 150px;
     @media screen and (max-width: 992px) {
-      padding: 0 20px 0 20px;
+      padding-left: 20px;
+      padding-right: 20px;
       font-size: 14px;
     }
   }
@@ -5210,11 +5215,9 @@ export const CaseImg = styled.div`
     @media screen and (max-width: 992px) {
       font-size: 32px;
       margin-left: 20px;
-
     }
   }
-  
-  }
+
   h3 {
     margin-left: 25px;
     font-weight: 600;
@@ -5224,6 +5227,7 @@ export const CaseImg = styled.div`
       margin-left: 20px;
     }
   }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -5233,15 +5237,15 @@ export const CaseImg = styled.div`
       display: block;
     }
   }
+
   .wrapper-work {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 20%;
     @media screen and (max-width: 992px) {
-      padding-left: 20px;
+      padding-left: 20px !important;
     }
-
   }
   p {
     font-weight: 300;
