@@ -18,6 +18,8 @@ import Instagram from '../../images/landingPL/instagram1.svg';
 import Tiktok from '../../images/landingPL/tiktok1.svg';
 import Linkedin from '../../images/landingPL/linkedin1.svg';
 import Arrow from '../../images/landingPL/arrow.svg';
+import DarkDecoration from '../../images/landingPL/darkdecoration.svg';
+
 
 // Import Swiper styles
 import 'swiper/swiper-bundle.min.css'
@@ -131,7 +133,8 @@ const Offer = () => {
         <h2 className="what-offer">Dla kogo?</h2>
         <p>Zobacz z jakimi problemami mierzą się nasi klienci.<br />Elastycznie dopasowujemy rozwiązania do różnych problemów. </p>
       </div>
-      <div>
+      <div className="swiper-carousel">
+        <div className="swiper-carousel-wrapper">
         <Swiper effect={'flip'} grabCursor={true} pagination={{ clickable: true }} navigation={true} className="swiper">
           <SwiperSlide className="swiper-slide"><div className="swiper-content">Jesteś zadowolony z działania Twojego biznesu, ale chcesz się rozwijać</div></SwiperSlide>
           <SwiperSlide className="swiper-slide"><div className="swiper-content">Poszukujesz sposobu na zwiększenie rozpoznawalności Twojej marki</div></SwiperSlide>
@@ -141,7 +144,9 @@ const Offer = () => {
           <SwiperSlide className="swiper-slide"><div className="swiper-content">Obecna agencja nie spełnia Twoich oczekiwań</div></SwiperSlide>
           <SwiperSlide className="swiper-slide"><div className="swiper-content">Próbowałeś sił w reklamach, ale tracisz tylko pieniądze</div></SwiperSlide>
         </Swiper>
-        <img src={Offer1} />
+        <img className="people" src={Offer1} />
+        </div>
+        <img className="decoration" src={DarkDecoration} />
       </div>
       <h2 className="what-offer">Co oferujemy?</h2>
       <p className="what-offer-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
