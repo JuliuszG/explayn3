@@ -10,8 +10,6 @@ import Benefits1 from '../../images/landingPL/benefits1.svg';
 import Benefits2 from '../../images/landingPL/benefits2.svg';
 import Benefits3 from '../../images/landingPL/benefits3.svg';
 
-
-
 const Card = ({ item }) => {
   return (
     <BenefitCard>

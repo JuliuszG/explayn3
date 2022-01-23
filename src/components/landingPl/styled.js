@@ -8,6 +8,7 @@ export const AccordionWrapper = styled.div`
     padding: 5% 10% 0 10%;
     position: relative;
     margin-bottom: 340px;
+
     @media ${deviceMax.mobileL} {
       padding-top: 10%;
       margin-bottom: 0;
@@ -130,6 +131,7 @@ export const AccordionTitle = styled.div`
     font-size: 22px;
     font-weight: 600;
     text-align: center;
+
     @media ${deviceMax.mobileL} {
       font-size: 18px;
     }
@@ -153,6 +155,7 @@ export const BenefitsWrapper = styled.div`
         grid-gap: 5%;
       }
     }
+
     .benefit-additional {
       display: flex;
       flex-direction: column;
@@ -234,13 +237,16 @@ export const BenefitsWrapper = styled.div`
       p {
         text-align: left;
       }
+
       b {
         font-weight: 600;
       }
+
       ul {
         text-align: left;
         font-weight: 300;
       }
+
       li {
         position: relative;
         padding-left: 30px;
@@ -350,6 +356,7 @@ export const BenefitsWrapper = styled.div`
       text-align: center;
       margin-bottom: 16px;
       margin-top: 100px;
+
       @media (max-width: 1024px) {
        margin-top: 0;
      } 
@@ -450,6 +457,7 @@ export const BenefitsWrapper = styled.div`
       top: calc( 50% - 342px);
       position: absolute;
       left: calc( 50% - 251px);
+
       @media (max-width: 556px) {
         display: none;
         }
@@ -478,6 +486,7 @@ export const BenefitsWrapper = styled.div`
         -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
         transition: all 0.3s ease 0s;
       }
+
       @media (max-width: 576px) {
         margin-top: 60px;
        }
@@ -487,6 +496,7 @@ export const BenefitsWrapper = styled.div`
     width: 600px;
     height: 244px;
     margin-left: -37px;
+
     @media (max-width: 992px) {
       margin-left: auto;
       max-width: 300px;
@@ -500,6 +510,7 @@ export const BenefitsWrapper = styled.div`
     width: 570px;
     height: 244px;
     display: block;
+
     @media (max-width: 992px) {
       max-width: 300px;
     }
@@ -519,6 +530,7 @@ export const BenefitsWrapper = styled.div`
     font-size: 27px;
     line-height: 39px;
     color: white;
+
     @media (max-width: 992px) {
       max-width: 300px;
       padding: 30px;
@@ -539,6 +551,7 @@ export const BenefitsWrapper = styled.div`
       font-size: 26px;
       font-weight: 900;
     }
+
     @media (max-width: 992px) {
       padding: 20px;
       top: 50%;
@@ -560,6 +573,7 @@ export const BenefitsWrapper = styled.div`
       font-size: 26px;
       font-weight: 900;
     }
+
     @media (max-width: 992px) {
       padding: 20px;
       top: 50%;
@@ -588,6 +602,7 @@ export const BenefitsWrapper = styled.div`
     top: -110px;
     z-index: 9;
     right: 0;
+
     @media (max-width: 992px) {
       display: none;
     }
@@ -598,6 +613,7 @@ export const BenefitsWrapper = styled.div`
     position: absolute;
     top: -60px;
     left: -43px;
+
     @media (max-width: 992px) {
       display: none;
     }
@@ -626,10 +642,55 @@ export const ImgContainer = styled.div`
     position: absolute;
     top: -446px;
     left: -401px;
+
     @media (min-width: 576px) {
       display: none;
     }
   }
+`;
+
+export const Tab = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  opacity: 0.6;
+  border: 0;
+  outline: 0;
+  filter: invert(29%) sepia(0%) saturate(0%) hue-rotate(331deg) brightness(99%) contrast(10%);
+
+  @media (max-width: 992px) {
+    padding: 10px 5px;
+    transform: scale(0.7);
+  }
+
+  ${({ active }) =>
+    active &&
+    `
+    filter: none;
+    opacity: 1;
+    transform: scale(1.2);
+  `}
+  &:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.2);
+    @media (max-width: 992px) {
+      transform: scale(1);
+    }
+  }
+
+  img {
+    margin-bottom: 12px;
+  }
+`;
+
+export const ButtonGroup = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 export const TrustElement = styled.div`
@@ -657,7 +718,9 @@ export const BenefitCard = styled.div`
         opacity:0.5;
         @media (max-width: 576px) {
           transform: scale(0.7)
-      } &:hover {
+      } 
+
+      &:hover {
           transition: 0.2s ease-in;
           opacity:1;
       }
@@ -672,6 +735,7 @@ export const BenefitCard = styled.div`
           padding-bottom:20px;
       } 
     }
+
     .title {
         font-weight: 600;
         font-size: 27px;
