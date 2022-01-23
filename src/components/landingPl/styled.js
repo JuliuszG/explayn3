@@ -324,24 +324,6 @@ export const BenefitsWrapper = styled.div`
       }
     }
 
-    .swiper-carousel {
-      position: relative;
-      padding-top: 200px;
-      padding-bottom: 267px;
-      max-width: 833px;
-      margin: 0 auto;
-
-      @media (max-width: 992px) {
-        padding-top: 24px;
-        padding-bottom: 45px;
-      }
-    }
-
-    .swiper-carousel-wrapper {
-      position: relative;
-    }
-  
-
     .benefit-wrapper {
         display:grid;
         grid-template-columns: 1fr 1fr; 
@@ -496,13 +478,32 @@ export const BenefitsWrapper = styled.div`
     width: 600px;
     height: 244px;
     margin-left: -37px;
-
+    position: relative;
+    z-index: 10;
+    
     @media (max-width: 992px) {
       margin-left: auto;
       max-width: 300px;
       height: 244px;
     }
   }
+  
+  .swiper-carousel {
+      position: relative;
+      padding-top: 200px;
+      padding-bottom: 267px;
+      max-width: 833px;
+      margin: 0 auto;
+
+      @media (max-width: 992px) {
+        padding-top: 24px;
+        padding-bottom: 45px;
+      }
+    }
+
+    .swiper-carousel-wrapper {
+      position: relative;
+    }
   
   .swiper-slide {
     background-position: center;
