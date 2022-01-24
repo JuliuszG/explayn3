@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import BrandingImage from '../../images/landingPL/joanna.png';
 import { deviceMin, deviceMax } from '../../utils/breakpoints';
 import LiImage from '../../images/landingPL/li.svg';
@@ -220,6 +220,10 @@ export const BenefitsWrapper = styled.div`
         line-height: 46px;
       }
     }
+    .social-carousel {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
     .tabContainer {
       margin-left: 118px;
@@ -270,6 +274,7 @@ export const BenefitsWrapper = styled.div`
       border: none;
       &:hover {
         background: none;
+        box-shadow: none;
       }
     }
     
@@ -296,7 +301,7 @@ export const BenefitsWrapper = styled.div`
     .special {
       font-family: Poppins;
       font-weight: 600;
-      font-size: 75px;
+      font-size: 57px;
       line-height: 50px;
       text-align: left;
       color: #fff;
@@ -480,7 +485,7 @@ export const BenefitsWrapper = styled.div`
     margin-left: -37px;
     position: relative;
     z-index: 10;
-    
+
     @media (max-width: 992px) {
       margin-left: auto;
       max-width: 300px;
@@ -501,9 +506,9 @@ export const BenefitsWrapper = styled.div`
       }
     }
 
-    .swiper-carousel-wrapper {
+  .swiper-carousel-wrapper {
       position: relative;
-    }
+  }
   
   .swiper-slide {
     background-position: center;
@@ -649,6 +654,16 @@ export const ImgContainer = styled.div`
     }
   }
 `;
+const big = keyframes`
+  from {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    to {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+`;
 
 export const Tab = styled.div`
   display: flex;
@@ -678,6 +693,7 @@ export const Tab = styled.div`
   &:hover {
     filter: none;
     opacity: 1;
+    animation: ${big} 0.2s linear;
     transform: scale(1.2);
     @media (max-width: 992px) {
       transform: scale(1);
@@ -815,6 +831,8 @@ export const ClientWrapper = styled.div`
     align-items: center;
     padding: 10%;
     font-family: Poppins;
+    max-width: 1600px;
+    margin: 0 auto;
 
     h2 {
         margin-bottom: 156px;
@@ -1357,15 +1375,6 @@ div:nth-of-type(1) {
 
 div:nth-of-type(2) {
   animation-delay: -0.2s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
 }`;
 
 export const ConsultationText = styled.div`

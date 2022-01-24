@@ -24,7 +24,7 @@ SwiperCore.use([EffectFlip, Pagination, Navigation]);
 
 const TabGroup = () => {
   const [active, setActive] = useState(types[0]);
-  const [text, setText] = useState('<h3>Google</h3><div className="tabContainer"><div><p>Aż</p><p className="special">46%</p><p>osób zaczyna szukanie produktu lub usługi w Google i tak, w tej grupie też są Twoi klienci. Reklamy w wyszukiwarce Google pozwalają dotrzeć do osób, które szukają dokładnie tego co Ty oferujesz.</p></div><div><p>Dzięki Google Ads jesteś tam, gdzie ludzie szukają informacji o problemie, na które oferujesz rozwiązanie. Promuj swój biznes wśród osób, które szukają firm takich jak Twoja.</p><p>Dzięki reklamie w Google:<p><ul><li>dotrzesz dokładnie do tych osób, które szukają Twoich usług</li><li>zachowasz kontrolę nad wydawanym budżetem</li><li>uzyskasz natychmiastowe rezultaty</li></ul></div></div>')
+  const [text, setText] = useState('<h3>Google</h3><div className="tabContainer"><div><p className="special">46%</p><p>osób zaczyna szukanie produktu lub usługi w Google i tak, w tej grupie też są Twoi klienci. Reklamy w wyszukiwarce Google pozwalają dotrzeć do osób, które szukają dokładnie tego co Ty oferujesz.</p></div><div><p>Dzięki Google Ads jesteś tam, gdzie ludzie szukają informacji o problemie, na które oferujesz rozwiązanie. Promuj swój biznes wśród osób, które szukają firm takich jak Twoja.</p><p>Dzięki reklamie w Google:<p><ul><li>dotrzesz dokładnie do tych osób, które szukają Twoich usług</li><li>zachowasz kontrolę nad wydawanym budżetem</li><li>uzyskasz natychmiastowe rezultaty</li></ul></div></div>')
   const [index, setIndex] = useState(0);
 
   const goBack = (index) => {
@@ -52,7 +52,7 @@ const TabGroup = () => {
   }
 
   return (
-    <>
+    <div className="social-carousel">
       <ButtonGroup>
         {types.map((type, i) => (
           <Tab
@@ -74,7 +74,7 @@ const TabGroup = () => {
         <p>{parse(text)} </p>
         <button className="arrow arrow-right" onClick={() => goNext(index)}><img src={Arrow} /></button>
       </div>
-    </>
+    </div>
   );
 }
 

@@ -18,10 +18,9 @@ const spin = keyframes`
   100% {
     transform: rotate(360deg);
   }
-
 `;
 
-const show = keyframes`{
+const show = keyframes`
   0% {
       opacity: 0;
   }
@@ -30,14 +29,15 @@ const show = keyframes`{
   } 
   100% {
       opacity: 1;
-  }
-}`
+  }`
 
 const slide = keyframes`
-  0% { transform : translateY(100%) }
-  100%{ transform : translateY(0) } 
-}
-`
+  0% { 
+    transform : translateY(100%); 
+  }
+  100% { 
+    transform : translateY(0); 
+  } `;
 
 
 //blog/author.jsx
