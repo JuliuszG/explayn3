@@ -5151,15 +5151,14 @@ export const CaseWorkRevert = styled.div`
     font-size: 22px;
     font-weight: 600;
     cursor: pointer;
-    padding: 16px;
+    padding: 16px 16px 16px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 150px;
+    padding-left: 0;
 
     @media screen and (max-width: 992px) {
       font-size: 18px;
-      padding-left: 0;
     }
   }
 
