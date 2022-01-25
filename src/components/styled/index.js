@@ -4168,7 +4168,7 @@ export const BenefitsSection = styled.div`
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 20px;
-        @media () {
+        @media ${deviceMax.mobileL} {
           font-size: 20px;
           padding-left: 0;
         }
