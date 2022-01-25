@@ -12,7 +12,7 @@ const Process = () => {
     <ClientWrapper>
       <div className="header-wrapper">
         <h2>Nasz proces</h2>
-        <p >Wierzymy, że skuteczny marketing jest zbudowany na dobrze ułożonym procesie - od pierwszego kontaktu, przez tworzenie strategii z klientem, po wdrażanie działań i mierzenie wyników.</p>
+        <p >Wierzymy, że skuteczny marketing jest zbudowany na dobrze ułożonym procesie - od pierwszego kontaktu, przez tworzenie strategii z klientem, po wdrażanie działań i mierzenie&nbsp;wyników.</p>
       </div>
       <CaseWork>
         <img src={Proces1} alt="icon" className="img" />
