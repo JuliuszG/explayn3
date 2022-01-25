@@ -5157,7 +5157,7 @@ export const CaseWorkRevert = styled.div`
     align-items: center;
     padding-left: 150px;
 
-    @media ${deviceMax.mobileL} {
+    @media screen and (max-width: 992px) {
       font-size: 18px;
       padding-left: 0;
     }
