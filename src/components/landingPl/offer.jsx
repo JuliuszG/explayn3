@@ -101,7 +101,7 @@ const Offer = () => {
         <img className="decoration" src={DarkDecoration} />
       </div>
       <h2 className="what-offer">Co oferujemy?</h2>
-      <p className="what-offer-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod</p>
+      <p className="what-offer-text">Dobry biznes musi być widoczny w sieci, a platforma musi być dopasowana do Twoich klientów. Dobieramy najskuteczniejsze kanały dotarcia dopasowane do Twojej branży.</p>
       <TabGroup />
       <div className="button_wrapper">
         <img className="arrow" src={GrayArrow} />

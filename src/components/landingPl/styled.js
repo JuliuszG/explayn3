@@ -323,7 +323,7 @@ export const BenefitsWrapper = styled.div`
 
     .what-offer-text {
       margin: 0 auto 57px;
-      max-width: 420px;
+      max-width: 620px;
       @media (max-width: 992px) {
         margin: 0 auto 20px;
       }
@@ -1655,6 +1655,15 @@ export const SurmaContent = styled.div`
           margin-bottom: 20px;
         }
       }
+    }
+
+    .mock {
+      margin-left: calc(50% - 175px);
+      @media (max-width: 992px) {
+          width: 100%;
+          margin-top: -150px;
+          margin-left: 0;
+        }
     }
 
     .solutions {
