@@ -13,6 +13,7 @@ import LandingPl from '../components/landingPage/landingPl';
 import LogoImg from '../components/navigation/logoImg';
 import { ImgContainer } from '../components/landingPl/styled';
 import BlueMobile from '../images/landingPL/blueMobile.svg';
+import Accordion from '../components/landingPl/accordion';
 
 const IndexPage = ({ location }) => {
   const caseStudyRef = useRef(null);
@@ -60,10 +61,11 @@ const IndexPage = ({ location }) => {
           </a>
         </ImgContainer>
         <LandingPl />
-        <Benefit />
-        <Client />
         <Offer />
+        <Client />
+        <Benefit />
         <Proces />
+        <Accordion />
         <Consultation />
         <TrustComponent />
         <FooterPl />

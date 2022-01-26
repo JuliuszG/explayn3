@@ -18,10 +18,9 @@ const spin = keyframes`
   100% {
     transform: rotate(360deg);
   }
-
 `;
 
-const show = keyframes`{
+const show = keyframes`
   0% {
       opacity: 0;
   }
@@ -30,14 +29,15 @@ const show = keyframes`{
   } 
   100% {
       opacity: 1;
-  }
-}`
+  }`
 
 const slide = keyframes`
-  0% { transform : translateY(100%) }
-  100%{ transform : translateY(0) } 
-}
-`
+  0% { 
+    transform : translateY(100%); 
+  }
+  100% { 
+    transform : translateY(0); 
+  } `;
 
 
 //blog/author.jsx
@@ -4170,6 +4170,7 @@ export const BenefitsSection = styled.div`
         margin-bottom: 20px;
         @media ${deviceMax.mobileL} {
           font-size: 20px;
+          padding-left: 0;
         }
       }
       p {
@@ -5032,12 +5033,13 @@ export const CaseWork = styled.div`
   font-family: Poppins;
   margin-bottom: 80px;
   display: grid;
-  grid-template-columns: 600px 1fr;
+  grid-template-columns: 500px 1fr;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
+    margin-bottom: 24px;
   }
   @media (max-width: 960px) {
-    padding: 5% 0 0 0;
+    padding: 0 0 0 0;
   }
   h2 {
     margin-left: 25px;
@@ -5059,6 +5061,22 @@ export const CaseWork = styled.div`
       margin-left: 20px;
     }
   }
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+
+    @media ${deviceMax.mobileL} {
+      font-size: 18px;
+      padding-left: 0;
+    }
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -5081,9 +5099,16 @@ export const CaseWork = styled.div`
       font-size: 14px;
     }
   }
+  .text {
+    padding-left: 50px;
 
+    @media screen and (max-width: 992px) {
+      padding-left: 0;
+    }
+  }
   .img {
-    padding-left: 100px;
+    width: 100%;
+    padding-right: 100px;
     @media screen and (max-width: 992px) {
       display:none;
     }
@@ -5095,12 +5120,13 @@ export const CaseWorkRevert = styled.div`
   font-family: Poppins;
   margin-bottom: 100px;
   display: grid;
-  grid-template-columns: 1fr 600px;
+  grid-template-columns: 1fr 500px;
   @media screen and (max-width: 992px) {
     grid-template-columns: 1fr;
+    margin-bottom: 24px;
   }
   @media (max-width: 960px) {
-    padding: 5% 0 0 0;
+    padding: 0;
   }
   h2 {
     margin-left: 25px;
@@ -5110,7 +5136,6 @@ export const CaseWorkRevert = styled.div`
     @media screen and (max-width: 992px) {
       font-size: 32px;
       margin-left: 20px;
-
     }
   }
   h3 {
@@ -5122,6 +5147,21 @@ export const CaseWorkRevert = styled.div`
       margin-left: 20px;
     }
   }
+  h4 {
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 16px 16px 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+
+    @media screen and (max-width: 992px) {
+      font-size: 18px;
+    }
+  }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -5139,13 +5179,15 @@ export const CaseWorkRevert = styled.div`
     margin-bottom:24px;
     padding-left: 150px;
     @media screen and (max-width: 992px) {
-      padding: 0 20px 0 20px;
+      padding-left: 20px;
+      padding-right: 20px;
       font-size: 14px;
     }
   }
 
   .img {
     padding-left: 100px;
+    width: 100%;
     @media screen and (max-width: 992px) {
       display:none;
     }
@@ -5172,11 +5214,9 @@ export const CaseImg = styled.div`
     @media screen and (max-width: 992px) {
       font-size: 32px;
       margin-left: 20px;
-
     }
   }
-  
-  }
+
   h3 {
     margin-left: 25px;
     font-weight: 600;
@@ -5186,6 +5226,7 @@ export const CaseImg = styled.div`
       margin-left: 20px;
     }
   }
+
   .wrapper {
     display: flex;
     align-items: center;
@@ -5195,15 +5236,15 @@ export const CaseImg = styled.div`
       display: block;
     }
   }
+
   .wrapper-work {
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding-left: 20%;
     @media screen and (max-width: 992px) {
-      padding-left: 20px;
+      padding-left: 20px !important;
     }
-
   }
   p {
     font-weight: 300;

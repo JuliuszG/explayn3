@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import CaseStudy from '../components/landingPage/caseStudy';
