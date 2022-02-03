@@ -17,55 +17,90 @@ import CaseList from '../components/cases/caseList';
 import CaseVideo from '../components/cases/caseVideo';
 
 export const query = graphql`
-  query MyQuery($id: String!) {
-    datoCmsRealizacja(id: { eq: $id }) {
-      landingimage {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
+query MyQuery($id: String!) {
+    wpRealizacja(id: { eq: $id }) {
+        realizacja {
+            landingImage {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+            }
+            component2Title
+            component2Paragraph
+            component2Country
+            component2Client
+            component2Field
+            component2Services
+            link
+            video
+            darkMode
+            screen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+            }
+            bigScreen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+            }
+            component4Title
+            article4Paragraphs
+            doubleImageComponent {
+              firstImage {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              secondImage {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+            }
+            screen2 {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+            }
+            component7Title
+            component7Paragraph
+            component7List
         }
-      }
-      component2Title
-      component2Paragraph
-      component2Country
-      component2Client
-      component2Field
-      component2Services
-      link
-      video
-      darkMode
-      screens {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      bigScreen {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component4Title
-      article4Paragraphs
-      doubleImageComponent {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      screen2 {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component7Title
-      component7Paragraph
-      component7List
     }
-  }
+}
 `;
 
 const CaseTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  console.log(data);
+
   return (
     <>
     <SEO title="Explayn Digital Agency" />
@@ -73,44 +108,44 @@ const CaseTemplate = ({ data }) => {
       {isMobile ? (
         <Mobile />
       ) : (
-        <Desktop darkMode={data.datoCmsRealizacja.darkMode} mainPage={false} />
+        <Desktop darkMode={data.wpRealizacja.realizacja.darkMode} mainPage={false} />
       )}
-      <CaseLanding background={data.datoCmsRealizacja.landingimage.fluid} />
+      <CaseLanding background={data.wpRealizacja.realizacja.landingImage.localFile.childImageSharp.fluid} />
       <CaseData
-        title={data.datoCmsRealizacja.component2Title}
-        paragraph={data.datoCmsRealizacja.component2Paragraph}
-        link={data.datoCmsRealizacja.link}
-        country={data.datoCmsRealizacja.component2Country}
-        client={data.datoCmsRealizacja.component2Client}
-        field={data.datoCmsRealizacja.component2Field}
-        services={data.datoCmsRealizacja.component2Services}
+        title={data.wpRealizacja.realizacja.component2Title}
+        paragraph={data.wpRealizacja.realizacja.component2Paragraph}
+        link={data.wpRealizacja.realizacja.link}
+        country={data.wpRealizacja.realizacja.component2Country}
+        client={data.wpRealizacja.realizacja.component2Client}
+        field={data.wpRealizacja.realizacja.component2Field}
+        services={data.wpRealizacja.realizacja.component2Services}
       />
-      {data.datoCmsRealizacja.video && (
-        <CaseVideo link={data.datoCmsRealizacja.video} />
+      {data.wpRealizacja.realizacja.video && (
+        <CaseVideo link={data.wpRealizacja.realizacja.video} />
       )}
-      {data.datoCmsRealizacja.screens?.fluid && (
-        <CaseScreen src={data.datoCmsRealizacja.screens.fluid} />
+      {data.wpRealizacja.realizacja.screen?.localFile.childImageSharp.fluid && (
+        <CaseScreen src={data.wpRealizacja.realizacja.screen.localFile.childImageSharp.fluid} />
       )}
-      {data.datoCmsRealizacja.bigScreen?.fluid && (
+      {data.wpRealizacja.realizacja.bigScreen?.localFile.childImageSharp.fluid && (
         <CaseBigScreen
-          src={data.datoCmsRealizacja.bigScreen.fluid}
+          src={data.wpRealizacja.realizacja.bigScreen.localFile.childImageSharp.fluid}
           decorations={true}
         />
       )}
       <CaseDescription
-        title={data.datoCmsRealizacja.component4Title}
-        paragraphs={data.datoCmsRealizacja.article4Paragraphs}
+        title={data.wpRealizacja.realizacja.component4Title}
+        paragraphs={data.wpRealizacja.realizacja.article4Paragraphs}
       />
-      {data.datoCmsRealizacja.doubleImageComponent.length > 1 && (
-        <CaseDoubleImage arr={data.datoCmsRealizacja.doubleImageComponent} />
+      {data.wpRealizacja.realizacja.doubleImageComponent && (
+        <CaseDoubleImage arr={data.wpRealizacja.realizacja.doubleImageComponent} />
       )}
       <CaseList
-        title={data.datoCmsRealizacja.component7Title}
-        paragraph={data.datoCmsRealizacja.component7Paragraph}
-        arrObj={JSON.parse(data.datoCmsRealizacja.component7List)}
+        title={data.wpRealizacja.realizacja.component7Title}
+        paragraph={data.wpRealizacja.realizacja.component7Paragraph}
+        arrObj={JSON.parse(data.wpRealizacja.realizacja.component7List)}
       />
-      {data.datoCmsRealizacja.screen2?.fluid && (
-        <CaseScreen src={data.datoCmsRealizacja.screen2.fluid} />
+      {data.wpRealizacja.realizacja.screen2?.localFile.childImageSharp.fluid && (
+        <CaseScreen src={data.wpRealizacja.realizacja.screen2.localFile.childImageSharp.fluid} />
       )}
       <CaseStudy triangle={false} />
       <Footer />

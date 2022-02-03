@@ -102,61 +102,73 @@ const Case = () => {
   }
   const data = useStaticQuery(graphql`
   query myQueryAnd($id: String) {
-    datoCmsRealizacja(id: { eq: $id }) {
-      landingimage {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component2Title
-      component2Paragraph
-      component2Country
-      component2Client
-      component2Field
-      component2Services
-      link
-      video
-      darkMode
-      screens {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      bigScreen {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component4Title
-      article4Paragraphs
-      doubleImageComponent {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      screen2 {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-     
-      component7Title
-      component7Paragraph
-      component7List
-    }
-    allDatoCmsVideo {
-      nodes{
-        photo {
-          fluid(maxWidth: 1750) {
-            ...GatsbyDatoCmsFluid_tracedSVG
+    wpRealizacja(id: { eq: $id }) {
+        realizacja {
+            landingImage {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              component2Title
+              component2Paragraph
+              component2Country
+              component2Client
+              component2Field
+              component2Services
+              link
+              video
+              darkMode
+              screen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              bigScreen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              component4Title
+              article4Paragraphs
+              doubleImageComponent {
+                firstImage {
+                  localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                  }
+                }                
+              }
+              screen2 {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+             
+              component7Title
+              component7Paragraph
+              component7List
+            }
           }
         }
-        video {
-          url
-        }
-      }
-    }
-  }
 `)
   return (
     <>
@@ -165,21 +177,21 @@ const Case = () => {
         {isMobile ? (
           <Mobile />
         ) : (
-          <Desktop darkMode={data.datoCmsRealizacja.darkMode} mainPage={false} />
+          <Desktop darkMode={data.wpRealizacja.realizacja.darkMode} mainPage={false} />
         )}
-        <CaseLanding background={data.datoCmsRealizacja.landingimage.fluid} />
+        <CaseLanding background={data.wpRealizacja.realizacja.landingImage.localFile.childImageSharp.fluid} />
         <CaseDataPl
           title="Zaczynajmy"
           paragraph="Popularność diet pudełkowych w Europie Środkowo-Wschodniej gwałtownie rośnie. Coraz więcej osób chce jeść zdrowo i ekologicznie, nie tracąc cennego czasu na przygotowywanie posiłków.
         Sektor cateringu dietetycznego z niszowego przekształcił się w dużą branżę i zdywersyfikował, dostosowując się do potrzeb różnych grup docelowych - od sportowców i kulturystów, po alergików pokarmowych i wegan. Wprowadzenie nowej marki w takie realia rynkowe jest szansą, ale niesie ze sobą również ryzyko. W naszym case study chcielibyśmy pokazać, jak sobie z nim poradziliśmy. Nie była to bułka z masłem, ale efekty świadczą o tym, że przyjęliśmy właściwe podejście!"
-          link={data.datoCmsRealizacja.link}
+          link={data.wpRealizacja.realizacja.link}
           country="Polska"
           client="Torba Smaku"
           field="Food"
-          services={data.datoCmsRealizacja.component2Services}
+          services={data.wpRealizacja.realizacja.component2Services}
         />
-        {data.datoCmsRealizacja.screens?.fluid && (
-          <CaseScreen src={data.datoCmsRealizacja.screens.fluid} />
+        {data.wpRealizacja.realizacja.screens?.localFile.childImageSharp.fluid && (
+          <CaseScreen src={data.wpRealizacja.realizacja.screen.localFile.childImageSharp.fluid} />
         )}
         <CaseAbout>
           <div className="wrapper">
@@ -216,14 +228,14 @@ const Case = () => {
             <p>Pierwszym krokiem było stworzenie platformy do zamawiania spersonalizowanych zestawów posiłków. Następnie stworzyliśmy dwie reklamy wideo skierowane do kampanii na YouTube, aby jak najefektywniej wystartować z promocją. Równocześnie uruchomiliśmy kampanię świadomościową Google Ads i Facebook Ads, które pozwoliły nam pozyskać nowych odbiorców i zwiększyć ruch na stronie.</p>
           </div>
         </CaseWork>
-        {data.datoCmsRealizacja.bigScreen?.fluid && (
+        {data.wpRealizacja.realizacja.bigScreen?.localFile.childImageSharp.fluid && (
           <CaseBigScreen
-            src={data.datoCmsRealizacja.bigScreen.fluid}
+            src={data.wpRealizacja.realizacja.bigScreen.localFile.childImageSharp.fluid}
             decorations={true}
           />
         )}
-        {data.datoCmsRealizacja.doubleImageComponent.length > 1 && (
-          <CaseDoubleImage arr={data.datoCmsRealizacja.doubleImageComponent} />
+        {data.wpRealizacja.realizacja.doubleImageComponent.length > 1 && (
+          <CaseDoubleImage arr={data.wpRealizacja.realizacja.doubleImageComponent.firstImage.localFile.childImageSharp} />
         )}
         <Margin />
         <CaseWork>
@@ -281,8 +293,8 @@ const Case = () => {
             </div>
             <p>Ponieważ większość klientów zamawia usługi cateringu dietetycznego online, w pełni responsywna, przykuwająca wzrok platforma online była koniecznością. Zadbaliśmy o to, aby strona była intuicyjna na różnych urządzeniach, w tym na smartfonach, które przejmują ruch w sieci (w 2021 roku będą stanowić już 54% całego globalnego ruchu w Internecie).</p>
           </div>
-          {data.datoCmsRealizacja.screen2?.fluid && (
-            <CaseScreenImageFull fluid={data.datoCmsRealizacja.screen2.fluid} />
+          {data.wpRealizacja.realizacja.screen2?.localFile.childImageSharp.fluid && (
+            <CaseScreenImageFull fluid={data.wpRealizacja.realizacja.screen2.localFile.childImageSharp.fluid} />
           )}
         </CaseImg>
         <CaseImgRevert>
@@ -348,7 +360,7 @@ const Case = () => {
                 className="video"
               />
               <source src={url} type="video/webm"></source>
-            </video>ś
+            </video>
           </VideoContainer>
         }
         <MarginBottom />

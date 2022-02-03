@@ -80,18 +80,24 @@ const PostSlider = ({ filters, showFrom }) => {
   const data = useStaticQuery(
     graphql`
       {
-        allDatoCmsBlog {
+        allWpArticle {
           nodes {
-            bigScreen {
-              fluid(maxWidth: 1750) {
-                ...GatsbyDatoCmsFluid_tracedSVG
+            article {
+              bigScreen {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1750) {
+                      ...GatsbyImageSharpFluid_tracedSVG
+                    }
+                  }
+                }
               }
+              categories
+              timeToRead
+              slug
+              blogTitle
             }
-            slug
-            blogTitle
             id
-            categories
-            timeToRead
           }
         }
       }
@@ -109,7 +115,7 @@ const PostSlider = ({ filters, showFrom }) => {
 
   useEffect(() => {
     const {
-      allDatoCmsBlog: { nodes },
+      allWpArticle: { nodes },
     } = data;
     let newPosts = nodes;
     if (filter.currentPost) {
@@ -142,31 +148,37 @@ const PostSlider = ({ filters, showFrom }) => {
               <SliderContainer>
                 <Slider {...settings}>
                   {posts.map((post, index) => {
-                    const { categories } = JSON.parse(post.categories);
+                    const { categories } = JSON.parse(post.article.categories);
+                    const { fluid } = post.article.bigScreen.localFile.childImageSharp.fluid;
+                    const {
+                      blogTitle,
+                      slug,
+                      timeToRead,
+                    } = post.article;
                     return (
-                      <div>
-                        <SlideInfinity index={index} key={index}>
+                      <div key={post.id}>
+                        <SlideInfinity index={index}>
                           <SlideImageContainerInfinity>
                             <SlideImageOverlay />
                             <SlideImage
-                              fluid={post.bigScreen.fluid}
+                              fluid={fluid}
                               alt="post"
                             />
                           </SlideImageContainerInfinity>
                           <SlideContentInfinity>
-                            <h3>{post.blogTitle}</h3>
+                            <h3>{blogTitle}</h3>
                             <div style={{ width: '100%' }}>
                               <SlideContentDetails>
                                 {categories.map(el => (
-                                  <span>{el.toUpperCase()}</span>
+                                  <span key={post.id}>{el.toUpperCase()}</span>
                                 ))}
                               </SlideContentDetails>
                               <SliderBottomContainer>
                                 <SliderTime className="slider-time">
-                                  <span>{post.timeToRead}</span>
+                                  <span>{timeToRead}</span>
                                 </SliderTime>
                                 <SliderLink>
-                                  <a href={`/blog/${post.slug}`}>
+                                  <a href={`/blog/${slug}`}>
                                     READ THIS ARTICLE {'>'}
                                   </a>
                                 </SliderLink>

@@ -32,12 +32,14 @@ const SideBar = ({ title, slug, id }) => {
   const data = useStaticQuery(
     graphql`
       {
-        allDatoCmsBlog {
+        allWpArticle {
           nodes {
-            slug
-            blogTitle
             id
-            categories
+            article {
+              categories
+              slug
+              blogTitle
+            }
           }
         }
       }
@@ -46,12 +48,12 @@ const SideBar = ({ title, slug, id }) => {
 
   useEffect(() => {
     if (filters.length === 0) {
-      const filteredPosts = data.allDatoCmsBlog.nodes.filter(
+      const filteredPosts = data.allWpArticle.nodes.filter(
         (item, key) => item.id !== id && key <= 3
       );
       setTrending(filteredPosts);
     } else {
-      const categoryFilter = data.allDatoCmsBlog.nodes.filter(post => {
+      const categoryFilter = data.allWpArticle.nodes.article.filter(post => {
         const { categories } = JSON.parse(post.categories);
         let isIn = false;
         categories.forEach(cat => {

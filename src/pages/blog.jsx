@@ -10,28 +10,24 @@ import Image from 'gatsby-image';
 import Footer from '../components/footer';
 import { BlogWrapper, BlogContent, BlogPost } from '../components/styled';
 export const query = graphql`
-  {
-    allDatoCmsBlog(limit: 6) {
+{
+    allWpArticle(limit: 6) {
       nodes {
-        bigScreen {
-          fluid(maxWidth: 800) {
-            ...GatsbyDatoCmsFluid_tracedSVG
+        article {
+          bigScreen {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
           }
+          categories
+          timeToRead
+          slug
+          blogTitle
         }
-        bigScreenFraming
-        personalPhoto {
-          fluid(maxWidth: 151) {
-            ...GatsbyDatoCmsFluid_tracedSVG
-          }
-        }
-        aboutTheAuthor
-        authorName
-        categories
-        timeToRead
-        blogTitle
-        leadText
-        content
-        slug
         id
       }
     }
@@ -39,26 +35,26 @@ export const query = graphql`
 `;
 
 const Card = ({ post }) => {
-  const { categories } = JSON.parse(post.categories);
+  const { categories } = JSON.parse(post.article.categories);
   return (
-    <BlogPost to={post.slug}>
+    <BlogPost to={post.article.slug}>
       <div className="img">
         <div className="overlay"></div>
         <Image
           style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          fluid={post.bigScreen.fluid}
+          fluid={post.article.bigScreen.localFile.childImageSharp.fluid}
           alt="post picture"
         />
       </div>
       <div className="content">
-        <h2>{post.blogTitle}</h2>
+        <h2>{post.article.blogTitle}</h2>
         <div className="categories">
           {categories.map((category, index) => (
             <span className="cat" key={index}>
               {category}
             </span>
           ))}
-          <span className="read">{post.timeToRead}</span>
+          <span className="read">{post.article.timeToRead}</span>
         </div>
       </div>
       <div className="btn-cnt">
@@ -67,7 +63,7 @@ const Card = ({ post }) => {
     </BlogPost>
   );
 };
-const Blog = ({ data: { allDatoCmsBlog } }) => {
+const Blog = ({ data: { allWpArticle } }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
@@ -79,7 +75,7 @@ const Blog = ({ data: { allDatoCmsBlog } }) => {
         <BlogWrapper>
           <BlogContent>
             <h1 className="main-title">Articles</h1>
-            {allDatoCmsBlog.nodes.map(post => (
+            {allWpArticle.nodes.map(post => (
               <Card key={post.id} post={post} />
             ))}
           </BlogContent>

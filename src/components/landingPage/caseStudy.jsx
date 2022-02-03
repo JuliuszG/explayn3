@@ -22,17 +22,17 @@ import {
 
 export const SliderContent = ({ item }) => {
   return (
-    <CaseStudySliderWrapper to={item.slug === 'torbasmaku' ? '/torbasmaku' :`/case/${item.slug}`}>
+    <CaseStudySliderWrapper to={item.realizacja.slug === 'torbasmaku' ? '/torbasmaku' :`/case/${item.realizacja.slug}`}>
       <CaseStudySliderImageWrapper>
         <Img
           style={{ height: '100%' }}
-          fluid={item.landingimage.fluid}
+          fluid={item.realizacja.landingImage.localFile.childImageSharp.fluid}
           alt="logo"
         />
       </CaseStudySliderImageWrapper>
       <div className="text__cnt">
-        <h3>{item.component2Client}</h3>
-        <p>{item.component2Services}</p>
+        <h3>{item.realizacja.component2Client}</h3>
+        <p>{item.realizacja.component2Services}</p>
       </div>
     </CaseStudySliderWrapper>
   );
@@ -41,19 +41,22 @@ export const SliderContent = ({ item }) => {
 const CaseStudy = ({ refProp, triangle = true }) => {
   const data = useStaticQuery(graphql`
     {
-      cases: allDatoCmsRealizacja(
-        limit: 7
-        sort: { fields: meta___createdAt, order: DESC }
-      ) {
+      cases: allWpRealizacja(limit: 7) {
         nodes {
-          component2Client
-          component2Services
-          slug
-          landingimage {
-            fluid {
-              ...GatsbyDatoCmsFluid
+            realizacja {
+                component2Client
+                component2Services
+                landingImage {
+                  localFile {
+                    childImageSharp {
+                        fluid {
+                            ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                  }
+                }
+            slug
             }
-          }
         }
       }
       triangle: file(relativePath: { eq: "caseStudy/triangle.png" }) {
@@ -98,9 +101,9 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   if (isMobile) triangle = false;
   const renderSlider = (
     <Slider style={{ outline: 'none' }}>
-      {data.cases.nodes.map((item, index) => { 
-         if (!url.includes(item.slug))
-        return <Slide className="slide" key={index} index={index} id={item.slug}>
+      {data.cases.nodes.map((item, index) => {
+         if (!url.includes(item.realizacja.slug))
+        return <Slide className="slide" key={index} index={index} id={item.realizacja.slug}>
           <SliderContent item={item} />
         </Slide>
       }
@@ -112,7 +115,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   const mobile = (
     <>
       {data.cases.nodes.map(
-        (item, index) => (index < 4 && !url.includes(item.slug)) && <SliderContent item={item} key={index} />
+        (item, index) => (index < 4 && !url.includes(item.realizacja.slug)) && <SliderContent item={item} key={index} />
       )}
     </>
   );

@@ -9,10 +9,10 @@ const CaseDoubleImage = ({ arr }) => {
   return (
     <CaseDoubleImageWrapper>
       <DoubleImageWrapper>
-        <CaseDoubleImageImage fluid={arr[0].fluid} alt="screen" />
+        <CaseDoubleImageImage fluid={arr.firstImage.localFile.childImageSharp.fluid} alt="screen" />
       </DoubleImageWrapper>
       <DoubleImageWrapper>
-        <CaseDoubleImageImage fluid={arr[1].fluid} alt="screen" />
+        <CaseDoubleImageImage fluid={arr.secondImage.localFile.childImageSharp.fluid} alt="screen" />
       </DoubleImageWrapper>
     </CaseDoubleImageWrapper>
   );

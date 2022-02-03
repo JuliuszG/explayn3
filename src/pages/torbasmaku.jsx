@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import Img from 'gatsby-image';
 import Desktop from '../components/navigation/desktop';
 import Mobile from '../components/navigation/mobile';
 import CaseStudy from '../components/landingPage/caseStudy';
@@ -36,6 +35,7 @@ import {
 } from 'pure-react-carousel';
 
 import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../components/styled/index'
+import { computeStyles } from '@popperjs/core';
 
 
 
@@ -102,63 +102,78 @@ const CaseTemplate = () => {
     )
   }
   const data = useStaticQuery(graphql`
-  query myQueryAndMyQuery($id: String) {
-    datoCmsRealizacja(id: { eq: $id }) {
-      landingimage {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component2Title
-      component2Paragraph
-      component2Country
-      component2Client
-      component2Field
-      component2Services
-      link
-      video
-      darkMode
-      screens {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      bigScreen {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      component4Title
-      article4Paragraphs
-      doubleImageComponent {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-      screen2 {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
-     
-      component7Title
-      component7Paragraph
-      component7List
-    }
-    allDatoCmsVideo {
+  query myQueryTorbaSmaku {
+    allWpRealizacja(filter: {realizacja: {slug: {eq: "torbasmaku"}}}) {
       nodes{
-        photo {
-          fluid(maxWidth: 1750) {
-            ...GatsbyDatoCmsFluid_tracedSVG
+        realizacja {
+            landingImage {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              component2Title
+              component2Paragraph
+              component2Country
+              component2Client
+              component2Field
+              component2Services
+              link
+              video
+              darkMode
+              screen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              bigScreen {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+              component4Title
+              article4Paragraphs
+              doubleImageComponent {
+                firstImage {
+                  localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                  }
+                }
+              }
+              screen2 {
+                localFile {
+                    childImageSharp {
+                        fluid(maxWidth: 1750) {
+                          ...GatsbyImageSharpFluid_tracedSVG
+                        }
+                    }
+                }
+              }
+             
+              component7Title
+              component7Paragraph
+              component7List
+            }
           }
         }
-        video {
-          url
-        }
       }
-    }
-  }
 `)
+
   return (
     <>
       <SEO title="Explayn Digital Agency" />
@@ -166,20 +181,20 @@ const CaseTemplate = () => {
         {isMobile ? (
           <Mobile />
         ) : (
-          <Desktop darkMode={data.datoCmsRealizacja.darkMode} mainPage={false} />
+          <Desktop darkMode={data.allWpRealizacja.nodes[0].realizacja.darkMode} mainPage={false} />
         )}
-        <CaseLanding background={data.datoCmsRealizacja.landingimage.fluid} />
+        <CaseLanding background={data.allWpRealizacja.nodes[0].realizacja.landingImage.localFile.childImageSharp.fluid} />
         <CaseData
-          title={data.datoCmsRealizacja.component2Title}
-          paragraph={data.datoCmsRealizacja.component2Paragraph}
-          link={data.datoCmsRealizacja.link}
-          country={data.datoCmsRealizacja.component2Country}
-          client={data.datoCmsRealizacja.component2Client}
-          field={data.datoCmsRealizacja.component2Field}
-          services={data.datoCmsRealizacja.component2Services}
+          title={data.allWpRealizacja.nodes[0].realizacja.component2Title}
+          paragraph={data.allWpRealizacja.nodes[0].realizacja.component2Paragraph}
+          link={data.allWpRealizacja.nodes[0].realizacja.link}
+          country={data.allWpRealizacja.nodes[0].realizacja.component2Country}
+          client={data.allWpRealizacja.nodes[0].realizacja.component2Client}
+          field={data.allWpRealizacja.nodes[0].realizacja.component2Field}
+          services={data.allWpRealizacja.nodes[0].realizacja.component2Services}
         />
-        {data.datoCmsRealizacja.screens?.fluid && (
-          <CaseScreen src={data.datoCmsRealizacja.screens.fluid} />
+        {data.allWpRealizacja.nodes[0].realizacja.screen?.localFile.childImageSharp.fluid && (
+          <CaseScreen src={data.allWpRealizacja.nodes[0].realizacja.screen.localFile.childImageSharp.fluid} />
         )}
         <CaseAbout>
           <div className="wrapper">
@@ -217,14 +232,14 @@ const CaseTemplate = () => {
             <p>The first step was to create a platform for ordering personalized meal kit delivery services. Subsequently, we've made two video ads aimed at the YouTube campaigns to take off with the promotion in the most efficient way. At the same time, we’ve launched Google Ads and Facebook Ads campaigns, which have allowed us to gain new audience and increase the site traffic.</p>
           </div>
         </CaseWork>
-        {data.datoCmsRealizacja.bigScreen?.fluid && (
+        {data.allWpRealizacja.nodes[0].realizacja.bigScreen?.localFile.childImageSharp.fluid && (
           <CaseBigScreen
-            src={data.datoCmsRealizacja.bigScreen.fluid}
+            src={data.allWpRealizacja.nodes[0].realizacja.bigScreen.localFile.childImageSharp.fluid}
             decorations={true}
           />
         )}
-        {data.datoCmsRealizacja.doubleImageComponent.length > 1 && (
-          <CaseDoubleImage arr={data.datoCmsRealizacja.doubleImageComponent} />
+        {data.allWpRealizacja.nodes[0].realizacja.doubleImageComponent.length > 1 && (
+          <CaseDoubleImage arr={data.allWpRealizacja.nodes[0].realizacja.doubleImageComponent.firstImage} />
         )}
         <Margin />
         <CaseWork>
@@ -279,8 +294,8 @@ const CaseTemplate = () => {
             </div>
             <p>Since most clients tend to order diet catering services online, a fully responsive, beautiful online platform was a must. We made sure that the website is intuitive on different devices, including smartphones which are taking over the online traffic (in 2021, they already constitute 54% of all global traffic on the Internet).</p>
           </div>
-          {data.datoCmsRealizacja.screen2?.fluid && (
-            <CaseScreenImageFull fluid={data.datoCmsRealizacja.screen2.fluid} />
+          {data.allWpRealizacja.nodes[0].realizacja.screen2?.localFile.childImageSharp.fluid && (
+            <CaseScreenImageFull fluid={data.allWpRealizacja.nodes[0].realizacja.screen2.localFile.childImageSharp.fluid} />
           )}
         </CaseImg>
         <CaseImgRevert>

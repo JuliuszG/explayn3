@@ -18,50 +18,59 @@ import {
 } from '../components/styled';
 
 export const query = graphql`
-  query BlogQuery($id: String!) {
-    datoCmsBlog(id: { eq: $id }) {
-      bigScreen {
-        fluid(maxWidth: 1750) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-          url
-      }
-      bigScreenFraming
-      personalPhoto {
-        fluid(maxWidth: 151) {
-          ...GatsbyDatoCmsFluid_tracedSVG
-        }
-      }
+query BlogQuery {
+  wpArticle {
+    id
+    article {
+      blogTitle
+      slug
       aboutTheAuthor
       authorName
+      bigScreen {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 1750) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+      }
+      bigScreenFraming
       categories
-      timeToRead
-      blogTitle
-      leadText
       content
-      slug
-      id
+      leadText
+      personalPhoto {
+        localFile {
+          childImageSharp {
+            fluid(maxWidth: 151) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
+      }
+      timeToRead
     }
   }
+}
 `;
 const PostTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  const { id } = data.wpArticle;
   const {
     bigScreen,
     bigScreenFraming,
-    blogTitle,
     content,
     timeToRead,
     authorName,
     aboutTheAuthor,
     personalPhoto,
     leadText,
+    blogTitle,
     slug,
-    id,
-  } = data.datoCmsBlog;
-  const { categories } = JSON.parse(data.datoCmsBlog.categories);
+  } = data.wpArticle.article;
+  const { categories } = JSON.parse(data.wpArticle.article.categories);
   const { changeContactFormStatus } = useContext(appContext);
   return (
     <>
@@ -70,7 +79,7 @@ const PostTemplate = ({ data }) => {
       {isMobile ? <Mobile /> : <Desktop mainPage={false} />}
       <PostTemplateWrapper>
         <PostTemplateLandingScreen
-          fluid={bigScreen.fluid}
+          fluid={bigScreen.localFile.childImageSharp.fluid}
           framing={bigScreenFraming}
           Tag="header"
         />
@@ -91,7 +100,7 @@ const PostTemplate = ({ data }) => {
               <Author
                 name={authorName}
                 about={aboutTheAuthor}
-                photo={personalPhoto.fluid}
+                photo={personalPhoto.localFile.childImageSharp.fluid}
               />
               <p className="lead">{leadText}</p>
               <ContentArticle

@@ -26,14 +26,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-datocms`,
-      options: {
-        apiToken: `98d91db58ff0afd6969892884709f5`,
-        preview: false,
-        disableLiveReload: false,
-      },
-    },
-    {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
@@ -58,6 +50,15 @@ module.exports = {
     },
     {
       resolve: 'gatsby-plugin-eslint',
+    },
+    {
+      resolve: `gatsby-source-wordpress`,
+      options: {
+        // The full URL of the WordPress site's GraphQL API.
+        url: `http://localhost/explayn/graphql`,
+        // Use Advanced Custom Fields
+        useACF: true,
+      }
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

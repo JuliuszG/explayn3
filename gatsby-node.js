@@ -2,71 +2,44 @@ const path = require(`path`);
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
-  const serviceTemplate = path.resolve(`src/templates/servicesTemplate.js`);
-  const caseTemplate = path.resolve(`src/templates/caseTemplate.js`);
   const postTemplate = path.resolve(`src/templates/postTemplate.jsx`);
+  const caseTemplate = path.resolve(`src/templates/caseTemplate.js`);
 
   const result = await graphql(`
-    query MyQuery {
-      allDatoCmsServicepage {
-        nodes {
-          firstComponent
-          secondComponent
-          thirdComponent
-          slug
-          serviceLogo {
-            fluid {
-              base64
-              aspectRatio
-              src
-              srcSet
-              sizes
-            }
-          }
-        }
-      }
-      allDatoCmsRealizacja {
-        nodes {
-          id
-          slug
-        }
-      }
-      allDatoCmsBlog {
-        nodes {
-          id
+  query MyQuery {
+    allWpArticle {
+      nodes {
+        id
+        article {
           slug
         }
       }
     }
+    allWpRealizacja {
+      nodes {
+        realizacja {
+          slug
+        }
+        id
+      }
+    }
+  }
   `);
-  result.data.allDatoCmsServicepage.nodes.forEach(project => {
+  result.data.allWpArticle.nodes.forEach(post => {
     createPage({
-      path: `/${project.slug}`,
-      component: serviceTemplate,
-      context: {
-        first: JSON.parse(project.firstComponent),
-        second: JSON.parse(project.secondComponent),
-        third: JSON.parse(project.thirdComponent),
-        logo: project.serviceLogo.fluid,
-      },
-    });
-  });
-  result.data.allDatoCmsRealizacja.nodes.forEach(project => {
-    createPage({
-      path: `case/${project.slug}`,
-      component: caseTemplate,
-      context: {
-        id: project.id,
-      },
-    });
-  });
-
-  result.data.allDatoCmsBlog.nodes.forEach(post => {
-    createPage({
-      path: `blog/${post.slug}`,
+      path: `blog/${post.article.slug}`,
       component: postTemplate,
       context: {
         id: post.id,
+      },
+    });
+  });
+  result.data.allWpRealizacja.nodes.forEach(project => {
+    createPage({
+      path: `case/${project.realizacja.slug}`,
+      component: caseTemplate,
+      context: {
+        id: project.id,
       },
     });
   });
