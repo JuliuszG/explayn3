@@ -36,6 +36,7 @@ import {
 
 import { CaseAbout, CaseWork, Margin, CaseWorkRevert, CaseScreenImageFull, CaseImg, CaseImgRevert, SlideContainer, VideoContainer } from '../components/styled/index'
 import { computeStyles } from '@popperjs/core';
+import { useIntl } from 'gatsby-plugin-intl';
 
 
 
@@ -103,76 +104,143 @@ const CaseTemplate = () => {
   }
   const data = useStaticQuery(graphql`
   query myQueryTorbaSmaku {
-    allWpRealizacja(filter: {realizacja: {slug: {eq: "torbasmaku"}}}) {
-      nodes{
+    allWpRealizacja(filter: {realizacja: {en: {slug: {eq: "torbasmaku"}}}}) {
+      nodes {
         realizacja {
+          en {
             landingImage {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                          ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
                 }
               }
-              component2Title
-              component2Paragraph
-              component2Country
-              component2Client
-              component2Field
-              component2Services
-              link
-              video
-              darkMode
-              screen {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                          ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
+            }
+            component2Title
+            component2Paragraph
+            component2Country
+            component2Client
+            component2Field
+            component2Services
+            link
+            video
+            darkMode
+            screen {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
                 }
               }
-              bigScreen {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                          ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
+            }
+            bigScreen {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
                 }
               }
-              component4Title
-              article4Paragraphs
-              doubleImageComponent {
-                firstImage {
-                  localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                          ...GatsbyImageSharpFluid_tracedSVG
-                        }
+            }
+            component4Title
+            article4Paragraphs
+            doubleImageComponent {
+              firstImage {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1750) {
+                      ...GatsbyImageSharpFluid_tracedSVG
                     }
                   }
                 }
               }
-              screen2 {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                          ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
+            }
+            screen2 {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
                 }
               }
-             
-              component7Title
-              component7Paragraph
-              component7List
             }
+            component7Title
+            component7Paragraph
+            component7List
+          }
+          pl {
+            landingImage {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            component2Title
+            component2Paragraph
+            component2Country
+            component2Client
+            component2Field
+            component2Services
+            link
+            video
+            darkMode
+            screen {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            bigScreen {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            component4Title
+            article4Paragraphs
+            doubleImageComponent {
+              firstImage {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1750) {
+                      ...GatsbyImageSharpFluid_tracedSVG
+                    }
+                  }
+                }
+              }
+            }
+            screen2 {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1750) {
+                    ...GatsbyImageSharpFluid_tracedSVG
+                  }
+                }
+              }
+            }
+            component7Title
+            component7Paragraph
+            component7List
           }
         }
       }
+    }
+  }  
 `)
+
+const locale = useIntl().locale;
+const realizacjaLang = locale === 'pl' ? data.allWpRealizacja.nodes[0].realizacja.pl : data.allWpRealizacja.nodes[0].realizacja.en;
 
   return (
     <>
@@ -181,39 +249,39 @@ const CaseTemplate = () => {
         {isMobile ? (
           <Mobile />
         ) : (
-          <Desktop darkMode={data.allWpRealizacja.nodes[0].realizacja.darkMode} mainPage={false} />
+          <Desktop darkMode={realizacjaLang.darkMode} mainPage={false} />
         )}
-        <CaseLanding background={data.allWpRealizacja.nodes[0].realizacja.landingImage.localFile.childImageSharp.fluid} />
+        <CaseLanding background={realizacjaLang.landingImage.localFile.childImageSharp.fluid} />
         <CaseData
-          title={data.allWpRealizacja.nodes[0].realizacja.component2Title}
-          paragraph={data.allWpRealizacja.nodes[0].realizacja.component2Paragraph}
-          link={data.allWpRealizacja.nodes[0].realizacja.link}
-          country={data.allWpRealizacja.nodes[0].realizacja.component2Country}
-          client={data.allWpRealizacja.nodes[0].realizacja.component2Client}
-          field={data.allWpRealizacja.nodes[0].realizacja.component2Field}
-          services={data.allWpRealizacja.nodes[0].realizacja.component2Services}
+          title={realizacjaLang.component2Title}
+          paragraph={realizacjaLang.component2Paragraph}
+          link={realizacjaLang.link}
+          country={realizacjaLang.component2Country}
+          client={realizacjaLang.component2Client}
+          field={realizacjaLang.component2Field}
+          services={realizacjaLang.component2Services}
         />
-        {data.allWpRealizacja.nodes[0].realizacja.screen?.localFile.childImageSharp.fluid && (
-          <CaseScreen src={data.allWpRealizacja.nodes[0].realizacja.screen.localFile.childImageSharp.fluid} />
+        {realizacjaLang.screen?.localFile.childImageSharp.fluid && (
+          <CaseScreen src={realizacjaLang.screen.localFile.childImageSharp.fluid} />
         )}
         <CaseAbout>
           <div className="wrapper">
             <img src={Torba} alt="logo torba smaku" className="logo" />
             <div>
               <h3>TORBA SMAKU</h3>
-              <h2>About the client</h2>
+              <h2>{useIntl().formatMessage({ id: "torbasmaku.case-about.h2" })}</h2>
             </div>
           </div>
           <div className="wrapper-grid">
             <div>
-              <p>The company we’ve worked with specializes in meal kit delivery based on previously prepared meal plans. It aims at clients that search for an affordable meal delivery option without compromising quality. Torba Smaku focuses on diet catering - with slimming, ketogenic, sports, and vegetarian variants included. </p>
-              <p>Its offer proves that the prepped meal delivery services can be affordable and keep the highest quality in terms of taste, products, and nutritional value.</p>
+              <p>{useIntl().formatMessage({ id: "torbasmaku.case-about.p1" })}</p>
+              <p>{useIntl().formatMessage({ id: "torbasmaku.case-about.p2" })}</p>
             </div>
             <div>
-              <p>When launching this project, our main goals included:</p>
+              <p>{useIntl().formatMessage({ id: "torbasmaku.case-about.p3" })}</p>
               <ul>
-                <li>creating a consistent image of a leader within the low-cost catering services category</li>
-                <li>launching sales and expanding it within a short span</li>
+                <li>{useIntl().formatMessage({ id: "torbasmaku.case-about.li1" })}</li>
+                <li>{useIntl().formatMessage({ id: "torbasmaku.case-about.li2" })}</li>
               </ul>
             </div>
           </div>
@@ -225,21 +293,21 @@ const CaseTemplate = () => {
               <img src={Subject} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>SUBJECT</h3>
-                <h2>What did we work on?</h2>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-subject.h2" })}</h2>
               </div>
             </div>
-            <p>We’ve taken an active part in the brand development process from scratch, helping our client introduce the company to the market. In a few steps, which we’ll describe briefly below, we’ve created an online platform, visual identification, and marketing strategy, which was later implemented with satisfying results.</p>
-            <p>The first step was to create a platform for ordering personalized meal kit delivery services. Subsequently, we've made two video ads aimed at the YouTube campaigns to take off with the promotion in the most efficient way. At the same time, we’ve launched Google Ads and Facebook Ads campaigns, which have allowed us to gain new audience and increase the site traffic.</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-subject.p1" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-subject.p2" })}</p>
           </div>
         </CaseWork>
-        {data.allWpRealizacja.nodes[0].realizacja.bigScreen?.localFile.childImageSharp.fluid && (
+        {realizacjaLang.bigScreen?.localFile.childImageSharp.fluid && (
           <CaseBigScreen
-            src={data.allWpRealizacja.nodes[0].realizacja.bigScreen.localFile.childImageSharp.fluid}
+            src={realizacjaLang.bigScreen.localFile.childImageSharp.fluid}
             decorations={true}
           />
         )}
-        {data.allWpRealizacja.nodes[0].realizacja.doubleImageComponent.length > 1 && (
-          <CaseDoubleImage arr={data.allWpRealizacja.nodes[0].realizacja.doubleImageComponent.firstImage} />
+        {realizacjaLang.doubleImageComponent.length > 1 && (
+          <CaseDoubleImage arr={realizacjaLang.doubleImageComponent.firstImage} />
         )}
         <Margin />
         <CaseWork>
@@ -248,12 +316,13 @@ const CaseTemplate = () => {
             <div className="wrapper">
               <img src={Challenges} alt="logo torba smaku" className="logo" />
               <div>
-                <h3>PROJECT CHARACTERISTIC</h3>
-                <h2>Challenges</h2>
+                <h3>{useIntl().formatMessage({ id: "torbasmaku.case-work-project.h3" })}</h3>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-project.h2" })}</h2>
               </div>
             </div>
-            <p>Developing this project, we had to keep the specifics of the catering industry in mind.  Since it aims towards a personalization, the company’s offer had to be as customizable as possible. That’s why all the diet variants have at least five levels of caloric content, and the clients can personalize their orders during the purchase process.  At the same time, the competition in the diet catering sector is relatively high, regardless of the price range. To attract potential customers, an extended offer adjusted to different needs and diet restrictions is not enough. </p>
-            <p>Thus, an intuitive website that catches the eye with its modern layout was our starting point, followed by a well-targeted marketing campaign.  Since it’s not that easy to stand out from the multitude of companies offering relatively similar catering services, we had to choose one distinguishing feature to focus on, which is, in a nutshell, „cheap but good” (with an emphasis on good!).</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-project.p1" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-project.p2" })}</p>
+            <p></p>
           </div>
         </CaseWork>
         <CaseWorkRevert>
@@ -262,10 +331,11 @@ const CaseTemplate = () => {
               <img src={Research} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>FIRST THINGS FIRST</h3>
-                <h2>Research and structure</h2>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-structure.h2" })}</h2>
               </div>
             </div>
-            <p>During the research phase, we came up with a conclusion that the office workers dominate among the company’s target groups. Since they’re busy, they usually search for the fastest solutions. Thus, when designing the user journey, we’ve tried to reduce the order process to four simple steps. This way, the client can finalize the order in a minute or two. Through the website, the clients of Torba Smaku can access the client panel, where all their previous and current orders are stored. They can modify them, add special requests and manage their payments.</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-structure.p1" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-structure.p2" })}</p>
           </div>
           <img src={ResearchBig} alt="icon" className="img" />
         </CaseWorkRevert>
@@ -276,11 +346,12 @@ const CaseTemplate = () => {
               <img src={Branding} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>BRANDING</h3>
-                <h2>Aesthetics</h2>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-branding.h2" })}</h2>
               </div>
             </div>
-            <p>In the website’s color palette, pastel shades are dominating, with mint green and pale blue as the main ones. Green brings calmness and associations with nature and harmony, while blue evokes trust. However, we’ve left much space for white, going for a modern, transparent design that exposes the appetizing photographs of offered dishes. </p>
-            <p>We’ve made them in minimalistic arrangements, keeping the shots simple to bring out the maximum potential of the meals. Each diet is illustrated with various photos to give the potential clients an exact idea of what they can expect. The readable, sans serif Work Sans and Poppins fonts are in perfect harmony with the design. The modern approach to UI design distinguishes Torba Smaku from other companies in this price range, as most of them still operate on quite old-school interfaces.</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-branding.p1" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-branding.p2" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-branding.p3" })}</p>
           </div>
         </CaseWork>
         <CaseImg>
@@ -289,13 +360,13 @@ const CaseTemplate = () => {
               <img src={Development} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>DEVELOPMENT</h3>
-                <h2>Website</h2>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-development.h2" })}</h2>
               </div>
             </div>
-            <p>Since most clients tend to order diet catering services online, a fully responsive, beautiful online platform was a must. We made sure that the website is intuitive on different devices, including smartphones which are taking over the online traffic (in 2021, they already constitute 54% of all global traffic on the Internet).</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-development.p1" })}</p>
           </div>
-          {data.allWpRealizacja.nodes[0].realizacja.screen2?.localFile.childImageSharp.fluid && (
-            <CaseScreenImageFull fluid={data.allWpRealizacja.nodes[0].realizacja.screen2.localFile.childImageSharp.fluid} />
+          {realizacjaLang.screen2?.localFile.childImageSharp.fluid && (
+            <CaseScreenImageFull fluid={realizacjaLang.screen2.localFile.childImageSharp.fluid} />
           )}
         </CaseImg>
         <CaseImgRevert>
@@ -307,18 +378,23 @@ const CaseTemplate = () => {
               <img src={Marketing} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>MARKETING</h3>
-                <h2>Marketing <br />campaing</h2>
+                <h2>
+                  {useIntl().formatMessage({ id: "torbasmaku.case-work-marketing.h2.marketing" })}
+                  <br />
+                  {useIntl().formatMessage({ id: "torbasmaku.case-work-marketing.h2.campaing" })}
+                </h2>
               </div>
             </div>
-            <p>Marketing campaign: The introduction of the new brand to the market could go unnoticed without a well-targeted brand promotion. Our client decided to bet on a YouTube campaign since it’s the easiest way to reach broad recognition within a short time. To reach out to clients through social media, we’ve used Facebook Ads, too. Google Ads campaign made up to the overall promotion, allowing us to access the target group directly and spark its interest. </p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-marketing.p1" })}</p>
             <div className="wrapper">
               <img src={Visual} alt="logo torba smaku" className="logo" />
               <div>
                 <h3>VISUAL</h3>
-                <h2>Video ads</h2>
+                <h2>{useIntl().formatMessage({ id: "torbasmaku.case-work-visual.h2" })}</h2>
               </div>
             </div>
-            <p>Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-visual.p1" })}</p>
+            <p>{useIntl().formatMessage({ id: "torbasmaku.case-work-visual.p2" })}</p>
           </div>
         </CaseImgRevert>
         <div

@@ -13,6 +13,7 @@ import {
   SideBarTrendingFilters,
   SideBarTrendingFilter,
 } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const filterList = [
   'BRANDING',
@@ -31,11 +32,17 @@ const SideBar = ({ title, slug, id }) => {
   const { pathname } = location;
   const data = useStaticQuery(
     graphql`
-      {
-        allWpArticle {
-          nodes {
-            id
-            article {
+    {
+      allWpArticle {
+        nodes {
+          id
+          article {
+            en {
+              categories
+              slug
+              blogTitle
+            }
+            pl {
               categories
               slug
               blogTitle
@@ -43,6 +50,7 @@ const SideBar = ({ title, slug, id }) => {
           }
         }
       }
+    }
     `
   );
 
@@ -53,8 +61,10 @@ const SideBar = ({ title, slug, id }) => {
       );
       setTrending(filteredPosts);
     } else {
-      const categoryFilter = data.allWpArticle.nodes.article.filter(post => {
-        const { categories } = JSON.parse(post.categories);
+      const categoryFilter = data.allWpArticle.nodes.filter(post => {
+        const locale = useIntl().locale;
+        const { postLang } = locale === 'pl' ? post.article.pl : post.article.en;
+        const { categories } = JSON.parse(postLang.categories);
         let isIn = false;
         categories.forEach(cat => {
           if (filters.includes(cat.toUpperCase())) {

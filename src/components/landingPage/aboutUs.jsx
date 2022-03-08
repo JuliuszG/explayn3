@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence } from 'framer-motion';
 import { H2Variant, PVariant } from './landing';
-import { items, imageVariant, imageColorVariant } from '../../lib/aboutUs';
+import { itemsEn, itemsPl, imageVariant, imageColorVariant } from '../../lib/aboutUs';
 import {
   AboutUsWrapper,
   AboutUsHeaderWrapper,
@@ -12,6 +13,7 @@ import {
   BoxImageWrapper,
   BoxImage,
 } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Box = ({ content }) => {
   const [hovered, setHovered] = useState(false);
@@ -70,7 +72,9 @@ const Box = ({ content }) => {
           <li key={index}>{item}</li>
         ))}
       </ul>
-      <Link to={content.url}>Show more</Link>
+      <Link to={content.url}>
+        {useIntl().formatMessage({ id: "about-us.more" })}
+      </Link>
     </BoxWrapper>
   );
 };
@@ -88,16 +92,14 @@ const Header = () => {
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          Every day we take on significant challenges to build results driven
-          brands.
+          {useIntl().formatMessage({ id: "about-us.motion-h2" })}
         </motion.h2>
         <motion.p
           variants={PVariant}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
         >
-          We craft the best digital experience from a brand strategy to web
-          development to digital marketing.
+          {useIntl().formatMessage({ id: "about-us.motion-p" })}
         </motion.p>
       </div>
     </AboutUsHeaderWrapper>
@@ -124,12 +126,12 @@ const AboutUs = () => {
     if (!isCollapsed) {
       return (
         <div className="cnt second">
-          {items.map(
+          {(useIntl().locale === 'pl' ? itemsPl : itemsEn).map(
             (item, index) =>
               index > 2 && (
-                <a key={index} href={item.url}>
+                <Link key={index} to={item.url}>
                   <Box isCollapsed={isCollapsed} content={item} />
-                </a>
+                </Link>
               )
           )}
         </div>
@@ -140,12 +142,12 @@ const AboutUs = () => {
     <AboutUsWrapper id="aboutUs">
       <Header src={data.main.nodes[0].childImageSharp.fluid} />
       <div className="cnt first">
-        {items.map(
+        {(useIntl().locale === 'pl' ? itemsPl : itemsEn).map(
           (item, index) =>
             index < 4 && (
-              <a key={index} href={item.url}>
+              <Link key={index} to={item.url}>
                 <Box isCollapsed={isCollapsed} content={item} />
-              </a>
+              </Link>
             )
         )}
       </div>

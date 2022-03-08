@@ -11,14 +11,24 @@ exports.createPages = async ({ graphql, actions }) => {
       nodes {
         id
         article {
-          slug
+          en {
+            slug
+          }
+          pl {
+            slug
+          }
         }
       }
     }
     allWpRealizacja {
       nodes {
         realizacja {
-          slug
+          en {
+            slug
+          }
+          pl {
+            slug
+          }
         }
         id
       }
@@ -27,7 +37,8 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
   result.data.allWpArticle.nodes.forEach(post => {
     createPage({
-      path: `blog/${post.article.slug}`,
+      path: `/blog/${post.article.en.slug}`,
+      path: `/blog/${post.article.pl.slug}`,
       component: postTemplate,
       context: {
         id: post.id,
@@ -36,7 +47,8 @@ exports.createPages = async ({ graphql, actions }) => {
   });
   result.data.allWpRealizacja.nodes.forEach(project => {
     createPage({
-      path: `case/${project.realizacja.slug}`,
+      path: `case/${project.realizacja.en.slug}`,
+      path: `case/${project.realizacja.pl.slug}`,
       component: caseTemplate,
       context: {
         id: project.id,

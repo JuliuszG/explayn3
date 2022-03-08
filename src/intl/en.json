@@ -1,0 +1,310 @@
+{
+    "landing": {
+        "h1": {
+            "new": "New ",
+            "ways-to": " ways to",
+            "develop": "develop ",
+            "your": "your",
+            "brand": "brand."
+        },
+        "p": "A full service web design and digital marketing agency powered by growth solutions.",
+        "more": "learn more"
+    },
+
+
+    "about-us": {
+        "more": "Show more",
+        "motion-h2": "Every day we take on significant challenges to build results driven brands.",
+        "motion-p": "We craft the best digital experience from a brand strategy to web development to digital marketing."
+    },
+
+
+    "marketing": {
+        "services-main-description": "At a time when no company can afford not to have a digital marketing strategy, we are committed to offering 360˚ digital marketing services focused on delivering results.",
+        "more": "learn more",
+        "demand-left-section": {
+            "header": "Marketing on demand.",
+            "paragraph": "Everything begins with the recognition of the customer’s needs, a thorough market analysis and defining a marketing strategy, which will be the foundation of a consistent and multidimensional communication with your clients."
+        },
+        "demand-list": {
+            "01": "Marketing strategy",
+            "02": "Paid Advertising",
+            "03": "Social Media Management",
+            "04": "Marketing Automation"
+        },
+        "sentence-section-content": {
+            "header1": "Focusing on the methods for driving",
+            "header-span": "profitable customer action",
+            "header2": " is the key to our work.",
+            "paragraph1": "Attracting customers is just the first step. We make sure you retain them by putting together all the methods that allow understanding your audience better. All our decisions are based on thorough research that guarantees measurable results. We test different solutions to choose the most beneficial ones for your business.",
+            "paragraph2": "To provide you with the highest level of consistency, we offer a one-stop service. From visual identity to complex marketing strategy and its implementation - with us, you can count on a coherent result. It's a perfect solution for emerging companies but also those with an established position on the market."
+        },
+        "marketing-steps": {
+            "h2": "Simple and effective process",
+            "p": "A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.",
+            "arr": {
+                "discovery": "Discovery",
+                "planning": "Planning",
+                "design": "Create",
+                "development": "Launch",
+                "launch": "Measure"
+            }
+        },
+        "benefits-section": {
+            "h2": "How we work",
+            "p": "We use best practices to deliver comprehensive digital marketing services and provide a compelling message that sticks in the minds of those You’re trying to reach."
+        },
+        "benefits-content": {
+            "omnichannel": {
+                "h4": "Omnichannel",
+                "p": "From social media to email campaigns to digital ads, we create a path that leads your future customers to profitable actions."
+            },
+            "relevant": {
+                "h4": "Relevant",
+                "p": "We make sure the content is perfectly tailored to the target audience, compelling, easy to read, as well as credible and accurate."
+            },
+            "insightful": {
+                "h4": "Insightful",
+                "p": "Defining the audience is a big part of a successful campaign. Through accurate segmentation and target group analysis, we achieve the best possible results."
+            }
+        }
+    },
+
+
+    "development": {
+        "services-main-description": "Full-stack web development team capable of facing modern technical and business challenges.",
+        "more": "learn more",
+        "demand-left-section": {
+            "header": "Development on demand",
+            "paragraph": "Build modern applications that help you stay on top of the game.  We create an alluring user experience that keeps them coming back."
+        },
+        "demand-list": {
+            "01": "Websites",
+            "02": "Online stores",
+            "03": "iOS & Android Apps",
+            "04": "Dedicated systems"
+        },
+        "sentence-section-content": {
+            "header1": "In today’s ",
+            "header-span1": "dynamically changing",
+            "header2": " world, a company needs a ",
+            "header-span2": "fresh look",
+            "header3": " at its online presence.",
+            "paragraph1": "A website is often the first and most important touchpoint  between a customer and a brand. It is not just a URL, but a key aspect of your business and marketing strategy.",
+            "paragraph2": "With all the options available in the market today, you need someone you can trust to execute your vision to the highest level of quality. No matter what you do, at Explayn we help you create a digital experience seamlessly."
+        },
+        "steps": {
+            "h2": "Simple and effective process",
+            "p": "A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.",
+            "arr": {
+                "discovery": "Discovery",
+                "planning": "Planning",
+                "design": "Design",
+                "development": "Development",
+                "launch": "Launch"
+            }
+        },
+        "technology-section": {
+            "header": "Best technology for your product",
+            "paragraph": "Having released over 40 products we have a set of technologies that we love to work with. Tell us about your product vision and goals and we will choose technologies that will help you achieve them."
+        },
+        "benefits-section": {
+            "header": "We create enterprise web services and small business web solutions that set you apart from the competitors."
+        },
+        "benefits-content": {
+            "responsive": {
+                "h4": "Responsive",
+                "p": "Responsive web design is a modern need. We follow standards creating a mobile optimized website that converts."
+            },
+            "functional": {
+                "h4": "Functional",
+                "p": "Your site reflects your company and your brand. That’s why we deliver visually appealing, polished and professional user experience."
+            },
+            "scalable": {
+                "h4": "Scalable",
+                "p": "We create efficient infrastructure to deliver scalable web applications and solutions to meet your business demands."
+            },
+            "secure": {
+                "h4": "Secure",
+                "p": "To us, it is important that your website follows industry standards and security guidelines."
+            }
+        }
+    },
+
+
+    "branding": {
+        "services-main-description": "We make every experience people have with your business worth remembering. We build brands that can't be ignored. Brands that matter. Brands that make a lasting connection with your customers. Branding that sells",
+        "more": "learn more",
+        "demand-left-section": {
+            "header": "Branding that sells",
+            "paragraph": "The process of building brand awareness is complex and consists of many stages. One right element is not enough - it has to be a coherent concept that will enable your brand to create a sustainable bond with your customer."
+        },
+        "demand-list": {
+            "01": "Visual identification",
+            "02": "Product branding",
+            "03": "Brand strategy",
+            "04": "UI/UX Design"
+        },
+        "sentence-section-content": {
+            "header1": "In today’s ",
+            "header-span1": "dynamically changing",
+            "header2": " world, a company needs a ",
+            "header-span2": "fresh look",
+            "header3": " at its online presence.",
+            "paragraph1": "Visual identity, communication, voice, slogan - all these elements are essential to brand image. For them to emerge, we take our time to research and try out the different variants. Our branding strategy never comes out of nowhere. It's a result of thoughtful planning and hours of brainstorming sessions.",
+            "paragraph2": "The saturated online market doesn't like repetition. Branding should depend not on trends but a deep understanding of the company's audience, mission, and goals. We'll make sure that the logo, symbols, and iconography resonate with your existing and potential customers, creating bonds that stay."
+        },
+        "steps": {
+            "h2": "Simple and effective process",
+            "p": "A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.",
+            "arr": {
+                "discovery": "Discovery",
+                "planning": "Planning",
+                "design": "Design",
+                "development": "Implementation",
+                "launch": "Launch"
+            }
+        },
+        "benefits-section": {
+            "header": "Benefits",
+            "p": "A brand is not just a logo. A brand is a person’s feelings about a product, service, or organization. We make every effort to make your brand experience meaningful."
+        },
+        "benefits-content": {
+            "recognition": {
+                "h4": "Recognition",
+                "p": "The most important reason why branding is crucial to a company's success is that it is how a company gets recognized and written permanently in the minds of consumers."
+            },
+            "business": {
+                "h4": "Business Value",
+                "p": "A strongly established brand increases the value of a company, giving it more momentum. This makes it a more attractive investment opportunity because of its firmly established place in the market."
+            },
+            "trust": {
+                "h4": "Trust",
+                "p": "A professional appearance and well-designed branding will help a company build trust among consumers and partners. People are more likely to do business with a company that has a great-looking and professional image."
+            }
+        }
+    },
+
+
+    "visual": {
+        "services-main-description": "Visuals are at the center of online interactions. We make you stand out in a noisy media environment.",
+        "more": "learn more",
+        "demand-left-section": {
+            "header": "Visual on demand",
+            "paragraph": "Approximately 65 percent of the population are visual. We help you to stimulate people's mind through visual experience."
+        },
+        "demand-list": {
+            "01": "Photography",
+            "02": "Video",
+            "03": "Animated cartoons",
+            "04": "Animations/3D"
+        },
+        "sentence-section-content": {
+            "header": "65% of people are visual learners, 90% of information that comes to the brain is visual, and presentations with visual aides are 43% more persuasive, it makes sense to use content types which people have an innate psychological resonance with."
+        }
+    },
+
+    
+    "torbasmaku": {
+        "link": "View website",
+        "case-about": {
+            "h2": "About the client",
+            "p1": "The company we’ve worked with specializes in meal kit delivery based on previously prepared meal plans. It aims at clients that search for an affordable meal delivery option without compromising quality. Torba Smaku focuses on diet catering - with slimming, ketogenic, sports, and vegetarian variants included. ",
+            "p2": "Its offer proves that the prepped meal delivery services can be affordable and keep the highest quality in terms of taste, products, and nutritional value.",
+            "p3": "When launching this project, our main goals inculded",
+            "li1": "creating a consistent image of a leader withing the low-cost catering services category",
+            "li2": "launching sales and expanding it within a short span"
+        },
+        "case-work-subject": {
+            "h2": "What did we work on?",
+            "p1": "We’ve taken an active part in the brand development process from scratch, helping our client introduce the company to the market. In a few steps, which we’ll describe briefly below, we’ve created an online platform, visual identification, and marketing strategy, which was later implemented with satisfying results.",
+            "p2": "The first step was to create a platform for ordering personalized meal kit delivery services. Subsequently, we've made two video ads aimed at the YouTube campaigns to take off with the promotion in the most efficient way. At the same time, we’ve launched Google Ads and Facebook Ads campaigns, which have allowed us to gain new audience and increase the site traffic."
+        },
+        "case-work-project": {
+            "h3": "PROJECT CHARACTERISTIC",
+            "h2": "Challenges",
+            "p1": "Developing this project, we had to keep the specifics of the catering industry in mind.  Since it aims towards a personalization, the company’s offer had to be as customizable as possible. That’s why all the diet variants have at least five levels of caloric content, and the clients can personalize their orders during the purchase process.  At the same time, the competition in the diet catering sector is relatively high, regardless of the price range. To attract potential customers, an extended offer adjusted to different needs and diet restrictions is not enough. ",
+            "p2": "Thus, an intuitive website that catches the eye with its modern layout was our starting point, followed by a well-targeted marketing campaign.  Since it’s not that easy to stand out from the multitude of companies offering relatively similar catering services, we had to choose one distinguishing feature to focus on, which is, in a nutshell, „cheap but good” (with an emphasis on good!).",
+            "p3": " "
+        },
+        "case-work-structure": {
+            "h2": "Research and structure",
+            "p1": "During the research phase, we came up with a conclusion that the office workers dominate among the company’s target groups. Since they’re busy, they usually search for the fastest solutions. Thus, when designing the user journey, we’ve tried to reduce the order process to four simple steps. This way, the client can finalize the order in a minute or two. Through the website, the clients of Torba Smaku can access the client panel, where all their previous and current orders are stored. They can modify them, add special requests and manage their payments.",
+            "p2": " "
+        },
+        "case-work-branding": {
+            "h2": "Aesthetics",
+            "p1": "In the website’s color palette, pastel shades are dominating, with mint green and pale blue as the main ones. Green brings calmness and associations with nature and harmony, while blue evokes trust. However, we’ve left much space for white, going for a modern, transparent design that exposes the appetizing photographs of offered dishes. ",
+            "p2": "We’ve made them in minimalistic arrangements, keeping the shots simple to bring out the maximum potential of the meals. Each diet is illustrated with various photos to give the potential clients an exact idea of what they can expect. The readable, sans serif Work Sans and Poppins fonts are in perfect harmony with the design. The modern approach to UI design distinguishes Torba Smaku from other companies in this price range, as most of them still operate on quite old-school interfaces.",
+            "p3": " "
+        },
+        "case-work-development": {
+            "h2": "Website",
+            "p1": "Since most clients tend to order diet catering services online, a fully responsive, beautiful online platform was a must. We made sure that the website is intuitive on different devices, including smartphones which are taking over the online traffic (in 2021, they already constitute 54% of all global traffic on the Internet)."
+        },
+        "case-work-marketing": {
+            "h2": {
+                "marketing": "Marketing ",
+                "campaing": "campaing"
+            },
+            "p1": "Marketing campaign: The introduction of the new brand to the market could go unnoticed without a well-targeted brand promotion. Our client decided to bet on a YouTube campaign since it’s the easiest way to reach broad recognition within a short time. To reach out to clients through social media, we’ve used Facebook Ads, too. Google Ads campaign made up to the overall promotion, allowing us to access the target group directly and spark its interest. "
+        },
+        "case-work-visual": {
+            "h2": "Video ads",
+            "p1": "Our job was to create two video ads with the brand ambassador - Michał Wiśniewski, a known musician. Since he’s not related to the gastronomy industry anyhow, finding the common ground wasn’t easy. We came up with an idea of a musical kitchen. To create a commercial jingle, we’ve used the kitchen sounds, combining them with Michał’s vocal.",
+            "p2": " "
+        }
+    },
+
+
+    "case-data": {
+        "country": "Country",
+        "client": "Client",
+        "industry": "Industry",
+        "scope": "Scope of work"
+    },
+
+
+    "dropdown": {
+        "en": "English",
+        "pl": "Polish"
+    },
+
+
+    "menu": {
+        "home": "Home",
+        "services": "What we do",
+        "contact": "Contact us",
+        "lang": "Language",
+        "pl": "Polish",
+        "en": "English"
+    },
+
+
+    "footer": {
+        "contact": "Contact us",
+        "newsletter": "Join our community and get our best insights, tips and strategies delivered straight to your inbox.",
+        "email": {
+            "placeholder": "Email address",
+            "message": "That’s great!\nWe’ll keep you updated!"
+        },
+        "social": "Follow us on social media",
+        "serivce": "Service",
+        "about": {
+            "h3": "About",
+            "home": "Home"
+        },
+        "support": {
+            "h3": "Support",
+            "policy": "Privacy policy",
+            "cookie": "Cookie policy"
+        }
+    },
+
+
+
+    "404": {
+        "text": "OOOPS… WE COULDN’T FIND THE PAGE YOUR LOOKING FOR.",
+        "link": "VISIT HOMEPAGE"
+    }
+}

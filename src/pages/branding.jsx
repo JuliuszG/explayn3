@@ -41,6 +41,7 @@ import {
   BenefitsSection,
   BenefitsContent,
 } from '../components/styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Branding = () => {
   const isMobile = useMediaQuery({
@@ -86,10 +87,7 @@ const Branding = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
               >
-                We make every experience people have with your business worth
-                remembering. We build brands that can't be ignored. Brands that
-                matter. Brands that make a lasting connection with your customers.
-                Branding that sells
+                {useIntl().formatMessage({ id: "branding.services-main-description" })}
               </ServicesMainDescription>
             </ServicesContent>
             <ServicesImgContainer>
@@ -97,7 +95,7 @@ const Branding = () => {
             </ServicesImgContainer>
             <ServicesScrollLink to={'services-section'} smooth duration={500}>
               <div className="content">
-                <div className="title">learn more</div>
+                <div className="title">{useIntl().formatMessage({ id: "branding.more" })}</div>
                 <img src={More} alt="scroll down" />
               </div>
             </ServicesScrollLink>
@@ -106,31 +104,28 @@ const Branding = () => {
             <ServicesSection id="services-section">
               <DemandLeftSection ref={ref2}>
                 <AnimatedHeader inView={inView2}>
-                  Branding that sells
+                  {useIntl().formatMessage({ id: "branding.demand-left-section.header" })}
                 </AnimatedHeader>
                 <AnimatedParagraph inView={inView2}>
-                  The process of building brand awareness is complex and consists of
-                  many stages. One right element is not enough - it has to be a
-                  coherent concept that will enable your brand to create a
-                  sustainable bond with your customer.
+                  {useIntl().formatMessage({ id: "branding.demand-left-section.paragraph" })}
                 </AnimatedParagraph>
               </DemandLeftSection>
               <DemandList>
                 <li>
                   <span>01.</span>
-                  Visual identification
+                  {useIntl().formatMessage({ id: "branding.demand-list.01" })}
                 </li>
                 <li>
                   <span>02.</span>
-                  Product branding
+                  {useIntl().formatMessage({ id: "branding.demand-list.02" })}
                 </li>
                 <li>
                   <span>03.</span>
-                  Brand strategy
+                  {useIntl().formatMessage({ id: "branding.demand-list.03" })}
                 </li>
                 <li>
                   <span>04.</span>
-                  UI/UX Design
+                  {useIntl().formatMessage({ id: "branding.demand-list.04" })}
                 </li>
               </DemandList>
             </ServicesSection>
@@ -139,55 +134,43 @@ const Branding = () => {
           <SentenceSection>
             <SentenceSectionContent section={'branding'} ref={ref3}>
               <AnimatedHeader inView={inView3}>
-                In today’s <span>dynamically changing</span> world, a company
-                needs a <span>fresh look</span> at its online presence.
+                {useIntl().formatMessage({ id: "branding.sentence-section-content.header1" })}
+                <span>{useIntl().formatMessage({ id: "branding.sentence-section-content.header-span1" })}</span>
+                {useIntl().formatMessage({ id: "branding.sentence-section-content.header2" })}<span>{useIntl().formatMessage({ id: "branding.sentence-section-content.header-span2" })}</span>
+                {useIntl().formatMessage({ id: "branding.sentence-section-content.header3" })}
               </AnimatedHeader>
               <div className="decoration"></div>
               <div className="text-cnt">
                 <AnimatedParagraph inView={inView3}>
-                  Visual identity, communication, voice, slogan - all these
-                  elements are essential to brand image. For them to emerge, we
-                  take our time to research and try out the different variants.
-                  Our branding strategy never comes out of nowhere. It's a result
-                  of thoughtful planning and hours of brainstorming sessions.
+                  {useIntl().formatMessage({ id: "branding.sentence-section-content.paragraph1" })}
                 </AnimatedParagraph>
                 <AnimatedParagraph inView={inView3}>
-                  The saturated online market doesn't like repetition. Branding
-                  should depend not on trends but a deep understanding of the
-                  company's audience, mission, and goals. We'll make sure that the
-                  logo, symbols, and iconography resonate with your existing and
-                  potential customers, creating bonds that stay.
+                  {useIntl().formatMessage({ id: "branding.sentence-section-content.paragraph2" })}
                 </AnimatedParagraph>
               </div>
             </SentenceSectionContent>
           </SentenceSection>
           <BrandingSteps
             arr={[
-              { img: Discovery, text: 'Discovery' },
-              { img: Planning, text: 'Planning' },
-              { img: Design, text: 'Design' },
-              { img: DevelopmentStepIcon, text: 'Implementation' },
-              { img: Launch, text: 'Launch' },
+              { img: Discovery, text: useIntl().formatMessage({ id: "branding.steps.arr.discovery" }) },
+              { img: Planning, text: useIntl().formatMessage({ id: "branding.steps.arr.planning" }) },
+              { img: Design, text: useIntl().formatMessage({ id: "branding.steps.arr.design" }) },
+              { img: DevelopmentStepIcon, text: useIntl().formatMessage({ id: "branding.steps.arr.development" }) },
+              { img: Launch, text: useIntl().formatMessage({ id: "branding.steps.arr.launch" }) },
             ]}
           />
           <BenefitsContentWrapper>
             <BenefitsSection ref={ref4}>
               {isMobile ? (
                 <>
-                  <h2>Benefits</h2>
-                  <p>
-                    A brand is not just a logo. A brand is a person’s feelings about
-                    a product, service, or organization. We make every effort to
-                    make your brand experience meaningful.
-                  </p>
+                  <h2>{useIntl().formatMessage({ id: "branding.benefits-section.header" })}</h2>
+                  <p>{useIntl().formatMessage({ id: "branding.benefits-section.p" })}</p>
                 </>
               ) : (
                 <>
-                  <AnimatedHeader inView={inView4}>Benefits</AnimatedHeader>
+                  <AnimatedHeader inView={inView4}>{useIntl().formatMessage({ id: "branding.benefits-section.header" })}</AnimatedHeader>
                   <AnimatedParagraph inView={inView4}>
-                    A brand is not just a logo. A brand is a person’s feelings about
-                    a product, service, or organization. We make every effort to
-                    make your brand experience meaningful.
+                    {useIntl().formatMessage({ id: "branding.benefits-section.p" })}
                   </AnimatedParagraph>
                 </>
               )}
@@ -197,12 +180,8 @@ const Branding = () => {
                     <img src={Responsive} alt="responsive icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Recognition</h4>
-                    <p>
-                      The most important reason why branding is crucial to a
-                      company's success is that it is how a company gets recognized
-                      and written permanently in the minds of consumers.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "branding.benefits-content.recognition.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "branding.benefits-content.recognition.p" })}</p>
                   </div>
                 </div>
                 <div className="item">
@@ -210,13 +189,8 @@ const Branding = () => {
                     <img src={Functional} alt="Functional icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Business Value</h4>
-                    <p>
-                      A strongly established brand increases the value of a company,
-                      giving it more momentum. This makes it a more attractive
-                      investment opportunity because of its firmly established place
-                      in the market.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "branding.benefits-content.business.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "branding.benefits-content.business.p" })}</p>
                   </div>
                 </div>
                 <div className="item">
@@ -224,13 +198,8 @@ const Branding = () => {
                     <img src={Scalable} alt="Scalable icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Trust</h4>
-                    <p>
-                      A professional appearance and well-designed branding will help
-                      a company build trust among consumers and partners. People are
-                      more likely to do business with a company that has a
-                      great-looking and professional image.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "branding.benefits-content.trust.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "branding.benefits-content.trust.p" })}</p>
                   </div>
                 </div>
               </BenefitsContent>

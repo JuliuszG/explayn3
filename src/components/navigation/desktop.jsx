@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import MenuIcon from './menuIcon';
 import LogoImg from './logoImg';
+import Dropdown from './dropdown';
 import ContactUs from './contactUs';
 import MenuDesktop from './nav2/menuDesktop';
 import { AnimatePresence } from 'framer-motion';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { useLocation } from '@reach/router';
 import { DesktopNav, BlogTitle } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Desktop = ({ darkMode, mainPage }) => {
   const location = useLocation();
   const url = location.pathname;
   const [menuIsOn, setMenuIsOn] = useState(false);
   const handleToggle = () => setMenuIsOn(prevState => !prevState);
+  const locale = useIntl().locale === 'pl' ? useIntl().formatMessage({ id: "dropdown.pl" })
+  : useIntl().formatMessage({ id: "dropdown.en" });
+  const [selected, setSelected] = useState(locale);
   const renderMenu = () => {
     if (menuIsOn) {
       return <MenuDesktop toggle={handleToggle} />;
@@ -50,7 +55,10 @@ const Desktop = ({ darkMode, mainPage }) => {
           )}
         </Link>
       </div>
-      {url !== '/ads' && <ContactUs mainPage={mainPage} darkMode={darkMode} />}
+      <div style={{display: "flex", gap: "20px"}}>
+        <Dropdown selected={selected} setSelected={setSelected}/>
+        {url !== '/ads' && <ContactUs mainPage={mainPage} darkMode={darkMode} />}
+      </div>
       <div style={{ position: 'absolute' }}>
         <AnimatePresence>{renderMenu()}</AnimatePresence>
       </div>

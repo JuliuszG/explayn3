@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'gatsby';
+import { Link, useIntl, changeLocale } from 'gatsby-plugin-intl';
 import { Link as ScLink } from 'react-scroll';
 import {
   Exit,
@@ -106,7 +106,7 @@ const MenuMobile = ({ toggle }) => {
           <motion.div variants={itemAnimation} className="item">
             <div className="item-link">
               <div className="number">01.</div>
-              <Link to="/">Home</Link>
+              <Link to="/">{useIntl().formatMessage({ id: "menu.home"})}</Link>
             </div>
           </motion.div>
           <motion.div
@@ -116,7 +116,7 @@ const MenuMobile = ({ toggle }) => {
           >
             <div className="item-link">
               <div className="number">02.</div>
-              <div>What we do</div>
+              <div>{useIntl().formatMessage({ id: "menu.services"})}</div>
             </div>
             {subMenuIsOn && renderSubMenu()}
           </motion.div>
@@ -147,18 +147,21 @@ const MenuMobile = ({ toggle }) => {
           </motion.div>
         </MenuLinksMobile>
         <MobileMenuFooter>
-          <h3>Contact us</h3>
-          <a href="tel:+48881772030">+48 881 772 030</a>
-          <a href="mailto:we@explayn.it">we@explayn.it</a>
-          <div className="socials">
-            <a href="https://www.facebook.com/explayn.it">Facebook</a>
-            <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">
-              Youtube
-            </a>
-            <a href="https://www.instagram.com/explayn.it/">Instagram</a>
-            <a href="https://www.linkedin.com/company/explayn-digital-agency">
-              Linkedin
-            </a>
+          <div className='contact'>
+            <h3>{useIntl().formatMessage({ id: "menu.contact" })}</h3>
+            <a href="tel:+48881772030">+48 881 772 030</a>
+            <a href="mailto:we@explayn.it">we@explayn.it</a>
+          </div>
+          <div>
+            <h3>{useIntl().formatMessage({ id: "menu.lang" })}</h3>
+            <div className="languages">
+              <span onClick={() => {changeLocale('pl')}}>
+                {useIntl().formatMessage({ id: "menu.pl" })}
+              </span>
+              <span onClick={() => {changeLocale('en')}}>
+                {useIntl().formatMessage({ id: "menu.en" })}
+              </span>
+            </div>
           </div>
         </MobileMenuFooter>
       </div>

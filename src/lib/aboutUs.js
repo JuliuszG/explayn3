@@ -11,7 +11,7 @@ import EcommerceHover from '../images/about/hover/4.svg';
 import EventsHover from '../images/about/hover/5.svg';
 import MarketingHover from '../images/about/hover/6.svg';
 
-export const items = [
+export const itemsEn = [
   {
     image: [
       {
@@ -81,6 +81,124 @@ export const items = [
     name: 'Marketing',
     list: [
       'Marketing strategy',
+      'Paid Advertising',
+      'Social Media Management',
+      'Marketing Automation',
+    ],
+    url: '/marketing',
+  },
+  {
+    image: [
+      {
+        src: EcommerceImage,
+        alt: 'eCommerce',
+      },
+      {
+        src: EcommerceHover,
+        alt: 'eCommerce',
+      },
+    ],
+    name: 'eCommerce',
+    list: [
+      'Online sales strategies',
+      'Conversion enhancements',
+      'Sales optimization',
+      'Reports and analytics',
+    ],
+    url: '/ecommerce',
+  },
+  {
+    image: [
+      {
+        src: EventsImage,
+        alt: 'Events',
+      },
+      {
+        src: EventsHover,
+        alt: 'Events',
+      },
+    ],
+    name: 'Events',
+    list: [
+      'Streaming Platform',
+      'Event Management',
+      'Marketing & Communication',
+      'Audient',
+    ],
+    url: '/events',
+  },
+];
+
+export const itemsPl = [
+  {
+    image: [
+      {
+        src: DevelopmentImage,
+        alt: 'Development',
+      },
+      {
+        src: DevelopmentHover,
+        alt: 'Development',
+      },
+    ],
+    name: 'Development',
+    list: [
+      'Strony internetowe',
+      'Sklepy internetowe',
+      'Aplikacje iOS & Android ',
+      'Systemy dedykowane',
+    ],
+    url: '/development',
+  },
+  {
+    image: [
+      {
+        src: VisualImage,
+        alt: 'Visual',
+      },
+      {
+        src: VisualHover,
+        alt: 'Visual',
+      },
+    ],
+    name: 'Visual',
+    list: ['Fotografia', 'Video', 'Animowane spoty', 'Animacje/3D'],
+    url: '/visual',
+  },
+  {
+    image: [
+      {
+        src: BrandingImage,
+        alt: 'Branding',
+      },
+      {
+        src: BrandingHover,
+        alt: 'Branding',
+      },
+    ],
+    name: 'Branding',
+    list: [
+      'Identyfikacja wizualna',
+      'Branding produktowy',
+      'Strategie marki',
+      'UI/UX Design',
+    ],
+    url: '/branding',
+  },
+  {
+    image: [
+      {
+        src: MarketingImage,
+        alt: 'Marketing',
+      },
+      {
+        src: MarketingHover,
+        alt: 'Marketing',
+      },
+    ],
+    name: 'Marketing',
+    list: [
+      'Strategia marketingowa',
       'Paid Advertising',
       'Social Media Management',
       'Marketing Automation',

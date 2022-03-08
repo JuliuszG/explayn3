@@ -1,0 +1,310 @@
+{
+    "landing": {
+        "h1": {
+            "new": "Nowe ",
+            "ways-to": " sposoby na",
+            "develop": "rozwój ",
+            "your": "Twojej",
+            "brand": "marki."
+        },
+        "p": "Twój zewnętrzny dział rozwoju zorientowany na cele biznesowe Twojej firmy.",
+        "more": "zobacz więcej"
+    },
+
+
+    "about-us": {
+        "more": "Pokaż więcej",
+        "motion-h2": "Pomagamy stawić czoła Twoim wyzwaniom, budując marki zorientowane na rezultaty",
+        "motion-p": "Budujemy wyjątkowe marki, od strategii, przez web development po digital marketing"
+    },
+
+
+    "marketing": {
+        "services-main-description": "Funkcjonujemy w czasach, w któych żadna firma nie może pozwolić sobie na brak marketingu. Rozwijanie biznesu jest trudne, a marketing stał się tak obszernym tematem, że nie sposób go opanować bez grupy specjalistów. A co jeśli powiemy Ci, że możesz mieć dostęp do najlepszych specjalistów i wiedzy bez długich rekrutacji i szkoleń?",
+        "more": "zobacz więcej",
+        "demand-left-section": {
+            "header": "Generowanie popytu.",
+            "paragraph": "Kompleksowe działania marketingowe wymagają szerokiego przekroju specjalistycznych kompetencji i dostępu do odpowiednich narzędzi, a utrzymywanie wewnętrznego działu marketingu – niemałych nakładów finansowych. Zwiększona efektywność pracy, niższe koszty i skuteczność działań marketingowych potwierdzona wynikami – to tylko niektóre z korzyści, jakie gwarantuje współpraca z Explayn."
+        },
+        "demand-list": {
+            "01": "Strategia Marketingowa",
+            "02": "Reklama płatna",
+            "03": "Social Media Management",
+            "04": "Marketing Automation"
+        },
+        "sentence-section-content": {
+            "header1": "Skupiamy się na działaniach przynoszących",
+            "header-span": "zyski.",
+            "header2": " ",
+            "paragraph1": "Przyciągnięcie klienta to dopiero początek. Stworzenie długotrwałej relacji opartej na zaufaniu jest kluczem do osiągnięcia sukcesu. Testujemy różne rozwiązania i wyłaniamy te, które przynoszą największe korzyści dla Twojego biznesu.",
+            "paragraph2": "Żeby Twoja firma mogła rosnąć, potrzebujesz kompletnego systemu generowania popytu, który w pełni zestroi wszystkie kanały komunikacji i będzie cyklicznie karmił Twój biznes nowymi klientami."
+        },
+        "marketing-steps": {
+            "h2": "Przejrzysty i skuteczny proces",
+            "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Koniec z uczeniem się na błędach. Czas na przewidywany wzrost. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bieżąco z przebiegiem prac.",
+            "arr": {
+                "discovery": "Odkrywamy",
+                "planning": "Planujemy",
+                "design": "Projektujemy",
+                "development": "Wdrażamy",
+                "launch": "Uruchamiamy"
+            }
+        },
+        "benefits-section": {
+            "h2": "Jak pracujemy?",
+            "p": "Wielu przedsiębiorców próbuje poprowadzić działania marketingowe na własną rękę, co kończy się porażką (lub siwymi włosami). Stosujemy sprawdzone praktyki, aby dostarczać jedynie przetestowane rozwiązania, które przyprowadzą do Ciebie nowych klientów."
+        },
+        "benefits-content": {
+            "omnichannel": {
+                "h4": "Omnichannel ",
+                "p": "Era marketingu podzielonego na kanały się skończyła. Teraz liczą się te firmy, które działają w modelu omnichannel, gdzie wszystkie kanały spójnie ze sobą współpracują – począwszy od social media po kampanie mailingowe i reklamy w sieci."
+            },
+            "relevant": {
+                "h4": "Zorientowani na cele biznesowe",
+                "p": "Nie jesteśmy zwykłą agencją, która “ustawi Ci reklamy”. Jesteśmy partnerem Twojego rozwoju, który chce poznać Twój biznes od podszewki, aby uszyć działania na miare potrzeb."
+            },
+            "insightful": {
+                "h4": "Kompleksowe doradztwo",
+                "p": "Aby Twój biznes mógł generować sprzedaż, potrzebujesz przemyślanych i świadomych rozwiązań. Wybieramy dla Ciebie najskuteczniejsze działania dopasowane do potrzeb Twojego biznesu."
+            }
+        }
+    },
+
+
+    "development": {
+        "services-main-description": "Team projektantów i programistów, któremu niestraszne największe wyzwania biznesowe i techniczne.",
+        "more": "zobacz więcej",
+        "demand-left-section": {
+            "header": "Twój zewnętrzny dział rozwoju ",
+            "paragraph": "Strona to często pierwszy i najważniejszy punkt styczny między klientem a marką. To nie tylko URL, ale też kluczowy element Twojego biznesu i marketingowej strategii. Pomożemy Ci wykreować user experience, który sprawi, że użytkownicy będą chcieli wracać."
+        },
+        "demand-list": {
+            "01": "Strony internetowe",
+            "02": "Sklepy online",
+            "03": "Aplikacje iOS & Android",
+            "04": "Systemy dedykowane"
+        },
+        "sentence-section-content": {
+            "header1": "W ",
+            "header-span1": "dynamicznie zmieniającym się",
+            "header2": " świecie, marki potrzebują ",
+            "header-span2": "świeżego spojrzenia",
+            "header3": " na swoje działania w internecie.",
+            "paragraph1": "Nie ma dwóch takich samych biznesów. Twoja firma musi wyróżniać się w sieci, żeby nie zgubić się w szumie informacji. Biorąc pod uwagę ilość możliwości na współczesnym rynku, potrzebujesz kogoś, kto dobierze odpowiednie narzędzia i zrealizuje Twoją wizję z dbałością o każdy szczegół.",
+            "paragraph2": "Nie ważne, czym się zajmujesz, nasi specjaliści pomogą Ci wykreować doświadczenie, które wzmacniają więź z klientem."
+        },
+        "steps": {
+            "h2": "Prosty i skuteczny proces ",
+            "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Koniec z uczeniem się na błedach. Czas na przewidywalny wzrost. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bierząco z przebiegiem prac.",
+            "arr": {
+                "discovery": "Discovery",
+                "planning": "Planning",
+                "design": "Design",
+                "development": "Development",
+                "launch": "Launch"
+            }
+        },
+        "technology-section": {
+            "header": "Pomagamy wybrać najlepsze rozwiązanie dla Twojego biznesu",
+            "paragraph": "Jako, że udało nam sie realizować ponad 50 projektów, mamy zestaw ulubionych technologii, z którymi chętnie pracujemy. Podziel się z nami swoją wizją i celami, a my dobierzemy narzędzia, które pomogą Ci je osiągnąć."
+        },
+        "benefits-section": {
+            "header": "Tworzymy rozwiązania webowe dla małych, dużych i średnich firm, które pozostawiają w tyle konkurencję."
+        },
+        "benefits-content": {
+            "responsive": {
+                "h4": "Responsywne",
+                "p": "Responsywny web design jest obecnie koniecznością. W Explayn tworzymy konwertujące strony zoptymalizowane pod różne interfejsy, stosując się do rynkowych standardów. Twoja witryna musi wyglądać równie dobrze na szerokim monitorze komputera, laptopie czy ekranie telefonu."
+            },
+            "functional": {
+                "h4": "Funkcjonalne",
+                "p": "Twoja strona jest odzwierciedleniem Twojej marki. Aby to podkreślić, dopracowujemy jej user experience i wizualne aspekty ze szczególną dbałością o szczegóły."
+            },
+            "scalable": {
+                "h4": "Skalowalne",
+                "p": "Tworzymy wydajną infrastrukturę, aby sprostać Twoim biznesowym oczekiwaniom, dostarczając skalowalne aplikacje webowe. "
+            },
+            "secure": {
+                "h4": "Bezpieczne",
+                "p": "Upewniamy się, że Twoja strona spełnia standardy branżowe i wytyczne dotyczące bezpieczeństwa."
+            }
+        }
+    },
+
+
+    "branding": {
+        "services-main-description": "Dbamy o to, żeby doświadczenia klientów z Twoją firmą były warte zapamiętania. Budujemy marki, obok których nie da się przejsc obojętnie; marki, które coś znaczą i które budują długotrwałe relacje ze swoimi klientami.",
+        "more": "zobacz więcej",
+        "demand-left-section": {
+            "header": "Identyfikacja, która zapada w pamięć",
+            "paragraph": "Proces budowania świadomości marki jest skomplikowany i składa się z wielu etapów. Jeden dopracowany element to za mało – trzeba stworzyć spójny koncept, który pozwoli Twojej marce stworzyć silną więź z odbiorcami."
+        },
+        "demand-list": {
+            "01": "Identyfikacja wizualna",
+            "02": "Branding produktowy",
+            "03": "Strategia marki",
+            "04": "UI/UX Design"
+        },
+        "sentence-section-content": {
+            "header1": "W ",
+            "header-span1": "świecie informacji",
+            "header2": ", które napierają na konsumentów z każdej strony, potrzebujesz się ",
+            "header-span2": "wyróżnić",
+            "header3": ".",
+            "paragraph1": "Identyfikacja wizualna, komunikacja, głos marki, slogan – wszystkie te elementy mają kluczowe znaczenie dla wizerunku marki. Aby je stworzyć, poświęcamy sporo czasu na research i wypracowania konceptu. Nasza strategia brandingowa nie powstaje z niczego – jest skutkiem przemyślanego planowania i wielogodzinnych burzy mózgów.",
+            "paragraph2": "Przesycony rynek nie lubi powtarzalności. Identyfikacja Twojeg biznesu nie powinna opierać się na trendach, ale na głębokim zrozumieniu publiczności, misji i celów marki. Zadbamy o to, aby wszystkie elementy marki rezonowały z Twoimi klientami, kreując silne więzi."
+        },
+        "steps": {
+            "h2": "Simple and effective process",
+            "p": "A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.",
+            "arr": {
+                "discovery": "Odkrywamy",
+                "planning": "Planujemy",
+                "design": "Projektujemy",
+                "development": "Wdrażamy",
+                "launch": "Uruchamiamy"
+            }
+        },
+        "benefits-section": {
+            "header": "Korzyści",
+            "p": "Marka to nie tylko logo, ale przede wszystkim uczucia, jakie wzbudza u odbiorców. Dokładamy wszelkich starań, aby wszystkie punkty styku były ekscytujące."
+        },
+        "benefits-content": {
+            "recognition": {
+                "h4": "Rozpoznawalność",
+                "p": "To oczywiste, że profesjonalnie wyglądające marki przyciągają klientów. Przemyślany branding jest podstawą do budowania relacji i wpłynie na pozytywne zakotwiczenie marki w umysłach odbiorców."
+            },
+            "business": {
+                "h4": "Wyróżnienie na tle konkurencji",
+                "p": "Czy nie masz wrażenia, że większość firm wyróżnia się tylko nazwą i logiem? Bo to prawda! Jednak marka to nie tylko nazwa i logo. Przemyślana identyfikacja budząca pożądane emocje pozwoli skutecznie odróżnić się od niemych marek konkurencji."
+            },
+            "trust": {
+                "h4": "Zwiększenie zaufania",
+                "p": "Spójny wizerunek pomoże firmie zbudować zaufanie wśród konsumentów i partnerów, co z kolei przełoży się na skrócenie procesu zakupowego i łatość w nawiązywaniu współpracy."
+            }
+        }
+    },
+
+
+    "visual": {
+        "services-main-description": "Elementy wizualne stanowią centrum online’owych interakcji. Pomożemy Ci wyróżnić się w natłoku wizualnych komunikatów.",
+        "more": "zobacz więcej",
+        "demand-left-section": {
+            "header": "Kreacje reklamowe",
+            "paragraph": "Jeśli chcesz stymulować wyobraźnię odbiorców za pośrednictwem wizualnych doświadczeń, możemy Ci w tym pomóc, wykorzystując różne środki."
+        },
+        "demand-list": {
+            "01": "Fotografia",
+            "02": "Video",
+            "03": "Animowane spoty",
+            "04": "Animacje/3D"
+        },
+        "sentence-section-content": {
+            "header": "Około 65% populacji to wzrokowcy, a 90% informacji docierających do mózgu ma formę wizualną. Przemyślane wykorzystanie wizualnego contentu zwiększa szansę na konwersję."
+        }
+    },
+
+    
+    "torbasmaku": {
+        "link": "Zobacz stronę",
+        "case-about": {
+            "h2": "O kliencie",
+            "p1": "Firma, z którą pracowaliśmy, specjalizuje się w dostarczaniu zestawów posiłków opartych na wcześniej przygotowanych planach żywieniowych. Jej oferta skierowana jest do klientów, którzy poszukują przystępnej cenowo opcji dostawy posiłków bez kompromisów jakościowych. Torba Smaku koncentruje się na cateringu dietetycznym - z wariantami: odchudzającym, ketogenicznym, sportowym i wegetariańskim. Swoją ofertą udowadnia, że usługa dostawy gotowych posiłków może być przystępna cenowo, przy zachowaniu najwyższej jakości pod względem smaku, produktów i wartości odżywczych. ",
+            "p2": " ",
+            "p3": "Przy uruchamianiu tego projektu, naszymi głównymi celami były m.in:",
+            "li1": "stworzenie spójnego wizerunku lidera w kategorii tanich usług cateringowych",
+            "li2": "uruchomienie sprzedaży i jej rozwój w krótkim czasie."
+        },
+        "case-work-subject": {
+            "h2": "Nad czym pracowaliśmy?",
+            "p1": "Wzięliśmy aktywny udział w procesie budowania marki od podstaw, pomagając naszemu klientowi wprowadzić firmę na rynek. W kilku krokach, które pokrótce opiszemy poniżej, stworzyliśmy platformę internetową, identyfikację wizualną oraz strategię marketingową, która następnie została wdrożona z zadowalającym skutkiem.",
+            "p2": "Pierwszym krokiem było stworzenie platformy do zamawiania spersonalizowanych zestawów posiłków. Następnie stworzyliśmy dwie reklamy wideo skierowane do kampanii na YouTube, aby jak najefektywniej wystartować z promocją. Równocześnie uruchomiliśmy kampanię świadomościową Google Ads i Facebook Ads, które pozwoliły nam pozyskać nowych odbiorców i zwiększyć ruch na stronie."
+        },
+        "case-work-project": {
+            "h3": "CHARAKTERYSTYKA PROJEKTU",
+            "h2": "Wyzwania",
+            "p1": "Tworząc ten projekt, musieliśmy pamiętać o specyfice branży gastronomicznej. Oferta firmy musiała być jak najbardziej dostosowana do potrzeb użytkowników. Dlatego wszystkie warianty diet posiadają co najmniej pięć poziomów kaloryczności, a klienci mogą personalizować swoje zamówienia w trakcie procesu zakupowego. ",
+            "p2": "Jednocześnie konkurencja w sektorze cateringu dietetycznego jest stosunkowo duża, niezależnie od przedziału cenowego. Aby przyciągnąć potencjalnych klientów, nie wystarczy rozbudowana oferta dostosowana do różnych potrzeb i ograniczeń dietetycznych. Dlatego punktem wyjścia była intuicyjna, przyciągająca wzrok nowoczesną szatą graficzną strona internetowa, a następnie odpowiednio ukierunkowana kampania marketingowa. ",
+            "p3": "Ponieważ nie tak łatwo jest wyróżnić się spośród wielu firm oferujących stosunkowo podobne usługi cateringowe, musieliśmy wybrać jeden wyróżnik, który w skrócie brzmi: \"tanio, ale dobrze\" (z naciskiem na dobrze!)."
+        },
+        "case-work-structure": {
+            "h2": "Struktura",
+            "p1": "Podczas fazy badawczej doszliśmy do wniosku, że wśród grup docelowych firmy dominują pracownicy biurowi. Ponieważ są zabiegani, zazwyczaj szukają najszybszych rozwiązań. Dlatego projektując user journey, staraliśmy się sprowadzić proces zamówienia do czterech prostych kroków. Dzięki temu klient może sfinalizować zamówienie w ciągu minuty lub dwóch. ",
+            "p2": "Za pośrednictwem strony internetowej klienci Torby Smaku mają dostęp do panelu klienta, w którym przechowywane są wszystkie ich poprzednie i aktualne zamówienia. Mogą je modyfikować, dodawać specjalne życzenia i zarządzać płatnościami."
+        },
+        "case-work-branding": {
+            "h2": "Estetyka",
+            "p1": "W palecie kolorystycznej serwisu dominują odcienie pastelowe, z miętową zielenią i bladym błękitem na czele. Zieleń przynosi spokój oraz skojarzenia z naturą i harmonią, a błękit budzi zaufanie. ",
+            "p2": "Dużo miejsca zostawiliśmy jednak bieli, stawiając na nowoczesny, przejrzysty design, który eksponuje apetyczne zdjęcia oferowanych dań. Wykonaliśmy je w minimalistycznych aranżacjach, zachowując prostotę ujęć, aby wydobyć maksymalny potencjał potraw. Każda dieta jest ilustrowana różnymi zdjęciami, aby dać potencjalnym klientom dokładne wyobrażenie o tym, czego mogą się spodziewać. Z projektem doskonale współgrają czytelne, bezszeryfowe czcionki. ",
+            "p3": "Nowoczesne podejście do projektowania UI wyróżnia Torbę Smaku na tle innych firm z tego przedziału cenowego, gdyż większość z nich operuje jeszcze na dość przestarzałych interfejsach."
+        },
+        "case-work-development": {
+            "h2": "Strona internetowa",
+            "p1": "Ponieważ większość klientów zamawia usługi cateringu dietetycznego online, w pełni responsywna, przykuwająca wzrok platforma online była koniecznością. Zadbaliśmy o to, aby strona była intuicyjna na różnych urządzeniach, w tym na smartfonach, które przejmują ruch w sieci (w 2021 roku będą stanowić już 54% całego globalnego ruchu w Internecie)."
+        },
+        "case-work-marketing": {
+            "h2": {
+                "marketing": "Kampania ",
+                "campaing": "marketingowa"
+            },
+            "p1": "Wprowadzenie nowej marki na rynek mogłoby pozostać niezauważone bez dobrze ukierunkowanej promocji marki. Nasz klient zdecydował się postawić na kampanię w YouTube, ponieważ jest to efektywny sposób na osiągnięcie szerokiej rozpoznawalności w krótkim czasie. Aby dotrzeć do klientów poprzez media społecznościowe, wykorzystaliśmy również Facebook Ads. Dobranie odpowiednich grup docelowych i remarketing pozwoliły nam na zwiększenie ROAS o 100%. Kampania Google Ads stanowiła dopełnienie całości promocji, pozwalając nam na bezpośrednie dotarcie do grupy docelowej zainteresowanej dietą pudełkową. "
+        },
+        "case-work-visual": {
+            "h2": "Reklamy wideo",
+            "p1": "Naszym zadaniem było stworzenie dwóch reklam wideo z ambasadorem marki - Michałem Wiśniewskim, znanym muzykiem. Ponieważ nie jest on związany z branżą gastronomiczną, znalezienie wspólnej płaszczyzny porozumienia nie było łatwe. Wpadliśmy na pomysł muzycznej kuchni. Do stworzenia jingla reklamowego wykorzystaliśmy kuchenne dźwięki, łącząc je z wokalem Michała.",
+            "p2": "Niech nasza praca mówi sama za siebie. Zobacz projekty, nad którymi ostatnio pracowaliśmy."
+        }
+    },
+
+
+    "case-data": {
+        "country": "Kraj",
+        "client": "Klient",
+        "industry": "Branża",
+        "scope": "Zakres prac"
+    },
+
+
+    "dropdown": {
+        "en": "Angielski",
+        "pl": "Polski"
+    },
+
+
+    "menu": {
+        "home": "Strona główna",
+        "services": "Usługi",
+        "contact": "Kontakt",
+        "lang": "Język",
+        "pl": "Polski",
+        "en": "Angielski"
+    },
+
+
+    "footer": {
+        "contact": "Kontakt",
+        "newsletter": "Dołącz do społeczności Explayn i otrzymuj\nnajlepsze wskazkówki.",
+        "email": {
+            "placeholder": "Adres email",
+            "message": "Dziękujemy za dodanie się do Explaynlettera.\nPozostajemy w kontakcie!"
+        },
+        "social": "Social media",
+        "serivce": "Usługi",
+        "about": {
+            "h3": "O nas",
+            "home": "Strona główna"
+        },
+        "support": {
+            "h3": "Informacje",
+            "policy": "Polityka prywatności",
+            "cookie": "Ciasteczka"
+        }
+    },
+
+
+
+    "404": {
+        "text": "NIE UDAŁO SIĘ ODNALEŹĆ STRONY, KTÓREJ SZUKASZ",
+        "link": "STRONA GŁÓWNA"
+    }
+}

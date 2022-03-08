@@ -55,6 +55,7 @@ import {
   BenefitsContent,
   TechnologySection,
 } from '../components/styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Development = () => {
   const isMobile = useMediaQuery({
@@ -100,8 +101,7 @@ const Development = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
               >
-                Full-stack web development team capable of facing modern technical
-                and business challenges.
+                {useIntl().formatMessage({ id: "development.services-main-description" })}
               </ServicesMainDescription>
             </ServicesContent>
             <ServicesImgContainer>
@@ -109,7 +109,7 @@ const Development = () => {
             </ServicesImgContainer>
             <ServicesScrollLink to={'services-section'} smooth duration={500}>
               <div className="content">
-                <div className="title">learn more</div>
+                <div className="title">{useIntl().formatMessage({ id: "development.more" })}</div>
                 <img src={More} alt="scroll down" />
               </div>
             </ServicesScrollLink>
@@ -118,29 +118,28 @@ const Development = () => {
             <ServicesSection id="services-section">
               <DemandLeftSection ref={ref2}>
                 <AnimatedHeader inView={inView2}>
-                  Development on demand
+                  {useIntl().formatMessage({ id: "development.demand-left-section.header" })}
                 </AnimatedHeader>
                 <AnimatedParagraph inView={inView2}>
-                  Build modern applications that help you stay on top of the game.
-                  We create an alluring user experience that keeps them coming back.
+                  {useIntl().formatMessage({ id: "development.demand-left-section.paragraph" })}
                 </AnimatedParagraph>
               </DemandLeftSection>
               <DemandList>
                 <li>
                   <span>01.</span>
-                  Websites
+                  {useIntl().formatMessage({ id: "development.demand-list.01" })}
                 </li>
                 <li>
                   <span>02.</span>
-                  Online stores
+                  {useIntl().formatMessage({ id: "development.demand-list.02" })}
                 </li>
                 <li>
                   <span>03.</span>
-                  iOS & Android Apps
+                  {useIntl().formatMessage({ id: "development.demand-list.03" })}
                 </li>
                 <li>
                   <span>04.</span>
-                  Dedicated systems
+                  {useIntl().formatMessage({ id: "development.demand-list.04" })}
                 </li>
               </DemandList>
             </ServicesSection>
@@ -148,32 +147,29 @@ const Development = () => {
           <SentenceSection>
             <SentenceSectionContent section={'development'} ref={ref3}>
               <AnimatedHeader inView={inView3}>
-                In today’s <span>dynamically changing</span> world, a company
-                needs a <span>fresh look</span> at its online presence.
+                {useIntl().formatMessage({ id: "development.sentence-section-content.header1" })}
+                <span>{useIntl().formatMessage({ id: "development.sentence-section-content.header-span1" })}</span>
+                {useIntl().formatMessage({ id: "development.sentence-section-content.header2" })}<span>{useIntl().formatMessage({ id: "development.sentence-section-content.header-span2" })}</span>
+                {useIntl().formatMessage({ id: "development.sentence-section-content.header3" })}
               </AnimatedHeader>
               <div className="decoration"></div>
               <div className="text-cnt">
                 <AnimatedParagraph inView={inView3}>
-                  A website is often the first and most important touchpoint
-                  between a customer and a brand. It is not just a URL, but a key
-                  aspect of your business and marketing strategy.
+                  {useIntl().formatMessage({ id: "development.sentence-section-content.paragraph1" })}
                 </AnimatedParagraph>
                 <AnimatedParagraph inView={inView3}>
-                  With all the options available in the market today, you need
-                  someone you can trust to execute your vision to the highest
-                  level of quality. No matter what you do, at Explayn we help you
-                  create a digital experience seamlessly.
+                  {useIntl().formatMessage({ id: "development.sentence-section-content.paragraph2" })}
                 </AnimatedParagraph>
               </div>
             </SentenceSectionContent>
           </SentenceSection>
           <Steps
             arr={[
-              { img: Discovery, text: 'Discovery' },
-              { img: Planning, text: 'Planning' },
-              { img: Design, text: 'Design' },
-              { img: DevelopmentStepIcon, text: 'Development' },
-              { img: Launch, text: 'Launch' },
+              { img: Discovery, text: useIntl().formatMessage({ id: "development.steps.arr.discovery" }) },
+              { img: Planning, text: useIntl().formatMessage({ id: "development.steps.arr.planning" }) },
+              { img: Design, text: useIntl().formatMessage({ id: "development.steps.arr.design" }) },
+              { img: DevelopmentStepIcon, text: useIntl().formatMessage({ id: "development.steps.arr.development" }) },
+              { img: Launch, text: useIntl().formatMessage({ id: "development.steps.arr.launch" }) },
             ]}
           />
           <BenefitsContentWrapper>
@@ -181,13 +177,10 @@ const Development = () => {
               <div>
                 <div className="info" ref={ref4}>
                   <AnimatedHeader inView={inView4}>
-                    Best technology for your product
+                    {useIntl().formatMessage({ id: "development.technology-section.header" })}
                   </AnimatedHeader>
                   <AnimatedParagraph inView={inView4}>
-                    Having released over 40 products we have a set of technologies
-                    that we love to work with. Tell us about your product vision and
-                    goals and we will choose technologies that will help you achieve
-                    them.
+                    {useIntl().formatMessage({ id: "development.technology-section.paragraph" })}
                   </AnimatedParagraph>
                 </div>
                 <div className="icons">
@@ -275,13 +268,11 @@ const Development = () => {
           <BenefitsSection light ref={ref5}>
             {isMobile ? (
               <h2>
-                We create enterprise web services and small business web solutions
-                that set you apart from the competitors.
+                {useIntl().formatMessage({ id: "development.benefits-section.header" })}
               </h2>
             ) : (
               <AnimatedHeader inView={inView5}>
-                We create enterprise web services and small business web solutions
-                that set you apart from the competitors.
+                {useIntl().formatMessage({ id: "development.benefits-section.header" })}
               </AnimatedHeader>
             )}
             <p></p>
@@ -291,11 +282,8 @@ const Development = () => {
                   <img src={Responsive} alt="responsive icon" />
                 </div>
                 <div className="item-content">
-                  <h4>Responsive</h4>
-                  <p>
-                    Responsive web design is a modern need. We follow standards
-                    creating a mobile optimized website that converts.
-                  </p>
+                  <h4>{useIntl().formatMessage({ id: "development.benefits-content.responsive.h4" })}</h4>
+                  <p>{useIntl().formatMessage({ id: "development.benefits-content.responsive.p" })}</p>
                 </div>
               </div>
               <div className="item">
@@ -303,12 +291,8 @@ const Development = () => {
                   <img src={Functional} alt="Functional icon" />
                 </div>
                 <div className="item-content">
-                  <h4>Functional</h4>
-                  <p>
-                    Your site reflects your company and your brand. That’s why we
-                    deliver visually appealing, polished and professional user
-                    experience.
-                  </p>
+                  <h4>{useIntl().formatMessage({ id: "development.benefits-content.functional.h4" })}</h4>
+                  <p>{useIntl().formatMessage({ id: "development.benefits-content.functional.p" })}</p>
                 </div>
               </div>
               <div className="item">
@@ -316,11 +300,8 @@ const Development = () => {
                   <img src={Scalable} alt="Scalable icon" />
                 </div>
                 <div className="item-content">
-                  <h4>Scalable</h4>
-                  <p>
-                    We create efficient infrastructure to deliver scalable web
-                    applications and solutions to meet your business demands.
-                  </p>
+                  <h4>{useIntl().formatMessage({ id: "development.benefits-content.scalable.h4" })}</h4>
+                  <p>{useIntl().formatMessage({ id: "development.benefits-content.scalable.p" })}</p>
                 </div>
               </div>
               <div className="item">
@@ -328,11 +309,8 @@ const Development = () => {
                   <img src={Secure} alt="Scalable icon" />
                 </div>
                 <div className="item-content">
-                  <h4>Secure</h4>
-                  <p>
-                    To us, it is important that your website follows industry
-                    standards and security guidelines.
-                  </p>
+                  <h4>{useIntl().formatMessage({ id: "development.benefits-content.secure.h4" })}</h4>
+                  <p>{useIntl().formatMessage({ id: "development.benefits-content.secure.p" })}</p>
                 </div>
               </div>
             </BenefitsContent>

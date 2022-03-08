@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { colors } from '../../../styles/colors';
-import { Link } from 'gatsby';
+import { Link, useIntl } from 'gatsby-plugin-intl';
 import ContactUs from '../contactUs';
 import { Link as ScLink } from 'react-scroll';
 import {
@@ -93,6 +93,7 @@ const MenuDesktop = ({ toggle }) => {
     toggle();
     setSubMenuIsOn(false);
   };
+  
   return (
     <DesktopMenu
       variants={menuAnimation}
@@ -115,7 +116,7 @@ const MenuDesktop = ({ toggle }) => {
         <div className="main">
           <motion.div variants={itemAnimation} className="item">
             <div className="number">01.</div>
-            <Link to="/">Home</Link>
+            <Link to="/">{useIntl().formatMessage({ id: "menu.home"})}</Link>
           </motion.div>
           <motion.div
             variants={itemAnimation}
@@ -124,12 +125,12 @@ const MenuDesktop = ({ toggle }) => {
           >
             <div className="number">02.</div>
             <a href="#">
-              <div>What we do</div>
+              <div>{useIntl().formatMessage({ id: "menu.services"})}</div>
             </a>
           </motion.div>
           <motion.div variants={itemAnimation} className="item">
             <div className="number">03.</div>
-            {location.pathname === '/' ? (
+            {location.pathname === '/pl/' || location.pathname === '/en/' ? (
               <ScLink
                 to={'caseStudy'}
                 smooth
@@ -182,7 +183,7 @@ const MenuDesktop = ({ toggle }) => {
               variants={subItemAnimation}
               custom={6}
             >
-              <Link to="/visual">Visual </Link>
+              <Link to="/visual">Visual</Link>
             </motion.div>
           </div>
         )}

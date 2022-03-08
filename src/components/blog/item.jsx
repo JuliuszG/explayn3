@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { motion } from 'framer-motion';
 import { CategorySection } from '../styled';
 

@@ -15,83 +15,158 @@ import CaseDescription from '../components/cases/caseDescription';
 import CaseDoubleImage from '../components/cases/caseDoubleImage';
 import CaseList from '../components/cases/caseList';
 import CaseVideo from '../components/cases/caseVideo';
+import { useIntl } from 'gatsby-plugin-intl';
 
 export const query = graphql`
 query MyQuery($id: String!) {
-    wpRealizacja(id: { eq: $id }) {
-        realizacja {
-            landingImage {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
-            }
-            component2Title
-            component2Paragraph
-            component2Country
-            component2Client
-            component2Field
-            component2Services
-            link
-            video
-            darkMode
-            screen {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
-            }
-            bigScreen {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
-            }
-            component4Title
-            article4Paragraphs
-            doubleImageComponent {
-              firstImage {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
-              }
-              secondImage {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
+  wpRealizacja(id: {eq: $id}) {
+    realizacja {
+      en {
+        landingImage {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
-            screen2 {
-                localFile {
-                    childImageSharp {
-                        fluid(maxWidth: 1750) {
-                            ...GatsbyImageSharpFluid_tracedSVG
-                        }
-                    }
-                }
-            }
-            component7Title
-            component7Paragraph
-            component7List
+          }
         }
+        component2Title
+        component2Paragraph
+        component2Country
+        component2Client
+        component2Field
+        component2Services
+        link
+        video
+        darkMode
+        screen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        bigScreen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        component4Title
+        article4Paragraphs
+        doubleImageComponent {
+          firstImage {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1750) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          secondImage {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1750) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+        screen2 {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        component7Title
+        component7Paragraph
+        component7List
+      }
+      pl {
+        landingImage {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        component2Title
+        component2Paragraph
+        component2Country
+        component2Client
+        component2Field
+        component2Services
+        link
+        video
+        darkMode
+        screen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        bigScreen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        component4Title
+        article4Paragraphs
+        doubleImageComponent {
+          firstImage {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1750) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          secondImage {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 1750) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+        screen2 {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        component7Title
+        component7Paragraph
+        component7List
+      }
     }
+  }
 }
 `;
 
@@ -99,7 +174,9 @@ const CaseTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
-  console.log(data);
+  
+  const locale = useIntl().locale;
+  const realizacjaLang = locale === 'pl' ? data.wpRealizacja.realizacja.pl : data.wpRealizacja.realizacja.en;
 
   return (
     <>
@@ -108,44 +185,44 @@ const CaseTemplate = ({ data }) => {
       {isMobile ? (
         <Mobile />
       ) : (
-        <Desktop darkMode={data.wpRealizacja.realizacja.darkMode} mainPage={false} />
+        <Desktop darkMode={realizacjaLang.darkMode} mainPage={false} />
       )}
-      <CaseLanding background={data.wpRealizacja.realizacja.landingImage.localFile.childImageSharp.fluid} />
+      <CaseLanding background={realizacjaLang.landingImage.localFile.childImageSharp.fluid} />
       <CaseData
-        title={data.wpRealizacja.realizacja.component2Title}
-        paragraph={data.wpRealizacja.realizacja.component2Paragraph}
-        link={data.wpRealizacja.realizacja.link}
-        country={data.wpRealizacja.realizacja.component2Country}
-        client={data.wpRealizacja.realizacja.component2Client}
-        field={data.wpRealizacja.realizacja.component2Field}
-        services={data.wpRealizacja.realizacja.component2Services}
+        title={realizacjaLang.component2Title}
+        paragraph={realizacjaLang.component2Paragraph}
+        link={realizacjaLang.link}
+        country={realizacjaLang.component2Country}
+        client={realizacjaLang.component2Client}
+        field={realizacjaLang.component2Field}
+        services={realizacjaLang.component2Services}
       />
-      {data.wpRealizacja.realizacja.video && (
-        <CaseVideo link={data.wpRealizacja.realizacja.video} />
+      {realizacjaLang.video && (
+        <CaseVideo link={realizacjaLang.video} />
       )}
-      {data.wpRealizacja.realizacja.screen?.localFile.childImageSharp.fluid && (
-        <CaseScreen src={data.wpRealizacja.realizacja.screen.localFile.childImageSharp.fluid} />
+      {realizacjaLang.screen?.localFile.childImageSharp.fluid && (
+        <CaseScreen src={realizacjaLang.screen.localFile.childImageSharp.fluid} />
       )}
-      {data.wpRealizacja.realizacja.bigScreen?.localFile.childImageSharp.fluid && (
+      {realizacjaLang.bigScreen?.localFile.childImageSharp.fluid && (
         <CaseBigScreen
-          src={data.wpRealizacja.realizacja.bigScreen.localFile.childImageSharp.fluid}
+          src={realizacjaLang.bigScreen.localFile.childImageSharp.fluid}
           decorations={true}
         />
       )}
       <CaseDescription
-        title={data.wpRealizacja.realizacja.component4Title}
-        paragraphs={data.wpRealizacja.realizacja.article4Paragraphs}
+        title={realizacjaLang.component4Title}
+        paragraphs={realizacjaLang.article4Paragraphs}
       />
-      {data.wpRealizacja.realizacja.doubleImageComponent && (
-        <CaseDoubleImage arr={data.wpRealizacja.realizacja.doubleImageComponent} />
+      {realizacjaLang.doubleImageComponent && (
+        <CaseDoubleImage arr={realizacjaLang.doubleImageComponent} />
       )}
       <CaseList
-        title={data.wpRealizacja.realizacja.component7Title}
-        paragraph={data.wpRealizacja.realizacja.component7Paragraph}
-        arrObj={JSON.parse(data.wpRealizacja.realizacja.component7List)}
+        title={realizacjaLang.component7Title}
+        paragraph={realizacjaLang.component7Paragraph}
+        arrObj={JSON.parse(realizacjaLang.component7List)}
       />
-      {data.wpRealizacja.realizacja.screen2?.localFile.childImageSharp.fluid && (
-        <CaseScreen src={data.wpRealizacja.realizacja.screen2.localFile.childImageSharp.fluid} />
+      {realizacjaLang.screen2?.localFile.childImageSharp.fluid && (
+        <CaseScreen src={realizacjaLang.screen2.localFile.childImageSharp.fluid} />
       )}
       <CaseStudy triangle={false} />
       <Footer />

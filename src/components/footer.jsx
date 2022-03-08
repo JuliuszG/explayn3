@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { Link as ScLink } from 'react-scroll';
 import Dots from '../images/footer-dots.svg';
 import Arrow from '../images/footer-arrow.svg';
@@ -15,6 +15,7 @@ import {
   FooterDecoration,
 } from './styled';
 import { useLocation } from '@reach/router';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Footer = () => {
   const location = useLocation();
@@ -37,7 +38,7 @@ const Footer = () => {
     <FooterWrapper id="footer">
       <FooterContent>
         <FooterContactUs>
-          <h3>Contact us</h3>
+          <h3>{useIntl().formatMessage({ id: "footer.contact" })}</h3>
           <div>
             <a href="tel:+48 881 772 030">+48 881 772 030</a>
           </div>
@@ -48,15 +49,12 @@ const Footer = () => {
         {!mailSend ?
           <FooterNewsletter>
           <h3>NEWSLETTER</h3>
-          <p>
-            Join our community and get our best insights, tips and strategies
-            delivered straight to your inbox.
-          </p>
+          <p>{useIntl().formatMessage({ id: "footer.newsletter" })}</p>
           <FooterFormWrapper>
             <form onSubmit={e => handleSubmit(e)}>
               <input
                 type="email"
-                placeholder="Email adress"
+                placeholder={useIntl().formatMessage({ id: "footer.email.placeholder" })}
                 minLength={2}
                 required={true}
                 value={value}
@@ -69,11 +67,11 @@ const Footer = () => {
           </FooterFormWrapper>
         </FooterNewsletter> :
         <FooterNewsletter>
-          <h3>That’s great!<br/>We’ll keep you updated!</h3>
+          <h3>{useIntl().formatMessage({ id: "footer.email.message" })}</h3>
         </FooterNewsletter>
         }
         <FotterSocialMedia>
-          <h3>Follow us on social media</h3>
+          <h3>{useIntl().formatMessage({ id: "footer.social" })}</h3>
           <FooterSocialMediaContent>
             <a href="https://www.facebook.com/explayn.it">Facebook</a>
             <a href="https://www.youtube.com/channel/UCQE3VnneDB6U3oy-3R7Xyvw">
@@ -86,15 +84,15 @@ const Footer = () => {
           </FooterSocialMediaContent>
         </FotterSocialMedia>
         <div className="site-links-column sl1">
-          <h3>Service</h3>
+          <h3>{useIntl().formatMessage({ id: "footer.serivce" })}</h3>
           <Link to="/development">Development</Link>
           <Link to="/visual">Visual</Link>
           <Link to="/branding">Branding</Link>
           <Link to="/marketing">Marketing</Link>
         </div>
         <div className="site-links-column sl2">
-          <h3>About</h3>
-          <Link to="/">Home</Link>
+          <h3>{useIntl().formatMessage({ id: "footer.about.h3" })}</h3>
+          <Link to="/">{useIntl().formatMessage({ id: "footer.about.home" })}</Link>
           {location.pathname === '/' ? (
             <ScLink to={'caseStudy'} smooth duration={1000}>
               Case studies
@@ -107,9 +105,9 @@ const Footer = () => {
           <Link to="/blog">Blog</Link>
         </div>
         <div className="site-links-column sl3">
-          <h3>Support</h3>
-          <Link to="/policy">Privacy policy</Link>
-          <Link to="/policy#cookie">Cookie policy</Link>
+          <h3>{useIntl().formatMessage({ id: "footer.support.h3" })}</h3>
+          <Link to="/policy">{useIntl().formatMessage({ id: "footer.support.policy" })}</Link>
+          <Link to="/policy#cookie">{useIntl().formatMessage({ id: "footer.support.cookie" })}</Link>
         </div>
       </FooterContent>
       <FooterDecoration>

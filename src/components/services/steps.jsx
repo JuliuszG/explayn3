@@ -1,17 +1,14 @@
 import React from 'react';
 import Icon from './stepIcon';
 import { StepsWrapper } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Steps = ({ arr }) => {
   return (
     <StepsWrapper>
       <div className="header">
-        <h2>Simple and effective process</h2>
-        <p>
-          A website is often the first and most important touchpoint between a
-          customer and a brand. It is not just a URL, it is a key aspect of your
-          business and marketing strategy.
-        </p>
+        <h2>{useIntl().formatMessage({ id: "development.steps.h2" })}</h2>
+        <p>{useIntl().formatMessage({ id: "development.steps.p" })}</p>
       </div>
       <div className="icons">
         <div className="cnt">

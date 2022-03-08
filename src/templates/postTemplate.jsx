@@ -10,6 +10,7 @@ import SideBar from '../components/blog/sidebar';
 import PostSlider from '../components/blog/postSlider';
 import Footer from '../components/footer';
 import SEO from '../components/seo';
+import { useIntl } from 'gatsby-plugin-intl';
 
 import {
   PostTemplateLandingScreen,
@@ -18,37 +19,68 @@ import {
 } from '../components/styled';
 
 export const query = graphql`
-query BlogQuery {
-  wpArticle {
+query BlogQuery($id: String!) {
+  wpArticle(id: { eq: $id }) {
     id
     article {
-      blogTitle
-      slug
-      aboutTheAuthor
-      authorName
-      bigScreen {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 1750) {
-              ...GatsbyImageSharpFluid_tracedSVG
+      en {
+        blogTitle
+        slug
+        aboutTheAuthor
+        authorName
+        bigScreen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
             }
           }
         }
-      }
-      bigScreenFraming
-      categories
-      content
-      leadText
-      personalPhoto {
-        localFile {
-          childImageSharp {
-            fluid(maxWidth: 151) {
-              ...GatsbyImageSharpFluid_tracedSVG
+        bigScreenFraming
+        categories
+        content
+        leadText
+        personalPhoto {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 151) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
             }
           }
         }
+        timeToRead
       }
-      timeToRead
+      pl {
+        blogTitle
+        slug
+        aboutTheAuthor
+        authorName
+        bigScreen {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1750) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        bigScreenFraming
+        categories
+        content
+        leadText
+        personalPhoto {
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 151) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+        timeToRead
+      }
     }
   }
 }
@@ -57,6 +89,9 @@ const PostTemplate = ({ data }) => {
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
+  const locale = useIntl().locale;
+  const postLang = locale === 'pl' ? data.wpArticle.article.pl : data.wpArticle.article.en;
+  
   const { id } = data.wpArticle;
   const {
     bigScreen,
@@ -69,8 +104,8 @@ const PostTemplate = ({ data }) => {
     leadText,
     blogTitle,
     slug,
-  } = data.wpArticle.article;
-  const { categories } = JSON.parse(data.wpArticle.article.categories);
+  } = postLang;
+  const { categories } = JSON.parse(postLang.categories);
   const { changeContactFormStatus } = useContext(appContext);
   return (
     <>
@@ -118,10 +153,10 @@ const PostTemplate = ({ data }) => {
             <PostSlider showFrom={2} filters={{ currentPost: id }} />
           </div> */}
         </div>
-        <div className="related-cnt">
-          {/* <div className="title">Related Articles</div> */}
+        {/* <div className="related-cnt">
+          <div className="title">Related Articles</div>
           <PostSlider showFrom={2} filters={{ currentPost: id }} />
-        </div>
+        </div> */}
       </PostTemplateWrapper>
       <Footer />
     </Layout>

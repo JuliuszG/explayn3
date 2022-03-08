@@ -7,13 +7,13 @@ import { useMediaQuery } from 'react-responsive';
 import Image from '../images/404.svg'
 import Footer from '../components/footer';
 import { ServicesTopSection404, ServicesImgContainer } from '../components/styled/index';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const PageNotFound = () => {
 
   const isMobile = useMediaQuery({
     query: '(max-device-width: 950px)',
   });
-
 
   return (
   <>
@@ -23,8 +23,8 @@ const PageNotFound = () => {
       <ServicesTopSection404>
         <div>
           <h1 className="grey">404</h1>
-          <p className="text">OOOPS… WE COULDN’T FIND THE PAGE YOUR LOOKING FOR.</p>
-          <a href="/" className="link">VISIT HOMEPAGE</a>
+          <p className="text">{useIntl().formatMessage({ id: "404.text" })}</p>
+          <a href="/" className="link">{useIntl().formatMessage({ id: "404.link" })}</a>
         </div>
         <ServicesImgContainer>
           <img src={Image} alt="dev icon" />

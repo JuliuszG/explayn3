@@ -7,6 +7,7 @@ import {
 } from '../util/animations';
 
 import { CaseDataWrapper, CaseDataLeft, CaseDataRight } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const CaseData = ({
   title,
@@ -28,25 +29,25 @@ const CaseData = ({
         <AnimatedParagraph inView={inView}>{paragraph}</AnimatedParagraph>
         {link && (
           <AnimatedLink inView={inView} url={link}>
-            View website
+            {useIntl().formatMessage({ id: "torbasmaku.link" })}
           </AnimatedLink>
         )}
       </CaseDataLeft>
       <CaseDataRight>
         <li>
-          <span className="field-name">Country</span>
+          <span className="field-name">{useIntl().formatMessage({ id: "case-data.country" })}</span>
           {country}
         </li>
         <li>
-          <span className="field-name">Client</span>
+          <span className="field-name">{useIntl().formatMessage({ id: "case-data.client" })}</span>
           {client}
         </li>
         <li>
-          <span className="field-name">Industry</span>
+          <span className="field-name">{useIntl().formatMessage({ id: "case-data.industry" })}</span>
           {field}
         </li>
         <li>
-          <span className="field-name">Scope of work</span>
+          <span className="field-name">{useIntl().formatMessage({ id: "case-data.scope" })}</span>
           {services}
         </li>
       </CaseDataRight>

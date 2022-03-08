@@ -4,7 +4,7 @@ import LogoImg from './logoImg';
 import { MobileNav, MobileNavWrapper } from '../styled';
 import MenuMobile from './nav2/menuMobile';
 import { AnimatePresence } from 'framer-motion';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import Phone from '../../images/call-phone.svg';
 import { appContext } from '../context';
 import {useScroll} from './scrollHook'

@@ -9,11 +9,14 @@ import Layout from '../components/layout';
 import Image from 'gatsby-image';
 import Footer from '../components/footer';
 import { BlogWrapper, BlogContent, BlogPost } from '../components/styled';
+import { useIntl } from 'gatsby-plugin-intl';
+
 export const query = graphql`
 {
-    allWpArticle(limit: 6) {
-      nodes {
-        article {
+  allWpArticle(limit: 6) {
+    nodes {
+      article {
+        en {
           bigScreen {
             localFile {
               childImageSharp {
@@ -28,33 +31,52 @@ export const query = graphql`
           slug
           blogTitle
         }
-        id
+        pl {
+          bigScreen {
+            localFile {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+          categories
+          timeToRead
+          slug
+          blogTitle
+        }
       }
+      id
     }
   }
+}
 `;
 
 const Card = ({ post }) => {
-  const { categories } = JSON.parse(post.article.categories);
+  const locale = useIntl().locale;
+  const postLang = locale === 'pl' ? post.article.pl : post.article.en;
+
+  const { categories } = JSON.parse(postLang.categories);
   return (
-    <BlogPost to={post.article.slug}>
+    <BlogPost to={`/blog/${postLang.slug}`}>
       <div className="img">
         <div className="overlay"></div>
         <Image
           style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-          fluid={post.article.bigScreen.localFile.childImageSharp.fluid}
+          fluid={postLang.bigScreen.localFile.childImageSharp.fluid}
           alt="post picture"
         />
       </div>
       <div className="content">
-        <h2>{post.article.blogTitle}</h2>
+        <h2>{postLang.blogTitle}</h2>
         <div className="categories">
           {categories.map((category, index) => (
             <span className="cat" key={index}>
               {category}
             </span>
           ))}
-          <span className="read">{post.article.timeToRead}</span>
+          <span className="read">{postLang.timeToRead}</span>
         </div>
       </div>
       <div className="btn-cnt">

@@ -24,6 +24,7 @@ import {
 } from '../styled';
 import arrowLeft from '../../images/Icon_ionic-ios-arrow-back.svg';
 import arrowRight from '../../images/Icon_ionic-ios-arrow-backa.svg';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const settings = {
   dots: false,
@@ -79,10 +80,11 @@ const settings = {
 const PostSlider = ({ filters, showFrom }) => {
   const data = useStaticQuery(
     graphql`
-      {
-        allWpArticle {
-          nodes {
-            article {
+    {
+      allWpArticle {
+        nodes {
+          article {
+            en {
               bigScreen {
                 localFile {
                   childImageSharp {
@@ -97,10 +99,26 @@ const PostSlider = ({ filters, showFrom }) => {
               slug
               blogTitle
             }
-            id
+            pl {
+              bigScreen {
+                localFile {
+                  childImageSharp {
+                    fluid(maxWidth: 1750) {
+                      ...GatsbyImageSharpFluid_tracedSVG
+                    }
+                  }
+                }
+              }
+              categories
+              timeToRead
+              slug
+              blogTitle
+            }
           }
+          id
         }
       }
+    }
     `
   );
 
@@ -148,13 +166,16 @@ const PostSlider = ({ filters, showFrom }) => {
               <SliderContainer>
                 <Slider {...settings}>
                   {posts.map((post, index) => {
-                    const { categories } = JSON.parse(post.article.categories);
-                    const { fluid } = post.article.bigScreen.localFile.childImageSharp.fluid;
+                    const locale = useIntl().locale;
+                    const postLang = locale === 'pl' ? post.article.pl : post.article.en;
+
+                    const { categories } = JSON.parse(postLang.categories);
+                    const { fluid } = postLang.bigScreen.localFile.childImageSharp.fluid;
                     const {
                       blogTitle,
                       slug,
                       timeToRead,
-                    } = post.article;
+                    } = postLang;
                     return (
                       <div key={post.id}>
                         <SlideInfinity index={index}>
@@ -178,7 +199,7 @@ const PostSlider = ({ filters, showFrom }) => {
                                   <span>{timeToRead}</span>
                                 </SliderTime>
                                 <SliderLink>
-                                  <a href={`/blog/${slug}`}>
+                                  <a href={`blog/${slug}`}>
                                     READ THIS ARTICLE {'>'}
                                   </a>
                                 </SliderLink>

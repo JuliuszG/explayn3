@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { Link as ScLink } from 'react-scroll';
 import Dots from '../images/footer-dots.svg';
 import Arrow from '../images/footer-arrow.svg';

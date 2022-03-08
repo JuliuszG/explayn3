@@ -8,8 +8,10 @@ import DTL from '../../images/landing/ldot-top-left.svg';
 import DTR from '../../images/landing/ldot-top-right.svg';
 import { Link as ScLink } from 'react-scroll';
 import { Landing2Wrapper } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Landing2 = () => {
+  const intl = useIntl();
   return (
     <Landing2Wrapper>
       <div className="decoration decoration-left">
@@ -33,20 +35,30 @@ const Landing2 = () => {
             <img src={Play} alt="play" />
           </div>
           <h1>
-            <span className="white">New</span> ways to{' '}
-            <span className="blue">develop </span>
-            <span className="white second">your</span>{' '}
-            <span className="blue">brand.</span>
+            <span className="white">
+              {intl.formatMessage({ id: "landing.h1.new" })}
+            </span>
+            {intl.formatMessage({ id: "landing.h1.ways-to" })}{' '}
+            <span className="blue">
+              {intl.formatMessage({ id: "landing.h1.develop" })}
+            </span>
+            <span className="white second">
+              {intl.formatMessage({ id: "landing.h1.your" })}
+            </span>{' '}
+            <span className="blue">
+              {intl.formatMessage({ id: "landing.h1.brand" })}
+            </span>
           </h1>
           <p>
-            A full service web design and digital marketing agency powered by
-            growth solutions.
+            {intl.formatMessage({ id: "landing.p" })}
           </p>
         </div>
       </div>
       <ScLink className="scroll" to={'aboutUs'} smooth duration={500}>
         <div className="content">
-          <div className="title">learn more</div>
+          <div className="title">
+            {intl.formatMessage({ id: "landing.more" })}
+          </div>
           <img src={More} alt="scroll down" />
         </div>
       </ScLink>

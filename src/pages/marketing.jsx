@@ -41,6 +41,7 @@ import {
   BenefitsSection,
   BenefitsContent,
 } from '../components/styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Marketing = () => {
   const isMobile = useMediaQuery({
@@ -86,9 +87,7 @@ const Marketing = () => {
                 initial="hidden"
                 animate={inView ? 'visible' : 'hidden'}
               >
-                At a time when no company can afford not to have a digital
-                marketing strategy, we are committed to offering 360˚ digital
-                marketing services focused on delivering results.
+                {useIntl().formatMessage({ id: "marketing.services-main-description" })}
               </ServicesMainDescription>
             </ServicesContent>
             <ServicesImgContainer>
@@ -96,7 +95,9 @@ const Marketing = () => {
             </ServicesImgContainer>
             <ServicesScrollLink to={'services-section'} smooth duration={500}>
               <div className="content">
-                <div className="title">learn more</div>
+                <div className="title">
+                  {useIntl().formatMessage({ id: "marketing.more" })}
+                </div>
                 <img src={More} alt="scroll down" />
               </div>
             </ServicesScrollLink>
@@ -105,31 +106,28 @@ const Marketing = () => {
             <ServicesSection id="services-section">
               <DemandLeftSection ref={ref2}>
                 <AnimatedHeader inView={inView2}>
-                  Marketing on demand.
+                  {useIntl().formatMessage({ id: "marketing.demand-left-section.header" })}
                 </AnimatedHeader>
                 <AnimatedParagraph inView={inView2}>
-                  Everything begins with the recognition of the customer’s needs, a
-                  thorough market analysis and defining a marketing strategy, which
-                  will be the foundation of a consistent and multidimensional
-                  communication with your clients.
+                  {useIntl().formatMessage({ id: "marketing.demand-left-section.paragraph" })}
                 </AnimatedParagraph>
               </DemandLeftSection>
               <DemandList>
                 <li>
                   <span>01.</span>
-                  Marketing strategy
+                  {useIntl().formatMessage({ id: "marketing.demand-list.01" })}
                 </li>
                 <li>
                   <span>02.</span>
-                  Paid Advertising
+                  {useIntl().formatMessage({ id: "marketing.demand-list.02" })}
                 </li>
                 <li>
                   <span>03.</span>
-                  Social Media Management
+                  {useIntl().formatMessage({ id: "marketing.demand-list.03" })}
                 </li>
                 <li>
                   <span>04.</span>
-                  Marketing Automation
+                  {useIntl().formatMessage({ id: "marketing.demand-list.04" })}
                 </li>
               </DemandList>
             </ServicesSection>
@@ -137,56 +135,46 @@ const Marketing = () => {
           <SentenceSection>
             <SentenceSectionContent section={'marketing'} ref={ref3}>
               <AnimatedHeader inView={inView3}>
-                Focusing on the methods for driving{' '}
-                <span>profitable customer action</span> is the key to our work.
+                {useIntl().formatMessage({ id: "marketing.sentence-section-content.header1" })}{' '}
+                <span>
+                  {useIntl().formatMessage({ id: "marketing.sentence-section-content.header-span" })}
+                </span>
+                {useIntl().formatMessage({ id: "marketing.sentence-section-content.header2" })}
               </AnimatedHeader>
               <div className="decoration"></div>
               <div className="text-cnt">
                 <AnimatedParagraph inView={inView3}>
-                  Attracting customers is just the first step. We make sure you
-                  retain them by putting together all the methods that allow
-                  understanding your audience better. All our decisions are based
-                  on thorough research that guarantees measurable results. We test
-                  different solutions to choose the most beneficial ones for your
-                  business.
+                  {useIntl().formatMessage({ id: "marketing.sentence-section-content.paragraph1" })}
                 </AnimatedParagraph>
                 <AnimatedParagraph inView={inView3}>
-                  To provide you with the highest level of consistency, we offer a
-                  one-stop service. From visual identity to complex marketing
-                  strategy and its implementation - with us, you can count on a
-                  coherent result. It's a perfect solution for emerging companies
-                  but also those with an established position on the market.
+                  {useIntl().formatMessage({ id: "marketing.sentence-section-content.paragraph2" })}
                 </AnimatedParagraph>
               </div>
             </SentenceSectionContent>
           </SentenceSection>
           <MarketingSteps
             arr={[
-              { img: Discovery, text: 'Discovery' },
-              { img: Planning, text: 'Planning' },
-              { img: Design, text: 'Create' },
-              { img: DevelopmentStepIcon, text: 'Launch' },
-              { img: Launch, text: 'Measure' },
+              { img: Discovery, text: useIntl().formatMessage({ id: "marketing.marketing-steps.arr.discovery" }) },
+              { img: Planning, text: useIntl().formatMessage({ id: "marketing.marketing-steps.arr.planning" }) },
+              { img: Design, text: useIntl().formatMessage({ id: "marketing.marketing-steps.arr.design" }) },
+              { img: DevelopmentStepIcon, text: useIntl().formatMessage({ id: "marketing.marketing-steps.arr.development" }) },
+              { img: Launch, text: useIntl().formatMessage({ id: "marketing.marketing-steps.arr.launch" }) },
             ]}
           />
           <BenefitsContentWrapper>
             <BenefitsSection ref={ref4}>
               {isMobile ? (
                 <>
-                  <h2>How we work</h2>
-                  <p>
-                    We use best practices to deliver comprehensive digital marketing
-                    services and provide a compelling message that sticks in the
-                    minds of those yYou’re trying to reach.
-                  </p>
+                  <h2>{useIntl().formatMessage({ id: "marketing.benefits-section.h2" })}</h2>
+                  <p>{useIntl().formatMessage({ id: "marketing.benefits-section.p" })}</p>
                 </>
               ) : (
                 <>
-                  <AnimatedHeader inView={inView4}>How we work</AnimatedHeader>
+                  <AnimatedHeader inView={inView4}>
+                    {useIntl().formatMessage({ id: "marketing.benefits-section.h2" })}
+                  </AnimatedHeader>
                   <AnimatedParagraph inView={inView4}>
-                    We use best practices to deliver comprehensive digital marketing
-                    services and provide a compelling message that sticks in the
-                    minds of those You’re trying to reach.
+                    {useIntl().formatMessage({ id: "marketing.benefits-section.p" })}
                   </AnimatedParagraph>
                 </>
               )}
@@ -196,11 +184,8 @@ const Marketing = () => {
                     <img src={Responsive} alt="responsive icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Omnichannel</h4>
-                    <p>
-                      From social media to email campaigns to digital ads, we create
-                      a path that leads your future customers to profitable actions.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "marketing.benefits-content.omnichannel.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "marketing.benefits-content.omnichannel.p" })}</p>
                   </div>
                 </div>
                 <div className="item">
@@ -208,12 +193,8 @@ const Marketing = () => {
                     <img src={Functional} alt="Functional icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Relevant</h4>
-                    <p>
-                      We make sure the content is perfectly tailored to the target
-                      audience, compelling, easy to read, as well as credible and
-                      accurate.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "marketing.benefits-content.relevant.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "marketing.benefits-content.relevant.p" })}</p>
                   </div>
                 </div>
                 <div className="item">
@@ -221,12 +202,8 @@ const Marketing = () => {
                     <img src={Scalable} alt="Scalable icon" />
                   </div>
                   <div className="item-content">
-                    <h4>Insightful</h4>
-                    <p>
-                      Defining the audience is a big part of a successful campaign.
-                      Through accurate segmentation and target group analysis, we
-                      achieve the best possible results.
-                    </p>
+                    <h4>{useIntl().formatMessage({ id: "marketing.benefits-content.insightful.h4" })}</h4>
+                    <p>{useIntl().formatMessage({ id: "marketing.benefits-content.insightful.p" })}</p>
                   </div>
                 </div>
               </BenefitsContent>

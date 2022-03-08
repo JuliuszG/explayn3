@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { Link } from 'gatsby';
+import { Link } from 'gatsby-plugin-intl';
 import { Link as ScLink } from 'react-scroll';
 import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
@@ -2845,6 +2845,36 @@ export const PageButton = styled.button`
   }
 `;
 
+export const DropdownContainer = styled.div`
+  position: absolute;
+  right: calc(3% + 210px);
+  background: #FBFBFB;
+  border: 1px solid #DCDCDC;
+  border-radius: 32px;
+  font-family: 'Poppins';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  cursor: pointer;
+  .dropdown-btn-wrapper {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0 30px;
+  }
+  .dropdown-content {
+    border-top: 1px solid #DDD;
+    padding: 20px 30px 0 30px;
+    .dropdown-item {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding-bottom: 20px;
+    }
+  }
+`;
+
 export const ContactUsButton = styled(PageButton)`
    width: 180px;
    height: 50px;
@@ -3486,8 +3516,21 @@ export const MobileSubMenu = styled.div`
 `;
 
 export const MobileMenuFooter = styled.div`
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
   width: 100%;
   padding: 10px 8%;
+  .contact{
+    padding-right: 70px;
+  }
+  .languages{
+    display: flex;
+    gap: 20px;
+    span {
+      cursor: pointer;
+    }
+  }
   h3 {
     color: ${colors.neutral00};
     font-weight: 600;
@@ -3501,7 +3544,7 @@ export const MobileMenuFooter = styled.div`
       font-size: 18px;
     }
   }
-  a {
+  a, span {
     text-decoration: none;
     color: ${colors.neutral00};
     font-weight: 300;
@@ -3510,19 +3553,6 @@ export const MobileMenuFooter = styled.div`
     display: block;
     @media ${deviceMax.mobileL} {
       font-size: 14px;
-    }
-  }
-  .socials {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10%;
-    a {
-      text-decoration: none;
-      color: ${colors.neutral00};
-      font-weight: 300;
-      font-size: 0.8125em;
-      line-height: 146.15%;
     }
   }
 `;
@@ -3883,6 +3913,7 @@ export const ServicesScrollLink = styled(ScLink)`
   left: calc(50% - 50px);
   cursor: pointer;
   margin-left: 0 !important;
+  white-space: nowrap;
   .content {
     width: 100%;
     display: flex;
