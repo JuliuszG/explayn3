@@ -1779,7 +1779,7 @@ export const Landing2Wrapper = styled.div`
     max-width: 1400px;
     margin: 10% auto;
     @media (max-width: 1600px) {
-      max-width: 1000px;
+      max-width: ${({locale}) => locale === 'pl' ? "1200px" : "1000px"};
       font-size: 13px;
     }
     @media (max-width: 1100px) {
@@ -1980,13 +1980,14 @@ export const Landing2Wrapper = styled.div`
       position: absolute;
       left: 0;
       z-index: -1;
+      ${({locale}) => locale === 'pl' && "transform: rotate(-14deg); bottom: -27px;"}
       @media (max-width: 1100px) {
-        top: -95px;
-        left: -60px;
+        top:  -95px;
+        left: ${({locale}) => locale === 'pl' ? "5px" : "-60px"};
       }
       @media (max-width: 450px) {
-        top: -75px;
-        left: -55px;
+        top: ${({locale}) => locale === 'pl' ? "-68px" : "-75px"};
+        left: ${({locale}) => locale === 'pl' ? "1px" : "-55px"};
       }
       img {
         width: 25em;
@@ -1999,9 +2000,9 @@ export const Landing2Wrapper = styled.div`
       font-size: 5.9375em;
       line-height: 126%;
       font-weight: 600;
-      margin-left: 12%;
+      margin-left: ${({locale}) => locale === 'pl' ? '7%' : '12%'};
       @media (max-width: 1600px) {
-        margin-left: 14%;
+        margin-left: ${({locale}) => locale === 'pl' ? '7%' : '14%'};
       }
       @media (max-width: 1100px) {
         margin-left: 0;

@@ -12,8 +12,9 @@ import { useIntl } from 'gatsby-plugin-intl';
 
 const Landing2 = () => {
   const intl = useIntl();
+  const locale = intl.locale;
   return (
-    <Landing2Wrapper>
+    <Landing2Wrapper locale={locale}>
       <div className="decoration decoration-left">
         <img src={DLeft} alt="decoration" />
       </div>

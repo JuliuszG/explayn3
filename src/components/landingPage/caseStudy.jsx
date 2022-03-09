@@ -87,7 +87,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
     }
   }  
 `);
-  const slideNumber = !(window.location.pathname == '/pl') ?  data.cases.nodes.length - 1 : data.cases.nodes.length
+  const slideNumber = data.cases.nodes.length
 
   const Header = () => {
     const [ref, inView] = useInView({
@@ -123,13 +123,11 @@ const CaseStudy = ({ refProp, triangle = true }) => {
       {data.cases.nodes.map((item, index) => {
         const locale = useIntl().locale;
         const postLang = locale === 'pl' ? item.realizacja.pl : item.realizacja.en;
-         if (!url.includes(postLang.slug))
+        if (!url.includes(postLang.slug))
         return <Slide className="slide" key={index} index={index} id={postLang.slug}>
           <SliderContent item={item} />
         </Slide>
-      }
-      )
-      }
+      })}
     </Slider>
   );
 
