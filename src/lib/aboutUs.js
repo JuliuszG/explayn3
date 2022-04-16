@@ -180,7 +180,7 @@ export const itemsPl = [
     list: [
       'Identyfikacja wizualna',
       'Branding produktowy',
-      'Strategie marki',
+      'Strategia marki',
       'UI/UX Design',
     ],
     url: '/branding',

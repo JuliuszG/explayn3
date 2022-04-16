@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { appContext } from '../context';
 import { ContactUsButton, ContactUsButtonScroll } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const ContactUs = ({ darkMode, mainPage }) => {
   const { changeContactFormStatus } = useContext(appContext);
@@ -18,14 +19,14 @@ const ContactUs = ({ darkMode, mainPage }) => {
             mainPage={mainPage}
             darkMode={darkMode}
           >
-            Let's talk
+            {useIntl().formatMessage({ id: "contact-us.lets-talk" })}
           </ContactUsButtonScroll>
       :   <ContactUsButton
           onClick={() => changeContactFormStatus(1)}
           mainPage={mainPage}
           darkMode={darkMode}
         >
-           Let's talk
+           {useIntl().formatMessage({ id: "contact-us.lets-talk" })}
         </ContactUsButton>
     }
   </React.Fragment> ) }  

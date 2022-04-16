@@ -99,7 +99,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         <div className="text">
           <AnimatedHeader inView={inView}>Case studies</AnimatedHeader>
           <AnimatedParagraph inView={inView}>
-            Let our work to the talking.<br/>Projects we've been working on recently.
+            {useIntl().formatMessage({ id: "case-study-header-wrapper.paragraph1" })}<br/>{useIntl().formatMessage({ id: "case-study-header-wrapper.paragraph2" })}
           </AnimatedParagraph>
         </div>
         {slideNumber > 3 ?
@@ -120,14 +120,17 @@ const CaseStudy = ({ refProp, triangle = true }) => {
   if (isMobile) triangle = false;
   const renderSlider = (
     <Slider style={{ outline: 'none' }}>
-      {data.cases.nodes.map((item, index) => {
-        const locale = useIntl().locale;
-        const postLang = locale === 'pl' ? item.realizacja.pl : item.realizacja.en;
-        if (!url.includes(postLang.slug))
-        return <Slide className="slide" key={index} index={index} id={postLang.slug}>
-          <SliderContent item={item} />
-        </Slide>
-      })}
+      {data.cases.nodes.map(
+        (item, index) => {
+          const locale = useIntl().locale;
+          const postLang = locale === 'pl' ? item.realizacja.pl : item.realizacja.en;
+          if (!url.includes(postLang.slug))
+          return <Slide className="slide" key={index} index={index} id={postLang.slug}>
+            <SliderContent item={item} />
+          </Slide>
+        }
+      )
+    }
     </Slider>
   );
 
@@ -137,7 +140,7 @@ const CaseStudy = ({ refProp, triangle = true }) => {
         (item, index) => {
           const locale = useIntl().locale;
           const postLang = locale === 'pl' ? item.realizacja.pl : item.realizacja.en;
-          (index < 4 && !url.includes(postLang.slug)) && <SliderContent item={item} key={index} />
+          (index < 5 && !url.includes(postLang.slug)) && <SliderContent item={item} key={index} />
         })}
     </>
   );

@@ -4,8 +4,9 @@ import { BrandingStepsWrapper } from '../styled';
 import { useIntl } from 'gatsby-plugin-intl';
 
 const BrandingSteps = ({ arr }) => {
+  const locale = useIntl().locale;
   return (
-    <BrandingStepsWrapper>
+    <BrandingStepsWrapper locale={locale}>
       <div className="header">
         <h2>{useIntl().formatMessage({ id: "branding.steps.h2" })}</h2>
         <p>{useIntl().formatMessage({ id: "branding.steps.p" })}</p>

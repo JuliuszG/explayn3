@@ -55,7 +55,8 @@ module.exports = {
       resolve: `gatsby-source-wordpress`,
       options: {
         // The full URL of the WordPress site's GraphQL API.
-        url: `http://localhost/explayn/graphql`,
+        url: `http://serwer2133147.home.pl/autoinstalator/wordpress1/graphql`,
+        // url: `http://localhost/explayn/graphql`,
         // Use Advanced Custom Fields
         useACF: true,
       }

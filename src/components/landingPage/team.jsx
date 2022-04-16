@@ -2,6 +2,7 @@ import React from 'react';
 import { AnimatedHeader, AnimatedParagraph } from '../util/animations';
 import { useInView } from 'react-intersection-observer';
 import { TeamWrapper, TeamDescription } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Team = () => {
   const [ref, inView] = useInView({
@@ -12,13 +13,10 @@ const Team = () => {
     <TeamWrapper>
       <TeamDescription ref={ref}>
         <AnimatedHeader inView={inView}>
-          Understanding the individual needs of the clients is the key to our
-          work.
+          {useIntl().formatMessage({ id: "team.paragraph1"})}
         </AnimatedHeader>
         <AnimatedParagraph inView={inView}>
-          We research, we explain, we implement. Our strategies are highly
-          curated to the challenges. We go beyond the standard agency model and
-          offer comprehensive consulting to maximize your profit.
+          {useIntl().formatMessage({ id: "team.paragraph2"})}
         </AnimatedParagraph>
       </TeamDescription>
     </TeamWrapper>

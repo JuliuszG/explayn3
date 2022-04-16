@@ -20,7 +20,7 @@
 
 
     "marketing": {
-        "services-main-description": "Funkcjonujemy w czasach, w któych żadna firma nie może pozwolić sobie na brak marketingu. Rozwijanie biznesu jest trudne, a marketing stał się tak obszernym tematem, że nie sposób go opanować bez grupy specjalistów. A co jeśli powiemy Ci, że możesz mieć dostęp do najlepszych specjalistów i wiedzy bez długich rekrutacji i szkoleń?",
+        "services-main-description": "Rozwijanie biznesu jest trudne, a marketing stał się tak obszernym tematem, że nie sposób go opanować bez grupy specjalistów. A co jeśli powiemy Ci, że możesz mieć dostęp do najlepszych specjalistów i wiedzy bez długich rekrutacji i szkoleń?",
         "more": "zobacz więcej",
         "demand-left-section": {
             "header": "Generowanie popytu.",
@@ -41,7 +41,7 @@
         },
         "marketing-steps": {
             "h2": "Przejrzysty i skuteczny proces",
-            "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Koniec z uczeniem się na błędach. Czas na przewidywany wzrost. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bieżąco z przebiegiem prac.",
+            "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bieżąco z przebiegiem prac.",
             "arr": {
                 "discovery": "Odkrywamy",
                 "planning": "Planujemy",
@@ -97,11 +97,11 @@
             "h2": "Prosty i skuteczny proces ",
             "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Koniec z uczeniem się na błedach. Czas na przewidywalny wzrost. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bierząco z przebiegiem prac.",
             "arr": {
-                "discovery": "Discovery",
-                "planning": "Planning",
-                "design": "Design",
-                "development": "Development",
-                "launch": "Launch"
+                "discovery": "Analiza",
+                "planning": "Planowanie",
+                "design": "Projekt",
+                "development": "Kodowanie",
+                "launch": "Uruchomienie"
             }
         },
         "technology-section": {
@@ -152,17 +152,17 @@
             "header-span2": "wyróżnić",
             "header3": ".",
             "paragraph1": "Identyfikacja wizualna, komunikacja, głos marki, slogan – wszystkie te elementy mają kluczowe znaczenie dla wizerunku marki. Aby je stworzyć, poświęcamy sporo czasu na research i wypracowania konceptu. Nasza strategia brandingowa nie powstaje z niczego – jest skutkiem przemyślanego planowania i wielogodzinnych burzy mózgów.",
-            "paragraph2": "Przesycony rynek nie lubi powtarzalności. Identyfikacja Twojeg biznesu nie powinna opierać się na trendach, ale na głębokim zrozumieniu publiczności, misji i celów marki. Zadbamy o to, aby wszystkie elementy marki rezonowały z Twoimi klientami, kreując silne więzi."
+            "paragraph2": "Przesycony rynek nie lubi powtarzalności. Identyfikacja Twojego biznesu nie powinna opierać się na trendach, ale na głębokim zrozumieniu publiczności, misji i celów marki. Zadbamy o to, aby wszystkie elementy marki rezonowały z Twoimi klientami, kreując silne więzi."
         },
         "steps": {
-            "h2": "Simple and effective process",
-            "p": "A website is often the first and most important touchpoint between a customer and a brand. It is not just a URL, it is a key aspect of your business and marketing strategy.",
+            "h2": "Przejrzysty i skuteczny proces",
+            "p": "Uwielbiamy przemyślane procesy, dlatego działamy w oparciu o sprawdzone metody. Ściśle współpracujemy z Tobą na każdym etapie rozwoju, a dzięki regularnym spotkaniom jesteś na bieżąco z przebiegiem prac.",
             "arr": {
-                "discovery": "Odkrywamy",
-                "planning": "Planujemy",
-                "design": "Projektujemy",
-                "development": "Wdrażamy",
-                "launch": "Uruchamiamy"
+                "discovery": "Analiza",
+                "planning": "Planowanie",
+                "design": "Projektowanie",
+                "development": "Wdrożenie",
+                "launch": "Ocena"
             }
         },
         "benefits-section": {
@@ -277,7 +277,8 @@
         "contact": "Kontakt",
         "lang": "Język",
         "pl": "Polski",
-        "en": "Angielski"
+        "en": "Angielski",
+        "contact_desktop": "Skontaktuj się"
     },
 
 
@@ -300,6 +301,53 @@
             "cookie": "Ciasteczka"
         }
     },
+
+
+    "contact-us": {
+        "lets-talk": "Napisz do nas"
+    },
+
+
+    "contact-form-wrapper": {
+        "h1": "Napisz do nas",
+        "p": "Chcesz dowiedzieć się czy możemy Ci pomóc, a może chcesz wycenić projekt? Odezwij się do nas.",
+        "h4": "W czym możemy Cię wesprzeć?"
+    },
+
+
+    "case-study-header-wrapper": {
+        "paragraph1": "Niech nasza praca mówi sama za siebie.",
+        "paragraph2": "Projekty, nad którymi ostatnio pracowaliśmy."
+    },
+
+
+    "team": {
+        "paragraph1": "Podstawą naszej pracy jest zrozumienie specyficznych potrzeb naszych klientów.",
+        "paragraph2": "Analizujemy, projektujemy i wdrażamy. Określamy wyzwania i mapujemy działania strategiczne. Wykraczamy poza schematy oferując rozwiązania dopasowane do specyfiki Twojej branży."
+    },
+
+
+    "blog": {
+        "article": "Artykuły",
+        "read-more": "PRZECZYTAJ TEN ARTYKUŁ"
+    },
+
+
+    "post": {
+        "author": "O AUTORZE"
+    },
+
+
+    "social-media-wrapper": {
+        "h3": "PODZIEL SIĘ Z INNYMI"
+    },
+
+
+    "sidebar": {
+        "h3": "POPULARNE TAGI",
+        "other": "INNE"
+    },
+
 
 
 

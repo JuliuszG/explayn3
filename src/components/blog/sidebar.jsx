@@ -15,7 +15,7 @@ import {
 } from '../styled';
 import { useIntl } from 'gatsby-plugin-intl';
 
-const filterList = [
+const filterListEn = [
   'BRANDING',
   'ANIMATIONS/3D',
   'VIDEO',
@@ -23,6 +23,16 @@ const filterList = [
   'SOCIAL MEDIA',
   'SOFTWARE',
   'OTHER',
+];
+
+const filterListPl = [
+  'BRANDING',
+  'ANIMATIONS/3D',
+  'VIDEO',
+  'MARKETING STRATEGY',
+  'SOCIAL MEDIA',
+  'SOFTWARE',
+  'INNE',
 ];
 
 const SideBar = ({ title, slug, id }) => {
@@ -89,6 +99,8 @@ const SideBar = ({ title, slug, id }) => {
   };
   const stickyPosition = 215;
 
+  const filterList = useIntl().locale === 'pl' ? filterListPl : filterListEn;
+
   return (
     <SideBarWrapperContainer>
       <SideBarWrapper>
@@ -110,7 +122,7 @@ const SideBar = ({ title, slug, id }) => {
             </AnimateSharedLayout>
             </React.Fragment>}
 
-            <h3>POPULAR TAGS</h3>
+            <h3>{useIntl().formatMessage({ id: 'sidebar.h3' })}</h3>
             <SideBarTrendingFilters>
               {filterList.map((filter, index) => (
                 <SideBarTrendingFilter

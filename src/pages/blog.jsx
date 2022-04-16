@@ -80,7 +80,7 @@ const Card = ({ post }) => {
         </div>
       </div>
       <div className="btn-cnt">
-        <div className="read-more">READ THIS ARTICLE {'>'}</div>
+        <div className="read-more">{useIntl().formatMessage({ id: 'blog.read-more' })} {'>'}</div>
       </div>
     </BlogPost>
   );
@@ -96,7 +96,7 @@ const Blog = ({ data: { allWpArticle } }) => {
         {isMobile ? <Mobile /> : <Desktop />}
         <BlogWrapper>
           <BlogContent>
-            <h1 className="main-title">Articles</h1>
+            <h1 className="main-title">{useIntl().formatMessage({ id: 'blog.article' })}</h1>
             {allWpArticle.nodes.map(post => (
               <Card key={post.id} post={post} />
             ))}

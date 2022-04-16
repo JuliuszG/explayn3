@@ -1,10 +1,11 @@
 import React from 'react';
 import { SocialMediaWrapper } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const SocialMedia = ({ title, slug }) => {
   return (
     <SocialMediaWrapper>
-      <h3>SHARE THIS ARTICLE</h3>
+      <h3>{useIntl().formatMessage({ id: 'social-media-wrapper.h3' })}</h3>
       <a
         href={`https://www.facebook.com/sharer/sharer.php?u=http://www.explayn.it/blog/${slug}`}
       >

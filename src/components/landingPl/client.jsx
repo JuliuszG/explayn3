@@ -4,6 +4,7 @@ import landingCircle from '../../images/landing/landing-multi-circle.svg';
 import chartGray from '../../images/landingPL/chart-gray.svg';
 import explaynLogo from '../../images/landingPL/logo.svg';
 import line from '../../images/landingPL/line.svg';
+import mock1 from '../../images/landingPL/mock1.jpg';
 
 import {
     SurmaContent
@@ -129,6 +130,7 @@ const Client = () => {
                     </div>  
                 </div>
             </div>
+            <img src={mock1} className="mock" />
             <img src={explaynLogo} alt="logo" className="logo-small"/>
             <p className="data">&#9426; 2021</p>
         </SurmaContent>

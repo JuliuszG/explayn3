@@ -13,6 +13,7 @@ import {
   ExitButton,
   ContactDecoration,
 } from './styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const categories = [
   'BRANDING',
@@ -198,12 +199,9 @@ export const ContactForm = () => {
       initial="out"
       exit="exit"
     >
-      <h1>Let’s talk</h1>
-      <p>
-        We find inspiration to create in your challenges. Let us know what your
-        brand needs.
-      </p>
-      <h4>How can we help you?</h4>
+      <h1>{useIntl().formatMessage({ id: "contact-form-wrapper.h1"})}</h1>
+      <p>{useIntl().formatMessage({ id: "contact-form-wrapper.p"})}</p>
+      <h4>{useIntl().formatMessage({ id: "contact-form-wrapper.h4"})}</h4>
       <ContactCategories>
         {categories.map((category, index) => (
           <ContactCategory

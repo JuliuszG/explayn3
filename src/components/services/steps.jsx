@@ -4,8 +4,10 @@ import { StepsWrapper } from '../styled';
 import { useIntl } from 'gatsby-plugin-intl';
 
 const Steps = ({ arr }) => {
+  const intl = useIntl();
+  const locale = intl.locale;
   return (
-    <StepsWrapper>
+    <StepsWrapper locale={locale}>
       <div className="header">
         <h2>{useIntl().formatMessage({ id: "development.steps.h2" })}</h2>
         <p>{useIntl().formatMessage({ id: "development.steps.p" })}</p>

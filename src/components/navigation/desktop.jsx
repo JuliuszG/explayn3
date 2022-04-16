@@ -39,7 +39,7 @@ const Desktop = ({ darkMode, mainPage }) => {
           to="/"
           className="logo-link"
           style={
-            url === '/blog' ? { display: 'flex', alignItems: 'flex-end' } : {}
+            (url === '/pl/blog' || url === '/en/blog') ? { display: 'flex', alignItems: 'flex-end' } : {}
           }
         >
           <LogoImg
@@ -48,7 +48,7 @@ const Desktop = ({ darkMode, mainPage }) => {
             customWidth="194px"
             customHeight="41px"
           />
-          {url === '/blog' && (
+          {(url === '/pl/blog' || url === '/en/blog') && (
             <BlogTitle>
               <span>.</span>Blog
             </BlogTitle>

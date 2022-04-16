@@ -1794,7 +1794,7 @@ export const Landing2Wrapper = styled.div`
       margin-bottom: 20vh;
     }
     @media (max-width: 375px) {
-      padding: 20% 5% 5% 5%;
+      padding: 20% 7% 5% 7%;
     }
   }
   .cnt-pl {
@@ -2615,7 +2615,9 @@ export const StepsWrapper = styled.div`
           display: block;
         }
         &:nth-of-type(1)::after {
-          content: 'The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.';
+          content: '${({locale}) => locale === 'pl' ?
+            "Proces tworzenia witryny rozpoczyna się od zrozumienia celów biznesowych klienta. Podczas spotkania oceniamy sytuację i omawiamy pożądane cechy i funkcjonalności witryny. Definiujemy grupę docelową i przeprowadzamy rozmowy z zarządem, aby opracować strategię dostosowaną do potrzeb klienta." : 
+            "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy."}';
           display: none;
           position: absolute;
           top: 150px;
@@ -2641,7 +2643,9 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-of-type(3)::after {
-          content: 'Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation.';
+          content: '${({locale}) => locale === 'pl' ?
+            "W drugim kroku, identyfikujemy i planujemy konkretne zasoby potrzebne do stworzenia w pełni funkcjonalnej witryny. Jest to czas na ustalenie harmonogramu projektu oraz zdefiniowanie struktury witryny." : 
+            "Following the discovery phase, we identify and plan for specific resources needed to meet your website’s unique requirements. This is time to set a project timeline and define website structure and content navigation."}';
           display: none;
           position: absolute;
           top: 150px;
@@ -2667,7 +2671,9 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-child(5)::after {
-          content: 'At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage.';
+          content: '${({locale}) => locale === 'pl' ?
+            "Na tym etapie wspaniałe pomysły nabierają realnych kształtów. Zaczyna się kształtować wizualna koncepcja serwisu. Na jej podstawie tworzymy interfejs, który będzie oddziaływał na użytkownika. Finalnie, przekazujemy projekt do ostatecznej akceptacji klienta przed przejściem do etapu wdrożenia." : 
+            "At this stage, the great ideas come to life. The visual concept of the website starts to shape. Basing on it, we create an impactful User Interface that generates a customer-focused experience. To wrap up the design phase, we submit a project for the final client’s approval before advancing to the development stage."}';
           display: none;
           position: absolute;
           top: 150px;
@@ -2692,7 +2698,9 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-of-type(7)::after {
-          content: 'Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements.';
+          content: '${({locale}) => locale === 'pl' ?
+            "W tym kroku sprawiamy piękne koncepcje wizualne stają się w pełni funkcjonalne. Prace programistyczne, od frameworka po kwestie bezpieczeństwa, mają na celu osiągnięcie najlepszej możliwej funkcjonalności." : 
+            "Code can bring your beautiful design concepts to life. From framework to security, development work is driven to achieve the best functionality based on requirements."}';
           display: none;
           position: absolute;
           top: 150px;
@@ -2718,7 +2726,9 @@ export const StepsWrapper = styled.div`
           z-index: 565;
         }
         &:nth-child(9)::after {
-          content: 'By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online.';
+          content: '${({locale}) => locale === 'pl' ?
+            "Po wszystkich niezbędnych testach, jesteśmy pewni, że Twoja strona będzie doskonale wyglądać na każdym urządzeniu. Dokonujemy ostatecznych poprawek i strona jest gotowa do umieszczenia w sieci." : 
+            "By doing all the necessary testing, we make sure your website will look great on computers, smartphones, and tablets. We give the final touches and the website is ready to upload online."}';
           display: none;
           position: absolute;
           top: 150px;
@@ -2776,19 +2786,29 @@ export const BrandingStepsWrapper = styled(StepsWrapper)`
   && .icon{
     @media (min-width: 1200px) and (hover: hover) {
       &:nth-of-type(1)::after {
-        content: 'Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand.';
+        content: '${({locale}) => locale === 'pl' ?
+          "Nasz proces rozpoczyna się od poznania Twojej firmy. Zaczynamy od określenia długoterminowych celów i związanych z nimi wyzwań, aby dokładnie zrozumieć branżę i konkurencję. Dogłębna analiza pozwala nam stworzyć najlepszy możliwy obraz Twojej marki. " : 
+          "Our process begins with getting to know your business. We start by identifying your long-term goals and related challenges to thoroughly understand your industry and competitors. In-depth analysis allows us to create the best possible picture of your brand."}';
       }
       &:nth-of-type(3)::after {
-        content: 'We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand.';
+        content: '${({locale}) => locale === 'pl' ?
+          "Opracowujemy szczegółowy plan działania, na którym opieramy skuteczną strategię marki. Po przeprowadzeniu analizy rynku i zdefiniowaniu grupy odbiorców, nasz zespół wyznacza punkty styku, które pomogą stworzyć spójną obecność Twojej marki w świadomości odbiorców." : 
+          "We develop a detailed plan of action upon which we will base an effective brand strategy. With an in-depthmarket analysis and audience definition, our team maps out the key points that will help create a cohesive presence for your brand."}';
       }
       &:nth-child(5)::after {
-        content: "This is our favorite part of the process. It's where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy.";
+        content: '${({locale}) => locale === 'pl' ?
+          "To nasza ulubiona część procesu. To tutaj wykorzystujemy naszą wiedzę, wyobraźnię i kreatywność, aby przekształcić strategię w wizualny obraz marki. Podczas projektowania tożsamości marki, przyglądamy się punktom styku i sprawdzamy, czy dokładnie reprezentują wartości i osobowość marki, określoną w strategii." : 
+          "This is our favorite part of the process. It's where we use our knowledge, imagination, and creativity to develop the strategy into a visual image of the brand. When designing a brand identity, we look at touchpoints and see if they accurately represent the values and personality identified in the strategy."}';
       }
       &:nth-of-type(7)::after {
-        content: 'The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible.';
+        content: '${({locale}) => locale === 'pl' ?
+          "Marka jest teraz gotowa! Zbieramy wszystkie informacje i identyfikujemy zasoby potrzebne do wdrożenia marki - . Od grafik, przez opakowania, po reklamę. Nasze wysiłki mają na celu sprawienie, aby obok Twojej marki nie dało się przejść obojętnie." : 
+          "The brand is now ready for prime time! We gather all the information and identify the assets needed to implement the brand - from business cards to packaging to advertising. Our efforts are designed to get your brand seen by as many eyes as possible."}';
       }
       &:nth-child(9)::after {
-        content: 'This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization.';
+        content: '${({locale}) => locale === 'pl' ?
+          "To ostatni etap, w którym monitorujemy informacje zwrotne otrzymane z rynku. Co konsumenci mówią o Twojej marce? Czy zwiększyliśmy świadomość i zainteresowanie? Sprawdzamy wszystkie założenia i analizujemy projekt pod kątem optymalizacji." : 
+          "This is the final step in which we monitor the feedback received from the market. What are consumers saying about our brand? Have we increased awareness and interest? We test all assumptions and review the project for optimization."}';
       }
     }
   }

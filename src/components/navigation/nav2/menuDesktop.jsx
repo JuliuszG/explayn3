@@ -89,10 +89,13 @@ const lineAnimation = {
 const MenuDesktop = ({ toggle }) => {
   const location = useLocation();
   const [subMenuIsOn, setSubMenuIsOn] = useState(false);
+  const [subMenuPlIsOn, setSubMenuPlIsOn] = useState(false);
   const menuSwitch = () => {
     toggle();
     setSubMenuIsOn(false);
+    setSubMenuPlIsOn(false);
   };
+  const locale = useIntl().locale;
   
   return (
     <DesktopMenu
@@ -113,43 +116,96 @@ const MenuDesktop = ({ toggle }) => {
         </div>
       </DesktopHeader>
       <DesktopLinks subMenuIsOn={subMenuIsOn}>
-        <div className="main">
-          <motion.div variants={itemAnimation} className="item">
-            <div className="number">01.</div>
-            <Link to="/">{useIntl().formatMessage({ id: "menu.home"})}</Link>
-          </motion.div>
-          <motion.div
-            variants={itemAnimation}
-            className="item"
-            onClick={() => setSubMenuIsOn(prevState => !prevState)}
-          >
-            <div className="number">02.</div>
-            <a href="#">
-              <div>{useIntl().formatMessage({ id: "menu.services"})}</div>
-            </a>
-          </motion.div>
-          <motion.div variants={itemAnimation} className="item">
-            <div className="number">03.</div>
-            {location.pathname === '/pl/' || location.pathname === '/en/' ? (
-              <ScLink
-                to={'caseStudy'}
-                smooth
-                duration={1000}
-                onClick={menuSwitch}
-              >
-                Case studies
-              </ScLink>
-            ) : (
-              <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>
-                Case studies
-              </Link>
-            )}
-          </motion.div>
-          <motion.div variants={itemAnimation} className="item">
-            <div className="number">04.</div>
-            <Link to="/blog">Blog</Link>
-          </motion.div>
-        </div>
+        {locale === 'pl' ? (
+          <div className="main">
+            <motion.div variants={itemAnimation} className="item">
+              <div className="number">01.</div>
+              <Link to="/">{useIntl().formatMessage({ id: "menu.home"})}</Link>
+            </motion.div>
+            <motion.div
+              variants={itemAnimation}
+              className="item"
+              onClick={() => {
+                setSubMenuPlIsOn(false)
+                setSubMenuIsOn(prevState => !prevState)
+              }}
+            >
+              <div className="number">02.</div>
+              <a href="#">
+                <div>{useIntl().formatMessage({ id: "menu.services"})}</div>
+              </a>
+            </motion.div>
+            <motion.div
+              variants={itemAnimation}
+              className="item"
+              onClick={() => {
+                setSubMenuIsOn(false)
+                setSubMenuPlIsOn(prevState => !prevState)
+              }}
+            >
+              <div className="number">03.</div>
+              <a href="#">
+                <div>Rozwiązania</div>
+              </a>
+            </motion.div>
+            <motion.div variants={itemAnimation} className="item">
+              <div className="number">04.</div>
+              {location.pathname === '/pl/' || location.pathname === '/en/' ? (
+                <ScLink
+                  to={'caseStudy'}
+                  smooth
+                  duration={1000}
+                  onClick={menuSwitch}
+                >
+                  Case studies
+                </ScLink>
+              ) : (
+                <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>
+                  Case studies
+                </Link>
+              )}
+            </motion.div> 
+          </div>
+        ) : (
+          <div className="main">
+            <motion.div variants={itemAnimation} className="item">
+              <div className="number">01.</div>
+              <Link to="/">{useIntl().formatMessage({ id: "menu.home"})}</Link>
+            </motion.div>
+            <motion.div
+              variants={itemAnimation}
+              className="item"
+              onClick={() => setSubMenuIsOn(prevState => !prevState)}
+            >
+              <div className="number">02.</div>
+              <a href="#">
+                <div>{useIntl().formatMessage({ id: "menu.services"})}</div>
+              </a>
+            </motion.div>
+            <motion.div variants={itemAnimation} className="item">
+              <div className="number">03.</div>
+              {location.pathname === '/pl/' || location.pathname === '/en/' ? (
+                <ScLink
+                  to={'caseStudy'}
+                  smooth
+                  duration={1000}
+                  onClick={menuSwitch}
+                >
+                  Case studies
+                </ScLink>
+              ) : (
+                <Link to={'/'} state={{ scrollAnchor: '#caseStudy' }}>
+                  Case studies
+                </Link>
+              )}
+            </motion.div>
+            <motion.div variants={itemAnimation} className="item">
+              <div className="number">04.</div>
+              <Link to="/blog">Blog</Link>
+            </motion.div>  
+          </div>
+        )
+        }
         <motion.div
           variants={lineAnimation}
           animate={subMenuIsOn ? 'visible' : 'hidden'}
@@ -187,6 +243,22 @@ const MenuDesktop = ({ toggle }) => {
             </motion.div>
           </div>
         )}
+      <motion.div
+          variants={lineAnimation}
+          animate={subMenuPlIsOn ? 'visible' : 'hidden'}
+          className="line"
+        ></motion.div>
+        {subMenuPlIsOn && (
+          <div className="sub-menu">
+            <motion.div
+              className="sub-item"
+              variants={subItemAnimation}
+              custom={7}
+            >
+              <Link to="/kampania-reklamowa">Kampania reklamowa</Link>
+            </motion.div>
+          </div>
+        )}
       </DesktopLinks>
       <div style={{ width: '100%' }}>
         <DesktopMenuFooter>
@@ -205,7 +277,7 @@ const MenuDesktop = ({ toggle }) => {
             </div>
           </div>
           <div className="contact">
-            <h3>Contact us</h3>
+            <h3>{useIntl().formatMessage({ id: "menu.contact_desktop" })}</h3>
             <a href="tel:+48881772030">+48 881 772 030</a>
             <a href="mailto:we@explayn.it">we@explayn.it</a>
           </div>

@@ -102,6 +102,13 @@
                 "design": "Design",
                 "development": "Development",
                 "launch": "Launch"
+            },
+            "content": {
+                "discovery": "The development process starts with understanding your business goals. During the meeting, we assess the situation and discuss desired features and functionality for the website. We define the target audience and interview internal stakeholders to construct a tailored strategy.",
+                "planning": "Planning",
+                "design": "Design",
+                "development": "Development",
+                "launch": "Launch"
             }
         },
         "technology-section": {
@@ -277,7 +284,8 @@
         "contact": "Contact us",
         "lang": "Language",
         "pl": "Polish",
-        "en": "English"
+        "en": "English",
+        "contact_desktop": "Contact us"
     },
 
 
@@ -300,6 +308,53 @@
             "cookie": "Cookie policy"
         }
     },
+
+
+    "contact-us": {
+        "lets-talk": "Let's talk"
+    },
+
+
+    "contact-form-wrapper": {
+        "h1": "Let’s talk",
+        "p": "We find inspiration to create in your challenges. Let us know what your brand needs.",
+        "h4": "How can we help you?"
+    },
+
+
+    "case-study-header-wrapper": {
+        "paragraph1": "Let our work to the talking.",
+        "paragraph2": "Projects we've been working on recently."
+    },
+
+
+    "team": {
+        "paragraph1": "Understanding the individual needs of the clients is the key to our work.",
+        "paragraph2": "We research, we explain, we implement. Our strategies are highly curated to the challenges. We go beyond the standard agency model and offer comprehensive consulting to maximize your profit."
+    },
+
+
+    "blog": {
+        "article": "Articles",
+        "read-more": "PRZECZYTAJ TEN ARTYKUŁ"
+    },
+
+
+    "post": {
+        "author": "ABOUT THE AUTHOR"
+    },
+
+
+    "social-media-wrapper": {
+        "h3": "SHARE THIS ARTICLE"
+    },
+
+
+    "sidebar": {
+        "h3": "POPULAR TAGS",
+        "other": "INNE"
+    },
+
 
 
 

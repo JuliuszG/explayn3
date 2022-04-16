@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby-plugin-intl';
+import { Link } from 'gatsby';
 import ContactForm from './contactForm';
 import { ConsultationContainer, ConsultationText, ConsultationContainerThank } from './styled';
 import landingCircle from '../../images/landing/landing-multi-circle.svg';

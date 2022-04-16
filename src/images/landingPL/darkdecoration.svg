@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="896.655" height="784.878" viewBox="0 0 896.655 784.878">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.391" cy="0.131" r="1.479" gradientTransform="matrix(0.73, 0.684, -0.589, 0.628, 0.183, -0.218)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#535353"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.391" cy="0.131" r="1.479" gradientTransform="matrix(0.73, 0.684, -0.589, 0.628, 0.183, -0.218)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#464646"/>
+      <stop offset="1"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-3" cx="0.391" cy="0.131" r="1.479" gradientTransform="matrix(0.73, 0.684, -0.589, 0.628, 0.183, -0.218)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#383838"/>
+      <stop offset="1"/>
+    </radialGradient>
+  </defs>
+  <g id="Group_315" data-name="Group 315" transform="translate(-566.159 -1545.011)" opacity="0.26">
+    <path id="Intersection_1" data-name="Intersection 1" d="M358.825,494.747,43.813,364.772C-16.916,339.714-26.672,257.78,26.478,219.164L315.219,9.382c53.149-38.615,128.06-4.019,133.124,61.482l26.27,339.758C478.548,461.514,437.6,501.2,390.97,501.2A84.014,84.014,0,0,1,358.825,494.747Z" transform="translate(1087.203 1649.863) rotate(75)" fill="url(#radial-gradient)"/>
+    <path id="Polygon_12" data-name="Polygon 12" d="M194.639,69.3c19.52-31.755,65.672-31.755,85.192,0l147.81,240.462c20.478,33.314-3.491,76.183-42.6,76.183H89.425c-39.1,0-63.074-42.869-42.6-76.183Z" transform="translate(934.892 2329.889) rotate(-141)" fill="url(#radial-gradient-2)"/>
+    <path id="Intersection_7" data-name="Intersection 7" d="M259.316,365.618,34.946,273.042C-13.493,253.056-21.273,187.7,21.119,156.9L226.778,7.483c42.394-30.8,102.143-3.2,106.183,49.039l18.711,242c3.138,40.593-29.525,72.251-66.716,72.251A67.009,67.009,0,0,1,259.316,365.618Z" transform="matrix(0.961, 0.276, -0.276, 0.961, 1087.06, 1552)" fill="url(#radial-gradient-3)"/>
+    <path id="Polygon_13" data-name="Polygon 13" d="M142.448,58.209c16.4-26.675,55.165-26.675,71.561,0L317.121,225.955c17.2,27.984-2.933,63.994-35.781,63.994H75.117c-32.848,0-52.982-36.01-35.781-63.994Z" transform="translate(1462.814 1908.479) rotate(160)" fill="url(#radial-gradient-2)"/>
+  </g>
+</svg>

@@ -6,6 +6,7 @@ import {
   AboutAuthor,
   AuthorPic,
 } from '../styled';
+import { useIntl } from 'gatsby-plugin-intl';
 
 const Author = ({ name, about, photo }) => {
   return (
@@ -14,7 +15,7 @@ const Author = ({ name, about, photo }) => {
         <AuthorPic fluid={photo} alt="author" />
       </AuthorImageWrapper>
       <AuthorInfo className="info">
-        <small>ABOUT THE AUTHOR</small>
+        <small>{useIntl().formatMessage({ id: 'post.author' })}</small>
         <h3>{name}</h3>
         <AboutAuthor className="about">{about}</AboutAuthor>
       </AuthorInfo>
